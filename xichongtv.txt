@@ -1,14 +1,14 @@
-📺本地频道，#类型#
+本地频道，#genre#
 西充综合,http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_13696624870_strL.m3u8?txSecret=95966454587fa1060ad02f9e04282064&txTime=686f810c&stat=cGweUVqvOx1FvIm99Uh%2FwA%3D%3D
 南充综合,http://14.29.45.93:80/ncrmpull.cnncw.cn/live/8f7b908601931000dd6ee79a0000000/playlist.m3u8?wsSecret=6dff4e8e43bf1285747f92b87ff9dc04&wsTime=1749362090&wsSession=42bfccf87e8ff36708e56257-174936203285795&wsIPSercert=8b12b49a639651c3bd477549b4f197cd&wsiphost=local&wsBindIP=1
 南充科教生活,http://14.29.45.93:80/ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba70000000/playlist.m3u8?wsSecret=5f31f4c4bd5ba00fd40048c96aa32cd1&wsTime=1749361865&wsSession=42bfccf87e8ff36708e56257-174936180722538&wsIPSercert=8b12b49a639651c3bd477549b4f197cd&wsiphost=local&wsBindIP=1
-📺本地视频，#类型#
+本地视频，#genre#
 走进四川西充,https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
 
 西充莲花湖夜景,https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
 西充县华光乡黄家庙村桅杆湾志,https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
 
-📺央视频道, #类型#
+央视频道, #genre#
 CCTV1,http://58.57.40.22:9901/tsfile/live/0001_1.m3u8
 CCTV1,http://112.46.105.20:8009/hls/501/index.m3u8
 CCTV1,http://play.kankanlive.com/live/1661761962676984.m3u8
