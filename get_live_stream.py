@@ -1,6 +1,6 @@
 # get_live_stream.py
 """
-功能：从API获取直播流 + 合并白名单 → 生成 M3U8 播放列表
+功能：从API获取直播流 + 远程白名单 → 生成 M3U8 播放列表
 输出文件：live/current.m3u8
 """
 
@@ -33,15 +33,14 @@ HEADERS = {
     'Connection': 'keep-alive',
 }
 
-# 【2. 白名单列表】
-# 格式: [("名称", "M3U8地址")]
-WHITELIST = [
-    ("央视一套", "https://cctv1.live.com/index.m3u8"),
-    ("湖南卫视", "https://hunantv.live.com/index.m3u8"),
-    ("浙江卫视", "https://zjtv.live.com/index.m3u8"),
-    ("江苏卫视", "https://jsbc.live.com/live.m3u8"),
-    ("东方卫视", "https://dragon.tv/live.m3u8"),
-    ("测试流", "http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8"),
+# 【2. 远程白名单配置】
+REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+WHITELIST_TIMEOUT = 10  # 请求超时时间（秒）
+
+# 【3. 本地备用白名单】（远程失败时使用）
+FALLBACK_WHITELIST = [
+    ("备用-央视一套", "https://cctv1.live.com/index.m3u8"),
+    ("备用-测试流", "http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8"),
 ]
 
 # ================== 核心函数 ==================
@@ -50,7 +49,6 @@ def get_dynamic_stream():
     """
     从指定API获取直播流的m3u8地址并返回。
     """
-    t = int(time.time())
     print("📡 正在请求直播源 API...")
 
     try:
@@ -84,7 +82,56 @@ def get_dynamic_stream():
         return None
 
 
-def generate_m3u8_content(dynamic_url):
+def load_whitelist_from_remote():
+    """
+    从远程 URL 加载白名单
+    :return: [(name, url)] 列表
+    """
+    print(f"🌐 正在加载远程白名单: {REMOTE_WHITELIST_URL}")
+    try:
+        response = requests.get(REMOTE_WHITELIST_URL, timeout=WHITELIST_TIMEOUT)
+        response.raise_for_status()
+        lines = response.text.strip().splitlines()
+        whitelist = []
+        for line_num, line in enumerate(lines, 1):
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue  # 跳过空行和注释
+            if "," not in line:
+                print(f"⚠️ 第 {line_num} 行格式错误（缺少逗号）: {line}")
+                continue
+            try:
+                name, url = line.split(",", 1)
+                name, url = name.strip(), url.strip()
+                if not name or not url:
+                    print(f"⚠️ 第 {line_num} 行名称或URL为空: {line}")
+                    continue
+                if not url.startswith(("http://", "https://")):
+                    print(f"⚠️ 第 {line_num} 行URL无效: {url}")
+                    continue
+                whitelist.append((name, url))
+            except Exception as e:
+                print(f"⚠️ 解析第 {line_num} 行失败: {e}")
+        print(f"✅ 成功加载 {len(whitelist)} 个远程直播源")
+        return whitelist
+    except Exception as e:
+        print(f"❌ 加载远程白名单失败: {e}")
+        return None
+
+
+def get_whitelist():
+    """
+    获取白名单：优先远程，失败时使用本地备用
+    """
+    remote_list = load_whitelist_from_remote()
+    if remote_list is not None and len(remote_list) > 0:
+        return remote_list
+    else:
+        print("⚠️ 使用本地备用白名单")
+        return FALLBACK_WHITELIST
+
+
+def generate_m3u8_content(dynamic_url, whitelist):
     """
     生成标准 M3U8 播放列表内容
     """
@@ -94,7 +141,7 @@ def generate_m3u8_content(dynamic_url):
         lines.append("#EXTINF:-1,自动获取流")
         lines.append(dynamic_url)
 
-    for name, url in WHITELIST:
+    for name, url in whitelist:
         lines.append(f"#EXTINF:-1,白名单-{name}")
         lines.append(url)
 
@@ -107,34 +154,37 @@ def main():
     """
     print("🚀 开始生成直播源播放列表...")
 
-        'areaId': '907',# 创建输出目录
-        'appCenterId': '907',makedirs('live', exist_ok=True)
-        'isTest': '0',print("📁 已确保 live/ 目录存在")
+    # 创建输出目录
+    os.makedirs('live', exist_ok=True)
+    print("📁 已确保 live/ 目录存在")
 
-        'deviceVersionType': 'android',# 获取动态流
-        'versionCodeGlobal': '5009037'get_dynamic_stream()
+    # 获取动态流
+    dynamic_url = get_dynamic_stream()
+
+    # 获取白名单（远程 + fallback）
+    whitelist = get_whitelist()
 
     # 生成 M3U8 内容
-    headers = {generate_m3u8_content(dynamic_url)
+    m3u8_content = generate_m3u8_content(dynamic_url, whitelist)
 
-        'Accept': 'application/json, text/plain, */*'# 写入文件
-        'Accept-Encoding': 'gzip, deflate, br','live/current.m3u8'
-        'Connection': 'keep-alive'try:
-    }with open(output_path, 'w', encoding='utf-8') as f:
+    # 写入文件
+    output_path = 'live/current.m3u8'
+    try:
+        with open(output_path, 'w', encoding='utf-8') as f:
             f.write(m3u8_content)
-    尝试:print(f"🎉 成功生成播放列表: {output_path}")
-        响应 = requests.get(print(f"📊 总计包含 {len(WHITELIST) + (1 if dynamic_url else 0)} 个直播源")
-            api_urlexcept Exception as e:
-            params=params,print(f"❌ 写入文件失败: {e}")
-            headers=headers,return
+        print(f"🎉 成功生成播放列表: {output_path}")
+        print(f"📊 总计包含 {len(whitelist) + (1 if dynamic_url else 0)} 个直播源")
+    except Exception as e:
+        print(f"❌ 写入文件失败: {e}")
+        return
 
-            超时=10# 确保 .nojekyll 文件存在（防止 GitHub Pages 构建错误）
-        )'.nojekyll'
-        response.raise_for_status()if not os.path.exists(nojekyll_path):
+    # 确保 .nojekyll 文件存在
+    nojekyll_path = '.nojekyll'
+    if not os.path.exists(nojekyll_path):
         try:
-        data = response.json()open(nojekyll_path, 'w').close()
+            open(nojekyll_path, 'w').close()
             print(f"✅ 已创建 {nojekyll_path} 文件")
-        if 'data' in data and 'm3u8Url' in data['data']:except Exception as e:
+        except Exception as e:
             print(f"⚠️ 创建 .nojekyll 文件失败: {e}")
 
     print("✅ 所有任务完成！")
