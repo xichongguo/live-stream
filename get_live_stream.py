@@ -4,15 +4,12 @@ import os
 import json
 from datetime import datetime
 
-# 创建输出目录
 os.makedirs('live', exist_ok=True)
 
-# 配置 URL
 CHANNELS_URL = "https://raw.githubusercontent.com/iptv-org/iptv/master/channels.json"
 LOGO_BASE_URL = "https://raw.githubusercontent.com/iptv-org/iptv/master/logos/"
 
 def load_whitelist():
-    """加载白名单（whitelist.txt），每行一个频道名关键词"""
     if not os.path.exists('whitelist.txt'):
         print("⚠️ 未找到 whitelist.txt，将处理所有频道")
         return None
@@ -21,7 +18,6 @@ def load_whitelist():
     return keywords
 
 def filter_channels_by_whitelist(channels, keywords):
-    """根据白名单过滤频道"""
     if not keywords:
         return channels
     filtered = []
@@ -33,13 +29,8 @@ def filter_channels_by_whitelist(channels, keywords):
     return filtered
 
 def generate_m3u8_content(channels):
-    """生成 M3U8 内容"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    lines = [
-        "#EXTM3U",
-        f"# Generated at: {timestamp}",
-        "# Target: live-stream-auto"
-    ]
+    lines = ["#EXTM3U", f"# Generated at: {timestamp}"]
     current_group = None
 
     for ch in channels:
@@ -49,27 +40,22 @@ def generate_m3u8_content(channels):
         logo = ch.get("logo", "")
         urls = ch.get("urls", [])
         url = urls[0] if urls else ""
-
         if not url or not name:
             continue
-
         if group != current_group:
             lines.append(f"#EXTGRP:{group}")
             current_group = group
-
         lines.append(f"#EXTINF:-1 tvg-name=\"{name}\" group-title=\"{group}\",{name}")
         if logo and not logo.startswith("http"):
             lines.append(f"#EXTVLCOPT:logo={LOGO_BASE_URL}{logo}")
         elif logo:
             lines.append(f"#EXTVLCOPT:logo={logo}")
-
         lines.append(url)
 
     return "\n".join(lines) + "\n"
 
 def generate_html_player():
-    """生成简单的 HTML 播放器"""
-    html = '''<!DOCTYPE html>
+    html = """<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8" />
@@ -88,7 +74,6 @@ def generate_html_player():
     <h1>📺 直播播放器</h1>
     <div id="player"></div>
     <p class="info">自动加载 <code>current.m3u8</code> 列表</p>
-
     <script>
         const player = new Clappr.Player({
             source: './current.m3u8',
@@ -100,39 +85,25 @@ def generate_html_player():
         });
     </script>
 </body>
-</html>'''
+</html>"""
     with open('live/index.html', 'w', encoding='utf-8') as f:
         f.write(html)
     print("✅ HTML 播放器已生成")
 
 def main():
     print("🚀 开始获取直播源...")
-    
-    # 加载白名单
     keywords = load_whitelist()
-
-    'latitudeValue': '0',
-'latitudeValue': '0',try:
-    'areaId': '907',
-'areaId': '907',get(CHANNELS_URL, timeout=15)
-    'appCenterId': '907',
-'appCenterId': '907',raise_for_status()
-    'isTest': '0'list(response.json().values())
-    '经度值': '0',
-'经度值': '0',print(f"✅ 成功获取 {len(channels)} 个频道")
-
-    '版本号全局': '5009037'# 过滤
+    try:
+        response = requests.get(CHANNELS_URL, timeout=15)
+        response.raise_for_status()
+        channels = list(response.json().values())
+        print(f"✅ 成功获取 {len(channels)} 个频道")
         filtered = filter_channels_by_whitelist(channels, keywords)
-        
-        # 生成 M3U8
         m3u8_content = generate_m3u8_content(filtered)
         with open('live/current.m3u8', 'w', encoding='utf-8') as f:
             f.write(m3u8_content)
         print(f"✅ 已生成 live/current.m3u8 ({len(filtered)} 个频道)")
-
-        # 生成 HTML
         generate_html_player()
-
     except Exception as e:
         print(f"❌ 执行失败: {e}")
 
