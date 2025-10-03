@@ -1,47 +1,62 @@
-# .github/workflows/update-stream.yml
-name: 自动更新直播源（7:00 & 18:00 北京时间）
+# .github/workflows/update.yml
+name: Update Live Streams
 
 on:
+  # ✅ 每天北京时间 上午7:00 和 下午6:00 运行
   schedule:
-    - cron: '0 23 * * *'   # UTC 23:00 = 北京时间 7:00（+1天）
-    - cron: '0 10 * * *'   # UTC 10:00 = 北京时间 18:00
+    - cron: '0 23,10 * * *'   # UTC: 23:00 (前一天) 和 10:00 → 北京时间 7:00 和 18:00
+
+  # 🔧 支持手动触发
   workflow_dispatch:
 
-# 添加权限配置（关键！）
-permissions:
-  contents: write  # 允许写入仓库内容
+  # 🐛 推送相关文件时也触发
+  push:
+    paths:
+      - '.github/workflows/update.yml'
+      - 'get_live_stream.py'
+      - 'whitelist.txt'
 
 jobs:
-  update-stream:
+  update:
+    name: Fetch and Generate Streams
     runs-on: ubuntu-latest
+
     steps:
-      - name: 检出代码
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          # 使用有写入权限的 token
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false
+          fetch-depth: 0
 
-      - name: 设置 Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: 安装依赖
+      - name:       - name: 提交更改到 GitHub
         run: |
+          pip install --upgrade pip
           pip install requests
 
-      - name: 运行获取脚本
-        run: python get_live_stream.py
+      - name: Run Stream Generator
+        run: |
+          python get_live_stream.py
+          echo "📄 Generated M3U8 content:"
+          cat live/current.m3u8 | head -n 10
+          echo "..."
 
-      - name: 提交更改到 GitHub
+      - name: Ensure .nojekyll
+        run: touch .nojekyll
+
+      - name: Commit and Push Changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add live/current.m3u8
-          # 只有文件有变化才提交
+          git add live/ .nojekyll
           if git diff --cached --quiet; then
-            echo "未检测到更改，跳过提交"
+            echo "💡 No changes detected."
           else
-            git commit -m "自动更新直播源: $(date)"
-            git push
+            git commit -m "🔄 Auto-update live streams [$(date +'%Y-%m-%d %H:%M:%S')]"
+            git push origin main
+            echo "✅ Changes pushed to main branch."
           fi
