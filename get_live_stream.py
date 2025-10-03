@@ -1,18 +1,23 @@
 # get_live_stream.py
 """
-功能：从API获取直播流 + 远程白名单 → 生成 M3U8 播放列表
-输出文件：live/current.m3u8
+功能：全自动直播源管理
+- 获取动态流 + 本地/远程白名单
+- 检测有效性 + 分组 + 图标
+- 生成 M3U8 + HTML 播放器页面
+输出：
+  live/current.m3u8
+  live/index.html
 """
 
 import requests
 import time
 import json
 import os
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 
 # ================== 配置区 ==================
 
-# 【1. 动态直播流 API 配置】
+# 【1. 动态直播流 API】
 API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
 PARAMS = {
     'deviceType': '1',
@@ -33,163 +38,223 @@ HEADERS = {
     'Connection': 'keep-alive',
 }
 
-# 【2. 远程白名单配置】
+# 【2. 白名单配置】
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
-WHITELIST_TIMEOUT = 10  # 请求超时时间（秒）
-
-# 【3. 本地备用白名单】（远程失败时使用）
-FALLBACK_WHITELIST = [
-    ("备用-央视一套", "https://cctv1.live.com/index.m3u8"),
-    ("备用-测试流", "http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8"),
+LOCAL_WHITELIST = [
+    ("本地-测试流", "http://example.com/test.m3u8", "测试", "https://via.placeholder.com/16"),
+    ("本地-苹果测试", "http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8", "测试", "https://devstreaming-cdn.apple.com/images/logo.png"),
 ]
+
+# 【3. 检测配置】
+CHECK_TIMEOUT = 5      # 检测流是否有效的超时时间
+CHECK_RETRIES = 1      # 重试次数
+VALIDATION_METHOD = "HEAD"  # HEAD 或 GET
+
+# 【4. 图标默认图】
+DEFAULT_LOGO = "https://via.placeholder.com/16"
 
 # ================== 核心函数 ==================
 
 def get_dynamic_stream():
-    """
-    从指定API获取直播流的m3u8地址并返回。
-    """
+    """获取动态直播流"""
     print("📡 正在请求直播源 API...")
-
     try:
-        response = requests.get(
-            API_URL,
-            params=PARAMS,
-            headers=HEADERS,
-            verify=False,
-            timeout=10
-        )
+        response = requests.get(API_URL, params=PARAMS, headers=HEADERS, verify=False, timeout=10)
         response.raise_for_status()
-
-        try:
-            data = response.json()
-        except json.JSONDecodeError:
-            print("❌ 错误：API返回的内容不是有效的JSON格式。")
-            print("返回内容预览：", response.text[:200])
-            return None
-
+        data = response.json()
         if 'data' in data and 'm3u8Url' in data['data']:
-            m3u8_url = data['data']['m3u8Url']
-            print(f"✅ 成功获取动态直播流: {m3u8_url}")
-            return m3u8_url
+            url = data['data']['m3u8Url']
+            print(f"✅ 动态流获取成功: {url}")
+            return ("动态流", url, "动态", "https://cdn-icons-png.flaticon.com/16/126/126472.png")
         else:
-            print("❌ 错误：在返回的JSON数据中未找到 'data.m3u8Url' 字段。")
-            print("完整返回数据：", json.dumps(data, ensure_ascii=False, indent=2))
-            return None
+            print("❌ API 返回缺少 m3u8Url")
+    except Exception as e:
+        print(f"❌ 动态流请求失败: {e}")
+    return None
 
-    except requests.exceptions.RequestException as e:
-        print(f"❌ 请求过程中发生错误: {e}")
-        return None
-
-
-def load_whitelist_from_remote():
-    """
-    从远程 URL 加载白名单
-    :return: [(name, url)] 列表
-    """
-    print(f"🌐 正在加载远程白名单: {REMOTE_WHITELIST_URL}")
+def load_remote_whitelist():
+    """加载远程白名单（支持分组和图标）"""
+    print(f"🌐 加载远程白名单: {REMOTE_WHITELIST_URL}")
     try:
-        response = requests.get(REMOTE_WHITELIST_URL, timeout=WHITELIST_TIMEOUT)
+        response = requests.get(REMOTE_WHITELIST_URL, timeout=10)
         response.raise_for_status()
         lines = response.text.strip().splitlines()
-        whitelist = []
+        result = []
         for line_num, line in enumerate(lines, 1):
             line = line.strip()
             if not line or line.startswith("#"):
-                continue  # 跳过空行和注释
-            if "," not in line:
-                print(f"⚠️ 第 {line_num} 行格式错误（缺少逗号）: {line}")
                 continue
-            try:
-                name, url = line.split(",", 1)
-                name, url = name.strip(), url.strip()
-                if not name or not url:
-                    print(f"⚠️ 第 {line_num} 行名称或URL为空: {line}")
-                    continue
-                if not url.startswith(("http://", "https://")):
-                    print(f"⚠️ 第 {line_num} 行URL无效: {url}")
-                    continue
-                whitelist.append((name, url))
-            except Exception as e:
-                print(f"⚠️ 解析第 {line_num} 行失败: {e}")
-        print(f"✅ 成功加载 {len(whitelist)} 个远程直播源")
-        return whitelist
+            parts = [p.strip() for p in line.split(",")]
+            # 格式: 名称,URL,分组,图标（后两个可选）
+            if len(parts) < 2:
+                continue
+            name, url = parts[0], parts[1]
+            group = parts[2] if len(parts) > 2 else "其他"
+            logo = parts[3] if len(parts) > 3 else DEFAULT_LOGO
+            if url.startswith(("http://", "https://")):
+                result.append((f"远程-{name}", url, group, logo))
+        print(f"✅ 加载 {len(result)} 个远程源")
+        return result
     except Exception as e:
-        print(f"❌ 加载远程白名单失败: {e}")
-        return None
+        print(f"❌ 远程白名单加载失败: {e}")
+        return []
 
+def is_stream_valid(url):
+    """检测 m3u8 是否有效"""
+    for _ in range(CHECK_RETRIES + 1):
+        try:
+            method = 'HEAD' if VALIDATION_METHOD == "HEAD" else 'GET'
+            resp = requests.request(method, url, timeout=CHECK_TIMEOUT, 
+                                  headers={'User-Agent': 'Mozilla/5.0'})
+            if resp.status_code < 400:
+                return True
+        except:
+            pass
+        time.sleep(0.5)
+    return False
 
-def get_whitelist():
-    """
-    获取白名单：优先远程，失败时使用本地备用
-    """
-    remote_list = load_whitelist_from_remote()
-    if remote_list is not None and len(remote_list) > 0:
-        return remote_list
-    else:
-        print("⚠️ 使用本地备用白名单")
-        return FALLBACK_WHITELIST
+def validate_streams(stream_list):
+    """批量检测流有效性"""
+    print("🔍 正在检测直播流有效性...")
+    valid_streams = []
+    for name, url, group, logo in stream_list:
+        if is_stream_valid(url):
+            valid_streams.append((name, url, group, logo))
+            print(f"✅ 有效: {name}")
+        else:
+            print(f"❌ 无效: {name}")
+    return valid_streams
 
-
-def generate_m3u8_content(dynamic_url, whitelist):
-    """
-    生成标准 M3U8 播放列表内容
-    """
+def generate_m3u8_content(streams):
+    """生成 M3U8 播放列表"""
     lines = ["#EXTM3U"]
+    current_group = None
 
-    if dynamic_url:
-        lines.append("#EXTINF:-1,自动获取流")
-        lines.append(dynamic_url)
-
-    for name, url in whitelist:
-        lines.append(f"#EXTINF:-1,白名单-{name}")
+    for name, url, group, logo in streams:
+        if group != current_group:
+            lines.append(f"#EXTGRP:{group}")
+            current_group = group
+        lines.append(f"#EXTINF:-1,{name}")
         lines.append(url)
-
+        if logo:
+            lines.append(f"#EXTVLCOPT:logo={logo}")
     return "\n".join(lines) + "\n"
 
+def generate_html_page(streams):
+    """生成可视化 index.html 页面"""
+    html = """<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📺 直播源播放器</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 20px; background: #f5f5f5; }
+        h1 { color: #333; text-align: center; }
+        .player { width: 100%; height: 60vh; background: #000; margin: 20px 0; }
+        video { width: 100%; height: 100%; object-fit: contain; }
+        .list { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+        .item { padding: 10px; background: white; border-radius: 5px; cursor: pointer; }
+        .item:hover { background: #f0f0f0; }
+        .logo { width: 16px; height: 16px; vertical-align: middle; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <h1>📺 直播源播放器</h1>
+    <div class="player">
+        <video id="video" controls autoplay></video>
+    </div>
+    <div class="list">
+"""
+    for name, url, group, logo in streams:
+        logo_img = f'<img class="logo" src="{logo}" onerror="this.src=\'{DEFAULT_LOGO}\';">' if logo else ""
+        html += f'        <div class="item" onclick="play(\'{url}\', \'{name}\')">{logo_img}{name}</div>\n'
+
+    html += """    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        function play(url, name) {
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(url);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    video.play();
+                    document.title = "📺 " + name;
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = url;
+                video.addEventListener('loadedmetadata', () => {
+                    video.play();
+                    document.title = "📺 " + name;
+                });
+            }
+        }
+    </script>
+</body>
+</html>"""
+    return html
 
 def main():
-    """
-    主函数：获取直播流、生成 M3U8、写入文件
-    """
-    print("🚀 开始生成直播源播放列表...")
+    print("🚀 开始生成直播源系统...")
 
-    # 创建输出目录
+    # 创建目录
     os.makedirs('live', exist_ok=True)
-    print("📁 已确保 live/ 目录存在")
+    print("📁 已创建 live/ 目录")
 
-    # 获取动态流
-    dynamic_url = get_dynamic_stream()
+    # 收集所有流
+    all_streams = []
 
-    # 获取白名单（远程 + fallback）
-    whitelist = get_whitelist()
+    # 1. 添加动态流
+    dynamic = get_dynamic_stream()
+    if dynamic:
+        all_streams.append(dynamic)
 
-    # 生成 M3U8 内容
-    m3u8_content = generate_m3u8_content(dynamic_url, whitelist)
+    # 2. 添加本地白名单
+    print(f"💾 添加 {len(LOCAL_WHITELIST)} 个本地源")
+    all_streams.extend(LOCAL_WHITELIST)
 
-    # 写入文件
-    output_path = 'live/current.m3u8'
-    try:
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(m3u8_content)
-        print(f"🎉 成功生成播放列表: {output_path}")
-        print(f"📊 总计包含 {len(whitelist) + (1 if dynamic_url else 0)} 个直播源")
-    except Exception as e:
-        print(f"❌ 写入文件失败: {e}")
+    # 3. 添加远程白名单
+    remote_list = load_remote_whitelist()
+    all_streams.extend(remote_list)
+
+    # 4. 去重（基于 URL）
+    seen = set()
+    unique_streams = []
+    for item in all_streams:
+        if item[1] not in seen:
+            seen.add(item[1])
+            unique_streams.append(item)
+
+    print(f"📊 去重后共 {len(unique_streams)} 个源")
+
+    # 5. 检测有效性
+    valid_streams = validate_streams(unique_streams)
+
+    if not valid_streams:
+        print("❌ 所有流均无效，停止生成")
         return
 
-    # 确保 .nojekyll 文件存在
-    nojekyll_path = '.nojekyll'
-    if not os.path.exists(nojekyll_path):
-        try:
-            open(nojekyll_path, 'w').close()
-            print(f"✅ 已创建 {nojekyll_path} 文件")
-        except Exception as e:
-            print(f"⚠️ 创建 .nojekyll 文件失败: {e}")
+    # 6. 生成 M3U8
+    m3u8_content = generate_m3u8_content(valid_streams)
+    with open('live/current.m3u8', 'w', encoding='utf-8') as f:
+        f.write(m3u8_content)
+    print("🎉 已生成 live/current.m3u8")
 
-    print("✅ 所有任务完成！")
+    # 7. 生成 HTML
+    html_content = generate_html_page(valid_streams)
+    with open('live/index.html', 'w', encoding='utf-8') as f:
+        f.write(html_content)
+    print("🎉 已生成 live/index.html")
 
+    # 8. .nojekyll
+    if not os.path.exists('.nojekyll'):
+        open('.nojekyll', 'w').close()
+        print("✅ 已创建 .nojekyll")
 
-# ============ 运行程序 ============
+    print("✅ 全部任务完成！访问 https://xichongguo.github.io/live-stream/live/index.html")
+
 if __name__ == "__main__":
     main()
