@@ -1,71 +1,73 @@
 # get_live_stream.py
-"""
+'""'
 功能：全自动直播源管理
 - 获取动态流 + 本地/远程白名单
-- 检测有效性 + 分组 + 图标
+- 检测有效性
++ 分组
++ 图标
 - 生成 M3U8 + HTML 播放器页面
 输出：
-  live/current.m3u8
+  直播/当前.m3u8
   live/index.html
-"""
+'""'
 
-import requests
-import time
-import json
-import os
-from urllib.parse import urlencode, urlparse
+导入 请求
+导入 时间
+导入 json
+导入 os
+从 urllib.parse 导入 urlencode, urlparse
 
 # ================== 配置区 ==================
 
 # 【1. 动态直播流 API】
 API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
 PARAMS = {
-    'deviceType': '1',
-    'centerId': '9',
-    'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
-    'latitudeValue': '0',
-    'areaId': '907',
+    '设备类型': '1',
+    'centerId'：'9'，
+    '设备令牌': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
+    'latitudeValue'：'0'，
+    '区域ID': '907',
     'appCenterId': '907',
-    'isTest': '0',
-    'longitudeValue': '0',
-    'deviceVersionType': 'android',
-    'versionCodeGlobal': '5009037'
+    'isTest'：'0'，
+    'longitudeValue'：'0'，
+    'deviceVersionType'：'android'，
+    '版本号全局': '5009037'
 }
-HEADERS = {
+标题 = {
     'User-Agent': 'okhttp/3.12.12',
-    'Accept': 'application/json, text/plain, */*',
+    '接受': 'application/json, text/plain, */*',
     'Accept-Encoding': 'gzip, deflate, br',
-    'Connection': 'keep-alive',
+
 }
 
 # 【2. 白名单配置】
-REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+"https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.txt"
 LOCAL_WHITELIST = [
-    ("本地-测试流", "http://example.com/test.m3u8", "测试", "https://via.placeholder.com/16"),
-    ("本地-苹果测试", "http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8", "测试", "https://devstreaming-cdn.apple.com/images/logo.png"),
-]
+
+
+输入：]
 
 # 【3. 检测配置】
 CHECK_TIMEOUT = 5      # 检测流是否有效的超时时间
 CHECK_RETRIES = 1      # 重试次数
-VALIDATION_METHOD = "HEAD"  # HEAD 或 GET
+
 
 # 【4. 图标默认图】
-DEFAULT_LOGO = "https://via.placeholder.com/16"
+"https://via.placeholder.com/16"
 
 # ================== 核心函数 ==================
 
-def get_dynamic_stream():
-    """获取动态直播流"""
-    print("📡 正在请求直播源 API...")
+
+获取动态直播流
+
     try:
         response = requests.get(API_URL, params=PARAMS, headers=HEADERS, verify=False, timeout=10)
         response.raise_for_status()
         data = response.json()
-        if 'data' in data and 'm3u8Url' in data['data']:
-            url = data['data']['m3u8Url']
-            print(f"✅ 动态流获取成功: {url}")
-            return ("动态流", url, "动态", "https://cdn-icons-png.flaticon.com/16/126/126472.png")
+
+
+
+
         else:
             print("❌ API 返回缺少 m3u8Url")
     except Exception as e:
@@ -258,3 +260,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
