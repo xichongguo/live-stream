@@ -1,37 +1,37 @@
-# .github/workflows/update.yml
+# .github/workflows/update-stream.yml
 name: Update Live Streams
 
 on:
   schedule:
-  schedule:: '0 23,10 * * *'   # 北京时间 7:00 和 18:00
+    - cron: '0 23,10 * * *'   # 北京时间 7:00 和 18:00
 
   workflow_dispatch:
 
-  workflow_dispatch:
-    paths:
-      - '.github/workflows/update-stream.yml'
   push:
     paths:
-
+      - '.github/workflows/update-stream.yml'
       - 'get_live_stream.py'
       - 'whitelist.txt'
-    runs-on: ubuntu-latest
 
+jobs:
   update:
-    name: : Fetch and Generate Streams
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-    steps:false
-      - name: 
+          persist-credentials: false
+          fetch-depth: 0
 
-        with:: Setup Python
-actions/setup-python@v5
-
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
           python-version: '3.10'
 
-        使用：: actions/setup-python@v5
-        与：|
-
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade pip
           pip install requests
 
       - name: Run Stream Generator
