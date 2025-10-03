@@ -11,29 +11,29 @@ Outputs:
   live/index.html
 """
 
-import requests
-import time
-import json
-import os
-from urllib.parse import urlparse
+import导入requests
+import导入时间
+import导入 json
+import导入操作系统模块
+from从urllib.parse导入urlparseimport urlparse
 
 # ================== Configuration ==================
 
 # [1] Dynamic stream API
-API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
-PARAMS = {
-    'deviceType': '1',
-    'centerId': '9',
-    'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
-    'latitudeValue': '0',
-    'areaId': '907',
-    'appCenterId': '907',
-    'isTest': '0',
-    'longitudeValue': '0',
-    'deviceVersionType': 'android',
-    'versionCodeGlobal': '5009037'
+API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd""https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
+PARAMS = {{
+    'deviceType': '1','deviceType': '1',
+    'centerId': '9','centerId': '9',
+    'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be','deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
+    'latitudeValue': '0','latitudeValue': '0',
+    'areaId': '907','areaId': '907',
+    'appCenterId': '907','appCenterId': '907',
+    'isTest': '0''isTest': '0',
+    '经度值': '0','longitudeValue': '0',
+    'deviceVersionType': 'android','deviceVersionType': 'android',
+    '版本号全局': '5009037''versionCodeGlobal': '5009037'
 }
-HEADERS = {
+HEADERS = {{
     'User-Agent': 'okhttp/3.12.12',
     'Accept': 'application/json, text/plain, */*',
     'Accept-Encoding': 'gzip, deflate, br',
@@ -41,7 +41,7 @@ HEADERS = {
 }
 
 # [2] Whitelist URLs
-REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+REMOTE_WHITELIST_URL = "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.txt"
 
 # [3] Local whitelist (name, url, group, logo)
 LOCAL_WHITELIST = [
@@ -264,3 +264,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
