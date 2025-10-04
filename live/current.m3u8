@@ -2,27 +2,21 @@
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="西充综合" group-title="本地频道",西充综合
 http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_14049479032_strL.m3u8?txSecret=77c4fb5d7ed14b33c28e7fbf71806e2f&txTime=690a91ed&stat=cGweUVqvOx1FvIm99Uh%2FwA%3D%3D
-#EXTINF:-1 tvg-name="测试流1" group-title="其他",测试流1
-http://example.com/test1.m3u8
-#EXTINF:-1 tvg-name="苹果测试流" group-title="其他",苹果测试流
-http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8
-#EXTINF:-1 tvg-name="备用央视" group-title="其他",备用央视
-https://cctv1.live.com/index.m3u8
-#EXTINF:-1 tvg-name="佛系维护" group-title="其他",佛系维护
+#EXTINF:-1 tvg-name="佛系维护" group-title="Other",佛系维护
 https://us-xpc5-l2.xpccdn.com/984af664-48a9-4795-b14f-8759f686e191/d880cbcf-3616-482f-931f-b95de2474640.mp4?j=%7B%22userId%22%3A12967765%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.212.114.201%2C121.11.35.110%22%7D
-#EXTINF:-1 tvg-name="西充综合" group-title="本地频道",西充综合
+#EXTINF:-1 tvg-name="西充综合" group-title="Local Channels",西充综合
 https://tvlist.top/ncpd.php
-#EXTINF:-1 tvg-name="西充综合" group-title="本地频道",西充综合
+#EXTINF:-1 tvg-name="西充综合" group-title="Local Channels",西充综合
 https://xichongguo.github.io/live-stream/live/current.m3u8
-#EXTINF:-1 tvg-name="西充综合" group-title="本地频道",西充综合
+#EXTINF:-1 tvg-name="西充综合" group-title="Local Channels",西充综合
 http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_14036776173_strL.m3u8?txSecret=75373d6b98b9aa4cf532f12b3c9b1724&txTime=69032c0f&stat=cGweUVqvOx1FvIm99Uh%2FwA%3D%3D
-#EXTINF:-1 tvg-name="南充综合" group-title="本地频道",南充综合
+#EXTINF:-1 tvg-name="南充综合" group-title="Local Channels",南充综合
 http://ncrmpull.cnncw.cn/live/8f7b908601931000dd6ee79a00000000/playlist.m3u8?wsSecret=a4f69b6d2e56c7b4018fa29d65112d99&wsTime=1875618327
-#EXTINF:-1 tvg-name="南充科教生活" group-title="其他",南充科教生活
+#EXTINF:-1 tvg-name="南充科教生活" group-title="Other",南充科教生活
 http://ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba700000000/playlist.m3u8?wsSecret=42f62aa716a3a86719587b678ac75386&wsTime=1875618327
-#EXTINF:-1 tvg-name="走进四川西充" group-title="本地频道",走进四川西充
+#EXTINF:-1 tvg-name="走进四川西充" group-title="Local Channels",走进四川西充
 https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
-#EXTINF:-1 tvg-name="西充莲花湖夜景" group-title="本地频道",西充莲花湖夜景
+#EXTINF:-1 tvg-name="西充莲花湖夜景" group-title="Local Channels",西充莲花湖夜景
 https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
-#EXTINF:-1 tvg-name="西充县华光乡黄家庙村桅杆湾志" group-title="本地频道",西充县华光乡黄家庙村桅杆湾志
+#EXTINF:-1 tvg-name="西充县华光乡黄家庙村桅杆湾志" group-title="Local Channels",西充县华光乡黄家庙村桅杆湾志
 https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
