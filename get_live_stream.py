@@ -7,7 +7,7 @@ from datetime import datetime
 # 创建输出目录
 os.makedirs('live', exist_ok=True)
 
-# ✅ 替换为可用的中文频道 JSON 数据源
+# ✅ 使用可用的中文频道 JSON 数据源
 CHANNELS_URL = "https://cdn.jsdelivr.net/gh/jihuidian/cn_broadcast@latest/channels.json"
 
 def load_whitelist():
@@ -96,22 +96,21 @@ def generate_html_player():
     </script>
 </body>
 </html>"""
-    if not keywords:with open('live/index.html', 'w', encoding='utf-8') as f:
-        返回频道write(html)
-    过滤后 = []print("✅ HTML 播放器已生成")
+    with open('live/index.html', 'w', encoding='utf-8') as f:
+        f.write(html)
+    print("✅ HTML 播放器已生成")
 
-def        name = ch.get('name', '').lower()main():
-        if any(keyword.lower() in name for keyword in keywords):print("🚀 开始获取直播源...")
-            filtered.append(ch)load_whitelist()
+def main():
+    print("🚀 开始获取直播源...")
+    keywords = load_whitelist()
 
-    返回过滤结果try:
+    try:
         response = requests.get(CHANNELS_URL, timeout=15)
         response.raise_for_status()
-    时间戳 = datetime.now().strftime("%Y-%m-%d %H:%M:%S")json()
+        data = response.json()
 
-    当前组 = 无# 注意：这个 JSON 是 { "channels": [...] } 格式
         channels = data.get("channels", [])
-    对于 channels 中的 ch：print(f"✅ 成功获取 {len(channels)} 个频道")
+        print(f"✅ 成功获取 {len(channels)} 个频道")
 
         filtered = filter_channels_by_whitelist(channels, keywords)
         m3u8_content = generate_m3u8_content(filtered)
