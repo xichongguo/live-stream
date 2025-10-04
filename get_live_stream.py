@@ -1,34 +1,34 @@
 # get_live_stream.py
-"""
+'""'
 功能：从API获取直播流 + 本地&远程白名单 → 生成 M3U8 播放列表
 输出文件：live/current.m3u8
-"""
+'""'
 
-import requests
-import json
-import os
+导入 请求
+导入 json
+导入 os
 
 # ================== 配置区 ==================
 
 # 【1. 动态直播流 API 配置】
 API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
 PARAMS = {
-    'deviceType': '1',
-    'centerId': '9',
-    'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
-    'latitudeValue': '0',
-    'areaId': '907',
+    '设备类型': '1',
+    '中心ID': '9',
+    '设备令牌': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
+    'latitudeValue'：'0'，
+    '区域ID': '907',
     'appCenterId': '907',
-    'isTest': '0',
-    'longitudeValue': '0',
-    'deviceVersionType': 'android',
-    'versionCodeGlobal': '5009037'
+    'isTest'：'0'，
+    'longitudeValue'：'0'，
+    'deviceVersionType'：'android'，
+    '版本号全局': '5009037'
 }
-HEADERS = {
+标题 = {
     'User-Agent': 'okhttp/3.12.12',
-    'Accept': 'application/json, text/plain, */*',
+    '接受': 'application/json, text/plain, */*',
     'Accept-Encoding': 'gzip, deflate, br',
-    'Connection': 'keep-alive',
+    '连接': '保持活动状态',
 }
 
 # 【2. 远程白名单配置】
@@ -36,37 +36,34 @@ REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream
 WHITELIST_TIMEOUT = 10  # 请求超时时间（秒）
 
 # 【3. 本地白名单】
-#LOCAL_WHITELIST = [
-#    ("本地-测试流1", "http://example.com/test1.m3u8"),
-#   ("本地-苹果测试流", "http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8"),
-#   ("本地-备用央视", "https://cctv1.live.com/index.m3u8"),
-#]
+本地白名单 = [
+]
 
 # ================== 工具函数 ==================
 
-def is_url_valid(url):
-    """
+定义 is_url_valid(url):
+    '""'
     检查 URL 是否可访问（HEAD 请求）
-    """
-    try:
+    「」
+    尝试:
         head = requests.head(url, timeout=5, allow_redirects=True)
-        return head.status_code < 400
-    except Exception as e:
-        print(f"⚠️ 检测URL失败 {url}: {e}")
-        return False
+        返回 头.状态码 < 400
+    除了 异常 之外 e:
+        打印(f"⚠️ 检测URL失败 {url}: {e}")
+        返回 假
 
-def get_dynamic_stream():
-    """
+定义 获取动态流():
+    '""'
     从指定API获取直播流的m3u8地址并返回。
-    """
-    print("📡 正在请求直播源 API...")
+    「」
+    打印("📡 正在请求直播源 API...")
 
-    try:
+    尝试:
         response = requests.get(
-            API_URL,
+            API_URL
             params=PARAMS,
             headers=HEADERS,
-            timeout=10
+            超时=10
         )
         response.raise_for_status()
 
@@ -234,4 +231,5 @@ def main():
 # ============ 运行程序 ============
 if __name__ == "__main__":
     main()
+
 
