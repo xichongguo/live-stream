@@ -13,12 +13,15 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # ✅ 关键：允许读写仓库内容
+      # actions: read    # 可选：如果需要运行其他 Actions
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true  # 允许 git push
+          persist-credentials: true  # 保留凭据，允许 git push
           fetch-depth: 0
 
       - name: Setup Python
