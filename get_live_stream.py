@@ -36,11 +36,11 @@ REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream
 WHITELIST_TIMEOUT = 10  # 请求超时时间（秒）
 
 # 【3. 本地白名单】
-LOCAL_WHITELIST = [
-    ("本地-测试流1", "http://example.com/test1.m3u8"),
-    ("本地-苹果测试流", "http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8"),
-    ("本地-备用央视", "https://cctv1.live.com/index.m3u8"),
-]
+#LOCAL_WHITELIST = [
+#    ("本地-测试流1", "http://example.com/test1.m3u8"),
+#   ("本地-苹果测试流", "http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8"),
+#   ("本地-备用央视", "https://cctv1.live.com/index.m3u8"),
+#]
 
 # ================== 工具函数 ==================
 
@@ -234,3 +234,4 @@ def main():
 # ============ 运行程序 ============
 if __name__ == "__main__":
     main()
+
