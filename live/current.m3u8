@@ -1,1 +1,9 @@
-http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_14045077998_strL.m3u8?txSecret=540253dd494d93421ec93bbe46993fc4&txTime=6908799c&stat=cGweUVqvOx1FvIm99Uh%2FwA%3D%3D
+#EXTM3U
+#EXTINF:-1,自动获取流
+http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_14049479032_strL.m3u8?txSecret=77c4fb5d7ed14b33c28e7fbf71806e2f&txTime=690a91ed&stat=cGweUVqvOx1FvIm99Uh%2FwA%3D%3D
+#EXTINF:-1,本地-测试流1
+http://example.com/test1.m3u8
+#EXTINF:-1,本地-苹果测试流
+http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8
+#EXTINF:-1,本地-备用央视
+https://cctv1.live.com/index.m3u8
