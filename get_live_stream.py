@@ -4,12 +4,14 @@ import os
 import json
 from datetime import datetime
 
+# 创建输出目录
 os.makedirs('live', exist_ok=True)
 
-CHANNELS_URL = "https://raw.githubusercontent.com/iptv-org/iptv/master/channels.json"
-LOGO_BASE_URL = "https://raw.githubusercontent.com/iptv-org/iptv/master/logos/"
+# ✅ 替换为可用的中文频道 JSON 数据源
+CHANNELS_URL = "https://cdn.jsdelivr.net/gh/jihuidian/cn_broadcast@latest/channels.json"
 
 def load_whitelist():
+    """加载白名单"""
     if not os.path.exists('whitelist.txt'):
         print("⚠️ 未找到 whitelist.txt，将处理所有频道")
         return None
@@ -18,6 +20,7 @@ def load_whitelist():
     return keywords
 
 def filter_channels_by_whitelist(channels, keywords):
+    """根据白名单过滤频道"""
     if not keywords:
         return channels
     filtered = []
@@ -29,32 +32,39 @@ def filter_channels_by_whitelist(channels, keywords):
     return filtered
 
 def generate_m3u8_content(channels):
+    """生成 M3U8 内容"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    lines = ["#EXTM3U", f"# Generated at: {timestamp}"]
+    lines = [
+        "#EXTM3U",
+        f"# Generated at: {timestamp}",
+        "# Source: jihuidian/cn_broadcast"
+    ]
     current_group = None
 
     for ch in channels:
         name = ch.get("name", "Unknown")
-        groups = ch.get("categories", ["Other"])
-        group = groups[0] if groups else "Other"
+        group = ch.get("group", "Other")
         logo = ch.get("logo", "")
-        urls = ch.get("urls", [])
-        url = urls[0] if urls else ""
+        url = ch.get("url", "")
+
         if not url or not name:
             continue
+
+        # 分组
         if group != current_group:
             lines.append(f"#EXTGRP:{group}")
             current_group = group
+
+        # EXTINF 行
         lines.append(f"#EXTINF:-1 tvg-name=\"{name}\" group-title=\"{group}\",{name}")
-        if logo and not logo.startswith("http"):
-            lines.append(f"#EXTVLCOPT:logo={LOGO_BASE_URL}{logo}")
-        elif logo:
+        if logo:
             lines.append(f"#EXTVLCOPT:logo={logo}")
         lines.append(url)
 
     return "\n".join(lines) + "\n"
 
 def generate_html_player():
+    """生成简单的 HTML 播放器"""
     html = """<!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -86,24 +96,32 @@ def generate_html_player():
     </script>
 </body>
 </html>"""
-    with open('live/index.html', 'w', encoding='utf-8') as f:
-        f.write(html)
-    print("✅ HTML 播放器已生成")
+    if not keywords:with open('live/index.html', 'w', encoding='utf-8') as f:
+        返回频道write(html)
+    过滤后 = []print("✅ HTML 播放器已生成")
 
-def main():
-    print("🚀 开始获取直播源...")
-    keywords = load_whitelist()
-    try:
+def        name = ch.get('name', '').lower()main():
+        if any(keyword.lower() in name for keyword in keywords):print("🚀 开始获取直播源...")
+            filtered.append(ch)load_whitelist()
+
+    返回过滤结果try:
         response = requests.get(CHANNELS_URL, timeout=15)
         response.raise_for_status()
-        channels = list(response.json().values())
-        print(f"✅ 成功获取 {len(channels)} 个频道")
+    时间戳 = datetime.now().strftime("%Y-%m-%d %H:%M:%S")json()
+
+    当前组 = 无# 注意：这个 JSON 是 { "channels": [...] } 格式
+        channels = data.get("channels", [])
+    对于 channels 中的 ch：print(f"✅ 成功获取 {len(channels)} 个频道")
+
         filtered = filter_channels_by_whitelist(channels, keywords)
         m3u8_content = generate_m3u8_content(filtered)
+
         with open('live/current.m3u8', 'w', encoding='utf-8') as f:
             f.write(m3u8_content)
         print(f"✅ 已生成 live/current.m3u8 ({len(filtered)} 个频道)")
+
         generate_html_player()
+
     except Exception as e:
         print(f"❌ 执行失败: {e}")
 
