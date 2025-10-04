@@ -1,12 +1,9 @@
-# .github/workflows/update-stream.yml
 name: Update Live Streams
 
 on:
   schedule:
-    - cron: '0 23,10 * * *'   # 北京时间 7:00 和 18:00
-
+    - cron: '0 23,10 * * *'  # 每天 10:00 和 23:00 UTC（即 18:00 和 7:00 北京时间）
   workflow_dispatch:
-
   push:
     paths:
       - '.github/workflows/update-stream.yml'
@@ -16,12 +13,12 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true  # 允许 git push
           fetch-depth: 0
 
       - name: Setup Python
@@ -29,30 +26,26 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install Dependencies
-        run: |
-          pip install --upgrade pip
-          pip install requests
+      - name: Install Requests
+        run: pip install requests
 
-      - name: Run Stream Generator
+      - name: Run Generator
         run: |
           python get_live_stream.py
-          echo "📄 Generated M3U8 content:"
+          echo "📄 M3U8 内容预览:"
           cat live/current.m3u8 | head -n 10
-          echo "..."
 
       - name: Ensure .nojekyll
         run: touch .nojekyll
 
-      - name: Commit and Push Changes
+      - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add live/ .nojekyll
           if git diff --cached --quiet; then
-            echo "💡 No changes detected."
+            echo "💡 无变化，无需提交"
           else
-            git commit -m "🔄 Auto-update live streams [$(date +'%Y-%m-%d %H:%M:%S')]"
+            git commit -m "🔄 自动更新 [$(date +'%Y-%m-%d %H:%M:%S')]"
             git push origin main
-            echo "✅ Changes pushed to main branch."
           fi
