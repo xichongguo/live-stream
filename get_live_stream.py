@@ -180,24 +180,24 @@ def main():
 
     # Load remote whitelist
     remote_list = load_whitelist_from_remote()
-    'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',extend(remote_list)
+    full_whitelist.extend(remote_list)
 
-    'areaId': '907',# Deduplicate
-    'appCenterId': '907',merge_and_deduplicate(full_whitelist)
+    # Deduplicate
+    unique_whitelist = merge_and_deduplicate(full_whitelist)
 
-    '经度值': '0',# Generate M3U8 content
-    'deviceVersionType': 'android',generate_m3u8_content(dynamic_url, unique_whitelist)
+    # Generate M3U8 content
+    m3u8_content = generate_m3u8_content(dynamic_url, unique_whitelist)
 
     # Write file
-HEADERS = {'live/current.m3u8'
-    'User-Agent': 'okhttp/3.12.12',try:
-    'Accept': 'application/json, text/plain, */*'with open(output_path, 'w', encoding='utf-8') as f:
-    'Accept-Encoding': 'gzip, deflate, br',write(m3u8_content)
-    '连接': '保持活动状态',print(f"Successfully generated playlist: {output_path}")
+    output_path = 'live/current.m3u8'
+    try:
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(m3u8_content)
+        print(f"Successfully generated playlist: {output_path}")
         print(f"Total includes {len(unique_whitelist) + (1 if dynamic_url else 0)} streams")
     except Exception as e:
         print(f"Failed to write file: {e}")
- REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"return
+        return
 
     # Ensure .nojekyll file exists
     nojekyll_path = '.nojekyll'
