@@ -5,10 +5,8 @@
 """
 
 import requests
-import time
 import json
 import os
-from urllib.parse import urlencode
 
 # ================== 配置区 ==================
 
@@ -37,14 +35,25 @@ HEADERS = {
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 WHITELIST_TIMEOUT = 10  # 请求超时时间（秒）
 
-# 【3. 本地白名单】（始终使用）
+# 【3. 本地白名单】
 LOCAL_WHITELIST = [
     ("本地-测试流1", "http://example.com/test1.m3u8"),
     ("本地-苹果测试流", "http://devstreaming.apple.com/videos/streaming/examples/bipbop_4x3/gear1/prog_index.m3u8"),
-    ("本地-备用央视", "https://cctv1.live.com/index.m3u8"),  # 可能与远程重复
+    ("本地-备用央视", "https://cctv1.live.com/index.m3u8"),
 ]
 
-# ================== 核心函数 ==================
+# ================== 工具函数 ==================
+
+def is_url_valid(url):
+    """
+    检查 URL 是否可访问（HEAD 请求）
+    """
+    try:
+        head = requests.head(url, timeout=5, allow_redirects=True)
+        return head.status_code < 400
+    except Exception as e:
+        print(f"⚠️ 检测URL失败 {url}: {e}")
+        return False
 
 def get_dynamic_stream():
     """
@@ -57,7 +66,6 @@ def get_dynamic_stream():
             API_URL,
             params=PARAMS,
             headers=HEADERS,
-            verify=False,
             timeout=10
         )
         response.raise_for_status()
@@ -71,8 +79,12 @@ def get_dynamic_stream():
 
         if 'data' in data and 'm3u8Url' in data['data']:
             m3u8_url = data['data']['m3u8Url']
-            print(f"✅ 成功获取动态直播流: {m3u8_url}")
-            return m3u8_url
+            if is_url_valid(m3u8_url):
+                print(f"✅ 成功获取动态直播流: {m3u8_url}")
+                return m3u8_url
+            else:
+                print(f"❌ 动态流不可访问: {m3u8_url}")
+                return None
         else:
             print("❌ 错误：在返回的JSON数据中未找到 'data.m3u8Url' 字段。")
             print("完整返回数据：", json.dumps(data, ensure_ascii=False, indent=2))
@@ -81,7 +93,6 @@ def get_dynamic_stream():
     except requests.exceptions.RequestException as e:
         print(f"❌ 请求过程中发生错误: {e}")
         return None
-
 
 def load_whitelist_from_remote():
     """
@@ -110,7 +121,7 @@ def load_whitelist_from_remote():
                 if not url.startswith(("http://", "https://")):
                     print(f"⚠️ 第 {line_num} 行URL无效: {url}")
                     continue
-                whitelist.append((f"远程-{name}", url))  # 添加“远程-”前缀
+                whitelist.append((f"远程-{name}", url))
             except Exception as e:
                 print(f"⚠️ 解析第 {line_num} 行失败: {e}")
         print(f"✅ 成功加载 {len(whitelist)} 个远程直播源")
@@ -118,7 +129,6 @@ def load_whitelist_from_remote():
     except Exception as e:
         print(f"❌ 加载远程白名单失败: {e}")
         return []
-
 
 def merge_and_deduplicate(whitelist):
     """
@@ -135,23 +145,38 @@ def merge_and_deduplicate(whitelist):
     print(f"✅ 去重后保留 {len(unique_list)} 个唯一地址")
     return unique_list
 
-
 def generate_m3u8_content(dynamic_url, whitelist):
     """
     生成标准 M3U8 播放列表内容
     """
-    lines = ["#EXTM3U"]
+    lines = [
+        "#EXTM3U",
+        "x-tvg-url=\"https://epg.51zmt.top/xmltv.xml\""
+    ]
 
+    # 添加动态流（西充综合）
     if dynamic_url:
-        lines.append("#EXTINF:-1,自动获取流")
+        lines.append('#EXTINF:-1 tvg-name="西充综合" group-title="本地频道",西充综合')
         lines.append(dynamic_url)
 
     for name, url in whitelist:
-        lines.append(f"#EXTINF:-1,{name}")
+        # 清理名称（去掉“远程-”“本地-”）
+        name_clean = name.split("-", 1)[-1]
+        # 自动分类
+        group = "其他"
+        if "CCTV" in name_clean:
+            group = "央视"
+        elif "卫视" in name_clean:
+            group = "卫视"
+        elif "凤凰" in name_clean or "TVB" in name_clean or "港" in name_clean or "台" in name_clean:
+            group = "港台"
+        elif "西充" in name_clean or "本地" in name_clean or "综合" in name_clean:
+            group = "本地频道"
+
+        lines.append(f'#EXTINF:-1 tvg-name="{name_clean}" group-title="{group}",{name_clean}')
         lines.append(url)
 
     return "\n".join(lines) + "\n"
-
 
 def main():
     """
@@ -173,7 +198,7 @@ def main():
     print(f"💾 添加 {len(LOCAL_WHITELIST)} 个本地直播源")
     full_whitelist.extend(LOCAL_WHITELIST)
 
-    # 2. 添加远程白名单（无论成功与否都尝试）
+    # 2. 添加远程白名单
     remote_list = load_whitelist_from_remote()
     full_whitelist.extend(remote_list)
 
