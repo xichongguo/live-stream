@@ -1,6 +1,6 @@
 # get_live_stream.py
 """
-Function: Fetch live stream from API + remote whitelist -> Generate M3U8 playlist
+Function: Fetch live stream from API + remote whitelist -> Generate M3U8 playlist (no auto grouping)
 Output file: live/current.m3u8
 """
 
@@ -140,33 +140,24 @@ def merge_and_deduplicate(whitelist):
 
 def generate_m3u8_content(dynamic_url, whitelist):
     """
-    Generate standard M3U8 playlist content
+    Generate standard M3U8 playlist content (no auto grouping)
     """
     lines = [
         "#EXTM3U",
         "x-tvg-url=\"https://epg.51zmt.top/xmltv.xml\""
     ]
 
-    # Add dynamic stream (Xichong Comprehensive)
+    # Add dynamic stream (Xichong Comprehensive) - always in "Local Channels" group
     if dynamic_url:
-        lines.append('#EXTINF:-1 tvg-name="西充综合" group-title="本地频道",西充综合')
+        lines.append('#EXTINF:-1 tvg-name="西充综合" group-title="Local Channels",西充综合')
         lines.append(dynamic_url)
 
     for name, url in whitelist:
         # Clean name (remove "Remote-")
         name_clean = name.split("-", 1)[-1]
-        # Auto classify
-        group = "Other"
-        if "CCTV" in name_clean:
-            group = "CCTV"
-        elif "卫视" in name_clean:
-            group = "Satellite"
-        elif "凤凰" in name_clean or "TVB" in name_clean or "港" in name_clean or "台" in name_clean:
-            group = "Hong Kong Taiwan"
-        elif "西充" in name_clean or "本地" in name_clean or "综合" in name_clean:
-            group = "Local Channels"
-
-        lines.append(f'#EXTINF:-1 tvg-name="{name_clean}" group-title="{group}",{name_clean}')
+        
+        # No group-title - only tvg-name
+        lines.append(f'#EXTINF:-1 tvg-name="{name_clean}",{name_clean}')
         lines.append(url)
 
     return "\n".join(lines) + "\n"
