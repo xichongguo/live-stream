@@ -7,7 +7,7 @@ Output file: live/current.m3u8
 import requests
 import json
 import os
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qs
 
 # ================== Configuration Section ==================
 
@@ -32,253 +32,202 @@ HEADERS = {
     'Connection': 'keep-alive',
 }
 
-# [2. Remote Whitelist Configuration]
+# [2. Remote Whitelist & External IPTV]
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 EXTERNAL_IPTV_URL = "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.txt"
 
-WHITELIST_TIMEOUT = 10  # Request timeout (seconds)
+WHITELIST_TIMEOUT = 15  # Increased timeout
 
 # ================== Utility Functions ==================
 
 def is_url_valid(url):
-    """
-    Check if URL is accessible (HEAD request)
-    """
+    """Check if URL is accessible (HEAD request)"""
     try:
-        head = requests.head(url, timeout=5, allow_redirects=True)
+        head = requests.head(url, timeout=5, allow_redirects=True, headers={'User-Agent': 'Mozilla/5.0'})
         return head.status_code < 400
     except Exception as e:
         print(f"Warning: Failed to check URL {url}: {e}")
         return False
 
 def get_dynamic_stream():
-    """
-    Get m3u8 address from specified API and return.
-    """
-    print("Sending request to live stream API...")
-
+    """Get m3u8 address from API"""
+    print("👉 Sending request to live stream API...")
     try:
-        response = requests.get(
-            API_URL,
-            params=PARAMS,
-            headers=HEADERS,
-            timeout=10
-        )
+        response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=10)
         response.raise_for_status()
-
-        try:
-            data = response.json()
-        except json.JSONDecodeError:
-            print("Error: API response is not valid JSON format.")
-            print("Response preview:", response.text[:200])
-            return None
-
+        data = response.json()
         if 'data' in data and 'm3u8Url' in data['data']:
             m3u8_url = data['data']['m3u8Url']
             if is_url_valid(m3u8_url):
-                print(f"Successfully obtained dynamic stream: {m3u8_url}")
+                print(f"✅ Dynamic stream OK: {m3u8_url}")
                 return m3u8_url
             else:
-                print(f"Dynamic stream is not accessible: {m3u8_url}")
-                return None
+                print(f"❌ Dynamic stream not accessible: {m3u8_url}")
         else:
-            print("Error: 'data.m3u8Url' field not found in returned JSON data.")
-            print("Full response data:", json.dumps(data, ensure_ascii=False, indent=2))
-            return None
-
-    except requests.exceptions.RequestException as e:
-        print(f"Error during request: {e}")
-        return None
+            print("❌ 'data.m3u8Url' not found in API response")
+            print("Raw response:", response.text[:500])
+    except Exception as e:
+        print(f"❌ API request failed: {e}")
+    return None
 
 def load_whitelist_from_remote():
-    """
-    Load whitelist from remote URL
-    :return: [(name, url, group)] list, group is None
-    """
-    print(f"Loading remote whitelist: {REMOTE_WHITELIST_URL}")
+    """Load whitelist.txt -> (name, url, group=None)"""
+    print(f"👉 Loading remote whitelist: {REMOTE_WHITELIST_URL}")
     try:
         response = requests.get(REMOTE_WHITELIST_URL, timeout=WHITELIST_TIMEOUT)
         response.raise_for_status()
         lines = response.text.strip().splitlines()
         whitelist = []
-        for line_num, line in enumerate(lines, 1):
+        for line in lines:
             line = line.strip()
             if not line or line.startswith("#"):
-                continue  # Skip empty lines and comments
+                continue
             if "," not in line:
-                print(f"Warning: Line {line_num} has wrong format (missing comma): {line}")
                 continue
             try:
-                name, url = line.split(",", 1)
-                name, url = name.strip(), url.strip()
+                name, url = map(str.strip, line.split(",", 1))
                 if not name or not url:
-                    print(f"Warning: Line {line_num} has empty name or URL: {line}")
                     continue
                 if not url.startswith(("http://", "https://")):
-                    print(f"Warning: Line {line_num} has invalid URL: {url}")
                     continue
-                whitelist.append((f"Remote-{name}", url, None))  # No group from whitelist
+                whitelist.append((f"Remote-{name}", url, None))
             except Exception as e:
-                print(f"Warning: Failed to parse line {line_num}: {e}")
-        print(f"Successfully loaded {len(whitelist)} remote streams")
+                print(f"⚠️ Parse whitelist line failed: {line} | {e}")
+        print(f"✅ Loaded {len(whitelist)} from whitelist")
         return whitelist
     except Exception as e:
-        print(f"Failed to load remote whitelist: {e}")
+        print(f"❌ Failed to load whitelist: {e}")
         return []
 
 def load_external_iptv():
-    """
-    Load IPTV channels from external source (keep group-title)
-    :return: [(name, url, group)] list
-    """
-    print(f"Loading external IPTV: {EXTERNAL_IPTV_URL}")
+    """Load result.txt with robust M3U parsing"""
+    print(f"👉 Loading external IPTV: {EXTERNAL_IPTV_URL}")
     try:
-        response = requests.get(EXTERNAL_IPTV_URL, timeout=WHITELIST_TIMEOUT)
+        # Use raw.githubusercontent.com for faster access
+        raw_url = EXTERNAL_IPTV_URL.replace("cdn.jsdelivr.net/gh", "raw.githubusercontent.com").replace("@", "/")
+        print(f"Using raw URL: {raw_url}")
+        response = requests.get(raw_url, timeout=WHITELIST_TIMEOUT, headers={'User-Agent': 'Mozilla/5.0'})
         response.raise_for_status()
+
         lines = response.text.strip().splitlines()
         channels = []
-        current_group = "Other"  # Default group
+        current_group = "Other"
+        current_tvg_name = None
 
-        for line in lines:
-            line = line.strip()
-            if line.startswith("#EXTM3U"):
-                continue
-            elif line.startswith("#EXTINF:"):
-                # Parse group-title from EXTINF
-                parts = line.split(',', 1)
-                if len(parts) != 2:
-                    continue
-                extinf, name = parts
-                name = name.strip()
-                
-                # Extract group-title
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+            if line.startswith("#EXTINF:"):
+                # Extract group-title and tvg-name
+                extinf = line
+                group = "Other"
+                tvg_name = None
+                display_name = ""
+
                 if 'group-title=' in extinf:
-                    start = extinf.find('group-title="') + len('group-title="')
+                    start = extinf.find('group-title="') + 13
                     end = extinf.find('"', start)
-                    if start > len('group-title="') and end > start:
-                        current_group = extinf[start:end]
-                else:
-                    current_group = "Other"
-                
-                # Extract tvg-name
-                tvg_name = name
+                    if end > start:
+                        group = extinf[start:end]
+
                 if 'tvg-name=' in extinf:
-                    start_t = extinf.find('tvg-name="') + len('tvg-name="')
-                    end_t = extinf.find('"', start_t)
-                    if start_t > len('tvg-name="') and end_t > start_t:
-                        tvg_name = extinf[start_t:end_t]
-                
-                # Use tvg-name or fallback to display name
-                display_name = tvg_name if tvg_name else name
-                
-                # Next line should be URL
-                continue
-            elif line.startswith("http"):
-                # This is the URL
-                url = line.strip()
-                if not url:
-                    continue
-                channels.append((f"External-{current_group}-{display_name}", url, current_group))
-        
-        print(f"Successfully loaded {len(channels)} channels from external IPTV")
+                    start = extinf.find('tvg-name="') + 10
+                    end = extinf.find('"', start)
+                    if end > start:
+                        tvg_name = extinf[start:end]
+
+                # Extract channel name after comma
+                if ',' in extinf:
+                    display_name = extinf.split(',', 1)[1].strip()
+
+                # Look ahead for URL
+                i += 1
+                if i < len(lines):
+                    url = lines[i].strip()
+                    if url.startswith("http"):
+                        # Use tvg-name > display_name > fallback
+                        final_name = tvg_name or display_name or "Unknown"
+                        channels.append((f"External-{group}-{final_name}", url, group))
+                        print(f"  ➕ Added: {final_name} | Group: {group} | {url[:60]}...")
+            i += 1
+
+        print(f"✅ Loaded {len(channels)} channels from external IPTV")
         return channels
     except Exception as e:
-        print(f"Failed to load external IPTV: {e}")
+        print(f"❌ Failed to load or parse external IPTV: {e}")
+        import traceback
+        traceback.print_exc()
         return []
 
 def merge_and_deduplicate(channels):
-    """
-    Merge and deduplicate: based on URL, keep first one
-    channels: list of (name, url, group)
-    """
+    """Deduplicate by URL (ignore case and params)"""
     seen_urls = set()
     unique_list = []
     for name, url, group in channels:
-        if url not in seen_urls:
-            seen_urls.add(url)
+        # Normalize URL: lowercase, remove params if needed
+        normalized = url.lower().split('?')[0]
+        if normalized not in seen_urls:
+            seen_urls.add(normalized)
             unique_list.append((name, url, group))
         else:
-            print(f"Skipping duplicate address: {url} ({name})")
-    print(f"After deduplication, {len(unique_list)} unique addresses remain")
+            print(f"🔁 Skipped duplicate: {url}")
+    print(f"✅ After deduplication: {len(unique_list)} unique streams")
     return unique_list
 
 def generate_m3u8_content(dynamic_url, channels):
-    """
-    Generate M3U8 content with original groups
-    channels: list of (name, url, group)
-    """
+    """Generate M3U8 content"""
     lines = [
         "#EXTM3U",
         "x-tvg-url=\"https://epg.51zmt.top/xmltv.xml\""
     ]
 
-    # Add dynamic stream (Xichong Comprehensive) - explicitly in "本地节目"
     if dynamic_url:
         lines.append('#EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合')
         lines.append(dynamic_url)
 
     for name, url, group in channels:
-        name_clean = name.split("-", 2)[-1]  # Remove prefix like "External-CCTV-"
-        group = group or "其他"  # Fallback group
-        
-        # Use original group-title
-        lines.append(f'#EXTINF:-1 tvg-name="{name_clean}" group-title="{group}",{name_clean}')
+        clean_name = name.split("-", 2)[-1] if name.count("-") >= 2 else name
+        group = group or "其他"
+        lines.append(f'#EXTINF:-1 tvg-name="{clean_name}" group-title="{group}",{clean_name}')
         lines.append(url)
 
     return "\n".join(lines) + "\n"
 
 def main():
-    """
-    Main function: Fetch live stream, load remote whitelist, external IPTV, generate M3U8, write file
-    """
-    print("Starting to generate live stream playlist...")
+    print("🚀 Starting playlist generation...")
 
-    # Create output directory
     os.makedirs('live', exist_ok=True)
-    print("Ensured live/ directory exists")
+    print("📁 Ensured live/ directory exists")
 
-    # Get dynamic stream
     dynamic_url = get_dynamic_stream()
 
-    # Build full channel list
     all_channels = []
 
-    # Load remote whitelist (no group)
-    remote_list = load_whitelist_from_remote()
-    all_channels.extend(remote_list)
+    # Load sources
+    all_channels.extend(load_whitelist_from_remote())
+    all_channels.extend(load_external_iptv())
 
-    # Load external IPTV (keep group)
-    external_list = load_external_iptv()
-    all_channels.extend(external_list)
-
-    # Deduplicate
     unique_channels = merge_and_deduplicate(all_channels)
 
-    # Generate M3U8 content
     m3u8_content = generate_m3u8_content(dynamic_url, unique_channels)
 
-    # Write file
     output_path = 'live/current.m3u8'
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(m3u8_content)
-        print(f"Successfully generated playlist: {output_path}")
-        print(f"Total includes {len(unique_channels) + (1 if dynamic_url else 0)} streams")
+        print(f"🎉 Successfully wrote {output_path}")
+        print(f"📊 Total streams: {len(unique_channels) + (1 if dynamic_url else 0)}")
     except Exception as e:
-        print(f"Failed to write file: {e}")
+        print(f"❌ Failed to write file: {e}")
         return
 
-    # Ensure .nojekyll file exists
-    nojekyll_path = '.nojekyll'
-    if not os.path.exists(nojekyll_path):
-        try:
-            open(nojekyll_path, 'w').close()
-            print(f"Created {nojekyll_path} file")
-        except Exception as e:
-            print(f"Failed to create .nojekyll file: {e}")
+    # Create .nojekyll
+    nojekyll = '.nojekyll'
+    if not os.path.exists(nojekyll):
+        open(nojekyll, 'w').close()
+        print(f"📄 Created {nojekyll}")
 
-    print("All tasks completed!")
+    print("✅ All tasks completed!")
 
-# ============ Run Program ============
 if __name__ == "__main__":
     main()
