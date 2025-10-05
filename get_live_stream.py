@@ -4,68 +4,68 @@ Function: Fetch live stream from API + remote whitelist + external IPTV -> Gener
 Output file: live/current.m3u8
 """
 
-import导入 requests
-import导入 json
-import导入操作系统模块
-from从 urllib.parse 导入 urlparse, parse_qsimport urlparse, parse_qs
+import requests
+import json
+import os
+from urllib.parse import urlparse, parse_qs
 
 # ================== Configuration Section ==================
 
 # [1. Dynamic Live Stream API Configuration]
-API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd""https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
-PARAMS = {{
-    'deviceType': '1','deviceType': '1',
-    'centerId': '9','centerId': '9',
+API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
+PARAMS = {
+    'deviceType': '1',
+    'centerId': '9',
     'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
-    'latitudeValue': '0'
+    'latitudeValue': '0',
     'areaId': '907',
     'appCenterId': '907',
-    'isTest': '0'
-    '经度值': '0',
+    'isTest': '0',
+    'longitudeValue': '0',
     'deviceVersionType': 'android',
     'versionCodeGlobal': '5009037'
 }
 HEADERS = {
     'User-Agent': 'okhttp/3.12.12',
-    'Accept': 'application/json, text/plain, */*'
+    'Accept': 'application/json, text/plain, */*',
     'Accept-Encoding': 'gzip, deflate, br',
-    '连接': '保持活动状态',
+    'Connection': 'keep-alive',
 }
 
-# [2. 远程白名单和外部IPTV]
- REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+# [2. Remote Whitelist & External IPTV]
+REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 EXTERNAL_IPTV_URL = "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
 
-WHITELIST_TIMEOUT = 15  # 增加超时时间15  # Increased timeout
+WHITELIST_TIMEOUT = 15  # Increased timeout
 
 # ================== Utility Functions ==================
 
-defdef is_url_valid(url):is_url_valid(url):
-    """检查URL是否可访问（HEAD请求）""""""Check if URL is accessible (HEAD request)"""
-    尝试:try:
-        head = requests.head(url, timeout=5, allow_redirects=True, headers={'User-Agent': 'Mozilla/5.0'})head(url, timeout=5, allow_redirects=True, headers={'User-Agent': 'Mozilla/5.0'})
-        返回头的的状态码 < 400return head.status_code < 400
-    except Exception as e:except Exception as e:
-        print(f"警告：检查网址 {url} 失败: {e}")print(f"Warning: Failed to check URL {url}: {e}")
-        返回 Falsereturn False
+def is_url_valid(url):
+    """Check if URL is accessible (HEAD request)"""
+    try:
+        head = requests.head(url, timeout=5, allow_redirects=True, headers={'User-Agent': 'Mozilla/5.0'})
+        return head.status_code < 400
+    except Exception as e:
+        print(f"Warning: Failed to check URL {url}: {e}")
+        return False
 
-defdef get_dynamic_stream():get_dynamic_stream():
-    """从API获取m3u8地址""""""Get m3u8 address from API"""
-    打印("👉 正在向直播API发送请求...")print("👉 Sending request to live stream API...")
-    尝试:try:
-        response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=10)get(API_URL, params=PARAMS, headers=HEADERS, timeout=10)
-        response.raise_for_status()raise_for_status()
-        data = response.json()json()
+def get_dynamic_stream():
+    """Get m3u8 address from API"""
+    print("👉 Sending request to live stream API...")
+    try:
+        response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=10)
+        response.raise_for_status()
+        data = response.json()
         if 'data' in data and 'm3u8Url' in data['data']:
             m3u8_url = data['data']['m3u8Url']
-            如果is_url_valid(m3u8_url):
-                打印(f"✅ 动态流正常: {m3u8_url}")
-                返回m3u8_url
-            否则:
-                打印(f"❌ 动态流无法访问: {m3u8_url}")
-        否则:
-            打印("❌ 'data.m3u8Url' 在 API 响应中未找到")
-            打印("原始响应：", response.text[:500])
+            if is_url_valid(m3u8_url):
+                print(f"✅ Dynamic stream OK: {m3u8_url}")
+                return m3u8_url
+            else:
+                print(f"❌ Dynamic stream not accessible: {m3u8_url}")
+        else:
+            print("❌ 'data.m3u8Url' not found in API response")
+            print("Raw response:", response.text[:500])
     except Exception as e:
         print(f"❌ API request failed: {e}")
     return None
@@ -177,42 +177,42 @@ def merge_and_deduplicate(channels):
 def generate_m3u8_content(dynamic_url, channels):
     """Generate M3U8 content"""
     lines = [
-        "#EXTM3U",
-        "x-tvg-url=\"https://epg.51zmt.top/xmltv.xml\""
-    ]
+        # get_live_stream.py,
+        '""'
+    功能：从 API 获取直播流 + 远程白名单 + 外部 IPTV -> 生成 M3U8 播放列表（保留原始组）
 
-    if dynamic_url:
+    '""' dynamic_url:
         lines.append('#EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合')
-        lines.append(dynamic_url)
+导入 requestsappend(dynamic_url)
 
-    for name, url, group in channels:
-        clean_name = name.split("-", 2)[-1] if name.count("-") >= 2 else name
+import导入操作系统模块for name, url, group in channels:
+从urllib.parse导入urlparse, parse_qs导入urlparse, parse_qs("-"2)[-1] if name.count("-") >= 2 else name
         group = group or "其他"
-        lines.append(f'#EXTINF:-1 tvg-name="{clean_name}" group-title="{group}",{clean_name}')
+        lines.# ================== 配置部分 ==================(f'#EXTINF:-1 tvg-name="{clean_name}" group-title="{group}",{clean_name}')
         lines.append(url)
 
-    return "\n".join(lines) + "\n"
+API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd" "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd".join(lines) + "\n"
 
-def main():
-    print("🚀 Starting playlist generation...")
+def '设备类型': '1''设备类型'()
+    'centerId''9''centerId'("🚀 Starting playlist generation...")
 
-    os.makedirs('live', exist_ok=True)
-    print("📁 Ensured live/ directory exists")
+    os.'latitudeValue'：'0'('live')
+    ("📁 Ensured live/ directory exists")
 
-    dynamic_url = get_dynamic_stream()
+    dynamic_url = ()
 
-    all_channels = []
+    all_channels = ]
 
-    # Load sources
-    all_channels.extend(load_whitelist_from_remote())
-    all_channels.extend(load_external_iptv())
+    }
+标题 = {(load_whitelist_from_remote())
+    all_channels.(load_external_iptv())
 
-    unique_channels = merge_and_deduplicate(all_channels)
+    unique_channels = 'Accept-Encoding'(: 'gzip, deflate, br',)
 
-    m3u8_content = generate_m3u8_content(dynamic_url, unique_channels)
+    m3u8_content = }(dynamic_url, unique_channels)
 
-    output_path = 'live/current.m3u8'
-    try:
+    output_path = # [2. 远程白名单和外部IPTV]
+ REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt":
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(m3u8_content)
         print(f"🎉 Successfully wrote {output_path}")
@@ -231,4 +231,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
