@@ -1,8 +1,11 @@
 # get_live_stream.py
 """
-Function: Fetch live stream from API + whitelist + external IPTV (M3U) + 海燕.txt (convert to m3u)
-         Assign 海燕.txt -> group-title="本地节目"
-Output file: live/current.m3u8
+Function: Use ORIGINAL group-title from any source.
+         - whitelist.txt: support name,group,url or name,url
+         - 海燕.txt: same
+         - result.m3u: keep original
+         - DO NOT FORCE '本地节目' or '网络电视'
+Output: live/current.m3u8
 """
 
 import requests
@@ -27,17 +30,15 @@ HEADERS = {
     'User-Agent': 'okhttp/3.12.12',
 }
 
-# --- Sources ---
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 EXTERNAL_IPTV_URL = "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
-HAIYAN_TXT_URL = "https://chuxinya.top/f/AD5QHE/%E6%B5%B7%E7%87%95.txt"  # 新增：海燕.txt
+HAIYAN_TXT_URL = "https://chuxinya.top/f/AD5QHE/%E6%B5%B7%E7%87%95.txt"
 
 WHITELIST_TIMEOUT = 15
 
 
 # ================== Utility Functions ==================
 def is_url_valid(url):
-    """Check if URL is accessible"""
     try:
         head = requests.head(url, timeout=5, allow_redirects=True, headers={'User-Agent': 'Mozilla/5.0'})
         return head.status_code < 400
@@ -47,7 +48,6 @@ def is_url_valid(url):
 
 
 def get_dynamic_stream():
-    """Get dynamic stream from API"""
     print("👉 Fetching dynamic stream from API...")
     try:
         response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=10)
@@ -68,29 +68,37 @@ def get_dynamic_stream():
 
 
 def load_whitelist_from_remote():
-    """Load whitelist.txt -> group-title='本地节目'"""
+    """Support: name,url OR name,group,url"""
     print(f"👉 Loading whitelist: {REMOTE_WHITELIST_URL}")
     try:
         response = requests.get(REMOTE_WHITELIST_URL, timeout=WHITELIST_TIMEOUT)
         response.raise_for_status()
         lines = response.text.strip().splitlines()
         channels = []
+
         for line in lines:
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
-            if "," not in line:
+            parts = [p.strip() for p in line.split(",")]
+            if len(parts) < 2:
                 continue
-            try:
-                name, url = map(str.strip, line.split(",", 1))
-                if not name or not url:
-                    continue
-                if not url.startswith(("http://", "https://")):
-                    continue
-                channels.append((name, url, "本地节目"))
-                print(f"  ➕ Whitelist: {name} -> 本地节目")
-            except Exception as e:
-                print(f"⚠️ Parse whitelist failed: {line} | {e}")
+
+            if len(parts) == 2:
+                name, url = parts
+                group = None  # ✅ 不设置 group-title
+            else:
+                name, group, url = parts[0], parts[1], parts[2]
+
+            if not name or not url:
+                continue
+            if not url.startswith(("http://", "https://")):
+                continue
+
+            channels.append((name, url, group))
+            group_str = f" | Group: {group}" if group else " | No group"
+            print(f"  ➕ Whitelist: {name}{group_str}")
+
         print(f"✅ Loaded {len(channels)} from whitelist")
         return channels
     except Exception as e:
@@ -98,15 +106,61 @@ def load_whitelist_from_remote():
         return []
 
 
+def load_haiyan_txt():
+    """Support: name,url OR name,group,url"""
+    print(f"👉 Loading 海燕.txt: {HAIYAN_TXT_URL}")
+    try:
+        decoded_url = unquote(HAIYAN_TXT_URL)
+        print(f"🔍 Decoded URL: {decoded_url}")
+
+        response = requests.get(decoded_url, timeout=WHITELIST_TIMEOUT, headers={'User-Agent': 'Mozilla/5.0'})
+        response.raise_for_status()
+        response.encoding = 'utf-8'
+
+        lines = response.text.strip().splitlines()
+        channels = []
+
+        for line_num, line in enumerate(lines, 1):
+            line = line.strip()
+            if not line or line.startswith("#") or line.startswith("更新时间"):
+                continue
+            parts = [p.strip() for p in line.split(",")]
+            if len(parts) < 2:
+                print(f"⚠️ Line {line_num} skipped: {line}")
+                continue
+
+            if len(parts) == 2:
+                name, url = parts
+                group = None  # ✅ 不强制归类
+            else:
+                name, group, url = parts[0], parts[1], parts[2]
+
+            if not name or not url:
+                continue
+            if not url.startswith(("http://", "https://")):
+                continue
+
+            channels.append((name, url, group))
+            group_str = f" | Group: {group}" if group else " | No group"
+            print(f"  ➕ 海燕.txt: {name}{group_str}")
+
+        print(f"✅ Loaded {len(channels)} from 海燕.txt")
+        return channels
+    except Exception as e:
+        print(f"❌ Load 海燕.txt failed: {e}")
+        import traceback
+        traceback.print_exc()
+        return []
+
+
 def load_external_iptv():
-    """Load result.m3u, skip 1st line, keep original group-title"""
+    """Keep original group-title from M3U"""
     print(f"👉 Loading external IPTV: {EXTERNAL_IPTV_URL}")
     try:
         response = requests.get(EXTERNAL_IPTV_URL, timeout=WHITELIST_TIMEOUT, headers={'User-Agent': 'Mozilla/5.0'})
         response.raise_for_status()
         lines = response.text.strip().splitlines()
 
-        # ✅ Skip first line (update time / scan info)
         if lines:
             print(f"⏭️ Skipping first line: {lines[0]}")
             lines = lines[1:]
@@ -117,7 +171,7 @@ def load_external_iptv():
             line = lines[i].strip()
             if line.startswith("#EXTINF:"):
                 extinf = line
-                group = "Other"
+                group = None
                 tvg_name = "Unknown"
                 display_name = "Unknown"
 
@@ -142,67 +196,18 @@ def load_external_iptv():
                     if url.startswith("http"):
                         final_name = tvg_name if tvg_name != "Unknown" else display_name
                         channels.append((final_name, url, group))
-                        print(f"  ➕ External: {final_name} | Group: {group}")
+                        group_str = f" | Group: {group}" if group else " | No group"
+                        print(f"  ➕ External: {final_name}{group_str}")
             i += 1
 
         print(f"✅ Loaded {len(channels)} from external M3U")
         return channels
     except Exception as e:
         print(f"❌ Load external M3U failed: {e}")
-        import traceback
-        traceback.print_exc()
-        return []
-
-
-def load_haiyan_txt():
-    """Load 海燕.txt -> convert to m3u format, assign to '本地节目'"""
-    print(f"👉 Loading 海燕.txt: {HAIYAN_TXT_URL}")
-    try:
-        # Ensure URL is properly decoded
-        decoded_url = unquote(HAIYAN_TXT_URL)
-        print(f"🔍 Decoded URL: {decoded_url}")
-
-        response = requests.get(decoded_url, timeout=WHITELIST_TIMEOUT, headers={'User-Agent': 'Mozilla/5.0'})
-        response.raise_for_status()
-        # Ensure UTF-8 encoding
-        response.encoding = 'utf-8'
-
-        lines = response.text.strip().splitlines()
-        channels = []
-
-        for line_num, line in enumerate(lines, 1):
-            line = line.strip()
-            if not line or line.startswith("#") or line.startswith("更新时间"):
-                continue
-            if "," not in line:
-                print(f"⚠️ Line {line_num} skipped (no comma): {line}")
-                continue
-
-            try:
-                name, url = map(str.strip, line.split(",", 1))
-                if not name or not url:
-                    continue
-                if not url.startswith(("http://", "https://")):
-                    continue
-
-                channels.append((name, url, "本地节目"))
-                print(f"  ➕ 海燕.txt: {name} -> 本地节目")
-
-            except Exception as e:
-                print(f"⚠️ Parse failed at line {line_num}: {line} | {e}")
-
-        print(f"✅ Loaded {len(channels)} channels from 海燕.txt")
-        return channels
-
-    except Exception as e:
-        print(f"❌ Failed to load or parse 海燕.txt: {e}")
-        import traceback
-        traceback.print_exc()
         return []
 
 
 def merge_and_deduplicate(channels):
-    """Deduplicate by normalized URL"""
     seen = set()
     unique = []
     for name, url, group in channels:
@@ -217,24 +222,20 @@ def merge_and_deduplicate(channels):
 
 
 def generate_m3u8_content(dynamic_url, channels):
-    """Generate final M3U8 with clean groups"""
     lines = [
         "#EXTM3U",
         "x-tvg-url=\"https://epg.51zmt.top/xmltv.xml\""
     ]
 
     if dynamic_url:
+        # 仅这个是本地节目，其他按源数据
         lines.append('#EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合')
         lines.append(dynamic_url)
 
     for name, url, group in channels:
-        clean_group = group
-        # Remove unwanted groups
-        if group in ["Other", "其他", "Remote", "remote", "OTHER", ""]:
-            clean_group = "其他"  # Optional: use "其他" or set to None to omit group
-
-        if clean_group:
-            lines.append(f'#EXTINF:-1 tvg-name="{name}" group-title="{clean_group}",{name}')
+        # ✅ 只有当 group 存在时才写入 group-title
+        if group:
+            lines.append(f'#EXTINF:-1 tvg-name="{name}" group-title="{group}",{name}')
         else:
             lines.append(f'#EXTINF:-1 tvg-name="{name}",{name}')
         lines.append(url)
@@ -250,10 +251,9 @@ def main():
     dynamic_url = get_dynamic_stream()
     all_channels = []
 
-    # Load sources in order
-    all_channels.extend(load_whitelist_from_remote())     # 白名单 -> 本地节目
-    all_channels.extend(load_haiyan_txt())               # 海燕.txt -> 本地节目
-    all_channels.extend(load_external_iptv())            # 外部M3U -> 保留原分组
+    all_channels.extend(load_whitelist_from_remote())
+    all_channels.extend(load_haiyan_txt())
+    all_channels.extend(load_external_iptv())
 
     unique_channels = merge_and_deduplicate(all_channels)
     m3u8_content = generate_m3u8_content(dynamic_url, unique_channels)
