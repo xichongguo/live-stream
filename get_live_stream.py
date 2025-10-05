@@ -30,9 +30,9 @@ HEADERS = {
     'User-Agent': 'okhttp/3.12.12',
 }
 
-REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
-EXTERNAL_IPTV_URL = "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
-HAIYAN_TXT_URL = "https://chuxinya.top/f/AD5QHE/%E6%B5%B7%E7%87%95.txt"
+ REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+EXTERNAL_IPTV_URL = "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u
+HAIYAN_TXT_URL = "https://chuxinya.top/f/AD5QHE/东北虎.txt"
 
 WHITELIST_TIMEOUT = 15
 
@@ -277,3 +277,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
