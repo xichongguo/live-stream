@@ -1,8 +1,9 @@
 # get_live_stream.py
 """
-Function: Only use API + whitelist.txt + 海燕.txt
-         NO EXTERNAL M3U (result.m3u REMOVED)
-         Group-title: only if provided in source (name,group,url format)
+Function: 
+  - API stream & whitelist.txt -> group-title="本地节目"
+  - 海燕.txt -> group-title="网络节目"
+  - NO other sources (result.m3u removed)
 Output: live/current.m3u8
 """
 
@@ -28,7 +29,6 @@ HEADERS = {
     'User-Agent': 'okhttp/3.12.12',
 }
 
-# --- Removed: EXTERNAL_IPTV_URL ---
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 HAIYAN_TXT_URL = "https://chuxinya.top/f/AD5QHE/%E6%B5%B7%E7%87%95.txt"
 
@@ -67,7 +67,7 @@ def get_dynamic_stream():
 
 
 def load_whitelist_from_remote():
-    """Support: name,url OR name,group,url"""
+    """All channels from whitelist.txt -> group-title="本地节目" """
     print(f"👉 Loading whitelist: {REMOTE_WHITELIST_URL}")
     try:
         response = requests.get(REMOTE_WHITELIST_URL, timeout=WHITELIST_TIMEOUT)
@@ -83,20 +83,15 @@ def load_whitelist_from_remote():
             if len(parts) < 2:
                 continue
 
-            if len(parts) == 2:
-                name, url = parts
-                group = None
-            else:
-                name, group, url = parts[0], parts[1], parts[2]
-
+            name, url = parts[0], parts[1]
             if not name or not url:
                 continue
             if not url.startswith(("http://", "https://")):
                 continue
 
-            channels.append((name, url, group))
-            group_str = f" | Group: {group}" if group else " | No group"
-            print(f"  ➕ Whitelist: {name}{group_str}")
+            # ✅ 强制归类为 "本地节目"
+            channels.append((name, url, "本地节目"))
+            print(f"  ➕ Whitelist: {name} -> 本地节目")
 
         print(f"✅ Loaded {len(channels)} from whitelist")
         return channels
@@ -106,7 +101,7 @@ def load_whitelist_from_remote():
 
 
 def load_haiyan_txt():
-    """Support: name,url OR name,group,url"""
+    """All channels from 海燕.txt -> group-title="网络节目" """
     print(f"👉 Loading 海燕.txt: {HAIYAN_TXT_URL}")
     try:
         decoded_url = unquote(HAIYAN_TXT_URL)
@@ -123,25 +118,23 @@ def load_haiyan_txt():
             line = line.strip()
             if not line or line.startswith("#") or line.startswith("更新时间"):
                 continue
-            parts = [p.strip() for p in line.split(",")]
-            if len(parts) < 2:
-                print(f"⚠️ Line {line_num} skipped: {line}")
+            if "," not in line:
+                print(f"⚠️ Line {line_num} skipped (no comma): {line}")
                 continue
 
-            if len(parts) == 2:
-                name, url = parts
-                group = None
-            else:
-                name, group, url = parts[0], parts[1], parts[2]
+            try:
+                name, url = map(str.strip, line.split(",", 1))
+                if not name or not url:
+                    continue
+                if not url.startswith(("http://", "https://")):
+                    continue
 
-            if not name or not url:
-                continue
-            if not url.startswith(("http://", "https://")):
-                continue
+                # ✅ 强制归类为 "网络节目"
+                channels.append((name, url, "网络节目"))
+                print(f"  ➕ 海燕.txt: {name} -> 网络节目")
 
-            channels.append((name, url, group))
-            group_str = f" | Group: {group}" if group else " | No group"
-            print(f"  ➕ 海燕.txt: {name}{group_str}")
+            except Exception as e:
+                print(f"⚠️ Parse failed at line {line_num}: {line} | {e}")
 
         print(f"✅ Loaded {len(channels)} from 海燕.txt")
         return channels
@@ -173,14 +166,13 @@ def generate_m3u8_content(dynamic_url, channels):
     ]
 
     if dynamic_url:
+        # ✅ API 动态流 -> 本地节目
         lines.append('#EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合')
         lines.append(dynamic_url)
 
     for name, url, group in channels:
-        if group:
-            lines.append(f'#EXTINF:-1 tvg-name="{name}" group-title="{group}",{name}')
-        else:
-            lines.append(f'#EXTINF:-1 tvg-name="{name}",{name}')
+        # ✅ 所有频道都带 group-title
+        lines.append(f'#EXTINF:-1 tvg-name="{name}" group-title="{group}",{name}')
         lines.append(url)
 
     return "\n".join(lines) + "\n"
@@ -194,11 +186,8 @@ def main():
     dynamic_url = get_dynamic_stream()
     all_channels = []
 
-    # ✅ 仅保留这两个来源
-    all_channels.extend(load_whitelist_from_remote())
-    all_channels.extend(load_haiyan_txt())
-
-    # ❌ 已删除：load_external_iptv()
+    all_channels.extend(load_whitelist_from_remote())  # -> 本地节目
+    all_channels.extend(load_haiyan_txt())            # -> 网络节目
 
     unique_channels = merge_and_deduplicate(all_channels)
     m3u8_content = generate_m3u8_content(dynamic_url, unique_channels)
