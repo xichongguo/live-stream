@@ -1,9 +1,9 @@
-本地频道,#genre#
+本地频道，#类型#
 佛系维护,https://us-xpc5-l2.xpccdn.com/984af664-48a9-4795-b14f-8759f686e191/d880cbcf-3616-482f-931f-b95de2474640.mp4?j=%7B%22userId%22%3A12967765%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.212.114.201%2C121.11.35.110%22%7D
-西充综合,http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_13970909154_strL.m3u8?txSecret=5aca79ded04a5f5e101cde4916b6f623&txTime=68e38b35&stat=cGweUVqvOx1FvIm99Uh%2FwA%3D%3D
-南充综合,http://ncrmpull.cnncw.cn/live/8f7b908601931000dd6ee79a00000000/playlist.m3u8?wsSecret=a4f69b6d2e56c7b4018fa29d65112d99&wsTime=1875618327
+西充综合,http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_13970909154_strL.m3u8?txSecret=5aca79ded04a5f5e101cde4916b6f623&txTime=68e38b35&stat=cGweUVqvOx1FvIm99Uh%2FwA===
+南充综合,http://ncrmpull.cnncw.cn/live/8f7b908601931000dd6ee79a0000000/playlist.m3u8?wsSecret=a4f69b6d2e56c7b4018fa29d65112d99&wsTime=1875618327
 南充科教生活,http://ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba700000000/playlist.m3u8?wsSecret=42f62aa716a3a86719587b678ac75386&wsTime=1875618327
-本地视频,#genre#
+本地视频，#类型#
 走进四川西充,https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
 
 西充莲花湖夜景,https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
@@ -1716,5 +1716,6 @@ CCTV164K25PHLG源,http://113.62.253.22/live.aishang.ctlcdn.com/00000110240389_1/
 贵州省兴义市万峰林,https://gcalic.v.myalicdn.com/gc/xywfl_1/index.m3u8
 黄花城水长城01,https://gcalic.v.myalicdn.com/gc/wgw01_1/index.m3u8
 黄花城水长城02,http://gctxyc.liveplay.myqcloud.com/gc/wgw02_1/index.m3u8
+
 
 
