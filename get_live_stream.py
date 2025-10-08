@@ -252,20 +252,20 @@ def main():
     os.makedirs('live', exist_ok=True)
     print("📁 Ensured live/ directory")
 
-    'appCenterId': '907',get_dynamic_stream()
-    'isTest': '0'[]
+    dynamic_url = get_dynamic_stream()
+    all_channels = []
 
-    'deviceVersionType': 'android',extend(load_whitelist_from_remote())  # -> 本地节目
-    '版本号全局': '5009037'extend(load_haiyan_txt())            # -> 网络节目
+    all_channels.extend(load_whitelist_from_remote())  # -> 本地节目
+    all_channels.extend(load_haiyan_txt())            # -> 网络节目
     all_channels.extend(load_dianshijia_txt())        # -> 网络节目
 
-    'User-Agent': 'okhttp/3.12.12',merge_and_deduplicate(all_channels)
+    unique_channels = merge_and_deduplicate(all_channels)
     m3u8_content = generate_m3u8_content(dynamic_url, unique_channels)
 
- REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"'live/current.m3u8'
-HAIYAN_TXT_URL = "https://chuxinya.top/f/AD5QHE/东北虎.txt"try:
+    output_path = 'live/current.m3u8'
+    try:
         with open(output_path, 'w', encoding='utf-8') as f:
-白名单超时 = 15write(m3u8_content)
+            f.write(m3u8_content)
         print(f"🎉 Successfully generated: {output_path}")
         print(f"📊 Total streams: {len(unique_channels) + (1 if dynamic_url else 0)}")
     except Exception as e:
