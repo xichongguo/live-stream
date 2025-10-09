@@ -2,7 +2,8 @@
 """
 Function:
   - API stream & whitelist.txt -> group-title="本地节目"
-  - 海燕.txt & 电视家.txt -> group-title="网络节目"
+  - 海燕.txt -> group-title="网络节目"
+  - 电视家.txt -> group-title="网络源2"
   - NO other sources
 Output: live/current.m3u8
 """
@@ -33,7 +34,7 @@ HEADERS = {
 # 远程源地址
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 HAIYAN_TXT_URL = "https://chuxinya.top/f/AD5QHE/%E6%B5%B7%E7%87%95.txt"
-DIANSHIJIA_TXT_URL = "https://gitproxy.click/https://raw.githubusercontent.com/wujiangliu/live-sources/main/dianshijia_10.1.txt"
+DIANSHIJIA_TXT_URL = "https://gitproxy.click/https://github.com/wujiangliu/live-sources/blob/main/dianshijia_10.1.txt"
 
 WHITELIST_TIMEOUT = 15
 REQUEST_TIMEOUT = (5, 10)  # (connect, read)
@@ -154,13 +155,15 @@ def load_haiyan_txt():
 
 
 def load_dianshijia_txt():
-    """All channels from 电视家.txt -> group-title="网络节目" """
+    """All channels from 电视家.txt -> group-title="网络源2" """
     print(f"👉 Loading 电视家.txt: {DIANSHIJIA_TXT_URL}")
     try:
-        decoded_url = unquote(DIANSHIJIA_TXT_URL)
-        print(f"🔍 Decoded URL: {decoded_url}")
+        # 注意：gitproxy.click 返回的是网页，不是原始文本
+        # 我们需要将 blob 链接转换为 raw 链接
+        raw_url = DIANSHIJIA_TXT_URL.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
+        print(f"🔧 Converting to raw URL: {raw_url}")
 
-        response = requests.get(decoded_url, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
+        response = requests.get(raw_url, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
         response.raise_for_status()
         response.encoding = 'utf-8'
 
@@ -182,8 +185,8 @@ def load_dianshijia_txt():
                 if not url.startswith(("http://", "https://")):
                     continue
 
-                channels.append((name, url, "网络节目"))
-                print(f"  ➕ 电视家.txt: {name} -> 网络节目")
+                channels.append((name, url, "网络源2"))  # ✅ 分类为“网络源2”
+                print(f"  ➕ 电视家.txt: {name} -> 网络源2")
 
             except Exception as e:
                 print(f"⚠️ Parse failed at line {line_num}: {line} | {e}")
@@ -257,7 +260,7 @@ def main():
 
     all_channels.extend(load_whitelist_from_remote())  # -> 本地节目
     all_channels.extend(load_haiyan_txt())            # -> 网络节目
-    all_channels.extend(load_dianshijia_txt())        # -> 网络节目
+    all_channels.extend(load_dianshijia_txt())        # -> 网络源2
 
     unique_channels = merge_and_deduplicate(all_channels)
     m3u8_content = generate_m3u8_content(dynamic_url, unique_channels)
