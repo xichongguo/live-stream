@@ -1,8 +1,8 @@
 #EXTM3U
-# Generated at: 2025-10-08 23:21
+# Generated at: 2025-10-09 10:27
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
-http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_14056427378_strL.m3u8?txSecret=676c08e01a68a0a1959f983148851ffc&txTime=690dbaf5&stat=cGweUVqvOx1FvIm99Uh%2FwA%3D%3D
+http://bl.xichongtv.cn/xcrm/xczh202510.m3u8?auth_key=1759991530-0-0-f1bcec0fa8471f39d39ab257e51f0eab
 #EXTINF:-1 tvg-name="佛系维护" group-title="本地节目",佛系维护
 https://us-xpc5-l2.xpccdn.com/984af664-48a9-4795-b14f-8759f686e191/d880cbcf-3616-482f-931f-b95de2474640.mp4?j=%7B%22userId%22%3A12967765%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.212.114.201%2C121.11.35.110%22%7D
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
