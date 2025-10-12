@@ -1,10 +1,9 @@
 # get_live_stream.py
 """
 Function:
-  - API stream & whitelist.txt -> group-title="本地节目"
-  - 海燕.txt -> group-title="网络节目"
-  - 电视家.txt -> group-title="网络源2"
-  - NO other sources
+  - API & whitelist.txt -> group-title="本地节目"
+  - 海燕.txt & 电视家.txt -> 自动分类: 央视 / 卫视 / 地方 / 其他
+  - 取消 "网络节目"、"网络源2" 等泛分类
 Output: live/current.m3u8
 """
 
@@ -31,23 +30,34 @@ HEADERS = {
     'User-Agent': 'okhttp/3.12.12',
 }
 
-# 远程源地址
+# Remote sources
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 HAIYAN_TXT_URL = "https://chuxinya.top/f/AD5QHE/%E6%B5%B7%E7%87%95.txt"
 DIANSHIJIA_TXT_URL = "https://gitproxy.click/https://github.com/wujiangliu/live-sources/blob/main/dianshijia_10.1.txt"
 
 WHITELIST_TIMEOUT = 15
-REQUEST_TIMEOUT = (5, 10)  # (connect, read)
-
-# User-Agent for general requests
+REQUEST_TIMEOUT = (5, 10)
 DEFAULT_HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 }
 
+# Channel category rules
+CATEGORY_MAP = {
+    '央视': ['cctv', '中央'],
+    '卫视': [
+        '卫视', '湖南', '浙江', '江苏', '东方', '北京', '广东', '深圳', '四川', '湖北', '辽宁',
+        '东南', '天津', '重庆', '黑龙江', '山东', '安徽', '云南', '陕西', '甘肃', '新疆',
+        '内蒙古', '吉林', '河北', '山西', '广西', '江西', '福建', '贵州', '海南'
+    ],
+    '地方': [
+        '都市', '新闻', '综合', '公共', '生活', '影视频道', '影视', '电视剧', '娱乐',
+        '少儿', '卡通', '体育', '财经', '纪实', '教育', '民生', '交通', '文艺', '音乐',
+        '戏曲', '高尔夫', '网球'
+    ]
+}
 
 # ================== Utility Functions ==================
 def is_url_valid(url):
-    """Check if URL is accessible"""
     try:
         head = requests.head(url, timeout=REQUEST_TIMEOUT, allow_redirects=True, headers=DEFAULT_HEADERS)
         return 200 <= head.status_code < 400
@@ -55,9 +65,7 @@ def is_url_valid(url):
         print(f"⚠️  Failed to check {url}: {e}")
         return False
 
-
 def get_dynamic_stream():
-    """Get dynamic stream from API"""
     print("👉 Fetching dynamic stream from API...")
     try:
         response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=REQUEST_TIMEOUT)
@@ -76,9 +84,8 @@ def get_dynamic_stream():
         print(f"❌ API request failed: {e}")
     return None
 
-
 def load_whitelist_from_remote():
-    """All channels from whitelist.txt -> group-title="本地节目" """
+    """Load whitelist -> 本地节目"""
     print(f"👉 Loading whitelist: {REMOTE_WHITELIST_URL}")
     try:
         response = requests.get(REMOTE_WHITELIST_URL, timeout=WHITELIST_TIMEOUT)
@@ -90,37 +97,38 @@ def load_whitelist_from_remote():
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
-            parts = [p.strip() for p in line.split(",", 1)]  # Split on first comma only
+            parts = [p.strip() for p in line.split(",", 1)]
             if len(parts) < 2:
                 continue
-
             name, url = parts[0], parts[1]
-            if not name or not url:
+            if not name or not url or not url.startswith(("http://", "https://")):
                 continue
-            if not url.startswith(("http://", "https://")):
-                continue
-
             channels.append((name, url, "本地节目"))
             print(f"  ➕ Whitelist: {name} -> 本地节目")
-
         print(f"✅ Loaded {len(channels)} from whitelist")
         return channels
     except Exception as e:
         print(f"❌ Load whitelist failed: {e}")
         return []
 
+def categorize_channel(name):
+    """Auto categorize channel by name"""
+    name_lower = name.lower()
+    for category, keywords in CATEGORY_MAP.items():
+        for kw in keywords:
+            if kw.lower() in name_lower:
+                return category
+    return "其他"
 
 def load_haiyan_txt():
-    """All channels from 海燕.txt -> group-title="网络节目" """
+    """Load 海燕.txt -> auto categorize"""
     print(f"👉 Loading 海燕.txt: {HAIYAN_TXT_URL}")
     try:
         decoded_url = unquote(HAIYAN_TXT_URL)
         print(f"🔍 Decoded URL: {decoded_url}")
-
         response = requests.get(decoded_url, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
         response.raise_for_status()
         response.encoding = 'utf-8'
-
         lines = response.text.strip().splitlines()
         channels = []
 
@@ -138,10 +146,9 @@ def load_haiyan_txt():
                     continue
                 if not url.startswith(("http://", "https://")):
                     continue
-
-                channels.append((name, url, "网络节目"))
-                print(f"  ➕ 海燕.txt: {name} -> 网络节目")
-
+                category = categorize_channel(name)
+                channels.append((name, url, category))
+                print(f"  ➕ 海燕.txt: {name} -> {category}")
             except Exception as e:
                 print(f"⚠️ Parse failed at line {line_num}: {line} | {e}")
 
@@ -149,24 +156,17 @@ def load_haiyan_txt():
         return channels
     except Exception as e:
         print(f"❌ Load 海燕.txt failed: {e}")
-        import traceback
-        traceback.print_exc()
         return []
 
-
 def load_dianshijia_txt():
-    """All channels from 电视家.txt -> group-title="网络源2" """
+    """Load 电视家.txt -> auto categorize"""
     print(f"👉 Loading 电视家.txt: {DIANSHIJIA_TXT_URL}")
     try:
-        # 注意：gitproxy.click 返回的是网页，不是原始文本
-        # 我们需要将 blob 链接转换为 raw 链接
         raw_url = DIANSHIJIA_TXT_URL.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
         print(f"🔧 Converting to raw URL: {raw_url}")
-
         response = requests.get(raw_url, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
         response.raise_for_status()
         response.encoding = 'utf-8'
-
         lines = response.text.strip().splitlines()
         channels = []
 
@@ -184,10 +184,9 @@ def load_dianshijia_txt():
                     continue
                 if not url.startswith(("http://", "https://")):
                     continue
-
-                channels.append((name, url, "网络源2"))  # ✅ 分类为“网络源2”
-                print(f"  ➕ 电视家.txt: {name} -> 网络源2")
-
+                category = categorize_channel(name)
+                channels.append((name, url, category))
+                print(f"  ➕ 电视家.txt: {name} -> {category}")
             except Exception as e:
                 print(f"⚠️ Parse failed at line {line_num}: {line} | {e}")
 
@@ -195,27 +194,20 @@ def load_dianshijia_txt():
         return channels
     except Exception as e:
         print(f"❌ Load 电视家.txt failed: {e}")
-        import traceback
-        traceback.print_exc()
         return []
 
-
 def normalize_url(url):
-    """Normalize URL for deduplication (remove token/timestamp)"""
     from urllib.parse import urlparse, parse_qs, urlunparse
     try:
         parsed = urlparse(url.lower())
-        # Keep base path, remove volatile query params
         safe_params = {}
         for k, v in parse_qs(parsed.query).items():
-            # Keep only stable params, remove token, t, ts, sign, etc.
             if k.lower() not in ['token', 't', 'ts', 'sign', 'auth_key', 'verify', 'session']:
                 safe_params[k] = v[0] if v else ''
         new_query = '&'.join(f"{k}={v}" for k, v in safe_params.items() if v)
         return urlunparse(parsed._replace(query=new_query))
     except:
         return url.lower().split('?')[0]
-
 
 def merge_and_deduplicate(channels):
     seen = set()
@@ -229,7 +221,6 @@ def merge_and_deduplicate(channels):
             print(f"🔁 Skipped duplicate: {url}")
     print(f"✅ Final unique streams: {len(unique)}")
     return unique
-
 
 def generate_m3u8_content(dynamic_url, channels):
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -249,7 +240,6 @@ def generate_m3u8_content(dynamic_url, channels):
 
     return "\n".join(lines) + "\n"
 
-
 def main():
     print("🚀 Starting playlist generation...")
     os.makedirs('live', exist_ok=True)
@@ -258,9 +248,9 @@ def main():
     dynamic_url = get_dynamic_stream()
     all_channels = []
 
-    all_channels.extend(load_whitelist_from_remote())  # -> 本地节目
-    all_channels.extend(load_haiyan_txt())            # -> 网络节目
-    all_channels.extend(load_dianshijia_txt())        # -> 网络源2
+    all_channels.extend(load_whitelist_from_remote())  # 本地节目
+    all_channels.extend(load_haiyan_txt())            # 自动分类
+    all_channels.extend(load_dianshijia_txt())        # 自动分类
 
     unique_channels = merge_and_deduplicate(all_channels)
     m3u8_content = generate_m3u8_content(dynamic_url, unique_channels)
@@ -275,13 +265,11 @@ def main():
         print(f"❌ Write failed: {e}")
         return
 
-    # Ensure .nojekyll for GitHub Pages
     if not os.path.exists('.nojekyll'):
         open('.nojekyll', 'w').close()
         print("📄 Created .nojekyll")
 
     print("✅ All tasks completed!")
-
 
 if __name__ == "__main__":
     main()
