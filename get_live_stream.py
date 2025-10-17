@@ -1,17 +1,16 @@
 # File: get_live_stream.py
 # Function:
 #   - API & whitelist.txt -> group-title="本地节目"，免检直接保留
-#   - tv.m3u (优先)、海燕.txt、电视家.txt -> 自动分类 + 检测 IPv4 + 可用性
-#   - 白名单源不进行任何检测（包括 IPv6 过滤）
+#   - tv.m3u (优先)、http://rihou.cc:555/gggg.nzk/ -> 自动分类 + 不检测可用性
+#   - 白名单源不进行任何检测
 #   - 增加省份分类，过滤国外频道（保留港澳台）
+#   - 将 '赛事咪咕' 分类移动到文件末尾
 #   - 输出 live/current.m3u8
 
 import requests
 import os
-import socket
 from urllib.parse import unquote, urlparse, parse_qs, urlunparse
 from datetime import datetime
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 # ================== Configuration ==================
@@ -35,8 +34,7 @@ HEADERS = {
 # Remote sources
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
-HAIYAN_TXT_URL = "https://chuxinya.top/f/AD5QHE/%E6%B5%B7%E7%87%95.txt"
-DIANSHIJIA_TXT_URL = "https://gitproxy.click/https://github.com/wujiangliu/live-sources/blob/main/dianshijia_10.1.txt"
+RIHOU_URL = "http://rihou.cc:555/gggg.nzk/"  # 替换海燕和电视家
 
 WHITELIST_TIMEOUT = 15
 REQUEST_TIMEOUT = (5, 10)
@@ -89,7 +87,6 @@ CATEGORY_MAP = {
 
 # ---------------- 新增：国外关键词过滤 ----------------
 FOREIGN_KEYWORDS = {
-    # 英文国家/频道
     'cnn', 'bbc', 'fox', 'abc', 'nbc', 'cbc', 'pbs', 'sky', 'disney',
     'nick', 'mtv', 'espn', 'hbo', 'paramount', 'warner', 'pluto',
     'france', 'deutsch', 'german', 'italia', 'spain', 'espanol',
@@ -110,66 +107,13 @@ ALLOWED_FOREIGN = {'香港', '澳门', '台湾', 'HK', 'Macao', 'Taiwan', 'TVB',
 def is_foreign_channel(name):
     """判断是否为国外频道（排除港澳台）"""
     name_lower = name.lower()
-    # 检查是否在允许列表
     for allowed in ALLOWED_FOREIGN:
         if allowed in name:
             return False
-    # 检查是否包含国外关键词
     for keyword in FOREIGN_KEYWORDS:
         if keyword in name_lower:
             return True
     return False
-
-
-def is_ipv4_address(ip):
-    """Check if the given string is a valid IPv4 address."""
-    try:
-        socket.inet_pton(socket.AF_INET, ip)
-        return True
-    except (socket.error, TypeError):
-        return False
-
-
-def get_ip_version(url):
-    """Resolve domain in URL to IP, return 'ipv4' or 'ipv6'"""
-    try:
-        parsed = urlparse(url)
-        hostname = parsed.netloc.split(':')[0]
-        addr_info = socket.getaddrinfo(hostname, None, family=socket.AF_INET)
-        for info in addr_info:
-            ip = info[4][0]
-            if is_ipv4_address(ip):
-                return 'ipv4'
-        return 'ipv6'
-    except Exception as e:
-        print(f"⚠️ DNS resolve failed for {url}: {e}")
-        return 'unknown'
-
-
-def is_url_valid(url):
-    """Check if stream is accessible AND uses IPv4."""
-    try:
-        ip_ver = get_ip_version(url)
-        if ip_ver != 'ipv4':
-            print(f"🚫 Not IPv4 ({ip_ver}): {url}")
-            return False
-
-        head = requests.head(
-            url,
-            timeout=REQUEST_TIMEOUT,
-            allow_redirects=True,
-            headers=DEFAULT_HEADERS
-        )
-        success = 200 <= head.status_code < 400
-        if success:
-            print(f"✅ Live OK: {url}")
-        else:
-            print(f"❌ Stream dead ({head.status_code}): {url}")
-        return success
-
-    except Exception as e:
-        print(f"❌ Failed to play {url}: {e}")
-        return False
 
 
 def normalize_url(url):
@@ -233,7 +177,6 @@ def load_whitelist_from_remote():
             name, url = parts[0], parts[1]
             if not name or not url or not url.startswith(("http://", "https://")):
                 continue
-            # 过滤国外
             if is_foreign_channel(name):
                 print(f"🌍 Skipped foreign (whitelist): {name}")
                 continue
@@ -247,7 +190,7 @@ def load_whitelist_from_remote():
 
 
 def load_tv_m3u():
-    """Load tv.m3u (priority source, needs testing)"""
+    """Load tv.m3u (priority source, no testing now)"""
     print(f"👉 Loading priority source: {TV_M3U_URL}")
     try:
         response = requests.get(TV_M3U_URL, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
@@ -267,7 +210,6 @@ def load_tv_m3u():
                     current_name = "Unknown"
             elif line.startswith("http"):
                 if current_name and line.startswith(("http://", "https://")):
-                    # 过滤国外
                     if is_foreign_channel(current_name):
                         print(f"🌍 Skipped foreign (tv.m3u): {current_name}")
                     else:
@@ -275,108 +217,102 @@ def load_tv_m3u():
                         channels.append((current_name, line, category, False))
                         print(f"  ➕ tv.m3u: {current_name} -> {category}")
                 current_name = None
-        print(f"✅ Loaded {len(channels)} from tv.m3u (will test)")
+        print(f"✅ Loaded {len(channels)} from tv.m3u (no test)")
         return channels
     except Exception as e:
         print(f"❌ Failed to load tv.m3u: {e}")
         return []
 
 
-def load_haiyan_txt():
-    """Load 海燕.txt -> auto categorize (needs testing)"""
-    print(f"👉 Loading 海燕.txt: {HAIYAN_TXT_URL}")
+def load_rihou_source():
+    """
+    Load source from http://rihou.cc:555/gggg.nzk/
+    - Skip categories: 中超赛评, 湘超赛评, 苏超赛评, 英超粤评
+    - Extract '赛事咪咕' to be moved to end
+    """
+    print(f"👉 Loading source: {RIHOU_URL}")
     try:
-        decoded_url = unquote(HAIYAN_TXT_URL)
-        response = requests.get(decoded_url, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
+        response = requests.get(RIHOU_URL, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
         response.raise_for_status()
-        response.encoding = 'utf-8'
-        lines = response.text.strip().splitlines()
+        content = response.text.strip()
+        lines = content.splitlines()
+
         channels = []
+        saishi_migu_channels = []  # 单独存放 '赛事咪咕' 分类的频道
+        current_category = None
+        skip_categories = {'中超赛评', '湘超赛评', '苏超赛评', '英超粤评'}
 
-        for line_num, line in enumerate(lines, 1):
+        for line in lines:
             line = line.strip()
-            if not line or line.startswith("#") or line.startswith("更新时间") or line.startswith("TV"):
+            if not line or line.startswith('#'):
                 continue
-            if "," not in line:
+
+            # 检测分类标签
+            if line.endswith(',#genre#'):
+                category_name = line.split(',', 1)[0].strip()
+                current_category = category_name
+                continue  # 不加入频道列表
+
+            # 解析频道行
+            if ',' not in line:
                 continue
-            try:
-                name, url = map(str.strip, line.split(",", 1))
-                if not name or not url or not url.startswith(("http://", "https://")):
-                    continue
-                # 过滤国外
-                if is_foreign_channel(name):
-                    print(f"🌍 Skipped foreign (海燕.txt): {name}")
-                    continue
-                category = categorize_channel(name)
-                channels.append((name, url, category, False))
-                print(f"  ➕ 海燕.txt: {name} -> {category}")
-            except Exception as e:
-                print(f"⚠️ Parse failed at line {line_num}: {line} | {e}")
-        print(f"✅ Loaded {len(channels)} from 海燕.txt (will test)")
-        return channels
+            parts = line.split(',', 1)
+            if len(parts) != 2:
+                continue
+
+            name = parts[0].strip()
+            url = parts[1].strip()
+
+            # 清理 video:// 协议头
+            if url.startswith('video://'):
+                url = url[8:]
+
+            # 过滤国外
+            if is_foreign_channel(name):
+                print(f"🌍 Skipped foreign (rihou): {name}")
+                continue
+
+            # 跳过指定分类
+            if current_category in skip_categories:
+                continue
+
+            # 单独处理 '赛事咪咕' 分类
+            if current_category == '赛事咪咕':
+                category = '赛事咪咕'
+                saishi_migu_channels.append((name, url, category, False))
+                print(f"  ➕ 赛事咪咕: {name} -> {category} (will move to end)")
+                continue
+
+            # 正常分类
+            category = categorize_channel(name)
+            channels.append((name, url, category, False))
+            print(f"  ➕ rihou: {name} -> {category}")
+
+        print(f"✅ Loaded {len(channels)} from rihou (excl. 赛事咪咕), {len(saishi_migu_channels)} 赛事咪咕 channels")
+        return channels, saishi_migu_channels
+
     except Exception as e:
-        print(f"❌ Load 海燕.txt failed: {e}")
-        return []
+        print(f"❌ Load rihou source failed: {e}")
+        return [], []
 
 
-def load_dianshijia_txt():
-    """Load 电视家.txt -> auto categorize (needs testing)"""
-    print(f"👉 Loading 电视家.txt: {DIANSHIJIA_TXT_URL}")
+def get_dynamic_stream():
+    """Fetch dynamic stream from API — skip testing."""
+    print("👉 Fetching dynamic stream from API...")
     try:
-        raw_url = DIANSHIJIA_TXT_URL.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
-        response = requests.get(raw_url, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
+        response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
-        response.encoding = 'utf-8'
-        lines = response.text.strip().splitlines()
-        channels = []
-
-        for line_num, line in enumerate(lines, 1):
-            line = line.strip()
-            if not line or line.startswith("#") or line.startswith("更新时间") or line.startswith("TV"):
-                continue
-            if "," not in line:
-                continue
-            try:
-                name, url = map(str.strip, line.split(",", 1))
-                if not name or not url or not url.startswith(("http://", "https://")):
-                    continue
-                # 过滤国外
-                if is_foreign_channel(name):
-                    print(f"🌍 Skipped foreign (电视家.txt): {name}")
-                    continue
-                category = categorize_channel(name)
-                channels.append((name, url, category, False))
-                print(f"  ➕ 电视家.txt: {name} -> {category}")
-            except Exception as e:
-                print(f"⚠️ Parse failed at line {line_num}: {line} | {e}")
-        print(f"✅ Loaded {len(channels)} from 电视家.txt (will test)")
-        return channels
+        data = response.json()
+        if 'data' in data and 'm3u8Url' in data['data']:
+            url = data['data']['m3u8Url']
+            # 直接信任，不测试
+            print(f"✅ Dynamic stream added (no test): {url}")
+            return ("西充综合", url, "本地节目", True)
+        else:
+            print("❌ m3u8Url not found in API response")
     except Exception as e:
-        print(f"❌ Load 电视家.txt failed: {e}")
-        return []
-
-
-def filter_and_test_streams(channels, max_workers=10):
-    """Concurrently test non-whitelist streams for IPv4 + availability."""
-    print(f"🔍 Testing {len(channels)} untrusted streams (IPv4 + alive check)...")
-    valid_channels = []
-
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_item = {
-            executor.submit(is_url_valid, url): (name, url, group, False)
-            for name, url, group, _ in channels
-        }
-
-        for future in as_completed(future_to_item):
-            (name, url, group, _) = future_to_item[future]
-            try:
-                if future.result():
-                    valid_channels.append((name, url, group, False))
-            except Exception as e:
-                print(f"⚠️ Exception during test {url}: {e}")
-
-    print(f"✅ After testing: {len(valid_channels)} valid IPv4 streams")
-    return valid_channels
+        print(f"❌ API request failed: {e}")
+    return None
 
 
 def generate_m3u8_content(channels):
@@ -394,75 +330,60 @@ def generate_m3u8_content(channels):
     return "\n".join(lines) + "\n"
 
 
-def get_dynamic_stream():
-    """Fetch dynamic stream from API."""
-    print("👉 Fetching dynamic stream from API...")
-    try:
-        response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()
-        data = response.json()
-        if 'data' in data and 'm3u8Url' in data['data']:
-            url = data['data']['m3u8Url']
-            if is_url_valid(url):
-                print(f"✅ Dynamic stream OK: {url}")
-                return ("西充综合", url, "本地节目", True)
-            else:
-                print(f"❌ Stream not accessible: {url}")
-        else:
-            print("❌ m3u8Url not found in API response")
-    except Exception as e:
-        print(f"❌ API request failed: {e}")
-    return None
-
-
 def main():
     print("🚀 Starting playlist generation...")
     os.makedirs('live', exist_ok=True)
-    os.makedirs('cache', exist_ok=True)  # 可选缓存
     print("📁 Ensured live/ directory")
 
     all_channels = []
+    saishi_migu_list = []
 
-    # 获取动态流（如西充综合）
+    # 1. 获取动态流（如西充综合）
     dynamic_item = get_dynamic_stream()
     if dynamic_item:
         all_channels.append(dynamic_item)
 
-    # 顺序加载：白名单优先 + 其他源
-    all_channels.extend(load_tv_m3u())                    # 需要检测
-    all_channels.extend(load_whitelist_from_remote())     # 免检
-    all_channels.extend(load_haiyan_txt())                # 需要检测
-    all_channels.extend(load_dianshijia_txt())            # 需要检测
+    # 2. 加载 tv.m3u（优先）
+    all_channels.extend(load_tv_m3u())
+
+    # 3. 加载白名单（免检）
+    all_channels.extend(load_whitelist_from_remote())
+
+    # 4. 加载 rihou 源（替换海燕和电视家）
+    rihou_normal, rihou_saishi_migu = load_rihou_source()
+    all_channels.extend(rihou_normal)
+    saishi_migu_list.extend(rihou_saishi_migu)
 
     print(f"📥 Total raw streams: {len(all_channels)}")
 
     # 去重
     unique_channels = merge_and_deduplicate_with_flag(all_channels)
 
-    # 分流
-    trusted = [item for item in unique_channels if item[3]]      # is_whitelist=True
+    # 分流：白名单 vs 非白名单（仅为逻辑清晰，实际都不测试）
+    trusted = [item for item in unique_channels if item[3]]
     untrusted = [item for item in unique_channels if not item[3]]
 
-    print(f"🛡️  {len(trusted)} trusted channels (skip tests)")
-    print(f"🔍 {len(untrusted)} untrusted channels (testing IPv4 + availability)...")
+    print(f"🛡️  {len(trusted)} trusted channels")
+    print(f"📌 {len(untrusted)} untrusted channels (skipping all tests)")
 
-    # 检测非白名单
-    valid_untrusted = filter_and_test_streams(untrusted, max_workers=15)
+PARAMS = {# 直接合并：无需测试，全部保留（除国外）
+    'deviceType': '1',
 
-    # 合并
-    final_channels = trusted + valid_untrusted
+    'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',# 再次过滤国外（确保安全）
+    'latitudeValue': '0'[item for item in final_main if not is_foreign_channel(item[0])]
 
-    # 最终过滤国外（双重保险）
-    final_channels = [item for item in final_channels if not is_foreign_channel(item[0])]
-    print(f"✅ Final playlist size: {len(final_channels)} channels (after foreign filter)")
+    'appCenterId': '907',# 添加 '赛事咪咕' 到末尾
+    'isTest': '0'
+
+    'deviceVersionType': 'android',print(f"✅ Final playlist size: {len(final_with_saishi_migu)} channels (after adding 赛事咪咕)")
 
     # 生成 M3U8
-    m3u8_content = generate_m3u8_content(final_channels)
+HEADERS = {generate_m3u8_content(final_with_saishi_migu)
 
     # 写入文件
     output_path = 'live/current.m3u8'
     try:
-        with open(output_path, 'w', encoding='utf-8') as f:
+ REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"with open(output_path, 'w', encoding='utf-8') as f:
             f.write(m3u8_content)
         print(f"🎉 Successfully generated: {output_path}")
     except Exception as e:
