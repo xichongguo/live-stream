@@ -1,5 +1,5 @@
 #EXTM3U
-# Generated at: 2025-10-17 06:55
+# Generated at: 2025-10-17 10:26
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://bl.xichongtv.cn/xcrm2025/ZHPD1010.m3u8?auth_key=1768713113-0-0-b6d00e1ea50a76484d1bed974d6e1b80
@@ -197,18 +197,40 @@ https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 http://183.215.134.239:19901/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="浙江卫视" group-title="卫视",浙江卫视
 http://112.27.235.94:8000/hls/29/index.m3u8
+#EXTINF:-1 tvg-name="10-17澳超第1轮⚽📡" group-title="其他",10-17澳超第1轮⚽📡
+http://lxajh.top/tv/douyu.php?id=11531165
+#EXTINF:-1 tvg-name="16:00阿德莱德联🆚悉尼FC" group-title="其他",16:00阿德莱德联🆚悉尼FC
+https://suo.yt/a3xFctm
+#EXTINF:-1 tvg-name="粤🔊鞋佬旁述" group-title="其他",粤🔊鞋佬旁述
+https://pullhw1.zhaoyangyang.cn/live/8839726.flv?auth_info=ISUgopHwtTMVBJecfjBzPFu7l1P9S3AdLwYBYBRXU3k%3D.56425442744a6a706e61514463794b57
+#EXTINF:-1 tvg-name="粤🔊尼佬旁述" group-title="其他",粤🔊尼佬旁述
+https://pullhw1.zhaoyangyang.cn/live/8839736.flv?auth_info=sDexu0%2BYTP2%2FglEc4AfsV89Rd693hlkXizt2PBc%2BSis%3D.37747a6875357a4944485a514353364d
+#EXTINF:-1 tvg-name="粤🔊崩牙旁述" group-title="其他",粤🔊崩牙旁述
+https://pullhw1.zhaoyangyang.cn/live/8839708.flv?auth_info=WTPeUreTwRYWvQM18qiCLKsE4LbT%2FSIg7YjwshEGFtE%3D.6a4b4a6f485052315266566d6832656b
+#EXTINF:-1 tvg-name="粤🔊盈粤旁述" group-title="其他",粤🔊盈粤旁述
+https://pullhw1.zhaoyangyang.cn/live/8839734.flv?auth_info=e9R6SJtTp8D45VyNY4YSt8E%2FeZMmP1GGwLydarKne20%3D.6d78715a4e6e5372585437726963474f
+#EXTINF:-1 tvg-name="国🔊贫道评述" group-title="其他",国🔊贫道评述
+https://pullhw1.zhaoyangyang.cn/live/8839732.flv?auth_info=e3gAFrcukJyXaVahWsDXe5poiOPRghDrzI4kCuFfe88%3D.6352385a5447494f716438484f68396b
+#EXTINF:-1 tvg-name="国🔊老头评述" group-title="其他",国🔊老头评述
+https://pullhw1.zhaoyangyang.cn/live/8839730.flv?auth_info=YaK724xY3KLI2yLuziPRIlX4HJNytoErLma%2B6z9Ia9o%3D.73474a3854446a616f71344c4a6d6e61
+#EXTINF:-1 tvg-name="国🔊老羊评述" group-title="其他",国🔊老羊评述
+https://pullhw1.zhaoyangyang.cn/live/8839722.flv?auth_info=YVJqM5jOFUgM3yzpW%2BBU%2Fgy1nF%2BXnsczceq8qspEPmk%3D.74376a4d515073447453694459723059
+#EXTINF:-1 tvg-name="英🔊赛事原声" group-title="其他",英🔊赛事原声
+https://live.bh6taiye.com/live/63684367_60f6b7275cca0677f682ef93dda0c9e2_h1080p.m3u8
 #EXTINF:-1 tvg-name="⬇️第七届天津国际直升机博览会⬇️" group-title="卫视",⬇️第七届天津国际直升机博览会⬇️
 http://81.70.10.196:35455/douyu/11531165
+#EXTINF:-1 tvg-name="空天逐梦直播" group-title="其他",空天逐梦直播
+https://pull-flv-f11.douyincdn.com/media/stream-406387674506068652.flv?arch_hrchy=w1&exp_hrchy=w1&expire=1761290084&major_anchor_level=common&sign=b4aafd2bdc084ea7f6d52f8f20f688f4&t_id=037-20251017151443E586AC6F668CABDD6539-GOjQbf&unique_id=stream-406387674506068652_684_flv
 #EXTINF:-1 tvg-name="央视军事直播" group-title="其他",央视军事直播
 https://pull-flv-f1.douyincdn.com/media/stream-118153195186815660.flv?arch_hrchy=w1&exp_hrchy=w1&keeptime=00093a80&major_anchor_level=common&t_id=037-20251017143108E92C0BBB15862D4152BB-bzT695&unique_id=stream-118153195186815660_684_flv&wsSecret=5e14da600e4225e6163bf0c2b78cd306&wsTime=68f1e2ad
 #EXTINF:-1 tvg-name="中国军号直播" group-title="其他",中国军号直播
 https://pull-flv-f11.douyincdn.com/media/stream-118151930859750060.flv?arch_hrchy=w1&exp_hrchy=w1&expire=1761287594&major_anchor_level=common&sign=94bec79422dcd20fbedef2f5379dbba0&t_id=037-20251017143313CAE6D0E9354C0B3ECD1C-HWBQVP&unique_id=stream-118151930859750060_684_flv
 #EXTINF:-1 tvg-name="澎湃新闻直播" group-title="地方",澎湃新闻直播
 https://pull-flv-f11.douyinliving.com/media/stream-406387757588939602.flv?arch_hrchy=s2&expire=1761287680&major_anchor_level=vip&s_anchor=1&sign=6492ac75cc520082dc02f193af3fa453&t_id=037-20251017143440F97DA32E07FB24B99E15-7ieJf5&unique_id=stream-406387757588939602_850_flv
-#EXTINF:-1 tvg-name="20:00广东宏远🆚美国队" group-title="卫视",20:00广东宏远🆚美国队
-https://suo.yt/a3xFctm
-#EXTINF:-1 tvg-name="10-18中乙降A第7轮⚽📡" group-title="其他",10-18中乙降A第7轮⚽📡
-http://lxajh.top/tv/douyu.php?id=11531165
+#EXTINF:-1 tvg-name="粤🔊赛事旁述" group-title="其他",粤🔊赛事旁述
+https://pull-t5.douyincdn.com/third/stream-118157964611683130_or4.flv?arch_hrchy=h1&exp_hrchy=h1&expire=1761296903&major_anchor_level=common&sign=2336c970e685e917c29b8fb9a46ca975&t_id=037-20251017170822240F3922D8984376FE1F-Txl2Aa&unique_id=stream-118157964611683130_826_flv_or4&volcSecret=2336c970e685e917c29b8fb9a46ca975&volcTime=1761296903
+#EXTINF:-1 tvg-name="国🔊赛事现场" group-title="其他",国🔊赛事现场
+https://pull-flv-f11.douyincdn.com/third/stream-406388243993985707_or4.flv?arch_hrchy=w1&exp_hrchy=w1&expire=1761297230&major_anchor_level=common&sign=c019bb576126e99177aa3d60d8f90055&t_id=037-202510171713505E0CDADE0B361ADE1C83-7w2AMW&unique_id=stream-406388243993985707_683_flv_or4&abr_pts=-800&_session_id=037-20251017171349A29987D5C6B7028B3C12-8dfN1A.1760692441518.77106&rsi=1
 #EXTINF:-1 tvg-name="粤🔊广竞体育" group-title="地方",粤🔊广竞体育
 https://live.douyin.com/802006140488
 #EXTINF:-1 tvg-name="CCTV-01咪咕" group-title="央视",CCTV-01咪咕
