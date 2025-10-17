@@ -19,7 +19,7 @@ PARAMS = {
     'deviceType': '1',
     'centerId': '9',
     'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
-    'latitudeValue': '0',
+    'latitudeValue': '0',          # ✅ 正确：这是一个固定参数，不是列表！
     'areaId': '907',
     'appCenterId': '907',
     'isTest': '0',
@@ -366,24 +366,24 @@ def main():
     print(f"🛡️  {len(trusted)} trusted channels")
     print(f"📌 {len(untrusted)} untrusted channels (skipping all tests)")
 
-PARAMS = {# 直接合并：无需测试，全部保留（除国外）
-    'deviceType': '1',
+    # 直接合并：无需测试，全部保留（除国外）
+    final_main = trusted + untrusted
 
-    'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',# 再次过滤国外（确保安全）
-    'latitudeValue': '0'[item for item in final_main if not is_foreign_channel(item[0])]
+    # 再次过滤国外（确保安全）
+    final_main = [item for item in final_main if not is_foreign_channel(item[0])]
 
-    'appCenterId': '907',# 添加 '赛事咪咕' 到末尾
-    'isTest': '0'
+    # 添加 '赛事咪咕' 到末尾
+    final_with_saishi_migu = final_main + saishi_migu_list
 
-    'deviceVersionType': 'android',print(f"✅ Final playlist size: {len(final_with_saishi_migu)} channels (after adding 赛事咪咕)")
+    print(f"✅ Final playlist size: {len(final_with_saishi_migu)} channels (after adding 赛事咪咕)")
 
     # 生成 M3U8
-HEADERS = {generate_m3u8_content(final_with_saishi_migu)
+    m3u8_content = generate_m3u8_content(final_with_saishi_migu)
 
     # 写入文件
     output_path = 'live/current.m3u8'
     try:
- REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"with open(output_path, 'w', encoding='utf-8') as f:
+        with open(output_path, 'w', encoding='utf-8') as f:
             f.write(m3u8_content)
         print(f"🎉 Successfully generated: {output_path}")
     except Exception as e:
