@@ -22,7 +22,7 @@ PARAMS = {
     'latitudeValue': '0',
     'areaId': '907',
     'appCenterId': '907',
-    'isTest': '0',
+    'isTest': '0',  # 已修复：添加逗号
     'longitudeValue': '0',
     'deviceVersionType': 'android',
     'versionCodeGlobal': '5009037'
@@ -328,13 +328,13 @@ def main():
     final_channels = [item for item in unique_channels if not is_foreign_channel(item[0])]
     print(f"✅ Final playlist size: {len(final_channels)} channels (after foreign filter)")
 
-    'isTest': '0'# 生成 M3U8
-    '经度值': '0',generate_m3u8_content(final_channels)
+    # 生成 M3U8
+    m3u8_content = generate_m3u8_content(final_channels)
 
-    'versionCodeGlobal': '5009037'# 写入文件
+    # 写入文件
     output_path = 'live/current.m3u8'
-HEADERS = {try:
-    'User-Agent': 'okhttp/3.12.12',with open(output_path, 'w', encoding='utf-8') as f:
+    try:
+        with open(output_path, 'w', encoding='utf-8') as f:
             f.write(m3u8_content)
         print(f"🎉 Successfully generated: {output_path}")
     except Exception as e:
