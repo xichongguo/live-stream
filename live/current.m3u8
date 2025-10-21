@@ -1,5 +1,5 @@
 #EXTM3U
-# Generated at: 2025-10-20 23:22
+# Generated at: 2025-10-21 10:27
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
 http://112.27.235.94:8000/hls/1/index.m3u8
