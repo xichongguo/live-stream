@@ -1,6 +1,8 @@
 #EXTM3U
-# Generated at: 2025-10-22 23:21
+# Generated at: 2025-10-23 10:27
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
+#EXTINF:-1 tvg-name="西充综合" group-title="地方",西充综合
+https://bl.xichongtv.cn/xcrm2025/ZHPD1010.m3u8?auth_key=1768713113-0-0-b6d00e1ea50a76484d1bed974d6e1b80
 #EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
 http://112.27.235.94:8000/hls/1/index.m3u8
 #EXTINF:-1 tvg-name="CCTV2" group-title="央视",CCTV2
@@ -209,7 +211,7 @@ https://cloud.video.taobao.com//play/u/709608496/p/1/e/6/t/1/313689895693.mp4
 http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225687/1.m3u8
 #EXTINF:-1 tvg-name="咪咕视频4K" group-title="其他",咪咕视频4K
 http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226080/1.m3u8
-#EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
+#EXTINF:-1 tvg-name="？" group-title="其他",？
 http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225673/1.m3u8
 #EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
 http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225723/1.m3u8
