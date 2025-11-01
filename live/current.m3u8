@@ -1,8 +1,6 @@
 #EXTM3U
-# Generated at: 2025-10-31 23:22
+# Generated at: 2025-11-01 10:24
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
-#EXTINF:-1 tvg-name="西充综合" group-title="地方",西充综合
-https://bl.xichongtv.cn/xcrm2025/ZHPD1010.m3u8?auth_key=1768713113-0-0-b6d00e1ea50a76484d1bed974d6e1b80
 #EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
 http://112.27.235.94:8000/hls/1/index.m3u8
 #EXTINF:-1 tvg-name="CCTV2" group-title="央视",CCTV2
@@ -207,292 +205,144 @@ https://alimov2.a.kwimgs.com/bs3/video-hls/5250634391452756335_6e203accad588e2a_
 https://alimov2.a.kwimgs.com/bs3/video-hls/5239093914195222137_9cc2d5481a601fbc_8182_hlsb.m3u8
 #EXTINF:-1 tvg-name="重新打包" group-title="其他",重新打包
 https://cloud.video.taobao.com//play/u/709608496/p/1/e/6/t/1/313689895693.mp4
-#EXTINF:-1 tvg-name="至臻世界4K" group-title="其他",至臻世界4K
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225687/1.m3u8
-#EXTINF:-1 tvg-name="咪咕视频4K" group-title="其他",咪咕视频4K
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226080/1.m3u8
-#EXTINF:-1 tvg-name="？" group-title="其他",？
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225673/1.m3u8
-#EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225723/1.m3u8
-#EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225770/1.m3u8
-#EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226163/1.m3u8
-#EXTINF:-1 tvg-name="CCTV2" group-title="央视",CCTV2
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226122/1.m3u8
-#EXTINF:-1 tvg-name="CCTV3" group-title="央视",CCTV3
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225766/1.m3u8
-#EXTINF:-1 tvg-name="CCTV3" group-title="央视",CCTV3
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226165/1.m3u8
-#EXTINF:-1 tvg-name="CCTV4" group-title="央视",CCTV4
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226124/1.m3u8
-#EXTINF:-1 tvg-name="CCTV5" group-title="央视",CCTV5
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225734/1.m3u8
-#EXTINF:-1 tvg-name="CCTV5" group-title="央视",CCTV5
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226146/1.m3u8
-#EXTINF:-1 tvg-name="CCTV6" group-title="央视",CCTV6
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225741/1.m3u8
-#EXTINF:-1 tvg-name="CCTV6" group-title="央视",CCTV6
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226148/1.m3u8
-#EXTINF:-1 tvg-name="CCTV7" group-title="央视",CCTV7
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225701/1.m3u8
-#EXTINF:-1 tvg-name="CCTV7" group-title="央视",CCTV7
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226143/1.m3u8
-#EXTINF:-1 tvg-name="CCTV7" group-title="央视",CCTV7
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226137/1.m3u8
-#EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225736/1.m3u8
-#EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226167/1.m3u8
-#EXTINF:-1 tvg-name="CCTV10" group-title="央视",CCTV10
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225743/1.m3u8
-#EXTINF:-1 tvg-name="CCTV10" group-title="央视",CCTV10
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226169/1.m3u8
-#EXTINF:-1 tvg-name="CCTV11" group-title="央视",CCTV11
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226101/1.m3u8
-#EXTINF:-1 tvg-name="CCTV11" group-title="央视",CCTV11
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226145/1.m3u8
-#EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226103/1.m3u8
-#EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226126/1.m3u8
-#EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226128/1.m3u8
-#EXTINF:-1 tvg-name="CCTV14" group-title="央视",CCTV14
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225738/1.m3u8
-#EXTINF:-1 tvg-name="CCTV14" group-title="央视",CCTV14
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226150/1.m3u8
-#EXTINF:-1 tvg-name="CCTV15" group-title="央视",CCTV15
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226147/1.m3u8
-#EXTINF:-1 tvg-name="CCTV16" group-title="央视",CCTV16
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226120/1.m3u8
-#EXTINF:-1 tvg-name="CETV1" group-title="其他",CETV1
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225775/1.m3u8
-#EXTINF:-1 tvg-name="CETV4" group-title="其他",CETV4
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226153/1.m3u8
-#EXTINF:-1 tvg-name="CETV4" group-title="其他",CETV4
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226069/1.m3u8
-#EXTINF:-1 tvg-name="CGTN" group-title="其他",CGTN
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226016/1.m3u8
-#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视",江苏卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225720/1.m3u8
-#EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视",黑龙江卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225722/1.m3u8
-#EXTINF:-1 tvg-name="东方卫视" group-title="卫视",东方卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225725/1.m3u8
-#EXTINF:-1 tvg-name="北京卫视" group-title="卫视",北京卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225724/1.m3u8
-#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视",湖南卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225726/1.m3u8
-#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视",浙江卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225727/1.m3u8
-#EXTINF:-1 tvg-name="深圳卫视" group-title="卫视",深圳卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225728/1.m3u8
-#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视",湖北卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225729/1.m3u8
-#EXTINF:-1 tvg-name="安徽卫视" group-title="卫视",安徽卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225739/1.m3u8
-#EXTINF:-1 tvg-name="江西卫视" group-title="卫视",江西卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225740/1.m3u8
-#EXTINF:-1 tvg-name="天津卫视" group-title="卫视",天津卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225742/1.m3u8
-#EXTINF:-1 tvg-name="广东卫视" group-title="卫视",广东卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225731/1.m3u8
-#EXTINF:-1 tvg-name="山东卫视" group-title="卫视",山东卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225733/1.m3u8
-#EXTINF:-1 tvg-name="东南卫视" group-title="卫视",东南卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225745/1.m3u8
-#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视",辽宁卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225747/1.m3u8
-#EXTINF:-1 tvg-name="西藏卫视" group-title="卫视",西藏卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225767/1.m3u8
-#EXTINF:-1 tvg-name="康巴卫视" group-title="卫视",康巴卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225773/1.m3u8
-#EXTINF:-1 tvg-name="厦门卫视" group-title="卫视",厦门卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226008/1.m3u8
-#EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视",内蒙古卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226011/1.m3u8
-#EXTINF:-1 tvg-name="西藏卫视" group-title="卫视",西藏卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226012/1.m3u8
-#EXTINF:-1 tvg-name="吉林卫视" group-title="卫视",吉林卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226082/1.m3u8
-#EXTINF:-1 tvg-name="广西卫视" group-title="卫视",广西卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226084/1.m3u8
-#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视",陕西卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226086/1.m3u8
-#EXTINF:-1 tvg-name="新疆卫视" group-title="卫视",新疆卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226088/1.m3u8
-#EXTINF:-1 tvg-name="甘肃卫视" group-title="卫视",甘肃卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226090/1.m3u8
-#EXTINF:-1 tvg-name="宁夏卫视" group-title="卫视",宁夏卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226092/1.m3u8
-#EXTINF:-1 tvg-name="河北卫视" group-title="卫视",河北卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226107/1.m3u8
-#EXTINF:-1 tvg-name="青海卫视" group-title="卫视",青海卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226105/1.m3u8
-#EXTINF:-1 tvg-name="东方卫视" group-title="卫视",东方卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226106/1.m3u8
-#EXTINF:-1 tvg-name="云南卫视" group-title="卫视",云南卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226109/1.m3u8
-#EXTINF:-1 tvg-name="兵团卫视" group-title="卫视",兵团卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226111/1.m3u8
-#EXTINF:-1 tvg-name="山西卫视" group-title="卫视",山西卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226113/1.m3u8
-#EXTINF:-1 tvg-name="东方卫视" group-title="卫视",东方卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226050/1.m3u8
-#EXTINF:-1 tvg-name="广西卫视" group-title="卫视",广西卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226130/1.m3u8
-#EXTINF:-1 tvg-name="河南卫视" group-title="卫视",河南卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226132/1.m3u8
-#EXTINF:-1 tvg-name="吉林卫视" group-title="卫视",吉林卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226149/1.m3u8
-#EXTINF:-1 tvg-name="云南卫视" group-title="卫视",云南卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226151/1.m3u8
-#EXTINF:-1 tvg-name="四川卫视" group-title="卫视",四川卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226152/1.m3u8
-#EXTINF:-1 tvg-name="海南卫视" group-title="卫视",海南卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226154/1.m3u8
-#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视",重庆卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226171/1.m3u8
-#EXTINF:-1 tvg-name="贵州卫视" group-title="卫视",贵州卫视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226173/1.m3u8
-#EXTINF:-1 tvg-name="东方财经" group-title="卫视",东方财经
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226134/1.m3u8
-#EXTINF:-1 tvg-name="新闻综合" group-title="地方",新闻综合
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226136/1.m3u8
-#EXTINF:-1 tvg-name="第一财经" group-title="地方",第一财经
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225737/1.m3u8
-#EXTINF:-1 tvg-name="五星体育" group-title="地方",五星体育
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225732/1.m3u8
-#EXTINF:-1 tvg-name="东方影视" group-title="卫视",东方影视
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225744/1.m3u8
-#EXTINF:-1 tvg-name="上海都市" group-title="地方",上海都市
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225749/1.m3u8
-#EXTINF:-1 tvg-name="金色学堂" group-title="其他",金色学堂
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225748/1.m3u8
-#EXTINF:-1 tvg-name="都市剧场" group-title="地方",都市剧场
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225762/1.m3u8
-#EXTINF:-1 tvg-name="都市剧场" group-title="地方",都市剧场
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226155/1.m3u8
-#EXTINF:-1 tvg-name="动漫秀场" group-title="其他",动漫秀场
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225764/1.m3u8
-#EXTINF:-1 tvg-name="动漫秀场" group-title="其他",动漫秀场
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226138/1.m3u8
-#EXTINF:-1 tvg-name="生活时尚" group-title="地方",生活时尚
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225768/1.m3u8
-#EXTINF:-1 tvg-name="欢笑剧场" group-title="其他",欢笑剧场
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225771/1.m3u8
-#EXTINF:-1 tvg-name="法治天地" group-title="其他",法治天地
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225994/1.m3u8
-#EXTINF:-1 tvg-name="游戏风云" group-title="其他",游戏风云
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226117/1.m3u8
-#EXTINF:-1 tvg-name="游戏风云" group-title="其他",游戏风云
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226140/1.m3u8
-#EXTINF:-1 tvg-name="金鹰卡通" group-title="地方",金鹰卡通
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226094/1.m3u8
-#EXTINF:-1 tvg-name="哈哈炫动" group-title="其他",哈哈炫动
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226161/1.m3u8
-#EXTINF:-1 tvg-name="哈哈炫动" group-title="其他",哈哈炫动
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226175/1.m3u8
-#EXTINF:-1 tvg-name="卡酷少儿" group-title="地方",卡酷少儿
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226019/1.m3u8
-#EXTINF:-1 tvg-name="嘉佳卡通" group-title="地方",嘉佳卡通
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226021/1.m3u8
-#EXTINF:-1 tvg-name="乐游" group-title="其他",乐游
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226157/1.m3u8
-#EXTINF:-1 tvg-name="乐游" group-title="其他",乐游
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226115/1.m3u8
-#EXTINF:-1 tvg-name="睛彩竞技" group-title="其他",睛彩竞技
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226116/1.m3u8
-#EXTINF:-1 tvg-name="睛彩篮球" group-title="其他",睛彩篮球
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226118/1.m3u8
-#EXTINF:-1 tvg-name="睛彩广场舞" group-title="其他",睛彩广场舞
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226139/1.m3u8
-#EXTINF:-1 tvg-name="咪视界1" group-title="其他",咪视界1
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225637/1.m3u8
-#EXTINF:-1 tvg-name="咪视界2" group-title="其他",咪视界2
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225636/1.m3u8
-#EXTINF:-1 tvg-name="咪视界3" group-title="其他",咪视界3
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225638/1.m3u8
-#EXTINF:-1 tvg-name="咪视界4" group-title="其他",咪视界4
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225639/1.m3u8
-#EXTINF:-1 tvg-name="咪视界5" group-title="其他",咪视界5
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225640/1.m3u8
-#EXTINF:-1 tvg-name="咪视界6" group-title="其他",咪视界6
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225641/1.m3u8
-#EXTINF:-1 tvg-name="咪视界7" group-title="其他",咪视界7
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225643/1.m3u8
-#EXTINF:-1 tvg-name="咪视界8" group-title="其他",咪视界8
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225644/1.m3u8
-#EXTINF:-1 tvg-name="咪视界9" group-title="其他",咪视界9
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225646/1.m3u8
-#EXTINF:-1 tvg-name="咪视界10" group-title="其他",咪视界10
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225657/1.m3u8
-#EXTINF:-1 tvg-name="百视通11" group-title="其他",百视通11
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225663/1.m3u8
-#EXTINF:-1 tvg-name="百视通12" group-title="其他",百视通12
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225665/1.m3u8
-#EXTINF:-1 tvg-name="百视通13" group-title="其他",百视通13
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225664/1.m3u8
-#EXTINF:-1 tvg-name="百视通14" group-title="其他",百视通14
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225666/1.m3u8
-#EXTINF:-1 tvg-name="百视通15" group-title="其他",百视通15
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225667/1.m3u8
-#EXTINF:-1 tvg-name="百视通16" group-title="其他",百视通16
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225669/1.m3u8
-#EXTINF:-1 tvg-name="百视通17" group-title="其他",百视通17
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225670/1.m3u8
-#EXTINF:-1 tvg-name="百视通18" group-title="其他",百视通18
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225671/1.m3u8
-#EXTINF:-1 tvg-name="咪视界19" group-title="其他",咪视界19
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225674/1.m3u8
-#EXTINF:-1 tvg-name="咪视界20" group-title="其他",咪视界20
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225676/1.m3u8
-#EXTINF:-1 tvg-name="咪视界21" group-title="其他",咪视界21
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225679/1.m3u8
-#EXTINF:-1 tvg-name="咪视界22" group-title="其他",咪视界22
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225678/1.m3u8
-#EXTINF:-1 tvg-name="咪视界23" group-title="其他",咪视界23
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225681/1.m3u8
-#EXTINF:-1 tvg-name="咪视界24" group-title="其他",咪视界24
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225680/1.m3u8
-#EXTINF:-1 tvg-name="咪视界25" group-title="其他",咪视界25
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225683/1.m3u8
-#EXTINF:-1 tvg-name="咪视界26" group-title="其他",咪视界26
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225682/1.m3u8
-#EXTINF:-1 tvg-name="咪视界27" group-title="其他",咪视界27
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225684/1.m3u8
-#EXTINF:-1 tvg-name="咪视界28" group-title="其他",咪视界28
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225685/1.m3u8
-#EXTINF:-1 tvg-name="咪视界29" group-title="其他",咪视界29
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225686/1.m3u8
-#EXTINF:-1 tvg-name="咪视界30" group-title="其他",咪视界30
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225688/1.m3u8
-#EXTINF:-1 tvg-name="咪视界31" group-title="其他",咪视界31
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225689/1.m3u8
-#EXTINF:-1 tvg-name="咪视界32" group-title="其他",咪视界32
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225690/1.m3u8
-#EXTINF:-1 tvg-name="咪视界33" group-title="其他",咪视界33
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225692/1.m3u8
-#EXTINF:-1 tvg-name="咪视界34" group-title="其他",咪视界34
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225693/1.m3u8
-#EXTINF:-1 tvg-name="咪视界35" group-title="其他",咪视界35
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225694/1.m3u8
-#EXTINF:-1 tvg-name="咪视界36" group-title="其他",咪视界36
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225695/1.m3u8
-#EXTINF:-1 tvg-name="咪视界37" group-title="其他",咪视界37
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225697/1.m3u8
-#EXTINF:-1 tvg-name="咪视界38" group-title="其他",咪视界38
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225696/1.m3u8
-#EXTINF:-1 tvg-name="咪视界39" group-title="其他",咪视界39
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221225699/1.m3u8
-#EXTINF:-1 tvg-name="百视通" group-title="其他",百视通
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226102/1.m3u8
-#EXTINF:-1 tvg-name="百视通" group-title="其他",百视通
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226123/1.m3u8
-#EXTINF:-1 tvg-name="咪视界40" group-title="其他",咪视界40
-http://[2409:8087:1e01:20::3]/PLTV/11/224/3221226125/1.m3u8
+#EXTINF:-1 tvg-name="CCTV1高清" group-title="央视",CCTV1高清
+https://shyd.695847.xyz/cms001/ch00000090990000001022/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV1高清" group-title="央视",CCTV1高清
+https://shyd.695847.xyz/cms001/ch00000090990000001388/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV1高清" group-title="央视",CCTV1高清
+https://shyd.695847.xyz/cms001/ch00000090990000001520/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV2高清" group-title="央视",CCTV2高清
+https://shyd.695847.xyz/cms001/ch00000090990000001220/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV3高清" group-title="央视",CCTV3高清
+https://shyd.695847.xyz/cms001/ch00000090990000001186/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV4高清" group-title="央视",CCTV4高清
+https://shyd.695847.xyz/cms001/ch00000090990000001221/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV4K超高清" group-title="央视",CCTV4K超高清
+https://shyd.695847.xyz/cms001/ch00000090990000001451/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV5高清" group-title="央视",CCTV5高清
+https://shyd.695847.xyz/cms001/ch00000090990000001187/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV6高清" group-title="央视",CCTV6高清
+https://shyd.695847.xyz/cms001/ch00000090990000001188/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV7高清" group-title="央视",CCTV7高清
+https://shyd.695847.xyz/cms001/ch00000090990000001236/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV8高清" group-title="央视",CCTV8高清
+https://shyd.695847.xyz/cms001/ch00000090990000001189/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV9高清" group-title="央视",CCTV9高清
+https://shyd.695847.xyz/cms001/ch00000090990000001237/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV10高清" group-title="央视",CCTV10高清
+https://shyd.695847.xyz/cms001/ch00000090990000001238/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV11高清" group-title="央视",CCTV11高清
+https://shyd.695847.xyz/cms001/ch00000090990000001309/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV12高清" group-title="央视",CCTV12高清
+https://shyd.695847.xyz/cms001/ch00000090990000001239/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV13高清" group-title="央视",CCTV13高清
+https://shyd.695847.xyz/cms001/ch00000090990000001328/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV14高清" group-title="央视",CCTV14高清
+https://shyd.695847.xyz/cms001/ch00000090990000001240/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV15高清" group-title="央视",CCTV15高清
+https://shyd.695847.xyz/cms001/ch00000090990000001338/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV16高清" group-title="央视",CCTV16高清
+https://shyd.695847.xyz/cms001/ch00000090990000001248/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV16 4K超高清" group-title="央视",CCTV16 4K超高清
+https://shyd.695847.xyz/cms001/ch00000090990000001258/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV17高清" group-title="央视",CCTV17高清
+https://shyd.695847.xyz/cms001/ch00000090990000001241/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CETV1高清" group-title="其他",CETV1高清
+https://shyd.695847.xyz/cms001/ch00000090990000001020/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CETV4高清" group-title="其他",CETV4高清
+https://shyd.695847.xyz/cms001/ch00000090990000001348/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="浙江卫视高清" group-title="卫视",浙江卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001023/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="湖南卫视高清" group-title="卫视",湖南卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001026/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="深圳卫视高清" group-title="卫视",深圳卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001030/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="黑龙江卫视高清" group-title="卫视",黑龙江卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001031/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="湖北卫视高清" group-title="卫视",湖北卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001027/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="山东卫视高清" group-title="卫视",山东卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001028/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="北京卫视高清" group-title="卫视",北京卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001029/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="广东卫视高清" group-title="卫视",广东卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001032/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="辽宁卫视高清" group-title="卫视",辽宁卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001035/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="江西卫视高清" group-title="卫视",江西卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001034/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="安徽卫视高清" group-title="卫视",安徽卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001037/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="天津卫视高清" group-title="卫视",天津卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001036/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="江苏卫视高清" group-title="卫视",江苏卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001033/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="新疆卫视高清" group-title="卫视",新疆卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001065/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="兵团卫视高清" group-title="卫视",兵团卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001066/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="陕西卫视高清" group-title="卫视",陕西卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001067/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="内蒙古卫视高清" group-title="卫视",内蒙古卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001068/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="山西卫视高清" group-title="卫视",山西卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001070/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="西藏卫视高清" group-title="卫视",西藏卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001072/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="贵州卫视高清" group-title="卫视",贵州卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001071/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="海南卫视高清" group-title="卫视",海南卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001183/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="贵州卫视高清" group-title="卫视",贵州卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001184/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="东方卫视高清" group-title="卫视",东方卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001013/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="重庆卫视高清" group-title="卫视",重庆卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001129/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="四川卫视高清" group-title="卫视",四川卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001130/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="东南卫视高清" group-title="卫视",东南卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001201/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="云南卫视高清" group-title="卫视",云南卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001223/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="广西卫视高清" group-title="卫视",广西卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001224/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="河北卫视高清" group-title="卫视",河北卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001229/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="吉林卫视高清" group-title="卫视",吉林卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001225/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="甘肃卫视高清" group-title="卫视",甘肃卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001298/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="内蒙古卫视高清" group-title="卫视",内蒙古卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001530/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="河南卫视高清" group-title="卫视",河南卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001222/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="青海卫视高清" group-title="卫视",青海卫视高清
+https://shyd.695847.xyz/cms001/ch00000090990000001450/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="北京卫视4K" group-title="卫视",北京卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001500/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="北京卫视4K" group-title="卫视",北京卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001510/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="深圳卫视4K" group-title="卫视",深圳卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001521/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="广东卫视4K" group-title="卫视",广东卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001540/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="广东卫视4K" group-title="卫视",广东卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001550/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="深圳卫视4K" group-title="卫视",深圳卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001560/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="山东卫视4K" group-title="卫视",山东卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001582/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="东方卫视4K" group-title="卫视",东方卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001641/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="四川卫视4K" group-title="卫视",四川卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001690/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="江苏卫视4K" group-title="卫视",江苏卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001700/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="湖南卫视4K" group-title="卫视",湖南卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001710/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="浙江卫视4K" group-title="卫视",浙江卫视4K
+https://shyd.695847.xyz/cms001/ch00000090990000001720/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="凤凰中文" group-title="其他",凤凰中文
 http://m.061899.xyz/mg/fhzw
 #EXTINF:-1 tvg-name="凤凰资讯" group-title="其他",凤凰资讯
