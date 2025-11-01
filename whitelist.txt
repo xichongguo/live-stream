@@ -3,14 +3,14 @@
 # 填写频道名称会直接保留该记录至最终结果，如：CCTV-1,接口地址，只填写接口地址则对所有频道生效，多条记录换行输入。
 # 这是接口或订阅源的白名单。白名单中的接口或订阅源获得的接口将不参与测速，并且在结果中将被优先处理。
 # 填写频道名称将直接将记录保留到最终结果，例如：CCTV-1,url，仅填写界面地址将对所有频道有效，多条记录 newline 输入。
-📺本地频道，#类型#
+📺本地频道,#genre#
 西充综合,https://tvlist.top/ncpd.php
 西充综合,https://xichongguo.github.io/live-stream/live/current.m3u8
 西充综合,http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_14036776173_strL.m3u8?txSecret=75373d6b98b9aa4cf532f12b3c9b1724&txTime=69032c0f&stat=cGweUVqvOx1FvIm99Uh%2FwA%3D%3D
 
-南充综合,http://ncrmpull.cnncw.cn/live/8f7b908601931000dd6ee79a0000000/playlist.m3u8?wsSecret=a4f69b6d2e56c7b4018fa29d65112d99&wsTime=1875618327
+南充综合,http://ncrmpull.cnncw.cn/live/8f7b908601931000dd6ee79a000000/playlist.m3u8?wsSecret=a4f69b6d2e56c7b4018fa29d65112d99&wsTime=1875618327
 南充科教生活,http://ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba700000000/playlist.m3u8?wsSecret=42f62aa716a3a86719587b678ac75386&wsTime=1875618327
-📺本地视频，#类型#
+📺本地视频,#genre#
 走进四川西充,https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
 
 西充莲花湖夜景,https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
