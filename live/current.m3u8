@@ -1,5 +1,5 @@
 #EXTM3U
-# Generated at: 2025-11-02 10:23
+# Generated at: 2025-11-02 23:21
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="西充综合" group-title="地方",西充综合
 https://bl.xichongtv.cn/xcrm2025/ZHPD1010.m3u8?auth_key=1768713113-0-0-b6d00e1ea50a76484d1bed974d6e1b80
@@ -195,16 +195,22 @@ https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94
 https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
 #EXTINF:-1 tvg-name="西充县华光乡黄家庙村桅杆湾志" group-title="本地节目",西充县华光乡黄家庙村桅杆湾志
 https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
-#EXTINF:-1 tvg-name="口令↓" group-title="其他",口令↓
-https://vd2.bdstatic.com/mda-refjgvx7nhrha8js/cae_h264/1747403357338896764/mda-refjgvx7nhrha8js.mp4
-#EXTINF:-1 tvg-name="无" group-title="其他",无
+#EXTINF:-1 tvg-name="海燕直播" group-title="其他",海燕直播
+https://gcalic.v.myalicdn.com/gc/qdls03_1/index.m3u8
+#EXTINF:-1 tvg-name="不要付款" group-title="其他",不要付款
 https://alimov2.a.kwimgs.com/bs3/video-hls/5226990491353476963_6ec43e5d98b98919_6984_hlsb.m3u8
-#EXTINF:-1 tvg-name="旧版本被" group-title="其他",旧版本被
-https://alimov2.a.kwimgs.com/bs3/video-hls/5250634391452756335_6e203accad588e2a_9443_hlsb.m3u8
-#EXTINF:-1 tvg-name="野草屏蔽" group-title="其他",野草屏蔽
+#EXTINF:-1 tvg-name="学做TV应用" group-title="其他",学做TV应用
 https://alimov2.a.kwimgs.com/bs3/video-hls/5239093914195222137_9cc2d5481a601fbc_8182_hlsb.m3u8
-#EXTINF:-1 tvg-name="重新打包" group-title="其他",重新打包
+#EXTINF:-1 tvg-name="推荐公众号" group-title="其他",推荐公众号
 https://cloud.video.taobao.com//play/u/709608496/p/1/e/6/t/1/313689895693.mp4
+#EXTINF:-1 tvg-name="有制作" group-title="其他",有制作
+https://gcalic.v.myalicdn.com/gc/hkts09_1/index.m3u8
+#EXTINF:-1 tvg-name="步骤教学" group-title="其他",步骤教学
+https://gcalic.v.myalicdn.com/gc/hkylxs05_1/index.m3u8
+#EXTINF:-1 tvg-name="下载地址↓" group-title="其他",下载地址↓
+https://gcalic.v.myalicdn.com/gc/taishan05_1/index.m3u8
+#EXTINF:-1 tvg-name="jkss.com" group-title="其他",jkss.com
+https://gcalic.v.myalicdn.com/gc/djyqyl1_1/index.m3u8
 #EXTINF:-1 tvg-name="CCTV1高清" group-title="央视",CCTV1高清
 https://shyd.695847.xyz/cms001/ch00000090990000001022/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="CCTV1高清" group-title="央视",CCTV1高清
