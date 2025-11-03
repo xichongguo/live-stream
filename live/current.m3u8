@@ -1,5 +1,5 @@
 #EXTM3U
-# Generated at: 2025-11-03 11:17
+# Generated at: 2025-11-03 11:47
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="南充科教生活" group-title="本地节目",南充科教生活
 http://ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba700000000/playlist.m3u8?wsSecret=42f62aa716a3a86719587b678ac75386&wsTime=1875618327
@@ -17,6 +17,8 @@ http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_14036776173_strL.
 https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
 #EXTINF:-1 tvg-name="走进四川西充" group-title="本地节目",走进四川西充
 https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
+#EXTINF:-1 tvg-name="云南卫视" group-title="云南",云南卫视
+http://112.27.235.94:8000/hls/40/index.m3u8
 #EXTINF:-1 tvg-name="云南卫视" group-title="云南",云南卫视
 http://36.36.200.196:44330/tsfile/live/0119_1.m3u8?key=txiptv&playlive=0&authid=0
 #EXTINF:-1 tvg-name="云南卫视" group-title="云南",云南卫视
@@ -71,8 +73,6 @@ http://m3u8.channel.wsrtv.com.cn/cms/videos/nmip-media/channellive/channel8/play
 http://m3u8.channel.wsrtv.com.cn/cms/videos/nmip-media/channellive/channel17/playlist.m3u8
 #EXTINF:-1 tvg-name="文山综合" group-title="云南",文山综合
 http://tvdrs.wsrtv.com.cn:8100/channellive/ch1.flv
-#EXTINF:-1 tvg-name="文山综合" group-title="云南",文山综合
-http://m3u8.channel.wsrtv.com.cn/cms/videos/nmip-media/channellive/channel7/playlist.m3u8
 #EXTINF:-1 tvg-name="红河公共" group-title="云南",红河公共
 http://tv.drs.hhtv.cc:8100/channellive/hhtv-2.flv?zyund
 #EXTINF:-1 tvg-name="红河综合" group-title="云南",红河综合
@@ -1388,6 +1388,10 @@ http://play1-qk.nmtv.cn/live/1735546886977046.m3u8
 #EXTINF:-1 tvg-name="内蒙包头新闻综合" group-title="内蒙古",内蒙包头新闻综合
 http://play1-qk.nmtv.cn/live/1735546150395017.m3u8
 #EXTINF:-1 tvg-name="内蒙古卫视" group-title="内蒙古",内蒙古卫视
+https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8$LR•IPV4『线路27』
+#EXTINF:-1 tvg-name="内蒙古卫视" group-title="内蒙古",内蒙古卫视
+http://60.16.0.216:5757/hls/41/index.m3u8
+#EXTINF:-1 tvg-name="内蒙古卫视" group-title="内蒙古",内蒙古卫视
 http://111.43.126.240:9003/hls/63/index.m3u8
 #EXTINF:-1 tvg-name="内蒙古卫视" group-title="内蒙古",内蒙古卫视
 http://106.53.99.30/tv/gdcucc.php?id=76
@@ -1421,6 +1425,8 @@ http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226685/1.m3u8
 https://shyd.695847.xyz/cms001/ch00000090990000001068/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="内蒙古卫视高清" group-title="内蒙古",内蒙古卫视高清
 https://shyd.695847.xyz/cms001/ch00000090990000001530/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="内蒙古蒙语卫视" group-title="内蒙古",内蒙古蒙语卫视
+http://play1-qk.nmtv.cn/live/1686560387346365.m3u8
 #EXTINF:-1 tvg-name="内蒙古视" group-title="内蒙古",内蒙古视
 http://m.061899.xyz/mg/nmgws
 #EXTINF:-1 tvg-name="内蒙巴彦淖尔新闻综合" group-title="内蒙古",内蒙巴彦淖尔新闻综合
@@ -1446,7 +1452,13 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226324/1/index.m3u8?fmt=t
 #EXTINF:-1 tvg-name="三沙卫视" group-title="卫视",三沙卫视
 http://192.168.6.1:7088/rtp://238.255.2.203:5999
 #EXTINF:-1 tvg-name="上海卫视" group-title="卫视",上海卫视
+http://112.27.235.94:8000/hls/28/index.m3u8
+#EXTINF:-1 tvg-name="上海卫视" group-title="卫视",上海卫视
+http://genglei.8866.org:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="上海卫视" group-title="卫视",上海卫视
 http://36.36.200.196:44330/tsfile/live/0107_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="东南卫视" group-title="卫视",东南卫视
+http://live.zohi.tv/video/s10001-fztv-3/index.m3u8
 #EXTINF:-1 tvg-name="东南卫视" group-title="卫视",东南卫视
 http://m.061899.xyz/mg/dnws
 #EXTINF:-1 tvg-name="东南卫视" group-title="卫视",东南卫视
@@ -1521,8 +1533,6 @@ http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000071/index.m3u8
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226661/1.m3u8
 #EXTINF:-1 tvg-name="兵团卫视咪咕" group-title="卫视",兵团卫视咪咕
 http://go.bkpcp.top/mg/btws
-#EXTINF:-1 tvg-name="内蒙蒙语卫视1" group-title="卫视",内蒙蒙语卫视1
-http://play1-qk.nmtv.cn/live/1686560387346365.m3u8
 #EXTINF:-1 tvg-name="内蒙蒙语卫视2" group-title="卫视",内蒙蒙语卫视2
 http://play1-qk.nmtv.cn/live/1686561065304370.m3u8
 #EXTINF:-1 tvg-name="农林卫视" group-title="卫视",农林卫视
@@ -1567,6 +1577,8 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225732/1/index.m3u8?fmt=t
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226558/1.m3u8?
 #EXTINF:-1 tvg-name="北京卡酷少儿 576" group-title="卫视",北京卡酷少儿 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000048/index.m3u8
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视",北京卫视
+http://112.27.235.94:8000/hls/27/index.m3u8
 #EXTINF:-1 tvg-name="北京卫视" group-title="卫视",北京卫视
 http://m.061899.xyz/mg/bjws
 #EXTINF:-1 tvg-name="北京卫视" group-title="卫视",北京卫视
@@ -1686,11 +1698,17 @@ http://106.53.99.30/tv/gdcucc.php?id=32
 #EXTINF:-1 tvg-name="南方卫视" group-title="卫视",南方卫视
 http://192.168.6.1:7088/rtp://238.255.2.60:5999
 #EXTINF:-1 tvg-name="大湾区卫视" group-title="卫视",大湾区卫视
+http://222.128.55.152:9080/live/dwq.m3u8
+#EXTINF:-1 tvg-name="大湾区卫视" group-title="卫视",大湾区卫视
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227278/1.m3u8
 #EXTINF:-1 tvg-name="大湾区卫视" group-title="卫视",大湾区卫视
 http://[2409:8087:5e00:24::1e]:6060/000000001000/1000000002000011619/index.m3u8
 #EXTINF:-1 tvg-name="大湾区卫视 576" group-title="卫视",大湾区卫视 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000670/index.m3u8
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视",天津卫视
+http://112.27.235.94:8000/hls/42/index.m3u8
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视",天津卫视
+http://60.16.0.216:5757/hls/34/index.m3u8
 #EXTINF:-1 tvg-name="天津卫视" group-title="卫视",天津卫视
 http://m.061899.xyz/mg/tjws
 #EXTINF:-1 tvg-name="天津卫视" group-title="卫视",天津卫视
@@ -1782,6 +1800,8 @@ https://hls.ningxiahuangheyun.com/live/nxws1M.flv
 #EXTINF:-1 tvg-name="宁夏卫视[1024x576]" group-title="卫视",宁夏卫视[1024x576]
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226691/1.m3u8
 #EXTINF:-1 tvg-name="安多卫视" group-title="卫视",安多卫视
+https://liveout.xntv.tv/a65jur/96iln2.m3u8
+#EXTINF:-1 tvg-name="安多卫视" group-title="卫视",安多卫视
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227160/index.m3u8
 #EXTINF:-1 tvg-name="安多卫视" group-title="卫视",安多卫视
 http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225694/10000100000000060000000000146074_0.smil/index.m3u8
@@ -1803,6 +1823,8 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227259/1.m3u8
 http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225695/10000100000000060000000000146073_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="康巴卫视" group-title="卫视",康巴卫视
 http://192.168.6.1:7088/rtp://238.255.2.140:5999
+#EXTINF:-1 tvg-name="延边卫视" group-title="卫视",延边卫视
+http://l.cztvcloud.com/channels/lantian/SXxinchang2/720p.m3u8#
 #EXTINF:-1 tvg-name="延边卫视" group-title="卫视",延边卫视
 http://111.43.126.240:9003/hls/65/index.m3u8
 #EXTINF:-1 tvg-name="延边卫视" group-title="卫视",延边卫视
@@ -1833,8 +1855,14 @@ http://36.36.200.196:44330/tsfile/live/1012_1.m3u8?key=txiptv&playlive=0&authid=
 http://111.221.137.155:44330/tsfile/live/0139_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-name="澳亚卫视" group-title="卫视",澳亚卫视
 http://111.221.137.155:44330/tsfile/live/1018_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="莲花卫视" group-title="卫视",莲花卫视
+http://live-hls.macaulotustv.com/lotustv/macaulotustv.m3u8
 #EXTINF:-1 tvg-name="藏语卫视" group-title="卫视",藏语卫视
 http://103.67.53.72:82/xztv.php?id=1
+#EXTINF:-1 tvg-name="西藏卫视" group-title="卫视",西藏卫视
+http://php.jdshipin.com/xztv.php?id=ws
+#EXTINF:-1 tvg-name="西藏卫视" group-title="卫视",西藏卫视
+http://php.jdshipin.com:8880/xztv.php?id=ws
 #EXTINF:-1 tvg-name="西藏卫视" group-title="卫视",西藏卫视
 http://m.061899.xyz/mg/xzws
 #EXTINF:-1 tvg-name="西藏卫视" group-title="卫视",西藏卫视
@@ -1877,6 +1905,8 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225697/1/index.m3u8?fmt=t
 http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225697/10000100000000060000000000146070_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="重庆|重庆汽摩" group-title="卫视",重庆|重庆汽摩
 http://120.76.248.139/live/bfgd/4200000168.m3u8
+#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视",重庆卫视
+http://60.16.0.216:5757/hls/36/index.m3u8
 #EXTINF:-1 tvg-name="重庆卫视" group-title="卫视",重庆卫视
 http://m.061899.xyz/mg/cqws
 #EXTINF:-1 tvg-name="重庆卫视" group-title="卫视",重庆卫视
@@ -2038,6 +2068,10 @@ http://stream8.jlntv.cn/cbstv/playlist.m3u8
 #EXTINF:-1 tvg-name="iPanda成都" group-title="四川",iPanda成都
 http://gcalic.v.myalicdn.com/gc/ipanda_1td/index.m3u8
 #EXTINF:-1 tvg-name="四川卫视" group-title="四川",四川卫视
+http://112.27.235.94:8000/hls/35/index.m3u8
+#EXTINF:-1 tvg-name="四川卫视" group-title="四川",四川卫视
+http://60.16.0.216:5757/hls/30/index.m3u8
+#EXTINF:-1 tvg-name="四川卫视" group-title="四川",四川卫视
 http://m.061899.xyz/mg/scws
 #EXTINF:-1 tvg-name="四川卫视" group-title="四川",四川卫视
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=scws
@@ -2143,184 +2177,6 @@ http://tv.drs.dzxw.net/channellive/xwzhpd-dz1.flv
 http://tv.drs.dzxw.net/channellive/tcpd-dz3.flv
 #EXTINF:-1 tvg-name="BTV KAKU少儿" group-title="地方",BTV KAKU少儿
 http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225732/10000100000000060000000000146064_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-11 戏曲" group-title="地方",CCTV-11 戏曲
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225746/10000100000000060000000000146099_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-11戏曲" group-title="地方",CCTV-11戏曲
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226753/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-11戏曲" group-title="地方",CCTV-11戏曲
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227251/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-11戏曲" group-title="地方",CCTV-11戏曲
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226193/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-13 新闻" group-title="地方",CCTV-13 新闻
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225748/10000100000000060000000000146097_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-13新闻" group-title="地方",CCTV-13新闻
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226729/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-13新闻" group-title="地方",CCTV-13新闻
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227333/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-13新闻" group-title="地方",CCTV-13新闻
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226191/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-14 少儿" group-title="地方",CCTV-14 少儿
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225727/10000100000000060000000000146096_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="地方",CCTV-14少儿
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226182/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="地方",CCTV-14少儿
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226720/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="地方",CCTV-14少儿
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227349/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="地方",CCTV-14少儿
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226181/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="地方",CCTV-14少儿
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226789/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-15 音乐" group-title="地方",CCTV-15 音乐
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225749/10000100000000060000000000146095_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-15音乐" group-title="地方",CCTV-15音乐
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226796/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-15音乐" group-title="地方",CCTV-15音乐
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227361/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-15音乐" group-title="地方",CCTV-15音乐
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226180/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-1综合" group-title="地方",CCTV-1综合
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226190/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-1综合" group-title="地方",CCTV-1综合
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226675/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-1综合" group-title="地方",CCTV-1综合
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226721/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-1综合" group-title="地方",CCTV-1综合
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227209/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-1综合" group-title="地方",CCTV-1综合
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226179/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-1综合" group-title="地方",CCTV-1综合
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226759/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-1综合" group-title="地方",CCTV-1综合
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226976/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-1综合" group-title="地方",CCTV-1综合
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227010/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-2 财经" group-title="地方",CCTV-2 财经
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225706/10000100000000060000000000146027_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-2财经" group-title="地方",CCTV-2财经
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226178/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-2财经" group-title="地方",CCTV-2财经
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226703/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-2财经" group-title="地方",CCTV-2财经
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226711/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-2财经" group-title="地方",CCTV-2财经
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227206/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-2财经" group-title="地方",CCTV-2财经
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226177/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-2财经" group-title="地方",CCTV-2财经
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226853/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-5+体育赛事" group-title="地方",CCTV-5+体育赛事
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226198/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-5+体育赛事" group-title="地方",CCTV-5+体育赛事
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226745/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-5+体育赛事" group-title="地方",CCTV-5+体育赛事
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227236/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-5+体育赛事" group-title="地方",CCTV-5+体育赛事
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226910/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-5体育" group-title="地方",CCTV-5体育
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227218/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-5体育" group-title="地方",CCTV-5体育
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227338/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-5体育" group-title="地方",CCTV-5体育
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226200/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-风云音乐" group-title="地方",CCTV-风云音乐
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227502/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-风云音乐" group-title="地方",CCTV-风云音乐
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225698/10000100000000060000000000146062_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-高尔夫.网球_8M" group-title="地方",CCTV-高尔夫.网球_8M
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226114/385114734.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-高尔夫网球" group-title="地方",CCTV-高尔夫网球
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227496/index.m3u8
-#EXTINF:-1 tvg-name="CCTV1 综合" group-title="地方",CCTV1 综合
-http://111.221.137.155:44330/tsfile/live/0001_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV1-综合" group-title="地方",CCTV1-综合
-http://36.36.200.196:44330/tsfile/live/0001_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV1-综合" group-title="地方",CCTV1-综合
-http://111.43.126.240:9003/hls/13/index.m3u8
-#EXTINF:-1 tvg-name="CCTV11 戏曲" group-title="地方",CCTV11 戏曲
-http://111.221.137.155:44330/tsfile/live/0011_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV11-戏曲" group-title="地方",CCTV11-戏曲
-http://36.36.200.196:44330/tsfile/live/0012_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV11-戏曲" group-title="地方",CCTV11-戏曲
-http://111.43.126.240:9003/hls/24/index.m3u8
-#EXTINF:-1 tvg-name="CCTV11戏曲" group-title="地方",CCTV11戏曲
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226714/1.m3u8
-#EXTINF:-1 tvg-name="CCTV13 新闻" group-title="地方",CCTV13 新闻
-http://111.221.137.155:44330/tsfile/live/0013_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV13-新闻" group-title="地方",CCTV13-新闻
-http://36.36.200.196:44330/tsfile/live/0014_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV13-新闻" group-title="地方",CCTV13-新闻
-http://111.43.126.240:9003/hls/26/index.m3u8
-#EXTINF:-1 tvg-name="CCTV13新闻" group-title="地方",CCTV13新闻
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226717/1.m3u8
-#EXTINF:-1 tvg-name="CCTV14 少儿" group-title="地方",CCTV14 少儿
-http://111.221.137.155:44330/tsfile/live/0014_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV14-少儿" group-title="地方",CCTV14-少儿
-http://36.36.200.196:44330/tsfile/live/0015_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV14-少儿" group-title="地方",CCTV14-少儿
-http://111.43.126.240:9003/hls/27/index.m3u8
-#EXTINF:-1 tvg-name="CCTV14少儿" group-title="地方",CCTV14少儿
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226645/1.m3u8
-#EXTINF:-1 tvg-name="CCTV14少儿" group-title="地方",CCTV14少儿
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226663/1.m3u8
-#EXTINF:-1 tvg-name="CCTV15 音乐" group-title="地方",CCTV15 音乐
-http://111.221.137.155:44330/tsfile/live/0015_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV15-音乐" group-title="地方",CCTV15-音乐
-http://36.36.200.196:44330/tsfile/live/0016_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV15-音乐" group-title="地方",CCTV15-音乐
-http://111.43.126.240:9003/hls/28/index.m3u8
-#EXTINF:-1 tvg-name="CCTV15音乐" group-title="地方",CCTV15音乐
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226648/1.m3u8
-#EXTINF:-1 tvg-name="CCTV1综合" group-title="地方",CCTV1综合
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226635/1.m3u8
-#EXTINF:-1 tvg-name="CCTV1综合" group-title="地方",CCTV1综合
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226705/1.m3u8
-#EXTINF:-1 tvg-name="CCTV1综合" group-title="地方",CCTV1综合
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226736/1.m3u8
-#EXTINF:-1 tvg-name="CCTV1综合" group-title="地方",CCTV1综合
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226737/1.m3u8
-#EXTINF:-1 tvg-name="CCTV1综合" group-title="地方",CCTV1综合
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226694/1.m3u8
-#EXTINF:-1 tvg-name="CCTV2 财经" group-title="地方",CCTV2 财经
-http://111.221.137.155:44330/tsfile/live/0002_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV2-财经" group-title="地方",CCTV2-财经
-http://36.36.200.196:44330/tsfile/live/0002_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV2-财经" group-title="地方",CCTV2-财经
-http://111.43.126.240:9003/hls/14/index.m3u8
-#EXTINF:-1 tvg-name="CCTV2-财经" group-title="地方",CCTV2-财经
-http://111.43.126.240:9003/hls/14/index.m3u8。
-#EXTINF:-1 tvg-name="CCTV2财经" group-title="地方",CCTV2财经
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226739/1.m3u8
-#EXTINF:-1 tvg-name="CCTV5 体育" group-title="地方",CCTV5 体育
-http://111.221.137.155:44330/tsfile/live/0005_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV5+ 体育赛事" group-title="地方",CCTV5+ 体育赛事
-http://111.221.137.155:44330/tsfile/live/0016_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV5+-体育赛事" group-title="地方",CCTV5+-体育赛事
-http://111.43.126.240:9003/hls/18/index.m3u8
-#EXTINF:-1 tvg-name="CCTV5+体育赛事" group-title="地方",CCTV5+体育赛事
-http://36.36.200.196:44330/tsfile/live/0006_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV5+体育赛事" group-title="地方",CCTV5+体育赛事
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226711/1.m3u8
-#EXTINF:-1 tvg-name="CCTV5-体育" group-title="地方",CCTV5-体育
-http://36.36.200.196:44330/tsfile/live/0005_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV5-体育" group-title="地方",CCTV5-体育
-http://111.43.126.240:9003/hls/17/index.m3u8
-#EXTINF:-1 tvg-name="CCTV5体育" group-title="地方",CCTV5体育
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226731/1.m3u8
-#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="地方",CCTV风云音乐
-http://39.136.1.113:6610/170000001115/UmaiCHAN63807810519fb/1.m3u8?m3u8_level=2
-#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="地方",CCTV风云音乐
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225698/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="地方",CCTV风云音乐
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226083/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="地方",CCTV风云音乐
-http://192.168.6.1:7088/rtp://238.255.2.24:5999
-#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="地方",CCTV高尔夫网球
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225674/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="地方",CCTV高尔夫网球
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226114/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="地方",CCTV高尔夫网球
-http://192.168.6.1:7088/rtp://238.255.2.223:5999
 #EXTINF:-1 tvg-name="CETV早期教育" group-title="地方",CETV早期教育
 http://192.168.6.1:7088/rtp://238.255.2.143:5999
 #EXTINF:-1 tvg-name="CETV早期教育" group-title="地方",CETV早期教育
@@ -2861,8 +2717,6 @@ http://218.201.85.71:3170/m3u8?zzhongqd
 https://play.kankanlive.com/live/1656487214793905.m3u8
 #EXTINF:-1 tvg-name="太康综合" group-title="地方",太康综合
 http://tvpull.dxhmt.cn:9081/tv/11627-1.m3u8
-#EXTINF:-1 tvg-name="奎屯汉语综合" group-title="地方",奎屯汉语综合
-http://218.84.12.186:8001/hls/main/playlist.m3u8
 #EXTINF:-1 tvg-name="嫩江综合" group-title="地方",嫩江综合
 https://masterpull.hljtv.com/live/hrSfaA6T.m3u8
 #EXTINF:-1 tvg-name="孙吴综合" group-title="地方",孙吴综合
@@ -3657,8 +3511,6 @@ https://bl.xichongtv.cn/xcrm2025/ZHPD1010.m3u8?auth_key=1768713113-0-0-b6d00e1ea
 https://play.kankanlive.com/live/1659926941626981.m3u8
 #EXTINF:-1 tvg-name="西宁生活" group-title="地方",西宁生活
 https://liveout.xntv.tv/a65jur/90p2i1.m3u8?zqinghd
-#EXTINF:-1 tvg-name="西宁综合" group-title="地方",西宁综合
-https://liveout.xntv.tv/a65jur/96iln2.m3u8?zqinghd
 #EXTINF:-1 tvg-name="西峰综合" group-title="地方",西峰综合
 https://play.kankanlive.com/live/1683944827526991.m3u8
 #EXTINF:-1 tvg-name="西平综合" group-title="地方",西平综合
@@ -3953,6 +3805,10 @@ https://live-pull.newslqy.com/live/fmzb1682404988829.m3u8
 http://l.cztvcloud.com/channels/lantian/SXlongyou2/720p.m3u8?zzhed
 #EXTINF:-1 tvg-name="龙游综合" group-title="地方",龙游综合
 http://l.cztvcloud.com/channels/lantian/SXlongyou1/720p.m3u8?zzhed
+#EXTINF:-1 tvg-name="CCTV 4K超高清" group-title="央视",CCTV 4K超高清
+http://huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221226737/.m3u8
+#EXTINF:-1 tvg-name="CCTV 4K超高清" group-title="央视",CCTV 4K超高清
+http://huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221226766/.m3u8
 #EXTINF:-1 tvg-name="CCTV-01" group-title="央视",CCTV-01
 http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-02" group-title="央视",CCTV-02
@@ -3967,6 +3823,8 @@ http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-1" group-title="央视",CCTV-1
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226431/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-1 综合（高清）" group-title="央视",CCTV-1 综合（高清）
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225777/10000100000000060000000000240944_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-10" group-title="央视",CCTV-10
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226937/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-10" group-title="央视",CCTV-10
@@ -3985,12 +3843,26 @@ http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227321/index.m3u8
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226194/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-10科教" group-title="央视",CCTV-10科教
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226792/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-10科教频道" group-title="央视",CCTV-10科教频道
+http://106.53.99.30/tv/gdcucc.php?id=9
+#EXTINF:-1 tvg-name="CCTV-10科教频道" group-title="央视",CCTV-10科教频道
+http://106.53.99.30/tv/gdcucc.php?id=48
 #EXTINF:-1 tvg-name="CCTV-11" group-title="央视",CCTV-11
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226334/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-11" group-title="央视",CCTV-11
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226463/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-11 戏曲" group-title="央视",CCTV-11 戏曲
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225746/10000100000000060000000000146099_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-11HD" group-title="央视",CCTV-11HD
 http://120.76.248.139/live/bfgd/4200000130.m3u8
+#EXTINF:-1 tvg-name="CCTV-11戏曲" group-title="央视",CCTV-11戏曲
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226753/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-11戏曲" group-title="央视",CCTV-11戏曲
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227251/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-11戏曲" group-title="央视",CCTV-11戏曲
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226193/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-11戏曲频道" group-title="央视",CCTV-11戏曲频道
+http://106.53.99.30/tv/gdcucc.php?id=49
 #EXTINF:-1 tvg-name="CCTV-12" group-title="央视",CCTV-12
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226942/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-12 社会与法" group-title="央视",CCTV-12 社会与法
@@ -4007,6 +3879,10 @@ http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227343/index.m3u8
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226192/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-12社会与法" group-title="央视",CCTV-12社会与法
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226862/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-12社会与法频道" group-title="央视",CCTV-12社会与法频道
+http://106.53.99.30/tv/gdcucc.php?id=10
+#EXTINF:-1 tvg-name="CCTV-12社会与法频道" group-title="央视",CCTV-12社会与法频道
+http://106.53.99.30/tv/gdcucc.php?id=50
 #EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
 http://iptv.huuc.edu.cn/hls/cctv13hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
@@ -4015,20 +3891,56 @@ http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226568/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227041/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-13 新闻" group-title="央视",CCTV-13 新闻
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225748/10000100000000060000000000146097_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-13HD" group-title="央视",CCTV-13HD
 http://120.76.248.139/live/bfgd/4200000067.m3u8
+#EXTINF:-1 tvg-name="CCTV-13新闻" group-title="央视",CCTV-13新闻
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226729/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-13新闻" group-title="央视",CCTV-13新闻
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227333/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-13新闻" group-title="央视",CCTV-13新闻
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226191/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-13新闻频道" group-title="央视",CCTV-13新闻频道
+http://106.53.99.30/tv/gdcucc.php?id=51
 #EXTINF:-1 tvg-name="CCTV-14" group-title="央视",CCTV-14
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226229/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-14" group-title="央视",CCTV-14
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226947/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-14" group-title="央视",CCTV-14
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227036/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-14 少儿" group-title="央视",CCTV-14 少儿
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225727/10000100000000060000000000146096_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-14HD" group-title="央视",CCTV-14HD
 http://120.76.248.139/live/bfgd/4200000132.m3u8
+#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="央视",CCTV-14少儿
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226182/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="央视",CCTV-14少儿
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226720/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="央视",CCTV-14少儿
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227349/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="央视",CCTV-14少儿
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226181/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-14少儿" group-title="央视",CCTV-14少儿
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226789/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-14少儿频道" group-title="央视",CCTV-14少儿频道
+http://106.53.99.30/tv/gdcucc.php?id=11
+#EXTINF:-1 tvg-name="CCTV-14少儿频道" group-title="央视",CCTV-14少儿频道
+http://106.53.99.30/tv/gdcucc.php?id=52
 #EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226333/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-15 音乐" group-title="央视",CCTV-15 音乐
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225749/10000100000000060000000000146095_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-15HD" group-title="央视",CCTV-15HD
 http://120.76.248.139/live/bfgd/4200000133.m3u8
+#EXTINF:-1 tvg-name="CCTV-15音乐" group-title="央视",CCTV-15音乐
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226796/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-15音乐" group-title="央视",CCTV-15音乐
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227361/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-15音乐" group-title="央视",CCTV-15音乐
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226180/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-15音乐频道" group-title="央视",CCTV-15音乐频道
+http://106.53.99.30/tv/gdcucc.php?id=53
 #EXTINF:-1 tvg-name="CCTV-16" group-title="央视",CCTV-16
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226892/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-16" group-title="央视",CCTV-16
@@ -4067,6 +3979,26 @@ http://120.76.248.139/live/bfgd/4200000488.m3u8
 http://120.76.248.139/live/bfgd/4200000489.m3u8
 #EXTINF:-1 tvg-name="CCTV-1HD" group-title="央视",CCTV-1HD
 http://120.76.248.139/live/bfgd/4200000201.m3u8
+#EXTINF:-1 tvg-name="CCTV-1综合" group-title="央视",CCTV-1综合
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226190/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-1综合" group-title="央视",CCTV-1综合
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226675/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-1综合" group-title="央视",CCTV-1综合
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226721/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-1综合" group-title="央视",CCTV-1综合
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227209/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-1综合" group-title="央视",CCTV-1综合
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226179/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-1综合" group-title="央视",CCTV-1综合
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226759/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-1综合" group-title="央视",CCTV-1综合
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226976/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-1综合" group-title="央视",CCTV-1综合
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227010/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-1综合频道" group-title="央视",CCTV-1综合频道
+http://106.53.99.30/tv/gdcucc.php?id=4
+#EXTINF:-1 tvg-name="CCTV-1综合频道" group-title="央视",CCTV-1综合频道
+http://106.53.99.30/tv/gdcucc.php?id=40
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226950/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
@@ -4077,10 +4009,30 @@ http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226472/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-2 财经" group-title="央视",CCTV-2 财经
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225706/10000100000000060000000000146027_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-2HD" group-title="央视",CCTV-2HD
 http://120.76.248.139/live/bfgd/4200000061.m3u8
+#EXTINF:-1 tvg-name="CCTV-2财经" group-title="央视",CCTV-2财经
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226178/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-2财经" group-title="央视",CCTV-2财经
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226703/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-2财经" group-title="央视",CCTV-2财经
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226711/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-2财经" group-title="央视",CCTV-2财经
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227206/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-2财经" group-title="央视",CCTV-2财经
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226177/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-2财经" group-title="央视",CCTV-2财经
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226853/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-2财经频道" group-title="央视",CCTV-2财经频道
+http://106.53.99.30/tv/gdcucc.php?id=5
+#EXTINF:-1 tvg-name="CCTV-2财经频道" group-title="央视",CCTV-2财经频道
+http://106.53.99.30/tv/gdcucc.php?id=41
 #EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226471/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-3 综艺（高清）" group-title="央视",CCTV-3 综艺（高清）
+http://39.135.16.142:6060/PLTV/88888888/224/3221226008/372609400.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-3HD" group-title="央视",CCTV-3HD
 http://120.76.248.139/live/bfgd/4200000062.m3u8
 #EXTINF:-1 tvg-name="CCTV-3综艺" group-title="央视",CCTV-3综艺
@@ -4095,8 +4047,14 @@ http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227026/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-4" group-title="央视",CCTV-4
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226470/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-4 中文国际（高清）" group-title="央视",CCTV-4 中文国际（高清）
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225779/10000100000000060000000000240942_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-4HD" group-title="央视",CCTV-4HD
 http://120.76.248.139/live/bfgd/4200000063.m3u8
+#EXTINF:-1 tvg-name="CCTV-4K" group-title="央视",CCTV-4K
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226491/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-4K" group-title="央视",CCTV-4K
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226716/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-4中文国际" group-title="央视",CCTV-4中文国际
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226176/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-4中文国际" group-title="央视",CCTV-4中文国际
@@ -4109,10 +4067,14 @@ http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227324/index.m3u8
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226189/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-4中文国际" group-title="央视",CCTV-4中文国际
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226741/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-4中文国际频道" group-title="央视",CCTV-4中文国际频道
+http://106.53.99.30/tv/gdcucc.php?id=43
 #EXTINF:-1 tvg-name="CCTV-5" group-title="央视",CCTV-5
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226348/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-5" group-title="央视",CCTV-5
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-5 体育（高清）" group-title="央视",CCTV-5 体育（高清）
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226024/372609396.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-5+" group-title="央视",CCTV-5+
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226349/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-5+" group-title="央视",CCTV-5+
@@ -4121,14 +4083,38 @@ http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226894/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-5+HD" group-title="央视",CCTV-5+HD
 http://120.76.248.139/live/bfgd/4200000246.m3u8
+#EXTINF:-1 tvg-name="CCTV-5+体育赛事" group-title="央视",CCTV-5+体育赛事
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226198/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-5+体育赛事" group-title="央视",CCTV-5+体育赛事
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226745/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-5+体育赛事" group-title="央视",CCTV-5+体育赛事
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227236/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-5+体育赛事" group-title="央视",CCTV-5+体育赛事
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226910/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-5+体育赛事频道" group-title="央视",CCTV-5+体育赛事频道
+http://106.53.99.30/tv/gdcucc.php?id=6
 #EXTINF:-1 tvg-name="CCTV-5+咪咕" group-title="央视",CCTV-5+咪咕
 http://go.bkpcp.top/mg/cctv5p
 #EXTINF:-1 tvg-name="CCTV-5HD" group-title="央视",CCTV-5HD
 http://120.76.248.139/live/bfgd/4200000064.m3u8
+#EXTINF:-1 tvg-name="CCTV-5体育" group-title="央视",CCTV-5体育
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227218/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-5体育" group-title="央视",CCTV-5体育
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227338/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-5体育" group-title="央视",CCTV-5体育
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226200/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-6" group-title="央视",CCTV-6
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226468/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV-6 电影（高清）" group-title="央视",CCTV-6 电影（高清）
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226011/372609392.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-6HD" group-title="央视",CCTV-6HD
 http://120.76.248.139/live/bfgd/4200000065.m3u8
+#EXTINF:-1 tvg-name="CCTV-6电影" group-title="央视",CCTV-6电影
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227221/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-6电影" group-title="央视",CCTV-6电影
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227341/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-6电影" group-title="央视",CCTV-6电影
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226199/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-7" group-title="央视",CCTV-7
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226946/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-7" group-title="央视",CCTV-7
@@ -4147,8 +4133,20 @@ http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227350/index.m3u8
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226188/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-7国防军事" group-title="央视",CCTV-7国防军事
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226905/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-7国防军事频道" group-title="央视",CCTV-7国防军事频道
+http://106.53.99.30/tv/gdcucc.php?id=7
+#EXTINF:-1 tvg-name="CCTV-7国防军事频道" group-title="央视",CCTV-7国防军事频道
+http://106.53.99.30/tv/gdcucc.php?id=45
+#EXTINF:-1 tvg-name="CCTV-8 电视剧（高清）" group-title="央视",CCTV-8 电视剧（高清）
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226005/372609500.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-8HD" group-title="央视",CCTV-8HD
 http://120.76.248.139/live/bfgd/4200000066.m3u8
+#EXTINF:-1 tvg-name="CCTV-8电视剧" group-title="央视",CCTV-8电视剧
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227325/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-8电视剧" group-title="央视",CCTV-8电视剧
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227466/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-8电视剧" group-title="央视",CCTV-8电视剧
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226197/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226236/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
@@ -4171,6 +4169,10 @@ http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226734/index.m3u8
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227337/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-9纪录" group-title="央视",CCTV-9纪录
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226173/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-9纪录频道" group-title="央视",CCTV-9纪录频道
+http://106.53.99.30/tv/gdcucc.php?id=8
+#EXTINF:-1 tvg-name="CCTV-9纪录频道" group-title="央视",CCTV-9纪录频道
+http://106.53.99.30/tv/gdcucc.php?id=47
 #EXTINF:-1 tvg-name="CCTV-世界地理" group-title="央视",CCTV-世界地理
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227450/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-世界地理" group-title="央视",CCTV-世界地理
@@ -4195,18 +4197,42 @@ http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227508/index.m3u8
 http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225699/10000100000000060000000000146059_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-女性时尚" group-title="央视",CCTV-女性时尚
 http://120.76.248.139/live/bfgd/4200000176.m3u8
+#EXTINF:-1 tvg-name="CCTV-怀旧剧场" group-title="央视",CCTV-怀旧剧场
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227499/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-怀旧剧场" group-title="央视",CCTV-怀旧剧场
+http://120.76.248.139/live/bfgd/4200000224.m3u8
+#EXTINF:-1 tvg-name="CCTV-怀旧剧场_8M" group-title="央视",CCTV-怀旧剧场_8M
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226097/385114681.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-电视指南" group-title="央视",CCTV-电视指南
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227374/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-电视指南" group-title="央视",CCTV-电视指南
 http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226120/385114748.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-电视指南" group-title="央视",CCTV-电视指南
 http://120.76.248.139/live/bfgd/4200000164.m3u8
+#EXTINF:-1 tvg-name="CCTV-第一剧场" group-title="央视",CCTV-第一剧场
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227444/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-第一剧场" group-title="央视",CCTV-第一剧场
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225702/10000100000000060000000000146061_0.smil/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-风云剧场" group-title="央视",CCTV-风云剧场
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227447/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-风云剧场" group-title="央视",CCTV-风云剧场
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225700/10000100000000060000000000146058_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-风云足球" group-title="央视",CCTV-风云足球
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227377/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-风云足球" group-title="央视",CCTV-风云足球
 http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225734/10000100000000060000000000146090_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-风云足球" group-title="央视",CCTV-风云足球
 http://120.76.248.139/live/bfgd/4200000225.m3u8
+#EXTINF:-1 tvg-name="CCTV-风云音乐" group-title="央视",CCTV-风云音乐
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227502/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-风云音乐" group-title="央视",CCTV-风云音乐
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225698/10000100000000060000000000146062_0.smil/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-高尔夫.网球_8M" group-title="央视",CCTV-高尔夫.网球_8M
+http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226114/385114734.smil/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-高尔夫网球" group-title="央视",CCTV-高尔夫网球
+http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227496/index.m3u8
+#EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
+http://112.27.235.94:8000/hls/1/index.m3u8
 #EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
 http://m.061899.xyz/mg/cctv1
 #EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
@@ -4249,6 +4275,14 @@ http://192.168.6.1:7088/rtp://238.255.2.91:5999
 http://192.168.6.1:7088/rtp://238.255.0.113:4152
 #EXTINF:-1 tvg-name="CCTV1 576" group-title="央视",CCTV1 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000001/index.m3u8
+#EXTINF:-1 tvg-name="CCTV1 综合" group-title="央视",CCTV1 综合
+http://111.221.137.155:44330/tsfile/live/0001_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV1-综合" group-title="央视",CCTV1-综合
+http://36.36.200.196:44330/tsfile/live/0001_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV1-综合" group-title="央视",CCTV1-综合
+http://111.43.126.240:9003/hls/13/index.m3u8
+#EXTINF:-1 tvg-name="CCTV10" group-title="央视",CCTV10
+http://112.27.235.94:8000/hls/11/index.m3u8
 #EXTINF:-1 tvg-name="CCTV10" group-title="央视",CCTV10
 http://m.061899.xyz/mg/cctv10
 #EXTINF:-1 tvg-name="CCTV10" group-title="央视",CCTV10
@@ -4285,6 +4319,12 @@ http://111.43.126.240:9003/hls/23/index.m3u8
 http://go.bkpcp.top/mg/cctv10
 #EXTINF:-1 tvg-name="CCTV10科教" group-title="央视",CCTV10科教
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226708/1.m3u8
+#EXTINF:-1 tvg-name="CCTV10高清" group-title="央视",CCTV10高清
+https://shyd.695847.xyz/cms001/ch00000090990000001238/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV11" group-title="央视",CCTV11
+http://112.27.235.94:8000/hls/12/index.m3u8
+#EXTINF:-1 tvg-name="CCTV11" group-title="央视",CCTV11
+http://60.16.0.216:5757/hls/12/index.m3u8
 #EXTINF:-1 tvg-name="CCTV11" group-title="央视",CCTV11
 http://m.061899.xyz/mg/cctv11
 #EXTINF:-1 tvg-name="CCTV11" group-title="央视",CCTV11
@@ -4313,8 +4353,24 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225746/1/index.m3u8?fmt=t
 http://192.168.6.1:7088/rtp://238.255.2.14:5999
 #EXTINF:-1 tvg-name="CCTV11 576" group-title="央视",CCTV11 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000011/index.m3u8
+#EXTINF:-1 tvg-name="CCTV11 戏曲" group-title="央视",CCTV11 戏曲
+http://111.221.137.155:44330/tsfile/live/0011_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV11-戏曲" group-title="央视",CCTV11-戏曲
+http://36.36.200.196:44330/tsfile/live/0012_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV11-戏曲" group-title="央视",CCTV11-戏曲
+http://111.43.126.240:9003/hls/24/index.m3u8
 #EXTINF:-1 tvg-name="CCTV11咪咕" group-title="央视",CCTV11咪咕
 http://go.bkpcp.top/mg/cctv11
+#EXTINF:-1 tvg-name="CCTV11戏曲" group-title="央视",CCTV11戏曲
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226714/1.m3u8
+#EXTINF:-1 tvg-name="CCTV11高清" group-title="央视",CCTV11高清
+https://shyd.695847.xyz/cms001/ch00000090990000001309/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
+http://124.165.251.82:85/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
+http://112.27.235.94:8000/hls/13/index.m3u8
+#EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
+http://60.16.0.216:5757/hls/13/index.m3u8
 #EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
 http://m.061899.xyz/mg/cctv12
 #EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
@@ -4355,6 +4411,16 @@ http://go.bkpcp.top/mg/cctv12
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226723/1.m3u8
 #EXTINF:-1 tvg-name="CCTV12社会与法" group-title="央视",CCTV12社会与法
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226748/1.m3u8
+#EXTINF:-1 tvg-name="CCTV12高清" group-title="央视",CCTV12高清
+https://shyd.695847.xyz/cms001/ch00000090990000001239/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
+http://112.27.235.94:8000/hls/14/index.m3u8
+#EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
+http://183.215.134.239:19901/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
+https://event.pull.hebtv.com/jishi/cp1.m3u8
+#EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
+http://60.16.0.216:5757/hls/14/index.m3u8
 #EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
 http://m.061899.xyz/mg/cctv13
 #EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
@@ -4383,10 +4449,24 @@ http://192.168.6.1:7088/rtp://238.255.2.16:5999
 http://192.168.6.1:7088/rtp://238.255.0.37:9032
 #EXTINF:-1 tvg-name="CCTV13 576" group-title="央视",CCTV13 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000013/index.m3u8
+#EXTINF:-1 tvg-name="CCTV13 新闻" group-title="央视",CCTV13 新闻
+http://111.221.137.155:44330/tsfile/live/0013_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV13-新闻" group-title="央视",CCTV13-新闻
+http://36.36.200.196:44330/tsfile/live/0014_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV13-新闻" group-title="央视",CCTV13-新闻
+http://111.43.126.240:9003/hls/26/index.m3u8
 #EXTINF:-1 tvg-name="CCTV13HEVC" group-title="央视",CCTV13HEVC
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226314/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV13咪咕" group-title="央视",CCTV13咪咕
 http://go.bkpcp.top/mg/cctv13
+#EXTINF:-1 tvg-name="CCTV13新闻" group-title="央视",CCTV13新闻
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226717/1.m3u8
+#EXTINF:-1 tvg-name="CCTV13高清" group-title="央视",CCTV13高清
+https://shyd.695847.xyz/cms001/ch00000090990000001328/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV14" group-title="央视",CCTV14
+http://112.27.235.94:8000/hls/15/index.m3u8
+#EXTINF:-1 tvg-name="CCTV14" group-title="央视",CCTV14
+http://60.16.0.216:5757/hls/15/index.m3u8
 #EXTINF:-1 tvg-name="CCTV14" group-title="央视",CCTV14
 http://m.061899.xyz/mg/cctv14
 #EXTINF:-1 tvg-name="CCTV14" group-title="央视",CCTV14
@@ -4413,8 +4493,22 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225727/1/index.m3u8?fmt=t
 http://192.168.6.1:7088/rtp://238.255.2.17:5999
 #EXTINF:-1 tvg-name="CCTV14 576" group-title="央视",CCTV14 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000014/index.m3u8
+#EXTINF:-1 tvg-name="CCTV14 少儿" group-title="央视",CCTV14 少儿
+http://111.221.137.155:44330/tsfile/live/0014_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV14-少儿" group-title="央视",CCTV14-少儿
+http://36.36.200.196:44330/tsfile/live/0015_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV14-少儿" group-title="央视",CCTV14-少儿
+http://111.43.126.240:9003/hls/27/index.m3u8
 #EXTINF:-1 tvg-name="CCTV14咪咕" group-title="央视",CCTV14咪咕
 http://go.bkpcp.top/mg/cctv14
+#EXTINF:-1 tvg-name="CCTV14少儿" group-title="央视",CCTV14少儿
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226645/1.m3u8
+#EXTINF:-1 tvg-name="CCTV14少儿" group-title="央视",CCTV14少儿
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226663/1.m3u8
+#EXTINF:-1 tvg-name="CCTV14高清" group-title="央视",CCTV14高清
+https://shyd.695847.xyz/cms001/ch00000090990000001240/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV15" group-title="央视",CCTV15
+http://112.27.235.94:8000/hls/16/index.m3u8
 #EXTINF:-1 tvg-name="CCTV15" group-title="央视",CCTV15
 http://m.061899.xyz/mg/cctv15
 #EXTINF:-1 tvg-name="CCTV15" group-title="央视",CCTV15
@@ -4441,8 +4535,18 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225749/1/index.m3u8?fmt=t
 http://192.168.6.1:7088/rtp://238.255.2.18:5999
 #EXTINF:-1 tvg-name="CCTV15 576" group-title="央视",CCTV15 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000015/index.m3u8
+#EXTINF:-1 tvg-name="CCTV15 音乐" group-title="央视",CCTV15 音乐
+http://111.221.137.155:44330/tsfile/live/0015_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV15-音乐" group-title="央视",CCTV15-音乐
+http://36.36.200.196:44330/tsfile/live/0016_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV15-音乐" group-title="央视",CCTV15-音乐
+http://111.43.126.240:9003/hls/28/index.m3u8
 #EXTINF:-1 tvg-name="CCTV15咪咕" group-title="央视",CCTV15咪咕
 http://go.bkpcp.top/mg/cctv15
+#EXTINF:-1 tvg-name="CCTV15音乐" group-title="央视",CCTV15音乐
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226648/1.m3u8
+#EXTINF:-1 tvg-name="CCTV15高清" group-title="央视",CCTV15高清
+https://shyd.695847.xyz/cms001/ch00000090990000001338/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="CCTV16" group-title="央视",CCTV16
 http://m.061899.xyz/mg/cctv16
 #EXTINF:-1 tvg-name="CCTV16" group-title="央视",CCTV16
@@ -4463,12 +4567,16 @@ http://192.168.6.1:7088/rtp://238.255.2.217:5999
 http://192.168.6.1:7088/rtp://238.255.2.110:5999
 #EXTINF:-1 tvg-name="CCTV16" group-title="央视",CCTV16
 http://192.168.6.1:7088/rtp://238.255.2.145:5999
+#EXTINF:-1 tvg-name="CCTV16 4K超高清" group-title="央视",CCTV16 4K超高清
+https://shyd.695847.xyz/cms001/ch00000090990000001258/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="CCTV16-奥林匹克" group-title="央视",CCTV16-奥林匹克
 http://111.43.126.240:9003/hls/29/index.m3u8
 #EXTINF:-1 tvg-name="CCTV16咪咕" group-title="央视",CCTV16咪咕
 http://go.bkpcp.top/mg/cctv16
 #EXTINF:-1 tvg-name="CCTV16奥林匹克" group-title="央视",CCTV16奥林匹克
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226825/1.m3u8
+#EXTINF:-1 tvg-name="CCTV16高清" group-title="央视",CCTV16高清
+https://shyd.695847.xyz/cms001/ch00000090990000001248/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="CCTV17" group-title="央视",CCTV17
 http://m.061899.xyz/mg/cctv17
 #EXTINF:-1 tvg-name="CCTV17" group-title="央视",CCTV17
@@ -4501,12 +4609,34 @@ http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226660/1.m3u8
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226727/1.m3u8
 #EXTINF:-1 tvg-name="CCTV17咪咕" group-title="央视",CCTV17咪咕
 http://go.bkpcp.top/mg/cctv17
+#EXTINF:-1 tvg-name="CCTV17高清" group-title="央视",CCTV17高清
+https://shyd.695847.xyz/cms001/ch00000090990000001241/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="CCTV1咪咕" group-title="央视",CCTV1咪咕
 http://go.bkpcp.top/mg/cctv1
+#EXTINF:-1 tvg-name="CCTV1综合" group-title="央视",CCTV1综合
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226635/1.m3u8
+#EXTINF:-1 tvg-name="CCTV1综合" group-title="央视",CCTV1综合
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226705/1.m3u8
+#EXTINF:-1 tvg-name="CCTV1综合" group-title="央视",CCTV1综合
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226736/1.m3u8
+#EXTINF:-1 tvg-name="CCTV1综合" group-title="央视",CCTV1综合
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226737/1.m3u8
+#EXTINF:-1 tvg-name="CCTV1综合" group-title="央视",CCTV1综合
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226694/1.m3u8
+#EXTINF:-1 tvg-name="CCTV1高清" group-title="央视",CCTV1高清
+https://shyd.695847.xyz/cms001/ch00000090990000001022/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV1高清" group-title="央视",CCTV1高清
+https://shyd.695847.xyz/cms001/ch00000090990000001388/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV1高清" group-title="央视",CCTV1高清
+https://shyd.695847.xyz/cms001/ch00000090990000001520/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="CCTV2" group-title="央视",CCTV2
-http://m.061899.xyz/mg/cctv2
+http://112.27.235.94:8000/hls/2/index.m3u8
 #EXTINF:-1 tvg-name="CCTV2" group-title="央视",CCTV2
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv2
+#EXTINF:-1 tvg-name="CCTV2" group-title="央视",CCTV2
+http://183.215.134.239:19901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV2" group-title="央视",CCTV2
+http://m.061899.xyz/mg/cctv2
 #EXTINF:-1 tvg-name="CCTV2" group-title="央视",CCTV2
 http://112.5.67.190:9999/tsfile/live/0002_1.m3u8?key=txiptv&playlive=0&authid=0
 #EXTINF:-1 tvg-name="CCTV2" group-title="央视",CCTV2
@@ -4533,8 +4663,26 @@ http://192.168.6.1:7088/rtp://238.255.2.11:5999
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226230/1.m3u8?
 #EXTINF:-1 tvg-name="CCTV2 576" group-title="央视",CCTV2 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000002/index.m3u8
+#EXTINF:-1 tvg-name="CCTV2 财经" group-title="央视",CCTV2 财经
+http://111.221.137.155:44330/tsfile/live/0002_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV2-财经" group-title="央视",CCTV2-财经
+http://36.36.200.196:44330/tsfile/live/0002_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV2-财经" group-title="央视",CCTV2-财经
+http://111.43.126.240:9003/hls/14/index.m3u8
+#EXTINF:-1 tvg-name="CCTV2-财经" group-title="央视",CCTV2-财经
+http://111.43.126.240:9003/hls/14/index.m3u8。
 #EXTINF:-1 tvg-name="CCTV2咪咕" group-title="央视",CCTV2咪咕
 http://go.bkpcp.top/mg/cctv2
+#EXTINF:-1 tvg-name="CCTV2财经" group-title="央视",CCTV2财经
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226739/1.m3u8
+#EXTINF:-1 tvg-name="CCTV2高清" group-title="央视",CCTV2高清
+https://shyd.695847.xyz/cms001/ch00000090990000001220/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV3" group-title="央视",CCTV3
+http://112.27.235.94:8000/hls/3/index.m3u8
+#EXTINF:-1 tvg-name="CCTV3" group-title="央视",CCTV3
+http://183.215.134.239:19901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV3" group-title="央视",CCTV3
+http://61.156.228.12:8154/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV3" group-title="央视",CCTV3
 http://m.061899.xyz/mg/cctv3
 #EXTINF:-1 tvg-name="CCTV3" group-title="央视",CCTV3
@@ -4579,6 +4727,8 @@ http://111.43.126.240:9003/hls/15/index.m3u8
 http://go.bkpcp.top/mg/cctv3
 #EXTINF:-1 tvg-name="CCTV3综艺" group-title="央视",CCTV3综艺
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226720/1.m3u8
+#EXTINF:-1 tvg-name="CCTV3高清" group-title="央视",CCTV3高清
+https://shyd.695847.xyz/cms001/ch00000090990000001186/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="CCTV4" group-title="央视",CCTV4
 http://m.061899.xyz/mg/cctv4
 #EXTINF:-1 tvg-name="CCTV4" group-title="央视",CCTV4
@@ -4619,6 +4769,22 @@ http://111.221.137.155:44330/tsfile/live/0004_1.m3u8?key=txiptv
 http://111.43.126.240:9003/hls/16/index.m3u8
 #EXTINF:-1 tvg-name="CCTV4-国际" group-title="央视",CCTV4-国际
 http://36.36.200.196:44330/tsfile/live/0004_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV4K" group-title="央视",CCTV4K
+http://111.48.34.138/000000001000PLTV/88888888/224/3221230518/1.m3u8
+#EXTINF:-1 tvg-name="CCTV4K" group-title="央视",CCTV4K
+http://111.48.34.138/000000001000PLTV/88888888/224/3221230577/1.m3u8
+#EXTINF:-1 tvg-name="CCTV4K" group-title="央视",CCTV4K
+http://111.48.34.138/000000001000PLTV/88888888/224/3221230571/1.m3u8
+#EXTINF:-1 tvg-name="CCTV4K" group-title="央视",CCTV4K
+http://39.136.1.113:6610/170000001115/UmaiCHAN6604ddd5cf779/1.m3u8?m3u8_level=2
+#EXTINF:-1 tvg-name="CCTV4K" group-title="央视",CCTV4K
+http://192.168.6.1:7088/rtp://238.255.2.139:5999
+#EXTINF:-1 tvg-name="CCTV4K" group-title="央视",CCTV4K
+http://192.168.6.1:7088/rtp://238.255.3.105:5999
+#EXTINF:-1 tvg-name="CCTV4K 17M2160HDR" group-title="央视",CCTV4K 17M2160HDR
+http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000382/index.m3u8
+#EXTINF:-1 tvg-name="CCTV4K超高清" group-title="央视",CCTV4K超高清
+https://shyd.695847.xyz/cms001/ch00000090990000001451/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="CCTV4中文国际" group-title="央视",CCTV4中文国际
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226725/1.m3u8
 #EXTINF:-1 tvg-name="CCTV4咪咕" group-title="央视",CCTV4咪咕
@@ -4639,6 +4805,14 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226269/1/index.m3u8?fmt=t
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226300/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV4美洲" group-title="央视",CCTV4美洲
 http://192.168.6.1:7088/rtp://238.255.2.214:5999
+#EXTINF:-1 tvg-name="CCTV4高清" group-title="央视",CCTV4高清
+https://shyd.695847.xyz/cms001/ch00000090990000001221/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视",CCTV5
+http://112.27.235.94:8000/hls/5/index.m3u8
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视",CCTV5
+http://113.26.202.52:1299/tsfile/live/0005_1.m3u8
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视",CCTV5
+http://genglei.8866.org:9901/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV5" group-title="央视",CCTV5
 http://m.061899.xyz/mg/cctv5
 #EXTINF:-1 tvg-name="CCTV5" group-title="央视",CCTV5
@@ -4675,6 +4849,12 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226024/1/index.m3u8?fmt=t
 http://192.168.6.1:7088/rtp://238.255.2.134:5999
 #EXTINF:-1 tvg-name="CCTV5" group-title="央视",CCTV5
 http://[2409:8087:8:21::0b]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226232/1.m3u8?
+#EXTINF:-1 tvg-name="CCTV5 体育" group-title="央视",CCTV5 体育
+http://111.221.137.155:44330/tsfile/live/0005_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV5+" group-title="央视",CCTV5+
+http://112.27.235.94:8000/hls/6/index.m3u8
+#EXTINF:-1 tvg-name="CCTV5+" group-title="央视",CCTV5+
+http://183.215.134.239:19901/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV5+" group-title="央视",CCTV5+
 http://m.061899.xyz/mg/cctv5p
 #EXTINF:-1 tvg-name="CCTV5+" group-title="央视",CCTV5+
@@ -4703,8 +4883,28 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226285/1/index.m3u8?fmt=t
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226171/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV5+" group-title="央视",CCTV5+
 http://192.168.6.1:7088/rtp://238.255.2.185:5999
+#EXTINF:-1 tvg-name="CCTV5+ 体育赛事" group-title="央视",CCTV5+ 体育赛事
+http://111.221.137.155:44330/tsfile/live/0016_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV5+-体育赛事" group-title="央视",CCTV5+-体育赛事
+http://111.43.126.240:9003/hls/18/index.m3u8
+#EXTINF:-1 tvg-name="CCTV5+体育赛事" group-title="央视",CCTV5+体育赛事
+http://36.36.200.196:44330/tsfile/live/0006_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV5+体育赛事" group-title="央视",CCTV5+体育赛事
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226711/1.m3u8
+#EXTINF:-1 tvg-name="CCTV5-体育" group-title="央视",CCTV5-体育
+http://36.36.200.196:44330/tsfile/live/0005_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV5-体育" group-title="央视",CCTV5-体育
+http://111.43.126.240:9003/hls/17/index.m3u8
+#EXTINF:-1 tvg-name="CCTV5体育" group-title="央视",CCTV5体育
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226731/1.m3u8
 #EXTINF:-1 tvg-name="CCTV5咪咕" group-title="央视",CCTV5咪咕
 http://go.bkpcp.top/mg/cctv5
+#EXTINF:-1 tvg-name="CCTV5高清" group-title="央视",CCTV5高清
+https://shyd.695847.xyz/cms001/ch00000090990000001187/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV6" group-title="央视",CCTV6
+http://112.27.235.94:8000/hls/7/index.m3u8
+#EXTINF:-1 tvg-name="CCTV6" group-title="央视",CCTV6
+http://61.156.228.12:8154/tsfile/live/0006_1.m3u8
 #EXTINF:-1 tvg-name="CCTV6" group-title="央视",CCTV6
 http://m.061899.xyz/mg/cctv6
 #EXTINF:-1 tvg-name="CCTV6" group-title="央视",CCTV6
@@ -4739,8 +4939,20 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226011/1/index.m3u8?fmt=t
 http://192.168.6.1:7088/rtp://238.255.2.135:5999
 #EXTINF:-1 tvg-name="CCTV6 576" group-title="央视",CCTV6 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000006/index.m3u8
+#EXTINF:-1 tvg-name="CCTV6 电影" group-title="央视",CCTV6 电影
+http://111.221.137.155:44330/tsfile/live/0006_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV6-电影" group-title="央视",CCTV6-电影
+http://36.36.200.196:44330/tsfile/live/0007_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV6-电影" group-title="央视",CCTV6-电影
+http://111.43.126.240:9003/hls/19/index.m3u8
 #EXTINF:-1 tvg-name="CCTV6咪咕" group-title="央视",CCTV6咪咕
 http://go.bkpcp.top/mg/cctv6
+#EXTINF:-1 tvg-name="CCTV6电影" group-title="央视",CCTV6电影
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226699/1.m3u8
+#EXTINF:-1 tvg-name="CCTV6高清" group-title="央视",CCTV6高清
+https://shyd.695847.xyz/cms001/ch00000090990000001188/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV7" group-title="央视",CCTV7
+http://112.27.235.94:8000/hls/8/index.m3u8
 #EXTINF:-1 tvg-name="CCTV7" group-title="央视",CCTV7
 http://m.061899.xyz/mg/cctv7
 #EXTINF:-1 tvg-name="CCTV7" group-title="央视",CCTV7
@@ -4785,6 +4997,14 @@ http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226721/1.m3u8
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226948/1.m3u8
 #EXTINF:-1 tvg-name="CCTV7国防军事" group-title="央视",CCTV7国防军事
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226984/1.m3u8
+#EXTINF:-1 tvg-name="CCTV7高清" group-title="央视",CCTV7高清
+https://shyd.695847.xyz/cms001/ch00000090990000001236/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
+http://124.165.251.82:85/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
+http://183.215.134.239:19901/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
+http://112.27.235.94:8000/hls/9/index.m3u8
 #EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
 http://m.061899.xyz/mg/cctv8
 #EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
@@ -4819,8 +5039,22 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226005/1/index.m3u8?fmt=t
 http://192.168.6.1:7088/rtp://238.255.2.136:5999
 #EXTINF:-1 tvg-name="CCTV8 576" group-title="央视",CCTV8 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000008/index.m3u8
+#EXTINF:-1 tvg-name="CCTV8 电视剧" group-title="央视",CCTV8 电视剧
+http://111.221.137.155:44330/tsfile/live/0008_1.m3u8?key=txiptv
+#EXTINF:-1 tvg-name="CCTV8-电视剧" group-title="央视",CCTV8-电视剧
+http://36.36.200.196:44330/tsfile/live/0009_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV8-电视剧" group-title="央视",CCTV8-电视剧
+http://111.43.126.240:9003/hls/21/index.m3u8
 #EXTINF:-1 tvg-name="CCTV8咪咕" group-title="央视",CCTV8咪咕
 http://go.bkpcp.top/mg/cctv8
+#EXTINF:-1 tvg-name="CCTV8电视剧" group-title="央视",CCTV8电视剧
+http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226715/1.m3u8
+#EXTINF:-1 tvg-name="CCTV8高清" group-title="央视",CCTV8高清
+https://shyd.695847.xyz/cms001/ch00000090990000001189/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
+#EXTINF:-1 tvg-name="CCTV9" group-title="央视",CCTV9
+http://112.27.235.94:8000/hls/10/index.m3u8
+#EXTINF:-1 tvg-name="CCTV9" group-title="央视",CCTV9
+http://60.16.0.216:5757/hls/10/index.m3u8
 #EXTINF:-1 tvg-name="CCTV9" group-title="央视",CCTV9
 http://m.061899.xyz/mg/cctv9
 #EXTINF:-1 tvg-name="CCTV9" group-title="央视",CCTV9
@@ -4859,6 +5093,8 @@ http://go.bkpcp.top/mg/cctv9
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226651/1.m3u8
 #EXTINF:-1 tvg-name="CCTV9纪录" group-title="央视",CCTV9纪录
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226657/1.m3u8
+#EXTINF:-1 tvg-name="CCTV9高清" group-title="央视",CCTV9高清
+https://shyd.695847.xyz/cms001/ch00000090990000001237/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
 #EXTINF:-1 tvg-name="CCTV世界地理" group-title="央视",CCTV世界地理
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225733/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV世界地理" group-title="央视",CCTV世界地理
@@ -4895,6 +5131,16 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225699/1/index.m3u8?fmt=t
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226104/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV女性时尚" group-title="央视",CCTV女性时尚
 http://192.168.6.1:7088/rtp://238.255.2.27:5999
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视",CCTV怀旧剧场
+http://huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221226710/.m3u8
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视",CCTV怀旧剧场
+http://39.136.1.113:6610/170000001115/UmaiCHAN6380783f9a29a/1.m3u8?m3u8_level=2
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视",CCTV怀旧剧场
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225765/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视",CCTV怀旧剧场
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226097/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视",CCTV怀旧剧场
+http://192.168.6.1:7088/rtp://238.255.2.33:5999
 #EXTINF:-1 tvg-name="CCTV文化精品" group-title="央视",CCTV文化精品
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225675/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV文化精品" group-title="央视",CCTV文化精品
@@ -4907,14 +5153,44 @@ http://39.136.1.113:6610/170000001115/UmaiCHAN638078586a829/1.m3u8?m3u8_level=2
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225673/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV电视指南" group-title="央视",CCTV电视指南
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226120/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="央视",CCTV第一剧场
+http://huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221226736/.m3u8
+#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="央视",CCTV第一剧场
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225702/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="央视",CCTV第一剧场
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226124/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="央视",CCTV第一剧场
+http://192.168.6.1:7088/rtp://238.255.2.25:5999
 #EXTINF:-1 tvg-name="CCTV老故事" group-title="央视",CCTV老故事
 http://192.168.6.1:7088/rtp://238.255.2.35:5999
+#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="央视",CCTV风云剧场
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225700/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="央视",CCTV风云剧场
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226107/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="央视",CCTV风云剧场
+http://192.168.6.1:7088/rtp://238.255.2.28:5999
+#EXTINF:-1 tvg-name="CCTV风云剧场HEVC" group-title="央视",CCTV风云剧场HEVC
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226308/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV风云足球" group-title="央视",CCTV风云足球
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225734/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV风云足球" group-title="央视",CCTV风云足球
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226153/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CCTV风云足球" group-title="央视",CCTV风云足球
 http://192.168.6.1:7088/rtp://238.255.2.29:5999
+#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="央视",CCTV风云音乐
+http://39.136.1.113:6610/170000001115/UmaiCHAN63807810519fb/1.m3u8?m3u8_level=2
+#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="央视",CCTV风云音乐
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225698/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="央视",CCTV风云音乐
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226083/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="央视",CCTV风云音乐
+http://192.168.6.1:7088/rtp://238.255.2.24:5999
+#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="央视",CCTV高尔夫网球
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225674/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="央视",CCTV高尔夫网球
+http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226114/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="央视",CCTV高尔夫网球
+http://192.168.6.1:7088/rtp://238.255.2.223:5999
 #EXTINF:-1 tvg-name="cctv欧洲" group-title="央视",cctv欧洲
 http://m.061899.xyz/mg/cctv4o
 #EXTINF:-1 tvg-name="cctv美洲" group-title="央视",cctv美洲
@@ -4961,6 +5237,8 @@ http://223.215.105.130:18888/udp/238.1.79.43:4456
 http://114.96.132.137:8888/udp/238.1.79.40:4432
 #EXTINF:-1 tvg-name="安徽农业科教" group-title="安徽",安徽农业科教
 http://114.97.214.173:8888/udp/238.1.79.40:4432
+#EXTINF:-1 tvg-name="安徽卫视" group-title="安徽",安徽卫视
+http://112.27.235.94:8000/hls/26/index.m3u8
 #EXTINF:-1 tvg-name="安徽卫视" group-title="安徽",安徽卫视
 http://m.061899.xyz/mg/ahws
 #EXTINF:-1 tvg-name="安徽卫视" group-title="安徽",安徽卫视
@@ -5089,6 +5367,8 @@ http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000057/index.m3u8
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000339/index.m3u8
 #EXTINF:-1 tvg-name="山东农科 576" group-title="山东",山东农科 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000058/index.m3u8
+#EXTINF:-1 tvg-name="山东卫视" group-title="山东",山东卫视
+http://112.27.235.94:8000/hls/34/index.m3u8
 #EXTINF:-1 tvg-name="山东卫视" group-title="山东",山东卫视
 http://m.061899.xyz/mg/sdws
 #EXTINF:-1 tvg-name="山东卫视" group-title="山东",山东卫视
@@ -5332,6 +5612,10 @@ http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000234/index.m3u8
 #EXTINF:-1 tvg-name="临汾三套" group-title="山西",临汾三套
 http://hw-play.lezhibo.com/live/8552545d9bab4781bd46e8b41249d0e3.m3u8
 #EXTINF:-1 tvg-name="山西卫视" group-title="山西",山西卫视
+http://m3u8.channel.wsrtv.com.cn/cms/videos/nmip-media/channellive/channel7/playlist.m3u8
+#EXTINF:-1 tvg-name="山西卫视" group-title="山西",山西卫视
+http://60.16.0.216:5757/hls/39/index.m3u8
+#EXTINF:-1 tvg-name="山西卫视" group-title="山西",山西卫视
 http://111.221.137.155:44330/tsfile/live/1020_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-name="山西卫视" group-title="山西",山西卫视
 http://111.43.126.240:9003/hls/61/index.m3u8
@@ -5435,6 +5719,8 @@ http://111.221.137.155:44330/tsfile/live/0127_1.m3u8?key=txiptv
 http://106.53.99.30/tv/gdcucc.php?id=29
 #EXTINF:-1 tvg-name="广东南方卫视" group-title="广东",广东南方卫视
 http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225738/10000100000000060000000000177599_0.smil/index.m3u8
+#EXTINF:-1 tvg-name="广东卫视" group-title="广东",广东卫视
+http://183.215.134.239:19901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="广东卫视" group-title="广东",广东卫视
 http://m.061899.xyz/mg/gdws
 #EXTINF:-1 tvg-name="广东卫视" group-title="广东",广东卫视
@@ -5596,6 +5882,12 @@ http://tmpstream.hyrtv.cn/xwzh/playlist.m3u8?_upt=407e01941606112151?zguangd
 #EXTINF:-1 tvg-name="深圳公共" group-title="广东",深圳公共
 http://111.221.137.155:44330/tsfile/live/1005_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-name="深圳卫视" group-title="广东",深圳卫视
+http://112.27.235.94:8000/hls/33/index.m3u8
+#EXTINF:-1 tvg-name="深圳卫视" group-title="广东",深圳卫视
+http://183.215.134.239:19901/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="深圳卫视" group-title="广东",深圳卫视
+http://113.26.202.52:1299/tsfile/live/0126_1.m3u8
+#EXTINF:-1 tvg-name="深圳卫视" group-title="广东",深圳卫视
 http://m.061899.xyz/mg/szws
 #EXTINF:-1 tvg-name="深圳卫视" group-title="广东",深圳卫视
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=szws
@@ -5695,6 +5987,8 @@ http://hls.nntv.cn/nnlive/YSYL_244.m3u8
 https://hls.nntv.cn/nnlive/WLSH_24.m3u8
 #EXTINF:-1 tvg-name="南宁综合" group-title="广西",南宁综合
 http://hls.nntv.cn/nnlive/XWZH_24.m3u8
+#EXTINF:-1 tvg-name="广西卫视" group-title="广西",广西卫视
+http://60.16.0.216:5757/hls/45/index.m3u8
 #EXTINF:-1 tvg-name="广西卫视" group-title="广西",广西卫视
 http://m.061899.xyz/mg/gxws
 #EXTINF:-1 tvg-name="广西卫视" group-title="广西",广西卫视
@@ -5797,6 +6091,8 @@ http://222.80.82.206:9300/hls/live/kstv2.m3u8
 http://222.80.82.206:9300/hls/live/kstv1.m3u8
 #EXTINF:-1 tvg-name="新疆兵团卫视" group-title="新疆",新疆兵团卫视
 http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225722/1/index.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-name="新疆卫视" group-title="新疆",新疆卫视
+http://218.84.12.186:8001/hls/main/playlist.m3u8?zxinjd;http://218.84.12.186:8001/hls/main/playlist.m3u8zxinjd
 #EXTINF:-1 tvg-name="新疆卫视" group-title="新疆",新疆卫视
 http://m.061899.xyz/mg/xjws
 #EXTINF:-1 tvg-name="新疆卫视" group-title="新疆",新疆卫视
@@ -5937,6 +6233,10 @@ http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000049/index.m3u8
 http://tvbox6.com/tv/migu.php?id=jstyxx
 #EXTINF:-1 tvg-name="江苏公共新闻" group-title="江苏",江苏公共新闻
 http://tvbox6.com/tv/migu.php?id=jsggxw
+#EXTINF:-1 tvg-name="江苏卫视" group-title="江苏",江苏卫视
+http://112.27.235.94:8000/hls/32/index.m3u8
+#EXTINF:-1 tvg-name="江苏卫视" group-title="江苏",江苏卫视
+http://60.16.0.216:5757/hls/24/index.m3u8
 #EXTINF:-1 tvg-name="江苏卫视" group-title="江苏",江苏卫视
 http://m.061899.xyz/mg/jsws
 #EXTINF:-1 tvg-name="江苏卫视" group-title="江苏",江苏卫视
@@ -6172,6 +6472,8 @@ http://115.150.63.77:9902/tsfile/live/0001_53.m3u8?key=txiptv&amp;playlive=1&amp
 #EXTINF:-1 tvg-name="江西公共农业高清" group-title="江西",江西公共农业高清
 http://113.195.172.192:808/hls/5/index.m3u8
 #EXTINF:-1 tvg-name="江西卫视" group-title="江西",江西卫视
+http://183.215.134.239:19901/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="江西卫视" group-title="江西",江西卫视
 http://m.061899.xyz/mg/jxws
 #EXTINF:-1 tvg-name="江西卫视" group-title="江西",江西卫视
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=jxws
@@ -6394,6 +6696,10 @@ http://120.76.248.139/live/bfgd/4200000169.m3u8
 #EXTINF:-1 tvg-name="河南公共频道" group-title="河南",河南公共频道
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227243/1.m3u8
 #EXTINF:-1 tvg-name="河南卫视" group-title="河南",河南卫视
+http://tvpull.dxhmt.cn:9081/tv/11425-1.m3u8
+#EXTINF:-1 tvg-name="河南卫视" group-title="河南",河南卫视
+http://1.94.31.214/php/hntv.php?id=hnws
+#EXTINF:-1 tvg-name="河南卫视" group-title="河南",河南卫视
 http://m.061899.xyz/mg/hnws
 #EXTINF:-1 tvg-name="河南卫视" group-title="河南",河南卫视
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=hnws
@@ -6507,6 +6813,26 @@ http://l.cztvcloud.com/channels/lantian/SXxiangshan1/720p.m3u8
 http://l.cztvcloud.com/channels/lantian/SXyuhang2/720p.m3u8
 #EXTINF:-1 tvg-name="杭州萧山综合" group-title="浙江",杭州萧山综合
 http://l.cztvcloud.com/channels/lantian/SXxiaoshan3/720p.m3u8
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8$LR•IPV4『线路55』
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8$LR•IPV4『线路56』
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8$LR•IPV4『线路105』
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+http://183.215.134.239:19901/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0$LR•IPV4『线路119』
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+http://ali-m-l.cztv.com/channels/lantian/channel01/1080p.m3u8$LR•IPV4『线路166』
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+http://8.138.7.223/tv/zjws.m3u8
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
+#EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
+http://112.27.235.94:8000/hls/29/index.m3u8
 #EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
 http://m.061899.xyz/mg/zjws
 #EXTINF:-1 tvg-name="浙江卫视" group-title="浙江",浙江卫视
@@ -6627,6 +6953,8 @@ http://l.cztvcloud.com/channels/lantian/SXdongyang1/720p.m3u8
 http://l.cztvcloud.com/channels/lantian/SXlanxi1/720p.m3u8
 #EXTINF:-1 tvg-name="SiTV东方财经" group-title="海南",SiTV东方财经
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00002025/index.m3u8
+#EXTINF:-1 tvg-name="东方卫视" group-title="海南",东方卫视
+http://183.215.134.239:19901/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="东方卫视" group-title="海南",东方卫视
 http://m.061899.xyz/mg/dfws
 #EXTINF:-1 tvg-name="东方卫视" group-title="海南",东方卫视
@@ -6810,6 +7138,8 @@ http://111.48.34.138/000000001000PLTV/88888888/224/3221229800/1.m3u8
 #EXTINF:-1 tvg-name="湖北公共新闻" group-title="湖北",湖北公共新闻
 http://111.48.34.138/000000001000PLTV/88888888/224/3221230441/1.m3u8
 #EXTINF:-1 tvg-name="湖北卫视" group-title="湖北",湖北卫视
+http://60.16.0.216:5757/hls/33/index.m3u8
+#EXTINF:-1 tvg-name="湖北卫视" group-title="湖北",湖北卫视
 http://m.061899.xyz/mg/hubws
 #EXTINF:-1 tvg-name="湖北卫视" group-title="湖北",湖北卫视
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=hubws
@@ -6969,6 +7299,12 @@ http://120.76.248.139/live/bfgd/4200000181.m3u8
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227365/index.m3u8
 #EXTINF:-1 tvg-name="湖南先锋乒羽 576" group-title="湖南",湖南先锋乒羽 576
 http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000650/index.m3u8
+#EXTINF:-1 tvg-name="湖南卫视" group-title="湖南",湖南卫视
+http://61.163.181.78:85/tsfile/live/1045_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="湖南卫视" group-title="湖南",湖南卫视
+http://183.215.134.239:19901/tsfile/live/0128_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="湖南卫视" group-title="湖南",湖南卫视
+http://112.27.235.94:8000/hls/31/index.m3u8
 #EXTINF:-1 tvg-name="湖南卫视" group-title="湖南",湖南卫视
 http://m.061899.xyz/mg/hunws
 #EXTINF:-1 tvg-name="湖南卫视" group-title="湖南",湖南卫视
@@ -7221,8 +7557,6 @@ http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225761/10000100000
 http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226695/1.m3u8
 #EXTINF:-1 tvg-name="漳州一套" group-title="福建",漳州一套
 http://31182.hlsplay.aodianyun.com/lms_31182/tv_channel_175.m3u8
-#EXTINF:-1 tvg-name="福州生活" group-title="福建",福州生活
-http://live.zohi.tv/video/s10001-fztv-3/index.m3u8
 #EXTINF:-1 tvg-name="龙岩综合" group-title="福建",龙岩综合
 http://stream.lytv.net.cn/2/sd/live.m3u8
 #EXTINF:-1 tvg-name="六盘水-1" group-title="贵州",六盘水-1
@@ -7329,6 +7663,8 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226289/1/index.m3u8?fmt=t
 http://120.76.248.139/live/bfgd/4200000633.m3u8
 #EXTINF:-1 tvg-name="贵州公共" group-title="贵州",贵州公共
 http://192.168.6.1:7088/rtp://238.255.2.2:5999
+#EXTINF:-1 tvg-name="贵州卫视" group-title="贵州",贵州卫视
+http://60.16.0.216:5757/hls/37/index.m3u8
 #EXTINF:-1 tvg-name="贵州卫视" group-title="贵州",贵州卫视
 http://m.061899.xyz/mg/gzws
 #EXTINF:-1 tvg-name="贵州卫视" group-title="贵州",贵州卫视
@@ -7517,188 +7853,6 @@ http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225995/1/index.m3u8?fmt=t
 https://vd2.bdstatic.com/mda-ki2cvyhz79rw40wg/v1-cae/sc/mda-ki2cvyhz79rw40wg.mp4
 #EXTINF:-1 tvg-name="3D电影" group-title="轮播频道",3D电影
 https://vd3.bdstatic.com/mda-kj0kfvyty9dk9nk0/v1-cae/sc/mda-kj0kfvyty9dk9nk0.mp4
-#EXTINF:-1 tvg-name="CCTV 4K超高清" group-title="轮播频道",CCTV 4K超高清
-http://huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221226737/.m3u8
-#EXTINF:-1 tvg-name="CCTV 4K超高清" group-title="轮播频道",CCTV 4K超高清
-http://huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221226766/.m3u8
-#EXTINF:-1 tvg-name="CCTV-1 综合（高清）" group-title="轮播频道",CCTV-1 综合（高清）
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225777/10000100000000060000000000240944_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-10科教频道" group-title="轮播频道",CCTV-10科教频道
-http://106.53.99.30/tv/gdcucc.php?id=9
-#EXTINF:-1 tvg-name="CCTV-10科教频道" group-title="轮播频道",CCTV-10科教频道
-http://106.53.99.30/tv/gdcucc.php?id=48
-#EXTINF:-1 tvg-name="CCTV-11戏曲频道" group-title="轮播频道",CCTV-11戏曲频道
-http://106.53.99.30/tv/gdcucc.php?id=49
-#EXTINF:-1 tvg-name="CCTV-12社会与法频道" group-title="轮播频道",CCTV-12社会与法频道
-http://106.53.99.30/tv/gdcucc.php?id=10
-#EXTINF:-1 tvg-name="CCTV-12社会与法频道" group-title="轮播频道",CCTV-12社会与法频道
-http://106.53.99.30/tv/gdcucc.php?id=50
-#EXTINF:-1 tvg-name="CCTV-13新闻频道" group-title="轮播频道",CCTV-13新闻频道
-http://106.53.99.30/tv/gdcucc.php?id=51
-#EXTINF:-1 tvg-name="CCTV-14少儿频道" group-title="轮播频道",CCTV-14少儿频道
-http://106.53.99.30/tv/gdcucc.php?id=11
-#EXTINF:-1 tvg-name="CCTV-14少儿频道" group-title="轮播频道",CCTV-14少儿频道
-http://106.53.99.30/tv/gdcucc.php?id=52
-#EXTINF:-1 tvg-name="CCTV-15音乐频道" group-title="轮播频道",CCTV-15音乐频道
-http://106.53.99.30/tv/gdcucc.php?id=53
-#EXTINF:-1 tvg-name="CCTV-1综合频道" group-title="轮播频道",CCTV-1综合频道
-http://106.53.99.30/tv/gdcucc.php?id=4
-#EXTINF:-1 tvg-name="CCTV-1综合频道" group-title="轮播频道",CCTV-1综合频道
-http://106.53.99.30/tv/gdcucc.php?id=40
-#EXTINF:-1 tvg-name="CCTV-2财经频道" group-title="轮播频道",CCTV-2财经频道
-http://106.53.99.30/tv/gdcucc.php?id=5
-#EXTINF:-1 tvg-name="CCTV-2财经频道" group-title="轮播频道",CCTV-2财经频道
-http://106.53.99.30/tv/gdcucc.php?id=41
-#EXTINF:-1 tvg-name="CCTV-3 综艺（高清）" group-title="轮播频道",CCTV-3 综艺（高清）
-http://39.135.16.142:6060/PLTV/88888888/224/3221226008/372609400.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-4 中文国际（高清）" group-title="轮播频道",CCTV-4 中文国际（高清）
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225779/10000100000000060000000000240942_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-4K" group-title="轮播频道",CCTV-4K
-http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226491/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-4K" group-title="轮播频道",CCTV-4K
-http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226716/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-4中文国际频道" group-title="轮播频道",CCTV-4中文国际频道
-http://106.53.99.30/tv/gdcucc.php?id=43
-#EXTINF:-1 tvg-name="CCTV-5 体育（高清）" group-title="轮播频道",CCTV-5 体育（高清）
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226024/372609396.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-5+体育赛事频道" group-title="轮播频道",CCTV-5+体育赛事频道
-http://106.53.99.30/tv/gdcucc.php?id=6
-#EXTINF:-1 tvg-name="CCTV-6 电影（高清）" group-title="轮播频道",CCTV-6 电影（高清）
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226011/372609392.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-6电影" group-title="轮播频道",CCTV-6电影
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227221/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-6电影" group-title="轮播频道",CCTV-6电影
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227341/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-6电影" group-title="轮播频道",CCTV-6电影
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226199/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-7国防军事频道" group-title="轮播频道",CCTV-7国防军事频道
-http://106.53.99.30/tv/gdcucc.php?id=7
-#EXTINF:-1 tvg-name="CCTV-7国防军事频道" group-title="轮播频道",CCTV-7国防军事频道
-http://106.53.99.30/tv/gdcucc.php?id=45
-#EXTINF:-1 tvg-name="CCTV-8 电视剧（高清）" group-title="轮播频道",CCTV-8 电视剧（高清）
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226005/372609500.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-8电视剧" group-title="轮播频道",CCTV-8电视剧
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227325/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-8电视剧" group-title="轮播频道",CCTV-8电视剧
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227466/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-8电视剧" group-title="轮播频道",CCTV-8电视剧
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226197/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-9纪录频道" group-title="轮播频道",CCTV-9纪录频道
-http://106.53.99.30/tv/gdcucc.php?id=8
-#EXTINF:-1 tvg-name="CCTV-9纪录频道" group-title="轮播频道",CCTV-9纪录频道
-http://106.53.99.30/tv/gdcucc.php?id=47
-#EXTINF:-1 tvg-name="CCTV-怀旧剧场" group-title="轮播频道",CCTV-怀旧剧场
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227499/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-怀旧剧场" group-title="轮播频道",CCTV-怀旧剧场
-http://120.76.248.139/live/bfgd/4200000224.m3u8
-#EXTINF:-1 tvg-name="CCTV-怀旧剧场_8M" group-title="轮播频道",CCTV-怀旧剧场_8M
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221226097/385114681.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-第一剧场" group-title="轮播频道",CCTV-第一剧场
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227444/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-第一剧场" group-title="轮播频道",CCTV-第一剧场
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225702/10000100000000060000000000146061_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-风云剧场" group-title="轮播频道",CCTV-风云剧场
-http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227447/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-风云剧场" group-title="轮播频道",CCTV-风云剧场
-http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225700/10000100000000060000000000146058_0.smil/index.m3u8
-#EXTINF:-1 tvg-name="CCTV10高清" group-title="轮播频道",CCTV10高清
-https://shyd.695847.xyz/cms001/ch00000090990000001238/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV11高清" group-title="轮播频道",CCTV11高清
-https://shyd.695847.xyz/cms001/ch00000090990000001309/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV12高清" group-title="轮播频道",CCTV12高清
-https://shyd.695847.xyz/cms001/ch00000090990000001239/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV13高清" group-title="轮播频道",CCTV13高清
-https://shyd.695847.xyz/cms001/ch00000090990000001328/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV14高清" group-title="轮播频道",CCTV14高清
-https://shyd.695847.xyz/cms001/ch00000090990000001240/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV15高清" group-title="轮播频道",CCTV15高清
-https://shyd.695847.xyz/cms001/ch00000090990000001338/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV16 4K超高清" group-title="轮播频道",CCTV16 4K超高清
-https://shyd.695847.xyz/cms001/ch00000090990000001258/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV16高清" group-title="轮播频道",CCTV16高清
-https://shyd.695847.xyz/cms001/ch00000090990000001248/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV17高清" group-title="轮播频道",CCTV17高清
-https://shyd.695847.xyz/cms001/ch00000090990000001241/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV1高清" group-title="轮播频道",CCTV1高清
-https://shyd.695847.xyz/cms001/ch00000090990000001022/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV1高清" group-title="轮播频道",CCTV1高清
-https://shyd.695847.xyz/cms001/ch00000090990000001388/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV1高清" group-title="轮播频道",CCTV1高清
-https://shyd.695847.xyz/cms001/ch00000090990000001520/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV2高清" group-title="轮播频道",CCTV2高清
-https://shyd.695847.xyz/cms001/ch00000090990000001220/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV3高清" group-title="轮播频道",CCTV3高清
-https://shyd.695847.xyz/cms001/ch00000090990000001186/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV4K" group-title="轮播频道",CCTV4K
-http://111.48.34.138/000000001000PLTV/88888888/224/3221230518/1.m3u8
-#EXTINF:-1 tvg-name="CCTV4K" group-title="轮播频道",CCTV4K
-http://111.48.34.138/000000001000PLTV/88888888/224/3221230577/1.m3u8
-#EXTINF:-1 tvg-name="CCTV4K" group-title="轮播频道",CCTV4K
-http://111.48.34.138/000000001000PLTV/88888888/224/3221230571/1.m3u8
-#EXTINF:-1 tvg-name="CCTV4K" group-title="轮播频道",CCTV4K
-http://39.136.1.113:6610/170000001115/UmaiCHAN6604ddd5cf779/1.m3u8?m3u8_level=2
-#EXTINF:-1 tvg-name="CCTV4K" group-title="轮播频道",CCTV4K
-http://192.168.6.1:7088/rtp://238.255.2.139:5999
-#EXTINF:-1 tvg-name="CCTV4K" group-title="轮播频道",CCTV4K
-http://192.168.6.1:7088/rtp://238.255.3.105:5999
-#EXTINF:-1 tvg-name="CCTV4K 17M2160HDR" group-title="轮播频道",CCTV4K 17M2160HDR
-http://ucdn.sd.chinamobile.com:8089/00/SNM/CHANNEL00000382/index.m3u8
-#EXTINF:-1 tvg-name="CCTV4K超高清" group-title="轮播频道",CCTV4K超高清
-https://shyd.695847.xyz/cms001/ch00000090990000001451/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV4高清" group-title="轮播频道",CCTV4高清
-https://shyd.695847.xyz/cms001/ch00000090990000001221/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV5高清" group-title="轮播频道",CCTV5高清
-https://shyd.695847.xyz/cms001/ch00000090990000001187/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV6 电影" group-title="轮播频道",CCTV6 电影
-http://111.221.137.155:44330/tsfile/live/0006_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV6-电影" group-title="轮播频道",CCTV6-电影
-http://36.36.200.196:44330/tsfile/live/0007_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV6-电影" group-title="轮播频道",CCTV6-电影
-http://111.43.126.240:9003/hls/19/index.m3u8
-#EXTINF:-1 tvg-name="CCTV6电影" group-title="轮播频道",CCTV6电影
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226699/1.m3u8
-#EXTINF:-1 tvg-name="CCTV6高清" group-title="轮播频道",CCTV6高清
-https://shyd.695847.xyz/cms001/ch00000090990000001188/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV7高清" group-title="轮播频道",CCTV7高清
-https://shyd.695847.xyz/cms001/ch00000090990000001236/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV8 电视剧" group-title="轮播频道",CCTV8 电视剧
-http://111.221.137.155:44330/tsfile/live/0008_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="CCTV8-电视剧" group-title="轮播频道",CCTV8-电视剧
-http://36.36.200.196:44330/tsfile/live/0009_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV8-电视剧" group-title="轮播频道",CCTV8-电视剧
-http://111.43.126.240:9003/hls/21/index.m3u8
-#EXTINF:-1 tvg-name="CCTV8电视剧" group-title="轮播频道",CCTV8电视剧
-http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226715/1.m3u8
-#EXTINF:-1 tvg-name="CCTV8高清" group-title="轮播频道",CCTV8高清
-https://shyd.695847.xyz/cms001/ch00000090990000001189/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV9高清" group-title="轮播频道",CCTV9高清
-https://shyd.695847.xyz/cms001/ch00000090990000001237/index.m3u8?IASHttpSessionId=RR4967720251014100028031761&ispcode=12
-#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="轮播频道",CCTV怀旧剧场
-http://huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221226710/.m3u8
-#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="轮播频道",CCTV怀旧剧场
-http://39.136.1.113:6610/170000001115/UmaiCHAN6380783f9a29a/1.m3u8?m3u8_level=2
-#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="轮播频道",CCTV怀旧剧场
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225765/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="轮播频道",CCTV怀旧剧场
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226097/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="轮播频道",CCTV怀旧剧场
-http://192.168.6.1:7088/rtp://238.255.2.33:5999
-#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="轮播频道",CCTV第一剧场
-http://huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221226736/.m3u8
-#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="轮播频道",CCTV第一剧场
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225702/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="轮播频道",CCTV第一剧场
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226124/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="轮播频道",CCTV第一剧场
-http://192.168.6.1:7088/rtp://238.255.2.25:5999
-#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="轮播频道",CCTV风云剧场
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221225700/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="轮播频道",CCTV风云剧场
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226107/1/index.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="轮播频道",CCTV风云剧场
-http://192.168.6.1:7088/rtp://238.255.2.28:5999
-#EXTINF:-1 tvg-name="CCTV风云剧场HEVC" group-title="轮播频道",CCTV风云剧场HEVC
-http://cdnrrs.gz.chinamobile.com/PLTV/88888888/224/3221226308/1/index.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-name="CETV-1（高清）" group-title="轮播频道",CETV-1（高清）
 http://cdnzxrrs.gz.chinamobile.com:6060/PLTV/88888888/224/3221225723/10000100000000060000000000146065_0.smil/index.m3u8
 #EXTINF:-1 tvg-name="CETV1高清" group-title="轮播频道",CETV1高清
@@ -8942,6 +9096,8 @@ http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226755/index.m3u8
 #EXTINF:-1 tvg-name="辽宁北方" group-title="辽宁",辽宁北方
 http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227327/index.m3u8
 #EXTINF:-1 tvg-name="辽宁卫视" group-title="辽宁",辽宁卫视
+http://60.16.0.216:5757/hls/32/index.m3u8
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="辽宁",辽宁卫视
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=lnws
 #EXTINF:-1 tvg-name="辽宁卫视" group-title="辽宁",辽宁卫视
 http://36.36.200.196:44330/tsfile/live/0121_1.m3u8?key=txiptv&playlive=0&authid=0
@@ -9035,6 +9191,8 @@ http://120.192.226.35:8009/hls/83/index.m3u8
 http://124.116.183.146:9901/tsfile/live/1000_1.m3u8
 #EXTINF:-1 tvg-name="陕西二套" group-title="陕西",陕西二套
 http://124.116.183.146:9901/tsfile/live/1001_1.m3u8
+#EXTINF:-1 tvg-name="陕西卫视" group-title="陕西",陕西卫视
+http://112.27.235.94:8000/hls/43/index.m3u8
 #EXTINF:-1 tvg-name="陕西卫视" group-title="陕西",陕西卫视
 http://m.061899.xyz/mg/sxws
 #EXTINF:-1 tvg-name="陕西卫视" group-title="陕西",陕西卫视
@@ -9159,6 +9317,8 @@ http://39.134.67.6:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226242/ind
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226492/index.m3u8
 #EXTINF:-1 tvg-name="黑龙江农业" group-title="黑龙江",黑龙江农业
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226242/index.m3u8
+#EXTINF:-1 tvg-name="黑龙江卫视" group-title="黑龙江",黑龙江卫视
+http://112.27.235.94:8000/hls/48/index.m3u8
 #EXTINF:-1 tvg-name="黑龙江卫视" group-title="黑龙江",黑龙江卫视
 http://36.36.200.196:44330/tsfile/live/1001_1.m3u8?key=txiptv&playlive=0&authid=0
 #EXTINF:-1 tvg-name="黑龙江卫视" group-title="黑龙江",黑龙江卫视
