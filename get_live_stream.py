@@ -1,6 +1,6 @@
 # File: get_live_stream.py
 # Description: 自动抓取直播源，智能分类，生成 m3u8 播放列表
-# Author: Assistant (Based on your requirements)
+# Author: Assistant
 # Date: 2025-11-03
 
 import requests
@@ -76,17 +76,14 @@ CATEGORY_MAP = {
 
     # --- 轮播频道关键词 + 影视剧名 ---
     '轮播频道': [
-        # 原有关键词
         '电视剧', '电影', '影院', '影视频道', '影视', '精选', '轮播', '回看', '重温',
         '经典', '怀旧', '剧场', '大片', '热播', '点播', '虎牙', '斗鱼', '直播+',
         'LIVE', 'live', '4K', '8K', '超清', '高清', '标清', '频道', '测试',
-
-        # 新增：常见影视剧名（自动识别）
+        '变形金刚', '复仇者联盟', '速度与激情', '碟中谍', '哈利波特',
+        '星球大战', '侏罗纪公园', '泰坦尼克号', '阿凡达', '盗梦空间',
         '西游记', '鹿鼎记', '寻秦记', '大唐双龙传', '天龙八部',
         '射雕英雄传', '神雕侠侣', '倚天屠龙记', '笑傲江湖', '雪山飞狐',
-        '甄嬛传', '琅琊榜', '庆余年', '狂飙', '人民的名义',
-        '变形金刚', '复仇者联盟', '速度与激情', '碟中谍', '哈利波特',
-        '星球大战', '侏罗纪公园', '泰坦尼克号', '阿凡达', '盗梦空间'
+        '甄嬛传', '琅琊榜', '庆余年', '狂飙', '人民的名义'
     ],
 
     # --- 通用分类 ---
@@ -182,25 +179,26 @@ def categorize_channel(name, source='other'):
     if source == 'whitelist':
         return '本地节目'
 
-    # 2. 匹配省份
+    # 2. 强制规则：所有含 "cctv" 或 "中央" 的频道 → 归为“央视”
+    if 'cctv' in name_lower or '中央' in name_lower:
+        return '央视'
+
+    # 3. 匹配省份
     for province, keywords in CATEGORY_MAP.items():
         if len(keywords) > 5:  # 只匹配省份类（长度大于5）
             for kw in keywords:
                 if kw.lower() in name_lower:
                     return province
 
-    # 3. 匹配轮播频道（但排除央视）
-    if 'cctv' in name_lower or '中央' in name_lower:
-        pass  # 跳过轮播判断
-    else:
-        for kw in CATEGORY_MAP['轮播频道']:
-            if kw.lower() in name_lower:
-                if any(ex.lower() in name_lower for ex in EXCLUDE_IF_HAS):
-                    continue
-                return '轮播频道'
+    # 4. 匹配轮播频道（排除已被排除的关键词）
+    for kw in CATEGORY_MAP['轮播频道']:
+        if kw.lower() in name_lower:
+            if any(ex.lower() in name_lower for ex in EXCLUDE_IF_HAS):
+                continue
+            return '轮播频道'
 
-    # 4. 匹配央视、卫视、地方
-    for category in ['央视', '卫视', '地方']:
+    # 5. 匹配卫视、地方
+    for category in ['卫视', '地方']:
         for kw in CATEGORY_MAP[category]:
             if kw.lower() in name_lower:
                 return category
@@ -232,7 +230,7 @@ def load_tv_m3u():
                         print(f"🌍 Skipped foreign (tv.m3u): {current_name}")
                     else:
                         category = categorize_channel(current_name)
-                        channels.append((name, line, category))
+                        channels.append((current_name, line, category))
                 current_name = None
         print(f"✅ Loaded {len(channels)} from tv.m3u")
         return channels
