@@ -1,4 +1,7 @@
-# File: get_live_stream.py (Fixed & Enhanced)
+# File: get_live_stream.py
+# Description: 自动抓取直播源，智能分类，生成 m3u8 播放列表
+# Author: Assistant (Based on your requirements)
+# Date: 2025-11-03
 
 import requests
 import os
@@ -94,15 +97,29 @@ CATEGORY_MAP = {
     '地方': ['都市', '新闻', '综合', '公共', '生活', '娱乐',
              '少儿', '卡通', '体育', '财经', '纪实', '教育', '民生', '交通', '文艺', '音乐',
              '戏曲', '高尔夫', '网球']
-]
+}
 
 # 排除关键词：避免“综合”被误判为“轮播”
 EXCLUDE_IF_HAS = ['综合', '新闻', '生活', '少儿', '公共', '交通', '文艺', '音乐', '戏曲', '体育', '财经', '教育', '民生', '都市']
 
 
 # ---------------- 国外过滤 ----------------
-FOREIGN_KEYWORDS = { ... }  # 不变
-ALLOWED_FOREIGN = {...}     # 不变
+FOREIGN_KEYWORDS = {
+    'cnn', 'bbc', 'fox', 'espn', 'disney', 'hbo', 'nat geo', 'national geographic',
+    'animal planet', 'mtv', 'paramount', 'pluto tv', 'sky sports', 'eurosport',
+    'al jazeera', 'france 24', 'rt', 'nhk', 'kbs', 'tvb', 'abema', 'tokyo',
+    'discovery', 'history', 'lifetime', 'syfy', 'tnt', 'usa network',
+    'nickelodeon', 'cartoon network', 'boomerang', 'babyfirst', 'first channel',
+    'russia', 'germany', 'italy', 'spain', 'france', 'uk', 'united kingdom',
+    'canada', 'australia', 'new zealand', 'india', 'pakistan', 'japan', 'south korea'
+}
+
+ALLOWED_FOREIGN = {
+    '凤凰', '凤凰卫视', '凤凰中文', '凤凰资讯', 'ATV', '亚洲电视', '星空', 'Channel [V]',
+    '华娱', 'CCTV大富', 'CCTV-4', 'CCTV4', '中国中央电视台', '国际台', 'CGTN', 'CCTV西班牙语', 'CCTV法语',
+    '香港', '澳门', '台湾', 'TVB', '翡翠台', '明珠台', 'J2', '无线', '亚视', 'ATV',
+    '中天', '东森', '三立', '民视', '公视', '台视', '中视'
+}
 
 
 # ================== Utility Functions ==================
@@ -167,7 +184,7 @@ def categorize_channel(name, source='other'):
 
     # 2. 匹配省份
     for province, keywords in CATEGORY_MAP.items():
-        if len(keywords) > 5:
+        if len(keywords) > 5:  # 只匹配省份类（长度大于5）
             for kw in keywords:
                 if kw.lower() in name_lower:
                     return province
@@ -215,7 +232,7 @@ def load_tv_m3u():
                         print(f"🌍 Skipped foreign (tv.m3u): {current_name}")
                     else:
                         category = categorize_channel(current_name)
-                        channels.append((current_name, line, category))
+                        channels.append((name, line, category))
                 current_name = None
         print(f"✅ Loaded {len(channels)} from tv.m3u")
         return channels
@@ -319,7 +336,7 @@ def generate_m3u8_content(channels):
         "x-tvg-url=\"https://epg.51zmt.top/xmltv.xml\""
     ]
 
-    # 排序：本地节目 → 其他
+    # 排序：本地节目 → 其他（按分类名排序）
     sorted_channels = sorted(channels, key=lambda x: (0 if x[2] == '本地节目' else 1, x[2], x[0]))
 
     for name, url, group in sorted_channels:
