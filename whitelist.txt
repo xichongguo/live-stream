@@ -6,7 +6,7 @@
 📺本地频道,#genre#
 西充综合,https://tvlist.top/ncpd.php
 西充综合,https://xichongguo.github.io/live-stream/live/current.m3u8
-西充综合,http://tx-adaptive.hlspull.yximgs.com/gifshow/kwai_actL_ol_act_14036776173_strL.m3u8?txSecret=75373d6b98b9aa4cf532f12b3c9b1724&txTime=69032c0f&stat=cGweUVqvOx1FvIm99Uh%2FwA%3D%3D
+
 
 南充综合,http://ncrmpull.cnncw.cn/live/8f7b908601931000dd6ee79a00000000/playlist.m3u8?wsSecret=a4f69b6d2e56c7b4018fa29d65112d99&wsTime=1875618327
 南充科教生活,http://ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba700000000/playlist.m3u8?wsSecret=42f62aa716a3a86719587b678ac75386&wsTime=1875618327
