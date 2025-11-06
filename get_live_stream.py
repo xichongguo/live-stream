@@ -1,7 +1,7 @@
 # File: get_live_stream.py
-# Description: 完全按你指定的分类与排序规则生成直播源
+# Description: 完全按你指定的分类与排序规则生成直播源，并标准化 CCTV 频道名
 # Author: Assistant
-# Date: 2025-11-03
+# Date: 2025-11-06
 
 import requests
 import os
@@ -9,7 +9,7 @@ from urllib.parse import unquote, urlparse, parse_qs, urlunparse
 from datetime import datetime
 from collections import Counter, defaultdict
 import time
-
+import re
 
 # ================== Configuration ==================
 API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
@@ -112,6 +112,71 @@ ALLOWED_FOREIGN = {
 }
 
 
+# ================== 新增：CCTV 标准化 ==================
+def normalize_cctv_name(name):
+    """
+    将各种形式的 CCTV 名称标准化为 'CCTV-N'（N 无前导零）
+    支持英文变体和中文别名
+    """
+    name = name.strip()
+    if not name:
+        return name
+
+    # 中文别名映射
+    CHINESE_ALIAS = {
+        "中央一套": "CCTV-1",
+        "综合频道": "CCTV-1",
+        "中央二套": "CCTV-2",
+        "财经频道": "CCTV-2",
+        "中央三套": "CCTV-3",
+        "综艺频道": "CCTV-3",
+        "中央四套": "CCTV-4",
+        "中文国际频道": "CCTV-4",
+        "中央五套": "CCTV-5",
+        "体育频道": "CCTV-5",
+        "中央六套": "CCTV-6",
+        "电影频道": "CCTV-6",
+        "中央七套": "CCTV-7",
+        "国防军事频道": "CCTV-7",
+        "中央八套": "CCTV-8",
+        "电视剧频道": "CCTV-8",
+        "中央九套": "CCTV-9",
+        "纪录频道": "CCTV-9",
+        "中央十套": "CCTV-10",
+        "科教频道": "CCTV-10",
+        "中央十一套": "CCTV-11",
+        "戏曲频道": "CCTV-11",
+        "中央十二套": "CCTV-12",
+        "社会与法频道": "CCTV-12",
+        "中央十三套": "CCTV-13",
+        "新闻频道": "CCTV-13",
+        "中央十四套": "CCTV-14",
+        "少儿频道": "CCTV-14",
+        "中央十五套": "CCTV-15",
+        "音乐频道": "CCTV-15",
+        "中央十七套": "CCTV-17",
+        "农业农村频道": "CCTV-17",
+    }
+
+    # 1. 精确匹配中文别名
+    if name in CHINESE_ALIAS:
+        return CHINESE_ALIAS[name]
+
+    # 2. 模糊匹配关键词
+    for keyword, std in CHINESE_ALIAS.items():
+        if keyword in name:
+            return std
+
+    # 3. 匹配英文格式
+    name_upper = name.upper()
+    match = re.search(r'CCTV\D*(\d+)', name_upper)
+    if match:
+        number = str(int(match.group(1)))
+        return f"CCTV-{number}"
+
+    return name  # 无法识别则原样返回
+
+
 # ================== Utility Functions ==================
 def is_foreign_channel(name):
     name_lower = name.lower()
@@ -166,37 +231,39 @@ def categorize_channel(name):
 
     # 央视
     if any(kw in name_lower for kw in ['cctv', '中央']):
-        return '央视'
+        # 标准化名称
+        std_name = normalize_cctv_name(name)
+        return '央视', std_name
 
     # 卫视
     for kw in CATEGORY_MAP['卫视']:
         if kw.lower() in name_lower:
-            return '卫视'
+            return '卫视', name
 
     # 电影频道
     for kw in CATEGORY_MAP['电影频道']:
         if kw.lower() in name_lower:
             if any(ex.lower() in name_lower for ex in EXCLUDE_IF_HAS):
                 continue
-            return '电影频道'
+            return '电影频道', name
 
     # 港澳台
     for kw in CATEGORY_MAP['港澳台']:
         if kw in name:
-            return '港澳台'
+            return '港澳台', name
 
     # 经典剧场
     for kw in CATEGORY_MAP['经典剧场']:
         if kw in name:
-            return '经典剧场'
+            return '经典剧场', name
 
     # 省份
     for prov, cities in PROVINCE_KEYWORDS.items():
         for city in cities:
             if city in name:
-                return prov
+                return prov, name
 
-    return "其他"
+    return "其他", name
 
 
 def check_url_valid(url, timeout=CHECK_TIMEOUT):
@@ -265,8 +332,8 @@ def load_tv_m3u():
                     if is_foreign_channel(current_name):
                         print(f"🌍 Skipped foreign (tv.m3u): {current_name}")
                     else:
-                        category = categorize_channel(current_name)
-                        channels.append((current_name, line, category))
+                        category, display_name = categorize_channel(current_name)
+                        channels.append((display_name, line, category))
                 current_name = None
         print(f"✅ Loaded {len(channels)} from tv.m3u")
         return channels
@@ -295,8 +362,8 @@ def load_guovin_iptv():
                 if is_foreign_channel(name):
                     print(f"🌍 Skipped foreign (Guovin): {name}")
                     continue
-                category = categorize_channel(name)
-                channels.append((name, url, category))
+                category, display_name = categorize_channel(name)
+                channels.append((display_name, url, category))
             except Exception as e:
                 print(f"⚠️ Parse failed: {line} | {e}")
         print(f"✅ Loaded {len(channels)} from Guovin")
@@ -349,33 +416,39 @@ def check_cctv_validity(channels):
 
 def sort_channels(channels):
     """自定义排序"""
-    # 固定顺序
     ORDER = [
         '本地节目', '央视', '卫视',
         '四川', '广东', '湖南', '湖北', '江苏', '浙江', '山东', '河南', '河北', '福建', '广西', '云南', '江西', '辽宁', '山西', '陕西', '安徽', '黑龙江', '内蒙古', '吉林', '贵州', '甘肃', '海南', '青海', '宁夏', '新疆', '西藏',
         '电影频道', '港澳台', '经典剧场'
     ]
 
-    # 本地节目特殊排序
     LOCAL_PRIORITY = {
         "西充综合": 0,
         "南充综合": 1,
         "南充科教生活": 2
     }
 
+    def get_cctv_number(name):
+        match = re.search(r'CCTV-(\d+)', name)
+        return int(match.group(1)) if match else float('inf')
+
     def sort_key(item):
         name, url, group = item
 
-        # 本地节目内部排序
         if group == '本地节目':
             if name in LOCAL_PRIORITY:
                 return (ORDER.index(group), LOCAL_PRIORITY[name], name)
             else:
                 return (ORDER.index(group), 999, name)
 
-        # 其他组
-        group_order = ORDER.index(group) if group in ORDER else 999
-        return (group_order, name)
+        elif group == '央视':
+            # 央视内部按数字排序
+            num = get_cctv_number(name)
+            return (ORDER.index(group), num, name)
+
+        else:
+            group_order = ORDER.index(group) if group in ORDER else 999
+            return (group_order, name)
 
     return sorted(channels, key=sort_key)
 
