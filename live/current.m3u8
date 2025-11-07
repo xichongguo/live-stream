@@ -1,5 +1,5 @@
 #EXTM3U
-# Generated at: 2025-11-07 10:36
+# Generated at: 2025-11-07 14:17
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://tvlist.top/ncpd.php
@@ -13,6 +13,10 @@ http://ncrmpull.cnncw.cn/live/8f7b908601931000dd6ee79a00000000/playlist.m3u8?wsS
 http://ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba700000000/playlist.m3u8?wsSecret=42f62aa716a3a86719587b678ac75386&wsTime=1875618327
 #EXTINF:-1 tvg-name="西充县华光乡黄家庙村桅杆湾志" group-title="本地节目",西充县华光乡黄家庙村桅杆湾志
 https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
+#EXTINF:-1 tvg-name="西充王河湾2017年会A" group-title="本地节目",西充王河湾2017年会A
+https://xpc-bj.s3-cn-bj.ufileos.com/2efbd6b6-f17a-48c4-b578-9131bf7ebcf0/4898e564-a236-4a3b-a124-ad11f9ec903c.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=TOKEN_e1897405-d3af-493b-b5a6-2bed66aae03d%2F20251107%2Fcn-bj%2Fs3%2Faws4_request&X-Amz-Date=20251107T140151Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&response-content-disposition=Attachment%3B+filename*%3Dutf-8%27%273Yn57pWgedaQdDAa_720p.mp4&X-Amz-Signature=2626126037bcf47e3a50e016d85a9fef329737fef4d6fdaa9b33bb4175d34448
+#EXTINF:-1 tvg-name="西充王河湾2017年会B" group-title="本地节目",西充王河湾2017年会B
+https://xpc-bj.s3-cn-bj.ufileos.com/c6f3467c-9d96-47de-b32d-dd4d5dfa68d3/4a942d37-25bf-4b66-aaea-7a47d03cca6a.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=TOKEN_e1897405-d3af-493b-b5a6-2bed66aae03d%2F20251107%2Fcn-bj%2Fs3%2Faws4_request&X-Amz-Date=20251107T140522Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&response-content-disposition=Attachment%3B+filename*%3Dutf-8%27%27d0Nq7M3kXEr4O2Vj_720p.mp4&X-Amz-Signature=fdc3ab632ccd7c8b2c46ee5ba4ebc44266d4f93ebf0b6824d66751b644e413af
 #EXTINF:-1 tvg-name="西充莲花湖夜景" group-title="本地节目",西充莲花湖夜景
 https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
 #EXTINF:-1 tvg-name="走进四川西充" group-title="本地节目",走进四川西充
@@ -31,8 +35,6 @@ http://183.215.134.239:19901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authi
 https://smart.pendy.dpdns.org/Smart.php?id=cctv2
 #EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
 http://112.27.235.94:8000/hls/3/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
-http://183.215.134.239:19901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
 http://61.156.228.12:8154/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
@@ -78,6 +80,8 @@ http://112.27.235.94:8000/hls/10/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
 http://60.16.0.216:5757/hls/10/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
+https://www.freetv.top/migu/673168140.m3u8?migutoken=749c49cdc31bb395e0349adc81010adc8707f80e51e9d3491ad67bfa71388ad768f7b52c8064338a7ef45eb7ddb192fb4937b21681c82499a0c16653ad9a9bec98ff5ce6ab183e4029bbdf269e
+#EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
 https://smart.pendy.dpdns.org/Smart.php?id=cctv9hd
 #EXTINF:-1 tvg-name="CCTV-10" group-title="央视",CCTV-10
 http://112.27.235.94:8000/hls/11/index.m3u8
@@ -105,8 +109,6 @@ http://183.215.134.239:19901/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authi
 https://event.pull.hebtv.com/jishi/cp1.m3u8
 #EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
 http://60.16.0.216:5757/hls/14/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
-http://ali-m-l.cztv.com/channels/lantian/channel21/1080p.m3u8
 #EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
 http://jwplay.hebyun.com.cn/live/cctv13/1500k/tzwj_video.m3u8
 #EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
