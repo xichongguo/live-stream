@@ -1,7 +1,7 @@
 # File: get_live_stream.py
-# Description: 完全按你指定的分类与排序规则生成直播源，并标准化 CCTV 频道名
+# Description: 生成直播源 M3U8，支持多接口 + 本地 TXT + CCTV 标准化 + 央视有效性检测
 # Author: Assistant
-# Date: 2025-11-06
+# Date: 2025-11-16
 
 import requests
 import os
@@ -41,6 +41,9 @@ BC_PARAMS = {
     'mima': 'bingchawusifengxian',
     'json': 'true'
 }
+
+# --- 本地 TXT 源 ---
+LOCAL_TXT_PATH = "local.txt"  # 放在脚本同目录下
 
 WHITELIST_TIMEOUT = 15
 CHECK_TIMEOUT = 5
@@ -416,6 +419,41 @@ def load_bc_api():
         return []
 
 
+def load_local_txt():
+    """加载本地 local.txt 文件中的直播源"""
+    if not os.path.exists(LOCAL_TXT_PATH):
+        print(f"ℹ️  Local TXT file not found: {LOCAL_TXT_PATH}")
+        return []
+
+    print(f"👉 Loading local TXT: {LOCAL_TXT_PATH}")
+    channels = []
+    try:
+        with open(LOCAL_TXT_PATH, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+    except Exception as e:
+        print(f"❌ Failed to read {LOCAL_TXT_PATH}: {e}")
+        return []
+
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = [p.strip() for p in line.split(",", 1)]
+        if len(parts) < 2:
+            continue
+        name, url = parts[0], parts[1]
+        if not name or not url or not is_valid_url(url):
+            continue
+        if is_foreign_channel(name):
+            print(f"🌍 Skipped foreign (local.txt): {name}")
+            continue
+        category, display_name = categorize_channel(name)
+        channels.append((display_name, url, category))
+
+    print(f"✅ Loaded {len(channels)} from local.txt")
+    return channels
+
+
 def get_dynamic_stream():
     print("👉 Fetching dynamic stream from API...")
     try:
@@ -539,7 +577,8 @@ def main():
     # === 3. 其他源 ===
     all_channels.extend(load_tv_m3u())
     all_channels.extend(load_guovin_iptv())
-    all_channels.extend(load_bc_api())  # <-- 新增接口
+    all_channels.extend(load_bc_api())
+    all_channels.extend(load_local_txt())  # <-- 新增：本地 TXT
 
     print(f"📥 Total raw streams: {len(all_channels)}")
 
@@ -549,7 +588,7 @@ def main():
     # 过滤国外
     filtered_channels = [item for item in unique_channels if not is_foreign_channel(item[0])]
 
-    # 检测央视有效性
+    # 检测央视有效性（包括 local.txt 中的央视）
     final_channels = check_cctv_validity(filtered_channels)
 
     print(f"✅ Final playlist size: {len(final_channels)} channels")
