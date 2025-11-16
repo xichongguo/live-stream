@@ -1,5 +1,5 @@
 # File: get_live_stream.py
-# Description: 生成直播源 M3U8，支持多接口 + 本地 TXT + CCTV 标准化 + 央视有效性检测
+# Description: 生成直播源 M3U8，支持多接口 + 本地 TXT（高优先级）+ CCTV 标准化 + 央视有效性检测
 # Author: Assistant
 # Date: 2025-11-16
 
@@ -53,6 +53,12 @@ DEFAULT_HEADERS = {
 
 OUTPUT_DIR = "live"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "current.m3u8")
+
+# 来源优先级：数值越小，优先级越高
+PRIORITY_LOCAL_TXT = 0      # 最高
+PRIORITY_WHITELIST = 1
+PRIORITY_DYNAMIC = 2
+PRIORITY_OTHER = 3          # tv.m3u / guovin / bc api 等
 
 
 # ---------------- 省份映射表 ----------------
@@ -225,15 +231,37 @@ def normalize_url(url):
 
 
 def merge_and_deduplicate(channels):
-    seen = set()
-    unique = []
+    """
+    去重规则：
+    - 键 = (标准化名称, 分组)
+    - 保留 priority 最小（优先级最高）的条目
+    """
+    channel_map = {}  # key: (name, group) -> (url, priority)
+
     for item in channels:
-        name, url, group = item
+        if len(item) == 4:
+            name, url, group, priority = item
+        else:
+            # 兼容旧格式（不应发生）
+            name, url, group = item
+            priority = PRIORITY_OTHER
+
         norm_url = normalize_url(url)
-        if norm_url and norm_url not in seen:
-            seen.add(norm_url)
-            unique.append(item)
-    print(f"✅ After dedup: {len(unique)} unique streams")
+        if not norm_url:
+            continue
+
+        key = (name, group)
+        if key not in channel_map:
+            channel_map[key] = (url, priority)
+        else:
+            # 比较优先级，保留更优者
+            existing_priority = channel_map[key][1]
+            if priority < existing_priority:
+                channel_map[key] = (url, priority)
+
+    # 转回列表（三元组，兼容后续）
+    unique = [(name, url, group) for (name, group), (url, _) in channel_map.items()]
+    print(f"✅ After dedup (with priority): {len(unique)} unique streams")
     return unique
 
 
@@ -312,7 +340,7 @@ def load_whitelist():
             if is_foreign_channel(name):
                 print(f"🌍 Skipped foreign (whitelist): {name}")
                 continue
-            channels.append((name, url, "本地节目"))
+            channels.append((name, url, "本地节目", PRIORITY_WHITELIST))
         print(f"✅ Loaded {len(channels)} from whitelist (as '本地节目')")
         return channels
     except Exception as e:
@@ -344,7 +372,7 @@ def load_tv_m3u():
                         print(f"🌍 Skipped foreign (tv.m3u): {current_name}")
                     else:
                         category, display_name = categorize_channel(current_name)
-                        channels.append((display_name, line, category))
+                        channels.append((display_name, line, category, PRIORITY_OTHER))
                 current_name = None
         print(f"✅ Loaded {len(channels)} from tv.m3u")
         return channels
@@ -374,7 +402,7 @@ def load_guovin_iptv():
                     print(f"🌍 Skipped foreign (Guovin): {name}")
                     continue
                 category, display_name = categorize_channel(name)
-                channels.append((display_name, url, category))
+                channels.append((display_name, url, category, PRIORITY_OTHER))
             except Exception as e:
                 print(f"⚠️ Parse failed: {line} | {e}")
         print(f"✅ Loaded {len(channels)} from Guovin")
@@ -410,7 +438,7 @@ def load_bc_api():
                 continue
 
             category, display_name = categorize_channel(name)
-            channels.append((display_name, url, category))
+            channels.append((display_name, url, category, PRIORITY_OTHER))
 
         print(f"✅ Loaded {len(channels)} from BC API")
         return channels
@@ -448,7 +476,7 @@ def load_local_txt():
             print(f"🌍 Skipped foreign (local.txt): {name}")
             continue
         category, display_name = categorize_channel(name)
-        channels.append((display_name, url, category))
+        channels.append((display_name, url, category, PRIORITY_LOCAL_TXT))
 
     print(f"✅ Loaded {len(channels)} from local.txt")
     return channels
@@ -467,7 +495,7 @@ def get_dynamic_stream():
                 print("🌍 Skipped foreign (API)")
                 return None
             print(f"✅ Dynamic stream added: {name}")
-            return (name, url, "本地节目")
+            return (name, url, "本地节目", PRIORITY_DYNAMIC)
         else:
             print("❌ m3u8Url not found in API response")
     except Exception as e:
@@ -578,17 +606,17 @@ def main():
     all_channels.extend(load_tv_m3u())
     all_channels.extend(load_guovin_iptv())
     all_channels.extend(load_bc_api())
-    all_channels.extend(load_local_txt())  # <-- 新增：本地 TXT
+    all_channels.extend(load_local_txt())  # <-- 高优先级
 
     print(f"📥 Total raw streams: {len(all_channels)}")
 
-    # 去重
+    # 去重（带优先级）
     unique_channels = merge_and_deduplicate(all_channels)
 
-    # 过滤国外
+    # 过滤国外（理论上前面已过滤，再保险一次）
     filtered_channels = [item for item in unique_channels if not is_foreign_channel(item[0])]
 
-    # 检测央视有效性（包括 local.txt 中的央视）
+    # 检测央视有效性
     final_channels = check_cctv_validity(filtered_channels)
 
     print(f"✅ Final playlist size: {len(final_channels)} channels")
