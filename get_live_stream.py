@@ -1,5 +1,5 @@
 # File: get_live_stream.py
-# Updated: 2025-11-16 — local.txt merged by name, no validation, priority preserved
+# Final update: whitelist.txt → "本地节目" (top), local.txt → normal category (no validation)
 
 import requests
 import os
@@ -73,8 +73,6 @@ PROVINCE_KEYWORDS = {
     '新疆': ['新疆', '乌鲁木齐', '克拉玛依', '吐鲁番', '哈密', '昌吉', '博尔塔拉', '巴音郭楞', '阿克苏', '克孜勒苏', '喀什', '和田', '伊犁', '塔城', '阿勒泰'],
     '西藏': ['西藏', '拉萨', '日喀则', '昌都', '林芝', '山南', '那曲', '阿里']
 }
-
-CITY_TO_PROVINCE = {city: prov for prov, cities in PROVINCE_KEYWORDS.items() for city in cities}
 
 CATEGORY_MAP = {
     '卫视': ['卫视', '卫星', '东方', '北京卫视', '天津卫视', '河北卫视', '山西卫视', '内蒙古卫视',
@@ -180,8 +178,8 @@ def check_url_valid(url, timeout=CHECK_TIMEOUT):
 
 
 # ================== Load Sources ==================
-def load_whitelist():
-    print(f"👉 Loading whitelist...")
+def load_whitelist_as_local_program():
+    print(f"👉 Loading whitelist.txt as '本地节目' (TOP)...")
     try:
         response = requests.get(REMOTE_WHITELIST_URL, timeout=WHITELIST_TIMEOUT)
         lines = response.text.strip().splitlines()
@@ -194,11 +192,11 @@ def load_whitelist():
             name, url = parts[0], parts[1]
             if not name or not url or not is_valid_url(url): continue
             if is_foreign_channel(name): continue
-            cat, disp = categorize_channel(name)
-            channels.append((disp, url, cat, 1))  # priority=1 (non-local)
+            # ⭐ 强制归类为“本地节目”，priority=0（最高）
+            channels.append((name, url, "本地节目", 0))
         return channels
     except Exception as e:
-        print(f"❌ Load whitelist failed: {e}")
+        print(f"❌ Load whitelist.txt failed: {e}")
         return []
 
 def get_dynamic_stream():
@@ -209,7 +207,7 @@ def get_dynamic_stream():
             name, url = "西充综合", data['data']['m3u8Url']
             if not is_foreign_channel(name):
                 cat, disp = categorize_channel(name)
-                return (disp, url, cat, 1)
+                return (disp, url, cat, 2)
     except:
         pass
     return None
@@ -226,7 +224,7 @@ def load_tv_m3u():
             elif line.startswith("http") and current_name:
                 if is_valid_url(line) and not is_foreign_channel(current_name):
                     cat, disp = categorize_channel(current_name)
-                    channels.append((disp, line, cat, 1))
+                    channels.append((disp, line, cat, 2))
                 current_name = None
         return channels
     except Exception as e:
@@ -244,7 +242,7 @@ def load_guovin_iptv():
             name, url = map(str.strip, line.split(",", 1))
             if is_valid_url(url) and not is_foreign_channel(name):
                 cat, disp = categorize_channel(name)
-                channels.append((disp, url, cat, 1))
+                channels.append((disp, url, cat, 2))
         return channels
     except Exception as e:
         print(f"❌ Load Guovin failed: {e}")
@@ -260,7 +258,7 @@ def load_bc_api():
             url = str(item.get("url", "")).strip()
             if name and url and is_valid_url(url) and not is_foreign_channel(name):
                 cat, disp = categorize_channel(name)
-                channels.append((disp, url, cat, 1))
+                channels.append((disp, url, cat, 2))
         return channels
     except Exception as e:
         print(f"❌ Load BC API failed: {e}")
@@ -282,15 +280,16 @@ def load_local_txt():
             if not name or not url or not is_valid_url(url): continue
             if is_foreign_channel(name): continue
             cat, disp = categorize_channel(name)
-            # ⭐ 关键：priority=0 表示来自 local.txt，且不验证 URL
-            channels.append((disp, url, cat, 0))
+            # ⭐ local.txt: normal category, no validation, priority=1
+            channels.append((disp, url, cat, 1))
     except Exception as e:
         print(f"❌ Read local.txt failed: {e}")
     return channels
 
 
-# ================== Sort (Keep All, local.txt first for same name/group) ==================
-def sort_channels_with_priority(channels):
+# ================== Sort ==================
+def sort_channels_final(channels):
+    # "本地节目" 必须在最前
     ORDER = [
         '央视', '卫视',
         '四川', '广东', '湖南', '湖北', '江苏', '浙江', '山东', '河南', '河北', '福建', '广西', '云南', '江西', '辽宁', '山西', '陕西', '安徽', '黑龙江', '内蒙古', '吉林', '贵州', '甘肃', '海南', '青海', '宁夏', '新疆', '西藏',
@@ -303,39 +302,43 @@ def sort_channels_with_priority(channels):
 
     def sort_key(item):
         name, url, group, priority = item
-        group_order = ORDER.index(group) if group in ORDER else 999
-
-        if group == '央视':
-            return (group_order, priority, get_cctv_number(name), name)
+        if group == "本地节目":
+            return (0, priority, name)  # 所有“本地节目”排最前
         else:
-            return (group_order, priority, name)
+            group_order = ORDER.index(group) if group in ORDER else 999
+            if group == '央视':
+                return (1, group_order, priority, get_cctv_number(name), name)
+            else:
+                return (1, group_order, priority, name)
 
     return sorted(channels, key=sort_key)
 
 
 # ================== Main ==================
 def main():
-    print("🚀 Starting playlist generation (merge local.txt by name, no validation for local)...")
+    print("🚀 Generating playlist: whitelist.txt → 本地节目 (TOP), local.txt → normal category")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     all_channels = []
 
-    # Load all non-local sources (priority=1)
-    all_channels.extend(load_whitelist())
+    # Step 1: Load whitelist.txt → "本地节目", priority=0
+    all_channels.extend(load_whitelist_as_local_program())
+
+    # Step 2: Load other remote sources (priority=2)
     dynamic = get_dynamic_stream()
     if dynamic: all_channels.append(dynamic)
     all_channels.extend(load_tv_m3u())
     all_channels.extend(load_guovin_iptv())
     all_channels.extend(load_bc_api())
 
-    # Filter foreign (again)
+    # Filter foreign
     filtered = [item for item in all_channels if not is_foreign_channel(item[0])]
 
-    # Validate ONLY non-local CCTV URLs
+    # Validate ONLY remote (priority=2) CCTV
     valid_channels = []
     for item in filtered:
         name, url, group, priority = item
-        if group == '央视' and priority == 1:  # only validate non-local CCTV
+        if group == '央视' and priority == 2:
             if check_url_valid(url):
                 valid_channels.append(item)
             else:
@@ -343,12 +346,12 @@ def main():
         else:
             valid_channels.append(item)
 
-    # Load local.txt LAST so it can override via priority (but we keep all)
+    # Step 3: Load local.txt (priority=1, no validation)
     local_channels = load_local_txt()
-    valid_channels.extend(local_channels)  # these have priority=0, no validation
+    valid_channels.extend(local_channels)
 
     # Sort
-    sorted_channels = sort_channels_with_priority(valid_channels)
+    sorted_channels = sort_channels_final(valid_channels)
 
     # Stats
     stats = Counter(item[2] for item in sorted_channels)
@@ -370,7 +373,6 @@ def main():
     except Exception as e:
         print(f"❌ Write error: {e}")
 
-    # For GitHub Pages
     if not os.path.exists('.nojekyll'):
         open('.nojekyll', 'w').close()
 
