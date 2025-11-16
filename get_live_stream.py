@@ -34,6 +34,14 @@ REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream
 TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
 GUOVIN_IPTV_URL = "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.txt"
 
+# --- 新增接口 ---
+BC_API_URL = "https://bc.188766.xyz/"
+BC_PARAMS = {
+    'ip': '',
+    'mima': 'bingchawusifengxian',
+    'json': 'true'
+}
+
 WHITELIST_TIMEOUT = 15
 CHECK_TIMEOUT = 5
 DEFAULT_HEADERS = {
@@ -373,6 +381,41 @@ def load_guovin_iptv():
         return []
 
 
+def load_bc_api():
+    """加载 bc.188766.xyz 接口提供的直播源"""
+    print(f"👉 Loading BC API: {BC_API_URL}")
+    try:
+        response = requests.get(BC_API_URL, params=BC_PARAMS, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
+        response.raise_for_status()
+        data = response.json()
+
+        channels = []
+        # 假设数据在 data 字段下，且是列表
+        stream_list = data.get("data", [])
+        if not isinstance(stream_list, list):
+            stream_list = []
+
+        for item in stream_list:
+            name = str(item.get("name", "")).strip()
+            url = str(item.get("url", "")).strip()
+
+            if not name or not url or not is_valid_url(url):
+                continue
+
+            if is_foreign_channel(name):
+                print(f"🌍 Skipped foreign (BC API): {name}")
+                continue
+
+            category, display_name = categorize_channel(name)
+            channels.append((display_name, url, category))
+
+        print(f"✅ Loaded {len(channels)} from BC API")
+        return channels
+    except Exception as e:
+        print(f"❌ Load BC API failed: {e}")
+        return []
+
+
 def get_dynamic_stream():
     print("👉 Fetching dynamic stream from API...")
     try:
@@ -496,6 +539,7 @@ def main():
     # === 3. 其他源 ===
     all_channels.extend(load_tv_m3u())
     all_channels.extend(load_guovin_iptv())
+    all_channels.extend(load_bc_api())  # <-- 新增接口
 
     print(f"📥 Total raw streams: {len(all_channels)}")
 
