@@ -1,3 +1,57 @@
+cctv1,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV1HD.m3u8
+cctv2,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV2HD.m3u8
+cctv3,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV3HD.m3u8
+cctv4,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV4HD.m3u8
+cctv5,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV5HD.m3u8
+ctv5+,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV5+HD.m3u8
+cctv6,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV6HD.m3u8
+cctv7,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV7HD.m3u8
+cctv8,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV8HD.m3u8
+cctv9,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV9HD.m3u8
+cctv10,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV10HD.m3u8
+cctv11,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV11HD.m3u8
+cctv12,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV12HD.m3u8
+cctv13,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV13HD.m3u8
+cctv14,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV14HD.m3u8
+cctv15,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV15HD.m3u8
+cctv16,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV16HD.m3u8
+cctv17,http://124.232.144.148:2380/c3.cdn.hunancatv.com/live/CCTV17HD.m3u8
+
+
+CCTV-1 综合,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-1-HQ/G_CCTV-1-HQ.m3u8
+CCTV-1 综合,http://113.105.155.20:2380/hw1live.rxip.sc96655.com.huan.tv/live/CCTV-1H265_4000.m3u8?
+CCTV-2 财经,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-2-HQ/G_CCTV-2-HQ.m3u8
+
+CCTV-3 综艺,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-3-HQ/G_CCTV-3-HQ.m3u8
+
+CCTV-4 中文国际（亚洲）,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-4-HQ/G_CCTV-4-HQ.m3u8
+CCTV-5 体育,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-5-HQ/G_CCTV-5-HQ.m3u8
+
+CCTV-5+ 体育赛事,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-5PLUS-HQ/G_CCTV-5PLUS-HQ.m3u8
+
+CCTV-6 电影,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-6-HQ/G_CCTV-6-HQ.m3u8
+
+CCTV-7 国防军事,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-7-HQ/G_CCTV-7-HQ.m3u8
+
+CCTV-8 电视剧,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-8-HQ/G_CCTV-8-HQ.m3u8
+
+CCTV-9 纪录,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-9-HQ/G_CCTV-9-HQ.m3u8
+
+CCTV-10 科教,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-10-HQ/G_CCTV-10-HQ.m3u8
+
+CCTV-11 戏曲,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-11-HQ/G_CCTV-11-HQ.m3u8
+
+CCTV-12 社会与法,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-12-HQ/G_CCTV-12-HQ.m3u8
+
+CCTV-13 新闻,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-13-HQ/G_CCTV-13-HQ.m3u8
+
+CCTV-14 少儿,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-14-HQ/G_CCTV-14-HQ.m3u8
+
+CCTV-15 音乐,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-15-HQ/G_CCTV-15-HQ.m3u8
+
+CCTV-16 奥林匹克,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-16-HQ/G_CCTV-16-HQ.m3u8
+农业农村,http://115.175.106.55:2380/js-live-screenshot.gitv.tv/gitv_live/G_CCTV-17-HQ/G_CCTV-17-HQ.m3u8
+淘电影,http://180.153.168.29:2380/ywotttv.bj.chinamobile.com/PLTV/88888888/224/3221226554/1.m3u8 
 CCTV-1 综合,https://migu.188766.xyz/?migutoken=759ef1f5785dfe47cadc315b8e438dda&id=CCTV1&type=yy
 CCTV-2 财经,https://migu.188766.xyz/?migutoken=cd89812e5d0525a88b236722037fc488&id=CCTV2&type=yy
 CCTV-3 综艺,https://migu.188766.xyz/?migutoken=d562c06706f7219fed183cddb467ac61&id=CCTV3&type=yy
