@@ -14,7 +14,4 @@
 西充莲花湖夜景,https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
 西充县华光乡黄家庙村桅杆湾志,https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
 
-西充王河湾2017年会A,https://xpc-bj.s3-cn-bj.ufileos.com/2efbd6b6-f17a-48c4-b578-9131bf7ebcf0/4898e564-a236-4a3b-a124-ad11f9ec903c.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=TOKEN_e1897405-d3af-493b-b5a6-2bed66aae03d%2F20251110%2Fcn-bj%2Fs3%2Faws4_request&X-Amz-Date=20251110T123432Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&response-content-disposition=Attachment%3B+filename*%3Dutf-8%27%273Yn57pWgedaQdDAa_720p.mp4&X-Amz-Signature=401f66a0e4844cfc7197b94f5db6d119497fd13cc03f188fe110bdfdbaf86f6c
 
-
-西充王河湾2017年会B,https://xpc-bj.s3-cn-bj.ufileos.com/c6f3467c-9d96-47de-b32d-dd4d5dfa68d3/4a942d37-25bf-4b66-aaea-7a47d03cca6a.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=TOKEN_e1897405-d3af-493b-b5a6-2bed66aae03d%2F20251110%2Fcn-bj%2Fs3%2Faws4_request&X-Amz-Date=20251110T123520Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&response-content-disposition=Attachment%3B+filename*%3Dutf-8%27%27d0Nq7M3kXEr4O2Vj_720p.mp4&X-Amz-Signature=4e3b85c65140ede4fcb1ba70203b35ac43a5fdc49f57f2f029571bea05359736
