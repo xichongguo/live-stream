@@ -1,9 +1,5 @@
-# get_live_stream.py —— 修复版（2025-12-22）
-# 功能：
-#   - whitelist.txt → "本地节目"（M3U格式，优先级最高）
-#   - Guovin IPTV → 第二优先级
-#   - 其他远程源（含央视有效性验证）
-#   - local.txt → 正常分类，排最后
+# get_live_stream.py —— 完整修复版（2025-12-22）
+# 功能：聚合多源直播流，优先级：本地节目 > Guovin > 其他远程源 > local.txt
 
 import requests
 import os
@@ -12,15 +8,17 @@ from datetime import datetime
 from collections import Counter
 import re
 
-# ================== 配置 ==================
-REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+# ================== 配置（关键：使用代理绕过 GitHub 限制）==================
+# 使用 ghproxy.com 代理确保 raw 内容可访问
+REMOTE_WHITELIST_URL = "https://ghproxy.com/https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
-GUOVIN_IPTV_URL = "https://raw.githubusercontent.com/Guovin/TV/main/output/result.txt"
+GUOVIN_IPTV_URL = "https://ghproxy.com/https://raw.githubusercontent.com/Guovin/TV/main/output/result.txt"
 BC_API_URL = "https://bc.188766.xyz/"
 BC_PARAMS = {'ip': '', 'mima': 'bingchawusifengxian', 'json': 'true'}
 
 LOCAL_TXT_PATH = "local.txt"
 
+# 动态流（西充）
 API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
 PARAMS = {
     'deviceType': '1', 'centerId': '9', 'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
@@ -38,14 +36,35 @@ DEFAULT_HEADERS = {
 OUTPUT_DIR = "live"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "current.m3u8")
 
-# ---------------- 分类配置（请保留你原有的完整内容）----------------
+# ---------------- 分类配置（请根据你原有内容补全）----------------
 PROVINCE_KEYWORDS = {
     "四川": ["四川", "成都", "川台", "康巴", "峨眉电影"],
     "广东": ["广东", "广州", "深圳", "珠江", "南方", "大湾区"],
     "湖南": ["湖南", "芒果", "金鹰", "快乐购"],
     "江苏": ["江苏", "南京", "苏州", "无锡", "扬州"],
     "浙江": ["浙江", "杭州", "宁波", "温州", "钱江"],
-    # ... 其他省份（请按你原代码补全）
+    "湖北": ["湖北", "武汉", "荆楚"],
+    "山东": ["山东", "齐鲁", "济南", "青岛"],
+    "河南": ["河南", "中原", "郑州"],
+    "河北": ["河北", "燕赵", "石家庄"],
+    "福建": ["福建", "东南", "厦门", "福州"],
+    "广西": ["广西", "南宁", "漓江"],
+    "云南": ["云南", "云视", "昆明"],
+    "江西": ["江西", "赣", "南昌"],
+    "辽宁": ["辽宁", "沈阳", "大连"],
+    "山西": ["山西", "晋", "太原"],
+    "陕西": ["陕西", "三秦", "西安"],
+    "安徽": ["安徽", "皖", "合肥"],
+    "黑龙江": ["黑龙江", "龙江", "哈尔滨"],
+    "吉林": ["吉林", "长春", "长影"],
+    "贵州": ["贵州", "黔", "贵阳"],
+    "甘肃": ["甘肃", "兰州", "丝路"],
+    "海南": ["海南", "三沙", "海口"],
+    "内蒙古": ["内蒙古", "蒙", "呼和浩特"],
+    "宁夏": ["宁夏", "银川"],
+    "青海": ["青海", "西宁"],
+    "新疆": ["新疆", "天山", "乌鲁木齐"],
+    "西藏": ["西藏", "拉萨"],
 }
 
 CATEGORY_MAP = {
@@ -170,8 +189,12 @@ def load_whitelist_as_local_program():
     try:
         resp = requests.get(REMOTE_WHITELIST_URL, timeout=TIMEOUT, headers=DEFAULT_HEADERS)
         resp.encoding = 'utf-8'
-        raw_channels = parse_m3u_content(resp.text)
-        # 强制归类为“本地节目”
+        text = resp.text.strip()
+        # 防御性检查：是否拿到 HTML？
+        if text.startswith("<!DOCTYPE") or "<html" in text[:200]:
+            print("   ❌ Received HTML instead of M3U. Check proxy URL.")
+            return []
+        raw_channels = parse_m3u_content(text)
         return [(name, url, "本地节目") for (name, url, _) in raw_channels]
     except Exception as e:
         print(f"❌ Load whitelist.txt failed: {e}")
@@ -183,7 +206,6 @@ def load_guovin_iptv():
         resp = requests.get(GUOVIN_IPTV_URL, timeout=TIMEOUT, headers=DEFAULT_HEADERS)
         resp.encoding = 'utf-8'
         text = resp.text.strip()
-        # 跳过第一行（可能是“更新时间”）
         lines = [line for line in text.splitlines() if line.strip() and not line.startswith("更新时间")]
         channels = []
         for line in lines:
@@ -263,7 +285,7 @@ def load_local_txt():
 # ================== 排序逻辑 ==================
 def sort_channels(items):
     ORDER = [
-        '本地节目',  # ← 新增：确保“本地节目”在最前
+        '本地节目',
         '央视', '卫视',
         '四川', '广东', '湖南', '湖北', '江苏', '浙江', '山东', '河南', '河北', '福建', '广西', '云南', '江西', '辽宁',
         '山西', '陕西', '安徽', '黑龙江', '内蒙古', '吉林', '贵州', '甘肃', '海南', '青海', '宁夏', '新疆', '西藏',
@@ -307,7 +329,7 @@ def main():
     for name, url, group in load_guovin_iptv():
         all_items.append((name, url, group, "guovin"))
 
-    # 3. 其他远程源（含央视验证）
+    # 3. 其他远程源
     remote_sources = []
     remote_sources.extend(load_tv_m3u())
     remote_sources.extend(load_bc_api())
@@ -353,6 +375,7 @@ def main():
     except Exception as e:
         print(f"❌ Write error: {e}")
 
+    # 生成 .nojekyll（用于 GitHub Pages）
     if not os.path.exists('.nojekyll'):
         open('.nojekyll', 'w').close()
 
