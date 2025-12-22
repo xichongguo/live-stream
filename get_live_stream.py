@@ -1,5 +1,9 @@
 # File: get_live_stream.py
-# Final update: whitelist.txt → "本地节目" (top), local.txt → normal category (no validation)
+# Final update: 
+#   - whitelist.txt → "本地节目" (top, priority=0)
+#   - Guovin IPTV (result.txt) → priority=1 (ranked right after 本地节目)
+#   - other remote sources → priority=2
+#   - local.txt → priority=3 (normal, no validation, appears last)
 
 import requests
 import os
@@ -242,7 +246,7 @@ def load_guovin_iptv():
             name, url = map(str.strip, line.split(",", 1))
             if is_valid_url(url) and not is_foreign_channel(name):
                 cat, disp = categorize_channel(name)
-                channels.append((disp, url, cat, 2))
+                channels.append((disp, url, cat, 1))  # ← priority=1
         return channels
     except Exception as e:
         print(f"❌ Load Guovin failed: {e}")
@@ -280,8 +284,8 @@ def load_local_txt():
             if not name or not url or not is_valid_url(url): continue
             if is_foreign_channel(name): continue
             cat, disp = categorize_channel(name)
-            # ⭐ local.txt: normal category, no validation, priority=1
-            channels.append((disp, url, cat, 1))
+            # ⭐ local.txt: normal category, no validation, priority=3
+            channels.append((disp, url, cat, 3))
     except Exception as e:
         print(f"❌ Read local.txt failed: {e}")
     return channels
@@ -316,7 +320,7 @@ def sort_channels_final(channels):
 
 # ================== Main ==================
 def main():
-    print("🚀 Generating playlist: whitelist.txt → 本地节目 (TOP), local.txt → normal category")
+    print("🚀 Generating playlist: whitelist.txt → 本地节目 (TOP), Guovin next, others, local.txt last")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     all_channels = []
@@ -324,11 +328,13 @@ def main():
     # Step 1: Load whitelist.txt → "本地节目", priority=0
     all_channels.extend(load_whitelist_as_local_program())
 
-    # Step 2: Load other remote sources (priority=2)
+    # Step 2: Load Guovin IPTV → priority=1 (now ranked right after 本地节目)
+    all_channels.extend(load_guovin_iptv())
+
+    # Step 3: Other remote sources → priority=2
     dynamic = get_dynamic_stream()
     if dynamic: all_channels.append(dynamic)
     all_channels.extend(load_tv_m3u())
-    all_channels.extend(load_guovin_iptv())
     all_channels.extend(load_bc_api())
 
     # Filter foreign
@@ -346,7 +352,7 @@ def main():
         else:
             valid_channels.append(item)
 
-    # Step 3: Load local.txt (priority=1, no validation)
+    # Step 4: Load local.txt → priority=3 (no validation, appears last among categories)
     local_channels = load_local_txt()
     valid_channels.extend(local_channels)
 
