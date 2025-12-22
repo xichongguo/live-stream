@@ -20,7 +20,7 @@ https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94
 #EXTINF:-1 tvg-name="CCTV-1" group-title="央视",CCTV-1
 http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-1" group-title="央视",CCTV-1
-http://bxtv.3a.ink/migu.php?id=cctv1
+webview://https://tv.cctv.com/live/cctv1/
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
 http://iptv.huuc.edu.cn/hls/cctv2hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
