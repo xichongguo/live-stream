@@ -1,5 +1,5 @@
 #EXTM3U
-# Generated at: 2025-12-26 23:34
+# Generated at: 2025-12-27 10:36
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="南充科教生活" group-title="本地节目",南充科教生活
 http://ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba700000000/playlist.m3u8?wsSecret=42f62aa716a3a86719587b678ac75386&wsTime=1875618327
@@ -88,15 +88,11 @@ https://smart.pendy.dpdns.org/Smart.php?id=cctv1
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
 http://112.27.235.94:8000/hls/2/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
-http://183.215.134.239:19901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
 https://smart.pendy.dpdns.org/Smart.php?id=cctv2
 #EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
 http://112.27.235.94:8000/hls/3/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
 http://183.215.134.239:19901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
-http://61.156.228.12:8154/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
 https://smart.pendy.dpdns.org/Smart.php?id=cctv3
 #EXTINF:-1 tvg-name="CCTV-4" group-title="央视",CCTV-4
@@ -113,8 +109,6 @@ https://smart.pendy.dpdns.org/Smart.php?id=cctv5
 https://smart.pendy.dpdns.org/Smart.php?id=cctv5plus
 #EXTINF:-1 tvg-name="CCTV-6" group-title="央视",CCTV-6
 http://112.27.235.94:8000/hls/7/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-6" group-title="央视",CCTV-6
-http://61.156.228.12:8154/tsfile/live/0006_1.m3u8
 #EXTINF:-1 tvg-name="CCTV-6" group-title="央视",CCTV-6
 https://smart.pendy.dpdns.org/Smart.php?id=cctv6
 #EXTINF:-1 tvg-name="CCTV-7" group-title="央视",CCTV-7
