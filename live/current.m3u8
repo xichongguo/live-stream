@@ -1,5 +1,5 @@
 #EXTM3U
-# Generated at: 2026-01-21 23:36
+# Generated at: 2026-01-22 10:41
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="南充科教生活" group-title="本地节目",南充科教生活
 http://ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba700000000/playlist.m3u8?wsSecret=42f62aa716a3a86719587b678ac75386&wsTime=1875618327
@@ -95,6 +95,8 @@ http://120.238.94.10:9901/tsfile/live/1018_1.m3u8
 http://112.46.85.60:8009/hls/501/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-1" group-title="央视",CCTV-1
 http://183.11.239.36:808/hls/19/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-1" group-title="央视",CCTV-1
+https://iptv.catvod.com/live.php?id=CCTV1
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
 http://222.169.85.8:9901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0$LR•IPV4『线路251』
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
@@ -155,6 +157,8 @@ http://120.238.94.10:9901/tsfile/live/1021_1.m3u8
 http://221.226.51.220:50081/newlive/live/hls/4/live.m3u8
 #EXTINF:-1 tvg-name="CCTV-4" group-title="央视",CCTV-4
 http://120.211.62.180:8000/hls/4/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-4" group-title="央视",CCTV-4
+https://iptv.catvod.com/live.php?id=CCTV4
 #EXTINF:-1 tvg-name="CCTV-4" group-title="央视",CCTV-4
 https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8
 #EXTINF:-1 tvg-name="CCTV-5" group-title="央视",CCTV-5
@@ -218,6 +222,8 @@ http://27.41.245.32:801/hls/6/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-6" group-title="央视",CCTV-6
 http://112.27.235.94:8000/hls/7/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-6" group-title="央视",CCTV-6
+https://iptv.catvod.com/live.php?id=CCTV6
+#EXTINF:-1 tvg-name="CCTV-6" group-title="央视",CCTV-6
 http://61.136.172.236:9901/tsfile/live/0006_1.m3u8
 #EXTINF:-1 tvg-name="CCTV-6" group-title="央视",CCTV-6
 http://182.150.23.74:808/hls/6/index.m3u8
@@ -261,6 +267,8 @@ http://120.238.94.10:9901/tsfile/live/1026_1.m3u8
 http://112.27.235.94:8000/hls/9/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-8" group-title="央视",CCTV-8
 http://183.11.239.36:808/hls/96/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-8" group-title="央视",CCTV-8
+https://iptv.catvod.com/live.php?id=CCTV8
 #EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
 http://23.237.228.134/live5/CCTV9.m3u8
 #EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
@@ -275,6 +283,8 @@ http://112.46.85.60:8009/hls/509/index.m3u8
 http://183.11.239.36:808/hls/27/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
 http://120.211.62.180:8000/hls/9/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
+https://iptv.catvod.com/live.php?id=CCTV9
 #EXTINF:-1 tvg-name="CCTV-9" group-title="央视",CCTV-9
 http://61.136.172.236:9901/tsfile/live/0009_1.m3u8
 #EXTINF:-1 tvg-name="CCTV-10" group-title="央视",CCTV-10
@@ -294,6 +304,8 @@ http://112.27.235.94:8000/hls/11/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-10" group-title="央视",CCTV-10
 http://61.136.172.236:9901/tsfile/live/0010_1.m3u8
 #EXTINF:-1 tvg-name="CCTV-10" group-title="央视",CCTV-10
+https://iptv.catvod.com/live.php?id=CCTV10
+#EXTINF:-1 tvg-name="CCTV-10" group-title="央视",CCTV-10
 http://120.211.62.180:8000/hls/10/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-11" group-title="央视",CCTV-11
 http://38.75.136.137:98/gslb/dsdqca/cctv11hd.m3u8?auth=test20251009
@@ -309,6 +321,8 @@ http://112.27.235.94:8000/hls/12/index.m3u8
 http://120.211.62.180:8000/hls/11/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-11" group-title="央视",CCTV-11
 http://61.136.172.236:9901/tsfile/live/0011_1.m3u8
+#EXTINF:-1 tvg-name="CCTV-11" group-title="央视",CCTV-11
+https://iptv.catvod.com/live.php?id=CCTV11
 #EXTINF:-1 tvg-name="CCTV-12" group-title="央视",CCTV-12
 http://124.165.251.82:85/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV-12" group-title="央视",CCTV-12
@@ -331,6 +345,8 @@ http://112.46.85.60:8009/hls/507/index.m3u8
 http://183.11.239.36:808/hls/30/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-12" group-title="央视",CCTV-12
 http://120.211.62.180:8000/hls/12/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-12" group-title="央视",CCTV-12
+https://iptv.catvod.com/live.php?id=CCTV12
 #EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
 https://event.pull.hebtv.com/jishi/cp1.m3u8
 #EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
@@ -349,6 +365,8 @@ http://112.27.235.94:8000/hls/14/index.m3u8
 http://183.11.239.36:808/hls/31/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
 http://120.211.62.180:8000/hls/13/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-13" group-title="央视",CCTV-13
+https://iptv.catvod.com/live.php?id=CCTV13
 #EXTINF:-1 tvg-name="CCTV-14" group-title="央视",CCTV-14
 https://event.pull.hebtv.com/jishi/cp2.m3u8
 #EXTINF:-1 tvg-name="CCTV-14" group-title="央视",CCTV-14
@@ -369,6 +387,8 @@ http://112.27.235.94:8000/hls/15/index.m3u8
 http://61.136.172.236:9901/tsfile/live/0014_1.m3u8
 #EXTINF:-1 tvg-name="CCTV-14" group-title="央视",CCTV-14
 http://120.211.62.180:8000/hls/14/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-14" group-title="央视",CCTV-14
+https://iptv.catvod.com/live.php?id=CCTV14
 #EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
 http://38.75.136.137:98/gslb/dsdqca/cctv15hd.m3u8?auth=test20251009
 #EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
@@ -386,6 +406,8 @@ http://183.11.239.36:808/hls/102/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
 http://120.211.62.180:8000/hls/15/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
+https://iptv.catvod.com/live.php?id=CCTV15
+#EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
 http://p.ytelc.com/169l/0/cctv.php?id=cctv15
 #EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
 http://112.27.235.94:8000/hls/16/index.m3u8
@@ -393,6 +415,8 @@ http://112.27.235.94:8000/hls/16/index.m3u8
 http://38.75.136.137:98/gslb/dsdqca/cctv15hd.m3u8?auth=test20251009
 #EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
 http://38.75.136.137:98/gslb/dsdqbv/cctv15hd.m3u8?auth=test20251009
+#EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
+https://iptv.catvod.com/live.php?id=CCTV15
 #EXTINF:-1 tvg-name="CCTV-16" group-title="央视",CCTV-16
 http://39.152.103.17:8089/tsfile/live/1015_1.m3u8
 #EXTINF:-1 tvg-name="CCTV-16" group-title="央视",CCTV-16
@@ -429,6 +453,8 @@ http://120.238.94.10:9901/tsfile/live/1048_1.m3u8
 http://183.11.239.36:808/hls/35/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-17" group-title="央视",CCTV-17
 http://120.211.62.180:8000/hls/17/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-17" group-title="央视",CCTV-17
+https://iptv.catvod.com/live.php?id=CCTV17
 #EXTINF:-1 tvg-name="CCTV-20241" group-title="央视",CCTV-20241
 https://p2.bdstatic.com/rtmp.liveshow.lss-user.baidubce.com/live/stream_bduid_6488563992_8982723413/merged_1707497046297_88536_25144_41936.m3u8
 #EXTINF:-1 tvg-name="CCTV女性时尚" group-title="央视",CCTV女性时尚
