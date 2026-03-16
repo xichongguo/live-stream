@@ -1,3 +1,60 @@
+CCTV1,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV2,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV3,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV4,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV5,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV5+,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV6,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV7,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV8,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV9,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV10,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV11,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV12,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV13,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV14,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV15,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV16,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+CCTV17,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+
+
+湖南卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+浙江卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+江苏卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+安徽卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+北京卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+东方卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+山东卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+广东卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+大湾区卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+深圳卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+东南卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+广西卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+贵州卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+海南卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+河北卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+河南卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+黑龙江卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+湖北卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+吉林卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+江西卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+辽宁卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+内蒙古卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+宁夏卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+青海卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+厦门卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+山西卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+陕西卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+四川卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+天津卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+西藏卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+西藏卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+新疆卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+延边卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+云南卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+甘肃卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+重庆卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
+兵团卫视,http://gxyd.484947.xyz/PLTV/7777 ... ASHttpSessionId=OTT
 CCTV1,http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8
 CCTV2,http://iptv.huuc.edu.cn/hls/cctv2hd.m3u8
 CCTV3,http://iptv.huuc.edu.cn/hls/cctv3hd.m3u8
