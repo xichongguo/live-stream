@@ -1,5 +1,6 @@
 # File: get_live_stream.py
 # Final update: whitelist.txt → "本地节目" (top), local.txt → normal category (no validation)
+# Updated: GUOVIN_IPTV_URL replaced with http://www.52top.com.cn:678/downloads/migu.txt
 
 import requests
 import os
@@ -28,7 +29,8 @@ HEADERS = {
 
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
-GUOVIN_IPTV_URL = "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.txt"
+# [MODIFIED] Replaced Guovin URL with the new Migu source
+GUOVIN_IPTV_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
 BC_API_URL = "https://bc.188766.xyz/"
 BC_PARAMS = {'ip': '', 'mima': 'bingchawusifengxian', 'json': 'true'}
 
@@ -232,20 +234,51 @@ def load_tv_m3u():
         return []
 
 def load_guovin_iptv():
+    """
+    Updated to handle both CSV (old Guovin format) and M3U (new Migu format).
+    """
     try:
         response = requests.get(GUOVIN_IPTV_URL, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
-        response.encoding = 'utf-8'
+        # Try to detect encoding or default to utf-8
+        try:
+            response.encoding = response.apparent_encoding
+        except:
+            response.encoding = 'utf-8'
+            
         lines = response.text.strip().splitlines()
         channels = []
-        for line in lines:
-            if line.strip().startswith("#") or "," not in line: continue
-            name, url = map(str.strip, line.split(",", 1))
-            if is_valid_url(url) and not is_foreign_channel(name):
-                cat, disp = categorize_channel(name)
-                channels.append((disp, url, cat, 2))
+        current_name = None
+        
+        # Check if it looks like an M3U file
+        is_m3u = any(line.startswith("#EXTM3U") or line.startswith("#EXTINF") for line in lines[:10])
+
+        if is_m3u:
+            # Parse M3U format
+            for line in lines:
+                line = line.strip()
+                if line.startswith("#EXTINF"):
+                    # Extract name after the last comma
+                    if "," in line:
+                        current_name = line.split(",", 1)[1].strip()
+                    else:
+                        current_name = "Unknown"
+                elif line.startswith("http") and current_name:
+                    if is_valid_url(line) and not is_foreign_channel(current_name):
+                        cat, disp = categorize_channel(current_name)
+                        channels.append((disp, line, cat, 2))
+                    current_name = None
+        else:
+            # Parse CSV format (original logic)
+            for line in lines:
+                if line.strip().startswith("#") or "," not in line: continue
+                name, url = map(str.strip, line.split(",", 1))
+                if is_valid_url(url) and not is_foreign_channel(name):
+                    cat, disp = categorize_channel(name)
+                    channels.append((disp, url, cat, 2))
+        
         return channels
     except Exception as e:
-        print(f"❌ Load Guovin failed: {e}")
+        print(f"❌ Load Guovin/Migu source failed: {e}")
         return []
 
 def load_bc_api():
@@ -317,6 +350,7 @@ def sort_channels_final(channels):
 # ================== Main ==================
 def main():
     print("🚀 Generating playlist: whitelist.txt → 本地节目 (TOP), local.txt → normal category")
+    print(f"   Using new source: {GUOVIN_IPTV_URL}")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     all_channels = []
