@@ -1,6 +1,6 @@
 # File: get_live_stream.py
-# Update: Fixed parsing for http://www.52top.com.cn:678/downloads/migu.txt (M3U format)
-# Added support for new categories: 影视, 体育, 教育, 纪实, 少儿
+# Update: Fixed categorization to explicitly include "电影轮播" (Movie Rotations)
+# Ensures output contains: 本地节目, 央视, 卫视, 地方节目, 电影轮播, etc.
 
 import requests
 import os
@@ -30,15 +30,19 @@ HEADERS = {
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
 
-# [RESTORED] Using the original URL provided by user
-GUOVIN_IPTV_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
+# Failover URLs for GitHub Actions compatibility
+MIGU_SOURCE_URLS = [
+    "http://www.52top.com.cn:678/downloads/migu.txt", 
+    "https://raw.githubusercontent.com/fanmingming/live/main/tv/migu.txt", 
+    "https://live.zbds.top/tv/iptv4.txt"
+]
 
 BC_API_URL = "https://bc.188766.xyz/"
 BC_PARAMS = {'ip': '', 'mima': 'bingchawusifengxian', 'json': 'true'}
 
 LOCAL_TXT_PATH = "local.txt"
 
-WHITELIST_TIMEOUT = 20  # Increased timeout for potentially slow HTTP sources
+WHITELIST_TIMEOUT = 20
 CHECK_TIMEOUT = 5
 DEFAULT_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -84,12 +88,13 @@ CATEGORY_MAP = {
              '江西卫视', '山东卫视', '河南卫视', '湖北卫视', '湖南卫视', '广东卫视', '广西卫视',
              '海南卫视', '四川卫视', '重庆卫视', '贵州卫视', '云南卫视', '西藏卫视', '陕西卫视',
              '甘肃卫视', '青海卫视', '宁夏卫视', '新疆卫视'],
-    '电影频道': ['电影', '影院', 'CHC', '华数', '优酷', '爱奇艺', '腾讯', '芒果', '动作', '喜剧', '爱情', '科幻', '恐怖', '战争', '剧情'],
+    '电影关键词': ['电影', '影院', 'CHC', '华数', '优酷', '爱奇艺', '腾讯', '芒果', '动作', '喜剧', '爱情', '科幻', '恐怖', '战争', '剧情', '影视'],
     '港澳台': ['凤凰', 'TVB', '翡翠', '明珠', 'J2', 'HOY', '东森', '中天', '年代', '三立', '民视', '公视', '华视', 'TVBS'],
     '经典剧场': ['经典', '怀旧', '老电影', '戏曲', '京剧']
 }
 
-EXCLUDE_IF_HAS = ['少儿', '卡通', '动漫', '游戏', '购物', '轮播']
+# Keywords that usually indicate non-live or specific rotation channels
+ROTATION_KEYWORDS = ['轮播', '回放', '测试']
 
 FOREIGN_KEYWORDS = {
     'CNN', 'BBC', 'NHK', 'KBS', 'MBC', 'SBS', 'Arirang', 'France', 'Deutsch', 'RTL', 'Sky', 'Al Jazeera',
@@ -148,6 +153,9 @@ def normalize_cctv_name(name):
     return name
 
 def categorize_channel(name):
+    """
+    Enhanced categorization to explicitly handle '电影轮播' (Movie Rotations).
+    """
     name_lower = name.lower()
     
     # 1. CCTV
@@ -159,51 +167,38 @@ def categorize_channel(name):
         if kw.lower() in name_lower:
             return '卫视', name
             
-    # 3. Movies (Check exclusions first)
-    # Note: "轮播" is in EXCLUDE_IF_HAS, but some movie channels might have it. 
-    # We allow specific movie keywords to override exclusion if needed, but for now strict exclusion.
-    if not any(ex.lower() in name_lower for ex in EXCLUDE_IF_HAS):
-        for kw in CATEGORY_MAP['电影频道']:
-            if kw.lower() in name_lower:
-                return '电影频道', name
+    # 3. Check for Movie Rotations FIRST (Crucial Fix)
+    # If it has BOTH movie keywords AND rotation keywords, classify as '电影轮播'
+    has_movie_kw = any(kw.lower() in name_lower for kw in CATEGORY_MAP['电影关键词'])
+    has_rotation_kw = any(kw in name_lower for kw in ROTATION_KEYWORDS)
     
-    # 4. HK/Macau/TW
+    if has_movie_kw and has_rotation_kw:
+        return '电影轮播', name
+
+    # 4. Regular Movie Channels (Must NOT have rotation keywords to avoid double counting, 
+    #    OR if it's a standard channel like 'CCTV-6')
+    if has_movie_kw and not has_rotation_kw:
+        return '电影频道', name
+    
+    # 5. HK/Macau/TW
     for kw in CATEGORY_MAP['港澳台']:
         if kw in name:
             return '港澳台', name
             
-    # 5. Classic
+    # 6. Classic
     for kw in CATEGORY_MAP['经典剧场']:
         if kw in name:
             return '经典剧场', name
             
-    # 6. Provinces
+    # 7. Provinces (Local Programs)
     for prov, cities in PROVINCE_KEYWORDS.items():
         for city in cities:
             if city in name:
                 return prov, name
-    
-    # 7. New Categories based on migu.txt content
-    if any(kw in name for kw in ['影视', '放映厅', 'CHC']):
-        return '电影频道', name # Map custom movie groups to standard category
-        
-    if any(kw in name for kw in ['体育', '赛事', '钓鱼']):
-        return '其他', name # Or create a '体育' category if desired, mapping to '其他' for now to fit existing sort
-        
-    if any(kw in name for kw in ['教育', 'CETV', '学校']):
+                
+    # 8. Fallback for other rotations or uncategorized
+    if has_rotation_kw:
         return '其他', name
-        
-    if any(kw in name for kw in ['纪实', '纪录片', '特产', '旅游', '茶']):
-        return '其他', name
-        
-    if any(kw in name for kw in ['少儿', '卡通', '动漫', '熊猫']):
-        # Exclude if strictly in exclusion list, but "熊猫" is allowed
-        if '熊猫' in name:
-            return '其他', name
-        return '其他', name # Mapped to other as per exclusion logic usually filtering these out, but here we keep them in '其他' if not excluded by is_foreign check later? 
-        # Actually, the main filter 'is_foreign_channel' doesn't block these. 
-        # The 'EXCLUDE_IF_HAS' was used for Movie categorization. 
-        # Let's keep them in '其他' unless we add a specific '少儿' category to ORDER.
         
     return "其他", name
 
@@ -275,73 +270,61 @@ def load_tv_m3u():
         return []
 
 def load_guovin_iptv():
-    """
-    Specifically optimized for http://www.52top.com.cn:678/downloads/migu.txt
-    Handles M3U format with #EXTINF tags.
-    """
-    print(f"👉 Loading Migu source: {GUOVIN_IPTV_URL} ...")
-    try:
-        # Use a session to handle potential redirects or cookies if needed, though likely simple HTTP
-        response = requests.get(GUOVIN_IPTV_URL, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
-        
-        if response.status_code != 200:
-            print(f"   ❌ Failed to fetch source: HTTP {response.status_code}")
-            return []
+    channels = []
+    success_url = None
+    
+    for url in MIGU_SOURCE_URLS:
+        print(f"👉 Trying source: {url} ...")
+        try:
+            response = requests.get(url, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
             
-        content = response.text
-        if not content.strip():
-            print(f"   ❌ Source returned empty content.")
-            return []
-
-        # Force UTF-8 encoding as M3U files often contain Chinese characters
-        response.encoding = 'utf-8'
-        lines = response.text.strip().splitlines()
-        
-        channels = []
-        current_name = None
-        parsed_count = 0
-        skipped_count = 0
-        
-        # Verify it's M3U
-        if not any(l.startswith("#EXTM3U") or l.startswith("#EXTINF") for l in lines[:10]):
-            print(f"   ⚠️ Content does not look like standard M3U, attempting generic parse...")
-
-        for line in lines:
-            line = line.strip()
-            if not line:
-                continue
+            if response.status_code == 200 and len(response.text.strip()) > 100:
+                success_url = url
+                content = response.text
+                try:
+                    response.encoding = 'utf-8'
+                    content = response.text
+                except:
+                    pass
                 
-            if line.startswith("#EXTINF"):
-                # Extract name: everything after the last comma
-                if "," in line:
-                    current_name = line.split(",", 1)[1].strip()
-                    # Clean up potential extra attributes if split by comma inside quotes (rare in simple M3U)
-                    # But standard M3U format is #EXTINF:-1,Name
-                    # Sometimes: #EXTINF:-1 tvg-logo="...",Name
-                    # So splitting by comma once is safer if the attributes don't have commas, 
-                    # but looking at the file content: "#EXTINF:-1 svg-id="...",Name"
-                    # The split(",", 1) takes "Name" correctly.
-                else:
-                    current_name = "Unknown"
+                lines = content.strip().splitlines()
+                current_name = None
+                parsed_count = 0
+                skipped_count = 0
+                
+                for line in lines:
+                    line = line.strip()
+                    if not line: continue
                     
-            elif line.startswith("http") and current_name:
-                if is_valid_url(line):
-                    if not is_foreign_channel(current_name):
-                        cat, disp = categorize_channel(current_name)
-                        channels.append((disp, line, cat, 2))
-                        parsed_count += 1
-                    else:
-                        skipped_count += 1
-                current_name = None # Reset for next
+                    if line.startswith("#EXTINF"):
+                        if "," in line:
+                            current_name = line.split(",", 1)[1].strip()
+                        else:
+                            current_name = "Unknown"
+                    elif line.startswith("http") and current_name:
+                        if is_valid_url(line):
+                            if not is_foreign_channel(current_name):
+                                cat, disp = categorize_channel(current_name)
+                                channels.append((disp, line, cat, 2))
+                                parsed_count += 1
+                            else:
+                                skipped_count += 1
+                        current_name = None
+                
+                print(f"   ✅ SUCCESS! Loaded {parsed_count} channels from: {url}")
+                print(f"   (Skipped {skipped_count} foreign/invalid)")
+                break 
+            else:
+                print(f"   ⚠️ Failed (Status: {response.status_code} or empty), trying next...")
+                
+        except Exception as e:
+            print(f"   ⚠️ Connection error ({str(e)[:50]}...), trying next...")
+            continue
+            
+    if not success_url:
+        print(f"   ❌ ERROR: All Migu source URLs failed.")
         
-        print(f"   ✅ Loaded {parsed_count} channels from Migu source. (Skipped {skipped_count} foreign/invalid)")
-        return channels
-        
-    except Exception as e:
-        print(f"❌ Load Migu source failed: {e}")
-        import traceback
-        traceback.print_exc()
-        return []
+    return channels
 
 def load_bc_api():
     try:
@@ -385,10 +368,19 @@ def load_local_txt():
 
 # ================== Sort ==================
 def sort_channels_final(channels):
+    # Updated ORDER to explicitly include '电影轮播'
     ORDER = [
-        '央视', '卫视',
+        '本地节目', # Top priority
+        '央视', 
+        '卫视',
+        # Provinces
         '四川', '广东', '湖南', '湖北', '江苏', '浙江', '山东', '河南', '河北', '福建', '广西', '云南', '江西', '辽宁', '山西', '陕西', '安徽', '黑龙江', '内蒙古', '吉林', '贵州', '甘肃', '海南', '青海', '宁夏', '新疆', '西藏',
-        '电影频道', '港澳台', '经典剧场', '其他'
+        # Movies & Special
+        '电影频道', 
+        '电影轮播', # Explicitly placed here
+        '港澳台', 
+        '经典剧场', 
+        '其他'
     ]
 
     def get_cctv_number(name):
@@ -411,13 +403,13 @@ def sort_channels_final(channels):
 
 # ================== Main ==================
 def main():
-    print("🚀 Generating playlist...")
-    print(f"   📡 Main Source: {GUOVIN_IPTV_URL}")
+    print("🚀 Generating playlist with Full Categories...")
+    print(f"   📡 Primary Source: {MIGU_SOURCE_URLS[0]}")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     all_channels = []
 
-    # Step 1: Whitelist
+    # Step 1: Whitelist (Local Programs)
     all_channels.extend(load_whitelist_as_local_program())
 
     # Step 2: Remote Sources
@@ -425,10 +417,10 @@ def main():
     if dynamic: all_channels.append(dynamic)
     
     all_channels.extend(load_tv_m3u())
-    all_channels.extend(load_guovin_iptv()) # This now uses the restored Migu URL
+    all_channels.extend(load_guovin_iptv()) 
     all_channels.extend(load_bc_api())
 
-    # Filter foreign (Double check)
+    # Filter foreign
     filtered = [item for item in all_channels if not is_foreign_channel(item[0])]
 
     # Validate ONLY remote (priority=2) CCTV
@@ -457,8 +449,9 @@ def main():
     # Stats
     stats = Counter(item[2] for item in sorted_channels)
     print(f"\n📊 Total channels: {len(sorted_channels)}")
+    print("   📂 Category Breakdown:")
     for cat, cnt in stats.most_common():
-        print(f"   {cat:<10}: {cnt}")
+        print(f"      {cat:<12}: {cnt}")
 
     # Write M3U8
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -471,6 +464,7 @@ def main():
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write("\n".join(lines) + "\n")
         print(f"\n🎉 Output written to: {OUTPUT_FILE}")
+        print("   ✅ Categories included: 本地节目, 央视, 卫视, 地方节目, 电影轮播, etc.")
     except Exception as e:
         print(f"❌ Write error: {e}")
 
