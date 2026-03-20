@@ -1,5 +1,5 @@
 #EXTM3U
-# Generated at: 2026-03-20 10:51
+# Generated at: 2026-03-20 23:37
 x-tvg-url="https://epg.51zmt.top/xmltv.xml"
 #EXTINF:-1 tvg-name="南充科教生活" group-title="本地节目",南充科教生活
 http://ncrmpull.cnncw.cn/live/8f7f8d3101931000ffbe3ba700000000/playlist.m3u8?wsSecret=42f62aa716a3a86719587b678ac75386&wsTime=1875618327
@@ -114,6 +114,8 @@ http://112.27.235.94:8000/hls/2/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
 http://183.215.134.239:19901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
+http://39.152.103.17:8089/tsfile/live/1002_1.m3u8
+#EXTINF:-1 tvg-name="CCTV-3" group-title="央视",CCTV-3
 http://222.169.85.8:9901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0$LR•IPV4『线路243』
 #EXTINF:-1 tvg-name="CCTV-6" group-title="央视",CCTV-6
 http://112.27.235.94:8000/hls/7/index.m3u8
@@ -137,10 +139,14 @@ https://event.pull.hebtv.com/jishi/cp2.m3u8
 http://112.27.235.94:8000/hls/15/index.m3u8
 #EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
 http://120.76.248.139/live/bfgd/4200000133.m3u8
+#EXTINF:-1 tvg-name="CCTV-16" group-title="央视",CCTV-16
+http://39.152.103.17:8089/tsfile/live/1015_1.m3u8
 #EXTINF:-1 tvg-name="CCTV-17" group-title="央视",CCTV-17
 http://120.76.248.139/live/bfgd/4200000204.m3u8
 #EXTINF:-1 tvg-name="CCTV-20241" group-title="央视",CCTV-20241
 https://p2.bdstatic.com/rtmp.liveshow.lss-user.baidubce.com/live/stream_bduid_6488563992_8982723413/merged_1707497046297_88536_25144_41936.m3u8
+#EXTINF:-1 tvg-name="CCTV女性时尚" group-title="央视",CCTV女性时尚
+http://39.152.103.17:8089/tsfile/live/1068_1.m3u8?key=txiptv&playlive=1&down=1
 #EXTINF:-1 tvg-name="东南卫视" group-title="卫视",东南卫视
 http://gxyd.484947.xyz/PLTV/77777777/224/3221225904/index.m3u8?servicetype=3&IASHttpSessionId=OTT
 #EXTINF:-1 tvg-name="东方卫视" group-title="卫视",东方卫视
