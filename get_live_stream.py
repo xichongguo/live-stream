@@ -1,10 +1,8 @@
 import requests
 import os
 from urllib.parse import urlparse
-from datetime import datetime
-from collections import Counter
 import re
-import sys  # 新增 sys 用于读取命令行参数
+import sys
 
 # ================== Configuration ==================
 API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
@@ -26,7 +24,6 @@ HEADERS = {
 
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
-# Failover URLs for GitHub Actions compatibility
 MIGU_SOURCE_URLS = [
     "http://www.52top.com.cn:678/downloads/migu.txt",
     "https://raw.githubusercontent.com/fanmingming/live/main/tv/migu.txt",
@@ -81,7 +78,6 @@ CATEGORY_MAP = {
     '经典剧场': ['经典', '怀旧', '老电影', '戏曲', '京剧']
 }
 
-# Keywords that usually indicate non-live or specific rotation channels
 ROTATION_KEYWORDS = ['轮播', '回放', '测试']
 FOREIGN_KEYWORDS = {
     'CNN', 'BBC', 'NHK', 'KBS', 'MBC', 'SBS', 'Arirang', 'France', 'Deutsch', 'RTL', 'Sky', 'Al Jazeera', 'HBO', 'ESPN', 'Star Sports', 'Fox', 'Discovery', 'National Geographic', 'Cartoon Network', 'Nickelodeon', 'MTV', 'VH1', 'CNBC', 'Bloomberg', 'DW', 'RT', 'CGTN', 'ABS-CBN', 'GMA', 'TV5'
@@ -136,48 +132,28 @@ def normalize_cctv_name(name):
     return name
 
 def categorize_channel(name):
-    """ Enhanced categorization to explicitly handle '电影轮播' (Movie Rotations). """
     name_lower = name.lower()
-    
-    # 1. CCTV
     if any(kw in name_lower for kw in ['cctv', '中央']):
         return '央视', normalize_cctv_name(name)
-        
-    # 2. Satellite TV (卫视)
     for kw in CATEGORY_MAP['卫视']:
         if kw.lower() in name_lower:
             return '卫视', name
-            
-    # 3. Check for Movie Rotations FIRST (Crucial Fix)
-    # If it has BOTH movie keywords AND rotation keywords, classify as '电影轮播'
     has_movie_kw = any(kw.lower() in name_lower for kw in CATEGORY_MAP['电影关键词'])
     has_rotation_kw = any(kw in name_lower for kw in ROTATION_KEYWORDS)
-    
     if has_movie_kw and has_rotation_kw:
         return '电影轮播', name
-        
-    # 4. Regular Movie Channels (Must NOT have rotation keywords to avoid double counting, 
-    # OR if it's a standard channel like 'CCTV-6')
     if has_movie_kw and not has_rotation_kw:
         return '电影频道', name
-        
-    # 5. HK/Macau/TW
     for kw in CATEGORY_MAP['港澳台']:
         if kw in name:
             return '港澳台', name
-            
-    # 6. Classic
     for kw in CATEGORY_MAP['经典剧场']:
         if kw in name:
             return '经典剧场', name
-            
-    # 7. Provinces (Local Programs)
     for prov, cities in PROVINCE_KEYWORDS.items():
         for city in cities:
             if city in name:
                 return prov, name
-                
-    # 8. Fallback for other rotations or uncategorized
     if has_rotation_kw:
         return '其他', name
     return "其他", name
@@ -207,7 +183,7 @@ def load_whitelist_as_local_program():
             parts = [p.strip() for p in line.split(",", 1)]
             if len(parts) < 2:
                 continue
-            name, url = parts[0], parts[1]
+            name, url = parts, parts
             if not name or not url or not is_valid_url(url):
                 continue
             if is_foreign_channel(name):
@@ -217,7 +193,7 @@ def load_whitelist_as_local_program():
         return channels
     except Exception as e:
         print(f"❌ Load whitelist.txt failed: {e}")
-        return []
+        return []<websource>source_group_web_1</websource>
 
 def get_dynamic_stream():
     try:
@@ -240,7 +216,7 @@ def load_tv_m3u():
         current_name = None
         for line in lines:
             if line.startswith("#EXTINF"):
-                current_name = line.split(",", 1)[1].strip() if "," in line else "Unknown"
+                current_name = line.split(",", 1).strip() if "," in line else "Unknown"
             elif line.startswith("http") and current_name:
                 if is_valid_url(line) and not is_foreign_channel(current_name):
                     cat, disp = categorize_channel(current_name)
@@ -250,7 +226,7 @@ def load_tv_m3u():
         return channels
     except Exception as e:
         print(f"❌ Load tv.m3u failed: {e}")
-        return []
+        return []<websource>source_group_web_2</websource>
 
 def load_guovin_iptv():
     channels = []
@@ -277,7 +253,7 @@ def load_guovin_iptv():
                         continue
                     if line.startswith("#EXTINF"):
                         if "," in line:
-                            current_name = line.split(",", 1)[1].strip()
+                            current_name = line.split(",", 1).strip()
                         else:
                             current_name = "Unknown"
                     elif line.startswith("http") and current_name:
@@ -299,7 +275,7 @@ def load_guovin_iptv():
             continue
     if not success_url:
         print(f" ❌ ERROR: All Migu source URLs failed.")
-    return channels
+    return channels<websource>source_group_web_3</websource>
 
 def load_bc_api():
     try:
@@ -326,4 +302,31 @@ def load_local_txt():
         with open(LOCAL_TXT_PATH, 'r', encoding='utf-8') as f:
             lines = f.readlines()
         for line in lines:
-            line = line.strip
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = [p.strip() for p in line.split(",", 1)]
+            if len(parts) < 2:
+                continue
+            name, url = parts, parts
+            if not name or not url or not is_valid_url(url):
+                continue
+            if is_foreign_channel(name):
+                continue
+            cat, disp = categorize_channel(name)
+            channels.append((disp, url, cat, 2))
+        print(f" ✅ Loaded {len(channels)} channels from local.txt.")
+        return channels
+    except Exception as e:
+        print(f"❌ Load local.txt failed: {e}")
+        return []<websource>source_group_web_4</websource>
+
+# ================== Main Logic ==================
+def main():
+    # 1. 检查是否为跳转模式
+    if len(sys.argv) > 1 and sys.argv == 'redirect':
+        print("🚀 正在启动极速跳转模式...")
+        stream = get_dynamic_stream()
+        if stream:
+            name, url, category, priority = stream
+            print("Status:<websource>source_group_web_5</websource>
