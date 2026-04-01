@@ -1,13 +1,10 @@
-# File: get_live_stream.py
-# Update: Fixed categorization to explicitly include "电影轮播" (Movie Rotations)
-# Ensures output contains: 本地节目, 央视, 卫视, 地方节目, 电影轮播, etc.
-
 import requests
 import os
 from urllib.parse import urlparse
 from datetime import datetime
 from collections import Counter
 import re
+import sys  # 新增 sys 用于读取命令行参数
 
 # ================== Configuration ==================
 API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
@@ -29,25 +26,20 @@ HEADERS = {
 
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
-
 # Failover URLs for GitHub Actions compatibility
 MIGU_SOURCE_URLS = [
-    "http://www.52top.com.cn:678/downloads/migu.txt", 
-    "https://raw.githubusercontent.com/fanmingming/live/main/tv/migu.txt", 
+    "http://www.52top.com.cn:678/downloads/migu.txt",
+    "https://raw.githubusercontent.com/fanmingming/live/main/tv/migu.txt",
     "https://live.zbds.top/tv/iptv4.txt"
 ]
-
 BC_API_URL = "https://bc.188766.xyz/"
 BC_PARAMS = {'ip': '', 'mima': 'bingchawusifengxian', 'json': 'true'}
-
 LOCAL_TXT_PATH = "local.txt"
-
 WHITELIST_TIMEOUT = 20
 CHECK_TIMEOUT = 5
 DEFAULT_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
-
 OUTPUT_DIR = "live"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "current.m3u8")
 
@@ -67,7 +59,7 @@ PROVINCE_KEYWORDS = {
     '云南': ['云南', '昆明', '曲靖', '玉溪', '保山', '昭通', '丽江', '普洱', '临沧', '楚雄', '红河', '文山', '西双版纳', '大理', '德宏', '怒江', '迪庆'],
     '江西': ['江西', '南昌', '景德镇', '萍乡', '九江', '新余', '鹰潭', '赣州', '吉安', '宜春', '抚州', '上饶'],
     '辽宁': ['辽宁', '沈阳', '大连', '鞍山', '抚顺', '本溪', '丹东', '锦州', '营口', '阜新', '辽阳', '盘锦', '铁岭', '朝阳', '葫芦岛'],
-    '山西': ['山西', '太原', '大同', '阳泉', '长治', '晋城', '朔州', '晋中', '运城', '忻州', '临汾', '吕梁'],
+    '山西': ['山西', '太原', '大同', '阳泉', '长治', '晋城', '朔州', '晋中', '运城', '忻州', '吕梁'],
     '陕西': ['陕西', '西安', '铜川', '宝鸡', '咸阳', '渭南', '延安', '汉中', '榆林', '安康', '商洛'],
     '安徽': ['安徽', '合肥', '芜湖', '蚌埠', '淮南', '马鞍山', '淮北', '铜陵', '安庆', '黄山', '滁州', '阜阳', '宿州', '六安', '亳州', '池州', '宣城'],
     '黑龙江': ['黑龙江', '哈尔滨', '齐齐哈尔', '鸡西', '鹤岗', '双鸭山', '大庆', '伊春', '佳木斯', '七台河', '牡丹江', '黑河', '绥化'],
@@ -83,11 +75,7 @@ PROVINCE_KEYWORDS = {
 }
 
 CATEGORY_MAP = {
-    '卫视': ['卫视', '卫星', '东方', '北京卫视', '天津卫视', '河北卫视', '山西卫视', '内蒙古卫视',
-             '辽宁卫视', '吉林卫视', '黑龙江卫视', '江苏卫视', '浙江卫视', '安徽卫视', '福建东南',
-             '江西卫视', '山东卫视', '河南卫视', '湖北卫视', '湖南卫视', '广东卫视', '广西卫视',
-             '海南卫视', '四川卫视', '重庆卫视', '贵州卫视', '云南卫视', '西藏卫视', '陕西卫视',
-             '甘肃卫视', '青海卫视', '宁夏卫视', '新疆卫视'],
+    '卫视': ['卫视', '卫星', '东方', '北京卫视', '天津卫视', '河北卫视', '山西卫视', '内蒙古卫视', '辽宁卫视', '吉林卫视', '黑龙江卫视', '江苏卫视', '浙江卫视', '安徽卫视', '福建东南', '江西卫视', '山东卫视', '河南卫视', '湖北卫视', '湖南卫视', '广东卫视', '广西卫视', '海南卫视', '四川卫视', '重庆卫视', '贵州卫视', '云南卫视', '西藏卫视', '陕西卫视', '甘肃卫视', '青海卫视', '宁夏卫视', '新疆卫视'],
     '电影关键词': ['电影', '影院', 'CHC', '华数', '优酷', '爱奇艺', '腾讯', '芒果', '动作', '喜剧', '爱情', '科幻', '恐怖', '战争', '剧情', '影视'],
     '港澳台': ['凤凰', 'TVB', '翡翠', '明珠', 'J2', 'HOY', '东森', '中天', '年代', '三立', '民视', '公视', '华视', 'TVBS'],
     '经典剧场': ['经典', '怀旧', '老电影', '戏曲', '京剧']
@@ -95,15 +83,10 @@ CATEGORY_MAP = {
 
 # Keywords that usually indicate non-live or specific rotation channels
 ROTATION_KEYWORDS = ['轮播', '回放', '测试']
-
 FOREIGN_KEYWORDS = {
-    'CNN', 'BBC', 'NHK', 'KBS', 'MBC', 'SBS', 'Arirang', 'France', 'Deutsch', 'RTL', 'Sky', 'Al Jazeera',
-    'HBO', 'ESPN', 'Star Sports', 'Fox', 'Discovery', 'National Geographic', 'Cartoon Network',
-    'Nickelodeon', 'MTV', 'VH1', 'CNBC', 'Bloomberg', 'DW', 'RT', 'CGTN', 'ABS-CBN', 'GMA', 'TV5'
+    'CNN', 'BBC', 'NHK', 'KBS', 'MBC', 'SBS', 'Arirang', 'France', 'Deutsch', 'RTL', 'Sky', 'Al Jazeera', 'HBO', 'ESPN', 'Star Sports', 'Fox', 'Discovery', 'National Geographic', 'Cartoon Network', 'Nickelodeon', 'MTV', 'VH1', 'CNBC', 'Bloomberg', 'DW', 'RT', 'CGTN', 'ABS-CBN', 'GMA', 'TV5'
 }
-
-ALLOWED_FOREIGN = {'凤凰', 'TVB', '翡翠', '明珠', '东森', '中天', '年代', '三立', '民视', '公视', '华视', 'TVBS'}
-
+ALLOWED_FOREIGN = {'凤凰', 'TVB', '翡翠', '明珠', '东森', '中天', '年代', '三立', '民视', '公视', '华视', 'TVBS'} 
 
 # ================== Helper Functions ==================
 def is_foreign_channel(name):
@@ -153,15 +136,13 @@ def normalize_cctv_name(name):
     return name
 
 def categorize_channel(name):
-    """
-    Enhanced categorization to explicitly handle '电影轮播' (Movie Rotations).
-    """
+    """ Enhanced categorization to explicitly handle '电影轮播' (Movie Rotations). """
     name_lower = name.lower()
     
     # 1. CCTV
     if any(kw in name_lower for kw in ['cctv', '中央']):
         return '央视', normalize_cctv_name(name)
-    
+        
     # 2. Satellite TV (卫视)
     for kw in CATEGORY_MAP['卫视']:
         if kw.lower() in name_lower:
@@ -174,12 +155,12 @@ def categorize_channel(name):
     
     if has_movie_kw and has_rotation_kw:
         return '电影轮播', name
-
+        
     # 4. Regular Movie Channels (Must NOT have rotation keywords to avoid double counting, 
-    #    OR if it's a standard channel like 'CCTV-6')
+    # OR if it's a standard channel like 'CCTV-6')
     if has_movie_kw and not has_rotation_kw:
         return '电影频道', name
-    
+        
     # 5. HK/Macau/TW
     for kw in CATEGORY_MAP['港澳台']:
         if kw in name:
@@ -199,7 +180,6 @@ def categorize_channel(name):
     # 8. Fallback for other rotations or uncategorized
     if has_rotation_kw:
         return '其他', name
-        
     return "其他", name
 
 def check_url_valid(url, timeout=CHECK_TIMEOUT):
@@ -213,7 +193,6 @@ def check_url_valid(url, timeout=CHECK_TIMEOUT):
         except:
             return False
 
-
 # ================== Load Sources ==================
 def load_whitelist_as_local_program():
     print(f"👉 Loading whitelist.txt as '本地节目' (TOP)...")
@@ -223,14 +202,18 @@ def load_whitelist_as_local_program():
         channels = []
         for line in lines:
             line = line.strip()
-            if not line or line.startswith("#"): continue
+            if not line or line.startswith("#"):
+                continue
             parts = [p.strip() for p in line.split(",", 1)]
-            if len(parts) < 2: continue
+            if len(parts) < 2:
+                continue
             name, url = parts[0], parts[1]
-            if not name or not url or not is_valid_url(url): continue
-            if is_foreign_channel(name): continue
+            if not name or not url or not is_valid_url(url):
+                continue
+            if is_foreign_channel(name):
+                continue
             channels.append((name, url, "本地节目", 0))
-        print(f"   ✅ Loaded {len(channels)} channels from whitelist.")
+        print(f" ✅ Loaded {len(channels)} channels from whitelist.")
         return channels
     except Exception as e:
         print(f"❌ Load whitelist.txt failed: {e}")
@@ -263,7 +246,7 @@ def load_tv_m3u():
                     cat, disp = categorize_channel(current_name)
                     channels.append((disp, line, cat, 2))
                 current_name = None
-        print(f"   ✅ Loaded {len(channels)} channels from tv.m3u.")
+        print(f" ✅ Loaded {len(channels)} channels from tv.m3u.")
         return channels
     except Exception as e:
         print(f"❌ Load tv.m3u failed: {e}")
@@ -272,12 +255,10 @@ def load_tv_m3u():
 def load_guovin_iptv():
     channels = []
     success_url = None
-    
     for url in MIGU_SOURCE_URLS:
         print(f"👉 Trying source: {url} ...")
         try:
             response = requests.get(url, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
-            
             if response.status_code == 200 and len(response.text.strip()) > 100:
                 success_url = url
                 content = response.text
@@ -286,16 +267,14 @@ def load_guovin_iptv():
                     content = response.text
                 except:
                     pass
-                
                 lines = content.strip().splitlines()
                 current_name = None
                 parsed_count = 0
                 skipped_count = 0
-                
                 for line in lines:
                     line = line.strip()
-                    if not line: continue
-                    
+                    if not line:
+                        continue
                     if line.startswith("#EXTINF"):
                         if "," in line:
                             current_name = line.split(",", 1)[1].strip()
@@ -310,20 +289,16 @@ def load_guovin_iptv():
                             else:
                                 skipped_count += 1
                         current_name = None
-                
-                print(f"   ✅ SUCCESS! Loaded {parsed_count} channels from: {url}")
-                print(f"   (Skipped {skipped_count} foreign/invalid)")
-                break 
+                print(f" ✅ SUCCESS! Loaded {parsed_count} channels from: {url}")
+                print(f" (Skipped {skipped_count} foreign/invalid)")
+                break
             else:
-                print(f"   ⚠️ Failed (Status: {response.status_code} or empty), trying next...")
-                
+                print(f" ⚠️ Failed (Status: {response.status_code} or empty), trying next...")
         except Exception as e:
-            print(f"   ⚠️ Connection error ({str(e)[:50]}...), trying next...")
+            print(f" ⚠️ Connection error ({str(e)[:50]}...), trying next...")
             continue
-            
     if not success_url:
-        print(f"   ❌ ERROR: All Migu source URLs failed.")
-        
+        print(f" ❌ ERROR: All Migu source URLs failed.")
     return channels
 
 def load_bc_api():
@@ -337,7 +312,7 @@ def load_bc_api():
             if name and url and is_valid_url(url) and not is_foreign_channel(name):
                 cat, disp = categorize_channel(name)
                 channels.append((disp, url, cat, 2))
-        print(f"   ✅ Loaded {len(channels)} channels from BC API.")
+        print(f" ✅ Loaded {len(channels)} channels from BC API.")
         return channels
     except Exception as e:
         print(f"❌ Load BC API failed: {e}")
@@ -351,126 +326,4 @@ def load_local_txt():
         with open(LOCAL_TXT_PATH, 'r', encoding='utf-8') as f:
             lines = f.readlines()
         for line in lines:
-            line = line.strip()
-            if not line or line.startswith("#"): continue
-            parts = [p.strip() for p in line.split(",", 1)]
-            if len(parts) < 2: continue
-            name, url = parts[0], parts[1]
-            if not name or not url or not is_valid_url(url): continue
-            if is_foreign_channel(name): continue
-            cat, disp = categorize_channel(name)
-            channels.append((disp, url, cat, 1))
-        print(f"   ✅ Loaded {len(channels)} channels from local.txt.")
-    except Exception as e:
-        print(f"❌ Read local.txt failed: {e}")
-    return channels
-
-
-# ================== Sort ==================
-def sort_channels_final(channels):
-    # Updated ORDER to explicitly include '电影轮播'
-    ORDER = [
-        '本地节目', # Top priority
-        '央视', 
-        '卫视',
-        # Provinces
-        '四川', '广东', '湖南', '湖北', '江苏', '浙江', '山东', '河南', '河北', '福建', '广西', '云南', '江西', '辽宁', '山西', '陕西', '安徽', '黑龙江', '内蒙古', '吉林', '贵州', '甘肃', '海南', '青海', '宁夏', '新疆', '西藏',
-        # Movies & Special
-        '电影频道', 
-        '电影轮播', # Explicitly placed here
-        '港澳台', 
-        '经典剧场', 
-        '其他'
-    ]
-
-    def get_cctv_number(name):
-        match = re.search(r'CCTV-(\d+)', name)
-        return int(match.group(1)) if match else float('inf')
-
-    def sort_key(item):
-        name, url, group, priority = item
-        if group == "本地节目":
-            return (0, priority, name)
-        else:
-            group_order = ORDER.index(group) if group in ORDER else 999
-            if group == '央视':
-                return (1, group_order, priority, get_cctv_number(name), name)
-            else:
-                return (1, group_order, priority, name)
-
-    return sorted(channels, key=sort_key)
-
-
-# ================== Main ==================
-def main():
-    print("🚀 Generating playlist with Full Categories...")
-    print(f"   📡 Primary Source: {MIGU_SOURCE_URLS[0]}")
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-    all_channels = []
-
-    # Step 1: Whitelist (Local Programs)
-    all_channels.extend(load_whitelist_as_local_program())
-
-    # Step 2: Remote Sources
-    dynamic = get_dynamic_stream()
-    if dynamic: all_channels.append(dynamic)
-    
-    all_channels.extend(load_tv_m3u())
-    all_channels.extend(load_guovin_iptv()) 
-    all_channels.extend(load_bc_api())
-
-    # Filter foreign
-    filtered = [item for item in all_channels if not is_foreign_channel(item[0])]
-
-    # Validate ONLY remote (priority=2) CCTV
-    valid_channels = []
-    invalid_cctv_count = 0
-    for item in filtered:
-        name, url, group, priority = item
-        if group == '央视' and priority == 2:
-            if check_url_valid(url):
-                valid_channels.append(item)
-            else:
-                invalid_cctv_count += 1
-        else:
-            valid_channels.append(item)
-    
-    if invalid_cctv_count > 0:
-        print(f"   ⚠️ Skipped {invalid_cctv_count} invalid remote CCTV channels.")
-
-    # Step 3: Local TXT
-    local_channels = load_local_txt()
-    valid_channels.extend(local_channels)
-
-    # Sort
-    sorted_channels = sort_channels_final(valid_channels)
-
-    # Stats
-    stats = Counter(item[2] for item in sorted_channels)
-    print(f"\n📊 Total channels: {len(sorted_channels)}")
-    print("   📂 Category Breakdown:")
-    for cat, cnt in stats.most_common():
-        print(f"      {cat:<12}: {cnt}")
-
-    # Write M3U8
-    now = datetime.now().strftime("%Y-%m-%d %H:%M")
-    lines = ["#EXTM3U", f"# Generated at: {now}", 'x-tvg-url="https://epg.51zmt.top/xmltv.xml"']
-    for name, url, group, _ in sorted_channels:
-        lines.append(f'#EXTINF:-1 tvg-name="{name}" group-title="{group}",{name}')
-        lines.append(url)
-
-    try:
-        with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-            f.write("\n".join(lines) + "\n")
-        print(f"\n🎉 Output written to: {OUTPUT_FILE}")
-        print("   ✅ Categories included: 本地节目, 央视, 卫视, 地方节目, 电影轮播, etc.")
-    except Exception as e:
-        print(f"❌ Write error: {e}")
-
-    if not os.path.exists('.nojekyll'):
-        open('.nojekyll', 'w').close()
-
-
-if __name__ == "__main__":
-    main()
+            line = line.strip
