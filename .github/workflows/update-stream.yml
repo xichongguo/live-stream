@@ -1,8 +1,13 @@
 name: Update Live Streams
 
+# 👇 解决 Node.js 20 警告：强制使用 Node.js 24
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   schedule:
-    - cron: '0 23,10 * * *'  # 每天 10:00 和 23:00 UTC（即 18:00 和 7:00 北京时间）
+    # 每天 10:00 和 23:00 UTC（即北京时间 18:00 和 07:00）
+    - cron: '0 23,10 * * *' 
   workflow_dispatch:
   push:
     paths:
@@ -14,41 +19,40 @@ jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # ✅ 关键：允许读写仓库内容
-      # actions: read    # 可选：如果需要运行其他 Actions
+      contents: write
 
     steps:
-      - name: Checkout
+      - name: 🔻 Checkout Code
         uses: actions/checkout@v4
         with:
-          persist-credentials: true  # 保留凭据，允许 git push
+          # v4 默认行为已优化，无需特殊配置即可支持 push
           fetch-depth: 0
 
-      - name: Setup Python
+      - name: ⚙️ Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Install Requests
+      - name: 📦 Install Dependencies
         run: pip install requests
 
-      - name: Run Generator
+      - name: 🐍 Run Generator Script
         run: |
+          # 运行脚本（默认模式：生成文件）
           python get_live_stream.py
+          
+          # 输出日志，方便调试
           echo "📄 M3U8 内容预览:"
-          cat live/current.m3u8 | head -n 10
+          head -n 10 live/current.m3u8 || echo "文件生成失败或为空"
 
-      - name: Ensure .nojekyll
+      - name: 📂 Ensure .nojekyll
         run: touch .nojekyll
 
-      - name: Commit & Push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add live/ .nojekyll
-          if git diff --cached --quiet; then
-            echo "💡 无变化，无需提交"
-          else
-            git commit -m "🔄 自动更新 [$(date +'%Y-%m-%d %H:%M:%S')]"
-            git push origin main
-          fi
+      - name: 📤 Commit & Push Changes
+        # 使用专用 Action 简化 Git 推送流程
+        uses: ad-m/github-push-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # 只有当 live/ 目录或 .nojekyll 发生变化时才会触发 push
+          push_options: '--follow-tags --set-upstream'
+          commit_message: "🔄 自动更新直播源 [$(date +'%Y-%m-%d %H:%M:%S')]"
