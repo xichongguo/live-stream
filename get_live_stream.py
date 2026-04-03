@@ -171,7 +171,7 @@ def load_tv_m3u():
             line = lines[i].strip()
             if line.startswith("#EXTINF") and "," in line:
                 try:
-                    name = line.split(",", 1).strip()
+                    name = line.split(",", 1)[1].strip()
                 except:
                     i += 1
                     continue
@@ -186,7 +186,7 @@ def load_tv_m3u():
                 i += 1
     except Exception as e:
         print(f"❌ 加载 tv.m3u 失败: {e}")
-    return channels<websource>source_group_web_1</websource>
+    return channels
 
 def load_remote_whitelist():
     channels = []
@@ -199,14 +199,14 @@ def load_remote_whitelist():
                 continue
             if "," in line:
                 parts = line.split(",", 1)
-                name = parts.strip()
-                url = parts.strip()
+                name = parts[0].strip()
+                url = parts[1].strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
                     channels.append((name, url, "本地节目", 1))
                     print(f" ✅ Whitelist: {name}")
     except Exception as e:
         print(f"❌ 加载 whitelist.txt 失败: {e}")
-    return channels<websource>source_group_web_2</websource>
+    return channels
 
 def load_local_txt():
     channels = []
@@ -222,15 +222,15 @@ def load_local_txt():
                 continue
             if "," in line:
                 parts = line.split(",", 1)
-                name = parts.strip()
-                url = parts.strip()
+                name = parts[0].strip()
+                url = parts[1].strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
                     cat, disp = categorize_channel(name)
                     channels.append((disp, url, cat, 3))
                     print(f" ✅ Local: {name}")
     except Exception as e:
         print(f"❌ 加载 local.txt 失败: {e}")
-    return channels<websource>source_group_web_3</websource>
+    return channels
 
 # ================== Main Logic ==================
 def main():
@@ -241,7 +241,7 @@ def main():
         dynamic_channel = get_dynamic_stream()
         if dynamic_channel:
             all_channels.append(dynamic_channel)
-            print(f"✅ 获取到动态流: {dynamic_channel}")
+            print(f"✅ 获取到动态流: {dynamic_channel[0]}")
 
         all_channels.extend(load_remote_whitelist())
         all_channels.extend(load_tv_m3u())
