@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
-#EXTINF:-1 tvg-name="西充综合" group-title="其他",西充综合
+#EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://xichongguo.github.io/live-stream/live/current.m3u8
