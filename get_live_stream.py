@@ -153,7 +153,8 @@ def get_dynamic_stream():
             url = data['data']['m3u8Url']
             if url.startswith("http"):
                 if not is_foreign_channel("西充综合"):
-                    cat, disp = categorize_channel("西充综合")
+                    # 修改点：将“西充综合”的分类直接指定为“本地节目”
+                    cat, disp = "本地节目", "西充综合"
                     return (disp, url, cat, 0)
     except Exception as e:
         print(f"API 获取失败: {e}")
@@ -170,7 +171,7 @@ def load_tv_m3u():
             line = lines[i].strip()
             if line.startswith("#EXTINF") and "," in line:
                 try:
-                    name = line.split(",", 1)[1].strip()
+                    name = line.split(",", 1).strip()
                 except:
                     i += 1
                     continue
@@ -185,7 +186,7 @@ def load_tv_m3u():
                 i += 1
     except Exception as e:
         print(f"❌ 加载 tv.m3u 失败: {e}")
-    return channels
+    return channels<websource>source_group_web_1</websource>
 
 def load_remote_whitelist():
     channels = []
@@ -196,17 +197,16 @@ def load_remote_whitelist():
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
-            # 修复了这里的缩进错误
             if "," in line:
                 parts = line.split(",", 1)
-                name = parts[0].strip()
-                url = parts[1].strip()
+                name = parts.strip()
+                url = parts.strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
                     channels.append((name, url, "本地节目", 1))
                     print(f" ✅ Whitelist: {name}")
     except Exception as e:
         print(f"❌ 加载 whitelist.txt 失败: {e}")
-    return channels
+    return channels<websource>source_group_web_2</websource>
 
 def load_local_txt():
     channels = []
@@ -220,18 +220,17 @@ def load_local_txt():
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
-            # 修复了这里的缩进错误
             if "," in line:
                 parts = line.split(",", 1)
-                name = parts[0].strip()
-                url = parts[1].strip()
+                name = parts.strip()
+                url = parts.strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
                     cat, disp = categorize_channel(name)
                     channels.append((disp, url, cat, 3))
                     print(f" ✅ Local: {name}")
     except Exception as e:
         print(f"❌ 加载 local.txt 失败: {e}")
-    return channels
+    return channels<websource>source_group_web_3</websource>
 
 # ================== Main Logic ==================
 def main():
@@ -242,7 +241,7 @@ def main():
         dynamic_channel = get_dynamic_stream()
         if dynamic_channel:
             all_channels.append(dynamic_channel)
-            print(f"✅ 获取到动态流: {dynamic_channel[0]}")
+            print(f"✅ 获取到动态流: {dynamic_channel}")
 
         all_channels.extend(load_remote_whitelist())
         all_channels.extend(load_tv_m3u())
