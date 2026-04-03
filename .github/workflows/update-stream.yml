@@ -6,8 +6,9 @@ env:
 
 on:
   schedule:
-    # 每天 10:00 和 23:00 UTC（即北京时间 18:00 和 07:00）
-    - cron: '0 23,10 * * *' 
+    # 每天 UTC 23:00 和 09:00
+    # 对应北京时间 (UTC+8): 07:00 和 17:00
+    - cron: '0 23,9 * * *' 
   workflow_dispatch:
   push:
     paths:
@@ -25,7 +26,6 @@ jobs:
       - name: 🔻 Checkout Code
         uses: actions/checkout@v4
         with:
-          # v4 默认行为已优化，无需特殊配置即可支持 push
           fetch-depth: 0
 
       - name: ⚙️ Setup Python
@@ -49,10 +49,8 @@ jobs:
         run: touch .nojekyll
 
       - name: 📤 Commit & Push Changes
-        # 使用专用 Action 简化 Git 推送流程
         uses: ad-m/github-push-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 只有当 live/ 目录或 .nojekyll 发生变化时才会触发 push
           push_options: '--follow-tags --set-upstream'
           commit_message: "🔄 自动更新直播源 [$(date +'%Y-%m-%d %H:%M:%S')]"
