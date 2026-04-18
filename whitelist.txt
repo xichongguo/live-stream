@@ -6,8 +6,8 @@
 📺本地频道，#类型#
 
 西充综合,https://xichongguo.github.io/live-stream/live/current.m3u8
-南充综合,https://tfur3graunmtwgwzdcqbqga4145udqb4sa5bqcpzgha5zf3tsh.100ycdn.com:443/ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=f45f5156d5b5c8f59ef7393abe17a4a2&wsTime=1775293930&wsSession=3b29b29754d3d7c1486e548c-177529387263909&wsIPSercert=d9bf685073ab93d54aca7b6f89d0414c&wsiphost=local&wsBindIP=1
-南充科教生活,https://tfur3graunmtwgwzdcqbqga4145udqb4sa5bqcpzgha5zf3tsh.100ycdn.com/ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=f45f5156d5b5c8f59ef7393abe17a4a2&wsTime=1775293930&wsSession=3b29b29754d3d7c1486e548c-177529387263909&wsIPSercert=d9bf685073ab93d54aca7b6f89d0414c&wsiphost=local&wsBindIP=1
+南充综合,https://tfv53graurmtsgyzdgctqga5145udqb4sa5bqcpzgha5zf3tsh.100ycdn.com:443/ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=4931d0a4181a07186867336be58178bc&wsTime=1776482550&wsSession=9797c937e9fc6fdb2348696d-177648249365193&wsIPSercert=9a35ccfbc12d563402ca4334487c10dd&wsiphost=local&wsBindIP=1
+南充科教生活,https://tfv53graurmtsgyzdgctqgahn45udqb4sa5bqcpzgha5zf3tsh.100ycdn.com:443/ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=e3f5eb82f70d02d985fc495a89a8af9a&wsTime=1776482543&wsSession=2bee2d3b57da1573ad1eaf71-177648248636368&wsIPSercert=9a35ccfbc12d563402ca4334487c10dd&wsiphost=local&wsBindIP=1
 直播南充,https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 直播南充,https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
 📺本地视频，#类型#
