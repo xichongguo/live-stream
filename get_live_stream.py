@@ -32,6 +32,9 @@ DEFAULT_HEADERS = {
 OUTPUT_DIR = "live"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "current.m3u8")
 
+# --- 新增配置：高优先级源 ---
+PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
+
 # ================== Province Keywords ==================
 PROVINCE_KEYWORDS = {
     '四川': ['四川', '成都', '绵阳', '德阳', '南充', '宜宾', '泸州', '乐山', '达州', '内江', '自贡', '攀枝花', '广安', '遂宁', '资阳', '眉山', '雅安', '巴中', '阿坝', '甘孜', '凉山'],
@@ -74,6 +77,7 @@ CATEGORY_MAP = {
     '港澳台': ['凤凰', 'TVB', '翡翠', '明珠', 'J2', 'HOY', '东森', '中天', '年代', '三立', '民视', '公视', '华视', 'TVBS'],
     '经典剧场': ['经典', '怀旧', '老电影', '戏曲', '京剧']
 }
+
 ROTATION_KEYWORDS = ['轮播', '回放', '测试']
 FOREIGN_KEYWORDS = {'CNN', 'BBC', 'NHK', 'KBS', 'MBC', 'SBS', 'Arirang', 'France', 'Deutsch', 'RTL', 'Sky', 'Al Jazeera', 'HBO', 'ESPN', 'Star Sports', 'Fox', 'Discovery', 'National Geographic', 'Cartoon Network', 'Nickelodeon', 'MTV', 'VH1', 'CNBC', 'Bloomberg', 'DW', 'RT', 'CGTN', 'ABS-CBN', 'GMA', 'TV5'}
 ALLOWED_FOREIGN = {'凤凰', 'TVB', '翡翠', '明珠', '东森', '中天', '年代', '三立', '民视', '公视', '华视', 'TVBS'}
@@ -98,14 +102,22 @@ def is_valid_url(url):
 
 def normalize_cctv_name(name):
     CHINESE_ALIAS = {
-        "中央一套": "CCTV-1", "综合频道": "CCTV-1", "中央二套": "CCTV-2", "财经频道": "CCTV-2",
-        "中央三套": "CCTV-3", "综艺频道": "CCTV-3", "中央四套": "CCTV-4", "中文国际频道": "CCTV-4",
-        "中央五套": "CCTV-5", "体育频道": "CCTV-5", "中央六套": "CCTV-6", "电影频道": "CCTV-6",
-        "中央七套": "CCTV-7", "国防军事频道": "CCTV-7", "中央八套": "CCTV-8", "电视剧频道": "CCTV-8",
-        "中央九套": "CCTV-9", "纪录频道": "CCTV-9", "中央十套": "CCTV-10", "科教频道": "CCTV-10",
-        "中央十一套": "CCTV-11", "戏曲频道": "CCTV-11", "中央十二套": "CCTV-12", "社会与法频道": "CCTV-12",
-        "中央十三套": "CCTV-13", "新闻频道": "CCTV-13", "中央十四套": "CCTV-14", "少儿频道": "CCTV-14",
-        "中央十五套": "CCTV-15", "音乐频道": "CCTV-15", "中央十七套": "CCTV-17", "农业农村频道": "CCTV-17",
+        "中央一套": "CCTV-1", "综合频道": "CCTV-1",
+        "中央二套": "CCTV-2", "财经频道": "CCTV-2",
+        "中央三套": "CCTV-3", "综艺频道": "CCTV-3",
+        "中央四套": "CCTV-4", "中文国际频道": "CCTV-4",
+        "中央五套": "CCTV-5", "体育频道": "CCTV-5",
+        "中央六套": "CCTV-6", "电影频道": "CCTV-6",
+        "中央七套": "CCTV-7", "国防军事频道": "CCTV-7",
+        "中央八套": "CCTV-8", "电视剧频道": "CCTV-8",
+        "中央九套": "CCTV-9", "纪录频道": "CCTV-9",
+        "中央十套": "CCTV-10", "科教频道": "CCTV-10",
+        "中央十一套": "CCTV-11", "戏曲频道": "CCTV-11",
+        "中央十二套": "CCTV-12", "社会与法频道": "CCTV-12",
+        "中央十三套": "CCTV-13", "新闻频道": "CCTV-13",
+        "中央十四套": "CCTV-14", "少儿频道": "CCTV-14",
+        "中央十五套": "CCTV-15", "音乐频道": "CCTV-15",
+        "中央十七套": "CCTV-17", "农业农村频道": "CCTV-17",
     }
     if name in CHINESE_ALIAS:
         return CHINESE_ALIAS[name]
@@ -153,12 +165,62 @@ def get_dynamic_stream():
             url = data['data']['m3u8Url']
             if url.startswith("http"):
                 if not is_foreign_channel("西充综合"):
-                    # 修改点：将“西充综合”的分类直接指定为“本地节目”
                     cat, disp = "本地节目", "西充综合"
                     return (disp, url, cat, 0)
     except Exception as e:
         print(f"API 获取失败: {e}")
     return None
+
+# --- 新增函数：加载高优先级源 ---
+def load_priority_source():
+    channels = []
+    try:
+        response = requests.get(PRIORITY_SOURCE_URL, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
+        response.encoding = 'utf-8'
+        lines = response.text.strip().splitlines()
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+            if line.startswith("#EXTINF") and "," in line:
+                try:
+                    name = line.split(",", 1)[1].strip()
+                except:
+                    i += 1
+                    continue
+                i += 1
+                if i < len(lines):
+                    url_line = lines[i].strip()
+                    if url_line.startswith("http") and is_valid_url(url_line):
+                        if not is_foreign_channel(name):
+                            cat, disp = categorize_channel(name)
+                            # 优先级设为 -1，确保排在最前面
+                            channels.append((disp, url_line, cat, -1))
+                            print(f" ✅ Priority: {name}")
+            else:
+                i += 1
+    except Exception as e:
+        print(f"❌ 加载优先级源失败: {e}")
+    return channels
+
+def load_remote_whitelist():
+    channels = []
+    try:
+        response = requests.get(REMOTE_WHITELIST_URL, timeout=WHITELIST_TIMEOUT)
+        lines = response.text.strip().splitlines()
+        for line in lines:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if "," in line:
+                parts = line.split(",", 1)
+                name = parts[0].strip()
+                url = parts[1].strip()
+                if name and url and is_valid_url(url) and not is_foreign_channel(name):
+                    channels.append((name, url, "本地节目", 1))
+                    print(f" ✅ Whitelist: {name}")
+    except Exception as e:
+        print(f"❌ 加载 whitelist.txt 失败: {e}")
+    return channels
 
 def load_tv_m3u():
     channels = []
@@ -186,26 +248,6 @@ def load_tv_m3u():
                 i += 1
     except Exception as e:
         print(f"❌ 加载 tv.m3u 失败: {e}")
-    return channels
-
-def load_remote_whitelist():
-    channels = []
-    try:
-        response = requests.get(REMOTE_WHITELIST_URL, timeout=WHITELIST_TIMEOUT)
-        lines = response.text.strip().splitlines()
-        for line in lines:
-            line = line.strip()
-            if not line or line.startswith("#"):
-                continue
-            if "," in line:
-                parts = line.split(",", 1)
-                name = parts[0].strip()
-                url = parts[1].strip()
-                if name and url and is_valid_url(url) and not is_foreign_channel(name):
-                    channels.append((name, url, "本地节目", 1))
-                    print(f" ✅ Whitelist: {name}")
-    except Exception as e:
-        print(f"❌ 加载 whitelist.txt 失败: {e}")
     return channels
 
 def load_local_txt():
@@ -237,15 +279,16 @@ def main():
     try:
         print("🚀 开始合并直播源...")
         all_channels = []
-
-        dynamic_channel = get_dynamic_stream()
+        
+        # 按优先级顺序加载
+        all_channels.extend(load_priority_source()) # 优先级 -1
+        dynamic_channel = get_dynamic_stream()     # 优先级 0
         if dynamic_channel:
             all_channels.append(dynamic_channel)
             print(f"✅ 获取到动态流: {dynamic_channel[0]}")
-
-        all_channels.extend(load_remote_whitelist())
-        all_channels.extend(load_tv_m3u())
-        all_channels.extend(load_local_txt())
+        all_channels.extend(load_remote_whitelist()) # 优先级 1
+        all_channels.extend(load_tv_m3u())           # 优先级 2
+        all_channels.extend(load_local_txt())        # 优先级 3
 
         os.makedirs(OUTPUT_DIR, exist_ok=True)
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
@@ -254,10 +297,8 @@ def main():
                 name, url, category, priority = channel
                 f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{category}",{name}\n')
                 f.write(f'{url}\n')
-        
         print(f"🎉 合并完成！总频道数: {len(all_channels)}")
         print(f"📁 文件路径: {os.path.abspath(OUTPUT_FILE)}")
-        
     except Exception as e:
         print(f"❌ 主程序发生严重错误: {e}")
         os.makedirs(OUTPUT_DIR, exist_ok=True)
