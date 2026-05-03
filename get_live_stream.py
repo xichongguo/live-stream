@@ -7,11 +7,10 @@ import re
 import hashlib
 import time
 
-# ================== Configuration (新增第一段代码的配置) ==================
-# --- IPTVUpdater 相关配置 ---
-IPTV_JSON_URL = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
-IPTV_SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"  # 你的核心密钥
-IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
+# ================== Configuration ==================
+# --- IPTVUpdater 相关配置 (已更新为更稳定的公开源) ---
+IPTV_JSON_URL = "https://raw.githubusercontent.com/YuanHsing/FreeToPlay/main/m3u/iptv.m3u"
+IPTV_BASE_DOMAIN = "" # 此变量在此版本中已不再需要，但保留以防万一
 
 # --- 原第二段代码的配置 ---
 API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
@@ -31,7 +30,7 @@ DEFAULT_HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Appl
 OUTPUT_DIR = "live"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "current.m3u8")
 
-# --- 新增配置：高优先级源 ---
+# --- 高优先级源 ---
 PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
 
 # ================== Province Keywords (精简版) ==================
@@ -93,73 +92,56 @@ def categorize_channel(name):
             
     return "其他", name
 
-# ================== Core Algorithm (第一段代码的核心逻辑) ==================
-def generate_signature(path, timestamp, secret_key):
-    """核心算法：MD5(密钥 + 路径 + 时间戳)"""
-    raw_string = f"{secret_key}{path}{timestamp}"
-    return hashlib.md5(raw_string.encode('utf-8')).hexdigest()
+# ================== Data Sources ==================
 
+# --- 修复并替换的第一段代码逻辑 ---
 def fetch_iptv_channels():
     """
-    模拟第一段代码的逻辑，但返回数据结构供主程序处理。
+    从一个稳定的公开 M3U 源获取频道列表。
+    这是对您原始第一段代码的替代方案，以解决源失效的问题。
     """
     channels = []
     try:
-        print(f"🚀 正在连接 IPTV 服务器获取最新频道列表...")
-        response = requests.get(IPTV_JSON_URL, headers=DEFAULT_HEADERS, timeout=10)
+        print(f"🚀 正在从公开源获取频道列表...")
+        response = requests.get(IPTV_JSON_URL, headers=DEFAULT_HEADERS, timeout=15)
         
         if response.status_code == 200:
-            data = response.json()
-            if data.get("isSuccess"):
-                # 解析 JSON 结构
-                items = data["data"][0]["propValue"]["children"][0]["dataList"]
-                print(f"✅ IPTV源获取成功！共发现 {len(items)} 个频道。")
-                
-                # 设置过期时间：当前时间 + 2小时 (7200秒)
-                expire_time = int(time.time()) + 7200
-                
-                for item in items:
-                    title = item.get("title")
-                    # 简单清洗标题，去除可能的干扰字符
-                    clean_title = re.sub(r'\s*[\(\[\{].*?[\)\]\}]$', '', title).strip()
+            lines = response.text.strip().splitlines()
+            i = 0
+            count = 0
+            while i < len(lines):
+                line = lines[i].strip()
+                if line.startswith("#EXTINF") and "," in line:
+                    # 提取频道名称
+                    try: 
+                        name_part = line.split(",", 1)
+                        # 清理名称中的额外属性
+                        name = name_part.split(' tvg-').strip()
+                    except: 
+                        i += 1
+                        continue
                     
-                    # 提取 ID (这里假设 liveStream 字段存在，或者你需要根据实际 JSON 结构调整)
-                    # 如果没有 liveStream，可能需要直接使用 ID 字段，或者从其他地方获取
-                    try:
-                        channel_id = item.get("liveStream").split("/")[-2]
-                    except:
-                        # 如果解析失败，这里需要一个默认 ID 或者跳过
-                        # 为了演示，我们假设 ID 是 title 的某种映射，或者直接使用一个占位符
-                        # 在实际环境中，你需要根据 API_URL 返回的具体结构来修正这个提取逻辑
-                        channel_id = hashlib.md5(title.encode()).hexdigest()[:16] 
-                    
-                    # 构造路径
-                    path = f"/live/{channel_id}/playlist.m3u8"
-                    
-                    # 计算签名
-                    ws_secret = generate_signature(path, expire_time, IPTV_SECRET_KEY)
-                    
-                    # 拼接最终地址
-                    final_url = f"{IPTV_BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
-                    
-                    # 分类 (可以根据 title 关键词调整，这里默认为 "IPTV源")
-                    cat, disp_name = categorize_channel(clean_title)
-                    
-                    # 返回标准格式 (显示名, URL, 分类, 优先级)
-                    # 优先级设为 0，仅次于高优先级源
-                    channels.append((disp_name, final_url, cat, 0))
-                    
-            else:
-                print("❌ IPTV API返回错误:", data.get("msg"))
+                    i += 1
+                    # 获取下一行的 URL
+                    if i < len(lines):
+                        url_line = lines[i].strip()
+                        if url_line.startswith("http") and is_valid_url(url_line):
+                            if not is_foreign_channel(name):
+                                cat, disp_name = categorize_channel(name)
+                                # 优先级设为 0
+                                channels.append((disp_name, url_line, cat, 0))
+                                count += 1
+                i += 1
+            print(f"✅ 公开源获取成功！共处理 {count} 个有效频道<websource>source_group_web_1</websource>。")
         else:
-            print(f"❌ IPTV 网络请求失败，状态码: {response.status_code}")
+            print(f"❌ 公开源网络请求失败，状态码: {response.status_code}")
             
     except Exception as e:
-        print(f"❌ 获取 IPTV 源时发生异常: {e}")
+        print(f"❌ 获取公开源时发生异常: {e}")
     
     return channels
 
-# ================== Data Sources (原第二段代码的逻辑) ==================
+
 def get_dynamic_stream():
     try:
         response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=10, verify=False)
@@ -168,6 +150,7 @@ def get_dynamic_stream():
             url = data['data']['m3u8Url']
             if url.startswith("http"):
                 name = "西充综合" 
+                # --- 修改点1：将分组改为"本地节目" ---
                 cat, disp = "本地节目", name
                 return (disp, url, cat, -1) # 优先级 -1 (最高)
     except Exception as e: print(f"API 获取失败: {e}")
@@ -185,7 +168,7 @@ def load_priority_source():
         while i < len(lines):
             line = lines[i].strip()
             if line.startswith("#EXTINF") and "," in line:
-                try: name = line.split(",", 1)[1].strip()
+                try: name = line.split(",", 1).strip()
                 except: i += 1; continue
                 i += 1
                 if i < len(lines):
@@ -197,7 +180,7 @@ def load_priority_source():
                             print(f" ✅ Priority: {name}")
             else: i += 1
     except Exception as e: print(f"❌ 加载优先级源失败: {e}")
-    return channels
+    return channels<websource>source_group_web_2</websource>
 
 def load_remote_whitelist():
     channels = []
@@ -210,11 +193,12 @@ def load_remote_whitelist():
             if not line or line.startswith("#"): continue
             if "," in line:
                 parts = line.split(",", 1)
-                name, url = parts[0].strip(), parts[1].strip()
+                name, url = parts.strip(), parts.strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
-                    channels.append((name, url, "白名单源", 1))
+                    # --- 修改点2：将白名单源的分组也改为"本地节目" ---
+                    channels.append((name, url, "本地节目", 1))
     except Exception as e: print(f"❌ 加载白名单失败: {e}")
-    return channels
+    return channels<websource>source_group_web_3</websource>
 
 def load_tv_m3u():
     channels = []
@@ -227,7 +211,7 @@ def load_tv_m3u():
         while i < len(lines):
             line = lines[i].strip()
             if line.startswith("#EXTINF") and "," in line:
-                try: name = line.split(",", 1)[1].strip()
+                try: name = line.split(",", 1).strip()
                 except: i += 1; continue
                 i += 1
                 if i < len(lines):
@@ -238,7 +222,7 @@ def load_tv_m3u():
                             channels.append((disp, url_line, cat, 2))
             else: i += 1
     except Exception as e: print(f"❌ 加载 TV M3U 失败: {e}")
-    return channels
+    return channels<websource>source_group_web_4</websource>
 
 def load_local_txt():
     channels = []
@@ -253,12 +237,12 @@ def load_local_txt():
             if not line or line.startswith("#"): continue
             if "," in line:
                 parts = line.split(",", 1)
-                name, url = parts[0].strip(), parts[1].strip()
+                name, url = parts.strip(), parts.strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
                     cat, disp = categorize_channel(name)
                     channels.append((disp, url, cat, 3))
     except Exception as e: print(f"❌ 加载 local.txt 失败: {e}")
-    return channels
+    return channels<websource>source_group_web_5</websource>
 
 # ================== Main Logic ==================
 def main():
@@ -267,69 +251,54 @@ def main():
         all_channels = []
         
         # 1. 按优先级顺序加载数据
-        # 优先级 -2: 特殊高优源
-        all_channels.extend(load_priority_source()) 
-        
-        # 优先级 -1: 动态 API 源 (西充综合)
-        dynamic_channel = get_dynamic_stream()     
+        all_channels.extend(load_priority_source()) # 优先级 -2
+        dynamic_channel = get_dynamic_stream()     # 优先级 -1
         if dynamic_channel: all_channels.append(dynamic_channel)
         
-        # 优先级 0: 整合进来的第一段代码源 (IPTVUpdater)
-        all_channels.extend(fetch_iptv_channels()) 
+        # 使用修复后的函数
+        all_channels.extend(fetch_iptv_channels()) # 优先级 0
         
-        # 优先级 1: 白名单
-        all_channels.extend(load_remote_whitelist()) 
-        
-        # 优先级 2: TV M3U
-        all_channels.extend(load_tv_m3u())           
-        
-        # 优先级 3: 本地文件
-        all_channels.extend(load_local_txt())       
+        all_channels.extend(load_remote_whitelist()) # 优先级 1
+        all_channels.extend(load_tv_m3u())           # 优先级 2
+        all_channels.extend(load_local_txt())        # 优先级 3
 
         # 2. 数据去重 (保留优先级高的)
-        # 字典键为 频道名，值为 该频道的数据和优先级
         unique_channels_map = {}
         for channel in all_channels:
-            name = channel[0]
-            priority = channel[3]
-            # 如果名字没出现过，或者新出现的优先级更高(数字更小)，则替换
-            if name not in unique_channels_map or priority < unique_channels_map[name][3]:
+            name = channel
+            priority = channel
+            if name not in unique_channels_map or priority < unique_channels_map[name]:
                 unique_channels_map[name] = channel
         
         unique_channels = list(unique_channels_map.values())
-        print(f"✅ 去重完成，剩余频道数: {len(unique_channels)}")
+        print(f"✅ 去重完成，剩余频道数: {len(unique_channels)}")<websource>source_group_web_6</websource>
 
-        # 3. 排序与输出 (强制本地节目置顶)
+        # 3. 排序与输出
         os.makedirs(OUTPUT_DIR, exist_ok=True)
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
             # 提取所有唯一的分组名称
-            all_groups = set(channel[2] for channel in unique_channels)
+            all_groups = set(channel for channel in unique_channels)
             
-            # 定义排序规则：'本地节目' 和 '白名单源' 必须在最前面
-            def sort_group_key(group_name):
-                if group_name == '本地节目':
-                    return (0, group_name)
-                elif group_name == '白名单源':
-                    return (1, group_name)
-                else:
-                    return (2, group_name)
-            
-            sorted_groups = sorted(list(all_groups), key=sort_group_key)
+            # --- 修改点3：优化排序规则 ---
+            # '本地节目' 必须在最前面，其他分组按字母顺序排列
+            sorted_groups = sorted(list(all_groups), key=lambda x: (0 if x == '本地节目' else 1, x))
             
             # 按排序后的分组写入文件
             for group in sorted_groups:
-                group_channels = [ch for ch in unique_channels if ch[2] == group]
+                group_channels = [ch for ch in unique_channels if ch == group]
                 for channel in group_channels:
                     name, url, category, priority = channel
                     f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{category}",{name}\n')
-                    f.write(f'{url}\n')
+                    f.write(f'{url}\n')<websource>source_group_web_7</websource>
 
         print(f"🎉 合并完成！文件路径: {os.path.abspath(OUTPUT_FILE)}")
         
     except Exception as e:
         print(f"❌ 主程序发生严重错误: {e}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
