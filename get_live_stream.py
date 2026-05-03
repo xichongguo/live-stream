@@ -59,38 +59,43 @@ def is_valid_url(url):
 
 def categorize_channel(name):
     """
-    【核心修复】强制本地频道归类逻辑
+    【核心修复】精准分类逻辑
+    1. 首先检查是否为本地频道
+    2. 然后按顺序检查央视、卫视等其他类型
+    3. 最后根据省份关键词归类
     """
-    # --- 🔴 强制规则：本地关键词优先匹配 ---
-    local_keywords = ['西充', '南充', '综合', '顺庆', '高坪', '嘉陵']
+    # --- 🔴 第一优先级：本地节目 ---
+    local_keywords = ['西充', '南充']
     if any(kw in name for kw in local_keywords):
         return "本地节目", name
 
-    # --- 央视逻辑 ---
+    # --- ⚪️ 第二优先级：央视 ---
     if any(kw in name.lower() for kw in ['cctv', '中央']):
         match = re.search(r'CCTV\D*(\d+)', name.upper())
-        if match: return f"CCTV-{int(match.group(1))}", name
+        if match: 
+            return f"CCTV-{int(match.group(1))}", name
         return "央视", name
     
-    # --- 卫视逻辑 ---
+    # --- 🛰️ 第三优先级：卫视 ---
     for kw in CATEGORY_MAP['卫视']:
         if kw.lower() in name.lower(): return '卫视', name
     
-    # --- 电影逻辑 ---
+    # --- 🎬 第四优先级：电影 ---
     has_movie_kw = any(kw.lower() in name.lower() for kw in CATEGORY_MAP['电影关键词'])
     has_rotation_kw = any(kw in name.lower() for kw in ROTATION_KEYWORDS)
     if has_movie_kw and has_rotation_kw: return '电影轮播', name
     if has_movie_kw: return '电影频道', name
     
-    # --- 港澳台逻辑 ---
+    # --- 🌏 第五优先级：港澳台 ---
     for kw in CATEGORY_MAP['港澳台']:
         if kw in name: return '港澳台', name
         
-    # --- 省份逻辑 ---
+    # --- 🗺️ 第六优先级：省份 ---
     for prov, cities in PROVINCE_KEYWORDS.items():
         for city in cities:
             if city in name: return prov, name
             
+    # --- 默认：其他 ---
     return "其他", name
 
 # ================== Data Sources ==================
@@ -104,6 +109,7 @@ def get_dynamic_stream():
             url = data['data']['m3u8Url']
             name = "西充综合"
             if url.startswith("http"):
+                # 优先级 0，高于白名单
                 return (name, url, "本地节目", 0)
     except Exception as e: 
         print(f"❌ API 获取失败: {e}")
@@ -129,6 +135,7 @@ def load_priority_source():
                     if url_line.startswith("http") and is_valid_url(url_line):
                         if not is_foreign_channel(name):
                             cat, disp = categorize_channel(name)
+                            # 优先级 -1，最高
                             channels.append((disp, url_line, cat, -1))
             else: i += 1
     except Exception as e: 
@@ -146,13 +153,13 @@ def load_remote_whitelist():
             if not line or line.startswith("#"): continue
             if "," in line:
                 parts = line.split(",", 1)
-                name, url = parts[0].strip(), parts[1].strip()
+                name, url = parts.strip(), parts.strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
-                    # 强制归类为本地节目
+                    # 强制归类为本地节目，优先级 1
                     channels.append((name, url, "本地节目", 1))
     except Exception as e: 
         print(f"❌ 加载白名单失败: {e}")
-    return channels
+    return channels<websource>source_group_web_1</websource>
 
 def load_tv_m3u():
     channels = []
@@ -173,6 +180,7 @@ def load_tv_m3u():
                     if url_line.startswith("http") and is_valid_url(url_line):
                         if not is_foreign_channel(name):
                             cat, disp = categorize_channel(name)
+                            # 优先级 2
                             channels.append((disp, url_line, cat, 2))
             else: i += 1
     except Exception as e: 
@@ -191,13 +199,14 @@ def load_local_txt():
             if not line or line.startswith("#"): continue
             if "," in line:
                 parts = line.split(",", 1)
-                name, url = parts[0].strip(), parts[1].strip()
+                name, url = parts.strip(), parts.strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
                     cat, disp = categorize_channel(name)
+                    # 优先级 3，最低
                     channels.append((disp, url, cat, 3))
     except Exception as e: 
         print(f"❌ 加载 local.txt 失败: {e}")
-    return channels
+    return channels<websource>source_group_web_2</websource>
 
 # ================== Main Logic ==================
 def main():
@@ -205,40 +214,44 @@ def main():
         print("🚀 开始合并直播源...")
         all_channels = []
         
-        # 1. 加载数据
-        all_channels.extend(load_priority_source())
+        # 1. 按优先级顺序加载数据
+        all_channels.extend(load_priority_source()) # 优先级 -1
         
-        dynamic_channel = get_dynamic_stream()
-        if dynamic_channel: all_channels.append(dynamic_channel)
+        dynamic_channel = get_dynamic_stream()     # 优先级 0
+        if dynamic_channel: 
+            all_channels.append(dynamic_channel)
         
-        all_channels.extend(load_remote_whitelist())
-        all_channels.extend(load_tv_m3u())
-        all_channels.extend(load_local_txt())
+        all_channels.extend(load_remote_whitelist()) # 优先级 1
+        all_channels.extend(load_tv_m3u())           # 优先级 2
+        all_channels.extend(load_local_txt())        # 优先级 3
 
-        # 2. 去重
+        # 2. 【核心修复】数据去重与更新
+        # 逻辑：对于同名频道，只保留优先级数字最小（即优先级最高）的那个。
+        # 这确保了来自API和白名单的最新链接能够覆盖旧的链接。
         unique_channels_map = {}
         for channel in all_channels:
-            name = channel[0]
-            priority = channel[3]
-            if name not in unique_channels_map or priority < unique_channels_map[name][3]:
+            name = channel
+            priority = channel
+            if name not in unique_channels_map or priority < unique_channels_map[name]:
                 unique_channels_map[name] = channel
         
         unique_channels = list(unique_channels_map.values())
         print(f"✅ 去重完成，剩余频道数: {len(unique_channels)}")
 
-        # 3. 输出
+        # 3. 输出文件
         os.makedirs(OUTPUT_DIR, exist_ok=True)
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
-            # 提取分组
-            all_groups = set(channel[2] for channel in unique_channels)
+            # 提取所有唯一的分组名称
+            all_groups = set(channel for channel in unique_channels)
             
-            # 排序：本地节目置顶
+            # 定义排序规则：'本地节目' 必须在最前面
             sorted_groups = sorted(list(all_groups), key=lambda x: (0 if x == '本地节目' else 1, x))
             
+            # 按排序后的分组写入文件
             for group in sorted_groups:
-                group_channels = [ch for ch in unique_channels if ch[2] == group]
+                group_channels = [ch for ch in unique_channels if ch == group]
                 for channel in group_channels:
                     name, url, category, priority = channel
                     f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{category}",{name}\n')
