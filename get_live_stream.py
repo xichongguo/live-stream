@@ -2,10 +2,10 @@
 import requests
 import os
 import sys
-import time
-import hashlib
 from urllib.parse import urlparse
 import re
+import time
+import hashlib
 
 # ================== Configuration ==================
 # API 接口配置
@@ -23,7 +23,7 @@ TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m
 LOCAL_TXT_PATH = "local.txt"
 PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66" # 高优先级源
 
-# 签名配置 (如果需要处理加密链接)
+# 签名配置 (备用)
 SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2" 
 BASE_DOMAIN = "https://ncpull.cnncw.cn"
 
@@ -113,7 +113,7 @@ def categorize_channel(name):
 
 # ================== Data Sources ==================
 def get_dynamic_stream():
-    """获取API动态流，并尝试修复签名（如果失效）"""
+    """获取API动态流"""
     try:
         print(f"📡 正在请求西充API...")
         response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=10, verify=False)
@@ -123,8 +123,6 @@ def get_dynamic_stream():
             url = data['data']['m3u8Url']
             name = "西充综合"
             
-            # 如果URL包含 auth_key 且可能过期，这里可以尝试重构，
-            # 但通常直接返回即可，除非明确知道需要重新签名
             if url.startswith("http"):
                 return (name, url, "本地节目", 0)
                 
