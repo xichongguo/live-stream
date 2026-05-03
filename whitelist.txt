@@ -5,9 +5,7 @@
 # 填写频道名称将直接将记录保留到最终结果，例如：CCTV-1,url，仅填写界面地址将对所有频道有效，多条记录 newline 输入。
 📺本地频道，#类型#
 
-西充综合,https://xichongguo.github.io/live-stream/live/current.m3u8
-南充综合,https://tfv53graurmtsgyzdgctqga5145udqb4sa5bqcpzgha5zf3tsh.100ycdn.com:443/ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=4931d0a4181a07186867336be58178bc&wsTime=1776482550&wsSession=9797c937e9fc6fdb2348696d-177648249365193&wsIPSercert=9a35ccfbc12d563402ca4334487c10dd&wsiphost=local&wsBindIP=1
-南充科教生活,https://tfv53graurmtsgyzdgctqgahn45udqb4sa5bqcpzgha5zf3tsh.100ycdn.com:443/ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=e3f5eb82f70d02d985fc495a89a8af9a&wsTime=1776482543&wsSession=2bee2d3b57da1573ad1eaf71-177648248636368&wsIPSercert=9a35ccfbc12d563402ca4334487c10dd&wsiphost=local&wsBindIP=1
+
 直播南充,https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 直播南充,https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
 📺本地视频，#类型#
