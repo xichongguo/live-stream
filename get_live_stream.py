@@ -66,18 +66,16 @@ def generate_signature(path, timestamp):
 def categorize_channel(name):
     """
     【核心修复】精准分类逻辑
-    1. 本地 -> 2. 央视 -> 3. 卫视 -> 4. 电影 -> 5. 省份
+    1. 本地 -> 2. 央视(统一) -> 3. 卫视 -> 4. 电影 -> 5. 省份
     """
     # --- 🔴 第一优先级：本地节目 ---
     local_keywords = ['西充', '南充']
     if any(kw in name for kw in local_keywords):
         return "本地节目", name
 
-    # --- ⚪️ 第二优先级：央视 ---
+    # --- ⚪️ 第二优先级：央视 (统一归类) ---
     if any(kw in name.lower() for kw in ['cctv', '中央']):
-        match = re.search(r'CCTV\D*(\d+)', name.upper())
-        if match: 
-            return f"CCTV-{int(match.group(1))}", name
+        # 这里不再细分 CCTV-1, CCTV-2，统一返回 "央视"
         return "央视", name
     
     # --- 🛰️ 第三优先级：卫视 ---
@@ -257,13 +255,14 @@ def main():
         # 核心：先加载南充API（带签名），确保本地和央视是最新的
         all_channels.extend(get_nanchong_dynamic_stream()) 
         
-        all_channels.extend(load_priority_source()) # 优先级 -1
+# -*- 编码: utf-8 -*-extend(load_priority_source()) # 优先级 -1
         
         all_channels.extend(load_remote_whitelist()) # 优先级 1
         all_channels.extend(load_tv_m3u())           # 优先级 2
         all_channels.extend(load_local_txt())        # 优先级 3
 
         # 2. 数据去重与更新
+        # 逻辑：对于同名频道，只保留优先级数字最小（即优先级最高）的那个。
         unique_channels_map = {}
         for channel in all_channels:
             name = channel[0]
@@ -282,7 +281,7 @@ def main():
             # 提取所有唯一的分组名称
             all_groups = set(channel[2] for channel in unique_channels)
             
-            # 定义排序规则：'本地节目' 必须在最前面，其次是 '央视'，然后是其他
+            # 定义排序规则：'本地节目' -> '央视' -> '卫视' -> 其他
             def sort_key(x):
                 if x == '本地节目': return 0
                 if x == '央视': return 1
