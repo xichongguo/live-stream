@@ -148,12 +148,12 @@ def load_remote_whitelist():
             if not line or line.startswith("#"): continue
             if "," in line:
                 parts = line.split(",", 1)
-                name, url = parts.strip(), parts.strip()
+                name, url = parts[0].strip(), parts[1].strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
                     channels.append((name, url, "本地节目", 1))
     except Exception as e: 
         print(f"❌ 加载白名单失败: {e}")
-    return channels<websource>source_group_web_1</websource>
+    return channels
 
 def load_tv_m3u():
     channels = []
@@ -192,13 +192,13 @@ def load_local_txt():
             if not line or line.startswith("#"): continue
             if "," in line:
                 parts = line.split(",", 1)
-                name, url = parts.strip(), parts.strip()
+                name, url = parts[0].strip(), parts[1].strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
                     cat, disp = categorize_channel(name)
                     channels.append((disp, url, cat, 3))
     except Exception as e: 
         print(f"❌ 加载 local.txt 失败: {e}")
-    return channels<websource>source_group_web_2</websource>
+    return channels
 
 # ================== Main Logic ==================
 def main():
@@ -220,13 +220,13 @@ def main():
         # 2. 数据去重与更新
         unique_channels_map = {}
         for channel in all_channels:
-            name = channel
-            priority = channel
-            if name not in unique_channels_map or priority < unique_channels_map[name]:
+            name = channel[0]
+            priority = channel[3]
+            if name not in unique_channels_map or priority < unique_channels_map[name][3]:
                 unique_channels_map[name] = channel
         
         unique_channels = list(unique_channels_map.values())
-        print(f"✅ 去重完成，剩余频道数: {len(unique_channels)}")<websource>source_group_web_3</websource>
+        print(f"✅ 去重完成，剩余频道数: {len(unique_channels)}")
 
         # 3. 输出文件
         os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -234,18 +234,18 @@ def main():
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
             # 提取所有唯一的分组名称
-            all_groups = set(channel for channel in unique_channels)
+            all_groups = set(channel[2] for channel in unique_channels)
             
             # 定义排序规则：'本地节目' 必须在最前面
             sorted_groups = sorted(list(all_groups), key=lambda x: (0 if x == '本地节目' else 1, x))
             
             # 按排序后的分组写入文件
             for group in sorted_groups:
-                group_channels = [ch for ch in unique_channels if ch == group]
+                group_channels = [ch for ch in unique_channels if ch[2] == group]
                 for channel in group_channels:
                     name, url, category, priority = channel
                     f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{category}",{name}\n')
-                    f.write(f'{url}\n')<websource>source_group_web_4</websource>
+                    f.write(f'{url}\n')
 
         print(f"🎉 合并完成！文件路径: {os.path.abspath(OUTPUT_FILE)}")
         
