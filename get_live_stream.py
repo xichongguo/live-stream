@@ -13,7 +13,6 @@ class IPTVUpdater:
         self.base_domain = "https://ncpull.cnncw.cn"
         
         # --- 央视 (CCTV) 公共源配置 ---
-        # 使用了通用的公共源，确保CCTV-1等频道有效
         self.cctv_sources = {
             "CCTV-1": "http://ivi.bupt.edu.cn/hls/cctv1.m3u8",
             "CCTV-2": "http://ivi.bupt.edu.cn/hls/cctv2.m3u8",
@@ -33,22 +32,14 @@ class IPTVUpdater:
             "CCTV-15": "http://ivi.bupt.edu.cn/hls/cctv15.m3u8",
             "CCTV-16": "http://ivi.bupt.edu.cn/hls/cctv16.m3u8",
             "CCTV-4K": "http://ivi.bupt.edu.cn/hls/cctv4k.m3u8",
-            "CCTV-8K": "http://ivi.bupt.edu.cn/hls/cctv8k.m3u8",
             "CCTV-News": "http://ivi.bupt.edu.cn/hls/cctvnews.m3u8",
-            "CCTV-Français": "http://ivi.bupt.edu.cn/hls/cctvfrancais.m3u8",
-            "CCTV-العربية": "http://ivi.bupt.edu.cn/hls/cctvalarabiya.m3u8",
-            "CCTV-Русский": "http://ivi.bupt.edu.cn/hls/cctvryssiya.m3u8",
-            "CCTV-Español": "http://ivi.bupt.edu.cn/hls/cctvespanol.m3u8",
         }
         
         # --- 输出配置 ---
         self.output_dir = "live"
         self.output_file = os.path.join(self.output_dir, "current.m3u8")
         
-        # 请求头伪装
-        self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
+        self.headers = {'User-Agent': 'Mozilla/5.0'}
 
     def generate_signature(self, path, timestamp):
         """核心算法：MD5(密钥 + 路径 + 时间戳)"""
@@ -66,60 +57,53 @@ class IPTVUpdater:
                 data = response.json()
                 
                 if data.get("isSuccess"):
-                    # 解析 JSON 结构找到频道列表
-                    items = data["data"][0]["propValue"]["children"][0]["dataList"]
+                    # 【修复】修正JSON路径，防止索引越界
+                    # 尝试安全地获取 dataList
+                    try:
+                        items = data["data"]["propValue"]["children"]["dataList"]
+                    except (IndexError, KeyError) as e:
+                        print(f"❌ JSON结构解析失败，请检查API返回内容: {e}")
+                        return channels
                     
-                    # 设置过期时间：当前时间 + 2小时 (7200秒)
+                    # 设置过期时间：当前时间 + 2小时
                     expire_time = int(time.time()) + 7200
                     
                     for item in items:
                         title = item.get("title")
-                        # 优先处理：南充综合、南充科教
-                        if "南充综合" in title or "南充科教" in title:
+                        # 只提取包含“南充”或“西充”的频道
+                        if "南充" in title or "西充" in title:
                             try:
-                                # 尝试从 liveStream 字段提取 ID
                                 live_stream = item.get("liveStream", "")
-                                # 正则提取 ID，格式通常是 /live/{id}/playlist.m3u8
-                                import re
-                                match = re.search(r'/live/([^/]+)/playlist\.m3u8', live_stream)
-                                channel_id = match.group(1) if match else None
+                                channel_id = None
                                 
-                                # 如果正则没提取到，尝试从 URL 分割
-                                if not channel_id:
-                                    parts = live_stream.split("/")
-                                    channel_id = parts[parts.index("live") + 1] if "live" in parts else None
+                                # 尝试从链接中提取 ID
+                                if "/live/" in live_stream and "/playlist.m3u8" in live_stream:
+                                    channel_id = live_stream.split("/live/").split("/playlist.m3u8")
                                 
                                 if channel_id:
-                                    # 构造路径
                                     path = f"/live/{channel_id}/playlist.m3u8"
-                                    # 计算签名
                                     ws_secret = self.generate_signature(path, expire_time)
-                                    # 拼接最终地址
                                     final_url = f"{self.base_domain}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
-                                    
-                                    # 确定分组
-                                    group = "本地节目" if "南充" in title else "本地节目"
                                     
                                     channels.append({
                                         "name": title,
                                         "url": final_url,
-                                        "group": group
+                                        "group": "本地节目"
                                     })
                                     print(f"✅ 成功生成: {title}")
                                 else:
-                                    print(f"❌ 无法提取 ID: {title}")
+                                    print(f"⚠️ 跳过 {title}: 无法提取ID")
                             except Exception as e:
                                 print(f"❌ 处理频道失败 {title}: {e}")
-                                
                 else:
                     print(f"❌ API返回错误: {data.get('msg')}")
             else:
-                print(f"❌ 网络请求失败，状态码: {response.status_code}")
+                print(f"❌ 网络请求失败: {response.status_code}")
                 
         except Exception as e:
             print(f"❌ 获取南充源时发生异常: {e}")
         
-        return channels
+        return channels<websource>source_group_web_1</websource>
 
     def get_cctv_channels(self):
         """获取央视频道列表"""
@@ -135,16 +119,12 @@ class IPTVUpdater:
 
     def write_to_m3u8(self, channels):
         """写入 M3U8 文件"""
-        # 创建目录
         if not os.path.exists(self.output_dir):
             os.makedirs(self.output_dir)
         
         with open(self.output_file, 'w', encoding='utf-8') as f:
-            # 写入 M3U 头部
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
-            # 按分组写入 (先写央视，再写本地)
-            # 这里简单按列表顺序，你可以调整 get_channels 的顺序
             for channel in channels:
                 f.write(f'#EXTINF:-1 tvg-name="{channel["name"]}" group-title="{channel["group"]}",{channel["name"]}\n')
                 f.write(f'{channel["url"]}\n')
@@ -170,6 +150,4 @@ class IPTVUpdater:
 if __name__ == "__main__":
     updater = IPTVUpdater()
     updater.run()
-    
-    print("\n💡 提示：按任意键退出...")
-    input()
+    # 移除了 input() 以防止在自动化环境中报错
