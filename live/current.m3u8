@@ -1,15 +1,15 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
-#EXTINF:-1 tvg-name="直播南充" group-title="白名单源",直播南充
+#EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
 https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
-#EXTINF:-1 tvg-name="走进四川西充" group-title="白名单源",走进四川西充
+#EXTINF:-1 tvg-name="走进四川西充" group-title="本地节目",走进四川西充
 https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
-#EXTINF:-1 tvg-name="西充王河湾冬季风景" group-title="白名单源",西充王河湾冬季风景
+#EXTINF:-1 tvg-name="西充王河湾冬季风景" group-title="本地节目",西充王河湾冬季风景
 https://us-xpc5.xpccdn.com/25fc9e48-6a27-4148-8169-00255208627b/2b4c670a-6231-4a28-8707-5835df8568d3.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%2234m0k6dcmmnkfyi6w%22%2C%22ip%22%3A%22223.73.134.245%2C120.241.65.73%22%7D
-#EXTINF:-1 tvg-name="西充莲花湖夜景" group-title="白名单源",西充莲花湖夜景
+#EXTINF:-1 tvg-name="西充莲花湖夜景" group-title="本地节目",西充莲花湖夜景
 https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
-#EXTINF:-1 tvg-name="西充县华光乡黄家庙村桅杆湾志" group-title="白名单源",西充县华光乡黄家庙村桅杆湾志
+#EXTINF:-1 tvg-name="西充县华光乡黄家庙村桅杆湾志" group-title="本地节目",西充县华光乡黄家庙村桅杆湾志
 https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
 #EXTINF:-1 tvg-name="上海新闻综合" group-title="上海",上海新闻综合
 http://101.201.236.122:3000/651632657
@@ -859,10 +859,6 @@ http://101.201.236.122:3000/964511463
 http://101.201.236.122:3000/964511470
 #EXTINF:-1 tvg-name="英超 切尔西VS诺丁汉森林 赛场原声 21:45" group-title="其他",英超 切尔西VS诺丁汉森林 赛场原声 21:45
 http://101.201.236.122:3000/964511484
-#EXTINF:-1 tvg-name="综合频道" group-title="其他",综合频道
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=239b260ba4a608fec9b03f2222df8d4b&wsTime=1777820179
-#EXTINF:-1 tvg-name="科教生活频道" group-title="其他",科教生活频道
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=8be5878d467540b7bb23761ba681a857&wsTime=1777820179
 #EXTINF:-1 tvg-name="中超 云南玉昆VS北京国安 全场回放（苏东、杨晨、李子琪） 19:45" group-title="北京",中超 云南玉昆VS北京国安 全场回放（苏东、杨晨、李子琪） 19:45
 http://101.201.236.122:3000/964546241
 #EXTINF:-1 tvg-name="贵州村超 深圳颖朗太阳能灯女队VS北京乌合女子足球队 2026赛季贵州村超联赛友谊赛: 深圳颖朗太阳能灯女队VS北京乌合女子足球队 18:30" group-title="北京",贵州村超 深圳颖朗太阳能灯女队VS北京乌合女子足球队 2026赛季贵州村超联赛友谊赛: 深圳颖朗太阳能灯女队VS北京乌合女子足球队 18:30
