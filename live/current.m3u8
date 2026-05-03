@@ -29,10 +29,6 @@ http://101.201.236.122:3000/964559360
 http://101.201.236.122:3000/964492398
 #EXTINF:-1 tvg-name="中乙 上海赛更达VS兰州陇原竞技 解说 15:20" group-title="上海",中乙 上海赛更达VS兰州陇原竞技 解说 15:20
 http://101.201.236.122:3000/964492386
-#EXTINF:-1 tvg-name="综合频道" group-title="其他",综合频道
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=f5287087ad925fe7e7d9cee3208a3d9d&wsTime=1777822307
-#EXTINF:-1 tvg-name="科教生活频道" group-title="其他",科教生活频道
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=1b4f711b5652c94ad7ba8e2ddde37f09&wsTime=1777822307
 #EXTINF:-1 tvg-name="CGTN外语纪录" group-title="其他",CGTN外语纪录
 http://101.201.236.122:3000/609006487
 #EXTINF:-1 tvg-name="CGTN阿拉伯语" group-title="其他",CGTN阿拉伯语
