@@ -4,28 +4,41 @@ import os
 import sys
 import re
 import time
-import hashlib
-from urllib.parse import urlparse, unquote
+from urllib.parse import urlparse
 
 # ================== 配置区域 ==================
-# 数据源配置
+
+# 1. 数据源配置
 SOURCES = {
-    "priority": "https://lin.305362.xyz/migu66",          # 高优先级源 (如米咕)
-    "whitelist": "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt", # 白名单
-    "tv_m3u": "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u", # 通用 M3U
-    "local_txt": "local.txt"                              # 本地文件
+    # 高优先级源：通常包含质量较高的 CCTV/卫视
+    "priority": "https://lin.305362.xyz/migu66",
+    
+    # 白名单源：通常包含本地或特定稳定的源
+    "whitelist": "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt",
+    
+    # 通用 M3U 源：补充源
+    "tv_m3u": "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u",
+    
+    # 本地文件路径（如果存在）
+    "local_txt": "local.txt"
 }
 
-# 西充 API 专用配置 (参考之前的对话)
+# 2. 西充 API 专用配置 (参考之前的对话逻辑)
 XC_API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
-XC_PARAMS = {'deviceType': '1', 'centerId': '9', 'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be', 'areaId': '907'}
+XC_PARAMS = {
+    'deviceType': '1', 
+    'centerId': '9', 
+    'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be', 
+    'areaId': '907'
+}
 XC_HEADERS = {'User-Agent': 'okhttp/3.12.12'}
 
-# 输出配置
+# 3. 输出配置
 OUTPUT_FILE = "current.m3u8"
-EPG_URL = "https://live.fanmingming.com/e.xml.gz" # 节目单地址
+# EPG 节目单地址 (可选，用于播放器显示节目预告)
+EPG_URL = "https://live.fanmingming.com/e.xml.gz"
 
-# 请求头伪装
+# 4. 请求头伪装
 DEFAULT_HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
 
 # ================== 核心分类与清洗逻辑 ==================
@@ -58,23 +71,27 @@ def get_category_and_display(name):
         return "卫视", name_clean
 
     # 3. 本地/省份优先 (根据关键词)
-    local_keywords = ['西充', '南充', '四川', '广东', '佛山']
+    # 这里的关键词可以根据你的地理位置修改
+    local_keywords = ['西充', '南充', '四川', '广东', '佛山', '广州']
     for kw in local_keywords:
         if kw in name_clean:
             return "本地节目", name_clean
 
     # 4. 电影/轮播
-    if any(kw in name_lower for kw in ['电影', '影院', 'chc']):
+    if any(kw in name_lower for kw in ['电影', '影院', 'chc', 'action', 'comedy']):
         return "电影频道", name_clean
     
     # 5. 港澳台
-    if any(kw in name_clean for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森']):
+    if any(kw in name_clean for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森', '中天', '三立']):
         return "港澳台", name_clean
 
     # 6. 默认其他
     return "其他", name_clean
 
 def is_valid_url(url):
+    """
+    简单的 URL 有效性检查
+    """
     try:
         result = urlparse(url.strip())
         return all([result.scheme in ('http', 'https'), result.netloc])
@@ -88,6 +105,7 @@ def fetch_xichong_api():
     channels = []
     try:
         print(f"📡 正在请求西充API...")
+        # verify=False 用于忽略某些自签名证书的 SSL 错误
         response = requests.get(XC_API_URL, params=XC_PARAMS, headers=XC_HEADERS, timeout=10, verify=False)
         data = response.json()
         
@@ -109,36 +127,41 @@ def parse_m3u_content(text, source_name):
     i = 0
     while i < len(lines):
         line = lines[i].strip()
-        # 处理 #EXTINF 行或 txt 格式的 "名称,URL" 行
+        
+        # 情况 A: 标准 M3U 格式 (#EXTINF:-1,Name)
         if line.startswith("#EXTINF"):
             try:
                 # 提取名称：通常位于最后一个逗号之后
                 name = line.split(",")[-1].strip()
                 i += 1
+                # 下一行应该是 URL
                 if i < len(lines):
                     url = lines[i].strip()
                     if url.startswith("http") and is_valid_url(url):
                         cat, disp_name = get_category_and_display(name)
                         channels.append((disp_name, url, cat))
-            except:
+            except Exception as e:
+                # 忽略解析错误的行
                 pass
+        
+        # 情况 B: TXT 格式 (Name,URL)
         elif "," in line and not line.startswith("#"):
-            # 处理 txt 格式: 频道名,地址
             parts = line.split(",", 1)
             if len(parts) == 2:
-                name, url = parts.strip(), parts.strip()
+                name, url = parts[0].strip(), parts[1].strip()
                 if is_valid_url(url):
                     cat, disp_name = get_category_and_display(name)
                     channels.append((disp_name, url, cat))
+        
         i += 1
-    return channels<websource>source_group_web_1</websource>
+    return channels
 
 def fetch_source(url, name):
     """通用网络源获取"""
     try:
         print(f"📥 正在加载: {name}...")
         response = requests.get(url, timeout=15, headers=DEFAULT_HEADERS)
-        response.encoding = 'utf-8'
+        response.encoding = 'utf-8' # 确保使用 UTF-8 解码
         return parse_m3u_content(response.text, name)
     except Exception as e:
         print(f"   ❌ 加载 {name} 失败: {e}")
@@ -162,7 +185,7 @@ def main():
     all_channels = []
 
     # 1. 按顺序收集所有频道
-    # 注意：这里不立即去重，而是收集所有，稍后根据优先级处理
+    # 顺序决定了优先级：排在前面的源，其链接会被优先保留
     all_channels.extend(fetch_source(SOURCES["priority"], "高优先级源"))
     all_channels.extend(fetch_xichong_api()) # 插入 API 数据
     all_channels.extend(fetch_source(SOURCES["whitelist"], "白名单"))
@@ -173,13 +196,12 @@ def main():
 
     # 2. 智能去重逻辑
     # 规则：以“显示名称”为键。如果名称相同，保留最先出现的（因为 priority 源排在最前）
-    # 这样可以确保 CCTV-1 的各种别名最终都指向高质量源
     unique_map = {}
     
     for name, url, category in all_channels:
         if name not in unique_map:
             unique_map[name] = (url, category)
-        # 如果想让后面的源覆盖前面的，可以去掉上面的 if 判断，直接赋值
+        # 注意：这里不做覆盖，保持高优先级源的链接有效
 
     # 3. 分组排序
     # 定义分组顺序：本地 -> 央视 -> 卫视 -> 电影 -> 港澳台 -> 其他
@@ -188,16 +210,17 @@ def main():
     
     # 先按预定顺序排列已知组
     for group in group_order:
+        # 找出属于当前组的所有频道
         group_items = [(name, url, cat) for name, (url, cat) in unique_map.items() if cat == group]
-        # 组内按名称排序
-        group_items.sort(key=lambda x: x)
+        # 组内按名称自然排序 (例如 CCTV-1 在 CCTV-10 前面)
+        group_items.sort(key=lambda x: x[0])
         sorted_channels.extend(group_items)
     
-    # 添加未预定义的组（如有）
+    # 添加未预定义的组（如有，放到最后）
     remaining_groups = set(cat for _, (_, cat) in unique_map.items()) - set(group_order)
-    for group in remaining_groups:
+    for group in sorted(list(remaining_groups)):
         group_items = [(name, url, cat) for name, (url, cat) in unique_map.items() if cat == group]
-        group_items.sort(key=lambda x: x)
+        group_items.sort(key=lambda x: x[0])
         sorted_channels.extend(group_items)
 
     # 4. 写入文件
