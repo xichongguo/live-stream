@@ -4,16 +4,17 @@ import os
 import sys
 from urllib.parse import urlparse
 import re
+import time
+import hashlib
+import json
 
 # ================== Configuration ==================
-API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
-PARAMS = {
-    'deviceType': '1', 'centerId': '9', 'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
-    'latitudeValue': '0', 'areaId': '907', 'appCenterId': '907', 'isTest': '0',
-    'longitudeValue': '0', 'deviceVersionType': 'android', 'versionCodeGlobal': '5009037'
-}
-HEADERS = {'User-Agent': 'okhttp/3.12.12'}
+# --- 核心配置：南充/西充 API ---
+NANCHONG_API_URL = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
+SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2" 
+BASE_DOMAIN = "https://ncpull.cnncw.cn"
 
+# --- 其他数据源 ---
 REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
 LOCAL_TXT_PATH = "local.txt"
@@ -57,59 +58,104 @@ def is_valid_url(url):
         return all([result.scheme in ('http', 'https'), result.netloc])
     except: return False
 
+def generate_signature(path, timestamp):
+    """核心算法：MD5(密钥 + 路径 + 时间戳)"""
+    raw_string = f"{SECRET_KEY}{path}{timestamp}"
+    return hashlib.md5(raw_string.encode('utf-8')).hexdigest()
+
 def categorize_channel(name):
     """
     【核心修复】精准分类逻辑
+    1. 本地 -> 2. 央视 -> 3. 卫视 -> 4. 电影 -> 5. 省份
     """
-    # --- 1. 强制本地节目 ---
+    # --- 🔴 第一优先级：本地节目 ---
     local_keywords = ['西充', '南充']
     if any(kw in name for kw in local_keywords):
         return "本地节目", name
 
-    # --- 2. 央视 ---
+    # --- ⚪️ 第二优先级：央视 ---
     if any(kw in name.lower() for kw in ['cctv', '中央']):
         match = re.search(r'CCTV\D*(\d+)', name.upper())
         if match: 
             return f"CCTV-{int(match.group(1))}", name
         return "央视", name
     
-    # --- 3. 卫视 ---
+    # --- 🛰️ 第三优先级：卫视 ---
     for kw in CATEGORY_MAP['卫视']:
         if kw.lower() in name.lower(): return '卫视', name
     
-    # --- 4. 电影 ---
+    # --- 🎬 第四优先级：电影 ---
     has_movie_kw = any(kw.lower() in name.lower() for kw in CATEGORY_MAP['电影关键词'])
     has_rotation_kw = any(kw in name.lower() for kw in ROTATION_KEYWORDS)
     if has_movie_kw and has_rotation_kw: return '电影轮播', name
     if has_movie_kw: return '电影频道', name
     
-    # --- 5. 港澳台 ---
+    # --- 🌏 第五优先级：港澳台 ---
     for kw in CATEGORY_MAP['港澳台']:
         if kw in name: return '港澳台', name
         
-    # --- 6. 省份 ---
+    # --- 🗺️ 第六优先级：省份 ---
     for prov, cities in PROVINCE_KEYWORDS.items():
         for city in cities:
             if city in name: return prov, name
             
-    # --- 默认 ---
+    # --- 默认：其他 ---
     return "其他", name
 
 # ================== Data Sources ==================
-def get_dynamic_stream():
+def get_nanchong_dynamic_stream():
+    """
+    使用 IPTVUpdater 逻辑获取南充/西充最新带签名链接
+    """
+    channels = []
     try:
-        print(f"📡 正在请求西充API...")
-        response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=10, verify=False)
-        data = response.json()
+        print(f"📡 正在请求南充API并生成签名...")
+        response = requests.get(NANCHONG_API_URL, headers=DEFAULT_HEADERS, timeout=10)
         
-        if data.get('status') == 200 and 'data' in data and 'm3u8Url' in data['data']:
-            url = data['data']['m3u8Url']
-            name = "西充综合"
-            if url.startswith("http"):
-                return (name, url, "本地节目", 0)
-    except Exception as e: 
-        print(f"❌ API 获取失败: {e}")
-    return None
+        if response.status_code == 200:
+            data = response.json()
+            
+            if data.get("isSuccess"):
+                # 解析 JSON 结构
+                items = data["data"][0]["propValue"]["children"][0]["dataList"]
+                
+                # 设置过期时间：当前时间 + 2小时 (7200秒)
+                expire_time = int(time.time()) + 7200
+                
+                for item in items:
+                    title = item.get("title")
+                    # 尝试多种可能的ID字段名
+                    channel_id = item.get("channelID") or item.get("id") or item.get("streamId")
+                    
+                    # 如果没有ID，尝试从 liveStream 字段提取 (兼容旧逻辑)
+                    if not channel_id and item.get("liveStream"):
+                        try:
+                            channel_id = item.get("liveStream").split("/")[-2]
+                        except: pass
+
+                    if not channel_id:
+                        continue
+                        
+                    # 构造路径
+                    path = f"/live/{channel_id}/playlist.m3u8"
+                    
+                    # 计算签名
+                    ws_secret = generate_signature(path, expire_time)
+                    
+                    # 拼接最终地址
+                    final_url = f"{BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
+                    
+                    cat, disp = categorize_channel(title)
+                    channels.append((disp, final_url, cat, -2)) # 优先级 -2 (最高，确保覆盖旧链接)
+                    print(f" ✅ 更新: {title} [{cat}]")
+            else:
+                print(f"❌ API返回错误: {data.get('msg')}")
+        else:
+            print(f"❌ 网络请求失败: {response.status_code}")
+            
+    except Exception as e:
+        print(f"❌ 获取南充流失败: {e}")
+    return channels
 
 def load_priority_source():
     channels = []
@@ -150,6 +196,7 @@ def load_remote_whitelist():
                 parts = line.split(",", 1)
                 name, url = parts[0].strip(), parts[1].strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
+                    # 强制归类为本地节目
                     channels.append((name, url, "本地节目", 1))
     except Exception as e: 
         print(f"❌ 加载白名单失败: {e}")
@@ -207,11 +254,10 @@ def main():
         all_channels = []
         
         # 1. 按优先级顺序加载数据
-        all_channels.extend(load_priority_source()) # 优先级 -1
+        # 核心：先加载南充API（带签名），确保本地和央视是最新的
+        all_channels.extend(get_nanchong_dynamic_stream()) 
         
-        dynamic_channel = get_dynamic_stream()     # 优先级 0
-        if dynamic_channel: 
-            all_channels.append(dynamic_channel)
+        all_channels.extend(load_priority_source()) # 优先级 -1
         
         all_channels.extend(load_remote_whitelist()) # 优先级 1
         all_channels.extend(load_tv_m3u())           # 优先级 2
@@ -236,8 +282,14 @@ def main():
             # 提取所有唯一的分组名称
             all_groups = set(channel[2] for channel in unique_channels)
             
-            # 定义排序规则：'本地节目' 必须在最前面
-            sorted_groups = sorted(list(all_groups), key=lambda x: (0 if x == '本地节目' else 1, x))
+            # 定义排序规则：'本地节目' 必须在最前面，其次是 '央视'，然后是其他
+            def sort_key(x):
+                if x == '本地节目': return 0
+                if x == '央视': return 1
+                if x == '卫视': return 2
+                return 3
+            
+            sorted_groups = sorted(list(all_groups), key=sort_key)
             
             # 按排序后的分组写入文件
             for group in sorted_groups:
