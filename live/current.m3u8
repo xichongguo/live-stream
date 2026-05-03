@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="综合频道" group-title="本地节目",综合频道
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=5e3c4fe7f4e0372a331e131030be8eac&wsTime=1777807940&wsSession=9797c937e9fc6fdb2348696d-177648249365193&wsIPSercert=9a35ccfbc12d563402ca4334487c10dd&wsiphost=local&wsBindIP=1
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=185911627fbfa6abfe632f2f4f24e1d1&wsTime=1777809433&wsSession=9797c937e9fc6fdb2348696d-177648249365193&wsIPSercert=9a35ccfbc12d563402ca4334487c10dd&wsiphost=local&wsBindIP=1
 #EXTINF:-1 tvg-name="科教生活频道" group-title="本地节目",科教生活频道
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=031c05c821363c3bc3b9cc64a5d0e137&wsTime=1777807940&wsSession=9797c937e9fc6fdb2348696d-177648249365193&wsIPSercert=9a35ccfbc12d563402ca4334487c10dd&wsiphost=local&wsBindIP=1
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=f101831911599ca69b2f6d590fcb52b1&wsTime=1777809433&wsSession=9797c937e9fc6fdb2348696d-177648249365193&wsIPSercert=9a35ccfbc12d563402ca4334487c10dd&wsiphost=local&wsBindIP=1
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://xichongguo.github.io/live-stream/live/current.m3u8
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
