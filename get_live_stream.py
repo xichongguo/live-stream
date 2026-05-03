@@ -68,31 +68,38 @@ def normalize_cctv_name(name):
     return name
 
 def categorize_channel(name):
-    # --- 核心修改：强制所有频道归类为本地节目 ---
-    # 这样无论是私有源还是白名单，都会进入"本地节目"分组
-    return '本地节目', name
+    # --- 核心修改1：强制将南充、西充归类为本地节目 ---
+    if any(city in name for city in ['南充', '西充']):
+        return '本地节目', name
         
-    # 下面的代码虽然保留了，但永远不会执行到，因为上面直接return了
-    # 如果你以后想恢复自动分类，注释掉上面的 return 即可
-    """
+    # --- 恢复正常的自动分类逻辑 ---
     name_lower = name.lower()
+    
+    # 1. 央视
     if any(kw in name_lower for kw in ['cctv', '中央']):
         return '央视', normalize_cctv_name(name)
     
+    # 2. 卫视
     for kw in CATEGORY_MAP['卫视']:
         if kw.lower() in name_lower: return '卫视', name
     
+    # 3. 电影
     has_movie_kw = any(kw.lower() in name_lower for kw in CATEGORY_MAP['电影关键词'])
     has_rotation_kw = any(kw in name_lower for kw in ROTATION_KEYWORDS)
     if has_movie_kw and has_rotation_kw: return '电影轮播', name
     if has_movie_kw: return '电影频道', name
+    
+    # 4. 港澳台
+    for kw in CATEGORY_MAP['港澳台']:
+        if kw in name: return '港澳台', name
         
+    # 5. 地方台
     for prov, cities in PROVINCE_KEYWORDS.items():
         for city in cities:
             if city in name: return prov, name
             
+    # 6. 其他
     return "其他", name
-    """
 
 # ================== Data Sources ==================
 
@@ -107,7 +114,7 @@ def fetch_signed_channels():
         
         if response.status_code == 200:
             data = response.json()
-            # 增加了对不同层级结构的兼容性判断
+            # 兼容不同层级的JSON结构
             prop_value = data.get("data", {})
             if isinstance(prop_value, list): prop_value = prop_value[0]
             prop_value = prop_value.get("propValue", {})
@@ -124,16 +131,16 @@ def fetch_signed_channels():
                     original_title = item.get("title")
                     live_stream = item.get("liveStream", "")
                     
-                    # --- 核心修改：重命名逻辑 ---
-                    # 这里我们根据顺序或者原名称来重命名
-                    # 假设第一个是综合，第二个是科教，或者根据原名字匹配
-                    if i == 0 or "综合" in original_title:
+                    # --- 核心修改2：重命名逻辑 ---
+                    # 这里我们简单根据顺序重命名，或者你可以根据 original_title 的内容来判断
+                    final_name = original_title # 默认使用原名
+                    
+                    # 尝试智能重命名：如果原名为空或包含特定词，或者按顺序
+                    if i == 0: 
                         final_name = "南充综合"
-                    elif i == 1 or "科教" in original_title:
+                    elif i == 1: 
                         final_name = "南充科教"
-                    else:
-                        # 其他频道保持原名或根据需求修改
-                        final_name = original_title 
+                    # 其他频道保持原名，让 categorize_channel 去判断
                     
                     # 提取ID逻辑
                     path_parts = [p for p in live_stream.split("/") if p]
@@ -148,9 +155,8 @@ def fetch_signed_channels():
                     final_url = f"{IPTV_BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
                     
                     if not is_foreign_channel(final_name):
-                        # 强制归类为本地节目
-                        cat = "本地节目"
-                        channels.append((final_name, final_url, cat, -3)) # 优先级 -3
+                        cat, disp = categorize_channel(final_name)
+                        channels.append((disp, final_url, cat, -3)) # 优先级 -3
             else:
                 print("❌ 无法解析JSON结构，请检查接口返回内容")
         else:
@@ -184,9 +190,8 @@ def fetch_iptv_channels():
                         url_line = lines[i].strip()
                         if url_line.startswith("http") and is_valid_url(url_line):
                             if not is_foreign_channel(name):
-                                # 这里的也会被强制归类为本地节目
-                                cat = "本地节目"
-                                channels.append((name, url_line, cat, 0))
+                                cat, disp = categorize_channel(name)
+                                channels.append((disp, url_line, cat, 0))
                 i += 1
             print(f"✅ 公开源获取成功！")
     except Exception as e:
@@ -218,8 +223,8 @@ def load_priority_source():
                 if i + 1 < len(lines):
                     url = lines[i+1].strip()
                     if url.startswith("http") and is_valid_url(url) and not is_foreign_channel(name):
-                        cat = "本地节目" # 强制归类
-                        channels.append((name, url, cat, -2))
+                        cat, disp = categorize_channel(name)
+                        channels.append((disp, url, cat, -2))
     except Exception as e: print(f"❌ 加载高优源失败: {e}")
     return channels
 
@@ -233,7 +238,8 @@ def load_remote_whitelist():
                 parts = line.split(",", 1)
                 name, url = parts[0].strip(), parts[1].strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
-                    channels.append((name, url, "本地节目", 1))
+                    cat, disp = categorize_channel(name)
+                    channels.append((disp, url, cat, 1))
     except: pass
     return channels
 
@@ -250,8 +256,8 @@ def load_tv_m3u():
                 if i + 1 < len(lines):
                     url = lines[i+1].strip()
                     if url.startswith("http") and is_valid_url(url) and not is_foreign_channel(name):
-                        cat = "本地节目" # 强制归类
-                        channels.append((name, url, cat, 2))
+                        cat, disp = categorize_channel(name)
+                        channels.append((disp, url, cat, 2))
     except: pass
     return channels
 
@@ -267,8 +273,8 @@ def load_local_txt():
                     parts = line.split(",", 1)
                     name, url = parts[0].strip(), parts[1].strip()
                     if name and url and is_valid_url(url) and not is_foreign_channel(name):
-                        cat = "本地节目" # 强制归类
-                        channels.append((name, url, cat, 3))
+                        cat, disp = categorize_channel(name)
+                        channels.append((disp, url, cat, 3))
     except: pass
     return channels
 
@@ -306,7 +312,7 @@ def main():
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
             groups = set(ch[2] for ch in final_list)
-            # 强制"本地节目"排在第一位
+            # 强制"本地节目"排在第一位，其他按字母排序
             sorted_groups = sorted(list(groups), key=lambda x: (0 if x == '本地节目' else 1, x))
             
             for group in sorted_groups:
