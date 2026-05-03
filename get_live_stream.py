@@ -12,7 +12,7 @@ import time
 IPTV_JSON_URL = "https://raw.githubusercontent.com/YuanHsing/FreeToPlay/main/m3u/iptv.m3u"
 IPTV_BASE_DOMAIN = "" 
 
-# --- 原第二段代码的配置 ---
+# --- 原第二段代码的配置 (保留备用) ---
 API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
 PARAMS = {
     'deviceType': '1', 'centerId': '9', 'deviceToken': 'beb09666-78c0-4ae8-94e9-b0b4180a31be',
@@ -29,9 +29,6 @@ DEFAULT_HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Appl
 
 OUTPUT_DIR = "live"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "current.m3u8")
-
-# --- 高优先级源 ---
-PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
 
 # ================== Province Keywords (精简版) ==================
 PROVINCE_KEYWORDS = {
@@ -94,12 +91,73 @@ def categorize_channel(name):
 
 # ================== Data Sources ==================
 
-# --- 修复并替换的第一段代码逻辑 ---
+# --- 新增：集成你的IPTVUpdater代码段 ---
+def fetch_signed_channels():
+    """
+    核心功能：从 kstatic.sctvcloud.com 获取频道ID，并拼接带签名的URL
+    优先级设定为 -3 (最高优先级)
+    """
+    channels = []
+    json_url = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
+    secret_key = "5df6d8b743257e0e38b869a07d8819d2"
+    base_domain = "https://ncpull.cnncw.cn"
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+    
+    try:
+        print(f"🚀 正在连接 kstatic.sctvcloud.com 获取私有源...")
+        response = requests.get(json_url, headers=headers, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            if data.get("isSuccess"):
+                items = data["data"][0]["propValue"]["children"][0]["dataList"]
+                print(f"✅ 私有源接口连接成功！共发现 {len(items)} 个频道。")
+                
+                # 设置过期时间：当前时间 + 2小时 (7200秒)
+                expire_time = int(time.time()) + 7200
+                
+                for item in items:
+                    title = item.get("title")
+                    # 从 liveStream 字段中提取 channel_id
+                    live_stream = item.get("liveStream", "")
+                    # 假设 liveStream 格式为 /live/xxx/playlist.m3u8 或类似
+                    # 这里简单处理，直接取倒数第二个路径作为ID
+                    path_parts = [p for p in live_stream.split("/") if p]
+                    if len(path_parts) >= 2:
+                        channel_id = path_parts[-2] # 通常是 playlist 前面的 ID
+                    else:
+                        # 如果无法提取，尝试直接使用 title 的哈希或跳过
+                        channel_id = hashlib.md5(title.encode()).hexdigest()[:10]
+                        print(f"⚠️ 无法从 {title} 提取ID，使用哈希替代")
+                    
+                    # 构造路径
+                    path = f"/live/{channel_id}/playlist.m3u8"
+                    
+                    # 计算签名 MD5(密钥 + 路径 + 时间戳)
+                    raw_string = f"{secret_key}{path}{expire_time}"
+                    ws_secret = hashlib.md5(raw_string.encode('utf-8')).hexdigest()
+                    
+                    # 拼接最终地址
+                    final_url = f"{base_domain}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
+                    
+                    # 过滤掉非中文频道
+                    if not is_foreign_channel(title):
+                        cat, disp = categorize_channel(title)
+                        # 优先级设为 -3 (最高)
+                        channels.append((disp, final_url, cat, -3))
+                        print(f" ✅ 已添加: {disp}")
+            else:
+                print(f"❌ 私有源API返回错误: {data.get('msg')}")
+        else:
+            print(f"❌ 私有源网络请求失败，状态码: {response.status_code}")
+            
+    except Exception as e:
+        print(f"❌ 私有源处理异常 (可能网络波动): {e}")
+    
+    return channels
+
+# --- 原有的公开源获取函数 (优先级调整为 0) ---
 def fetch_iptv_channels():
-    """
-    从一个稳定的公开 M3U 源获取频道列表。
-    这是对您原始第一段代码的替代方案，以解决源失效的问题。
-    """
     channels = []
     try:
         print(f"🚀 正在从公开源获取频道列表...")
@@ -112,23 +170,20 @@ def fetch_iptv_channels():
             while i < len(lines):
                 line = lines[i].strip()
                 if line.startswith("#EXTINF") and "," in line:
-                    # 提取频道名称
                     try: 
                         name_part = line.split(",", 1)
-                        # 清理名称中的额外属性
-                        name = name_part[1].split(' tvg-').strip()
+                        name = name_part[1].split(' tvg-')[0].strip()
                     except: 
                         i += 1
                         continue
                     
                     i += 1
-                    # 获取下一行的 URL
                     if i < len(lines):
                         url_line = lines[i].strip()
                         if url_line.startswith("http") and is_valid_url(url_line):
                             if not is_foreign_channel(name):
                                 cat, disp_name = categorize_channel(name)
-                                # 优先级设为 0
+                                # 优先级设为 0 (低于私有源)
                                 channels.append((disp_name, url_line, cat, 0))
                                 count += 1
                 i += 1
@@ -141,7 +196,7 @@ def fetch_iptv_channels():
     
     return channels
 
-
+# --- 其他源 (保持不变) ---
 def get_dynamic_stream():
     try:
         response = requests.get(API_URL, params=PARAMS, headers=HEADERS, timeout=10, verify=False)
@@ -150,18 +205,16 @@ def get_dynamic_stream():
             url = data['data']['m3u8Url']
             if url.startswith("http"):
                 name = "西充综合" 
-                # --- 修改点1：将分组改为"本地节目" ---
                 cat, disp = "本地节目", name
-                return (disp, url, cat, -1) # 优先级 -1 (最高)
+                return (disp, url, cat, -1) # 优先级 -1 (仅次于私有源)
     except Exception as e: print(f"API 获取失败: {e}")
     return None
 
 def load_priority_source():
-    """加载 https://lin.305362.xyz/migu66 的数据"""
     channels = []
     try:
-        print(f"📥 正在加载高优先级源: {PRIORITY_SOURCE_URL}")
-        response = requests.get(PRIORITY_SOURCE_URL, timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
+        print(f"📥 正在加载高优先级源: https://lin.305362.xyz/migu66")
+        response = requests.get("https://lin.305362.xyz/migu66", timeout=WHITELIST_TIMEOUT, headers=DEFAULT_HEADERS)
         response.encoding = 'utf-8'
         lines = response.text.strip().splitlines()
         i = 0
@@ -176,8 +229,7 @@ def load_priority_source():
                     if url_line.startswith("http") and is_valid_url(url_line):
                         if not is_foreign_channel(name):
                             cat, disp = categorize_channel(name)
-                            channels.append((disp, url_line, cat, -2)) # 优先级 -2 (最高中的最高)
-                            print(f" ✅ Priority: {name}")
+                            channels.append((disp, url_line, cat, -2)) # 优先级 -2
             else: i += 1
     except Exception as e: print(f"❌ 加载优先级源失败: {e}")
     return channels
@@ -195,7 +247,6 @@ def load_remote_whitelist():
                 parts = line.split(",", 1)
                 name, url = parts[0].strip(), parts[1].strip()
                 if name and url and is_valid_url(url) and not is_foreign_channel(name):
-                    # --- 修改点2：将白名单源的分组也改为"本地节目" ---
                     channels.append((name, url, "本地节目", 1))
     except Exception as e: print(f"❌ 加载白名单失败: {e}")
     return channels
@@ -250,17 +301,16 @@ def main():
         print("🚀 开始合并直播源...")
         all_channels = []
         
-        # 1. 按优先级顺序加载数据
-        all_channels.extend(load_priority_source()) # 优先级 -2
-        dynamic_channel = get_dynamic_stream()     # 优先级 -1
+        # 1. 按优先级顺序加载数据 (数字越小，优先级越高)
+        all_channels.extend(fetch_signed_channels())   # 优先级 -3 (你的代码)
+        all_channels.extend(load_priority_source())    # 优先级 -2
+        dynamic_channel = get_dynamic_stream()         # 优先级 -1
         if dynamic_channel: all_channels.append(dynamic_channel)
         
-        # 使用修复后的函数
-        all_channels.extend(fetch_iptv_channels()) # 优先级 0
-        
-        all_channels.extend(load_remote_whitelist()) # 优先级 1
-        all_channels.extend(load_tv_m3u())           # 优先级 2
-        all_channels.extend(load_local_txt())        # 优先级 3
+        all_channels.extend(fetch_iptv_channels())       # 优先级 0 (公开源)
+        all_channels.extend(load_remote_whitelist())     # 优先级 1 (白名单)
+        all_channels.extend(load_tv_m3u())               # 优先级 2 (TV源)
+        all_channels.extend(load_local_txt())            # 优先级 3 (本地文件)
 
         # 2. 数据去重 (保留优先级高的)
         unique_channels_map = {}
@@ -281,8 +331,7 @@ def main():
             # 提取所有唯一的分组名称
             all_groups = set(channel[2] for channel in unique_channels)
             
-            # --- 修改点3：优化排序规则 ---
-            # '本地节目' 必须在最前面，其他分组按字母顺序排列
+            # 优化排序规则：'本地节目' 必须在最前面，其他分组按字母顺序排列
             sorted_groups = sorted(list(all_groups), key=lambda x: (0 if x == '本地节目' else 1, x))
             
             # 按排序后的分组写入文件
