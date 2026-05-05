@@ -15,7 +15,7 @@ class IPTVUpdater:
         self.IPTV_SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"
         self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
 
-        # 其他辅助源配置
+        # 其他辅助源配置 (保留了之前的逻辑，你可以根据需要注释掉不需要的)
         self.PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
         self.TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
@@ -36,7 +36,7 @@ class IPTVUpdater:
     def generate_signature(self, path, timestamp):
         """核心算法：MD5(密钥 + 路径 + 时间戳)"""
         raw_string = f"{self.IPTV_SECRET_KEY}{path}{timestamp}"
-        return hashlib.md5(raw_string.encode('utf-8')).hexdigest()
+        return hashlib.md5(raw_string.encode('utf- 8')).hexdigest()
 
     def fetch_signed_channels(self):
         """获取私有源频道（带签名）"""
@@ -163,6 +163,43 @@ class IPTVUpdater:
             print(f"❌ 加载高优源失败: {e}")
         return channels
 
+    def load_remote_whitelist(self):
+        """加载远程白名单"""
+        channels = []
+        try:
+            response = requests.get(self.REMOTE_WHITELIST_URL, timeout=20)
+            for line in response.text.strip().splitlines():
+                if "," in line:
+                    parts = line.split(",", 1)
+                    name, url = parts[0].strip(), parts[1].strip()
+                    if name and url and self._is_valid_url(url):
+                        cat, disp = self.categorize_channel(name)
+                        channels.append((disp, url, cat, 1))
+        except Exception as e:
+            print(f"❌ 加载白名单失败: {e}")
+        return channels
+
+    def load_tv_m3u(self):
+        """加载TV M3U源"""
+        channels = []
+        try:
+            response = requests.get(self.TV_M3U_URL, timeout=20, headers=self.DEFAULT_HEADERS)
+            lines = response.text.strip().splitlines()
+            for i in range(len(lines)):
+                if lines[i].startswith("#EXTINF") and "," in lines[i]:
+                    try:
+                        name = lines[i].split(",", 1)[1].strip()
+                    except:
+                        continue
+                    if i + 1 < len(lines):
+                        url = lines[i+1].strip()
+                        if url.startswith("http") and self._is_valid_url(url):
+                            cat, disp = self.categorize_channel(name)
+                            channels.append((disp, url, cat, 2))
+        except Exception as e:
+            print(f"❌ 加载TV M3U失败: {e}")
+        return channels
+
     def _is_valid_url(self, url):
         """基础URL验证"""
         try:
@@ -179,9 +216,8 @@ class IPTVUpdater:
         # 按优先级加载
         all_channels.extend(self.fetch_signed_channels())      # 优先级 -3
         all_channels.extend(self.load_priority_source())      # 优先级 -2
-        
-        # --- 这里可以继续添加其他源 ---
-        # all_channels.extend(self.fetch_other_sources())     # 优先级 0, 1, 2...
+        all_channels.extend(self.load_remote_whitelist())     # 优先级 1
+        all_channels.extend(self.load_tv_m3u())               # 优先级 2
         
         # 去重逻辑（保留最高优先级）
         unique_map = {}
@@ -227,5 +263,6 @@ if __name__ == "__main__":
     updater = IPTVUpdater()
     updater.run()
     
-    print("\n💡 提示：按任意键退出...")
-    input()
+    # 注释掉 input() 以防止在 GitHub Actions 等非交互式环境中报错
+    # print("\n💡 提示：按任意键退出...")
+    # input()
