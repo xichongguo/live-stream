@@ -5,6 +5,7 @@ import sys
 import hashlib
 import time
 import re
+import json
 from urllib.parse import urlparse
 
 class IPTVUpdater:
@@ -46,12 +47,11 @@ class IPTVUpdater:
                 # 解析 JSON 结构
                 prop_value = data.get("data", {})
                 if isinstance(prop_value, list) and prop_value:
-                    prop_value = prop_value[0] # 取第一个元素
+                    prop_value = prop_value[0] 
                 prop_value = prop_value.get("propValue", {})
                 if isinstance(prop_value, list) and prop_value:
-                    prop_value = prop_value[0] # 取第一个元素
+                    prop_value = prop_value[0] 
                 
-                # 安全获取 children 和 dataList
                 children_list = prop_value.get("children", [])
                 if isinstance(children_list, list) and children_list:
                      items = children_list[0].get("dataList", [])
@@ -81,9 +81,42 @@ class IPTVUpdater:
             print(f"❌ 私有源处理异常: {e}")
         return channels
 
+    def fetch_xichong_channel(self):
+        """
+        🔴 新增：专门获取西充综合频道的逻辑
+        """
+        channels = []
+        api_url = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
+        headers = {
+            'User-Agent': 'okhttp/3.12.12',
+            'Accept': 'application/json, text/plain, */*',
+        }
+        
+        try:
+            print(f"🚀 正在连接 lwydapi.xichongtv.cn 获取西充综合...")
+            response = requests.get(api_url, headers=headers, verify=False, timeout=10)
+            
+            if response.status_code == 200:
+                data = response.json()
+                if 'data' in data and 'm3u8Url' in data['data']:
+                    m3u8_url = data['data']['m3u8Url']
+                    if m3u8_url:
+                        print(f"✅ 成功获取西充综合直播流！")
+                        # 强制归类为本地节目
+                        channels.append(("西充综合", m3u8_url, '本地节目', -4)) # 优先级 -4 (最高)
+                    else:
+                        print("⚠️ 获取到的西充URL为空")
+                else:
+                    print("❌ 西充API返回数据格式错误")
+            else:
+                print(f"❌ 西充API请求失败: {response.status_code}")
+        except Exception as e:
+            print(f"❌ 西充频道处理异常: {e}")
+            
+        return channels
+
     def _rename_channel(self, index, original_title):
         """根据索引重命名频道"""
-        # 这里可以根据实际情况扩展更多映射
         rename_map = {0: "南充综合", 1: "南充科教"}
         return rename_map.get(index, original_title)
 
@@ -97,13 +130,12 @@ class IPTVUpdater:
     def categorize_channel(self, name):
         """
         频道分类器
-        逻辑顺序：本地 > 央视 > 卫视 > 电影 > 港澳台 > 省份 > 其他
+        🔴 重点增强：优先识别西充、南充
         """
         name_lower = name.lower()
         
-        # --- 🔴 1. 本地节目 (最高优先级) ---
-        # 包含：西充、南充、以及白名单中可能出现的特定本地台
-        local_keywords = ['西充', '南充', '顺庆', '高坪', '嘉陵']
+        # --- 1. 本地节目 (最高优先级) ---
+        local_keywords = ['西充', '南充', '顺庆', '高坪', '嘉陵', '阆中']
         if any(kw in name for kw in local_keywords):
             return '本地节目', name
             
@@ -177,7 +209,6 @@ class IPTVUpdater:
                     name, url = parts[0].strip(), parts[1].strip()
                     if name and url and self._is_valid_url(url):
                         cat, disp = self.categorize_channel(name)
-                        # 白名单优先级设为 1
                         channels.append((disp, url, cat, 1))
         except Exception as e:
             print(f"❌ 加载白名单失败: {e}")
@@ -217,8 +248,9 @@ class IPTVUpdater:
         print("🚀 开始合并直播源...")
         all_channels = []
         
-        # 收集所有频道
-        all_channels.extend(self.fetch_signed_channels())      # 优先级 -3
+        # 收集所有频道 - 按优先级顺序添加
+        all_channels.extend(self.fetch_xichong_channel())       # 优先级 -4 (西充专用API)
+        all_channels.extend(self.fetch_signed_channels())      # 优先级 -3 (私有源)
         all_channels.extend(self.load_priority_source())      # 优先级 -2
         all_channels.extend(self.load_remote_whitelist())     # 优先级 1
         all_channels.extend(self.load_tv_m3u())               # 优先级 2
@@ -237,9 +269,9 @@ class IPTVUpdater:
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
-            # --- 🔴 排序逻辑：本地节目排在最前面 ---
+            # 排序：本地节目排在最前面
             group_order = {
-                '本地节目': 0,   # 第一顺位
+                '本地节目': 0,   
                 '央视': 1,
                 '卫视': 2,
                 '电影频道': 3,
@@ -248,7 +280,6 @@ class IPTVUpdater:
                 '四川': 6,
                 '广东': 7
             }
-            # 如果分类不在预设列表中，默认排到最后 (99)
             final_list.sort(key=lambda x: (group_order.get(x[2], 99), x[2], x[0]))
 
             for name, url, cat, _ in final_list:
