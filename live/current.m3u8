@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="南充科教" group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=7ca55e1b640da221ae59c8bf3d244de4&wsTime=1777960984
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=92e09a0ddd44ef3c431878e7896acb12&wsTime=1777962724
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=5e161c65c4ecc7995224fb63d2de4d7b&wsTime=1777960984
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=7f58f47271f36a39c6c0da641b47184b&wsTime=1777962724
 #EXTINF:-1 tvg-name="川超 宜宾长江首城队VS南充丝绸源点队 2026赛季四川省城市足球联赛第9轮：宜宾长江首城队vs南充丝绸源点队 18:35" group-title="本地节目",川超 宜宾长江首城队VS南充丝绸源点队 2026赛季四川省城市足球联赛第9轮：宜宾长江首城队vs南充丝绸源点队 18:35
 http://101.201.236.122:3000/963424337
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
@@ -11,6 +11,8 @@ https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
 #EXTINF:-1 tvg-name="西充王河湾冬季风景" group-title="本地节目",西充王河湾冬季风景
 https://us-xpc5.xpccdn.com/25fc9e48-6a27-4148-8169-00255208627b/2b4c670a-6231-4a28-8707-5835df8568d3.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%2234m0k6dcmmnkfyi6w%22%2C%22ip%22%3A%22223.73.134.245%2C120.241.65.73%22%7D
+#EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
+https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
 #EXTINF:-1 tvg-name="西充莲花湖夜景" group-title="本地节目",西充莲花湖夜景
 https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
 #EXTINF:-1 tvg-name="走进四川西充" group-title="本地节目",走进四川西充
