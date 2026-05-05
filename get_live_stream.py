@@ -10,12 +10,11 @@ from urllib.parse import urlparse
 class IPTVUpdater:
     def __init__(self):
         # --- 核心配置 ---
-        # 你的私有源配置
         self.IPTV_JSON_URL = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
         self.IPTV_SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"
         self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
 
-        # 其他辅助源配置 (保留了之前的逻辑，你可以根据需要注释掉不需要的)
+        # 辅助源
         self.PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
         self.TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
@@ -24,19 +23,16 @@ class IPTVUpdater:
         self.OUTPUT_DIR = "live"
         self.OUTPUT_FILE = os.path.join(self.OUTPUT_DIR, "current.m3u8")
 
-        # 请求头
         self.DEFAULT_HEADERS = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         }
 
-        # --- 2026年广东佛山定制化配置 ---
-        self.LOCATION = "广东佛山"
-        print(f"🌍 运行环境：2026-05-05 | {self.LOCATION}")
+        print(f"🌍 运行环境：{time.strftime('%Y-%m-%d')} | 广东佛山 (定制版)")
 
     def generate_signature(self, path, timestamp):
         """核心算法：MD5(密钥 + 路径 + 时间戳)"""
         raw_string = f"{self.IPTV_SECRET_KEY}{path}{timestamp}"
-        return hashlib.md5(raw_string.encode('utf- 8')).hexdigest()
+        return hashlib.md5(raw_string.encode('utf-8')).hexdigest()
 
     def fetch_signed_channels(self):
         """获取私有源频道（带签名）"""
@@ -47,23 +43,28 @@ class IPTVUpdater:
             
             if response.status_code == 200:
                 data = response.json()
-                # 兼容性解析
+                # 解析 JSON 结构
                 prop_value = data.get("data", {})
                 if isinstance(prop_value, list) and prop_value:
-                    prop_value = prop_value[0]
+                    prop_value = prop_value[0] # 取第一个元素
                 prop_value = prop_value.get("propValue", {})
                 if isinstance(prop_value, list) and prop_value:
-                    prop_value = prop_value[0]
-                items = prop_value.get("children", [])[0].get("dataList", [])
+                    prop_value = prop_value[0] # 取第一个元素
+                
+                # 安全获取 children 和 dataList
+                children_list = prop_value.get("children", [])
+                if isinstance(children_list, list) and children_list:
+                     items = children_list[0].get("dataList", [])
+                else:
+                    items = []
                 
                 print(f"✅ 私有源接口连接成功！共发现 {len(items)} 个频道。")
-                expire_time = int(time.time()) + 7200 # 2小时有效期
+                expire_time = int(time.time()) + 7200 
 
                 for i, item in enumerate(items):
                     original_title = item.get("title")
                     live_stream = item.get("liveStream", "")
                     
-                    # --- 重命名与ID提取 ---
                     final_name = self._rename_channel(i, original_title)
                     channel_id = self._extract_channel_id(live_stream, final_name)
                     
@@ -71,9 +72,8 @@ class IPTVUpdater:
                     ws_secret = self.generate_signature(path, expire_time)
                     final_url = f"{self.IPTV_BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
                     
-                    # 分类
                     cat, disp = self.categorize_channel(final_name)
-                    channels.append((disp, final_url, cat, -3)) # 优先级 -3
+                    channels.append((disp, final_url, cat, -3)) 
                     
             else:
                 print(f"❌ 私有源网络请求失败: {response.status_code}")
@@ -82,12 +82,13 @@ class IPTVUpdater:
         return channels
 
     def _rename_channel(self, index, original_title):
-        """根据索引重命名频道（示例逻辑）"""
+        """根据索引重命名频道"""
+        # 这里可以根据实际情况扩展更多映射
         rename_map = {0: "南充综合", 1: "南充科教"}
         return rename_map.get(index, original_title)
 
     def _extract_channel_id(self, live_stream, name):
-        """从链接提取ID，若失败则生成MD5"""
+        """从链接提取ID"""
         path_parts = [p for p in live_stream.split("/") if p]
         if len(path_parts) >= 2:
             return path_parts[-2]
@@ -95,29 +96,31 @@ class IPTVUpdater:
 
     def categorize_channel(self, name):
         """
-        频道分类器（已根据广东佛山优化）
+        频道分类器
+        逻辑顺序：本地 > 央视 > 卫视 > 电影 > 港澳台 > 省份 > 其他
         """
         name_lower = name.lower()
         
-        # --- 2026年佛山定制逻辑 ---
-        if any(city in name for city in ['佛山', '顺德', '南海', '三水', '高明', '禅城']):
+        # --- 🔴 1. 本地节目 (最高优先级) ---
+        # 包含：西充、南充、以及白名单中可能出现的特定本地台
+        local_keywords = ['西充', '南充', '顺庆', '高坪', '嘉陵']
+        if any(kw in name for kw in local_keywords):
             return '本地节目', name
             
-        # 央视
+        # --- 2. 央视 ---
         if any(kw in name_lower for kw in ['cctv', '中央']):
-            # 智能标准化CCTV名称
             if "CCTV" in name.upper():
                 match = re.search(r'CCTV\D*(\d+)', name.upper())
                 if match:
                     return '央视', f"CCTV-{int(match.group(1))}"
             return '央视', name
             
-        # 卫视
+        # --- 3. 卫视 ---
         major_satellites = ['卫视', '卫星', '湖南卫视', '浙江卫视', '江苏卫视', '东方卫视']
         if any(kw.lower() in name_lower for kw in major_satellites):
             return '卫视', name
             
-        # 电影
+        # --- 4. 电影 ---
         movie_keywords = ['电影', '影院', 'CHC', '动作', '喜剧']
         rotation_keywords = ['轮播', '回放']
         if any(kw.lower() in name_lower for kw in movie_keywords):
@@ -125,16 +128,16 @@ class IPTVUpdater:
                 return '电影轮播', name
             return '电影频道', name
             
-        # 港澳台
-        if any(kw in name for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森']):
+        # --- 5. 港澳台 ---
+        if any(kw in name for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森', '澳亚']):
             return '港澳台', name
             
-        # 其他省份（可扩展）
+        # --- 6. 省份/城市 ---
         province_map = {
-            '四川': ['四川', '成都', '南充'],
+            '四川': ['四川', '成都'],
+            '广东': ['广东', '广州', '深圳', '珠海', '佛山', '东莞'],
             '北京': ['北京'],
-            '上海': ['上海'],
-            '广东': ['广东', '广州', '深圳', '珠海', '佛山'] # 包含其他广东城市
+            '上海': ['上海']
         }
         for prov, cities in province_map.items():
             if any(city in name for city in cities):
@@ -174,6 +177,7 @@ class IPTVUpdater:
                     name, url = parts[0].strip(), parts[1].strip()
                     if name and url and self._is_valid_url(url):
                         cat, disp = self.categorize_channel(name)
+                        # 白名单优先级设为 1
                         channels.append((disp, url, cat, 1))
         except Exception as e:
             print(f"❌ 加载白名单失败: {e}")
@@ -213,7 +217,7 @@ class IPTVUpdater:
         print("🚀 开始合并直播源...")
         all_channels = []
         
-        # 按优先级加载
+        # 收集所有频道
         all_channels.extend(self.fetch_signed_channels())      # 优先级 -3
         all_channels.extend(self.load_priority_source())      # 优先级 -2
         all_channels.extend(self.load_remote_whitelist())     # 优先级 1
@@ -233,15 +237,18 @@ class IPTVUpdater:
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
-            # 排序：本地节目优先，然后是央视、卫视，最后是其他
+            # --- 🔴 排序逻辑：本地节目排在最前面 ---
             group_order = {
-                '本地节目': 0,
+                '本地节目': 0,   # 第一顺位
                 '央视': 1,
                 '卫视': 2,
                 '电影频道': 3,
                 '电影轮播': 4,
-                '港澳台': 5
+                '港澳台': 5,
+                '四川': 6,
+                '广东': 7
             }
+            # 如果分类不在预设列表中，默认排到最后 (99)
             final_list.sort(key=lambda x: (group_order.get(x[2], 99), x[2], x[0]))
 
             for name, url, cat, _ in final_list:
@@ -259,10 +266,5 @@ class IPTVUpdater:
             sys.exit(1)
 
 if __name__ == "__main__":
-    # 实例化并运行
     updater = IPTVUpdater()
     updater.run()
-    
-    # 注释掉 input() 以防止在 GitHub Actions 等非交互式环境中报错
-    # print("\n💡 提示：按任意键退出...")
-    # input()
