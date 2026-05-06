@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="南充科教" group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=0a5a2b920edb98241b06f0b638d1fee4&wsTime=1778045914
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=e762ad6a6e41d1a1c7e7afa4ae67daf0&wsTime=1778055918
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=59c9d99b324e0617911c514d62b09300&wsTime=1778045914
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=85210f2f596235a10f000232e1fbd005&wsTime=1778055918
 #EXTINF:-1 tvg-name="川超 宜宾长江首城队VS南充丝绸源点队 全场回放 9:35" group-title="本地节目",川超 宜宾长江首城队VS南充丝绸源点队 全场回放 9:35
 http://101.201.236.122:3000/964600358
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
