@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="南充科教" group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=d1991bb0cf97543d09c254d3de842edf&wsTime=1778204722
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=88f5aa50fb2bacbedd2afc500bbf73d4&wsTime=1778226745
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=b89e1a80357d3376c3e9a0457779165f&wsTime=1778204722
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=28373ceee6ba31676efaad808b460986&wsTime=1778226745
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
 https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 #EXTINF:-1 tvg-name="西充县华光乡黄家庙村桅杆湾志" group-title="本地节目",西充县华光乡黄家庙村桅杆湾志
@@ -30,7 +30,7 @@ http://1.15.215.190:1234/624878440
 #EXTINF:-1 tvg-name="CCTV-15" group-title="央视",CCTV-15
 http://1.15.215.190:1234/673168223
 #EXTINF:-1 tvg-name="CCTV-16" group-title="央视",CCTV-16
-http://38.75.136.137:98/gslb/dsdqpub/cctv16hd.m3u8?auth=testpub
+http://39.152.103.17:8089/tsfile/live/1015_1.m3u8
 #EXTINF:-1 tvg-name="CCTV-17" group-title="央视",CCTV-17
 http://1.15.215.190:1234/673168256
 #EXTINF:-1 tvg-name="CCTV-2" group-title="央视",CCTV-2
@@ -58,13 +58,13 @@ http://1.15.215.190:1234/961023778
 #EXTINF:-1 tvg-name="东南卫视" group-title="卫视",东南卫视
 http://1.15.215.190:1234/849116810
 #EXTINF:-1 tvg-name="东南卫视超清" group-title="卫视",东南卫视超清
-http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/dongnanws/51/20230724/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600717&netType=4&sid=5910022182&pid=2028597139&timestamp=20260507220251&Channel_ID=0116_2600037000-99000-200300220103254&ProgramID=849116810&ParentNodeID=-99&assertID=5910022182&client_ip=220.200.155.249&SecurityKey=20260507220251&promotionId=&mvid=5900006229&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=e3ba17e64a22aad7c6b6a043b5c748a4
+http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/dongnanws/51/20230724/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600717&netType=4&sid=5910022182&pid=2028597139&timestamp=20260508065634&Channel_ID=0116_2600037000-99000-200300220103313&ProgramID=849116810&ParentNodeID=-99&assertID=5910022182&client_ip=112.250.241.151&SecurityKey=20260508065634&promotionId=&mvid=5900006229&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=b9bf79af492060694fe91be37e9c4101
 #EXTINF:-1 tvg-name="东方卫视" group-title="卫视",东方卫视
 http://1.15.215.190:1234/651632648
 #EXTINF:-1 tvg-name="东方卫视4K" group-title="卫视",东方卫视4K
 http://bp-resource-dfl.bestv.cn/148/3/video.m3u8
 #EXTINF:-1 tvg-name="东方卫视超清" group-title="卫视",东方卫视超清
-http://hlsztemgsplive.miguvideo.com:8080/wd_r4/dfl/dongfangwshd/1200/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600697&netType=4&sid=5910022185&pid=2028597139&timestamp=20260507220828&Channel_ID=0116_2600037000-99000-200300220103261&ProgramID=651632648&ParentNodeID=-99&assertID=5910022185&client_ip=112.253.36.13&SecurityKey=20260507220828&promotionId=&mvid=5100043384&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=43f048de5f5af49cd71a79f004eea184
+http://hlsztemgsplive.miguvideo.com:8080/wd_r4/dfl/dongfangwshd/1200/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600697&netType=4&sid=5910022185&pid=2028597139&timestamp=20260508062940&Channel_ID=0116_2600037000-99000-200300220103283&ProgramID=651632648&ParentNodeID=-99&assertID=5910022185&client_ip=119.167.194.137&SecurityKey=20260508062940&promotionId=&mvid=5100043384&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=5890908b9943a6243b135925d0e3e83f
 #EXTINF:-1 tvg-name="东森亚洲卫视" group-title="卫视",东森亚洲卫视
 https://p2hs.vzan.com/slowlive/821481626725612419/live.m3u8
 #EXTINF:-1 tvg-name="中国农林卫视" group-title="卫视",中国农林卫视
@@ -82,7 +82,7 @@ http://1.15.215.190:1234/630287636
 #EXTINF:-1 tvg-name="北京卫视4K超高清" group-title="卫视",北京卫视4K超高清
 http://183.215.134.239:19901/tsfile/live/0122_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="北京卫视超清" group-title="卫视",北京卫视超清
-http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/bjws/51/20251127/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600697&netType=4&sid=5910022306&pid=2028597139&timestamp=20260507220717&Channel_ID=0116_2600037000-99000-200300220103259&ProgramID=630287636&ParentNodeID=-99&assertID=5910022306&client_ip=112.253.36.11&SecurityKey=20260507220717&promotionId=&mvid=5101042960&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=d99602334fc439cc9ad38c008114cb17
+http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/bjws/51/20251127/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600697&netType=4&sid=5910022306&pid=2028597139&timestamp=20260508062826&Channel_ID=0116_2600037000-99000-200300220103281&ProgramID=630287636&ParentNodeID=-99&assertID=5910022306&client_ip=119.167.194.136&SecurityKey=20260508062826&promotionId=&mvid=5101042960&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=147a533b010976f62416abb17284f059
 #EXTINF:-1 tvg-name="吉林卫视" group-title="卫视",吉林卫视
 http://1.15.215.190:1234/947472500
 #EXTINF:-1 tvg-name="四川卫视4K" group-title="卫视",四川卫视4K
@@ -104,7 +104,7 @@ http://m3u8.channel.wsrtv.com.cn/cms/videos/nmip-media/channellive/channel7/play
 #EXTINF:-1 tvg-name="广东卫视" group-title="卫视",广东卫视
 http://1.15.215.190:1234/608831231
 #EXTINF:-1 tvg-name="广东卫视超清" group-title="卫视",广东卫视超清
-http://hlsztemgsplive.miguvideo.com:8080/ws_w/2018/gdws/gdws2000/2000/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699054&netType=4&sid=2202428795&pid=2028597139&timestamp=20260507220901&Channel_ID=0116_2600037000-99000-200300220103262&ProgramID=608831231&ParentNodeID=-99&assertID=2202428795&client_ip=112.253.36.13&SecurityKey=20260507220901&promotionId=&mvid=2202428795&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=58df78c7fff8cee5317a52c93b890340
+http://hlsztemgsplive.miguvideo.com:8080/ws_w/2018/gdws/gdws2000/2000/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699054&netType=4&sid=2202428795&pid=2028597139&timestamp=20260508063229&Channel_ID=0116_2600037000-99000-200300220103290&ProgramID=608831231&ParentNodeID=-99&assertID=2202428795&client_ip=119.188.113.116&SecurityKey=20260508063229&promotionId=&mvid=2202428795&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=2400a380e939ee3d07ea140875645560
 #EXTINF:-1 tvg-name="广西卫视" group-title="卫视",广西卫视
 http://tvbox6.icu/tv/migu.php?id=gxws$LR•IPV4『线路52』
 #EXTINF:-1 tvg-name="延边卫视" group-title="卫视",延边卫视
@@ -114,17 +114,17 @@ http://tvbox6.icu/tv/migu.php?id=xjws$LR•IPV4『线路31』
 #EXTINF:-1 tvg-name="江苏卫视" group-title="卫视",江苏卫视
 http://1.15.215.190:1234/623899368
 #EXTINF:-1 tvg-name="江苏卫视超清" group-title="卫视",江苏卫视超清
-http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/jiangsuhd/1200/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699067&netType=4&sid=5500199408&pid=2028597139&timestamp=20260507220751&Channel_ID=0116_2600037000-99000-200300220103260&ProgramID=623899368&ParentNodeID=-99&assertID=5500199408&client_ip=112.253.36.12&SecurityKey=20260507220751&promotionId=&mvid=5100156802&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=67750df88b02f13d375696173efc5fce
+http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/jiangsuhd/1200/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699067&netType=4&sid=5500199408&pid=2028597139&timestamp=20260508062906&Channel_ID=0116_2600037000-99000-200300220103282&ProgramID=623899368&ParentNodeID=-99&assertID=5500199408&client_ip=119.167.194.136&SecurityKey=20260508062906&promotionId=&mvid=5100156802&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=dfa2ac5f71ef24698d9a7b4ebc2a4b84
 #EXTINF:-1 tvg-name="江西卫视" group-title="卫视",江西卫视
 http://1.15.215.190:1234/783847495
 #EXTINF:-1 tvg-name="江西卫视超清" group-title="卫视",江西卫视超清
-http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/jxwshd/51/20190820/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600633&netType=4&sid=5910021492&pid=2028597139&timestamp=20260507220640&Channel_ID=0116_2600037000-99000-200300220103258&ProgramID=783847495&ParentNodeID=-99&assertID=5910021492&client_ip=112.253.36.10&SecurityKey=20260507220640&promotionId=&mvid=5900004351&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=b77179335cf47f1dbad2fd22ec1df894
+http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/jxwshd/51/20190820/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600633&netType=4&sid=5910021492&pid=2028597139&timestamp=20260508062746&Channel_ID=0116_2600037000-99000-200300220103280&ProgramID=783847495&ParentNodeID=-99&assertID=5910021492&client_ip=119.167.194.135&SecurityKey=20260508062746&promotionId=&mvid=5900004351&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=377cc81cef7f7585e7604ca0321ce863
 #EXTINF:-1 tvg-name="河北卫视" group-title="卫视",河北卫视
 http://1.15.215.190:1234/962042070
 #EXTINF:-1 tvg-name="河南卫视" group-title="卫视",河南卫视
 http://1.15.215.190:1234/790187291
 #EXTINF:-1 tvg-name="浙江卫视" group-title="卫视",浙江卫视
-http://ali-xwl.cztv.com/live/channel011080Plxw.m3u8
+http://ali-xwl.cztv.com/live/channel01720Plxw.m3u8
 #EXTINF:-1 tvg-name="浙江卫视4K" group-title="卫视",浙江卫视4K
 http://ali-xwl.cztv.com/live/channel4k2160p.m3u8
 #EXTINF:-1 tvg-name="浙江卫视超清" group-title="卫视",浙江卫视超清
@@ -138,13 +138,13 @@ http://112.27.235.94:8000/hls/33/index.m3u8
 #EXTINF:-1 tvg-name="湖北卫视" group-title="卫视",湖北卫视
 http://1.15.215.190:1234/947472496
 #EXTINF:-1 tvg-name="湖北卫视超清" group-title="卫视",湖北卫视超清
-http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/hubeiwshd/2000/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600633&netType=4&sid=5910022163&pid=2028597139&timestamp=20260507220606&Channel_ID=0116_2600037000-99000-200300220103257&ProgramID=947472496&ParentNodeID=-99&assertID=5910022163&client_ip=112.253.36.10&SecurityKey=20260507220606&promotionId=&mvid=5900004355&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=890a6f3ec5ae9e74786202b2f22f5501
+http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/hubeiwshd/2000/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600633&netType=4&sid=5910022163&pid=2028597139&timestamp=20260508062710&Channel_ID=0116_2600037000-99000-200300220103279&ProgramID=947472496&ParentNodeID=-99&assertID=5910022163&client_ip=119.167.194.135&SecurityKey=20260508062710&promotionId=&mvid=5900004355&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=0142c2b3259df4223692c462bef37a6c
 #EXTINF:-1 tvg-name="湖南卫视" group-title="卫视",湖南卫视
 http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
 #EXTINF:-1 tvg-name="湖南卫视4K" group-title="卫视",湖南卫视4K
 http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
 #EXTINF:-1 tvg-name="湖南卫视超清" group-title="卫视",湖南卫视超清
-http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
+https://hlsbkmgsplive.miguvideo.com/wd-hunanhd-2500/01.m3u8?&HlsSubType=&encrypt=
 #EXTINF:-1 tvg-name="甘肃卫视" group-title="卫视",甘肃卫视
 http://tvbox6.icu/tv/migu.php?id=gsws$LR•IPV4『线路39』
 #EXTINF:-1 tvg-name="西藏卫视" group-title="卫视",西藏卫视
@@ -154,7 +154,7 @@ http://tvbox6.icu/tv/migu.php?id=gzws$LR•IPV4『线路73』
 #EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视",辽宁卫视
 http://1.15.215.190:1234/630291707
 #EXTINF:-1 tvg-name="辽宁卫视超清" group-title="卫视",辽宁卫视超清
-http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/liaoningwshd/2000/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=600572&netType=4&sid=5910022198&pid=2028597139&timestamp=20260507220536&Channel_ID=0116_2600037000-99000-200300220103256&ProgramID=630291707&ParentNodeID=-99&assertID=5910022198&client_ip=112.253.36.10&SecurityKey=20260507220536&promotionId=&mvid=5101043014&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=78fc7568e1f67b95ce087f88a6a1c1a2
+https://hlsbkmgsplive.miguvideo.com/migu/kailu/lnwshd265/54/20200407/01.m3u8?&HlsSubType=&encrypt=
 #EXTINF:-1 tvg-name="重庆卫视" group-title="卫视",重庆卫视
 http://1.15.215.190:1234/738910914
 #EXTINF:-1 tvg-name="陕西卫视" group-title="卫视",陕西卫视
@@ -181,8 +181,6 @@ http://1.15.215.190:1234/964609083
 http://1.15.215.190:1234/964608368
 #EXTINF:-1 tvg-name="广东影视" group-title="广东",广东影视
 https://hlsbkmgsplive.miguvideo.com/wd_r1/2018/nfmedia/nfys/1000/01.m3u8?&HlsSubType=&encrypt=
-#EXTINF:-1 tvg-name="广东民生" group-title="广东",广东民生
-http://38.75.136.137:98/gslb/dsdqpub/gdgg.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="CBA 山东高速VS上海久事 图文直播 19:35" group-title="上海",CBA 山东高速VS上海久事 图文直播 19:35
 http://1.15.215.190:1234/964608354
 #EXTINF:-1 tvg-name="上海新闻综合" group-title="上海",上海新闻综合
@@ -259,6 +257,14 @@ http://1.15.215.190:1234/609006476
 http://1.15.215.190:1234/609006450
 #EXTINF:-1 tvg-name="CGTN阿拉伯语" group-title="其他",CGTN阿拉伯语
 http://1.15.215.190:1234/609154345
+#EXTINF:-1 tvg-name="JCK JCK觉城之夜N119：腾力格VS德尔巴尼 官方解说 18:50" group-title="其他",JCK JCK觉城之夜N119：腾力格VS德尔巴尼 官方解说 18:50
+http://1.15.215.190:1234/964648245
+#EXTINF:-1 tvg-name="JCK JCK觉城之夜N119：腾力格VS德尔巴尼 清流 18:50" group-title="其他",JCK JCK觉城之夜N119：腾力格VS德尔巴尼 清流 18:50
+http://1.15.215.190:1234/964648295
+#EXTINF:-1 tvg-name="JCK JCK觉城之夜N119：腾力格VS德尔巴尼 英文原声 18:50" group-title="其他",JCK JCK觉城之夜N119：腾力格VS德尔巴尼 英文原声 18:50
+http://1.15.215.190:1234/964648272
+#EXTINF:-1 tvg-name="JCK JCK觉城之夜N119：腾力格VS德尔巴尼 陈瑞阳 郑文祺 18:50" group-title="其他",JCK JCK觉城之夜N119：腾力格VS德尔巴尼 陈瑞阳 郑文祺 18:50
+http://1.15.215.190:1234/964648203
 #EXTINF:-1 tvg-name="NBA 76人VS尼克斯 智能字幕 06:55" group-title="其他",NBA 76人VS尼克斯 智能字幕 06:55
 http://1.15.215.190:1234/964608383
 #EXTINF:-1 tvg-name="NBA 76人VS尼克斯 英文原声 06:55" group-title="其他",NBA 76人VS尼克斯 英文原声 06:55
@@ -279,26 +285,14 @@ http://1.15.215.190:1234/964608559
 http://1.15.215.190:1234/964608524
 #EXTINF:-1 tvg-name="NBA 森林狼VS马刺 英文原声 09:25" group-title="其他",NBA 森林狼VS马刺 英文原声 09:25
 http://1.15.215.190:1234/964608496
-#EXTINF:-1 tvg-name="NBA 活塞VS骑士 吴博文 06:55" group-title="其他",NBA 活塞VS骑士 吴博文 06:55
-http://1.15.215.190:1234/964608155
-#EXTINF:-1 tvg-name="NBA 活塞VS骑士 孙博 曾令旭 王润陶 06:40" group-title="其他",NBA 活塞VS骑士 孙博 曾令旭 王润陶 06:40
-http://1.15.215.190:1234/964608166
-#EXTINF:-1 tvg-name="NBA 活塞VS骑士 智能字幕 06:55" group-title="其他",NBA 活塞VS骑士 智能字幕 06:55
-http://1.15.215.190:1234/964608134
-#EXTINF:-1 tvg-name="NBA 活塞VS骑士 英文原声 06:55" group-title="其他",NBA 活塞VS骑士 英文原声 06:55
-http://1.15.215.190:1234/964608138
-#EXTINF:-1 tvg-name="NBA 雷霆VS湖人 智能字幕 09:25" group-title="其他",NBA 雷霆VS湖人 智能字幕 09:25
-http://1.15.215.190:1234/964608191
-#EXTINF:-1 tvg-name="NBA 雷霆VS湖人 杨健 李根 马健 09:10" group-title="其他",NBA 雷霆VS湖人 杨健 李根 马健 09:10
-http://1.15.215.190:1234/964608298
-#EXTINF:-1 tvg-name="NBA 雷霆VS湖人 洪荒 09:25" group-title="其他",NBA 雷霆VS湖人 洪荒 09:25
-http://1.15.215.190:1234/964608235
-#EXTINF:-1 tvg-name="NBA 雷霆VS湖人 英文原声 09:25" group-title="其他",NBA 雷霆VS湖人 英文原声 09:25
-http://1.15.215.190:1234/964608206
-#EXTINF:-1 tvg-name="NBA 雷霆VS湖人 莫俊祺 09:25" group-title="其他",NBA 雷霆VS湖人 莫俊祺 09:25
-http://1.15.215.190:1234/964608245
-#EXTINF:-1 tvg-name="NBA 雷霆VS湖人 郑泽鹏 09:25" group-title="其他",NBA 雷霆VS湖人 郑泽鹏 09:25
-http://1.15.215.190:1234/964608271
+#EXTINF:-1 tvg-name="NBA 活塞VS骑士 全场回放（AI字幕） 06:55" group-title="其他",NBA 活塞VS骑士 全场回放（AI字幕） 06:55
+http://1.15.215.190:1234/964647370
+#EXTINF:-1 tvg-name="NBA 活塞VS骑士 全场回放（吴博文） 06:55" group-title="其他",NBA 活塞VS骑士 全场回放（吴博文） 06:55
+http://1.15.215.190:1234/964647391
+#EXTINF:-1 tvg-name="NBA 活塞VS骑士 全场回放（孙博、曾令旭、王润陶、小七） 06:55" group-title="其他",NBA 活塞VS骑士 全场回放（孙博、曾令旭、王润陶、小七） 06:55
+http://1.15.215.190:1234/964647772
+#EXTINF:-1 tvg-name="NBA 活塞VS骑士 全场回放（英文原声） 06:55" group-title="其他",NBA 活塞VS骑士 全场回放（英文原声） 06:55
+http://1.15.215.190:1234/964647445
 #EXTINF:-1 tvg-name="NBA 马刺VS森林狼 全场回放（庄宁宇、刘家成、陈正昊、金佳悦） 09:25" group-title="其他",NBA 马刺VS森林狼 全场回放（庄宁宇、刘家成、陈正昊、金佳悦） 09:25
 http://1.15.215.190:1234/964632584
 #EXTINF:-1 tvg-name="NBA 马刺VS森林狼 全场回放（王晓晨） 09:25" group-title="其他",NBA 马刺VS森林狼 全场回放（王晓晨） 09:25
@@ -315,6 +309,8 @@ http://1.15.215.190:1234/964628747
 http://1.15.215.190:1234/964474359
 #EXTINF:-1 tvg-name="WTA 女单第三轮 赛场原声 17:00" group-title="其他",WTA 女单第三轮 赛场原声 17:00
 http://1.15.215.190:1234/964474255
+#EXTINF:-1 tvg-name="WTA 姚欣辛迎战塔拉鲁迪 赛场原声 11:00" group-title="其他",WTA 姚欣辛迎战塔拉鲁迪 赛场原声 11:00
+http://1.15.215.190:1234/964535031
 #EXTINF:-1 tvg-name="WTA 布克沙VS郑钦文 全场回放 17:00" group-title="其他",WTA 布克沙VS郑钦文 全场回放 17:00
 http://1.15.215.190:1234/964640838
 #EXTINF:-1 tvg-name="WTA 布克沙VS郑钦文 全场回放（单文强） 17:00" group-title="其他",WTA 布克沙VS郑钦文 全场回放（单文强） 17:00
@@ -323,6 +319,10 @@ http://1.15.215.190:1234/964640348
 http://1.15.215.190:1234/964474355
 #EXTINF:-1 tvg-name="WTA 斯瓦泰克率先出战 大坂、莱巴登场 赛场原声 17:00" group-title="其他",WTA 斯瓦泰克率先出战 大坂、莱巴登场 赛场原声 17:00
 http://1.15.215.190:1234/964474240
+#EXTINF:-1 tvg-name="WTA 本西奇速胜 萨巴伦卡罗马开门红 2026WTA罗马站Day3全场回放（英文原声） 17:00" group-title="其他",WTA 本西奇速胜 萨巴伦卡罗马开门红 2026WTA罗马站Day3全场回放（英文原声） 17:00
+http://1.15.215.190:1234/964645265
+#EXTINF:-1 tvg-name="WTA 本西奇速胜 萨巴伦卡罗马开门红 2026WTA罗马站Day3全场回放（赛场原声） 17:00" group-title="其他",WTA 本西奇速胜 萨巴伦卡罗马开门红 2026WTA罗马站Day3全场回放（赛场原声） 17:00
+http://1.15.215.190:1234/964645757
 #EXTINF:-1 tvg-name="WTA 本西奇速胜 萨巴伦卡罗马开门红 【回放】保利尼2-1让让 （赛场原声） 17:00" group-title="其他",WTA 本西奇速胜 萨巴伦卡罗马开门红 【回放】保利尼2-1让让 （赛场原声） 17:00
 http://1.15.215.190:1234/964643751
 #EXTINF:-1 tvg-name="WTA 本西奇速胜 萨巴伦卡罗马开门红 【回放】保利尼2-1让让（英文原声） 17:00" group-title="其他",WTA 本西奇速胜 萨巴伦卡罗马开门红 【回放】保利尼2-1让让（英文原声） 17:00
@@ -349,8 +349,10 @@ http://1.15.215.190:1234/964640514
 http://1.15.215.190:1234/964640596
 #EXTINF:-1 tvg-name="WTA 江西网球公开赛Day6 清流播出 12:00" group-title="其他",WTA 江西网球公开赛Day6 清流播出 12:00
 http://1.15.215.190:1234/964535026
-#EXTINF:-1 tvg-name="WTA 白卓璇、姚欣辛轮番出战 清流播出 11:00" group-title="其他",WTA 白卓璇、姚欣辛轮番出战 清流播出 11:00
-http://1.15.215.190:1234/964535031
+#EXTINF:-1 tvg-name="WTA 王欣瑜VS伊埃拉 李宁 17:00" group-title="其他",WTA 王欣瑜VS伊埃拉 李宁 17:00
+http://1.15.215.190:1234/964648843
+#EXTINF:-1 tvg-name="WTA 王欣瑜VS伊埃拉 清流播出 17:00" group-title="其他",WTA 王欣瑜VS伊埃拉 清流播出 17:00
+http://1.15.215.190:1234/964648827
 #EXTINF:-1 tvg-name="七台河新闻综合" group-title="其他",七台河新闻综合
 https://masterpull.hljtv.com/live/9FZ7k2XF.m3u8
 #EXTINF:-1 tvg-name="上蔡1" group-title="其他",上蔡1
@@ -451,10 +453,20 @@ http://1.15.215.190:1234/964436925
 http://1.15.215.190:1234/964533494
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 巴西男团VS法国男团 赛场原声 02:30" group-title="其他",伦敦团体世乒赛 巴西男团VS法国男团 赛场原声 02:30
 http://1.15.215.190:1234/964533415
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 德国女团VS中国香港女团 【回放】沙宾·温特3-0吴咏琳 00:00" group-title="其他",伦敦团体世乒赛 德国女团VS中国香港女团 【回放】沙宾·温特3-0吴咏琳 00:00
+http://1.15.215.190:1234/964644525
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 德国女团VS中国香港女团 【回放】沙宾·温特3-2杜凯琹 00:00" group-title="其他",伦敦团体世乒赛 德国女团VS中国香港女团 【回放】沙宾·温特3-2杜凯琹 00:00
+http://1.15.215.190:1234/964644389
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 德国女团VS中国香港女团 【回放】考夫蔓1-3苏籽童 00:00" group-title="其他",伦敦团体世乒赛 德国女团VS中国香港女团 【回放】考夫蔓1-3苏籽童 00:00
+http://1.15.215.190:1234/964644549
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 德国女团VS中国香港女团 【回放】韩莹3-2吴咏琳 00:00" group-title="其他",伦敦团体世乒赛 德国女团VS中国香港女团 【回放】韩莹3-2吴咏琳 00:00
+http://1.15.215.190:1234/964644489
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 德国女团VS中国香港女团 全场回放 00:00" group-title="其他",伦敦团体世乒赛 德国女团VS中国香港女团 全场回放 00:00
+http://1.15.215.190:1234/964644658
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 德国女团VS中国香港女团 全场回放（刘馨蕊） 00:00" group-title="其他",伦敦团体世乒赛 德国女团VS中国香港女团 全场回放（刘馨蕊） 00:00
+http://1.15.215.190:1234/964644560
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 德国女团VS中国香港女团 全场回放（英文解说） 00:00" group-title="其他",伦敦团体世乒赛 德国女团VS中国香港女团 全场回放（英文解说） 00:00
 http://1.15.215.190:1234/964644674
-#EXTINF:-1 tvg-name="伦敦团体世乒赛 德国女团VS中国香港女团 全场回放（赛场原声） 00:00" group-title="其他",伦敦团体世乒赛 德国女团VS中国香港女团 全场回放（赛场原声） 00:00
-http://1.15.215.190:1234/964644658
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 德国男团VS日本男团 【回放】弗朗西斯卡3-1户上隼辅 17:00" group-title="其他",伦敦团体世乒赛 德国男团VS日本男团 【回放】弗朗西斯卡3-1户上隼辅 17:00
 http://1.15.215.190:1234/964642138
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 德国男团VS日本男团 【回放】杜达0-3张本智和 17:00" group-title="其他",伦敦团体世乒赛 德国男团VS日本男团 【回放】杜达0-3张本智和 17:00
@@ -481,8 +493,22 @@ http://1.15.215.190:1234/964437179
 http://1.15.215.190:1234/964437136
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 法国女团VS罗马尼亚女团 赛场原声 00:00" group-title="其他",伦敦团体世乒赛 法国女团VS罗马尼亚女团 赛场原声 00:00
 http://1.15.215.190:1234/964437166
-#EXTINF:-1 tvg-name="伦敦团体世乒赛 瑞典男团VS中国台北男团 【男团1/4决赛】瑞典男团2-3中国台北男团 03:05" group-title="其他",伦敦团体世乒赛 瑞典男团VS中国台北男团 【男团1/4决赛】瑞典男团2-3中国台北男团 03:05
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】A·卡尔伯格0-3林昀儒 03:05" group-title="其他",伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】A·卡尔伯格0-3林昀儒 03:05
+http://1.15.215.190:1234/964644727
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】A·卡尔伯格2-3郭冠宏 03:05" group-title="其他",伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】A·卡尔伯格2-3郭冠宏 03:05
+http://1.15.215.190:1234/964644637
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】兰弗利3-1冯翊新 03:05" group-title="其他",伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】兰弗利3-1冯翊新 03:05
+http://1.15.215.190:1234/964644666
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】莫雷加德0-3林昀儒 03:05" group-title="其他",伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】莫雷加德0-3林昀儒 03:05
+http://1.15.215.190:1234/964644589
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】莫雷加德3-0郭冠宏 03:05" group-title="其他",伦敦团体世乒赛 瑞典男团VS中国台北男团 【回放】莫雷加德3-0郭冠宏 03:05
+http://1.15.215.190:1234/964644696
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 瑞典男团VS中国台北男团 全场回放 03:05" group-title="其他",伦敦团体世乒赛 瑞典男团VS中国台北男团 全场回放 03:05
+http://1.15.215.190:1234/964645524
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 瑞典男团VS中国台北男团 全场回放（刘馨蕊） 03:05" group-title="其他",伦敦团体世乒赛 瑞典男团VS中国台北男团 全场回放（刘馨蕊） 03:05
 http://1.15.215.190:1234/964644740
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 瑞典男团VS中国台北男团 全场回放（英文解说） 03:05" group-title="其他",伦敦团体世乒赛 瑞典男团VS中国台北男团 全场回放（英文解说） 03:05
+http://1.15.215.190:1234/964645108
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 男团半决赛 候场区 19:10" group-title="其他",伦敦团体世乒赛 男团半决赛 候场区 19:10
 http://1.15.215.190:1234/964533359
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 男团半决赛 徐晨皓 19:30" group-title="其他",伦敦团体世乒赛 男团半决赛 徐晨皓 19:30
@@ -501,6 +527,8 @@ http://1.15.215.190:1234/964436925
 http://1.15.215.190:1234/964437269
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 第十日热身区 全场回放（一） 16:00" group-title="其他",伦敦团体世乒赛 第十日热身区 全场回放（一） 16:00
 http://1.15.215.190:1234/964643756
+#EXTINF:-1 tvg-name="伦敦团体世乒赛 第十日热身区 全场回放（三） 16:00" group-title="其他",伦敦团体世乒赛 第十日热身区 全场回放（三） 16:00
+http://1.15.215.190:1234/964645016
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 第十日热身区 全场回放（二） 16:00" group-title="其他",伦敦团体世乒赛 第十日热身区 全场回放（二） 16:00
 http://1.15.215.190:1234/964644434
 #EXTINF:-1 tvg-name="伦敦团体世乒赛 韩国男团VS中国男团 候场区 19:10" group-title="其他",伦敦团体世乒赛 韩国男团VS中国男团 候场区 19:10
@@ -539,10 +567,10 @@ https://masterpull.hljtv.com/live/l9wQtsVs.m3u8
 http://tvpull.dxhmt.cn:9081/tv/10381-1.m3u8
 #EXTINF:-1 tvg-name="光山综合" group-title="其他",光山综合
 http://tvpull.dxhmt.cn:9081/tv/11522-1.m3u8
+#EXTINF:-1 tvg-name="全国艺术体操锦标赛 360度滑动观赛！首日资格赛打响 3D全真视频 09:00" group-title="其他",全国艺术体操锦标赛 360度滑动观赛！首日资格赛打响 3D全真视频 09:00
+http://1.15.215.190:1234/964632847
 #EXTINF:-1 tvg-name="全国艺术体操锦标赛 资格赛次日 各单项展开团体奖颁奖仪式 3D全真视频 09:00" group-title="其他",全国艺术体操锦标赛 资格赛次日 各单项展开团体奖颁奖仪式 3D全真视频 09:00
 http://1.15.215.190:1234/964632868
-#EXTINF:-1 tvg-name="全国艺术体操锦标赛 齐聚赛场展风姿！首日资格赛打响 3D全真视频 09:00" group-title="其他",全国艺术体操锦标赛 齐聚赛场展风姿！首日资格赛打响 3D全真视频 09:00
-http://1.15.215.190:1234/964632847
 #EXTINF:-1 tvg-name="公共新闻频道" group-title="其他",公共新闻频道
 http://1.15.215.190:1234/626064693
 #EXTINF:-1 tvg-name="兰溪新闻综合" group-title="其他",兰溪新闻综合
@@ -555,8 +583,6 @@ http://tvpull.dxhmt.cn:9081/tv/10527-1.m3u8
 https://masterpull.hljtv.com/live/6rx9bifO.m3u8
 #EXTINF:-1 tvg-name="南京十八频道" group-title="其他",南京十八频道
 http://1.15.215.190:1234/838151753
-#EXTINF:-1 tvg-name="南京少儿" group-title="其他",南京少儿
-http://nklive.nbs.cn/hls/e0981f3f-1a20-4a59-b8d1-17feb83a4610/index.m3u8
 #EXTINF:-1 tvg-name="南京教科频道" group-title="其他",南京教科频道
 http://1.15.215.190:1234/838153729
 #EXTINF:-1 tvg-name="南京新闻综合频道" group-title="其他",南京新闻综合频道
@@ -579,8 +605,6 @@ https://liveplay-srs.voc.com.cn/hls/tv/143_70175b.m3u8
 http://1.15.215.190:1234/964607500
 #EXTINF:-1 tvg-name="和美乡途轮播台" group-title="其他",和美乡途轮播台
 http://1.15.215.190:1234/713591450
-#EXTINF:-1 tvg-name="咪咕体育日报 undefined 咪咕体育日报 第103期 08:00" group-title="其他",咪咕体育日报 undefined 咪咕体育日报 第103期 08:00
-http://1.15.215.190:1234/964454855
 #EXTINF:-1 tvg-name="咪咕体育日报 undefined 咪咕体育日报 第104期 08:00" group-title="其他",咪咕体育日报 undefined 咪咕体育日报 第104期 08:00
 http://1.15.215.190:1234/964454932
 #EXTINF:-1 tvg-name="哈尔滨娱乐" group-title="其他",哈尔滨娱乐
@@ -588,7 +612,7 @@ http://stream.hrbtv.net/ylpd/sd/live.m3u8
 #EXTINF:-1 tvg-name="哈尔滨影视" group-title="其他",哈尔滨影视
 https://stream.hrbtv.net/yspd/sd/live.m3u8
 #EXTINF:-1 tvg-name="哈尔滨新闻综合" group-title="其他",哈尔滨新闻综合
-https://stream.hrbtv.net/xwzh/sd/live.m3u8
+https://rmplive.hljtv.com/live/haerbin.m3u8
 #EXTINF:-1 tvg-name="哈尔滨生活" group-title="其他",哈尔滨生活
 https://stream.hrbtv.net/shpd/sd/live.m3u8
 #EXTINF:-1 tvg-name="哈尔滨资讯" group-title="其他",哈尔滨资讯
@@ -624,7 +648,7 @@ http://tvpull.dxhmt.cn:9081/tv/10883-1.m3u8
 #EXTINF:-1 tvg-name="安化综合" group-title="其他",安化综合
 https://liveplay-srs.voc.com.cn/hls/tv/204_16cb0f.m3u8
 #EXTINF:-1 tvg-name="安定电视台" group-title="其他",安定电视台
-http://play.kankanlive.com/live/1672881652415978.flv
+https://play.kankanlive.com/live/1672881652415978.m3u8
 #EXTINF:-1 tvg-name="安达综合" group-title="其他",安达综合
 https://masterpull.hljtv.com/live/FsGxlDZQ.m3u8
 #EXTINF:-1 tvg-name="定西文旅生活" group-title="其他",定西文旅生活
@@ -648,7 +672,7 @@ https://liveplay-srs.voc.com.cn/hls/tv/167_0d6151.m3u8
 #EXTINF:-1 tvg-name="山东教育" group-title="其他",山东教育
 http://1.15.215.190:1234/609154353
 #EXTINF:-1 tvg-name="岷县电视台" group-title="其他",岷县电视台
-http://play.kankanlive.com/live/1672715401874967.flv
+http://play.kankanlive.com/live/1672715401874967.m3u8
 #EXTINF:-1 tvg-name="嵊州综合" group-title="其他",嵊州综合
 http://l.cztvcloud.com/channels/lantian/SXshengzhou1/720p.m3u8
 #EXTINF:-1 tvg-name="平兴新闻综合" group-title="其他",平兴新闻综合
@@ -678,7 +702,7 @@ http://tvpull.dxhmt.cn:9081/tv/10200-2.m3u8
 #EXTINF:-1 tvg-name="开远综合" group-title="其他",开远综合
 http://live.ynurl.com/video/s10044-KYTV/index.m3u8
 #EXTINF:-1 tvg-name="张掖新闻" group-title="其他",张掖新闻
-http://play.kankanlive.com/live/1675849013180979.flv
+http://play.kankanlive.com/live/1675849013180979.m3u8
 #EXTINF:-1 tvg-name="徐州新闻综合" group-title="其他",徐州新闻综合
 http://1.15.215.190:1234/639731747
 #EXTINF:-1 tvg-name="德甲 RB莱比锡VS圣保利 刘洋 21:15" group-title="其他",德甲 RB莱比锡VS圣保利 刘洋 21:15
@@ -732,7 +756,7 @@ https://liveplay-srs.voc.com.cn/hls/tv/170_49c556.m3u8
 #EXTINF:-1 tvg-name="新县电视台" group-title="其他",新县电视台
 http://tvpull.dxhmt.cn:9081/tv/11523-1.m3u8
 #EXTINF:-1 tvg-name="新安新闻综合" group-title="其他",新安新闻综合
-http://tvpull.dxhmt.cn:9081/tv/10323-1.m3u8
+http://live.dxhmt.cn:9081/tv/10323-1.m3u8
 #EXTINF:-1 tvg-name="新密新闻频道" group-title="其他",新密新闻频道
 http://tvpull.dxhmt.cn:9081/tv/10183-2.m3u8
 #EXTINF:-1 tvg-name="新昌综合" group-title="其他",新昌综合
@@ -751,8 +775,8 @@ http://live.ynurl.com/video/s10047-cntv/index.m3u8
 http://l.cztvcloud.com/channels/lantian/SXputuo1/720p.m3u8
 #EXTINF:-1 tvg-name="景泰电视台" group-title="其他",景泰电视台
 https://play.kankanlive.com/live/1624439143745981.m3u8
-#EXTINF:-1 tvg-name="更新日期: 2026-5-7 22:21:54" group-title="其他",更新日期: 2026-5-7 22:21:54
-http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/cctv1hd/1200/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699004&netType=4&sid=2201057821&pid=2028597139&timestamp=20260507221839&Channel_ID=0116_2600037000-99000-200300220103274&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=119.188.112.217&SecurityKey=20260507221839&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=e6e260f4977a5faaa0d4aefd4b080c57
+#EXTINF:-1 tvg-name="更新日期: 2026-5-8 09:03:59" group-title="其他",更新日期: 2026-5-8 09:03:59
+http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/cctv1hd/1200/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699004&netType=4&sid=2201057821&pid=2028597139&timestamp=20260508065737&Channel_ID=0116_2600037000-99000-200300220103314&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=119.189.1.33&SecurityKey=20260508065737&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=WX-A1-9.4.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=ddfeeb50e62e1ce3369451a9886a2c95
 #EXTINF:-1 tvg-name="最强综艺趴" group-title="其他",最强综艺趴
 http://1.15.215.190:1234/629942228
 #EXTINF:-1 tvg-name="杞县新闻综合" group-title="其他",杞县新闻综合
@@ -822,7 +846,7 @@ http://ali-xwl.cztv.com/live/channel081080Plxw.m3u8
 #EXTINF:-1 tvg-name="浙江教科影视" group-title="其他",浙江教科影视
 http://ali-xwl.cztv.com/live/channel041080Plxw.m3u8
 #EXTINF:-1 tvg-name="浙江新闻" group-title="其他",浙江新闻
-http://ali-xwl.cztv.com/live/channel07720Plxw.m3u8
+http://ali-xwl.cztv.com/live/channel071080Plxw.m3u8
 #EXTINF:-1 tvg-name="浙江民生休闲" group-title="其他",浙江民生休闲
 http://ali-xwl.cztv.com/live/channel061080Plxw.m3u8
 #EXTINF:-1 tvg-name="浙江经济生活" group-title="其他",浙江经济生活
@@ -833,8 +857,6 @@ http://ali-xwl.cztv.com/live/channel021080Plxw.m3u8
 http://tvpull.dxhmt.cn:9081/tv/10621-1.m3u8
 #EXTINF:-1 tvg-name="海伦市综合" group-title="其他",海伦市综合
 https://masterpull.hljtv.com/live/VFNlgeFO.m3u8
-#EXTINF:-1 tvg-name="海门经济生活" group-title="其他",海门经济生活
-http://haimen-tv-hls.cm.jstv.com/haimen-tv/haimenjjzh.m3u8
 #EXTINF:-1 tvg-name="淇县电视台" group-title="其他",淇县电视台
 http://tvpull.dxhmt.cn:9081/tv/10622-1.m3u8
 #EXTINF:-1 tvg-name="淮安新闻综合" group-title="其他",淮安新闻综合
@@ -856,7 +878,7 @@ http://tvpull.dxhmt.cn:9081/tv/10526-2.m3u8
 #EXTINF:-1 tvg-name="漠河综合" group-title="其他",漠河综合
 https://masterpull.hljtv.com/live/rlVvbTZN.m3u8
 #EXTINF:-1 tvg-name="潢川电视台" group-title="其他",潢川电视台
-http://live.dxhmt.cn:9081/tv/11526-1.m3u8
+http://tvpull.dxhmt.cn:9081/tv/11526-1.m3u8
 #EXTINF:-1 tvg-name="灵宝新闻综合" group-title="其他",灵宝新闻综合
 http://tvpull.dxhmt.cn:9081/tv/11282-1.m3u8
 #EXTINF:-1 tvg-name="熊猫频道01高清" group-title="其他",熊猫频道01高清
@@ -933,6 +955,10 @@ http://1.15.215.190:1234/964372249
 http://1.15.215.190:1234/964372219
 #EXTINF:-1 tvg-name="英女超 布莱顿女足VS阿森纳女足 全场回放（兰子非） 02:30" group-title="其他",英女超 布莱顿女足VS阿森纳女足 全场回放（兰子非） 02:30
 http://1.15.215.190:1234/964626759
+#EXTINF:-1 tvg-name="英女超 阿斯顿维拉女足VS阿森纳女足 胡小凡 18:45" group-title="其他",英女超 阿斯顿维拉女足VS阿森纳女足 胡小凡 18:45
+http://1.15.215.190:1234/964636263
+#EXTINF:-1 tvg-name="英女超 阿斯顿维拉女足VS阿森纳女足 赛场原声 18:45" group-title="其他",英女超 阿斯顿维拉女足VS阿森纳女足 赛场原声 18:45
+http://1.15.215.190:1234/964636248
 #EXTINF:-1 tvg-name="英超 利物浦VS切尔西 洪荒 19:15" group-title="其他",英超 利物浦VS切尔西 洪荒 19:15
 http://1.15.215.190:1234/964636611
 #EXTINF:-1 tvg-name="英超 利物浦VS切尔西 英文原声 19:15" group-title="其他",英超 利物浦VS切尔西 英文原声 19:15
@@ -944,7 +970,7 @@ http://1.15.215.190:1234/964636576
 #EXTINF:-1 tvg-name="英超 利物浦VS切尔西 陈曦 陈熙荣 19:20" group-title="其他",英超 利物浦VS切尔西 陈曦 陈熙荣 19:20
 http://1.15.215.190:1234/964636628
 #EXTINF:-1 tvg-name="英超 利物浦VS切尔西 陈渤胄 19:15" group-title="其他",英超 利物浦VS切尔西 陈渤胄 19:15
-http://1.15.215.190:1234/964636593
+http://1.15.215.190:1234/964636718
 #EXTINF:-1 tvg-name="英超 富勒姆VS伯恩茅斯 涂远 21:45" group-title="其他",英超 富勒姆VS伯恩茅斯 涂远 21:45
 http://1.15.215.190:1234/964636968
 #EXTINF:-1 tvg-name="英超 富勒姆VS伯恩茅斯 英文原声 21:45" group-title="其他",英超 富勒姆VS伯恩茅斯 英文原声 21:45
@@ -966,7 +992,7 @@ http://1.15.215.190:1234/964636982
 #EXTINF:-1 tvg-name="英超 桑德兰VS曼联 陈凯冬 何辉 21:50" group-title="其他",英超 桑德兰VS曼联 陈凯冬 何辉 21:50
 http://1.15.215.190:1234/964637059
 #EXTINF:-1 tvg-name="荥阳1" group-title="其他",荥阳1
-http://tvpull.dxhmt.cn:9081/tv/10182-1.m3u8
+http://live.dxhmt.cn:9081/tv/10182-1.m3u8
 #EXTINF:-1 tvg-name="萧山生活" group-title="其他",萧山生活
 http://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8
 #EXTINF:-1 tvg-name="萧山综合" group-title="其他",萧山综合
@@ -1016,7 +1042,7 @@ http://tvpull.dxhmt.cn:9081/tv/11381-1.m3u8
 #EXTINF:-1 tvg-name="郏县综合" group-title="其他",郏县综合
 http://tvpull.dxhmt.cn:9081/tv/10425-1.m3u8
 #EXTINF:-1 tvg-name="鄢陵综合" group-title="其他",鄢陵综合
-http://tvpull.dxhmt.cn:9081/tv/11024-1.m3u8
+http://live.dxhmt.cn:9081/tv/11024-1.m3u8
 #EXTINF:-1 tvg-name="金川电视台" group-title="其他",金川电视台
 http://play.kankanlive.com/live/1657360567739997.m3u8
 #EXTINF:-1 tvg-name="金平综合" group-title="其他",金平综合
