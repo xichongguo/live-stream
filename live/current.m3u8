@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="南充科教" group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=6a2c350bb95949d95e4cbe5b46befdc8&wsTime=1778314228
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=30fec4e59dac5e6504fc556ed00e22b8&wsTime=1778331050
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=c5b9eb79b8c5892533e08a90424b6a3b&wsTime=1778314228
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=c5d3c2a7765acb4cef8a93b4399cfb14&wsTime=1778331050
 #EXTINF:-1 tvg-name="川超 成都锦城队VS南充丝绸源点队 2026赛季四川省城市足球联赛第10轮：成都锦城队vs南充丝绸源点队 18:35" group-title="本地节目",川超 成都锦城队VS南充丝绸源点队 2026赛季四川省城市足球联赛第10轮：成都锦城队vs南充丝绸源点队 18:35
 http://1.15.215.190:1234/963424452
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
