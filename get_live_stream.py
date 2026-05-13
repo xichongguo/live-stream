@@ -29,7 +29,7 @@ class IPTVUpdater:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         }
 
-        print(f"🌍 运行环境：{time.strftime('%Y-%m-%d')} | 中国 (西充TV)")
+        print(f"🌍 运行环境：{time.strftime('%Y-%m-%d')} | 广东佛山 (定制版)")
 
     def generate_signature(self, path, timestamp):
         """核心算法：MD5(密钥 + 路径 + 时间戳)"""
@@ -73,7 +73,7 @@ class IPTVUpdater:
                     final_url = f"{self.IPTV_BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
                     
                     cat, disp = self.categorize_channel(final_name)
-                    channels.append((disp, final_url, cat, -3)) 
+                    channels.append((final_name, final_url, cat, -3)) 
                     
             else:
                 print(f"❌ 私有源网络请求失败: {response.status_code}")
@@ -127,7 +127,6 @@ class IPTVUpdater:
     def categorize_channel(self, name, force_local=False):
         """
         频道分类器
-        🔴 新增 force_local 参数：如果为 True，直接归类为本地节目
         """
         if force_local:
             return '本地节目', name
@@ -193,7 +192,7 @@ class IPTVUpdater:
                         url = lines[i+1].strip()
                         if url.startswith("http") and self._is_valid_url(url):
                             cat, disp = self.categorize_channel(name)
-                            channels.append((disp, url, cat, -2))
+                            channels.append((name, url, cat, -2))
         except Exception as e:
             print(f"❌ 加载高优源失败: {e}")
         return channels
@@ -207,12 +206,10 @@ class IPTVUpdater:
             for line in response.text.strip().splitlines():
                 if "," in line:
                     parts = line.split(",", 1)
-                    # 🔴 修复：加上索引 [1] 提取 URL
                     name, url = parts[0].strip(), parts[1].strip()
                     if name and url and self._is_valid_url(url):
-                        # 🔴 核心修改：传入 force_local=True，将所有白名单内容强制归类为本地节目
                         cat, disp = self.categorize_channel(name, force_local=True)
-                        channels.append((disp, url, cat, 1))
+                        channels.append((name, url, cat, 1))
             print(f"✅ 白名单加载完成。")
         except Exception as e:
             print(f"❌ 加载白名单失败: {e}")
@@ -234,7 +231,7 @@ class IPTVUpdater:
                         url = lines[i+1].strip()
                         if url.startswith("http") and self._is_valid_url(url):
                             cat, disp = self.categorize_channel(name)
-                            channels.append((disp, url, cat, 2))
+                            channels.append((name, url, cat, 2))
         except Exception as e:
             print(f"❌ 加载TV M3U失败: {e}")
         return channels
@@ -257,7 +254,7 @@ class IPTVUpdater:
                         url = lines[i+1].strip()
                         if url.startswith("http") and self._is_valid_url(url):
                             cat, disp = self.categorize_channel(name)
-                            channels.append((disp, url, cat, -1))
+                            channels.append((name, url, cat, -1))
             print(f"✅ Migu 源加载完成，共获取 {len(channels)} 个频道。")
         except Exception as e:
             print(f"❌ 加载 Migu 源失败: {e}")
@@ -284,35 +281,49 @@ class IPTVUpdater:
         all_channels.extend(self.load_remote_whitelist())
         all_channels.extend(self.load_tv_m3u())
         
-        # --- 去重与多线路保留逻辑 ---
+        # --- 第一步：去重 ---
+        # 使用 (标准化名称, 链接) 作为唯一键，确保同一个链接不会重复出现
         unique_map = {}
         for name, url, cat, priority in all_channels:
             key = (name, url)
+            # 如果该链接已存在，保留优先级数值更小（优先级更高）的那条
             if key not in unique_map or priority < unique_map[key][3]:
                 unique_map[key] = (name, url, cat, priority)
         
-        final_list = list(unique_map.values())
-        
-        # --- 为同名但不同链接的频道添加线路后缀 ---
-        name_count = {}
-        processed_list = []
-        for name, url, cat, priority in final_list:
-            if name in name_count:
-                name_count[name] += 1
-                display_name = f"{name} [线路{name_count[name]}]"
-            else:
-                name_count[name] = 1
-                display_name = name
-            processed_list.append((display_name, url, cat, priority))
-            
-        print(f"✅ 合并完成，共 {len(processed_list)} 个频道（已保留所有线路）")
+        # 提取去重后的列表
+        deduplicated_list = list(unique_map.values())
+        print(f"✅ 去重完成，剩余 {len(deduplicated_list)} 个唯一频道流")
 
-        # 写入文件
+        # --- 第二步：添加线路后缀 ---
+        # 统计每个频道名称出现了多少次
+        name_counter = {}
+        final_list = []
+        
+        for name, url, cat, priority in deduplicated_list:
+            # 记录该名称出现的次数
+            if name not in name_counter:
+                name_counter[name] = 0
+            name_counter[name] += 1
+            
+            # 获取当前是第几次出现
+            count = name_counter[name]
+            
+            # 如果只出现一次，显示名就是原名；如果出现多次，加上线路后缀
+            if count == 1:
+                display_name = name
+            else:
+                display_name = f"{name} [线路{count}]"
+                
+            final_list.append((display_name, url, cat, priority))
+            
+        print(f"✅ 线路处理完成，共生成 {len(final_list)} 个展示项")
+
+        # --- 第三步：排序与写入 ---
         os.makedirs(self.OUTPUT_DIR, exist_ok=True)
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
-            # 排序：本地节目排在最前面
+            # 排序逻辑：本地节目 -> 央视 -> 卫视 -> 其他
             group_order = {
                 '本地节目': 0,   
                 '央视': 1,
@@ -323,10 +334,11 @@ class IPTVUpdater:
                 '四川': 6,
                 '广东': 7
             }
-            processed_list.sort(key=lambda x: (group_order.get(x[2], 99), x[2], x[0]))
+            # 先按分组排序，再按原始优先级排序
+            final_list.sort(key=lambda x: (group_order.get(x[2], 99), x[3]))
 
-            for name, url, cat, _ in processed_list:
-                f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{cat}",{name}\n')
+            for disp_name, url, cat, _ in final_list:
+                f.write(f'#EXTINF:-1 tvg-name="{disp_name}" group-title="{cat}",{disp_name}\n')
                 f.write(f'{url}\n')
                 
         print(f"🎉 完成！保存至: {os.path.abspath(self.OUTPUT_FILE)}")
