@@ -5,7 +5,6 @@ import sys
 import hashlib
 import time
 import re
-import json
 from urllib.parse import urlparse
 
 class IPTVUpdater:
@@ -19,6 +18,8 @@ class IPTVUpdater:
         self.PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
         self.TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
+        # Migu 外部源
+        self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
         
         # 输出配置
         self.OUTPUT_DIR = "live"
@@ -28,7 +29,7 @@ class IPTVUpdater:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         }
 
-        print(f"🌍 运行环境：{time.strftime('%Y-%m-%d')} | 广东佛山 (定制版)")
+        print(f"🌍 运行环境：{time.strftime('%Y-%m-%d')} | 中国 (西充TV)")
 
     def generate_signature(self, path, timestamp):
         """核心算法：MD5(密钥 + 路径 + 时间戳)"""
@@ -44,7 +45,6 @@ class IPTVUpdater:
             
             if response.status_code == 200:
                 data = response.json()
-                # 解析 JSON 结构
                 prop_value = data.get("data", {})
                 if isinstance(prop_value, list) and prop_value:
                     prop_value = prop_value[0] 
@@ -82,9 +82,7 @@ class IPTVUpdater:
         return channels
 
     def fetch_xichong_channel(self):
-        """
-        🔴 新增：专门获取西充综合频道的逻辑
-        """
+        """专门获取西充综合频道的逻辑"""
         channels = []
         api_url = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
         headers = {
@@ -102,8 +100,7 @@ class IPTVUpdater:
                     m3u8_url = data['data']['m3u8Url']
                     if m3u8_url:
                         print(f"✅ 成功获取西充综合直播流！")
-                        # 强制归类为本地节目
-                        channels.append(("西充综合", m3u8_url, '本地节目', -4)) # 优先级 -4 (最高)
+                        channels.append(("西充综合", m3u8_url, '本地节目', -4))
                     else:
                         print("⚠️ 获取到的西充URL为空")
                 else:
@@ -127,11 +124,14 @@ class IPTVUpdater:
             return path_parts[-2]
         return hashlib.md5(name.encode()).hexdigest()[:10]
 
-    def categorize_channel(self, name):
+    def categorize_channel(self, name, force_local=False):
         """
         频道分类器
-        🔴 重点增强：优先识别西充、南充
+        🔴 新增 force_local 参数：如果为 True，直接归类为本地节目
         """
+        if force_local:
+            return '本地节目', name
+
         name_lower = name.lower()
         
         # --- 1. 本地节目 (最高优先级) ---
@@ -202,14 +202,18 @@ class IPTVUpdater:
         """加载远程白名单"""
         channels = []
         try:
+            print(f"🚀 正在连接远程白名单获取本地节目...")
             response = requests.get(self.REMOTE_WHITELIST_URL, timeout=20)
             for line in response.text.strip().splitlines():
                 if "," in line:
                     parts = line.split(",", 1)
+                    # 🔴 修复：加上索引 [1] 提取 URL
                     name, url = parts[0].strip(), parts[1].strip()
                     if name and url and self._is_valid_url(url):
-                        cat, disp = self.categorize_channel(name)
+                        # 🔴 核心修改：传入 force_local=True，将所有白名单内容强制归类为本地节目
+                        cat, disp = self.categorize_channel(name, force_local=True)
                         channels.append((disp, url, cat, 1))
+            print(f"✅ 白名单加载完成。")
         except Exception as e:
             print(f"❌ 加载白名单失败: {e}")
         return channels
@@ -235,6 +239,30 @@ class IPTVUpdater:
             print(f"❌ 加载TV M3U失败: {e}")
         return channels
 
+    def load_migu_source(self):
+        """加载 Migu 外部源"""
+        channels = []
+        try:
+            print(f"🚀 正在连接 {self.MIGU_SOURCE_URL} 获取 Migu 源...")
+            response = requests.get(self.MIGU_SOURCE_URL, timeout=20, headers=self.DEFAULT_HEADERS)
+            lines = response.text.strip().splitlines()
+            
+            for i in range(len(lines)):
+                if lines[i].startswith("#EXTINF") and "," in lines[i]:
+                    try:
+                        name = lines[i].split(",", 1)[1].strip()
+                    except:
+                        continue
+                    if i + 1 < len(lines):
+                        url = lines[i+1].strip()
+                        if url.startswith("http") and self._is_valid_url(url):
+                            cat, disp = self.categorize_channel(name)
+                            channels.append((disp, url, cat, -1))
+            print(f"✅ Migu 源加载完成，共获取 {len(channels)} 个频道。")
+        except Exception as e:
+            print(f"❌ 加载 Migu 源失败: {e}")
+        return channels
+
     def _is_valid_url(self, url):
         """基础URL验证"""
         try:
@@ -248,21 +276,36 @@ class IPTVUpdater:
         print("🚀 开始合并直播源...")
         all_channels = []
         
-        # 收集所有频道 - 按优先级顺序添加
-        all_channels.extend(self.fetch_xichong_channel())       # 优先级 -4 (西充专用API)
-        all_channels.extend(self.fetch_signed_channels())      # 优先级 -3 (私有源)
-        all_channels.extend(self.load_priority_source())      # 优先级 -2
-        all_channels.extend(self.load_remote_whitelist())     # 优先级 1
-        all_channels.extend(self.load_tv_m3u())               # 优先级 2
+        # 收集所有频道
+        all_channels.extend(self.fetch_xichong_channel())
+        all_channels.extend(self.fetch_signed_channels())
+        all_channels.extend(self.load_priority_source())
+        all_channels.extend(self.load_migu_source())
+        all_channels.extend(self.load_remote_whitelist())
+        all_channels.extend(self.load_tv_m3u())
         
-        # 去重逻辑（保留最高优先级）
+        # --- 去重与多线路保留逻辑 ---
         unique_map = {}
         for name, url, cat, priority in all_channels:
-            if name not in unique_map or priority < unique_map[name][3]:
-                unique_map[name] = (name, url, cat, priority)
+            key = (name, url)
+            if key not in unique_map or priority < unique_map[key][3]:
+                unique_map[key] = (name, url, cat, priority)
         
         final_list = list(unique_map.values())
-        print(f"✅ 去重完成，共 {len(final_list)} 个频道")
+        
+        # --- 为同名但不同链接的频道添加线路后缀 ---
+        name_count = {}
+        processed_list = []
+        for name, url, cat, priority in final_list:
+            if name in name_count:
+                name_count[name] += 1
+                display_name = f"{name} [线路{name_count[name]}]"
+            else:
+                name_count[name] = 1
+                display_name = name
+            processed_list.append((display_name, url, cat, priority))
+            
+        print(f"✅ 合并完成，共 {len(processed_list)} 个频道（已保留所有线路）")
 
         # 写入文件
         os.makedirs(self.OUTPUT_DIR, exist_ok=True)
@@ -280,9 +323,9 @@ class IPTVUpdater:
                 '四川': 6,
                 '广东': 7
             }
-            final_list.sort(key=lambda x: (group_order.get(x[2], 99), x[2], x[0]))
+            processed_list.sort(key=lambda x: (group_order.get(x[2], 99), x[2], x[0]))
 
-            for name, url, cat, _ in final_list:
+            for name, url, cat, _ in processed_list:
                 f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{cat}",{name}\n')
                 f.write(f'{url}\n')
                 
