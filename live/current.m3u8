@@ -1,8 +1,10 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="南充科教" group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=87ba5f13b14bb72f9d6cf99a3604a644&wsTime=1779541498
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=db803085925bd66384f4e434873d9917&wsTime=1779552999
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=6706a72c8a202ee70c86eb4e785476af&wsTime=1779541498
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=c76725a8f782daa921c58f1d8715f6bb&wsTime=1779552999
+#EXTINF:-1 tvg-name="川超 乐山味道非常队VS南充丝绸源点队 2026赛季四川省城市足球联赛第12轮：乐山味道非常队vs南充丝绸源点队 18:35" group-title="本地节目",川超 乐山味道非常队VS南充丝绸源点队 2026赛季四川省城市足球联赛第12轮：乐山味道非常队vs南充丝绸源点队 18:35
+http://60.168.105.220:5008/963424583
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
 https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
@@ -18,17 +20,31 @@ https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId
 #EXTINF:-1 tvg-name="走进四川西充" group-title="本地节目",走进四川西充
 https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
 #EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
+http://60.168.105.220:5008/608807420
+#EXTINF:-1 tvg-name="CCTV1" group-title="央视",CCTV1
 http://tvbox6.icu/tv/migu.php?id=cctv1$LR•IPV4『线路156』
 #EXTINF:-1 tvg-name="CCTV10" group-title="央视",CCTV10
 http://43.251.226.89:8080/play/11.m3u8
+#EXTINF:-1 tvg-name="CCTV10ç§æ" group-title="央视",CCTV10ç§æ
+http://gslbmgsplive.miguvideo.com/wd_r2/2018/ocn/cctv10hd/1000/index.m3u8?msisdn=202605232157033fe720cedafe422ba0b22cbde67da204&mdspid=&spid=699004&netType=0&sid=5500212874&pid=2028597139&timestamp=20260523215703&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878405&ParentNodeID=-99&assertID=5500212874&client_ip=183.241.196.46&SecurityKey=20260523215703&promotionId=&mvid=5100001696&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=3c3d34a4e344b616946250e7aeb09ca6&ddCalcu=63acec329d4030b4eaa47ee304542b664196
+#EXTINF:-1 tvg-name="CCTV10科教" group-title="央视",CCTV10科教
+http://60.168.105.220:5008/624878405
 #EXTINF:-1 tvg-name="CCTV11" group-title="央视",CCTV11
 http://tvbox6.icu/tv/migu.php?id=cctv11$LR•IPV4『线路131』
+#EXTINF:-1 tvg-name="CCTV11ææ²" group-title="央视",CCTV11ææ²
+http://gslbmgsplive.miguvideo.com/migu/kailu/cctv11hd/50/20200103/index.m3u8?msisdn=20260523215706852bf0c2d23441ad8a1d0cecee5698fe&mdspid=&spid=699004&netType=0&sid=5500988610&pid=2028597139&timestamp=20260523215706&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=667987558&ParentNodeID=-99&assertID=5500988610&client_ip=123.119.87.180&SecurityKey=20260523215706&promotionId=&mvid=5102751362&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=6b64c7795fb09149e2ee4c0bf6bb320b&ddCalcu=b60be262347bc0b767f9b50fcb40e9e124e9
+#EXTINF:-1 tvg-name="CCTV11戏曲" group-title="央视",CCTV11戏曲
+http://60.168.105.220:5008/667987558
 #EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
 http://124.165.251.82:85/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
 http://tvbox6.icu/tv/migu.php?id=cctv12$LR•IPV4『线路150』
 #EXTINF:-1 tvg-name="CCTV12" group-title="央视",CCTV12
 http://112.27.235.94:8000/hls/13/index.m3u8
+#EXTINF:-1 tvg-name="CCTV12ç¤¾ä¼ä¸æ³" group-title="央视",CCTV12ç¤¾ä¼ä¸æ³
+http://gslbmgsplive.miguvideo.com/migu/kailu/20200324/cctv12hd/50/index.m3u8?msisdn=20260523215707c3222d091a9249c28ee3dc55454d3d3d&mdspid=&spid=699004&netType=0&sid=5501083627&pid=2028597139&timestamp=20260523215707&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=673168185&ParentNodeID=-99&assertID=5501083627&client_ip=123.119.87.180&SecurityKey=20260523215707&promotionId=&mvid=5102910389&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=a6760f8e61815a5e91333e1e4d973354&ddCalcu=4a56e3723637009fd84ee611e831353a159e
+#EXTINF:-1 tvg-name="CCTV12社会与法" group-title="央视",CCTV12社会与法
+http://60.168.105.220:5008/673168185
 #EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
 https://event.pull.hebtv.com/jishi/cp1.m3u8
 #EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
@@ -37,6 +53,10 @@ http://ali-m-l.cztv.com/channels/lantian/channel21/1080p.m3u8
 http://tvbox6.icu/tv/migu.php?id=cctv13$LR•IPV4『线路139』
 #EXTINF:-1 tvg-name="CCTV13" group-title="央视",CCTV13
 https://t.freetv.fun/live/cctv13-21.m3u8
+#EXTINF:-1 tvg-name="CCTV13æ°é»" group-title="央视",CCTV13æ°é»
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/cctv13/1000/index.m3u8?msisdn=202605232157103095a2d4f40d468eb85a396eda62543a&mdspid=&spid=699004&netType=0&sid=2202208864&pid=2028597139&timestamp=20260523215710&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608807423&ParentNodeID=-99&assertID=2202208864&client_ip=123.119.87.180&SecurityKey=20260523215710&promotionId=&mvid=2202208864&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=6fee5cc10756c32e620b74ca6c9be41d&ddCalcu=d61fe4e2ee8b509ccc61a0c74576bc03226e
+#EXTINF:-1 tvg-name="CCTV13新闻" group-title="央视",CCTV13新闻
+http://60.168.105.220:5008/608807423
 #EXTINF:-1 tvg-name="CCTV14" group-title="央视",CCTV14
 https://event.pull.hebtv.com/jishi/cp2.m3u8
 #EXTINF:-1 tvg-name="CCTV14" group-title="央视",CCTV14
@@ -45,26 +65,48 @@ http://tvbox6.icu/tv/migu.php?id=cctv14$LR•IPV4『线路149』
 http://43.251.226.89:8080/play/15.m3u8
 #EXTINF:-1 tvg-name="CCTV14" group-title="央视",CCTV14
 http://112.27.235.94:8000/hls/15/index.m3u8
+#EXTINF:-1 tvg-name="CCTV14å°å¿" group-title="央视",CCTV14å°å¿
+http://gslbmgsplive.miguvideo.com/wd_r2/2018/ocn/cctv14hd/1000/index.m3u8?msisdn=20260523215711172c2e525903448f8bca1fce6da2261d&mdspid=&spid=699004&netType=0&sid=5500212875&pid=2028597139&timestamp=20260523215711&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878440&ParentNodeID=-99&assertID=5500212875&client_ip=123.119.87.180&SecurityKey=20260523215711&promotionId=&mvid=5100001697&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=3742b8fce6d6050bd2703c02d6c97c0a&ddCalcu=a307ec427249b0c86fdc2e06cd36007520db
+#EXTINF:-1 tvg-name="CCTV14少儿" group-title="央视",CCTV14少儿
+http://60.168.105.220:5008/624878440
 #EXTINF:-1 tvg-name="CCTV15" group-title="央视",CCTV15
 http://43.251.226.89:8080/play/16.m3u8
 #EXTINF:-1 tvg-name="CCTV15" group-title="央视",CCTV15
 http://tvbox6.icu/tv/migu.php?id=cctv15$LR•IPV4『线路136』
 #EXTINF:-1 tvg-name="CCTV15" group-title="央视",CCTV15
 http://120.76.248.139/live/bfgd/4200000133.m3u8
+#EXTINF:-1 tvg-name="CCTV15é³ä¹" group-title="央视",CCTV15é³ä¹
+http://gslbmgsplive.miguvideo.com/migu/kailu/20200324/cctv15hd/50/index.m3u8?msisdn=20260523215713097c9faeb1364131a5b48f3767af4901&mdspid=&spid=699004&netType=0&sid=5501083628&pid=2028597139&timestamp=20260523215713&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=673168223&ParentNodeID=-99&assertID=5501083628&client_ip=123.119.87.180&SecurityKey=20260523215713&promotionId=&mvid=5102910391&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=3d426a0e5323209b32a91119875d6491&ddCalcu=139de442623d605a708e9513121392a0293b
+#EXTINF:-1 tvg-name="CCTV15音乐" group-title="央视",CCTV15音乐
+http://60.168.105.220:5008/673168223
 #EXTINF:-1 tvg-name="CCTV16" group-title="央视",CCTV16
 http://39.152.103.17:8089/tsfile/live/1015_1.m3u8
 #EXTINF:-1 tvg-name="CCTV17" group-title="央视",CCTV17
 http://tvbox6.icu/tv/migu.php?id=cctv17$LR•IPV4『线路102』
 #EXTINF:-1 tvg-name="CCTV17" group-title="央视",CCTV17
 http://120.76.248.139/live/bfgd/4200000204.m3u8
+#EXTINF:-1 tvg-name="CCTV17åä¸åæ" group-title="央视",CCTV17åä¸åæ
+http://gslbmgsplive.miguvideo.com/migu/kailu/20200324/cctv17hd/50/index.m3u8?msisdn=2026052321571549a06143d92c4131aaa628691aca1fc6&mdspid=&spid=699004&netType=0&sid=5501083631&pid=2028597139&timestamp=20260523215715&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=673168256&ParentNodeID=-99&assertID=5501083631&client_ip=123.119.87.180&SecurityKey=20260523215715&promotionId=&mvid=5102910396&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=7b8c8782aa5b0434bbcc7866cff2d1ba&ddCalcu=a7bbe182dc3280f7f8c26a6a857bc0c4b3b4
+#EXTINF:-1 tvg-name="CCTV17农业农村" group-title="央视",CCTV17农业农村
+http://60.168.105.220:5008/673168256
+#EXTINF:-1 tvg-name="CCTV1ç»¼å" group-title="央视",CCTV1ç»¼å
+http://gslbmgsplive.miguvideo.com/wd_r2/cctv/cctv1hd/600/index.m3u8?msisdn=20260523215647e58b4f12cde3418db78a2d44be21849f&mdspid=&spid=699004&netType=0&sid=2201057821&pid=2028597139&timestamp=20260523215647&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=123.119.87.180&SecurityKey=20260523215647&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=c1f1017c51cc5f6b0a187a4354efe780&ddCalcu=0c81e7f2e18f00e1475c3541ac7c851fa60b
 #EXTINF:-1 tvg-name="CCTV20241" group-title="央视",CCTV20241
 https://p2.bdstatic.com/rtmp.liveshow.lss-user.baidubce.com/live/stream_bduid_6488563992_8982723413/merged_1707497046297_88536_25144_41936.m3u8
+#EXTINF:-1 tvg-name="CCTV2è´¢ç»" group-title="央视",CCTV2è´¢ç»
+http://gslbmgsplive.miguvideo.com/wd_r2/cctv/cctv2hd/600/index.m3u8?msisdn=20260523215648f0c48e1923754d87b39360a9ca7c94b4&mdspid=&spid=699004&netType=0&sid=5500346945&pid=2028597139&timestamp=20260523215648&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=631780532&ParentNodeID=-99&assertID=5500346945&client_ip=183.241.196.46&SecurityKey=20260523215648&promotionId=&mvid=5101064231&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=81bdbd4b42cc1c24300d6722c968c4e7&ddCalcu=78e1e4b2cd18b06d94cb24227c6cd10c0234
+#EXTINF:-1 tvg-name="CCTV2财经" group-title="央视",CCTV2财经
+http://60.168.105.220:5008/631780532
 #EXTINF:-1 tvg-name="CCTV2财经" group-title="央视",CCTV2财经
 http://43.251.226.89:8080/play/2.m3u8
 #EXTINF:-1 tvg-name="CCTV2财经" group-title="央视",CCTV2财经
 http://112.27.235.94:8000/hls/2/index.m3u8
 #EXTINF:-1 tvg-name="CCTV2财经" group-title="央视",CCTV2财经
 http://tvbox6.icu/tv/migu.php?id=cctv2$LR•IPV4『线路147』
+#EXTINF:-1 tvg-name="CCTV3ç»¼èº" group-title="央视",CCTV3ç»¼èº
+http://gslbmgsplive.miguvideo.com/wd_r2/2018/ocn/cctv3hd/1000/index.m3u8?msisdn=202605232156524bd65a3dbbe04ca5884a1c365d574cb1&mdspid=&spid=699004&netType=0&sid=5500212864&pid=2028597139&timestamp=20260523215652&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878271&ParentNodeID=-99&assertID=5500212864&client_ip=123.119.87.180&SecurityKey=20260523215652&promotionId=&mvid=5100001683&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=5570c9df4b851e1061ce9b73b94a7822&ddCalcu=2525e872704ac0499dbf347bb895e1ce1160
+#EXTINF:-1 tvg-name="CCTV3综艺" group-title="央视",CCTV3综艺
+http://60.168.105.220:5008/624878271
 #EXTINF:-1 tvg-name="CCTV3综艺" group-title="央视",CCTV3综艺
 http://183.215.134.239:19901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV3综艺" group-title="央视",CCTV3综艺
@@ -73,12 +115,26 @@ http://39.152.103.17:8089/tsfile/live/1002_1.m3u8
 http://222.169.85.8:9901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0$LR•IPV4『线路243』
 #EXTINF:-1 tvg-name="CCTV3综艺" group-title="央视",CCTV3综艺
 http://tvbox6.icu/tv/migu.php?id=cctv3$LR•IPV4『线路135』
+#EXTINF:-1 tvg-name="CCTV4æ¬§æ´²" group-title="央视",CCTV4æ¬§æ´²
+http://gslbmgsplive.miguvideo.com/migu/kailu/20200324/cctv4ouhd/50/index.m3u8?msisdn=202605232157164ac1fd78b560465f98c9a36d3f2b1cb3&mdspid=&spid=699004&netType=0&sid=2200179315&pid=2028597139&timestamp=20260523215716&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608807419&ParentNodeID=-99&assertID=2200179315&client_ip=123.119.87.180&SecurityKey=20260523215716&promotionId=&mvid=2200179315&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=dd3eaba9b70962aa44222107ef397169&ddCalcu=9d6de1327e89a03bfae97b07102926224a4a
+#EXTINF:-1 tvg-name="CCTV4ç¾æ´²" group-title="央视",CCTV4ç¾æ´²
+http://gslbmgsplive.miguvideo.com/migu/kailu/20200324/cctv4meihd/50/index.m3u8?msisdn=202605232157179bfc9aea7714460fbac80307524beb88&mdspid=&spid=699004&netType=0&sid=2200179344&pid=2028597139&timestamp=20260523215717&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608807416&ParentNodeID=-99&assertID=2200179344&client_ip=183.241.196.46&SecurityKey=20260523215717&promotionId=&mvid=2200179344&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=7fdcdb331ca12a7db7a843fd7d7c7abf&ddCalcu=f7bfead27c8cd07bd373d1fc3a4182aa77bd
+#EXTINF:-1 tvg-name="CCTV4中文国际" group-title="央视",CCTV4中文国际
+http://60.168.105.220:5008/631780421
 #EXTINF:-1 tvg-name="CCTV4中文国际" group-title="央视",CCTV4中文国际
 http://tvbox6.icu/tv/migu.php?id=cctv4$LR•IPV4『线路146』
 #EXTINF:-1 tvg-name="CCTV4中文国际" group-title="央视",CCTV4中文国际
 http://tvbox6.icu/tv/migu.php?id=cctv4o$LR•IPV4『线路148』
 #EXTINF:-1 tvg-name="CCTV4中文国际" group-title="央视",CCTV4中文国际
 http://tvbox6.icu/tv/migu.php?id=cctv4a$LR•IPV4『线路147』
+#EXTINF:-1 tvg-name="CCTV4欧洲" group-title="央视",CCTV4欧洲
+http://60.168.105.220:5008/608807419
+#EXTINF:-1 tvg-name="CCTV4美洲" group-title="央视",CCTV4美洲
+http://60.168.105.220:5008/608807416
+#EXTINF:-1 tvg-name="CCTV5+ä½è²èµäº" group-title="央视",CCTV5+ä½è²èµäº
+http://gslbmgsplive.miguvideo.com/wd_r2/cctv/cctv5plusnew/600/index.m3u8?msisdn=20260523215655ec858b98fe6841b39343d9a3d5287e8d&mdspid=&spid=699004&netType=0&sid=5500516288&pid=2028597139&timestamp=20260523215655&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=641886773&ParentNodeID=-99&assertID=5500516288&client_ip=123.119.87.180&SecurityKey=20260523215655&promotionId=&mvid=5102048803&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=5749eac135e668dc5d9e268b22ae54ad&ddCalcu=d5a7e442591ee0aa2c21b3856e26e698dd5c
+#EXTINF:-1 tvg-name="CCTV5+体育赛事" group-title="央视",CCTV5+体育赛事
+http://60.168.105.220:5008/641886773
 #EXTINF:-1 tvg-name="CCTV5+体育赛事" group-title="央视",CCTV5+体育赛事
 http://112.27.235.94:8000/hls/6/index.m3u8
 #EXTINF:-1 tvg-name="CCTV5+体育赛事" group-title="央视",CCTV5+体育赛事
@@ -87,10 +143,18 @@ http://43.251.226.89:8080/play/6.m3u8
 http://120.76.248.139/live/bfgd/4200000246.m3u8
 #EXTINF:-1 tvg-name="CCTV5+体育赛事" group-title="央视",CCTV5+体育赛事
 http://tvbox6.icu/tv/migu.php?id=cctv5p$LR•IPV4『线路72』
+#EXTINF:-1 tvg-name="CCTV5ä½è²" group-title="央视",CCTV5ä½è²
+http://gslbmgsplive.miguvideo.com/wd_r2/cctv/cctv5hdnew/600/index.m3u8?msisdn=202605232156544c02cdd1384c46c8afb8eb48141b4fd9&mdspid=&spid=699004&netType=0&sid=5500516171&pid=2028597139&timestamp=20260523215654&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=641886683&ParentNodeID=-99&assertID=5500516171&client_ip=123.119.87.180&SecurityKey=20260523215654&promotionId=&mvid=5102048712&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=309323fc691456933cc0fb2509405a4b&ddCalcu=b340ea92531020439f0c5629b1f405c6c933
+#EXTINF:-1 tvg-name="CCTV5体育" group-title="央视",CCTV5体育
+http://60.168.105.220:5008/641886683
 #EXTINF:-1 tvg-name="CCTV5体育" group-title="央视",CCTV5体育
 http://43.251.226.89:8080/play/5.m3u8
 #EXTINF:-1 tvg-name="CCTV5体育" group-title="央视",CCTV5体育
 http://tvbox6.icu/tv/migu.php?id=cctv5$LR•IPV4『线路167』
+#EXTINF:-1 tvg-name="CCTV6çµå½±" group-title="央视",CCTV6çµå½±
+http://gslbmgsplive.miguvideo.com/wd_r2/2018/ocn/cctv6hd/1000/index.m3u8?msisdn=20260523215656e16e439a1fa14761afdd67b0df318818&mdspid=&spid=699004&netType=0&sid=5500212872&pid=2028597139&timestamp=20260523215656&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878396&ParentNodeID=-99&assertID=5500212872&client_ip=123.119.87.180&SecurityKey=20260523215656&promotionId=&mvid=5100001694&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=abd11f78af6be521570a1d732d47345c&ddCalcu=ca5be4d23147104fd7283a7fd61bae057251
+#EXTINF:-1 tvg-name="CCTV6电影" group-title="央视",CCTV6电影
+http://60.168.105.220:5008/624878396
 #EXTINF:-1 tvg-name="CCTV6电影" group-title="央视",CCTV6电影
 http://43.251.226.89:8080/play/7.m3u8
 #EXTINF:-1 tvg-name="CCTV6电影" group-title="央视",CCTV6电影
@@ -103,20 +167,42 @@ http://xxwx.yoesun.com/xxw/1905电影网.php?id=cctv6
 http://43.251.226.89:8080/play/8.m3u8
 #EXTINF:-1 tvg-name="CCTV7" group-title="央视",CCTV7
 http://tvbox6.icu/tv/migu.php?id=cctv7$LR•IPV4『线路146』
+#EXTINF:-1 tvg-name="CCTV7å½é²åäº" group-title="央视",CCTV7å½é²åäº
+http://gslbmgsplive.miguvideo.com/migu/kailu/20200324/cctv7hd/50/index.m3u8?msisdn=20260523215659625e1148d5484c7b82fa2edd5d0acc23&mdspid=&spid=699004&netType=0&sid=5501083622&pid=2028597139&timestamp=20260523215659&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=673168121&ParentNodeID=-99&assertID=5501083622&client_ip=123.119.87.180&SecurityKey=20260523215659&promotionId=&mvid=5102910278&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=b950d75a6767036227595defc8b1ee54&ddCalcu=4b59ee52e031d0b785caf6e7d65790537622
+#EXTINF:-1 tvg-name="CCTV7国防军事" group-title="央视",CCTV7国防军事
+http://60.168.105.220:5008/673168121
 #EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
 http://183.215.134.239:19901/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
 http://124.165.251.82:85/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV8" group-title="央视",CCTV8
 http://tvbox6.icu/tv/migu.php?id=cctv8$LR•IPV4『线路127』
+#EXTINF:-1 tvg-name="CCTV8çµè§å§" group-title="央视",CCTV8çµè§å§
+http://gslbmgsplive.miguvideo.com/wd_r2/2018/ocn/cctv8hd/1000/index.m3u8?msisdn=202605232157001b24abc5dfaf481a84e9ed18f6cb7971&mdspid=&spid=699004&netType=0&sid=5500212868&pid=2028597139&timestamp=20260523215700&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878356&ParentNodeID=-99&assertID=5500212868&client_ip=123.119.87.180&SecurityKey=20260523215700&promotionId=&mvid=5100001695&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=ad219e0e361ee510f068ee0e637e5788&ddCalcu=8a8de722514e907e306ee306e1ee8e6501f0
+#EXTINF:-1 tvg-name="CCTV8电视剧" group-title="央视",CCTV8电视剧
+http://60.168.105.220:5008/624878356
 #EXTINF:-1 tvg-name="CCTV9" group-title="央视",CCTV9
 http://tvbox6.icu/tv/migu.php?id=cctv9$LR•IPV4『线路138』
+#EXTINF:-1 tvg-name="CCTV9çºªå½" group-title="央视",CCTV9çºªå½
+http://gslbmgsplive.miguvideo.com/migu/kailu/20200324/cctv9hd/50/index.m3u8?msisdn=2026052321570188b9ffe78fbc419fb4dcc55c7a9e8be8&mdspid=&spid=699004&netType=0&sid=5501083624&pid=2028597139&timestamp=20260523215701&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=673168140&ParentNodeID=-99&assertID=5501083624&client_ip=183.241.196.46&SecurityKey=20260523215701&promotionId=&mvid=5102910384&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=1a843a4658a0f3a266272e6531517b98&ddCalcu=819aeb827431305a14365568ea207f236a62
+#EXTINF:-1 tvg-name="CCTV9纪录" group-title="央视",CCTV9纪录
+http://60.168.105.220:5008/673168140
 #EXTINF:-1 tvg-name="CCTV女性时尚" group-title="央视",CCTV女性时尚
 http://39.152.103.17:8089/tsfile/live/1068_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】中央财经大学0-3南京师范大学（官方解说） 08:30" group-title="央视",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】中央财经大学0-3南京师范大学（官方解说） 08:30
+http://60.168.105.220:5008/964930340
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】四川大学1-3中央民族大学（官方解说） 08:30" group-title="央视",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】四川大学1-3中央民族大学（官方解说） 08:30
+http://60.168.105.220:5008/964932507
+#EXTINF:-1 tvg-name="三沙卫视" group-title="卫视",三沙卫视
+http://60.168.105.220:5008/961023778
+#EXTINF:-1 tvg-name="东南卫视" group-title="卫视",东南卫视
+http://60.168.105.220:5008/849116810
 #EXTINF:-1 tvg-name="东南卫视" group-title="卫视",东南卫视
 http://live.zohi.tv/video/s10001-fztv-3/index.m3u8
 #EXTINF:-1 tvg-name="东南卫视" group-title="卫视",东南卫视
 http://120.76.248.139/live/bfgd/4200000483.m3u8
+#EXTINF:-1 tvg-name="东方卫视" group-title="卫视",东方卫视
+http://60.168.105.220:5008/651632648
 #EXTINF:-1 tvg-name="东方卫视" group-title="卫视",东方卫视
 http://bp-resource-dfl.bestv.cn/155/3/video.m3u8
 #EXTINF:-1 tvg-name="东方卫视" group-title="卫视",东方卫视
@@ -133,22 +219,32 @@ https://bp-resource-dfl.bestv.cn/148/3/video.m3u8
 https://p2hs.vzan.com/slowlive/821481626725612419/live.m3u8
 #EXTINF:-1 tvg-name="东森亚洲卫视" group-title="卫视",东森亚洲卫视
 https://pull-hsbj.vzan.com/v/slowlive_821481626725612419.flv
+#EXTINF:-1 tvg-name="中国农林卫视" group-title="卫视",中国农林卫视
+http://60.168.105.220:5008/956904896
 #EXTINF:-1 tvg-name="云南卫视" group-title="卫视",云南卫视
 http://tvbox6.icu/tv/migu.php?id=ynws$LR•IPV4『线路44』
+#EXTINF:-1 tvg-name="兵团卫视" group-title="卫视",兵团卫视
+http://60.168.105.220:5008/956923145
 #EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视",内蒙古卫视
 http://tvbox6.icu/tv/migu.php?id=nmws$LR•IPV4『线路26』
 #EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视",内蒙古卫视
 https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8$LR•IPV4『线路27』
 #EXTINF:-1 tvg-name="北京卫视" group-title="卫视",北京卫视
+http://60.168.105.220:5008/630287636
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视",北京卫视
 http://112.27.235.94:8000/hls/27/index.m3u8
 #EXTINF:-1 tvg-name="北京卫视4K超高清" group-title="卫视",北京卫视4K超高清
 http://183.215.134.239:19901/tsfile/live/0122_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="吉林卫视" group-title="卫视",吉林卫视
+http://60.168.105.220:5008/947472500
 #EXTINF:-1 tvg-name="吉林卫视" group-title="卫视",吉林卫视
 http://tvbox6.icu/tv/migu.php?id=jlws$LR•IPV4『线路65』
 #EXTINF:-1 tvg-name="四川卫视4K" group-title="卫视",四川卫视4K
 http://112.27.235.94:8000/hls/35/index.m3u8
 #EXTINF:-1 tvg-name="四川卫视4K" group-title="卫视",四川卫视4K
 http://39.152.103.17:8089/tsfile/live/1044_1.m3u8
+#EXTINF:-1 tvg-name="大湾区卫视" group-title="卫视",大湾区卫视
+http://60.168.105.220:5008/608917627
 #EXTINF:-1 tvg-name="大湾区卫视" group-title="卫视",大湾区卫视
 http://tvbox6.icu/tv/migu.php?id=dwqws$LR•IPV4『线路12』
 #EXTINF:-1 tvg-name="大湾区卫视" group-title="卫视",大湾区卫视
@@ -157,6 +253,8 @@ http://222.128.55.152:9080/live/dwq.m3u8
 http://112.27.235.94:8000/hls/42/index.m3u8
 #EXTINF:-1 tvg-name="天津卫视" group-title="卫视",天津卫视
 http://222.169.85.8:9901/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="宁夏卫视" group-title="卫视",宁夏卫视
+http://60.168.105.220:5008/738910535
 #EXTINF:-1 tvg-name="宁夏卫视" group-title="卫视",宁夏卫视
 http://43.251.226.89:8080/play/54.m3u8
 #EXTINF:-1 tvg-name="宁夏卫视" group-title="卫视",宁夏卫视
@@ -178,6 +276,8 @@ http://119.39.9.8:9901/tsfile/live/0118_1.m3u8
 #EXTINF:-1 tvg-name="山西卫视" group-title="卫视",山西卫视
 https://t.freetv.fun/live/shan-xi-wei-shi-3-2.m3u8
 #EXTINF:-1 tvg-name="广东卫视" group-title="卫视",广东卫视
+http://60.168.105.220:5008/608831231
+#EXTINF:-1 tvg-name="广东卫视" group-title="卫视",广东卫视
 http://tvbox6.icu/tv/migu.php?id=gdws$LR•IPV4『线路85』
 #EXTINF:-1 tvg-name="广东卫视" group-title="卫视",广东卫视
 http://183.215.134.239:19901/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0$LR•IPV4『线路116』
@@ -198,7 +298,11 @@ http://tvbox6.icu/tv/migu.php?id=xjws$LR•IPV4『线路31』
 #EXTINF:-1 tvg-name="新疆卫视" group-title="卫视",新疆卫视
 http://218.84.12.186:8001/hls/main/playlist.m3u8?zxinjd;http://218.84.12.186:8001/hls/main/playlist.m3u8zxinjd
 #EXTINF:-1 tvg-name="江苏卫视" group-title="卫视",江苏卫视
+http://60.168.105.220:5008/623899368
+#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视",江苏卫视
 http://tvbox6.icu/tv/migu.php?id=jsws$LR•IPV4『线路87』
+#EXTINF:-1 tvg-name="江西卫视" group-title="卫视",江西卫视
+http://60.168.105.220:5008/783847495
 #EXTINF:-1 tvg-name="江西卫视" group-title="卫视",江西卫视
 http://tvbox6.icu/tv/migu.php?id=jxws$LR•IPV4『线路77』
 #EXTINF:-1 tvg-name="江西卫视" group-title="卫视",江西卫视
@@ -206,7 +310,11 @@ http://183.215.134.239:19901/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authi
 #EXTINF:-1 tvg-name="江西卫视" group-title="卫视",江西卫视
 http://183.215.134.239:19901/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="河北卫视" group-title="卫视",河北卫视
+http://60.168.105.220:5008/962042070
+#EXTINF:-1 tvg-name="河北卫视" group-title="卫视",河北卫视
 http://120.76.248.139/live/bfgd/4200000108.m3u8
+#EXTINF:-1 tvg-name="河南卫视" group-title="卫视",河南卫视
+http://60.168.105.220:5008/790187291
 #EXTINF:-1 tvg-name="河南卫视" group-title="卫视",河南卫视
 http://tvpull.dxhmt.cn:9081/tv/11425-1.m3u8
 #EXTINF:-1 tvg-name="河南卫视" group-title="卫视",河南卫视
@@ -240,6 +348,8 @@ http://ali-m-l.cztv.com/channels/lantian/channel01/1080p.m3u8
 #EXTINF:-1 tvg-name="浙江卫视" group-title="卫视",浙江卫视
 http://ali-m-l.cztv.com/channels/lantian/channel01/1080p.m3u8$LR•IPV4『线路166』
 #EXTINF:-1 tvg-name="海南卫视" group-title="卫视",海南卫视
+http://60.168.105.220:5008/947472502
+#EXTINF:-1 tvg-name="海南卫视" group-title="卫视",海南卫视
 http://nn.7x9d.cn/地方台8563/海南.php?id=hnws
 #EXTINF:-1 tvg-name="海南卫视" group-title="卫视",海南卫视
 http://nn.7x9d.cn/地方台8563/海南.php?id=hnws&?key=txiptv
@@ -252,6 +362,8 @@ http://tvbox6.icu/tv/migu.php?id=hinws$LR•IPV4『线路55』
 #EXTINF:-1 tvg-name="海南卫视" group-title="卫视",海南卫视
 http://39.152.103.17:8089/tsfile/live/1046_1.m3u8
 #EXTINF:-1 tvg-name="海峡卫视" group-title="卫视",海峡卫视
+http://60.168.105.220:5008/849119120
+#EXTINF:-1 tvg-name="海峡卫视" group-title="卫视",海峡卫视
 http://hlsbkmgsplive.miguvideo.com/migu/kailu/haixiaws/57/20230724/01.m3u8?msisdn=&Channel_ID=&ContentId=&HlsSubType=&HlsProfileId=&encrypt=
 #EXTINF:-1 tvg-name="海峡卫视" group-title="卫视",海峡卫视
 http://8.138.7.223/tv/hxws.m3u8
@@ -259,6 +371,8 @@ http://8.138.7.223/tv/hxws.m3u8
 http://112.27.235.94:8000/hls/33/index.m3u8
 #EXTINF:-1 tvg-name="深圳卫视" group-title="卫视",深圳卫视
 http://183.215.134.239:19901/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视",湖北卫视
+http://60.168.105.220:5008/947472496
 #EXTINF:-1 tvg-name="湖北卫视" group-title="卫视",湖北卫视
 http://tvbox6.icu/tv/migu.php?id=hubws$LR•IPV4『线路78』
 #EXTINF:-1 tvg-name="湖南卫视" group-title="卫视",湖南卫视
@@ -280,13 +394,21 @@ http://tvbox6.icu/tv/migu.php?id=xzws$LR•IPV4『线路25』
 #EXTINF:-1 tvg-name="贵州卫视" group-title="卫视",贵州卫视
 http://tvbox6.icu/tv/migu.php?id=gzws$LR•IPV4『线路73』
 #EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视",辽宁卫视
+http://60.168.105.220:5008/630291707
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视",辽宁卫视
 http://43.251.226.89:8080/play/41.m3u8
 #EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视",辽宁卫视
 http://tvbox6.icu/tv/migu.php?id=lnws$LR•IPV4『线路70』
 #EXTINF:-1 tvg-name="重庆卫视" group-title="卫视",重庆卫视
+http://60.168.105.220:5008/738910914
+#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视",重庆卫视
 http://tvbox6.icu/tv/migu.php?id=cqws$LR•IPV4『线路72』
 #EXTINF:-1 tvg-name="陕西卫视" group-title="卫视",陕西卫视
+http://60.168.105.220:5008/738910838
+#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视",陕西卫视
 http://hlsbkmgsplive.miguvideo.com/migu/kailu/shan3xiws/57/20220809/index.m3u8?msisdn=&mtv_session=&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=
+#EXTINF:-1 tvg-name="青海卫视" group-title="卫视",青海卫视
+http://60.168.105.220:5008/947472506
 #EXTINF:-1 tvg-name="青海卫视" group-title="卫视",青海卫视
 http://43.251.226.89:8080/play/48.m3u8
 #EXTINF:-1 tvg-name="青海卫视" group-title="卫视",青海卫视
@@ -297,3 +419,1123 @@ http://tvbox6.icu/tv/migu.php?id=qhws$LR•IPV4『线路41』
 http://120.76.248.139/live/bfgd/4200000095.m3u8
 #EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视",黑龙江卫视
 http://112.27.235.94:8000/hls/48/index.m3u8
+#EXTINF:-1 tvg-name="CHCå½±è¿·çµå½±" group-title="电影频道",CHCå½±è¿·çµå½±
+http://gslbmgsplive.miguvideo.com/migu/kailu/chcymdy/50/20250415/index.m3u8?msisdn=20260523215937099b1677bcf24b578ea7252e804b1918&mdspid=&spid=699004&netType=0&sid=5910022176&pid=2028597139&timestamp=20260523215937&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=952383261&ParentNodeID=-99&assertID=5910022176&client_ip=183.241.196.46&SecurityKey=20260523215937&promotionId=&mvid=5900006704&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=5fc32d825308291b0f899446c4b578b0&ddCalcu=05bfe8c2732520bd48c2654340989289f10b
+#EXTINF:-1 tvg-name="CHC动作电影" group-title="电影频道",CHC动作电影
+http://60.168.105.220:5008/644368714
+#EXTINF:-1 tvg-name="CHC家庭影院" group-title="电影频道",CHC家庭影院
+http://60.168.105.220:5008/644368373
+#EXTINF:-1 tvg-name="CHC影迷电影" group-title="电影频道",CHC影迷电影
+http://60.168.105.220:5008/952383261
+#EXTINF:-1 tvg-name="经典香港电影" group-title="电影频道",经典香港电影
+http://60.168.105.220:5008/625703337
+#EXTINF:-1 tvg-name="中乙 湖北青年星VS成都蓉城希拉谷 全场回放（官方解说） 19:20" group-title="四川",中乙 湖北青年星VS成都蓉城希拉谷 全场回放（官方解说） 19:20
+http://60.168.105.220:5008/964935713
+#EXTINF:-1 tvg-name="中超 大连英博海发VS成都蓉城 刘畅 贺宇 王伟 18:30" group-title="四川",中超 大连英博海发VS成都蓉城 刘畅 贺宇 王伟 18:30
+http://60.168.105.220:5008/964888986
+#EXTINF:-1 tvg-name="中超 大连英博海发VS成都蓉城 大连英博海发球星视角 19:45" group-title="四川",中超 大连英博海发VS成都蓉城 大连英博海发球星视角 19:45
+http://60.168.105.220:5008/964888996
+#EXTINF:-1 tvg-name="中超 大连英博海发VS成都蓉城 成都蓉城球星视角 19:45" group-title="四川",中超 大连英博海发VS成都蓉城 成都蓉城球星视角 19:45
+http://60.168.105.220:5008/964889007
+#EXTINF:-1 tvg-name="中超 大连英博海发VS成都蓉城 数智战术视角 19:55" group-title="四川",中超 大连英博海发VS成都蓉城 数智战术视角 19:55
+http://60.168.105.220:5008/964889012
+#EXTINF:-1 tvg-name="中超 大连英博海发VS成都蓉城 苏东 徐阳 18:30" group-title="四川",中超 大连英博海发VS成都蓉城 苏东 徐阳 18:30
+http://60.168.105.220:5008/964888974
+#EXTINF:-1 tvg-name="中超 大连英博海发VS成都蓉城 赛场原声 19:45" group-title="四川",中超 大连英博海发VS成都蓉城 赛场原声 19:45
+http://60.168.105.220:5008/964889021
+#EXTINF:-1 tvg-name="川超 凉山好医生队VS自贡灯城燊龙队 2026赛季四川省城市足球联赛第12轮：凉山好医生队vs自贡灯城燊龙队 18:35" group-title="四川",川超 凉山好医生队VS自贡灯城燊龙队 2026赛季四川省城市足球联赛第12轮：凉山好医生队vs自贡灯城燊龙队 18:35
+http://60.168.105.220:5008/963424613
+#EXTINF:-1 tvg-name="川超 成都锦城队VS德阳重装队 2026赛季四川省城市足球联赛第12轮：成都锦城队vs德阳重装队 18:35" group-title="四川",川超 成都锦城队VS德阳重装队 2026赛季四川省城市足球联赛第12轮：成都锦城队vs德阳重装队 18:35
+http://60.168.105.220:5008/963424570
+#EXTINF:-1 tvg-name="川超 绵阳九洲长虹队VS达州川汉子队 2026赛季四川省城市足球联赛第12轮：绵阳九洲长虹队vs达州川汉子队 18:35" group-title="四川",川超 绵阳九洲长虹队VS达州川汉子队 2026赛季四川省城市足球联赛第12轮：绵阳九洲长虹队vs达州川汉子队 18:35
+http://60.168.105.220:5008/963424553
+#EXTINF:-1 tvg-name="CBA 深圳马可波罗VS浙江浙商证券 图文直播 19:35" group-title="广东",CBA 深圳马可波罗VS浙江浙商证券 图文直播 19:35
+http://60.168.105.220:5008/964925051
+#EXTINF:-1 tvg-name="中乙 广州蒲公英VS厦门飞鹭 解说 18:50" group-title="广东",中乙 广州蒲公英VS厦门飞鹭 解说 18:50
+http://60.168.105.220:5008/964913323
+#EXTINF:-1 tvg-name="中乙 温州俱乐部VS广东铭途 全场回放（官方解说） 19:20" group-title="广东",中乙 温州俱乐部VS广东铭途 全场回放（官方解说） 19:20
+http://60.168.105.220:5008/964935465
+#EXTINF:-1 tvg-name="中乙 赣州瑞狮VS深圳二零二八 全场回放（官方解说） 19:20" group-title="广东",中乙 赣州瑞狮VS深圳二零二八 全场回放（官方解说） 19:20
+http://60.168.105.220:5008/964935504
+#EXTINF:-1 tvg-name="中甲 佛山南狮VS定南赣联 解说 19:20" group-title="广东",中甲 佛山南狮VS定南赣联 解说 19:20
+http://60.168.105.220:5008/964911184
+#EXTINF:-1 tvg-name="中甲 佛山南狮VS定南赣联 赛场原声 19:20" group-title="广东",中甲 佛山南狮VS定南赣联 赛场原声 19:20
+http://60.168.105.220:5008/964911166
+#EXTINF:-1 tvg-name="中甲 广东广州豹足球俱乐部VS延边龙鼎 解说 19:20" group-title="广东",中甲 广东广州豹足球俱乐部VS延边龙鼎 解说 19:20
+http://60.168.105.220:5008/964911012
+#EXTINF:-1 tvg-name="中甲 广东广州豹足球俱乐部VS延边龙鼎 赛场原声 19:20" group-title="广东",中甲 广东广州豹足球俱乐部VS延边龙鼎 赛场原声 19:20
+http://60.168.105.220:5008/964911006
+#EXTINF:-1 tvg-name="中甲 长春亚泰VS深圳青年人 解说 15:20" group-title="广东",中甲 长春亚泰VS深圳青年人 解说 15:20
+http://60.168.105.220:5008/964911115
+#EXTINF:-1 tvg-name="中甲 长春亚泰VS深圳青年人 赛场原声 15:20" group-title="广东",中甲 长春亚泰VS深圳青年人 赛场原声 15:20
+http://60.168.105.220:5008/964911101
+#EXTINF:-1 tvg-name="中超 上海申花VS深圳新鹏城 娄一晨 刘越 孙蕊 19:30" group-title="广东",中超 上海申花VS深圳新鹏城 娄一晨 刘越 孙蕊 19:30
+http://60.168.105.220:5008/964889215
+#EXTINF:-1 tvg-name="中超 上海申花VS深圳新鹏城 赛场原声 19:45" group-title="广东",中超 上海申花VS深圳新鹏城 赛场原声 19:45
+http://60.168.105.220:5008/964889228
+#EXTINF:-1 tvg-name="粤BA 东莞VS清远 2026广东省城市篮球联赛第九轮: 东莞vs清远 19:30" group-title="广东",粤BA 东莞VS清远 2026广东省城市篮球联赛第九轮: 东莞vs清远 19:30
+http://60.168.105.220:5008/964087111
+#EXTINF:-1 tvg-name="粤BA 中山VS珠海 2026广东省城市篮球联赛第九轮: 中山vs珠海 19:30" group-title="广东",粤BA 中山VS珠海 2026广东省城市篮球联赛第九轮: 中山vs珠海 19:30
+http://60.168.105.220:5008/964087558
+#EXTINF:-1 tvg-name="粤BA 佛山VS云浮 2026广东省城市篮球联赛第九轮: 佛山vs云浮 19:30" group-title="广东",粤BA 佛山VS云浮 2026广东省城市篮球联赛第九轮: 佛山vs云浮 19:30
+http://60.168.105.220:5008/964087583
+#EXTINF:-1 tvg-name="粤BA 佛山VS云浮 粤语 19:30" group-title="广东",粤BA 佛山VS云浮 粤语 19:30
+http://60.168.105.220:5008/964927538
+#EXTINF:-1 tvg-name="粤BA 广州VS阳江 2026广东省城市篮球联赛第九轮: 广州vs阳江 19:30" group-title="广东",粤BA 广州VS阳江 2026广东省城市篮球联赛第九轮: 广州vs阳江 19:30
+http://60.168.105.220:5008/964087635
+#EXTINF:-1 tvg-name="粤BA 梅州VS汕头 2026广东省城市篮球联赛第九轮: 梅州vs汕头 19:30" group-title="广东",粤BA 梅州VS汕头 2026广东省城市篮球联赛第九轮: 梅州vs汕头 19:30
+http://60.168.105.220:5008/964087020
+#EXTINF:-1 tvg-name="粤BA 汕尾VS深圳 2026广东省城市篮球联赛第九轮: 汕尾vs深圳 19:30" group-title="广东",粤BA 汕尾VS深圳 2026广东省城市篮球联赛第九轮: 汕尾vs深圳 19:30
+http://60.168.105.220:5008/964087068
+#EXTINF:-1 tvg-name="粤BA 江门VS湛江 2026广东省城市篮球联赛第九轮: 江门vs湛江 19:30" group-title="广东",粤BA 江门VS湛江 2026广东省城市篮球联赛第九轮: 江门vs湛江 19:30
+http://60.168.105.220:5008/964087618
+#EXTINF:-1 tvg-name="粤BA 河源VS惠州 2026广东省城市篮球联赛第九轮: 河源vs惠州 19:30" group-title="广东",粤BA 河源VS惠州 2026广东省城市篮球联赛第九轮: 河源vs惠州 19:30
+http://60.168.105.220:5008/964087417
+#EXTINF:-1 tvg-name="粤BA 茂名VS肇庆 2026广东省城市篮球联赛第九轮: 茂名vs肇庆 19:30" group-title="广东",粤BA 茂名VS肇庆 2026广东省城市篮球联赛第九轮: 茂名vs肇庆 19:30
+http://60.168.105.220:5008/964087456
+#EXTINF:-1 tvg-name="粤BA 韶关VS潮州 2026广东省城市篮球联赛第九轮: 韶关vs潮州 19:30" group-title="广东",粤BA 韶关VS潮州 2026广东省城市篮球联赛第九轮: 韶关vs潮州 19:30
+http://60.168.105.220:5008/964087162
+#EXTINF:-1 tvg-name="粤超 中山VS珠海 2026赛季广东省城市足球超级联赛第四轮: 中山VS珠海 19:30" group-title="广东",粤超 中山VS珠海 2026赛季广东省城市足球超级联赛第四轮: 中山VS珠海 19:30
+http://60.168.105.220:5008/964216818
+#EXTINF:-1 tvg-name="粤超 中山VS珠海 粤语 19:30" group-title="广东",粤超 中山VS珠海 粤语 19:30
+http://60.168.105.220:5008/964928213
+#EXTINF:-1 tvg-name="粤超 云浮VS湛江 2026赛季广东省城市足球超级联赛第四轮: 云浮VS湛江 19:30" group-title="广东",粤超 云浮VS湛江 2026赛季广东省城市足球超级联赛第四轮: 云浮VS湛江 19:30
+http://60.168.105.220:5008/964216685
+#EXTINF:-1 tvg-name="粤超 佛山VS肇庆 2026赛季广东省城市足球超级联赛第四轮: 佛山VS肇庆 20:00" group-title="广东",粤超 佛山VS肇庆 2026赛季广东省城市足球超级联赛第四轮: 佛山VS肇庆 20:00
+http://60.168.105.220:5008/964216713
+#EXTINF:-1 tvg-name="粤超 佛山VS肇庆 普通话 20:00" group-title="广东",粤超 佛山VS肇庆 普通话 20:00
+http://60.168.105.220:5008/964928107
+#EXTINF:-1 tvg-name="粤超 惠州VS揭阳 2026赛季广东省城市足球超级联赛第四轮: 惠州VS揭阳 19:30" group-title="广东",粤超 惠州VS揭阳 2026赛季广东省城市足球超级联赛第四轮: 惠州VS揭阳 19:30
+http://60.168.105.220:5008/964216610
+#EXTINF:-1 tvg-name="粤超 汕头VS河源 2026赛季广东省城市足球超级联赛第四轮: 汕头VS河源 19:30" group-title="广东",粤超 汕头VS河源 2026赛季广东省城市足球超级联赛第四轮: 汕头VS河源 19:30
+http://60.168.105.220:5008/964216754
+#EXTINF:-1 tvg-name="粤超 江门VS茂名 2026赛季广东省城市足球超级联赛第四轮: 江门VS茂名 19:30" group-title="广东",粤超 江门VS茂名 2026赛季广东省城市足球超级联赛第四轮: 江门VS茂名 19:30
+http://60.168.105.220:5008/964216774
+#EXTINF:-1 tvg-name="粤超 深圳VS东莞 2026赛季广东省城市足球超级联赛第四轮: 深圳VS东莞 20:00" group-title="广东",粤超 深圳VS东莞 2026赛季广东省城市足球超级联赛第四轮: 深圳VS东莞 20:00
+http://60.168.105.220:5008/964216664
+#EXTINF:-1 tvg-name="粤超 深圳VS东莞 普通话 20:00" group-title="广东",粤超 深圳VS东莞 普通话 20:00
+http://60.168.105.220:5008/964928010
+#EXTINF:-1 tvg-name="粤超 潮州VS清远 2026赛季广东省城市足球超级联赛第四轮: 潮州VS清远 15:30" group-title="广东",粤超 潮州VS清远 2026赛季广东省城市足球超级联赛第四轮: 潮州VS清远 15:30
+http://60.168.105.220:5008/964219288
+#EXTINF:-1 tvg-name="粤超 阳江VS广州 2026赛季广东省城市足球超级联赛第四轮: 阳江VS广州 19:30" group-title="广东",粤超 阳江VS广州 2026赛季广东省城市足球超级联赛第四轮: 阳江VS广州 19:30
+http://60.168.105.220:5008/964216837
+#EXTINF:-1 tvg-name="粤超 阳江VS广州 粤语 19:30" group-title="广东",粤超 阳江VS广州 粤语 19:30
+http://60.168.105.220:5008/964928256
+#EXTINF:-1 tvg-name="粤超 韶关VS汕尾 2026赛季广东省城市足球超级联赛第四轮: 韶关VS汕尾 19:30" group-title="广东",粤超 韶关VS汕尾 2026赛季广东省城市足球超级联赛第四轮: 韶关VS汕尾 19:30
+http://60.168.105.220:5008/964216791
+#EXTINF:-1 tvg-name="上海新闻综合" group-title="上海",上海新闻综合
+http://60.168.105.220:5008/651632657
+#EXTINF:-1 tvg-name="上海第一财经" group-title="上海",上海第一财经
+http://60.168.105.220:5008/608780988
+#EXTINF:-1 tvg-name="中乙 山东泰山B队VS上海海港B队 全场回放（官方解说） 18:50" group-title="上海",中乙 山东泰山B队VS上海海港B队 全场回放（官方解说） 18:50
+http://60.168.105.220:5008/964935879
+#EXTINF:-1 tvg-name="中超 上海海港VS天津津门虎 石庆圣 李彦 18:45" group-title="上海",中超 上海海港VS天津津门虎 石庆圣 李彦 18:45
+http://60.168.105.220:5008/964888790
+#EXTINF:-1 tvg-name="中超 上海海港VS天津津门虎 赛场原声 18:45" group-title="上海",中超 上海海港VS天津津门虎 赛场原声 18:45
+http://60.168.105.220:5008/964888812
+#EXTINF:-1 tvg-name="24å°æ¶åå¸èèµè½®æ­å°" group-title="其他",24å°æ¶åå¸èèµè½®æ­å°
+http://gslbmgsplive.miguvideo.com/migu/lunbo/ouzhoubei/50/20240603/index.m3u8?msisdn=20260523215746c97a99fa86c7415d9371b8c7dfd1dfc3&mdspid=&spid=800033&netType=0&sid=5910022136&pid=2028597139&timestamp=20260523215746&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=915512915&ParentNodeID=-99&assertID=5910022136&client_ip=123.119.87.180&SecurityKey=20260523215746&promotionId=&mvid=5900006618&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=5157676fe97f29ad96a52531db821246&ddCalcu=6541e25217526087b6df1e39572f52a96a9d
+#EXTINF:-1 tvg-name="24小时城市联赛轮播台" group-title="其他",24小时城市联赛轮播台
+http://60.168.105.220:5008/915512915
+#EXTINF:-1 tvg-name="BWF 国羽内战！胡哲安PK李诗沣 1号场地 12:00" group-title="其他",BWF 国羽内战！胡哲安PK李诗沣 1号场地 12:00
+http://60.168.105.220:5008/964849456
+#EXTINF:-1 tvg-name="BWF 国羽内战！胡哲安PK李诗沣 1号场地英文解说视角 12:00" group-title="其他",BWF 国羽内战！胡哲安PK李诗沣 1号场地英文解说视角 12:00
+http://60.168.105.220:5008/964886187
+#EXTINF:-1 tvg-name="BWF 国羽内战！胡哲安PK李诗沣 陈雨菲VS明地阳菜 12:00" group-title="其他",BWF 国羽内战！胡哲安PK李诗沣 陈雨菲VS明地阳菜 12:00
+http://60.168.105.220:5008/964936931
+#EXTINF:-1 tvg-name="BWF 国羽内战！胡哲安PK李诗沣 鲍骊婧/曹梓涵VS陈樊淑湉/罗徐敏 12:10" group-title="其他",BWF 国羽内战！胡哲安PK李诗沣 鲍骊婧/曹梓涵VS陈樊淑湉/罗徐敏 12:10
+http://60.168.105.220:5008/964936958
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 2026BWF马来西亚羽毛球大师赛Day4一号场全场回放（英文解说）（二） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 2026BWF马来西亚羽毛球大师赛Day4一号场全场回放（英文解说）（二） 16:40
+http://60.168.105.220:5008/964935600
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 2026BWF马来西亚羽毛球大师赛Day4一号场全场回放（赛场原声）（二） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 2026BWF马来西亚羽毛球大师赛Day4一号场全场回放（赛场原声）（二） 16:40
+http://60.168.105.220:5008/964935792
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】一号场（英文解说）（一） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】一号场（英文解说）（一） 16:40
+http://60.168.105.220:5008/964927523
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】一号场（赛场原声）（一） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】一号场（赛场原声）（一） 16:40
+http://60.168.105.220:5008/964927365
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】三号场（一） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】三号场（一） 16:40
+http://60.168.105.220:5008/964932311
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】三号场（二） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】三号场（二） 16:40
+http://60.168.105.220:5008/964932547
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】二号场（一） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】二号场（一） 16:40
+http://60.168.105.220:5008/964927796
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】二号场（赛场原声）（二） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【全场回放】二号场（赛场原声）（二） 16:40
+http://60.168.105.220:5008/964932341
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】乔纳坦1-2胡哲安（孙宁智） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】乔纳坦1-2胡哲安（孙宁智） 16:40
+http://60.168.105.220:5008/964927002
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】乔纳坦1-2胡哲安（赛场原声） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】乔纳坦1-2胡哲安（赛场原声） 16:40
+http://60.168.105.220:5008/964927299
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】帕尼查蓬2-0陆光祖（朱胤丞） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】帕尼查蓬2-0陆光祖（朱胤丞） 16:40
+http://60.168.105.220:5008/964931340
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】李诗沣2-1大波波夫（轩子博） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】李诗沣2-1大波波夫（轩子博） 16:40
+http://60.168.105.220:5008/964925925
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】林瑞蓉/李欣梅2-1罗意/王汀戈（赛场原声） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】林瑞蓉/李欣梅2-1罗意/王汀戈（赛场原声） 16:40
+http://60.168.105.220:5008/964926433
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】谢定峰/苏伟译2-0胡珂源/林祥毅（朱胤丞） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】谢定峰/苏伟译2-0胡珂源/林祥毅（朱胤丞） 16:40
+http://60.168.105.220:5008/964932328
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】郭新娃/陈芳卉2-0贾士贤/盖骆（杨妮娜） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】郭新娃/陈芳卉2-0贾士贤/盖骆（杨妮娜） 16:40
+http://60.168.105.220:5008/964931966
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】郭新娃/陈芳卉2-0贾士贤/盖骆（赛场原声） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】郭新娃/陈芳卉2-0贾士贤/盖骆（赛场原声） 16:40
+http://60.168.105.220:5008/964932163
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】陈妍妃/孙亮晴1-2鲍骊婧/曹梓涵（赛场原声） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】陈妍妃/孙亮晴1-2鲍骊婧/曹梓涵（赛场原声） 16:40
+http://60.168.105.220:5008/964931020
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】陈樊淑湉/罗徐敏2-0岩永铃/中西贵映（杨妮娜） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】陈樊淑湉/罗徐敏2-0岩永铃/中西贵映（杨妮娜） 16:40
+http://60.168.105.220:5008/964931728
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】陈樊淑湉/罗徐敏2-0岩永铃/中西贵映（赛场原声） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】陈樊淑湉/罗徐敏2-0岩永铃/中西贵映（赛场原声） 16:40
+http://60.168.105.220:5008/964931840
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】陈雨菲2-0碧查梦（轩子博） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】陈雨菲2-0碧查梦（轩子博） 16:40
+http://60.168.105.220:5008/964924678
+#EXTINF:-1 tvg-name="BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】高家炫/魏雅欣2-0陈堂杰/杜颐沩（朱胤丞） 16:40" group-title="其他",BWF 陈雨菲、李诗沣、胡哲安晋级四强 【回放】高家炫/魏雅欣2-0陈堂杰/杜颐沩（朱胤丞） 16:40
+http://60.168.105.220:5008/964932894
+#EXTINF:-1 tvg-name="BWF 马来西亚羽毛球大师赛第六日 1号场地 12:00" group-title="其他",BWF 马来西亚羽毛球大师赛第六日 1号场地 12:00
+http://60.168.105.220:5008/964849436
+#EXTINF:-1 tvg-name="BWF 马来西亚羽毛球大师赛第六日 1号场地英文解说视角 12:00" group-title="其他",BWF 马来西亚羽毛球大师赛第六日 1号场地英文解说视角 12:00
+http://60.168.105.220:5008/964886208
+#EXTINF:-1 tvg-name="CETV1" group-title="其他",CETV1
+http://60.168.105.220:5008/923287154
+#EXTINF:-1 tvg-name="CETV1" group-title="其他",CETV1
+http://gslbmgsplive.miguvideo.com/migu/kailu/cetv1/50/20240709/index.m3u8?msisdn=20260523220022520d96bef15348dfafbe0cb9b493b0eb&mdspid=&spid=699004&netType=0&sid=5910022150&pid=2028597139&timestamp=20260523220022&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287154&ParentNodeID=-99&assertID=5910022150&client_ip=123.119.87.180&SecurityKey=20260523220022&promotionId=&mvid=5900006636&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=45188b4b18d923eea3fb9c1fe4f1b34f&ddCalcu=f445e312b83180fb44ebf118cd99b2f33eae
+#EXTINF:-1 tvg-name="CETV2" group-title="其他",CETV2
+http://60.168.105.220:5008/923287211
+#EXTINF:-1 tvg-name="CETV2" group-title="其他",CETV2
+http://gslbmgsplive.miguvideo.com/migu/kailu/cetv2/50/20240709/index.m3u8?msisdn=2026052322002331aac4551b014a1096e1a696b6acd2de&mdspid=&spid=699004&netType=0&sid=5910022152&pid=2028597139&timestamp=20260523220023&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287211&ParentNodeID=-99&assertID=5910022152&client_ip=123.119.87.180&SecurityKey=20260523220023&promotionId=&mvid=5900006638&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=edfca7aba74251866ff4f58331b6cff3&ddCalcu=3efdeff2cc36a0b71a3b3a8754f245f1f866
+#EXTINF:-1 tvg-name="CETV4" group-title="其他",CETV4
+http://60.168.105.220:5008/923287339
+#EXTINF:-1 tvg-name="CETV4" group-title="其他",CETV4
+http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/50/20240709/index.m3u8?msisdn=20260523220024aebdf2ba4d484847af410d58d7ca7142&mdspid=&spid=699004&netType=0&sid=5910022154&pid=2028597139&timestamp=20260523220024&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287339&ParentNodeID=-99&assertID=5910022154&client_ip=183.241.196.46&SecurityKey=20260523220024&promotionId=&mvid=5900006640&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=8b3933a5bf40054876b40f5556f7aea1&ddCalcu=18abee32a93730f36a555b5ff40040b56478
+#EXTINF:-1 tvg-name="CGTN" group-title="其他",CGTN
+http://60.168.105.220:5008/609017205
+#EXTINF:-1 tvg-name="CGTN" group-title="其他",CGTN
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/cctvnews/1000/index.m3u8?msisdn=2026052321574089ead4afc85b441f8b6772dde4fc0e9e&mdspid=&spid=699004&netType=0&sid=2202196407&pid=2028597139&timestamp=20260523215740&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609017205&ParentNodeID=-99&assertID=2202196407&client_ip=123.119.87.180&SecurityKey=20260523215740&promotionId=&mvid=2202196407&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=580384f69163150032ee7ebf065cace7&ddCalcu=75e8ec02a39c80546f06f9b1e673e1e52030
+#EXTINF:-1 tvg-name="CGTNä¿è¯­" group-title="其他",CGTNä¿è¯­
+http://gslbmgsplive.miguvideo.com/envivo_v/2018/SD/cctv/eyu/1000/index.m3u8?msisdn=20260523215734d70487fe4b9d48428e3c92b82d0705a2&mdspid=&spid=699004&netType=0&sid=2200179332&pid=2028597139&timestamp=20260523215734&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609006446&ParentNodeID=-99&assertID=2200179332&client_ip=123.119.87.180&SecurityKey=20260523215734&promotionId=&mvid=2200179332&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=6874799469fa5eab54a66a807d446e4d&ddCalcu=d648ee7264947049d9740689af6a65ae4a5b
+#EXTINF:-1 tvg-name="CGTNå¤è¯­çºªå½" group-title="其他",CGTNå¤è¯­çºªå½
+http://gslbmgsplive.miguvideo.com/envivo_v/2018/SD/cctv/doc/1000/index.m3u8?msisdn=20260523215718191344c9f3574d83bf175d1b01eb093e&mdspid=&spid=699004&netType=0&sid=2200179356&pid=2028597139&timestamp=20260523215718&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609006487&ParentNodeID=-99&assertID=2200179356&client_ip=183.241.196.46&SecurityKey=20260523215718&promotionId=&mvid=2200179356&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=fd6b141bafc2077c6aea63949bf14c2f&ddCalcu=ff2dec624b9110f4b19b4a9f3c62a0e7a76c
+#EXTINF:-1 tvg-name="CGTNæ³è¯­" group-title="其他",CGTNæ³è¯­
+http://gslbmgsplive.miguvideo.com/envivo_v/2018/SD/cctv/fayu/1000/index.m3u8?msisdn=202605232157309fa334ec9dda4b3e95b2fb1a101fd791&mdspid=&spid=699004&netType=0&sid=2200179324&pid=2028597139&timestamp=20260523215730&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609006476&ParentNodeID=-99&assertID=2200179324&client_ip=123.119.87.180&SecurityKey=20260523215730&promotionId=&mvid=2200179324&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=5d7995babd6270e3390c01edc930f0d3&ddCalcu=35dde072f99090359bcadbed1602c7009e33
+#EXTINF:-1 tvg-name="CGTNè¥¿ç­çè¯­" group-title="其他",CGTNè¥¿ç­çè¯­
+http://gslbmgsplive.miguvideo.com/envivo_v/2018/SD/cctv/xibanya/1000/index.m3u8?msisdn=2026052321572834b7a88e4e154e40af408d8bcb447491&mdspid=&spid=699004&netType=0&sid=2200179337&pid=2028597139&timestamp=20260523215728&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609006450&ParentNodeID=-99&assertID=2200179337&client_ip=123.119.87.180&SecurityKey=20260523215728&promotionId=&mvid=2200179337&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=ef835e68490aa45d5f0671c736fbfcfd&ddCalcu=deffec82f39b50fe663874c9107a6a04f55d
+#EXTINF:-1 tvg-name="CGTNé¿æä¼¯è¯­" group-title="其他",CGTNé¿æä¼¯è¯­
+http://gslbmgsplive.miguvideo.com/envivo_v/SD/cctv/alabo/1000/index.m3u8?msisdn=202605232157274908a4cddf334c24a267c9e9b2a822ee&mdspid=&spid=699004&netType=0&sid=2200179303&pid=2028597139&timestamp=20260523215727&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609154345&ParentNodeID=-99&assertID=2200179303&client_ip=123.119.87.180&SecurityKey=20260523215727&promotionId=&mvid=2200179303&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=b9fd56b0e5bb86cabb306fbfde6df554&ddCalcu=4b59e5f2fd9d5066ebd0feb5fb6b0836bcba
+#EXTINF:-1 tvg-name="CGTN俄语" group-title="其他",CGTN俄语
+http://60.168.105.220:5008/609006446
+#EXTINF:-1 tvg-name="CGTN外语纪录" group-title="其他",CGTN外语纪录
+http://60.168.105.220:5008/609006487
+#EXTINF:-1 tvg-name="CGTN法语" group-title="其他",CGTN法语
+http://60.168.105.220:5008/609006476
+#EXTINF:-1 tvg-name="CGTN西班牙语" group-title="其他",CGTN西班牙语
+http://60.168.105.220:5008/609006450
+#EXTINF:-1 tvg-name="CGTN阿拉伯语" group-title="其他",CGTN阿拉伯语
+http://60.168.105.220:5008/609154345
+#EXTINF:-1 tvg-name="NBA 尼克斯VS骑士 全场回放（吴博文） 07:55" group-title="其他",NBA 尼克斯VS骑士 全场回放（吴博文） 07:55
+http://60.168.105.220:5008/964925792
+#EXTINF:-1 tvg-name="NBA 尼克斯VS骑士 全场回放（庄宁宇、陈正昊、徐咏、魏欣怡） 07:55" group-title="其他",NBA 尼克斯VS骑士 全场回放（庄宁宇、陈正昊、徐咏、魏欣怡） 07:55
+http://60.168.105.220:5008/964926168
+#EXTINF:-1 tvg-name="NBA 尼克斯VS骑士 全场回放（英文原声） 07:55" group-title="其他",NBA 尼克斯VS骑士 全场回放（英文原声） 07:55
+http://60.168.105.220:5008/964926416
+#EXTINF:-1 tvg-name="NBA经典赛事 NBA季后赛精彩重播：雷霆vs马刺 G3 李天宇 刘家成 张兆旭 18:00" group-title="其他",NBA经典赛事 NBA季后赛精彩重播：雷霆vs马刺 G3 李天宇 刘家成 张兆旭 18:00
+http://60.168.105.220:5008/964889126
+#EXTINF:-1 tvg-name="NBA经典赛事 NBA季后赛精彩重播：骑士vs尼克斯 G2 全场回放（庄宁宇、陈正昊、徐咏、魏欣怡） 18:00" group-title="其他",NBA经典赛事 NBA季后赛精彩重播：骑士vs尼克斯 G2 全场回放（庄宁宇、陈正昊、徐咏、魏欣怡） 18:00
+http://60.168.105.220:5008/964926168
+#EXTINF:-1 tvg-name="PFL PFL布鲁塞尔站：哈比罗拉VS亨德森 王琰博 00:30" group-title="其他",PFL PFL布鲁塞尔站：哈比罗拉VS亨德森 王琰博 00:30
+http://60.168.105.220:5008/964888749
+#EXTINF:-1 tvg-name="PFL PFL布鲁塞尔站：哈比罗拉VS亨德森 英文原声 00:30" group-title="其他",PFL PFL布鲁塞尔站：哈比罗拉VS亨德森 英文原声 00:30
+http://60.168.105.220:5008/964889243
+#EXTINF:-1 tvg-name="U17亚洲杯 中国U17VS日本U17 全场回放（张昊泽、王宇、林梦鸽） 00:45" group-title="其他",U17亚洲杯 中国U17VS日本U17 全场回放（张昊泽、王宇、林梦鸽） 00:45
+http://60.168.105.220:5008/964937704
+#EXTINF:-1 tvg-name="UFC BJJ 穆苏梅奇莫拉双线告捷！成功卫冕金腰带 UFC巴西柔术大赛第8期全场回放（赛场原声） 08:00" group-title="其他",UFC BJJ 穆苏梅奇莫拉双线告捷！成功卫冕金腰带 UFC巴西柔术大赛第8期全场回放（赛场原声） 08:00
+http://60.168.105.220:5008/964927609
+#EXTINF:-1 tvg-name="UFC BJJ 穆苏梅奇莫拉双线告捷！成功卫冕金腰带 全场回放（王琰博、郝俊） 08:00" group-title="其他",UFC BJJ 穆苏梅奇莫拉双线告捷！成功卫冕金腰带 全场回放（王琰博、郝俊） 08:00
+http://60.168.105.220:5008/964925789
+#EXTINF:-1 tvg-name="UFC前瞻与回顾 激战前夜：破圈之王康纳回归特辑 陈瑞阳 14:00" group-title="其他",UFC前瞻与回顾 激战前夜：破圈之王康纳回归特辑 陈瑞阳 14:00
+http://60.168.105.220:5008/964888658
+#EXTINF:-1 tvg-name="WTA 卡利尼娜VS马辛科 宋光振 20:00" group-title="其他",WTA 卡利尼娜VS马辛科 宋光振 20:00
+http://60.168.105.220:5008/964940024
+#EXTINF:-1 tvg-name="WTA 卡利尼娜VS马辛科 清流播出 20:00" group-title="其他",WTA 卡利尼娜VS马辛科 清流播出 20:00
+http://60.168.105.220:5008/964940009
+#EXTINF:-1 tvg-name="WTA 卡利尼娜VS马辛科 英文原声 20:00" group-title="其他",WTA 卡利尼娜VS马辛科 英文原声 20:00
+http://60.168.105.220:5008/964753899
+#EXTINF:-1 tvg-name="WTA 卡利尼娜VS马辛科 赛场原声 20:00" group-title="其他",WTA 卡利尼娜VS马辛科 赛场原声 20:00
+http://60.168.105.220:5008/964753876
+#EXTINF:-1 tvg-name="WTA 姆博科VS纳瓦罗 房朕 20:00" group-title="其他",WTA 姆博科VS纳瓦罗 房朕 20:00
+http://60.168.105.220:5008/964940281
+#EXTINF:-1 tvg-name="WTA 姆博科VS纳瓦罗 清流播出 20:00" group-title="其他",WTA 姆博科VS纳瓦罗 清流播出 20:00
+http://60.168.105.220:5008/964940271
+#EXTINF:-1 tvg-name="WTA 姆博科VS纳瓦罗 英文原声 20:00" group-title="其他",WTA 姆博科VS纳瓦罗 英文原声 20:00
+http://60.168.105.220:5008/964754510
+#EXTINF:-1 tvg-name="WTA 姆博科VS纳瓦罗 赛场原声 20:00" group-title="其他",WTA 姆博科VS纳瓦罗 赛场原声 20:00
+http://60.168.105.220:5008/964754502
+#EXTINF:-1 tvg-name="WTA 姆博科鏖战三盘 纳瓦罗晋级决赛 【回放】姆博科2-1克里斯蒂安（英文原声） 20:30" group-title="其他",WTA 姆博科鏖战三盘 纳瓦罗晋级决赛 【回放】姆博科2-1克里斯蒂安（英文原声） 20:30
+http://60.168.105.220:5008/964937725
+#EXTINF:-1 tvg-name="WTA 姆博科鏖战三盘 纳瓦罗晋级决赛 【回放】姆博科2-1克里斯蒂安（赛场原声） 20:30" group-title="其他",WTA 姆博科鏖战三盘 纳瓦罗晋级决赛 【回放】姆博科2-1克里斯蒂安（赛场原声） 20:30
+http://60.168.105.220:5008/964937642
+#EXTINF:-1 tvg-name="WTA 姆博科鏖战三盘 纳瓦罗晋级决赛 【回放】纳瓦罗2-0李吉妮（英文原声） 20:30" group-title="其他",WTA 姆博科鏖战三盘 纳瓦罗晋级决赛 【回放】纳瓦罗2-0李吉妮（英文原声） 20:30
+http://60.168.105.220:5008/964935186
+#EXTINF:-1 tvg-name="WTA 姆博科鏖战三盘 纳瓦罗晋级决赛 【回放】纳瓦罗2-0李吉妮（赛场原声） 20:30" group-title="其他",WTA 姆博科鏖战三盘 纳瓦罗晋级决赛 【回放】纳瓦罗2-0李吉妮（赛场原声） 20:30
+http://60.168.105.220:5008/964935180
+#EXTINF:-1 tvg-name="WTA 马辛科、卡利尼娜晋级决赛 【回放】乌德瓦尔迪0-2卡利尼娜 （英文原声） 20:00" group-title="其他",WTA 马辛科、卡利尼娜晋级决赛 【回放】乌德瓦尔迪0-2卡利尼娜 （英文原声） 20:00
+http://60.168.105.220:5008/964934626
+#EXTINF:-1 tvg-name="WTA 马辛科、卡利尼娜晋级决赛 【回放】乌德瓦尔迪0-2卡利尼娜 （赛场原声） 20:00" group-title="其他",WTA 马辛科、卡利尼娜晋级决赛 【回放】乌德瓦尔迪0-2卡利尼娜 （赛场原声） 20:00
+http://60.168.105.220:5008/964934666
+#EXTINF:-1 tvg-name="WTA 马辛科、卡利尼娜晋级决赛 【回放】泰希曼0-2马辛科 （英文原声） 20:00" group-title="其他",WTA 马辛科、卡利尼娜晋级决赛 【回放】泰希曼0-2马辛科 （英文原声） 20:00
+http://60.168.105.220:5008/964936376
+#EXTINF:-1 tvg-name="WTA 马辛科、卡利尼娜晋级决赛 【回放】泰希曼0-2马辛科 （赛场原声） 20:00" group-title="其他",WTA 马辛科、卡利尼娜晋级决赛 【回放】泰希曼0-2马辛科 （赛场原声） 20:00
+http://60.168.105.220:5008/964936759
+#EXTINF:-1 tvg-name="WTT 塔卡/玛纳什·沙晋级四强！朱芊曦3-1取胜 全场回放（一号桌） 17:00" group-title="其他",WTT 塔卡/玛纳什·沙晋级四强！朱芊曦3-1取胜 全场回放（一号桌） 17:00
+http://60.168.105.220:5008/964934665
+#EXTINF:-1 tvg-name="WTT 塔卡/玛纳什·沙晋级四强！朱芊曦3-1取胜 全场回放（三号桌） 17:00" group-title="其他",WTT 塔卡/玛纳什·沙晋级四强！朱芊曦3-1取胜 全场回放（三号桌） 17:00
+http://60.168.105.220:5008/964934489
+#EXTINF:-1 tvg-name="WTT 塔卡/玛纳什·沙晋级四强！朱芊曦3-1取胜 全场回放（二号桌） 17:00" group-title="其他",WTT 塔卡/玛纳什·沙晋级四强！朱芊曦3-1取胜 全场回放（二号桌） 17:00
+http://60.168.105.220:5008/964936380
+#EXTINF:-1 tvg-name="WTT 塔卡/玛纳什·沙晋级四强！朱芊曦3-1取胜 全场回放（凌维康） 17:00" group-title="其他",WTT 塔卡/玛纳什·沙晋级四强！朱芊曦3-1取胜 全场回放（凌维康） 17:00
+http://60.168.105.220:5008/964935019
+#EXTINF:-1 tvg-name="WTT 林仲勋拿下关键分横扫 桥本挺进8强 2026WTT拉各斯常规挑战赛Day4一号桌晚间场全场回放（赛场原声） 23:00" group-title="其他",WTT 林仲勋拿下关键分横扫 桥本挺进8强 2026WTT拉各斯常规挑战赛Day4一号桌晚间场全场回放（赛场原声） 23:00
+http://60.168.105.220:5008/964937969
+#EXTINF:-1 tvg-name="WTT 林仲勋拿下关键分横扫 桥本挺进8强 全场回放（二号桌） 23:00" group-title="其他",WTT 林仲勋拿下关键分横扫 桥本挺进8强 全场回放（二号桌） 23:00
+http://60.168.105.220:5008/964937759
+#EXTINF:-1 tvg-name="WTT 林仲勋拿下关键分横扫 桥本挺进8强 全场回放（刘馨蕊） 23:00" group-title="其他",WTT 林仲勋拿下关键分横扫 桥本挺进8强 全场回放（刘馨蕊） 23:00
+http://60.168.105.220:5008/964937291
+#EXTINF:-1 tvg-name="WTT 桥本冲4强 塔卡/玛纳什·沙剑指决赛 1号桌 17:00" group-title="其他",WTT 桥本冲4强 塔卡/玛纳什·沙剑指决赛 1号桌 17:00
+http://60.168.105.220:5008/964854551
+#EXTINF:-1 tvg-name="WTT 桥本冲4强 塔卡/玛纳什·沙剑指决赛 2号桌 17:00" group-title="其他",WTT 桥本冲4强 塔卡/玛纳什·沙剑指决赛 2号桌 17:00
+http://60.168.105.220:5008/964854573
+#EXTINF:-1 tvg-name="WTT 桥本冲4强 塔卡/玛纳什·沙剑指决赛 周冠达 17:00" group-title="其他",WTT 桥本冲4强 塔卡/玛纳什·沙剑指决赛 周冠达 17:00
+http://60.168.105.220:5008/964854586
+#EXTINF:-1 tvg-name="WTT 男女单打半决赛、混双决赛 凌维康 23:00" group-title="其他",WTT 男女单打半决赛、混双决赛 凌维康 23:00
+http://60.168.105.220:5008/964854610
+#EXTINF:-1 tvg-name="WTT 男女单打半决赛、混双决赛 赛场原声 23:00" group-title="其他",WTT 男女单打半决赛、混双决赛 赛场原声 23:00
+http://60.168.105.220:5008/964854599
+#EXTINF:-1 tvg-name="WTT 男女双打决赛、男女单打决赛 周冠达 22:00" group-title="其他",WTT 男女双打决赛、男女单打决赛 周冠达 22:00
+http://60.168.105.220:5008/964854641
+#EXTINF:-1 tvg-name="WTT 男女双打决赛、男女单打决赛 赛场原声 22:00" group-title="其他",WTT 男女双打决赛、男女单打决赛 赛场原声 22:00
+http://60.168.105.220:5008/964854635
+#EXTINF:-1 tvg-name="ä¸æ²å«è§" group-title="其他",ä¸æ²å«è§
+http://gslbmgsplive.miguvideo.com/migu/kailu/ssws/50/20251127/index.m3u8?msisdn=20260523215832cb4b69c5049a452094464f82a4267691&mdspid=&spid=600697&netType=0&sid=5910022307&pid=2028597139&timestamp=20260523215832&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=961023778&ParentNodeID=-99&assertID=5910022307&client_ip=123.119.87.180&SecurityKey=20260523215832&promotionId=&mvid=5900006777&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=16a21464d21b5ed5c6f44d16d8bf8fd4&ddCalcu=41d6efa2821f10b486d46d12d14b45fe6dc5
+#EXTINF:-1 tvg-name="ä¸æµ·æ°é»ç»¼å" group-title="其他",ä¸æµ·æ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/wd_r4/dfl/xinwenzonghehd/600/index.m3u8?msisdn=202605232158360ace078a0afa47cea5e498f16406ba15&mdspid=&spid=600697&netType=0&sid=5910022325&pid=2028597139&timestamp=20260523215836&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=651632657&ParentNodeID=-99&assertID=5910022325&client_ip=123.119.87.180&SecurityKey=20260523215836&promotionId=&mvid=5100001716&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=6943dc1c09c4167db03f784d74624fe1&ddCalcu=16e9ef424312d06c417cd0498c74f13607bd
+#EXTINF:-1 tvg-name="ä¸æµ·ç¬¬ä¸è´¢ç»" group-title="其他",ä¸æµ·ç¬¬ä¸è´¢ç»
+http://gslbmgsplive.miguvideo.com/wd_r1/2018/bestv/dycj/1000/index.m3u8?msisdn=20260523215839b5ffe1897ab34083b6f3d4f37f1ab7da&mdspid=&spid=699212&netType=0&sid=2201008312&pid=2028597139&timestamp=20260523215839&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608780988&ParentNodeID=-99&assertID=2201008312&client_ip=123.119.87.180&SecurityKey=20260523215839&promotionId=&mvid=2201008312&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=8697a88390624c87ce4dd3f52b1cce62&ddCalcu=2866ee92c78ca018b82359f036d2d44ce8c7
+#EXTINF:-1 tvg-name="ä¸åå«è§" group-title="其他",ä¸åå«è§
+http://gslbmgsplive.miguvideo.com/migu/kailu/dongnanws/50/20230724/index.m3u8?msisdn=202605232158155fa04e3641b949668f7cba8540d14b2e&mdspid=&spid=600717&netType=0&sid=5910022182&pid=2028597139&timestamp=20260523215815&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=849116810&ParentNodeID=-99&assertID=5910022182&client_ip=183.241.196.46&SecurityKey=20260523215815&promotionId=&mvid=5900006229&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=771f5850f18aabba8ad987cf80a8fadf&ddCalcu=f7d7ea12ff9850a80580ffc1788a9adbab8a
+#EXTINF:-1 tvg-name="ä¸æ¹å«è§" group-title="其他",ä¸æ¹å«è§
+http://gslbmgsplive.miguvideo.com/wd_r4/dfl/dongfangwshd/600/index.m3u8?msisdn=2026052321575071eaebef4a284869bbccd08aadc27a14&mdspid=&spid=600697&netType=0&sid=5910022185&pid=2028597139&timestamp=20260523215750&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=651632648&ParentNodeID=-99&assertID=5910022185&client_ip=183.241.196.46&SecurityKey=20260523215750&promotionId=&mvid=5100043384&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=3c612b977874102050c262f33f685b63&ddCalcu=336ceb625118206bf93737f8276421c00250
+#EXTINF:-1 tvg-name="ä¸­åç¹äº§" group-title="其他",ä¸­åç¹äº§
+http://gslbmgsplive.miguvideo.com/migu/kailu/zhtc/50/20251103/index.m3u8?msisdn=20260523220049e45d37d078874a8b8423f95db511acb7&mdspid=&spid=600697&netType=0&sid=5910022295&pid=2028597139&timestamp=20260523220049&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=959986618&ParentNodeID=-99&assertID=5910022295&client_ip=123.119.87.180&SecurityKey=20260523220049&promotionId=&mvid=5900006771&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=184bae43dcf28fdb37774116e2318413&ddCalcu=3118e4428b91a03e24e36d1c1f42787f7d3b
+#EXTINF:-1 tvg-name="ä¸­å½åæå«è§" group-title="其他",ä¸­å½åæå«è§
+http://gslbmgsplive.miguvideo.com/migu/kailu/zgnlws/50/20250804/index.m3u8?msisdn=20260523215822819bfae0188a40589c57acaf9d57ce3c&mdspid=&spid=600572&netType=0&sid=5910022186&pid=2028597139&timestamp=20260523215822&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=956904896&ParentNodeID=-99&assertID=5910022186&client_ip=123.119.87.180&SecurityKey=20260523215822&promotionId=&mvid=5900006709&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=3dff97aeab7c7125f862073175b152ce&ddCalcu=e3cde2f25f6190b75a7e1a3b770c276182f5
+#EXTINF:-1 tvg-name="ä¸­å½å¤©æ°" group-title="其他",ä¸­å½å¤©æ°
+http://gslbmgsplive.miguvideo.com/migu/kailu/zgtq/50/20251103/index.m3u8?msisdn=2026052322002104fd98c4b5a34b5097359f27d55e0749&mdspid=&spid=600697&netType=0&sid=5910022296&pid=2028597139&timestamp=20260523220021&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=959986621&ParentNodeID=-99&assertID=5910022296&client_ip=123.119.87.180&SecurityKey=20260523220021&promotionId=&mvid=5900006772&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=ec204863b24f3f0d08774536ea7c9f16&ddCalcu=6e1cef22909c4078a6e36b32544f737f800d
+#EXTINF:-1 tvg-name="ä¸­å½èªå¤©âéè¢­âä¹è·¯" group-title="其他",ä¸­å½èªå¤©âéè¢­âä¹è·¯
+http://gslbmgsplive.miguvideo.com/migu/virtuallive2/5900002413/50/20210706/index.m3u8?msisdn=202605232200204d0f770b6e8f41b8a750c0c5d2f75d00&mdspid=&spid=800033&netType=0&sid=5910019527&pid=2028597139&timestamp=20260523220020&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=713600957&ParentNodeID=-99&assertID=5910019527&client_ip=123.119.87.180&SecurityKey=20260523220020&promotionId=&mvid=5900002443&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=9837a5d390b49853326eae1ca42e1102&ddCalcu=2908e132173ea0254da3c910eba4e9682533
+#EXTINF:-1 tvg-name="ä¸­å­¦ç" group-title="其他",ä¸­å­¦ç
+http://gslbmgsplive.miguvideo.com/migu/kailu/20210415/cctvzhongxuesheng/50/index.m3u8?msisdn=202605232157383efe9bbe6e4548af85b3bf7300626524&mdspid=&spid=699004&netType=0&sid=5910019355&pid=2028597139&timestamp=20260523215738&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=708869532&ParentNodeID=-99&assertID=5910019355&client_ip=123.119.87.180&SecurityKey=20260523215738&promotionId=&mvid=5900002149&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=878deb8ceb1e7da56cd75e1d5d268887&ddCalcu=7887e8828d86e02bd85cde1be15e77ddca65
+#EXTINF:-1 tvg-name="ä¼æ¼«å¡éé¢é" group-title="其他",ä¼æ¼«å¡éé¢é
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/ymkt/600/index.m3u8?msisdn=202605232159116b6f54dfda9f4055a531812128766bd0&mdspid=&spid=699067&netType=0&sid=5500260553&pid=2028597139&timestamp=20260523215911&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064703&ParentNodeID=-99&assertID=5500260553&client_ip=123.119.87.180&SecurityKey=20260523215911&promotionId=&mvid=5100186455&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=e10e62e9917f619ece12ebcb8733e090&ddCalcu=0e91e002ee6360327e89b9c1b7ef2611e9ce
+#EXTINF:-1 tvg-name="ä½ååæ æ±" group-title="其他",ä½ååæ æ±
+http://gslbmgsplive.miguvideo.com/wd_r3/cctv/titanminglan/600/index.m3u8?msisdn=2026052321574201b4e7e942da4fc7aa2500f737f89f72&mdspid=&spid=699004&netType=0&sid=5500315687&pid=2028597139&timestamp=20260523215742&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=629943305&ParentNodeID=-99&assertID=5500315687&client_ip=123.119.87.180&SecurityKey=20260523215742&promotionId=&mvid=5101034219&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=a2e8f39ec5d9f94a93106c5305ba88de&ddCalcu=ead2e8e2889af0b3590e3c55cd690f19349a
+#EXTINF:-1 tvg-name="ä½è²ä¼é²é¢é" group-title="其他",ä½è²ä¼é²é¢é
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jstiyu/600/index.m3u8?msisdn=20260523215850fa2b33d28bad4d9ba6d2a33b64724793&mdspid=&spid=699067&netType=0&sid=5500260554&pid=2028597139&timestamp=20260523215850&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064707&ParentNodeID=-99&assertID=5500260554&client_ip=123.119.87.180&SecurityKey=20260523215850&promotionId=&mvid=5100186459&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=43e2e04b7867e259d0d4a5f0dfb228dc&ddCalcu=c4d3e8e22262e0b0f4db07f856a74ed205d9
+#EXTINF:-1 tvg-name="åäº¬å«è§" group-title="其他",åäº¬å«è§
+http://gslbmgsplive.miguvideo.com/migu/kailu/bjws/50/20251127/index.m3u8?msisdn=20260523215756c1a10855ade045f5958c5c90c53ef08f&mdspid=&spid=600697&netType=0&sid=5910022306&pid=2028597139&timestamp=20260523215756&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=630287636&ParentNodeID=-99&assertID=5910022306&client_ip=123.119.87.180&SecurityKey=20260523215756&promotionId=&mvid=5101042960&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=60c944b9c5e22cd43d9027675a745b64&ddCalcu=4660ebc259044074ab597c657e22029cdd34
+#EXTINF:-1 tvg-name="åäº¬æç§é¢é" group-title="其他",åäº¬æç§é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/nanjingkj/50/20230719/index.m3u8?msisdn=202605232158430535c901388b4eae8a717e850c6451ba&mdspid=&spid=699067&netType=0&sid=5910021865&pid=2028597139&timestamp=20260523215843&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=838153729&ParentNodeID=-99&assertID=5910021865&client_ip=183.241.196.46&SecurityKey=20260523215843&promotionId=&mvid=5900006205&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=d8b895326da81efab14a6d12f4eaaffb&ddCalcu=bdf8efb2a88a90e543f2261dda68a14e1fba
+#EXTINF:-1 tvg-name="åäº¬æ°é»ç»¼åé¢é" group-title="其他",åäº¬æ°é»ç»¼åé¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/nanjingxwzh/50/20230719/index.m3u8?msisdn=2026052321584192f40cc31fba4b13ab7b9417317af2c6&mdspid=&spid=699067&netType=0&sid=5910021863&pid=2028597139&timestamp=20260523215841&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=838109047&ParentNodeID=-99&assertID=5910021863&client_ip=123.119.87.180&SecurityKey=20260523215841&promotionId=&mvid=5900006203&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=0a6e1f835e0fb7768bba6fa87881b80e&ddCalcu=e00ae862be81108f887385aef06fabb7b786
+#EXTINF:-1 tvg-name="åæ¹å½±è§" group-title="其他",åæ¹å½±è§
+http://gslbmgsplive.miguvideo.com/wd_r1/2018/nfmedia/nfys/1000/index.m3u8?msisdn=20260523220020709e3e21c0fd45569b0a1614fe89dc78&mdspid=&spid=699054&netType=0&sid=2206173738&pid=2028597139&timestamp=20260523220020&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=614961829&ParentNodeID=-99&assertID=2206173738&client_ip=123.119.87.180&SecurityKey=20260523220020&promotionId=&mvid=2206173738&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=2195c9862d9d1bc70c4aaafad00aa6bb&ddCalcu=b2b1e692a54ac00908d6a2fda9ada14bcc07
+#EXTINF:-1 tvg-name="åéæ°é»ç»¼å" group-title="其他",åéæ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/migu/kailu/ntxwzh/50/20250604/index.m3u8?msisdn=20260523215915030da1c9a6604b7d97cf29a25194410c&mdspid=&spid=699067&netType=0&sid=5910022178&pid=2028597139&timestamp=20260523215915&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=955227985&ParentNodeID=-99&assertID=5910022178&client_ip=123.119.87.180&SecurityKey=20260523215915&promotionId=&mvid=5900006706&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=3b79363b055a4b9febfd26805b878c39&ddCalcu=933bec7289573086b35b0085652ad4fbb9ef
+#EXTINF:-1 tvg-name="åæå«è§" group-title="其他",åæå«è§
+http://gslbmgsplive.miguvideo.com/envivo_v/2018/SD/jilin/1000/index.m3u8?msisdn=20260523215812eb8eebe796744a81b7d6011038b96777&mdspid=&spid=600633&netType=0&sid=5910022164&pid=2028597139&timestamp=20260523215812&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=947472500&ParentNodeID=-99&assertID=5910022164&client_ip=183.241.196.46&SecurityKey=20260523215812&promotionId=&mvid=5900004357&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=622edf61a8b6b76e55913365c3857171&ddCalcu=1672e1227e75d08f36c15a683b361b97565e
+#EXTINF:-1 tvg-name="åç¾ä¹¡éè½®æ­å°" group-title="其他",åç¾ä¹¡éè½®æ­å°
+http://gslbmgsplive.miguvideo.com/migu/virtuallive2/5900002411/50/20210706/index.m3u8?msisdn=2026052322001985d411ee216847e283bdfd897b301720&mdspid=&spid=800033&netType=0&sid=5910019525&pid=2028597139&timestamp=20260523220019&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=713591450&ParentNodeID=-99&assertID=5910019525&client_ip=183.241.196.46&SecurityKey=20260523220019&promotionId=&mvid=5900002421&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=1cd9963efb91eaac238e67b975756a99&ddCalcu=919cead269359076537e9fbb7961ee8a3a2c
+#EXTINF:-1 tvg-name="åä½³å¡é" group-title="其他",åä½³å¡é
+http://gslbmgsplive.miguvideo.com/wd_r1/2018/nfmedia/jjkt/1000/index.m3u8?msisdn=2026052322004647df60fc49a54d35b25d2095550db015&mdspid=&spid=699054&netType=0&sid=2206172388&pid=2028597139&timestamp=20260523220046&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=614952364&ParentNodeID=-99&assertID=2206172388&client_ip=123.119.87.180&SecurityKey=20260523220046&promotionId=&mvid=2206172388&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=9b44b2974ef3a91a070dcb417c3d806d&ddCalcu=d96be042844db032c977144ebfc3da09710a
+#EXTINF:-1 tvg-name="åæµ·éé±¼" group-title="其他",åæµ·éé±¼
+http://gslbmgsplive.miguvideo.com/wd_r4/peoplecn/shdiaoyu/600/index.m3u8?msisdn=202605232157439af639a1b3a746359b690a5c8c205404&mdspid=&spid=600697&netType=0&sid=5910022184&pid=2028597139&timestamp=20260523215743&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=637444975&ParentNodeID=-99&assertID=5910022184&client_ip=183.241.196.46&SecurityKey=20260523215743&promotionId=&mvid=5100132656&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=91502226ac689ad9d7d03963e6f5b199&ddCalcu=9991e152b07520f262e63a6c963809da7dd9
+#EXTINF:-1 tvg-name="å¤§æ¹¾åºå«è§" group-title="其他",å¤§æ¹¾åºå«è§
+http://gslbmgsplive.miguvideo.com/wd_r3/2018/nfmedia/nfws/1000/index.m3u8?msisdn=2026052321580753994a5f3b1549e78e241a4b9cec6f67&mdspid=&spid=699054&netType=0&sid=2200322852&pid=2028597139&timestamp=20260523215807&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608917627&ParentNodeID=-99&assertID=2200322852&client_ip=183.241.196.46&SecurityKey=20260523215807&promotionId=&mvid=2200322852&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=24769b5ee5d9615d09f6737b1882b504&ddCalcu=4204e572b682908b851ebe753d7966f1950d
+#EXTINF:-1 tvg-name="å®å¤å«è§" group-title="其他",å®å¤å«è§
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/ningxia/1000/index.m3u8?msisdn=20260523215827dc1747ba34f5428289c5124d23287f4d&mdspid=&spid=600697&netType=0&sid=5910022262&pid=2028597139&timestamp=20260523215827&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=738910535&ParentNodeID=-99&assertID=5910022262&client_ip=183.241.196.46&SecurityKey=20260523215827&promotionId=&mvid=5900004337&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=8c7b81745bb465bba42c36c7530cb05e&ddCalcu=e85ce072bb8c8001375475cb6b34c6254bab
+#EXTINF:-1 tvg-name="å®¿è¿æ°é»ç»¼å" group-title="其他",å®¿è¿æ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/sqxinwenzonghe/600/index.m3u8?msisdn=202605232159058a86f32918c940b3bb4a3e3d94f38f7f&mdspid=&spid=699067&netType=0&sid=5500469357&pid=2028597139&timestamp=20260523215905&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731832&ParentNodeID=-99&assertID=5500469357&client_ip=123.119.87.180&SecurityKey=20260523215905&promotionId=&mvid=5102012616&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=c7dcab73e0b8f11e835b8ec1544ab1af&ddCalcu=fca7e1d2bc9aa04b47531ec0eb88bf51318e
+#EXTINF:-1 tvg-name="å±±ä¸æè²" group-title="其他",å±±ä¸æè²
+http://gslbmgsplive.miguvideo.com/migu/kailu/sdjyws/50/20250915/index.m3u8?msisdn=20260523220024b593f23d6b534596839e02a795a4ddc9&mdspid=&spid=600697&netType=0&sid=5910022199&pid=2028597139&timestamp=20260523220024&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609154353&ParentNodeID=-99&assertID=5910022199&client_ip=123.119.87.180&SecurityKey=20260523220024&promotionId=&mvid=2200208305&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=594ce4ee4c690f2ed8f2c41dfd17b3cb&ddCalcu=b5c9e342bc97e014defed41c46c920ff82de
+#EXTINF:-1 tvg-name="å¾å·æ°é»ç»¼å" group-title="其他",å¾å·æ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/xzxinwenzonghe/600/index.m3u8?msisdn=20260523215906a0cd069435b3402a8d17e7974a40d02d&mdspid=&spid=699067&netType=0&sid=5500469368&pid=2028597139&timestamp=20260523215906&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731747&ParentNodeID=-99&assertID=5500469368&client_ip=123.119.87.180&SecurityKey=20260523215906&promotionId=&mvid=5102012620&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f1e000831b4ecaf092660b6752b90455&ddCalcu=5f51e4e2009900b02853716bb40e6c6a2f90
+#EXTINF:-1 tvg-name="å¿«ä¹åé" group-title="其他",å¿«ä¹åé
+http://gslbmgsplive.miguvideo.com/migu/kailu/ydcmklcd/50/20251225/index.m3u8?msisdn=20260523215749873cd7d1e6b34a0894bc180af2afae10&mdspid=&spid=600603&netType=0&sid=5910022317&pid=2028597139&timestamp=20260523215749&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=961930263&ParentNodeID=-99&assertID=5910022317&client_ip=123.119.87.180&SecurityKey=20260523215749&promotionId=&mvid=5900006783&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f2b827ab9afaa2434099f54d70fab5a6&ddCalcu=6fa2e5b2b81a20f70a7bd94a5ffa9a920443
+#EXTINF:-1 tvg-name="æ°å¨åéåä¸æµ" group-title="其他",æ°å¨åéåä¸æµ
+http://gslbmgsplive.miguvideo.com/migu/virtuallive2/5900002409/50/20210706/index.m3u8?msisdn=2026052322004833b0185a5b7a4306b90b4c1427d0f379&mdspid=&spid=800033&netType=0&sid=5910019523&pid=2028597139&timestamp=20260523220048&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=713589837&ParentNodeID=-99&assertID=5910019523&client_ip=123.119.87.180&SecurityKey=20260523220048&promotionId=&mvid=5900002419&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=76454ff0ab9350ee8448f4557306a895&ddCalcu=5796e842a536400f3f705a5b49f385404e8e
+#EXTINF:-1 tvg-name="æ°å¨æ¼«" group-title="其他",æ°å¨æ¼«
+http://gslbmgsplive.miguvideo.com/migu/kailu/ydcmxdm/50/20251225/index.m3u8?msisdn=202605232200478a26700156094a40b808c2d4134e701d&mdspid=&spid=600603&netType=0&sid=5910022319&pid=2028597139&timestamp=20260523220047&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=961930269&ParentNodeID=-99&assertID=5910022319&client_ip=183.241.196.46&SecurityKey=20260523220047&promotionId=&mvid=5900006786&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=2a783c329c1d383364bd9b120dd00d0d&ddCalcu=d20aed72081030dcd302291cb19dd3b84363
+#EXTINF:-1 tvg-name="æå¼ºç»¼èºè¶´" group-title="其他",æå¼ºç»¼èºè¶´
+http://gslbmgsplive.miguvideo.com/wd_r3/cctv/zuiqiangzongyi/600/index.m3u8?msisdn=202605232200432b73cf5c891142f191b0a85d541b2a05&mdspid=&spid=699004&netType=0&sid=5500315654&pid=2028597139&timestamp=20260523220043&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=629942228&ParentNodeID=-99&assertID=5500315654&client_ip=123.119.87.180&SecurityKey=20260523220043&promotionId=&mvid=5101034202&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=94f2929cb2be1a8ed521c9336dfdf158&ddCalcu=8954e1f2f29d90f2d96c3b329bce112a58de
+#EXTINF:-1 tvg-name="æ¢¨å­é¢é" group-title="其他",æ¢¨å­é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/ydcmc/50/20251225/index.m3u8?msisdn=20260523220051b732e0738be44f5cb8a7201cfe8566fb&mdspid=&spid=600697&netType=0&sid=5910022344&pid=2028597139&timestamp=20260523220051&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=961930369&ParentNodeID=-99&assertID=5910022344&client_ip=123.119.87.180&SecurityKey=20260523220051&promotionId=&mvid=5900006785&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=b193b94b23f29553b1b40a9c43545a5a&ddCalcu=ab51ea925314b059344bc293af0249b515b3
+#EXTINF:-1 tvg-name="æ­¦æ¯ä¸ç" group-title="其他",æ­¦æ¯ä¸ç
+http://gslbmgsplive.miguvideo.com/migu/kailu/wssj/50/20250915/index.m3u8?msisdn=202605232157484834de7dac0d4e9195d9053f5efdcee5&mdspid=&spid=600697&netType=0&sid=5910022201&pid=2028597139&timestamp=20260523215748&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=958475359&ParentNodeID=-99&assertID=5910022201&client_ip=123.119.87.180&SecurityKey=20260523215748&promotionId=&mvid=5900006724&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=efbb86441e4568bcada9e67fc66c0a9e&ddCalcu=ee9feab20b8c806664c4f17e64e596a8dbac
+#EXTINF:-1 tvg-name="æ±èå«è§" group-title="其他",æ±èå«è§
+http://gslbmgsplive.miguvideo.com/wd_r2/cctv/jiangsuhd/600/index.m3u8?msisdn=20260523215751953dfff7642f44f89905864fbe35744a&mdspid=&spid=699067&netType=0&sid=5500199408&pid=2028597139&timestamp=20260523215751&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=623899368&ParentNodeID=-99&assertID=5500199408&client_ip=123.119.87.180&SecurityKey=20260523215751&promotionId=&mvid=5100156802&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=413f2de03c18c492eca41f44bddd7fd4&ddCalcu=44d1ef327f3d20dddeb0434cf1184ca4c9e2
+#EXTINF:-1 tvg-name="æ±èåå¸é¢é" group-title="其他",æ±èåå¸é¢é
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jschengshi/600/index.m3u8?msisdn=2026052321585107c7ff477ed5444aa8c304941f06ab0f&mdspid=&spid=699067&netType=0&sid=5500260508&pid=2028597139&timestamp=20260523215851&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064714&ParentNodeID=-99&assertID=5500260508&client_ip=183.241.196.46&SecurityKey=20260523215851&promotionId=&mvid=5100186409&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=57a08d0ab7d7c8dfced31f46f66dc2c9&ddCalcu=95c7e2a2c06d806d60fa6b47fd173cd8edcf
+#EXTINF:-1 tvg-name="æ±èå½±è§é¢é" group-title="其他",æ±èå½±è§é¢é
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jsyingshi/600/index.m3u8?msisdn=20260523215855037d836143564aaba42e713ea29a29f7&mdspid=&spid=699067&netType=0&sid=5500260517&pid=2028597139&timestamp=20260523215855&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064697&ParentNodeID=-99&assertID=5500260517&client_ip=123.119.87.180&SecurityKey=20260523215855&promotionId=&mvid=5100186424&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=a70ba994e7ef5e293c227dc7a969b2c0&ddCalcu=0ac7e202bb69a06999a47ec7de7f252ec239
+#EXTINF:-1 tvg-name="æ±èæè²" group-title="其他",æ±èæè²
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jsjiaoyu/600/index.m3u8?msisdn=20260523215854f0080aca57df45a6b80986ebce38bf16&mdspid=&spid=699067&netType=0&sid=5500287493&pid=2028597139&timestamp=20260523215854&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=628008321&ParentNodeID=-99&assertID=5500287493&client_ip=123.119.87.180&SecurityKey=20260523215854&promotionId=&mvid=5101012819&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=e8ed0a56cadb14b7f9d6938353ce9359&ddCalcu=9e58e3e29d8e00ca35563c8a3d9b61d49bf7
+#EXTINF:-1 tvg-name="æ±èç»¼èºé¢é" group-title="其他",æ±èç»¼èºé¢é
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jszongyi/600/index.m3u8?msisdn=20260523215856f33ebeb4288e4e4a9b0f58ba07b3fd10&mdspid=&spid=699067&netType=0&sid=5500260513&pid=2028597139&timestamp=20260523215856&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626065193&ParentNodeID=-99&assertID=5500260513&client_ip=123.119.87.180&SecurityKey=20260523215856&promotionId=&mvid=5100186420&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=b6610e4edea8cb0bfdde842a6bf26d5c&ddCalcu=cb56ed62616200feb46ead2e4a88ecdbd0fb
+#EXTINF:-1 tvg-name="æ±è¥¿å«è§" group-title="其他",æ±è¥¿å«è§
+http://gslbmgsplive.miguvideo.com/migu/kailu/jxwshd/50/20190820/index.m3u8?msisdn=2026052321580270015a174f5b435a85fe2911b3519c8b&mdspid=&spid=600633&netType=0&sid=5910021492&pid=2028597139&timestamp=20260523215802&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=783847495&ParentNodeID=-99&assertID=5910021492&client_ip=123.119.87.180&SecurityKey=20260523215802&promotionId=&mvid=5900004351&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=058450cb443648ded297e9d66b6bba14&ddCalcu=4015ea82b43b5060bc6b64d493e674982dde
+#EXTINF:-1 tvg-name="æ±é´æ°é»ç»¼å" group-title="其他",æ±é´æ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/migu/kailu/jyxwzh/50/20250604/index.m3u8?msisdn=20260523215913df13da1c234949d88a9cbb27c2bd845c&mdspid=&spid=699067&netType=0&sid=5910022177&pid=2028597139&timestamp=20260523215913&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=955227979&ParentNodeID=-99&assertID=5910022177&client_ip=123.119.87.180&SecurityKey=20260523215913&promotionId=&mvid=5900006705&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=b70c610e4f6b609aa821fa0c94013fcd&ddCalcu=dbc7ef023c516001409ec40fa6fb162089aa
+#EXTINF:-1 tvg-name="æ²³åå«è§" group-title="其他",æ²³åå«è§
+http://gslbmgsplive.miguvideo.com/wd-henanwssd-600/index.m3u8?msisdn=20260523215803846e665f07ac4f3a95ad89c7ef567789&mdspid=&spid=600633&netType=0&sid=5910021585&pid=2028597139&timestamp=20260523215803&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=790187291&ParentNodeID=-99&assertID=5910021585&client_ip=123.119.87.180&SecurityKey=20260523215803&promotionId=&mvid=5900005706&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=c6f957f4bd1e881ff872bb484b88121e&ddCalcu=ec16e2f219085087bf448b4db1be287881ff
+#EXTINF:-1 tvg-name="æ³°å·æ°é»ç»¼å" group-title="其他",æ³°å·æ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/tzxinwenzonghe/600/index.m3u8?msisdn=20260523215903608c9be7a10c44acaf1271e9765657e4&mdspid=&spid=699067&netType=0&sid=5500469354&pid=2028597139&timestamp=20260523215903&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731818&ParentNodeID=-99&assertID=5500469354&client_ip=123.119.87.180&SecurityKey=20260523215903&promotionId=&mvid=5102012615&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=c6e0b27bd9a643662cb71379b5b4e22f&ddCalcu=fc26e2e2e094b0b257bb9d793a1674b3c626
+#EXTINF:-1 tvg-name="æµ·åå«è§" group-title="其他",æµ·åå«è§
+http://gslbmgsplive.miguvideo.com/envivo_x/SD/lvyou/711/index.m3u8?msisdn=20260523215816be2302bda5234be0a6abc2ec7dbb3722&mdspid=&spid=600633&netType=0&sid=5910022165&pid=2028597139&timestamp=20260523215816&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=947472502&ParentNodeID=-99&assertID=5910022165&client_ip=123.119.87.180&SecurityKey=20260523215816&promotionId=&mvid=5900004359&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=cd48e43c402633b7c37a0407a6567155&ddCalcu=5c5de1427876e05463ac74004206a3733bc7
+#EXTINF:-1 tvg-name="æµ·åå¹¿æ­çµè§æ»å°å°å¿é¢é" group-title="其他",æµ·åå¹¿æ­çµè§æ»å°å°å¿é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/nxwl/50/20251225/index.m3u8?msisdn=202605232159302d0a8951e28745199f909089a88100d1&mdspid=&spid=600697&netType=0&sid=5910022328&pid=2028597139&timestamp=20260523215930&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=962067523&ParentNodeID=-99&assertID=5910022328&client_ip=123.119.87.180&SecurityKey=20260523215930&promotionId=&mvid=5900006788&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=92672ce2e6477f21b2ac6ecf48758d99&ddCalcu=9992ed628725207c8e42fec6e467c7af22b1
+#EXTINF:-1 tvg-name="æµ·åå¹¿æ­çµè§æ»å°æ°é»é¢é" group-title="其他",æµ·åå¹¿æ­çµè§æ»å°æ°é»é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/lnysj/50/20251225/index.m3u8?msisdn=20260523215926059cb3eb600e42d9b6b1b5c464e35947&mdspid=&spid=600697&netType=0&sid=5910022326&pid=2028597139&timestamp=20260523215926&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=962067517&ParentNodeID=-99&assertID=5910022326&client_ip=123.119.87.180&SecurityKey=20260523215926&promotionId=&mvid=5900006789&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=db030458ffa4edd39eb8ca0726f4d8aa&ddCalcu=adabe802d32400f465287f0faac48ebded93
+#EXTINF:-1 tvg-name="æµ·åå¹¿æ­çµè§æ»å°ç¤¾ä¼ä¸æ³é¢é" group-title="其他",æµ·åå¹¿æ­çµè§æ»å°ç¤¾ä¼ä¸æ³é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/lngg/50/20251225/index.m3u8?msisdn=2026052321592901017ce9a85641cfaee0b5586e16b391&mdspid=&spid=600697&netType=0&sid=5910022323&pid=2028597139&timestamp=20260523215929&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=962045223&ParentNodeID=-99&assertID=5910022323&client_ip=123.119.87.180&SecurityKey=20260523215929&promotionId=&mvid=5900006791&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=0ab77106522b47cca5e8ed01a0465281&ddCalcu=108ae2b25726704100a61502d2eb84e75cac
+#EXTINF:-1 tvg-name="æµ·åå¹¿æ­çµè§æ»å°èªè´¸é¢é" group-title="其他",æµ·åå¹¿æ­çµè§æ»å°èªè´¸é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/lnsh/50/20251225/index.m3u8?msisdn=20260523215928a32aa46a3a684fc898dcf695844eb4c8&mdspid=&spid=600697&netType=0&sid=5910022324&pid=2028597139&timestamp=20260523215928&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=962045226&ParentNodeID=-99&assertID=5910022324&client_ip=183.241.196.46&SecurityKey=20260523215928&promotionId=&mvid=5900006792&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=49979353cb363dbce82d22a854d564b3&ddCalcu=34b9e492672590d345538cab2326d32d8bec
+#EXTINF:-1 tvg-name="æ·®å®æ°é»ç»¼å" group-title="其他",æ·®å®æ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/haxinwenzonghe/600/index.m3u8?msisdn=2026052321590295374de9ac6b4d548e1ccf874239ea55&mdspid=&spid=699067&netType=0&sid=5500469363&pid=2028597139&timestamp=20260523215902&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731826&ParentNodeID=-99&assertID=5500469363&client_ip=123.119.87.180&SecurityKey=20260523215902&promotionId=&mvid=5102012618&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=2908aadd84db91b903d6aab0866336d1&ddCalcu=12d9e6023893a06a6d8d08b4adab69d13b09
+#EXTINF:-1 tvg-name="æ¹åå«è§" group-title="其他",æ¹åå«è§
+http://gslbmgsplive.miguvideo.com/wd_r2/2018/ocn/hubeiwshd/1000/index.m3u8?msisdn=2026052321580898adb9a4c2c94f29b79fe2051c57d9b3&mdspid=&spid=600633&netType=0&sid=5910022163&pid=2028597139&timestamp=20260523215808&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=947472496&ParentNodeID=-99&assertID=5910022163&client_ip=123.119.87.180&SecurityKey=20260523215808&promotionId=&mvid=5900004355&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=b59698845e0013c62c8dc7dca4dac1ea&ddCalcu=abe5e192c67a90d848a4c5de70c0d183cc26
+#EXTINF:-1 tvg-name="æº§æ°´æ°é»ç»¼å" group-title="其他",æº§æ°´æ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/migu/kailu/wxxwzh/50/20250604/index.m3u8?msisdn=20260523215918a583afd016474c5484a42e28e4d9c4b0&mdspid=&spid=699067&netType=0&sid=5500469349&pid=2028597139&timestamp=20260523215918&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639737327&ParentNodeID=-99&assertID=5500469349&client_ip=123.119.87.180&SecurityKey=20260523215918&promotionId=&mvid=5102012612&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=bef3094fe8eb90dcbd106443c54cfeb8&ddCalcu=8bbeeef2f39c004954cf3e484e6b0910ddbc
+#EXTINF:-1 tvg-name="çç«é¢é1" group-title="其他",çç«é¢é1
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao01/1000/index.m3u8?msisdn=202605232200276bcd21fe3341445a89e185738a85b168&mdspid=&spid=699004&netType=0&sid=2200200699&pid=2028597139&timestamp=20260523220027&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608933610&ParentNodeID=-99&assertID=2200200699&client_ip=183.241.196.46&SecurityKey=20260523220027&promotionId=&mvid=2200200699&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=e19ae65273be9c4157f05101f0ed1272&ddCalcu=2e71e2921a8de0e605f217031b5e09fc7451
+#EXTINF:-1 tvg-name="çç«é¢é10" group-title="其他",çç«é¢é10
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao10/1000/index.m3u8?msisdn=2026052322004207f3593ec8f14069a5f499e78524aa3a&mdspid=&spid=699004&netType=0&sid=2200192937&pid=2028597139&timestamp=20260523220042&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609169285&ParentNodeID=-99&assertID=2200192937&client_ip=123.119.87.180&SecurityKey=20260523220042&promotionId=&mvid=2200192937&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=2dce1f8518b6e8fd0c409cafbcf70c56&ddCalcu=625decc20e9710ffc8b5f1a8cb960e48cf0d
+#EXTINF:-1 tvg-name="çç«é¢é2" group-title="其他",çç«é¢é2
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao02/1000/index.m3u8?msisdn=20260523220030a3350843890e4d648245e8f32b68fe30&mdspid=&spid=699004&netType=0&sid=2200200717&pid=2028597139&timestamp=20260523220030&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608933640&ParentNodeID=-99&assertID=2200200717&client_ip=123.119.87.180&SecurityKey=20260523220030&promotionId=&mvid=2200200717&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=38ba83a547e7e7aebc5660530944e450&ddCalcu=0358e4b2ea8480439a0534570e676e57cabe
+#EXTINF:-1 tvg-name="çç«é¢é3" group-title="其他",çç«é¢é3
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao03/1000/index.m3u8?msisdn=202605232200310ca30a0881ed4fb389712fdad18ab11e&mdspid=&spid=699004&netType=0&sid=2200200738&pid=2028597139&timestamp=20260523220031&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608934619&ParentNodeID=-99&assertID=2200200738&client_ip=123.119.87.180&SecurityKey=20260523220031&promotionId=&mvid=2200200738&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f2e3674c4c6d1946af3c1d1e75b55b71&ddCalcu=1f72ebe2538560b7547ce41cd61dc139f4a6
+#EXTINF:-1 tvg-name="çç«é¢é4" group-title="其他",çç«é¢é4
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao04/1000/index.m3u8?msisdn=202605232200319b4350d0b66a448081ead0a86548cb78&mdspid=&spid=699004&netType=0&sid=2200200771&pid=2028597139&timestamp=20260523220031&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608934721&ParentNodeID=-99&assertID=2200200771&client_ip=123.119.87.180&SecurityKey=20260523220031&promotionId=&mvid=2200200771&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=9d021cd88fef2d9907e4252c10e4f3ce&ddCalcu=e9cde302f28410ec0d18c82f5e2f42ed7909
+#EXTINF:-1 tvg-name="çç«é¢é5" group-title="其他",çç«é¢é5
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao05/1000/index.m3u8?msisdn=20260523220033dd28c0b04efa4800911a2cd34d4e80de&mdspid=&spid=699004&netType=0&sid=2200200791&pid=2028597139&timestamp=20260523220033&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608935104&ParentNodeID=-99&assertID=2200200791&client_ip=123.119.87.180&SecurityKey=20260523220033&promotionId=&mvid=2200200791&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=7501b50f016a2ce086488fac4a2d7a9f&ddCalcu=f795ea02718db025a04fc0a1f68a824c6e80
+#EXTINF:-1 tvg-name="çç«é¢é6" group-title="其他",çç«é¢é6
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao06/1000/index.m3u8?msisdn=20260523220034b0e155c396484d46a150510d0cd1e0f4&mdspid=&spid=699004&netType=0&sid=2200200817&pid=2028597139&timestamp=20260523220034&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608935797&ParentNodeID=-99&assertID=2200200817&client_ip=123.119.87.180&SecurityKey=20260523220034&promotionId=&mvid=2200200817&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=46bf291028bf158fb2b0abe1bb3de334&ddCalcu=4436e3b2ef8d2039b1b012e8bbaf01b528bf
+#EXTINF:-1 tvg-name="çç«é¢é7" group-title="其他",çç«é¢é7
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao07/1000/index.m3u8?msisdn=202605232200375638830762324b5cbb1e5086f3826025&mdspid=&spid=699004&netType=0&sid=2200192831&pid=2028597139&timestamp=20260523220037&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609169286&ParentNodeID=-99&assertID=2200192831&client_ip=123.119.87.180&SecurityKey=20260523220037&promotionId=&mvid=2200192831&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=2317d614019de684e8ec0c3e4de38a9f&ddCalcu=f293ea128793d0e6d144e031c90dcee688e4
+#EXTINF:-1 tvg-name="çç«é¢é8" group-title="其他",çç«é¢é8
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao08/1000/index.m3u8?msisdn=202605232200393ad6ae576e0444999803ddd7a33f5003&mdspid=&spid=699004&netType=0&sid=2200192881&pid=2028597139&timestamp=20260523220039&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609169287&ParentNodeID=-99&assertID=2200192881&client_ip=123.119.87.180&SecurityKey=20260523220039&promotionId=&mvid=2200192881&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=fe461333500aacda8cc7cec92303c6a4&ddCalcu=4faee642c6931003332395c0e0ca7acccd8a
+#EXTINF:-1 tvg-name="çç«é¢é9" group-title="其他",çç«é¢é9
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/xiongmao09/1000/index.m3u8?msisdn=20260523220041931352d647d34a98a93abb7a2008e143&mdspid=&spid=699004&netType=0&sid=2200192899&pid=2028597139&timestamp=20260523220041&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609169226&ParentNodeID=-99&assertID=2200192899&client_ip=123.119.87.180&SecurityKey=20260523220041&promotionId=&mvid=2200192899&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=a896f95b3db0dd3989b91b99706b2bce&ddCalcu=eac8eb92269bf069057b939dbb109dbd9389
+#EXTINF:-1 tvg-name="çåæ°é»ç»¼å" group-title="其他",çåæ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/migu/kailu/ycxwzh/50/20250604/index.m3u8?msisdn=202605232159015be43e854bad4633986ef1ef2a352a17&mdspid=&spid=699067&netType=0&sid=5500469360&pid=2028597139&timestamp=20260523215901&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731825&ParentNodeID=-99&assertID=5500469360&client_ip=123.119.87.180&SecurityKey=20260523215901&promotionId=&mvid=5102012617&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=d9214db73c07b46bed927adfb788981e&ddCalcu=ed19e8229198408d7bb7f3dca0772b94d6eb
+#EXTINF:-1 tvg-name="è´¢å¯å¤©ä¸" group-title="其他",è´¢å¯å¤©ä¸
+http://gslbmgsplive.miguvideo.com/migu/kailu/cftx/50/20250804/index.m3u8?msisdn=2026052321592572c91d1a1bbe4e929bdd93a646dd1e36&mdspid=&spid=600697&netType=0&sid=5910022193&pid=2028597139&timestamp=20260523215925&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=956923159&ParentNodeID=-99&assertID=5910022193&client_ip=123.119.87.180&SecurityKey=20260523215925&promotionId=&mvid=5900006715&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=28a1360c38f1b02757684b3d4ca3c9f1&ddCalcu=12f8e9a2c16330a6c04cd338bf418b607257
+#EXTINF:-1 tvg-name="è¾½å®å«è§" group-title="其他",è¾½å®å«è§
+http://gslbmgsplive.miguvideo.com/wd_r2/2018/ocn/liaoningwshd/1000/index.m3u8?msisdn=20260523215758e6222e72c7284c6ab828c8b7e52838de&mdspid=&spid=600572&netType=0&sid=5910022198&pid=2028597139&timestamp=20260523215758&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=630291707&ParentNodeID=-99&assertID=5910022198&client_ip=183.241.196.46&SecurityKey=20260523215758&promotionId=&mvid=5101043014&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f71dd3e78a2017b241a5b48d9513145f&ddCalcu=ff57e4121d03d0135e97d88a42b051a71b42
+#EXTINF:-1 tvg-name="è¿äºæ¸¯æ°é»ç»¼å" group-title="其他",è¿äºæ¸¯æ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/lygxinwenzonghe/600/index.m3u8?msisdn=20260523215904d379afd09efd4198b71c983a67dfd73d&mdspid=&spid=699067&netType=0&sid=5500469369&pid=2028597139&timestamp=20260523215904&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731715&ParentNodeID=-99&assertID=5500469369&client_ip=123.119.87.180&SecurityKey=20260523215904&promotionId=&mvid=5102012621&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=3f5f5dcd1bca2ebf484d8a5c8995d0cb&ddCalcu=b3cfe052df95509d9c8dc15bac8ad24e8b4f
+#EXTINF:-1 tvg-name="éåºå«è§" group-title="其他",éåºå«è§
+http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/chongqing/1000/index.m3u8?msisdn=202605232158290a5c0a3b27e74eb788839f5d8a7c9beb&mdspid=&spid=600697&netType=0&sid=5910022305&pid=2028597139&timestamp=20260523215829&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=738910914&ParentNodeID=-99&assertID=5910022305&client_ip=123.119.87.180&SecurityKey=20260523215829&promotionId=&mvid=5900004329&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=edb10a7ae9260a2b78a8708482513e93&ddCalcu=3e9deeb23181005a278a4e89027680aa827b
+#EXTINF:-1 tvg-name="éæ±æ°é»ç»¼å" group-title="其他",éæ±æ°é»ç»¼å
+http://gslbmgsplive.miguvideo.com/migu/kailu/zjxwzh/50/20251127/index.m3u8?msisdn=202605232159257250ae5051864ddba1b38f52423b0235&mdspid=&spid=699067&netType=0&sid=5500469365&pid=2028597139&timestamp=20260523215925&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731783&ParentNodeID=-99&assertID=5500469365&client_ip=123.119.87.180&SecurityKey=20260523215925&promotionId=&mvid=5102012619&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=9cb26403b6e073c4e85a7343e767d519&ddCalcu=991ce5b2d297606470e33b463e70a7538ce4
+#EXTINF:-1 tvg-name="éè¥¿ä½è²ä¼é²é¢é" group-title="其他",éè¥¿ä½è²ä¼é²é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/sxtyxx/50/20250804/index.m3u8?msisdn=2026052321574584d6bdac8d894cbc8d6640496be11e2d&mdspid=&spid=600572&netType=0&sid=5910022189&pid=2028597139&timestamp=20260523215745&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=956909356&ParentNodeID=-99&assertID=5910022189&client_ip=123.119.87.180&SecurityKey=20260523215745&promotionId=&mvid=5900006712&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=19c120baa84a169307ad4c66ba10b486&ddCalcu=6189e4c2b1602010abba6a68c44ad1a67903
+#EXTINF:-1 tvg-name="éè¥¿å«è§" group-title="其他",éè¥¿å«è§
+http://gslbmgsplive.miguvideo.com/migu/kailu/shan3xiws/50/20220809/index.m3u8?msisdn=2026052321580560abb97e91024a2396b9e6fcca7dbd6f&mdspid=&spid=600633&netType=0&sid=5910020475&pid=2028597139&timestamp=20260523215805&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=738910838&ParentNodeID=-99&assertID=5910020475&client_ip=183.241.196.46&SecurityKey=20260523215805&promotionId=&mvid=5900004331&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=7a6ce489990de9371e78cd2ce1f83830&ddCalcu=073ae8623c88e0f418e9c929d0cd8e79e317
+#EXTINF:-1 tvg-name="éè¥¿æ°é»èµè®¯é¢é" group-title="其他",éè¥¿æ°é»èµè®¯é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/sxxwzx/50/20250804/index.m3u8?msisdn=2026052321592465c3778849af41f797c7e4c0465861ed&mdspid=&spid=600572&netType=0&sid=5910022187&pid=2028597139&timestamp=20260523215924&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=956909289&ParentNodeID=-99&assertID=5910022187&client_ip=123.119.87.180&SecurityKey=20260523215924&promotionId=&mvid=5900006710&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=4d6011ab08a5203475f725fc2cc017a1&ddCalcu=14ade762106010c1ca2bc0f85a2572f05374
+#EXTINF:-1 tvg-name="éè¥¿é½å¸éæ¥é¢é" group-title="其他",éè¥¿é½å¸éæ¥é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/sxdsqc/50/20250804/index.m3u8?msisdn=20260523215921fc906328c88e44f586228d3a386d9cae&mdspid=&spid=600572&netType=0&sid=5910022190&pid=2028597139&timestamp=20260523215921&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=956909358&ParentNodeID=-99&assertID=5910022190&client_ip=123.119.87.180&SecurityKey=20260523215921&promotionId=&mvid=5900006713&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=e85e170949d836ff5a88a5ca69b27071&ddCalcu=1e78e0527e6210b79069a4c95da88386af5f
+#EXTINF:-1 tvg-name="éè¥¿é¶é¾é¢é" group-title="其他",éè¥¿é¶é¾é¢é
+http://gslbmgsplive.miguvideo.com/migu/kailu/sxylpd/50/20250804/index.m3u8?msisdn=2026052321591901b1ef111ba24308b09f5b34c1f0f591&mdspid=&spid=600572&netType=0&sid=5910022191&pid=2028597139&timestamp=20260523215919&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=956909362&ParentNodeID=-99&assertID=5910022191&client_ip=123.119.87.180&SecurityKey=20260523215919&promotionId=&mvid=5900006714&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=791bc2f16068c8ac8fcc26c42f009ca8&ddCalcu=87a9ec129b60c002ff2146c06628ccc8fa8c
+#EXTINF:-1 tvg-name="éæµ·å«è§" group-title="其他",éæµ·å«è§
+http://gslbmgsplive.miguvideo.com/envivo_w/2018/SD/qinghai/1000/index.m3u8?msisdn=20260523215813671cac59605e4b58954a04e1f55880dd&mdspid=&spid=600633&netType=0&sid=5910022166&pid=2028597139&timestamp=20260523215813&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=947472506&ParentNodeID=-99&assertID=5910022166&client_ip=123.119.87.180&SecurityKey=20260523215813&promotionId=&mvid=5900004353&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=844283854d5dbdc7a6c27f6f9b1b194c&ddCalcu=c844e942127b8013b895f46df57d2bcd6ca7
+#EXTINF:-1 tvg-name="上视东方影视" group-title="其他",上视东方影视
+http://60.168.105.220:5008/617290047
+#EXTINF:-1 tvg-name="东北超 呼和浩特VS延边 2026赛季东北地区城市足球联赛第1轮: 呼和哈特VS延边 18:50" group-title="其他",东北超 呼和浩特VS延边 2026赛季东北地区城市足球联赛第1轮: 呼和哈特VS延边 18:50
+http://60.168.105.220:5008/964851776
+#EXTINF:-1 tvg-name="东北超 哈尔滨VS大连 2026赛季东北地区城市足球联赛第1轮: 哈尔滨VS大连 18:50" group-title="其他",东北超 哈尔滨VS大连 2026赛季东北地区城市足球联赛第1轮: 哈尔滨VS大连 18:50
+http://60.168.105.220:5008/964851768
+#EXTINF:-1 tvg-name="东北超 沈阳VS鸡西 2026赛季东北地区城市足球联赛第1轮: 沈阳VS鸡西 18:50" group-title="其他",东北超 沈阳VS鸡西 2026赛季东北地区城市足球联赛第1轮: 沈阳VS鸡西 18:50
+http://60.168.105.220:5008/964851757
+#EXTINF:-1 tvg-name="东北超 长春VS通辽 2026赛季东北地区城市足球联赛第1轮: 长春VS通辽 18:50" group-title="其他",东北超 长春VS通辽 2026赛季东北地区城市足球联赛第1轮: 长春VS通辽 18:50
+http://60.168.105.220:5008/964851763
+#EXTINF:-1 tvg-name="中乙 大连英博B队VS泰安天贶 全场回放（官方解说） 14:50" group-title="其他",中乙 大连英博B队VS泰安天贶 全场回放（官方解说） 14:50
+http://60.168.105.220:5008/964932216
+#EXTINF:-1 tvg-name="中乙 山西崇德荣海VS长春喜都 解说 14:50" group-title="其他",中乙 山西崇德荣海VS长春喜都 解说 14:50
+http://60.168.105.220:5008/964913281
+#EXTINF:-1 tvg-name="中乙 江西庐山VS武汉三镇B队 解说 19:20" group-title="其他",中乙 江西庐山VS武汉三镇B队 解说 19:20
+http://60.168.105.220:5008/964913341
+#EXTINF:-1 tvg-name="中乙 贵州贵阳竞技VS杭州临平吴越 全场回放（官方解说） 19:20" group-title="其他",中乙 贵州贵阳竞技VS杭州临平吴越 全场回放（官方解说） 19:20
+http://60.168.105.220:5008/964935533
+#EXTINF:-1 tvg-name="中乙 青岛红狮VS海门珂缔缘 解说 15:20" group-title="其他",中乙 青岛红狮VS海门珂缔缘 解说 15:20
+http://60.168.105.220:5008/964913313
+#EXTINF:-1 tvg-name="中华特产" group-title="其他",中华特产
+http://60.168.105.220:5008/959986618
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第三轮 女子组一号场地 08:35" group-title="其他",中国大学生排球联赛 小组赛第三轮 女子组一号场地 08:35
+http://60.168.105.220:5008/964924185
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第三轮 赛场原声 08:30" group-title="其他",中国大学生排球联赛 小组赛第三轮 赛场原声 08:30
+http://60.168.105.220:5008/964912600
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第四轮 女子组一号场地 08:30" group-title="其他",中国大学生排球联赛 小组赛第四轮 女子组一号场地 08:30
+http://60.168.105.220:5008/964912689
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第四轮 女子组一号场地 08:35" group-title="其他",中国大学生排球联赛 小组赛第四轮 女子组一号场地 08:35
+http://60.168.105.220:5008/964924224
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第四轮 女子组二号场地 08:30" group-title="其他",中国大学生排球联赛 小组赛第四轮 女子组二号场地 08:30
+http://60.168.105.220:5008/964912699
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第四轮 女子组二号场地 08:35" group-title="其他",中国大学生排球联赛 小组赛第四轮 女子组二号场地 08:35
+http://60.168.105.220:5008/964924238
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第四轮 男子组一号场地 08:30" group-title="其他",中国大学生排球联赛 小组赛第四轮 男子组一号场地 08:30
+http://60.168.105.220:5008/964912643
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第四轮 男子组一号场地 08:35" group-title="其他",中国大学生排球联赛 小组赛第四轮 男子组一号场地 08:35
+http://60.168.105.220:5008/964924741
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第四轮 男子组二号场地 08:30" group-title="其他",中国大学生排球联赛 小组赛第四轮 男子组二号场地 08:30
+http://60.168.105.220:5008/964912654
+#EXTINF:-1 tvg-name="中国大学生排球联赛 小组赛第四轮 男子组二号场地 08:35" group-title="其他",中国大学生排球联赛 小组赛第四轮 男子组二号场地 08:35
+http://60.168.105.220:5008/964924219
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组一号场地全场回放】（官方解说）（一） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组一号场地全场回放】（官方解说）（一） 08:30
+http://60.168.105.220:5008/964927113
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组一号场地全场回放】（官方解说）（二） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组一号场地全场回放】（官方解说）（二） 08:30
+http://60.168.105.220:5008/964932945
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】中国海洋大学0-3浙江大学（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】中国海洋大学0-3浙江大学（官方解说） 08:30
+http://60.168.105.220:5008/964930936
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】吉林大学0-3华中师范大学（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】吉林大学0-3华中师范大学（官方解说） 08:30
+http://60.168.105.220:5008/964925220
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】复旦大学3-0海南师范大学（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【女子组回放】复旦大学3-0海南师范大学（官方解说） 08:30
+http://60.168.105.220:5008/964926615
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组一号场地全场回放】（官方解说）（一） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组一号场地全场回放】（官方解说）（一） 08:30
+http://60.168.105.220:5008/964926972
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组一号场地全场回放】（官方解说）（二） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组一号场地全场回放】（官方解说）（二） 08:30
+http://60.168.105.220:5008/964936516
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组一号场地全场回放】（赛场原声）（一） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组一号场地全场回放】（赛场原声）（一） 08:30
+http://60.168.105.220:5008/964927343
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组一号场地全场回放】（赛场原声）（二） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组一号场地全场回放】（赛场原声）（二） 08:30
+http://60.168.105.220:5008/964935921
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组二号场地全场回放】（官方解说）（一） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组二号场地全场回放】（官方解说）（一） 08:30
+http://60.168.105.220:5008/964927169
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组二号场地全场回放】（官方解说）（二） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组二号场地全场回放】（官方解说）（二） 08:30
+http://60.168.105.220:5008/964935050
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组二号场地全场回放】（赛场原声）（一） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组二号场地全场回放】（赛场原声）（一） 08:30
+http://60.168.105.220:5008/964927261
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组二号场地全场回放】（赛场原声）（二） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组二号场地全场回放】（赛场原声）（二） 08:30
+http://60.168.105.220:5008/964934576
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】南昌大学3-0湖南工业大学（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】南昌大学3-0湖南工业大学（官方解说） 08:30
+http://60.168.105.220:5008/964930604
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】南昌大学3-1武汉体育学院（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】南昌大学3-1武汉体育学院（官方解说） 08:30
+http://60.168.105.220:5008/964932408
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】武汉体育学院3-2西南交通大学（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】武汉体育学院3-2西南交通大学（官方解说） 08:30
+http://60.168.105.220:5008/964933830
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】沈阳体育学院3-1吉林大学（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】沈阳体育学院3-1吉林大学（官方解说） 08:30
+http://60.168.105.220:5008/964929999
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】清华大学2-3西南政法大学（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】清华大学2-3西南政法大学（官方解说） 08:30
+http://60.168.105.220:5008/964933075
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】湖南师范大学3-0中国石油大学(华东)（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】湖南师范大学3-0中国石油大学(华东)（官方解说） 08:30
+http://60.168.105.220:5008/964925061
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】西北工业大学3-0武汉大学（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】西北工业大学3-0武汉大学（官方解说） 08:30
+http://60.168.105.220:5008/964928752
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】重庆工商大学0-3华南理工大学（官方解说） 08:30" group-title="其他",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】重庆工商大学0-3华南理工大学（官方解说） 08:30
+http://60.168.105.220:5008/964926653
+#EXTINF:-1 tvg-name="中国天气" group-title="其他",中国天气
+http://60.168.105.220:5008/959986621
+#EXTINF:-1 tvg-name="中国航天“逆袭”之路" group-title="其他",中国航天“逆袭”之路
+http://60.168.105.220:5008/713600957
+#EXTINF:-1 tvg-name="中学生" group-title="其他",中学生
+http://60.168.105.220:5008/708869532
+#EXTINF:-1 tvg-name="中甲 宁波职业足球俱乐部VS大连鲲城 解说 18:50" group-title="其他",中甲 宁波职业足球俱乐部VS大连鲲城 解说 18:50
+http://60.168.105.220:5008/964911216
+#EXTINF:-1 tvg-name="中甲 宁波职业足球俱乐部VS大连鲲城 赛场原声 18:50" group-title="其他",中甲 宁波职业足球俱乐部VS大连鲲城 赛场原声 18:50
+http://60.168.105.220:5008/964911204
+#EXTINF:-1 tvg-name="中甲 广西恒宸VS南通支云 解说 19:20" group-title="其他",中甲 广西恒宸VS南通支云 解说 19:20
+http://60.168.105.220:5008/964911144
+#EXTINF:-1 tvg-name="中甲 广西恒宸VS南通支云 赛场原声 19:20" group-title="其他",中甲 广西恒宸VS南通支云 赛场原声 19:20
+http://60.168.105.220:5008/964911129
+#EXTINF:-1 tvg-name="中甲 无锡吴钩VS南京城市 解说 18:50" group-title="其他",中甲 无锡吴钩VS南京城市 解说 18:50
+http://60.168.105.220:5008/964911237
+#EXTINF:-1 tvg-name="中甲 无锡吴钩VS南京城市 赛场原声 18:50" group-title="其他",中甲 无锡吴钩VS南京城市 赛场原声 18:50
+http://60.168.105.220:5008/964911226
+#EXTINF:-1 tvg-name="中甲 石家庄功夫VS梅州客家 解说 19:20" group-title="其他",中甲 石家庄功夫VS梅州客家 解说 19:20
+http://60.168.105.220:5008/964911055
+#EXTINF:-1 tvg-name="中甲 石家庄功夫VS梅州客家 赛场原声 19:20" group-title="其他",中甲 石家庄功夫VS梅州客家 赛场原声 19:20
+http://60.168.105.220:5008/964911031
+#EXTINF:-1 tvg-name="中甲 苏州东吴VS陕西联合 解说 18:50" group-title="其他",中甲 苏州东吴VS陕西联合 解说 18:50
+http://60.168.105.220:5008/964911086
+#EXTINF:-1 tvg-name="中甲 苏州东吴VS陕西联合 赛场原声 18:50" group-title="其他",中甲 苏州东吴VS陕西联合 赛场原声 18:50
+http://60.168.105.220:5008/964911069
+#EXTINF:-1 tvg-name="中超 云南玉昆VS青岛西海岸 刘腾 张辛昕 18:45" group-title="其他",中超 云南玉昆VS青岛西海岸 刘腾 张辛昕 18:45
+http://60.168.105.220:5008/964889137
+#EXTINF:-1 tvg-name="中超 云南玉昆VS青岛西海岸 赛场原声 18:45" group-title="其他",中超 云南玉昆VS青岛西海岸 赛场原声 18:45
+http://60.168.105.220:5008/964889145
+#EXTINF:-1 tvg-name="中超 山东泰山VS武汉三镇 李欣 徐云龙 林梦鸽 19:00" group-title="其他",中超 山东泰山VS武汉三镇 李欣 徐云龙 林梦鸽 19:00
+http://60.168.105.220:5008/964889167
+#EXTINF:-1 tvg-name="中超 山东泰山VS武汉三镇 赛场原声 19:20" group-title="其他",中超 山东泰山VS武汉三镇 赛场原声 19:20
+http://60.168.105.220:5008/964889172
+#EXTINF:-1 tvg-name="中超 浙江俱乐部绿城VS辽宁铁人楠波湾 赛场原声 19:20" group-title="其他",中超 浙江俱乐部绿城VS辽宁铁人楠波湾 赛场原声 19:20
+http://60.168.105.220:5008/964889190
+#EXTINF:-1 tvg-name="中超 浙江俱乐部绿城VS辽宁铁人楠波湾 鲁靖明 王伟 19:20" group-title="其他",中超 浙江俱乐部绿城VS辽宁铁人楠波湾 鲁靖明 王伟 19:20
+http://60.168.105.220:5008/964889184
+#EXTINF:-1 tvg-name="中超 青岛海牛VS重庆铜梁龙 袁甲 李毅 16:45" group-title="其他",中超 青岛海牛VS重庆铜梁龙 袁甲 李毅 16:45
+http://60.168.105.220:5008/964889101
+#EXTINF:-1 tvg-name="中超 青岛海牛VS重庆铜梁龙 赛场原声 16:45" group-title="其他",中超 青岛海牛VS重庆铜梁龙 赛场原声 16:45
+http://60.168.105.220:5008/964889113
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 凌维康 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 凌维康 14:00
+http://60.168.105.220:5008/964866635
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 嘉定统嘉集团vs茸城乒将 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 嘉定统嘉集团vs茸城乒将 14:00
+http://60.168.105.220:5008/964866444
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 张铭哲 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 张铭哲 14:00
+http://60.168.105.220:5008/964927384
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 普陀淘宝闪购vs徐汇愚公科技 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 普陀淘宝闪购vs徐汇愚公科技 14:00
+http://60.168.105.220:5008/964866562
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 王睿涓 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 王睿涓 14:00
+http://60.168.105.220:5008/964909460
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 石楚阳 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 石楚阳 14:00
+http://60.168.105.220:5008/964866601
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 胡朔 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 胡朔 14:00
+http://60.168.105.220:5008/964927391
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 虹口邮储银行vs崇明乘风破浪队 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 虹口邮储银行vs崇明乘风破浪队 14:00
+http://60.168.105.220:5008/964866480
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 金山物流汇喆宇vs上善青浦 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 金山物流汇喆宇vs上善青浦 14:00
+http://60.168.105.220:5008/964866609
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮下午场 静安中安弘vs奉贤经发 14:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮下午场 静安中安弘vs奉贤经发 14:00
+http://60.168.105.220:5008/964866538
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮晚间场 刘馨蕊 19:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮晚间场 刘馨蕊 19:00
+http://60.168.105.220:5008/964866793
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮晚间场 宝山国投私募基金vs黄浦南房 19:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮晚间场 宝山国投私募基金vs黄浦南房 19:00
+http://60.168.105.220:5008/964866685
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮晚间场 浦东引领vs长宁乐动虹桥 19:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮晚间场 浦东引领vs长宁乐动虹桥 19:00
+http://60.168.105.220:5008/964866714
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮晚间场 赵曦 19:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮晚间场 赵曦 19:00
+http://60.168.105.220:5008/964909352
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮晚间场 闵行沿浦vs杨浦回力 19:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮晚间场 闵行沿浦vs杨浦回力 19:00
+http://60.168.105.220:5008/964866746
+#EXTINF:-1 tvg-name="乒乓球嘉年华 市级循环赛第二轮晚间场 陈希 19:00" group-title="其他",乒乓球嘉年华 市级循环赛第二轮晚间场 陈希 19:00
+http://60.168.105.220:5008/964909380
+#EXTINF:-1 tvg-name="乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 凌维康 19:00" group-title="其他",乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 凌维康 19:00
+http://60.168.105.220:5008/964866392
+#EXTINF:-1 tvg-name="乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 杨浦回力vs静安中安弘 19:00" group-title="其他",乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 杨浦回力vs静安中安弘 19:00
+http://60.168.105.220:5008/964866337
+#EXTINF:-1 tvg-name="乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 林睿思 19:00" group-title="其他",乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 林睿思 19:00
+http://60.168.105.220:5008/964909424
+#EXTINF:-1 tvg-name="乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 浦东引领vs黄浦南房 19:00" group-title="其他",乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 浦东引领vs黄浦南房 19:00
+http://60.168.105.220:5008/964866208
+#EXTINF:-1 tvg-name="乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 章稀瑄 19:00" group-title="其他",乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 章稀瑄 19:00
+http://60.168.105.220:5008/964909415
+#EXTINF:-1 tvg-name="乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 胡朔 19:00" group-title="其他",乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 胡朔 19:00
+http://60.168.105.220:5008/964927405
+#EXTINF:-1 tvg-name="乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 长宁乐动虹桥vs虹口邮储银行 19:00" group-title="其他",乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 长宁乐动虹桥vs虹口邮储银行 19:00
+http://60.168.105.220:5008/964866274
+#EXTINF:-1 tvg-name="乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 闵行沿浦vs普陀淘宝闪购 19:00" group-title="其他",乒乓球嘉年华 赵子豪孙铭阳领衔虹口邮储银行出战 闵行沿浦vs普陀淘宝闪购 19:00
+http://60.168.105.220:5008/964866412
+#EXTINF:-1 tvg-name="乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 上善青浦队vs徐汇愚公科技 14:00" group-title="其他",乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 上善青浦队vs徐汇愚公科技 14:00
+http://60.168.105.220:5008/964866163
+#EXTINF:-1 tvg-name="乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 刘馨蕊 14:00" group-title="其他",乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 刘馨蕊 14:00
+http://60.168.105.220:5008/964852227
+#EXTINF:-1 tvg-name="乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 崇明乘风破浪队vs嘉定统嘉集团 14:00" group-title="其他",乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 崇明乘风破浪队vs嘉定统嘉集团 14:00
+http://60.168.105.220:5008/964866134
+#EXTINF:-1 tvg-name="乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 张铭哲 14:00" group-title="其他",乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 张铭哲 14:00
+http://60.168.105.220:5008/964909431
+#EXTINF:-1 tvg-name="乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 章稀瑄 14:00" group-title="其他",乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 章稀瑄 14:00
+http://60.168.105.220:5008/964927407
+#EXTINF:-1 tvg-name="乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 胡朔 14:00" group-title="其他",乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 胡朔 14:00
+http://60.168.105.220:5008/964909446
+#EXTINF:-1 tvg-name="乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 茸城乒将vs宝山国投私募基金 14:00" group-title="其他",乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 茸城乒将vs宝山国投私募基金 14:00
+http://60.168.105.220:5008/964866114
+#EXTINF:-1 tvg-name="乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 金山物流汇喆宇vs奉贤经发 14:00" group-title="其他",乒乓球嘉年华 钱天一孙闻领衔上善青浦队亮相 金山物流汇喆宇vs奉贤经发 14:00
+http://60.168.105.220:5008/964868609
+#EXTINF:-1 tvg-name="亚冠女足 日视东京绿茵美人女足VS我故乡女足 吴桐 12:45" group-title="其他",亚冠女足 日视东京绿茵美人女足VS我故乡女足 吴桐 12:45
+http://60.168.105.220:5008/964928016
+#EXTINF:-1 tvg-name="亚冠女足 日视东京绿茵美人女足VS我故乡女足 赛场原声 12:45" group-title="其他",亚冠女足 日视东京绿茵美人女足VS我故乡女足 赛场原声 12:45
+http://60.168.105.220:5008/964928011
+#EXTINF:-1 tvg-name="优漫卡通频道" group-title="其他",优漫卡通频道
+http://60.168.105.220:5008/626064703
+#EXTINF:-1 tvg-name="体坛名栏汇" group-title="其他",体坛名栏汇
+http://60.168.105.220:5008/629943305
+#EXTINF:-1 tvg-name="体育休闲频道" group-title="其他",体育休闲频道
+http://60.168.105.220:5008/626064707
+#EXTINF:-1 tvg-name="公共新闻频道" group-title="其他",公共新闻频道
+http://60.168.105.220:5008/626064693
+#EXTINF:-1 tvg-name="南京十八频道" group-title="其他",南京十八频道
+http://60.168.105.220:5008/838151753
+#EXTINF:-1 tvg-name="南京教科频道" group-title="其他",南京教科频道
+http://60.168.105.220:5008/838153729
+#EXTINF:-1 tvg-name="南京新闻综合频道" group-title="其他",南京新闻综合频道
+http://60.168.105.220:5008/838109047
+#EXTINF:-1 tvg-name="南方影视" group-title="其他",南方影视
+http://60.168.105.220:5008/614961829
+#EXTINF:-1 tvg-name="南通新闻综合" group-title="其他",南通新闻综合
+http://60.168.105.220:5008/955227985
+#EXTINF:-1 tvg-name="发现之旅" group-title="其他",发现之旅
+http://60.168.105.220:5008/624878970
+#EXTINF:-1 tvg-name="吴越杯 台州队VS绍兴队 2026赛季浙江省城市足球联赛第十一轮: 台州VS绍兴 19:15" group-title="其他",吴越杯 台州队VS绍兴队 2026赛季浙江省城市足球联赛第十一轮: 台州VS绍兴 19:15
+http://60.168.105.220:5008/964854719
+#EXTINF:-1 tvg-name="吴越杯 宁波队VS衢州队 2026赛季浙江省城市足球联赛第十一轮: 宁波VS衢州 19:15" group-title="其他",吴越杯 宁波队VS衢州队 2026赛季浙江省城市足球联赛第十一轮: 宁波VS衢州 19:15
+http://60.168.105.220:5008/964854731
+#EXTINF:-1 tvg-name="吴越杯 温州队VS嘉兴队 2026赛季浙江省城市足球联赛第十一轮: 温州VS嘉兴 19:15" group-title="其他",吴越杯 温州队VS嘉兴队 2026赛季浙江省城市足球联赛第十一轮: 温州VS嘉兴 19:15
+http://60.168.105.220:5008/964854712
+#EXTINF:-1 tvg-name="吴越杯 舟山队VS湖州队 2026赛季浙江省城市足球联赛第十一轮: 舟山VS湖州 19:15" group-title="其他",吴越杯 舟山队VS湖州队 2026赛季浙江省城市足球联赛第十一轮: 舟山VS湖州 19:15
+http://60.168.105.220:5008/964854695
+#EXTINF:-1 tvg-name="吴越杯 金华队VS丽水队 2026赛季浙江省城市足球联赛第十一轮: 金华VS丽水 19:15" group-title="其他",吴越杯 金华队VS丽水队 2026赛季浙江省城市足球联赛第十一轮: 金华VS丽水 19:15
+http://60.168.105.220:5008/964854763
+#EXTINF:-1 tvg-name="和美乡途轮播台" group-title="其他",和美乡途轮播台
+http://60.168.105.220:5008/713591450
+#EXTINF:-1 tvg-name="咪咕体育日报 undefined 咪咕体育日报 第118期 11:30" group-title="其他",咪咕体育日报 undefined 咪咕体育日报 第118期 11:30
+http://60.168.105.220:5008/964941073
+#EXTINF:-1 tvg-name="咪咕体育日报 undefined 咪咕体育日报 第119期 08:00" group-title="其他",咪咕体育日报 undefined 咪咕体育日报 第119期 08:00
+http://60.168.105.220:5008/964853196
+#EXTINF:-1 tvg-name="嘉佳卡通" group-title="其他",嘉佳卡通
+http://60.168.105.220:5008/614952364
+#EXTINF:-1 tvg-name="四海钓鱼" group-title="其他",四海钓鱼
+http://60.168.105.220:5008/637444975
+#EXTINF:-1 tvg-name="宜兴新闻综合" group-title="其他",宜兴新闻综合
+http://60.168.105.220:5008/955227996
+#EXTINF:-1 tvg-name="宿迁新闻综合" group-title="其他",宿迁新闻综合
+http://60.168.105.220:5008/639731832
+#EXTINF:-1 tvg-name="山东教育" group-title="其他",山东教育
+http://60.168.105.220:5008/609154353
+#EXTINF:-1 tvg-name="徐州新闻综合" group-title="其他",徐州新闻综合
+http://60.168.105.220:5008/639731747
+#EXTINF:-1 tvg-name="德甲升降级附加赛 沃尔夫斯堡VS帕德博恩 全场回放（王子睿） 02:15" group-title="其他",德甲升降级附加赛 沃尔夫斯堡VS帕德博恩 全场回放（王子睿） 02:15
+http://60.168.105.220:5008/964922586
+#EXTINF:-1 tvg-name="徽BA 亳州VS蚌埠 2026安徽省城市篮球联赛第四轮: 亳州vs蚌埠 19:00" group-title="其他",徽BA 亳州VS蚌埠 2026安徽省城市篮球联赛第四轮: 亳州vs蚌埠 19:00
+http://60.168.105.220:5008/964867775
+#EXTINF:-1 tvg-name="徽BA 六安VS滁州 2026安徽省城市篮球联赛第四轮: 六安vs滁州 19:00" group-title="其他",徽BA 六安VS滁州 2026安徽省城市篮球联赛第四轮: 六安vs滁州 19:00
+http://60.168.105.220:5008/964867866
+#EXTINF:-1 tvg-name="徽BA 宣城VS芜湖 2026安徽省城市篮球联赛第四轮: 宣城vs芜湖 19:00" group-title="其他",徽BA 宣城VS芜湖 2026安徽省城市篮球联赛第四轮: 宣城vs芜湖 19:00
+http://60.168.105.220:5008/964867932
+#EXTINF:-1 tvg-name="徽BA 宿州VS安庆 2026安徽省城市篮球联赛第四轮: 宿州vs安庆 19:00" group-title="其他",徽BA 宿州VS安庆 2026安徽省城市篮球联赛第四轮: 宿州vs安庆 19:00
+http://60.168.105.220:5008/964867896
+#EXTINF:-1 tvg-name="徽BA 池州VS淮南 2026安徽省城市篮球联赛第四轮: 池州vs淮南 19:00" group-title="其他",徽BA 池州VS淮南 2026安徽省城市篮球联赛第四轮: 池州vs淮南 19:00
+http://60.168.105.220:5008/964867859
+#EXTINF:-1 tvg-name="徽BA 铜陵VS淮北 2026安徽省城市篮球联赛第四轮: 铜陵vs淮北 19:00" group-title="其他",徽BA 铜陵VS淮北 2026安徽省城市篮球联赛第四轮: 铜陵vs淮北 19:00
+http://60.168.105.220:5008/964867838
+#EXTINF:-1 tvg-name="徽BA 阜阳VS黄山 2026安徽省城市篮球联赛第四轮: 阜阳vs黄山 19:00" group-title="其他",徽BA 阜阳VS黄山 2026安徽省城市篮球联赛第四轮: 阜阳vs黄山 19:00
+http://60.168.105.220:5008/964867797
+#EXTINF:-1 tvg-name="徽BA 马鞍山VS合肥 2026安徽省城市篮球联赛第四轮: 马鞍山vs合肥 19:00" group-title="其他",徽BA 马鞍山VS合肥 2026安徽省城市篮球联赛第四轮: 马鞍山vs合肥 19:00
+http://60.168.105.220:5008/964867804
+#EXTINF:-1 tvg-name="快乐垂钓" group-title="其他",快乐垂钓
+http://60.168.105.220:5008/961930263
+#EXTINF:-1 tvg-name="意甲 佛罗伦萨VS亚特兰大 全场回放（石庆圣） 02:30" group-title="其他",意甲 佛罗伦萨VS亚特兰大 全场回放（石庆圣） 02:30
+http://60.168.105.220:5008/964937862
+#EXTINF:-1 tvg-name="意甲 博洛尼亚VS国际米兰 AR信号 23:45" group-title="其他",意甲 博洛尼亚VS国际米兰 AR信号 23:45
+http://60.168.105.220:5008/964928048
+#EXTINF:-1 tvg-name="意甲 博洛尼亚VS国际米兰 刘腾 贺宇 23:30" group-title="其他",意甲 博洛尼亚VS国际米兰 刘腾 贺宇 23:30
+http://60.168.105.220:5008/964916500
+#EXTINF:-1 tvg-name="意甲 博洛尼亚VS国际米兰 智能字幕 23:30" group-title="其他",意甲 博洛尼亚VS国际米兰 智能字幕 23:30
+http://60.168.105.220:5008/964916522
+#EXTINF:-1 tvg-name="意甲 博洛尼亚VS国际米兰 赛场原声 23:45" group-title="其他",意甲 博洛尼亚VS国际米兰 赛场原声 23:45
+http://60.168.105.220:5008/964916487
+#EXTINF:-1 tvg-name="意甲 帕尔马VS萨索洛 谭逸雄 20:45" group-title="其他",意甲 帕尔马VS萨索洛 谭逸雄 20:45
+http://60.168.105.220:5008/964916421
+#EXTINF:-1 tvg-name="意甲 帕尔马VS萨索洛 赛场原声 20:45" group-title="其他",意甲 帕尔马VS萨索洛 赛场原声 20:45
+http://60.168.105.220:5008/964916400
+#EXTINF:-1 tvg-name="意甲 拉齐奥VS比萨 吴奕博 02:30" group-title="其他",意甲 拉齐奥VS比萨 吴奕博 02:30
+http://60.168.105.220:5008/964916462
+#EXTINF:-1 tvg-name="意甲 拉齐奥VS比萨 赛场原声 02:30" group-title="其他",意甲 拉齐奥VS比萨 赛场原声 02:30
+http://60.168.105.220:5008/964916453
+#EXTINF:-1 tvg-name="抗战经典影片" group-title="其他",抗战经典影片
+http://60.168.105.220:5008/617432318
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3一号桌全场回放（赛场原声）（一） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3一号桌全场回放（赛场原声）（一） 17:00
+http://60.168.105.220:5008/964937354
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3一号桌全场回放（赛场原声）（二） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3一号桌全场回放（赛场原声）（二） 17:00
+http://60.168.105.220:5008/964938562
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3三号桌全场回放（赛场原声）（一） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3三号桌全场回放（赛场原声）（一） 17:00
+http://60.168.105.220:5008/964937609
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3三号桌全场回放（赛场原声）（二） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3三号桌全场回放（赛场原声）（二） 17:00
+http://60.168.105.220:5008/964938386
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3二号桌全场回放（赛场原声）（一） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3二号桌全场回放（赛场原声）（一） 17:00
+http://60.168.105.220:5008/964937595
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3二号桌全场回放（赛场原声）（二） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3二号桌全场回放（赛场原声）（二） 17:00
+http://60.168.105.220:5008/964937864
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3五号桌全场回放（赛场原声）（一） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3五号桌全场回放（赛场原声）（一） 17:00
+http://60.168.105.220:5008/964936460
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3五号桌全场回放（赛场原声）（三） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3五号桌全场回放（赛场原声）（三） 17:00
+http://60.168.105.220:5008/964940923
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3五号桌全场回放（赛场原声）（二） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3五号桌全场回放（赛场原声）（二） 17:00
+http://60.168.105.220:5008/964937692
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3五号桌全场回放（赛场原声）（四） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3五号桌全场回放（赛场原声）（四） 17:00
+http://60.168.105.220:5008/964938782
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3六号桌全场回放（赛场原声）（一） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3六号桌全场回放（赛场原声）（一） 17:00
+http://60.168.105.220:5008/964937394
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3六号桌全场回放（赛场原声）（三） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3六号桌全场回放（赛场原声）（三） 17:00
+http://60.168.105.220:5008/964938285
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3六号桌全场回放（赛场原声）（二） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3六号桌全场回放（赛场原声）（二） 17:00
+http://60.168.105.220:5008/964937936
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3四号桌全场回放（赛场原声）（一） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3四号桌全场回放（赛场原声）（一） 17:00
+http://60.168.105.220:5008/964937687
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3四号桌全场回放（赛场原声）（二） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3四号桌全场回放（赛场原声）（二） 17:00
+http://60.168.105.220:5008/964938300
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3回放：克里斯·托顿4-1李俊威（赛场原声） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3回放：克里斯·托顿4-1李俊威（赛场原声） 17:00
+http://60.168.105.220:5008/964938025
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3回放：巩晨智4-1卡勒姆·贝雷斯福德（赛场原声） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3回放：巩晨智4-1卡勒姆·贝雷斯福德（赛场原声） 17:00
+http://60.168.105.220:5008/964933133
+#EXTINF:-1 tvg-name="斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3回放：罗伯特·米尔金斯4-0詹姆斯·西尔弗伍德（赛场原声） 17:00" group-title="其他",斯诺克 巩晨智4-1晋级 李俊威、米尔金斯出战 2026斯诺克Q school第一阶段Day3回放：罗伯特·米尔金斯4-0詹姆斯·西尔弗伍德（赛场原声） 17:00
+http://60.168.105.220:5008/964937876
+#EXTINF:-1 tvg-name="斯诺克 帕如克、王雨晨、张家玮出战 1号桌 17:00" group-title="其他",斯诺克 帕如克、王雨晨、张家玮出战 1号桌 17:00
+http://60.168.105.220:5008/964892553
+#EXTINF:-1 tvg-name="斯诺克 帕如克、王雨晨、张家玮出战 2号桌 17:00" group-title="其他",斯诺克 帕如克、王雨晨、张家玮出战 2号桌 17:00
+http://60.168.105.220:5008/964892571
+#EXTINF:-1 tvg-name="斯诺克 帕如克、王雨晨、张家玮出战 3号桌 17:00" group-title="其他",斯诺克 帕如克、王雨晨、张家玮出战 3号桌 17:00
+http://60.168.105.220:5008/964892578
+#EXTINF:-1 tvg-name="斯诺克 帕如克、王雨晨、张家玮出战 4号桌 17:00" group-title="其他",斯诺克 帕如克、王雨晨、张家玮出战 4号桌 17:00
+http://60.168.105.220:5008/964892596
+#EXTINF:-1 tvg-name="斯诺克 帕如克、王雨晨、张家玮出战 5号桌 17:00" group-title="其他",斯诺克 帕如克、王雨晨、张家玮出战 5号桌 17:00
+http://60.168.105.220:5008/964892614
+#EXTINF:-1 tvg-name="斯诺克 帕如克、王雨晨、张家玮出战 6号桌 17:00" group-title="其他",斯诺克 帕如克、王雨晨、张家玮出战 6号桌 17:00
+http://60.168.105.220:5008/964892622
+#EXTINF:-1 tvg-name="斯诺克 第四轮、第五轮 1号桌 17:00" group-title="其他",斯诺克 第四轮、第五轮 1号桌 17:00
+http://60.168.105.220:5008/964891453
+#EXTINF:-1 tvg-name="斯诺克 第四轮、第五轮 2号桌 17:00" group-title="其他",斯诺克 第四轮、第五轮 2号桌 17:00
+http://60.168.105.220:5008/964891483
+#EXTINF:-1 tvg-name="斯诺克 第四轮、第五轮 3号桌 17:00" group-title="其他",斯诺克 第四轮、第五轮 3号桌 17:00
+http://60.168.105.220:5008/964891518
+#EXTINF:-1 tvg-name="斯诺克 第四轮、第五轮 4号桌 17:00" group-title="其他",斯诺克 第四轮、第五轮 4号桌 17:00
+http://60.168.105.220:5008/964891556
+#EXTINF:-1 tvg-name="斯诺克 第四轮、第五轮 5号桌 17:00" group-title="其他",斯诺克 第四轮、第五轮 5号桌 17:00
+http://60.168.105.220:5008/964891594
+#EXTINF:-1 tvg-name="斯诺克 第四轮、第五轮 6号桌 17:00" group-title="其他",斯诺克 第四轮、第五轮 6号桌 17:00
+http://60.168.105.220:5008/964891621
+#EXTINF:-1 tvg-name="斯诺克 经典回放：2022世锦赛决赛（第四阶段） 第四阶段 18:00" group-title="其他",斯诺克 经典回放：2022世锦赛决赛（第四阶段） 第四阶段 18:00
+http://60.168.105.220:5008/964915461
+#EXTINF:-1 tvg-name="斯诺克 重播：2022世锦赛决赛（第三阶段） 第三阶段 18:00" group-title="其他",斯诺克 重播：2022世锦赛决赛（第三阶段） 第三阶段 18:00
+http://60.168.105.220:5008/964915535
+#EXTINF:-1 tvg-name="新动力量创一流" group-title="其他",新动力量创一流
+http://60.168.105.220:5008/713589837
+#EXTINF:-1 tvg-name="新动漫" group-title="其他",新动漫
+http://60.168.105.220:5008/961930269
+#EXTINF:-1 tvg-name="新片放映厅" group-title="其他",新片放映厅
+http://60.168.105.220:5008/619495952
+#EXTINF:-1 tvg-name="春兰杯世界职业围棋锦标赛 世界职业围棋锦标赛第一比赛日 解说 13:00" group-title="其他",春兰杯世界职业围棋锦标赛 世界职业围棋锦标赛第一比赛日 解说 13:00
+http://60.168.105.220:5008/964893589
+#EXTINF:-1 tvg-name="最强综艺趴" group-title="其他",最强综艺趴
+http://60.168.105.220:5008/629942228
+#EXTINF:-1 tvg-name="梨园频道" group-title="其他",梨园频道
+http://60.168.105.220:5008/961930369
+#EXTINF:-1 tvg-name="楚超 孝感孝傲江湖队VS仙桃黄鳝队 2026赛季湖北省城市足球联赛第五轮: 孝感孝傲江湖vs仙桃黄鳝 19:25" group-title="其他",楚超 孝感孝傲江湖队VS仙桃黄鳝队 2026赛季湖北省城市足球联赛第五轮: 孝感孝傲江湖vs仙桃黄鳝 19:25
+http://60.168.105.220:5008/964865944
+#EXTINF:-1 tvg-name="楚超 武汉华工科技队VS襄阳东风风神队 2026赛季湖北省城市足球联赛第五轮: 武汉华工科技vs襄阳东风风神 19:25" group-title="其他",楚超 武汉华工科技队VS襄阳东风风神队 2026赛季湖北省城市足球联赛第五轮: 武汉华工科技vs襄阳东风风神 19:25
+http://60.168.105.220:5008/964865966
+#EXTINF:-1 tvg-name="楚超 神农架队VS潜江龙虾队 2026赛季湖北省城市足球联赛第五轮: 神农架vs潜江龙虾 15:50" group-title="其他",楚超 神农架队VS潜江龙虾队 2026赛季湖北省城市足球联赛第五轮: 神农架vs潜江龙虾 15:50
+http://60.168.105.220:5008/964865884
+#EXTINF:-1 tvg-name="楚超 荆门金龙泉队VS天门衣尚队 2026赛季湖北省城市足球联赛第五轮: 荆门金龙泉vs天门衣尚 19:25" group-title="其他",楚超 荆门金龙泉队VS天门衣尚队 2026赛季湖北省城市足球联赛第五轮: 荆门金龙泉vs天门衣尚 19:25
+http://60.168.105.220:5008/964865950
+#EXTINF:-1 tvg-name="楚超 随州炎炎队VS鄂州临空队 2026赛季湖北省城市足球联赛第五轮: 随州炎炎vs鄂州临空 19:25" group-title="其他",楚超 随州炎炎队VS鄂州临空队 2026赛季湖北省城市足球联赛第五轮: 随州炎炎vs鄂州临空 19:25
+http://60.168.105.220:5008/964865937
+#EXTINF:-1 tvg-name="楚超 黄石美尔雅队VS宜昌东阳光队 2026赛季湖北省城市足球联赛第五轮: 黄石vs宜昌东阳光 19:25" group-title="其他",楚超 黄石美尔雅队VS宜昌东阳光队 2026赛季湖北省城市足球联赛第五轮: 黄石vs宜昌东阳光 19:25
+http://60.168.105.220:5008/964865895
+#EXTINF:-1 tvg-name="武术世界" group-title="其他",武术世界
+http://60.168.105.220:5008/958475359
+#EXTINF:-1 tvg-name="江苏国际" group-title="其他",江苏国际
+http://60.168.105.220:5008/626064674
+#EXTINF:-1 tvg-name="江苏城市频道" group-title="其他",江苏城市频道
+http://60.168.105.220:5008/626064714
+#EXTINF:-1 tvg-name="江苏影视频道" group-title="其他",江苏影视频道
+http://60.168.105.220:5008/626064697
+#EXTINF:-1 tvg-name="江苏教育" group-title="其他",江苏教育
+http://60.168.105.220:5008/628008321
+#EXTINF:-1 tvg-name="江苏综艺频道" group-title="其他",江苏综艺频道
+http://60.168.105.220:5008/626065193
+#EXTINF:-1 tvg-name="江阴新闻综合" group-title="其他",江阴新闻综合
+http://60.168.105.220:5008/955227979
+#EXTINF:-1 tvg-name="泰州新闻综合" group-title="其他",泰州新闻综合
+http://60.168.105.220:5008/639731818
+#EXTINF:-1 tvg-name="海南广播电视总台少儿频道" group-title="其他",海南广播电视总台少儿频道
+http://60.168.105.220:5008/962067523
+#EXTINF:-1 tvg-name="海南广播电视总台文旅频道" group-title="其他",海南广播电视总台文旅频道
+http://60.168.105.220:5008/962067526
+#EXTINF:-1 tvg-name="海南广播电视总台新闻频道" group-title="其他",海南广播电视总台新闻频道
+http://60.168.105.220:5008/962067517
+#EXTINF:-1 tvg-name="海南广播电视总台社会与法频道" group-title="其他",海南广播电视总台社会与法频道
+http://60.168.105.220:5008/962045223
+#EXTINF:-1 tvg-name="海南广播电视总台自贸频道" group-title="其他",海南广播电视总台自贸频道
+http://60.168.105.220:5008/962045226
+#EXTINF:-1 tvg-name="淮安新闻综合" group-title="其他",淮安新闻综合
+http://60.168.105.220:5008/639731826
+#EXTINF:-1 tvg-name="溧水新闻综合" group-title="其他",溧水新闻综合
+http://60.168.105.220:5008/639737327
+#EXTINF:-1 tvg-name="滇超 丽江队VS红河队 2026云南省城市足球联赛第十四轮: 丽江队VS红河队 16:30" group-title="其他",滇超 丽江队VS红河队 2026云南省城市足球联赛第十四轮: 丽江队VS红河队 16:30
+http://60.168.105.220:5008/964917203
+#EXTINF:-1 tvg-name="滇超 怒江队VS大理队 2026云南省城市足球联赛第十四轮: 怒江队VS大理队 16:30" group-title="其他",滇超 怒江队VS大理队 2026云南省城市足球联赛第十四轮: 怒江队VS大理队 16:30
+http://60.168.105.220:5008/964917208
+#EXTINF:-1 tvg-name="滇超 文山队VS临沧队 2026云南省城市足球联赛第十四轮: 文山队VS临沧队 16:30" group-title="其他",滇超 文山队VS临沧队 2026云南省城市足球联赛第十四轮: 文山队VS临沧队 16:30
+http://60.168.105.220:5008/964917172
+#EXTINF:-1 tvg-name="滇超 昆明队VS玉溪队 2026云南省城市足球联赛第十四轮: 昆明队VS玉溪队 16:00" group-title="其他",滇超 昆明队VS玉溪队 2026云南省城市足球联赛第十四轮: 昆明队VS玉溪队 16:00
+http://60.168.105.220:5008/964917142
+#EXTINF:-1 tvg-name="滇超 普洱队VS迪庆队 2026云南省城市足球联赛第十四轮: 普洱队VS迪庆队 16:30" group-title="其他",滇超 普洱队VS迪庆队 2026云南省城市足球联赛第十四轮: 普洱队VS迪庆队 16:30
+http://60.168.105.220:5008/964917214
+#EXTINF:-1 tvg-name="滇超 曲靖队VS昭通队 2026云南省城市足球联赛第十四轮: 曲靖队VS昭通队 16:30" group-title="其他",滇超 曲靖队VS昭通队 2026云南省城市足球联赛第十四轮: 曲靖队VS昭通队 16:30
+http://60.168.105.220:5008/964917158
+#EXTINF:-1 tvg-name="滇超 楚雄队VS德宏队 2026云南省城市足球联赛第十四轮: 楚雄队VS德宏队 16:30" group-title="其他",滇超 楚雄队VS德宏队 2026云南省城市足球联赛第十四轮: 楚雄队VS德宏队 16:30
+http://60.168.105.220:5008/964917165
+#EXTINF:-1 tvg-name="滇超 西双版纳队VS保山队 2026云南省城市足球联赛第十四轮: 西双版纳队VS保山队 16:30" group-title="其他",滇超 西双版纳队VS保山队 2026云南省城市足球联赛第十四轮: 西双版纳队VS保山队 16:30
+http://60.168.105.220:5008/964917190
+#EXTINF:-1 tvg-name="熊猫频道01高清" group-title="其他",熊猫频道01高清
+http://60.168.105.220:5008/609158151
+#EXTINF:-1 tvg-name="熊猫频道1" group-title="其他",熊猫频道1
+http://60.168.105.220:5008/608933610
+#EXTINF:-1 tvg-name="熊猫频道10" group-title="其他",熊猫频道10
+http://60.168.105.220:5008/609169285
+#EXTINF:-1 tvg-name="熊猫频道2" group-title="其他",熊猫频道2
+http://60.168.105.220:5008/608933640
+#EXTINF:-1 tvg-name="熊猫频道3" group-title="其他",熊猫频道3
+http://60.168.105.220:5008/608934619
+#EXTINF:-1 tvg-name="熊猫频道4" group-title="其他",熊猫频道4
+http://60.168.105.220:5008/608934721
+#EXTINF:-1 tvg-name="熊猫频道5" group-title="其他",熊猫频道5
+http://60.168.105.220:5008/608935104
+#EXTINF:-1 tvg-name="熊猫频道6" group-title="其他",熊猫频道6
+http://60.168.105.220:5008/608935797
+#EXTINF:-1 tvg-name="熊猫频道7" group-title="其他",熊猫频道7
+http://60.168.105.220:5008/609169286
+#EXTINF:-1 tvg-name="熊猫频道8" group-title="其他",熊猫频道8
+http://60.168.105.220:5008/609169287
+#EXTINF:-1 tvg-name="熊猫频道9" group-title="其他",熊猫频道9
+http://60.168.105.220:5008/609169226
+#EXTINF:-1 tvg-name="环球旅游" group-title="其他",环球旅游
+http://60.168.105.220:5008/958475356
+#EXTINF:-1 tvg-name="疆超 伊犁队VS昌吉队 新疆足球超级联赛第二轮: 伊犁vs昌吉 20:58" group-title="其他",疆超 伊犁队VS昌吉队 新疆足球超级联赛第二轮: 伊犁vs昌吉 20:58
+http://60.168.105.220:5008/964721015
+#EXTINF:-1 tvg-name="疆超 克拉玛依队VS博州队 新疆足球超级联赛第二轮: 克拉玛依vs博州 19:00" group-title="其他",疆超 克拉玛依队VS博州队 新疆足球超级联赛第二轮: 克拉玛依vs博州 19:00
+http://60.168.105.220:5008/964721040
+#EXTINF:-1 tvg-name="疆超 和田队VS克州队 新疆足球超级联赛第二轮: 和田vs克州 18:30" group-title="其他",疆超 和田队VS克州队 新疆足球超级联赛第二轮: 和田vs克州 18:30
+http://60.168.105.220:5008/964721047
+#EXTINF:-1 tvg-name="疆超 塔城队VS乌鲁木齐队 新疆足球超级联赛第二轮: 塔城vs乌鲁木齐 17:58" group-title="其他",疆超 塔城队VS乌鲁木齐队 新疆足球超级联赛第二轮: 塔城vs乌鲁木齐 17:58
+http://60.168.105.220:5008/964720989
+#EXTINF:-1 tvg-name="疆超 巴州队VS喀什队 新疆足球超级联赛第二轮: 巴州vs喀什 17:58" group-title="其他",疆超 巴州队VS喀什队 新疆足球超级联赛第二轮: 巴州vs喀什 17:58
+http://60.168.105.220:5008/964721028
+#EXTINF:-1 tvg-name="疆超 阿克苏队VS吐鲁番队 新疆足球超级联赛第二轮: 阿克苏vs吐鲁番 19:00" group-title="其他",疆超 阿克苏队VS吐鲁番队 新疆足球超级联赛第二轮: 阿克苏vs吐鲁番 19:00
+http://60.168.105.220:5008/964721056
+#EXTINF:-1 tvg-name="盐城新闻综合" group-title="其他",盐城新闻综合
+http://60.168.105.220:5008/639731825
+#EXTINF:-1 tvg-name="粤超 云浮VS湛江 普通话 19:30" group-title="其他",粤超 云浮VS湛江 普通话 19:30
+http://60.168.105.220:5008/964928047
+#EXTINF:-1 tvg-name="粤超 惠州VS揭阳 普通话 19:30" group-title="其他",粤超 惠州VS揭阳 普通话 19:30
+http://60.168.105.220:5008/964927902
+#EXTINF:-1 tvg-name="粤超 汕头VS河源 普通话+潮汕话 19:30" group-title="其他",粤超 汕头VS河源 普通话+潮汕话 19:30
+http://60.168.105.220:5008/964928128
+#EXTINF:-1 tvg-name="粤超 江门VS茂名 粤语 19:30" group-title="其他",粤超 江门VS茂名 粤语 19:30
+http://60.168.105.220:5008/964928130
+#EXTINF:-1 tvg-name="粤超 潮州VS清远 普通话 15:30" group-title="其他",粤超 潮州VS清远 普通话 15:30
+http://60.168.105.220:5008/964927980
+#EXTINF:-1 tvg-name="粤超 韶关VS汕尾 客家话+潮汕话 19:30" group-title="其他",粤超 韶关VS汕尾 客家话+潮汕话 19:30
+http://60.168.105.220:5008/964928203
+#EXTINF:-1 tvg-name="经典动画大集合" group-title="其他",经典动画大集合
+http://60.168.105.220:5008/629942219
+#EXTINF:-1 tvg-name="老故事" group-title="其他",老故事
+http://60.168.105.220:5008/884121956
+#EXTINF:-1 tvg-name="苏超 宿迁队VS南通队 官方解说 19:10" group-title="其他",苏超 宿迁队VS南通队 官方解说 19:10
+http://60.168.105.220:5008/964755447
+#EXTINF:-1 tvg-name="苏超 淮安队VS盐城队 官方解说 19:10" group-title="其他",苏超 淮安队VS盐城队 官方解说 19:10
+http://60.168.105.220:5008/964755377
+#EXTINF:-1 tvg-name="苏超 连云港队VS徐州队 官方解说 19:10" group-title="其他",苏超 连云港队VS徐州队 官方解说 19:10
+http://60.168.105.220:5008/964755405
+#EXTINF:-1 tvg-name="英超 伯恩利VS狼队 张天翼 22:45" group-title="其他",英超 伯恩利VS狼队 张天翼 22:45
+http://60.168.105.220:5008/964916495
+#EXTINF:-1 tvg-name="英超 伯恩利VS狼队 英文原声 22:45" group-title="其他",英超 伯恩利VS狼队 英文原声 22:45
+http://60.168.105.220:5008/964916516
+#EXTINF:-1 tvg-name="英超 伯恩利VS狼队 赛场原声 22:45" group-title="其他",英超 伯恩利VS狼队 赛场原声 22:45
+http://60.168.105.220:5008/964916527
+#EXTINF:-1 tvg-name="英超 利物浦VS布伦特福德 刘畅 颜强 程思钦 21:30" group-title="其他",英超 利物浦VS布伦特福德 刘畅 颜强 程思钦 21:30
+http://60.168.105.220:5008/964916372
+#EXTINF:-1 tvg-name="英超 利物浦VS布伦特福德 智能字幕 21:30" group-title="其他",英超 利物浦VS布伦特福德 智能字幕 21:30
+http://60.168.105.220:5008/964916379
+#EXTINF:-1 tvg-name="英超 利物浦VS布伦特福德 英文原声 22:45" group-title="其他",英超 利物浦VS布伦特福德 英文原声 22:45
+http://60.168.105.220:5008/964916357
+#EXTINF:-1 tvg-name="英超 利物浦VS布伦特福德 赛场原声 22:45" group-title="其他",英超 利物浦VS布伦特福德 赛场原声 22:45
+http://60.168.105.220:5008/964916354
+#EXTINF:-1 tvg-name="英超 富勒姆VS纽卡斯尔联 英文原声 22:45" group-title="其他",英超 富勒姆VS纽卡斯尔联 英文原声 22:45
+http://60.168.105.220:5008/964916723
+#EXTINF:-1 tvg-name="英超 富勒姆VS纽卡斯尔联 赛场原声 22:45" group-title="其他",英超 富勒姆VS纽卡斯尔联 赛场原声 22:45
+http://60.168.105.220:5008/964916743
+#EXTINF:-1 tvg-name="英超 富勒姆VS纽卡斯尔联 黄航 22:45" group-title="其他",英超 富勒姆VS纽卡斯尔联 黄航 22:45
+http://60.168.105.220:5008/964916714
+#EXTINF:-1 tvg-name="英超 布莱顿VS曼联 智能字幕 21:30" group-title="其他",英超 布莱顿VS曼联 智能字幕 21:30
+http://60.168.105.220:5008/964916481
+#EXTINF:-1 tvg-name="英超 布莱顿VS曼联 苏东 徐阳 郭小仙儿 21:30" group-title="其他",英超 布莱顿VS曼联 苏东 徐阳 郭小仙儿 21:30
+http://60.168.105.220:5008/964916362
+#EXTINF:-1 tvg-name="英超 布莱顿VS曼联 英文原声 22:45" group-title="其他",英超 布莱顿VS曼联 英文原声 22:45
+http://60.168.105.220:5008/964916449
+#EXTINF:-1 tvg-name="英超 布莱顿VS曼联 赛场原声 22:45" group-title="其他",英超 布莱顿VS曼联 赛场原声 22:45
+http://60.168.105.220:5008/964916457
+#EXTINF:-1 tvg-name="英超 托特纳姆热刺VS埃弗顿 叶紫辰 陆毅隽 22:50" group-title="其他",英超 托特纳姆热刺VS埃弗顿 叶紫辰 陆毅隽 22:50
+http://60.168.105.220:5008/964916965
+#EXTINF:-1 tvg-name="英超 托特纳姆热刺VS埃弗顿 娄一晨 刘越 邵凌霄 21:30" group-title="其他",英超 托特纳姆热刺VS埃弗顿 娄一晨 刘越 邵凌霄 21:30
+http://60.168.105.220:5008/964916701
+#EXTINF:-1 tvg-name="英超 托特纳姆热刺VS埃弗顿 英文原声 22:45" group-title="其他",英超 托特纳姆热刺VS埃弗顿 英文原声 22:45
+http://60.168.105.220:5008/964916635
+#EXTINF:-1 tvg-name="英超 托特纳姆热刺VS埃弗顿 赛场原声 22:45" group-title="其他",英超 托特纳姆热刺VS埃弗顿 赛场原声 22:45
+http://60.168.105.220:5008/964916625
+#EXTINF:-1 tvg-name="英超 曼城VS阿斯顿维拉 涂远 李彦 姚安妮 21:30" group-title="其他",英超 曼城VS阿斯顿维拉 涂远 李彦 姚安妮 21:30
+http://60.168.105.220:5008/964916451
+#EXTINF:-1 tvg-name="英超 曼城VS阿斯顿维拉 英文原声 22:45" group-title="其他",英超 曼城VS阿斯顿维拉 英文原声 22:45
+http://60.168.105.220:5008/964916434
+#EXTINF:-1 tvg-name="英超 曼城VS阿斯顿维拉 赛场原声 22:45" group-title="其他",英超 曼城VS阿斯顿维拉 赛场原声 22:45
+http://60.168.105.220:5008/964916420
+#EXTINF:-1 tvg-name="英超 桑德兰VS切尔西 吴桐 22:45" group-title="其他",英超 桑德兰VS切尔西 吴桐 22:45
+http://60.168.105.220:5008/964916538
+#EXTINF:-1 tvg-name="英超 桑德兰VS切尔西 英文原声 22:45" group-title="其他",英超 桑德兰VS切尔西 英文原声 22:45
+http://60.168.105.220:5008/964916530
+#EXTINF:-1 tvg-name="英超 桑德兰VS切尔西 赛场原声 22:45" group-title="其他",英超 桑德兰VS切尔西 赛场原声 22:45
+http://60.168.105.220:5008/964916524
+#EXTINF:-1 tvg-name="英超 水晶宫VS阿森纳 智能字幕  闽南语 22:45" group-title="其他",英超 水晶宫VS阿森纳 智能字幕  闽南语 22:45
+http://60.168.105.220:5008/964916977
+#EXTINF:-1 tvg-name="英超 水晶宫VS阿森纳 智能字幕 沪语 22:45" group-title="其他",英超 水晶宫VS阿森纳 智能字幕 沪语 22:45
+http://60.168.105.220:5008/964916705
+#EXTINF:-1 tvg-name="英超 水晶宫VS阿森纳 英文原声 22:45" group-title="其他",英超 水晶宫VS阿森纳 英文原声 22:45
+http://60.168.105.220:5008/964916583
+#EXTINF:-1 tvg-name="英超 水晶宫VS阿森纳 詹俊 张路 李子琪 21:30" group-title="其他",英超 水晶宫VS阿森纳 詹俊 张路 李子琪 21:30
+http://60.168.105.220:5008/964916545
+#EXTINF:-1 tvg-name="英超 水晶宫VS阿森纳 赛场原声 22:45" group-title="其他",英超 水晶宫VS阿森纳 赛场原声 22:45
+http://60.168.105.220:5008/964916601
+#EXTINF:-1 tvg-name="英超 水晶宫VS阿森纳 陈凯冬 何辉 陈熙荣 22:50" group-title="其他",英超 水晶宫VS阿森纳 陈凯冬 何辉 陈熙荣 22:50
+http://60.168.105.220:5008/964916958
+#EXTINF:-1 tvg-name="英超 西汉姆联VS利兹联 苗锟 22:45" group-title="其他",英超 西汉姆联VS利兹联 苗锟 22:45
+http://60.168.105.220:5008/964916692
+#EXTINF:-1 tvg-name="英超 西汉姆联VS利兹联 英文原声 22:45" group-title="其他",英超 西汉姆联VS利兹联 英文原声 22:45
+http://60.168.105.220:5008/964916664
+#EXTINF:-1 tvg-name="英超 西汉姆联VS利兹联 赛场原声 22:45" group-title="其他",英超 西汉姆联VS利兹联 赛场原声 22:45
+http://60.168.105.220:5008/964916657
+#EXTINF:-1 tvg-name="英超 诺丁汉森林VS伯恩茅斯 刘焕 22:45" group-title="其他",英超 诺丁汉森林VS伯恩茅斯 刘焕 22:45
+http://60.168.105.220:5008/964916483
+#EXTINF:-1 tvg-name="英超 诺丁汉森林VS伯恩茅斯 英文原声 22:45" group-title="其他",英超 诺丁汉森林VS伯恩茅斯 英文原声 22:45
+http://60.168.105.220:5008/964916471
+#EXTINF:-1 tvg-name="英超 诺丁汉森林VS伯恩茅斯 赛场原声 22:45" group-title="其他",英超 诺丁汉森林VS伯恩茅斯 赛场原声 22:45
+http://60.168.105.220:5008/964916459
+#EXTINF:-1 tvg-name="蒙超联赛 乌兰察布队VS呼伦贝尔队 2026赛季内蒙古足球超级联赛小组赛第2轮: 乌兰察布市vs呼伦贝尔市 15:50" group-title="其他",蒙超联赛 乌兰察布队VS呼伦贝尔队 2026赛季内蒙古足球超级联赛小组赛第2轮: 乌兰察布市vs呼伦贝尔市 15:50
+http://60.168.105.220:5008/964852077
+#EXTINF:-1 tvg-name="蒙超联赛 兴安盟队VS巴彦淖尔队 2026赛季内蒙古足球超级联赛小组赛第2轮: 兴安盟vs巴彦淖尔市 14:50" group-title="其他",蒙超联赛 兴安盟队VS巴彦淖尔队 2026赛季内蒙古足球超级联赛小组赛第2轮: 兴安盟vs巴彦淖尔市 14:50
+http://60.168.105.220:5008/964852086
+#EXTINF:-1 tvg-name="蒙超联赛 赤峰队VS包头队 2026赛季内蒙古足球超级联赛小组赛第2轮: 赤峰市vs包头市 18:50" group-title="其他",蒙超联赛 赤峰队VS包头队 2026赛季内蒙古足球超级联赛小组赛第2轮: 赤峰市vs包头市 18:50
+http://60.168.105.220:5008/964852052
+#EXTINF:-1 tvg-name="蒙超联赛 鄂尔多斯队VS乌海队 2026赛季内蒙古足球超级联赛小组赛第2轮: 鄂尔多斯市vs乌海市 19:20" group-title="其他",蒙超联赛 鄂尔多斯队VS乌海队 2026赛季内蒙古足球超级联赛小组赛第2轮: 鄂尔多斯市vs乌海市 19:20
+http://60.168.105.220:5008/964852072
+#EXTINF:-1 tvg-name="蒙超联赛 锡林郭勒队VS呼和浩特队 2026赛季内蒙古足球超级联赛小组赛第2轮: 锡林郭勒盟vs呼和浩特市 15:50" group-title="其他",蒙超联赛 锡林郭勒队VS呼和浩特队 2026赛季内蒙古足球超级联赛小组赛第2轮: 锡林郭勒盟vs呼和浩特市 15:50
+http://60.168.105.220:5008/964852101
+#EXTINF:-1 tvg-name="蒙超联赛 阿拉善队VS通辽队 2026赛季内蒙古足球超级联赛小组赛第2轮: 阿拉善盟vs通辽市 15:50" group-title="其他",蒙超联赛 阿拉善队VS通辽队 2026赛季内蒙古足球超级联赛小组赛第2轮: 阿拉善盟vs通辽市 15:50
+http://60.168.105.220:5008/964852092
+#EXTINF:-1 tvg-name="西甲 吉罗纳VS埃尔切 梁祥宇 02:45" group-title="其他",西甲 吉罗纳VS埃尔切 梁祥宇 02:45
+http://60.168.105.220:5008/964916707
+#EXTINF:-1 tvg-name="西甲 吉罗纳VS埃尔切 赛场原声 02:45" group-title="其他",西甲 吉罗纳VS埃尔切 赛场原声 02:45
+http://60.168.105.220:5008/964916698
+#EXTINF:-1 tvg-name="西甲 塞尔塔VS塞维利亚 李霄 02:45" group-title="其他",西甲 塞尔塔VS塞维利亚 李霄 02:45
+http://60.168.105.220:5008/964916862
+#EXTINF:-1 tvg-name="西甲 塞尔塔VS塞维利亚 赛场原声 02:45" group-title="其他",西甲 塞尔塔VS塞维利亚 赛场原声 02:45
+http://60.168.105.220:5008/964916857
+#EXTINF:-1 tvg-name="西甲 瓦伦西亚VS巴塞罗那 张昊泽 李欣 02:45" group-title="其他",西甲 瓦伦西亚VS巴塞罗那 张昊泽 李欣 02:45
+http://60.168.105.220:5008/964916768
+#EXTINF:-1 tvg-name="西甲 瓦伦西亚VS巴塞罗那 智能字幕 02:45" group-title="其他",西甲 瓦伦西亚VS巴塞罗那 智能字幕 02:45
+http://60.168.105.220:5008/964916827
+#EXTINF:-1 tvg-name="西甲 瓦伦西亚VS巴塞罗那 赛场原声 02:45" group-title="其他",西甲 瓦伦西亚VS巴塞罗那 赛场原声 02:45
+http://60.168.105.220:5008/964916750
+#EXTINF:-1 tvg-name="西甲 皇家贝蒂斯VS莱万特 兰子非 02:45" group-title="其他",西甲 皇家贝蒂斯VS莱万特 兰子非 02:45
+http://60.168.105.220:5008/964916839
+#EXTINF:-1 tvg-name="西甲 皇家贝蒂斯VS莱万特 赛场原声 02:45" group-title="其他",西甲 皇家贝蒂斯VS莱万特 赛场原声 02:45
+http://60.168.105.220:5008/964916824
+#EXTINF:-1 tvg-name="西甲 皇家马德里VS毕尔巴鄂竞技 刘畅 孙雷 02:45" group-title="其他",西甲 皇家马德里VS毕尔巴鄂竞技 刘畅 孙雷 02:45
+http://60.168.105.220:5008/964916623
+#EXTINF:-1 tvg-name="西甲 皇家马德里VS毕尔巴鄂竞技 智能字幕 02:45" group-title="其他",西甲 皇家马德里VS毕尔巴鄂竞技 智能字幕 02:45
+http://60.168.105.220:5008/964916989
+#EXTINF:-1 tvg-name="西甲 皇家马德里VS毕尔巴鄂竞技 赛场原声 02:45" group-title="其他",西甲 皇家马德里VS毕尔巴鄂竞技 赛场原声 02:45
+http://60.168.105.220:5008/964916984
+#EXTINF:-1 tvg-name="西甲 西班牙人VS皇家社会 周楚雄 02:45" group-title="其他",西甲 西班牙人VS皇家社会 周楚雄 02:45
+http://60.168.105.220:5008/964916909
+#EXTINF:-1 tvg-name="西甲 西班牙人VS皇家社会 赛场原声 02:45" group-title="其他",西甲 西班牙人VS皇家社会 赛场原声 02:45
+http://60.168.105.220:5008/964916906
+#EXTINF:-1 tvg-name="西甲 赫塔菲VS奥萨苏纳 张天翼 02:45" group-title="其他",西甲 赫塔菲VS奥萨苏纳 张天翼 02:45
+http://60.168.105.220:5008/964916890
+#EXTINF:-1 tvg-name="西甲 赫塔菲VS奥萨苏纳 赛场原声 02:45" group-title="其他",西甲 赫塔菲VS奥萨苏纳 赛场原声 02:45
+http://60.168.105.220:5008/964916871
+#EXTINF:-1 tvg-name="西甲 阿拉维斯VS巴列卡诺 洪宇青 02:45" group-title="其他",西甲 阿拉维斯VS巴列卡诺 洪宇青 02:45
+http://60.168.105.220:5008/964916715
+#EXTINF:-1 tvg-name="西甲 阿拉维斯VS巴列卡诺 赛场原声 02:45" group-title="其他",西甲 阿拉维斯VS巴列卡诺 赛场原声 02:45
+http://60.168.105.220:5008/964916710
+#EXTINF:-1 tvg-name="西甲 马略卡VS皇家奥维耶多 赛场原声 02:45" group-title="其他",西甲 马略卡VS皇家奥维耶多 赛场原声 02:45
+http://60.168.105.220:5008/964916928
+#EXTINF:-1 tvg-name="西甲 马略卡VS皇家奥维耶多 鹿中原 02:45" group-title="其他",西甲 马略卡VS皇家奥维耶多 鹿中原 02:45
+http://60.168.105.220:5008/964916940
+#EXTINF:-1 tvg-name="财富天下" group-title="其他",财富天下
+http://60.168.105.220:5008/956923159
+#EXTINF:-1 tvg-name="贵州村超 俾吊岑村足球队VS扒王村足球队 2026贵州村超联赛第4轮全场回放：俾吊岑村1:3扒王村（赛场原声） 6:20" group-title="其他",贵州村超 俾吊岑村足球队VS扒王村足球队 2026贵州村超联赛第4轮全场回放：俾吊岑村1:3扒王村（赛场原声） 6:20
+http://60.168.105.220:5008/964932476
+#EXTINF:-1 tvg-name="贵州村超 党相村塔石羊瘪队VS党调村贵州村徒队 2026赛季贵州村超联赛第四轮: 党相村塔石羊瘪队VS党调村贵州村徒队 16:30" group-title="其他",贵州村超 党相村塔石羊瘪队VS党调村贵州村徒队 2026赛季贵州村超联赛第四轮: 党相村塔石羊瘪队VS党调村贵州村徒队 16:30
+http://60.168.105.220:5008/964894059
+#EXTINF:-1 tvg-name="贵州村超 场坝大河口将军岩队VS仁吉村村牛足球队 2026赛季贵州村超联赛第四轮: 场坝大河口将军岩队VS仁吉村村牛队 16:30" group-title="其他",贵州村超 场坝大河口将军岩队VS仁吉村村牛足球队 2026赛季贵州村超联赛第四轮: 场坝大河口将军岩队VS仁吉村村牛队 16:30
+http://60.168.105.220:5008/964894008
+#EXTINF:-1 tvg-name="贵州村超 大利村VS忠诚村足球队 2026赛季贵州村超联赛第四轮: 大利村侗寨队VS忠诚村 14:20" group-title="其他",贵州村超 大利村VS忠诚村足球队 2026赛季贵州村超联赛第四轮: 大利村侗寨队VS忠诚村 14:20
+http://60.168.105.220:5008/964894034
+#EXTINF:-1 tvg-name="贵州村超 小堡村足球队VS富民村足球队 2026赛季贵州村超联赛第四轮: 小堡村VS富民村 20:30" group-title="其他",贵州村超 小堡村足球队VS富民村足球队 2026赛季贵州村超联赛第四轮: 小堡村VS富民村 20:30
+http://60.168.105.220:5008/964894075
+#EXTINF:-1 tvg-name="贵州村超 平永村足球队VS安乐村足球队 2026赛季贵州村超联赛第四轮: 平永村VS安乐村 20:30" group-title="其他",贵州村超 平永村足球队VS安乐村足球队 2026赛季贵州村超联赛第四轮: 平永村VS安乐村 20:30
+http://60.168.105.220:5008/964894026
+#EXTINF:-1 tvg-name="贵州村超 探路者球队VS爱未来榕江公益慈善队 2026赛季贵州村超联赛非遗美食赛: 探路者球队VS爱未来榕江公益慈善队 18:30" group-title="其他",贵州村超 探路者球队VS爱未来榕江公益慈善队 2026赛季贵州村超联赛非遗美食赛: 探路者球队VS爱未来榕江公益慈善队 18:30
+http://60.168.105.220:5008/964894017
+#EXTINF:-1 tvg-name="贵州村超 色边村足球队VS车江一村足球队 全场回放 0:30" group-title="其他",贵州村超 色边村足球队VS车江一村足球队 全场回放 0:30
+http://60.168.105.220:5008/964936089
+#EXTINF:-1 tvg-name="贵州村超 车江二村足球队VS场坝龙泉井村队 全场回放 8:30" group-title="其他",贵州村超 车江二村足球队VS场坝龙泉井村队 全场回放 8:30
+http://60.168.105.220:5008/964934650
+#EXTINF:-1 tvg-name="贵州村超 阳光村足球队VS腊酉村足球队 2026赛季贵州村超联赛第四轮: 阳光村VS腊酉村 14:20" group-title="其他",贵州村超 阳光村足球队VS腊酉村足球队 2026赛季贵州村超联赛第四轮: 阳光村VS腊酉村 14:20
+http://60.168.105.220:5008/964893999
+#EXTINF:-1 tvg-name="贵州村超 高硐村足球队VS寿洞村足球队 2026赛季贵州村超联赛第四轮: 高硐村VS寿洞村 18:30" group-title="其他",贵州村超 高硐村足球队VS寿洞村足球队 2026赛季贵州村超联赛第四轮: 高硐村VS寿洞村 18:30
+http://60.168.105.220:5008/964894063
+#EXTINF:-1 tvg-name="赛事最经典" group-title="其他",赛事最经典
+http://60.168.105.220:5008/646596895
+#EXTINF:-1 tvg-name="赣超 抚州队VS南昌队 2026赛季江西省城市足球超级联赛常规赛第四轮: 抚州VS南昌 19:30" group-title="其他",赣超 抚州队VS南昌队 2026赛季江西省城市足球超级联赛常规赛第四轮: 抚州VS南昌 19:30
+http://60.168.105.220:5008/964867471
+#EXTINF:-1 tvg-name="赣超 新余队VS萍乡队 2026赛季江西省城市足球超级联赛常规赛第四轮: 新余VS萍乡 19:30" group-title="其他",赣超 新余队VS萍乡队 2026赛季江西省城市足球超级联赛常规赛第四轮: 新余VS萍乡 19:30
+http://60.168.105.220:5008/964867457
+#EXTINF:-1 tvg-name="连云港新闻综合" group-title="其他",连云港新闻综合
+http://60.168.105.220:5008/639731715
+#EXTINF:-1 tvg-name="镇江新闻综合" group-title="其他",镇江新闻综合
+http://60.168.105.220:5008/639731783
+#EXTINF:-1 tvg-name="闽超 厦门队VS三明队 2026福建省城市足球超级联赛第五轮: 厦门VS三明 19:00" group-title="其他",闽超 厦门队VS三明队 2026福建省城市足球超级联赛第五轮: 厦门VS三明 19:00
+http://60.168.105.220:5008/964914576
+#EXTINF:-1 tvg-name="闽超 泉州队VS南平队 2026福建省城市足球超级联赛第五轮: 泉州VS南平 19:00" group-title="其他",闽超 泉州队VS南平队 2026福建省城市足球超级联赛第五轮: 泉州VS南平 19:00
+http://60.168.105.220:5008/964914559
+#EXTINF:-1 tvg-name="闽超 漳州队VS宁德队 2026福建省城市足球超级联赛第五轮: 漳州VS宁德 19:00" group-title="其他",闽超 漳州队VS宁德队 2026福建省城市足球超级联赛第五轮: 漳州VS宁德 19:00
+http://60.168.105.220:5008/964914536
+#EXTINF:-1 tvg-name="闽超 莆田队VS平潭队 2026福建省城市足球超级联赛第五轮: 莆田VS平潭 19:00" group-title="其他",闽超 莆田队VS平潭队 2026福建省城市足球超级联赛第五轮: 莆田VS平潭 19:00
+http://60.168.105.220:5008/964914579
+#EXTINF:-1 tvg-name="陕西体育休闲频道" group-title="其他",陕西体育休闲频道
+http://60.168.105.220:5008/956909356
+#EXTINF:-1 tvg-name="陕西新闻资讯频道" group-title="其他",陕西新闻资讯频道
+http://60.168.105.220:5008/956909289
+#EXTINF:-1 tvg-name="陕西秦腔频道" group-title="其他",陕西秦腔频道
+http://60.168.105.220:5008/956909303
+#EXTINF:-1 tvg-name="陕西都市青春频道" group-title="其他",陕西都市青春频道
+http://60.168.105.220:5008/956909358
+#EXTINF:-1 tvg-name="陕西银龄频道" group-title="其他",陕西银龄频道
+http://60.168.105.220:5008/956909362
+#EXTINF:-1 tvg-name="马拉松系列赛 2026一心堂弥勒半程马拉松 弥勒半程马拉松 07:15" group-title="其他",马拉松系列赛 2026一心堂弥勒半程马拉松 弥勒半程马拉松 07:15
+http://60.168.105.220:5008/964916075
+#EXTINF:-1 tvg-name="马拉松系列赛 2026兰州马拉松 兰州马拉松 06:45" group-title="其他",马拉松系列赛 2026兰州马拉松 兰州马拉松 06:45
+http://60.168.105.220:5008/964913048
+#EXTINF:-1 tvg-name="齐鲁超赛 临沂队VS济宁港航 2026赛季山东省齐鲁足球超级联赛第三轮: 临沂队VS济宁港航 16:00" group-title="其他",齐鲁超赛 临沂队VS济宁港航 2026赛季山东省齐鲁足球超级联赛第三轮: 临沂队VS济宁港航 16:00
+http://60.168.105.220:5008/964863837
+#EXTINF:-1 tvg-name="齐鲁超赛 威海文旅集团队VS泰安泰山城建队 2026赛季山东省齐鲁足球超级联赛第三轮: 威海文旅集团队队VS泰安泰山城建队 19:00" group-title="其他",齐鲁超赛 威海文旅集团队VS泰安泰山城建队 2026赛季山东省齐鲁足球超级联赛第三轮: 威海文旅集团队队VS泰安泰山城建队 19:00
+http://60.168.105.220:5008/964863822
+#EXTINF:-1 tvg-name="齐鲁超赛 枣庄丰源轮胎队VS德州古贝春 2026赛季山东省齐鲁足球超级联赛第三轮: 枣庄丰源轮胎队VS德州古贝春 19:30" group-title="其他",齐鲁超赛 枣庄丰源轮胎队VS德州古贝春 2026赛季山东省齐鲁足球超级联赛第三轮: 枣庄丰源轮胎队VS德州古贝春 19:30
+http://60.168.105.220:5008/964863866
+#EXTINF:-1 tvg-name="齐鲁超赛 滨州创新队VS东营队 2026赛季山东省齐鲁足球超级联赛第三轮: 滨州创新队VS东营队 19:00" group-title="其他",齐鲁超赛 滨州创新队VS东营队 2026赛季山东省齐鲁足球超级联赛第三轮: 滨州创新队VS东营队 19:00
+http://60.168.105.220:5008/964863789
+#EXTINF:-1 tvg-name="齐鲁超赛 潍坊队VS青岛青春 2026赛季山东省齐鲁足球超级联赛第三轮: 潍坊队VS青岛青春 18:40" group-title="其他",齐鲁超赛 潍坊队VS青岛青春 2026赛季山东省齐鲁足球超级联赛第三轮: 潍坊队VS青岛青春 18:40
+http://60.168.105.220:5008/964863812
+#EXTINF:-1 tvg-name="齐鲁超赛 聊城传奇农商行VS烟台队 2026赛季山东省齐鲁足球超级联赛第三轮: 聊城传奇农商行VS烟台队 15:00" group-title="其他",齐鲁超赛 聊城传奇农商行VS烟台队 2026赛季山东省齐鲁足球超级联赛第三轮: 聊城传奇农商行VS烟台队 15:00
+http://60.168.105.220:5008/964863777
+#EXTINF:-1 tvg-name="齐鲁超赛 菏泽队VS日照队 2026赛季山东省齐鲁足球超级联赛第三轮: 菏泽队VS日照队 19:00" group-title="其他",齐鲁超赛 菏泽队VS日照队 2026赛季山东省齐鲁足球超级联赛第三轮: 菏泽队VS日照队 19:00
+http://60.168.105.220:5008/964863797
+#EXTINF:-1 tvg-name="CBA 北京北汽VS上海久事 上海20分大逆转3-1淘汰北京！时隔24年再进总决赛 19:35" group-title="北京",CBA 北京北汽VS上海久事 上海20分大逆转3-1淘汰北京！时隔24年再进总决赛 19:35
+http://60.168.105.220:5008/964934866
+#EXTINF:-1 tvg-name="中乙 上海赛更达VS北京理工 解说 15:20" group-title="北京",中乙 上海赛更达VS北京理工 解说 15:20
+http://60.168.105.220:5008/964913298
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】中北大学1-3北京体育大学（官方解说） 08:30" group-title="北京",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】中北大学1-3北京体育大学（官方解说） 08:30
+http://60.168.105.220:5008/964931901
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】复旦大学3-0北京师范大学（官方解说） 08:30" group-title="北京",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】复旦大学3-0北京师范大学（官方解说） 08:30
+http://60.168.105.220:5008/964926727
+#EXTINF:-1 tvg-name="中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】海南师范大学3-0北京航空航天大学（官方解说） 08:30" group-title="北京",中国大学生排球联赛 武汉体育学院 vs 西南交通大学 【男子组回放】海南师范大学3-0北京航空航天大学（官方解说） 08:30
+http://60.168.105.220:5008/964925796
+#EXTINF:-1 tvg-name="中超 北京国安VS河南俱乐部彩陶坊 4K赛场原声 19:20" group-title="北京",中超 北京国安VS河南俱乐部彩陶坊 4K赛场原声 19:20
+http://60.168.105.220:5008/964888929
+#EXTINF:-1 tvg-name="中超 北京国安VS河南俱乐部彩陶坊 乔迁 19:20" group-title="北京",中超 北京国安VS河南俱乐部彩陶坊 乔迁 19:20
+http://60.168.105.220:5008/964888904
+#EXTINF:-1 tvg-name="中超 北京国安VS河南俱乐部彩陶坊 孙雨轩 杨晨 程思钦 19:00" group-title="北京",中超 北京国安VS河南俱乐部彩陶坊 孙雨轩 杨晨 程思钦 19:00
+http://60.168.105.220:5008/964888886
