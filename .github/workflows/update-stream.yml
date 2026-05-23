@@ -37,6 +37,9 @@ jobs:
 
       - name: 🐍 Run Generator Script
         run: |
+          # 🌏 临时将系统时区设置为亚洲/上海（北京时间）
+          sudo timedatectl set-timezone Asia/Shanghai
+          
           python get_live_stream.py
           
           # 🔍 简单检查文件是否生成（保留了核心检查）
@@ -64,7 +67,7 @@ jobs:
             echo "ℹ️ 无更改需要提交"
             exit 0
           else
-            # 提交并推送
+            # 提交并推送（此时 date 命令会自动抓取北京时间）
             git commit -m "🔄 自动更新直播源 [$(date +'%Y-%m-%d %H:%M:%S')]"
             git push
           fi
