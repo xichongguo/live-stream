@@ -5,11 +5,9 @@ env:
 
 on:
   schedule:
-    # ⚠️ 修正：GitHub Actions 的 cron 只有 5 个字段 (分 时 日 月 周)
-    # 🌟 推荐：直接指定时区为亚洲/上海，无需手动换算 UTC
-    # 北京时间 07:00, 12:00, 18:00 执行
-    - cron: '0 7,12,18 * * *'
-      timezone: 'Asia/Shanghai'
+    # ✅ 已修正：GitHub Actions 默认使用 UTC 时间
+    # 北京时间 07:00, 12:00, 18:00 对应 UTC 时间 23:00, 04:00, 10:00
+    - cron: '0 23,4,10 * * *'
   workflow_dispatch:
   push:
     paths:
@@ -41,11 +39,13 @@ jobs:
         run: |
           python get_live_stream.py
           
-          # 🔍 调试：检查文件是否真的生成了
-          echo "🔍 检查文件系统:"
-          find . -type f 
-          echo "📄 文件内容预览:"
-          cat live/current.m3u8 || echo "文件不存在或为空"
+          # 🔍 简单检查文件是否生成（保留了核心检查）
+          if [ -f "live/current.m3u8" ]; then
+            echo "✅ live/current.m3u8 文件生成成功"
+          else
+            echo "❌ live/current.m3u8 文件未找到！"
+            exit 1
+          fi
 
       - name: 📂 Ensure .nojekyll
         run: touch .nojekyll
