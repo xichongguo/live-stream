@@ -6,8 +6,8 @@ env:
 on:
   schedule:
     # ✅ 已修正：GitHub Actions 默认使用 UTC 时间
-    # 北京时间 07:00, 12:00, 18:00 对应 UTC 时间 23:00, 04:00, 10:00
-    - cron: '0 23,4,10 * * *'
+    # 北京时间 07:00, 11:00, 18:00 对应 UTC 时间 23:00, 03:00, 10:00
+    - cron: '0 23,3,10 * * *'
   workflow_dispatch:
   push:
     paths:
