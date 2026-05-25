@@ -14,7 +14,7 @@ class IPTVUpdater:
         self.IPTV_SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"
         self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
         
-        # --- 辅助源 ---
+        # 辅助源
         self.PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
         self.TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
@@ -28,8 +28,8 @@ class IPTVUpdater:
         }
         
         print(f"🌍 运行环境：{time.strftime('%Y-%m-%d')} | 广东佛山 (定制版)")
-
-        # --- 频道别名映射表 ---
+        
+        # 🔴 修改：频道别名映射表
         self.CHANNEL_ALIASES = {
             "CCTV1": ["CCTV1综合", "cctv1", "cctv-1", "中央1台", "中央一台", "cctv 1", "CCTV-1综合"],
             "CCTV2财经": ["cctv2", "cctv-2", "中央2台", "中央二台", "财经", "cctv 2"],
@@ -52,136 +52,68 @@ class IPTVUpdater:
         return name.strip()
 
     def generate_signature(self, path, timestamp):
-        """生成签名"""
         raw_string = f"{self.IPTV_SECRET_KEY}{path}{timestamp}"
         return hashlib.md5(raw_string.encode('utf-8')).hexdigest()
 
-    def categorize_channel(self, name, force_local=False):
-        """
-        对频道进行分类
-        """
-        if force_local:
-            return '本地节目', name
-            
-        name_lower = name.lower()
-        local_keywords = ['西充', '南充', '顺庆', '高坪', '嘉陵', '阆中']
-        if any(kw in name for kw in local_keywords):
-            return '本地节目', name
-            
-        if any(kw in name_lower for kw in ['cctv', '中央']):
-            if "CCTV" in name.upper():
-                match = re.search(r'CCTV\D*(\d+)', name.upper())
-                if match:
-                    return '央视', f"CCTV-{int(match.group(1))}"
-            return '央视', name
-
-        major_satellites = ['卫视', '卫星', '湖南卫视', '浙江卫视', '江苏卫视', '东方卫视']
-        if any(kw.lower() in name_lower for kw in major_satellites):
-            return '卫视', name
-            
-        movie_keywords = ['电影', '影院', 'CHC', '动作', '喜剧']
-        rotation_keywords = ['轮播', '回放']
-        if any(kw.lower() in name_lower for kw in movie_keywords):
-            if any(kw in name_lower for kw in rotation_keywords):
-                return '电影轮播', name
-            return '电影频道', name
-            
-        if any(kw in name for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森', '澳亚']):
-            return '港澳台', name
-            
-        province_map = { 
-            '四川': ['四川', '成都'], 
-            '广东': ['广东', '广州', '深圳', '珠海', '佛山', '东莞'], 
-            '北京': ['北京'], 
-            '上海': ['上海'] 
-        }
-        for prov, cities in province_map.items():
-            if any(city in name for city in cities):
-                return prov, name
-                
-        return "其他", name
-
-    def _is_valid_url(self, url):
-        """检查URL是否有效"""
-        try:
-            result = urlparse(url.strip())
-            return all([result.scheme in ('http', 'https'), result.netloc])
-        except:
-            return False
-
     def fetch_signed_channels(self):
-        """
-        从 kstatic.sctvcloud.com 获取私有源频道
-        """
         channels = []
         try:
             print(f"🚀 正在连接 kstatic.sctvcloud.com 获取私有源...")
             response = requests.get(self.IPTV_JSON_URL, headers=self.DEFAULT_HEADERS, timeout=10)
+            
             if response.status_code == 200:
                 data = response.json()
-                # 递归查找 dataList
-                items = self.find_datalist(data)
-                if items:
-                    print(f"✅ 私有源接口连接成功！共发现 {len(items)} 个频道。")
-                    expire_time = int(time.time()) + 7200 # 2小时过期
-                    for item in items:
-                        if not isinstance(item, dict):
-                            continue
-                        original_title = item.get("title")
-                        live_stream = item.get("liveStream", "")
-                        final_name = self.normalize_channel_name(original_title)
-                        channel_id = self._extract_channel_id(live_stream, final_name)
-                        path = f"/live/{channel_id}/playlist.m3u8"
-                        ws_secret = self.generate_signature(path, expire_time)
-                        final_url = f"{self.IPTV_BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
-                        cat, disp = self.categorize_channel(final_name)
-                        channels.append((final_name, final_url, cat, -3))
+                prop_value = data.get("data", {})
+                
+                # --- 数据结构解析逻辑保持不变 ---
+                if isinstance(prop_value, list) and prop_value:
+                    prop_value = prop_value[0]
+                prop_value = prop_value.get("propValue", {})
+                if isinstance(prop_value, list) and prop_value:
+                    prop_value = prop_value[0]
+                children_list = prop_value.get("children", [])
+                if isinstance(children_list, list) and children_list:
+                    items = children_list[0].get("dataList", [])
                 else:
-                    print("❌ 无法在JSON响应中找到频道数据列表。")
+                    items = []
+                # --- 解析结束 ---
+
+                print(f"✅ 私有源接口连接成功！共发现 {len(items)} 个频道。")
+                
+                # --- 核心修改：延长有效期 ---
+                # 原逻辑：7200秒 (2小时)
+                # 新逻辑：90000秒 (25小时)，相对于原本的2小时，实际上延长了23小时
+                expire_time = int(time.time()) + 90000
+                
+                for i, item in enumerate(items):
+                    original_title = item.get("title")
+                    live_stream = item.get("liveStream", "")
+                    
+                    final_name = self._rename_channel(i, original_title)
+                    channel_id = self._extract_channel_id(live_stream, final_name)
+                    
+                    path = f"/live/{channel_id}/playlist.m3u8"
+                    
+                    # --- 核心修改：生成签名 ---
+                    # 签名必须基于新的过期时间生成
+                    ws_secret = self.generate_signature(path, expire_time)
+                    
+                    final_url = f"{self.IPTV_BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
+                    
+                    # 修正：直接传入 final_name 进行分类，不再强制本地
+                    cat, disp = self.categorize_channel(final_name)
+                    std_name = self.normalize_channel_name(final_name)
+                    channels.append((std_name, final_url, cat, -3))
+            else:
+                print(f"❌ 私有源网络请求失败: {response.status_code}")
         except Exception as e:
             print(f"❌ 私有源处理异常: {e}")
         return channels
 
-    def find_datalist(self, obj, depth=0):
-        """
-        递归深度搜索：自动在复杂的JSON结构中寻找包含频道数据的列表
-        """
-        if depth > 10:
-            return None
-            
-        if isinstance(obj, dict):
-            if "dataList" in obj and isinstance(obj["dataList"], list):
-                return obj["dataList"]
-            for value in obj.values():
-                result = self.find_datalist(value, depth + 1)
-                if result:
-                    return result
-        elif isinstance(obj, list):
-            if obj and isinstance(obj[0], dict) and "dataList" in obj[0]:
-                return obj[0]["dataList"]
-            for item in obj:
-                result = self.find_datalist(item, depth + 1)
-                if result:
-                    return result
-        return None
-
-    def _extract_channel_id(self, live_stream, name):
-        """提取频道ID"""
-        path_parts = [p for p in live_stream.split("/") if p]
-        if len(path_parts) >= 2:
-            return path_parts[-2]
-        return hashlib.md5(name.encode()).hexdigest()[:10]
-
     def fetch_xichong_channel(self):
-        """
-        从 xichongtv API 获取西充综合频道
-        """
         channels = []
         api_url = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
-        headers = {
-            'User-Agent': 'okhttp/3.12.12', 
-            'Accept': 'application/json, text/plain, */*'
-        }
+        headers = {'User-Agent': 'okhttp/3.12.12', 'Accept': 'application/json, text/plain, */*'}
         try:
             print(f"🚀 正在连接 lwydapi.xichongtv.cn 获取西充综合...")
             response = requests.get(api_url, headers=headers, verify=False, timeout=10)
@@ -196,10 +128,64 @@ class IPTVUpdater:
             print(f"❌ 西充频道处理异常: {e}")
         return channels
 
+    def _rename_channel(self, index, original_title):
+        rename_map = {0: "南充综合", 1: "南充科教"}
+        return rename_map.get(index, original_title)
+
+    def _extract_channel_id(self, live_stream, name):
+        path_parts = [p for p in live_stream.split("/") if p]
+        if len(path_parts) >= 2:
+            return path_parts[-2]
+        return hashlib.md5(name.encode()).hexdigest()[:10]
+
+    def categorize_channel(self, name):
+        # 移除了 force_local 参数，统一处理逻辑
+        name_lower = name.lower()
+        
+        # 本地节目关键词
+        local_keywords = ['西充', '南充', '顺庆', '高坪', '嘉陵', '阆中']
+        if any(kw in name for kw in local_keywords):
+            return '本地节目', name
+
+        # 央视
+        if any(kw in name_lower for kw in ['cctv', '中央']):
+            if "CCTV" in name.upper():
+                match = re.search(r'CCTV\D*(\d+)', name.upper())
+                if match:
+                    return '央视', f"CCTV-{int(match.group(1))}"
+            return '央视', name
+
+        # 卫视
+        major_satellites = ['卫视', '卫星', '湖南卫视', '浙江卫视', '江苏卫视', '东方卫视']
+        if any(kw.lower() in name_lower for kw in major_satellites):
+            return '卫视', name
+
+        # 电影
+        movie_keywords = ['电影', '影院', 'CHC', '动作', '喜剧']
+        rotation_keywords = ['轮播', '回放']
+        if any(kw.lower() in name_lower for kw in movie_keywords):
+            if any(kw in name_lower for kw in rotation_keywords):
+                return '电影轮播', name
+            return '电影频道', name
+
+        # 港澳台
+        if any(kw in name for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森', '澳亚']):
+            return '港澳台', name
+
+        # 省份
+        province_map = { 
+            '四川': ['四川', '成都'], 
+            '广东': ['广东', '广州', '深圳', '珠海', '佛山', '东莞'], 
+            '北京': ['北京'], 
+            '上海': ['上海'] 
+        }
+        for prov, cities in province_map.items():
+            if any(city in name for city in cities):
+                return prov, name
+
+        return "其他", name
+
     def load_priority_source(self):
-        """
-        加载高优先级的在线源 (migu66)
-        """
         channels = []
         try:
             response = requests.get(self.PRIORITY_SOURCE_URL, timeout=20, headers=self.DEFAULT_HEADERS)
@@ -221,9 +207,6 @@ class IPTVUpdater:
         return channels
 
     def load_remote_whitelist(self):
-        """
-        加载远程白名单中的本地节目
-        """
         channels = []
         try:
             print(f"🚀 正在连接远程白名单获取本地节目...")
@@ -233,7 +216,7 @@ class IPTVUpdater:
                     parts = line.split(",", 1)
                     name, url = parts[0].strip(), parts[1].strip()
                     if name and url and self._is_valid_url(url):
-                        cat, disp = self.categorize_channel(name, force_local=True)
+                        cat, disp = self.categorize_channel(name)
                         std_name = self.normalize_channel_name(name)
                         channels.append((std_name, url, cat, 1))
             print(f"✅ 白名单加载完成。")
@@ -242,9 +225,6 @@ class IPTVUpdater:
         return channels
 
     def load_tv_m3u(self):
-        """
-        加载 tv.m3u 源
-        """
         channels = []
         try:
             response = requests.get(self.TV_M3U_URL, timeout=20, headers=self.DEFAULT_HEADERS)
@@ -266,9 +246,6 @@ class IPTVUpdater:
         return channels
 
     def load_migu_source(self):
-        """
-        加载 Migu 源
-        """
         channels = []
         try:
             print(f"🚀 正在连接 {self.MIGU_SOURCE_URL} 获取 Migu 源...")
@@ -286,45 +263,57 @@ class IPTVUpdater:
                             cat, disp = self.categorize_channel(name)
                             std_name = self.normalize_channel_name(name)
                             channels.append((std_name, url, cat, -1))
-            print(f"✅ Migu 源加载完成。")
+            print(f"✅ Migu 源加载完成，共获取 {len(channels)} 个频道。")
         except Exception as e:
             print(f"❌ 加载 Migu 源失败: {e}")
         return channels
 
+    def _is_valid_url(self, url):
+        try:
+            result = urlparse(url.strip())
+            return all([result.scheme in ('http', 'https'), result.netloc])
+        except:
+            return False
+
     def merge_and_export(self):
-        """
-        合并所有频道源，进行去重、排序并导出为 M3U8 文件
-        """
         print("🚀 开始合并直播源...")
         all_channels = []
         
-        # 从各个源获取数据
+        # 获取所有源的数据
         all_channels.extend(self.fetch_xichong_channel())
-        all_channels.extend(self.fetch_signed_channels())
+        all_channels.extend(self.fetch_signed_channels()) # 修改后的逻辑在这里被调用
         all_channels.extend(self.load_priority_source())
         all_channels.extend(self.load_migu_source())
         all_channels.extend(self.load_remote_whitelist())
         all_channels.extend(self.load_tv_m3u())
         
-        # 基于 (标准化名称, 链接) 去重，并保留最高优先级
+        # --- 去重逻辑 ---
+        # 基于【标准化名称 + 链接】进行去重
         unique_map = {}
         for name, url, cat, priority in all_channels:
             key = (name, url)
+            # 如果Key不存在，或者新的优先级更高(数值更小)，则更新
             if key not in unique_map or priority < unique_map[key][3]:
                 unique_map[key] = (name, url, cat, priority)
                 
         deduplicated_list = list(unique_map.values())
         print(f"✅ 去重完成，剩余 {len(deduplicated_list)} 个唯一频道流")
-
-        # 排序并写入文件
+        
+        # --- 排序与写入文件 ---
         os.makedirs(self.OUTPUT_DIR, exist_ok=True)
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
             # 定义分组顺序
-            group_order = {
-                '本地节目': 0, '央视': 1, '卫视': 2, '电影频道': 3, 
-                '电影轮播': 4, '港澳台': 5, '四川': 6, '广东': 7
+            group_order = { 
+                '本地节目': 0, 
+                '央视': 1, 
+                '卫视': 2, 
+                '电影频道': 3, 
+                '电影轮播': 4, 
+                '港澳台': 5, 
+                '四川': 6, 
+                '广东': 7 
             }
             
             # 排序：先按分组顺序，再按组内名称
