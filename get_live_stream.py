@@ -17,7 +17,7 @@ class IPTVUpdater:
         # 辅助源
         self.PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
-        self.TV_M3U_URL = "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
+        self.TV_M3U_URL = "https://gh-proxy.com/https://raw.githubusercontent.com/xichongguo/xichongys2/refs/heads/main/output.m3u8"
         self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
         
         self.OUTPUT_DIR = "live"
