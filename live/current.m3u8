@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="南充科教" group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=ca835e8a7f16fca4028406a3abc1e06f&wsTime=1779930719
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=788e4ad80cfbaeca1633dedf5acb140d&wsTime=1779955644
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=61bf2b171fb98bb406b0b4e3a0ba9653&wsTime=1779930719
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=733d8bbaf1040ee59b357d32f984588d&wsTime=1779955644
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
 https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
@@ -87,6 +87,10 @@ http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/cctv14hd/2000/index.m3u8
 http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/20200324/cctv15hd/51/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699004&netType=4&sid=5501083628&pid=2028597139&timestamp=20260527062436&Channel_ID=0116_2600037000-99000-200300220106504&ProgramID=673168223&ParentNodeID=-99&assertID=5501083628&client_ip=113.6.228.60&SecurityKey=20260527062436&promotionId=&mvid=5102910391&mcid=500020&playurlVersion=WX-A1-9.5.1.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=370a0a2a56ca3b1552ac553beb16a50c
 #EXTINF:-1 tvg-name="CCTV15音乐" group-title="央视",CCTV15音乐
 http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/20200324/cctv15hd/51/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699004&netType=4&sid=5501083628&pid=2028597139&timestamp=20260527062436&Channel_ID=0116_2600037000-99000-200300220106504&ProgramID=673168223&ParentNodeID=-99&assertID=5501083628&client_ip=113.6.228.60&SecurityKey=20260527062436&promotionId=&mvid=5102910391&mcid=500020&playurlVersion=WX-A1-9.5.1.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=370a0a2a56ca3b1552ac553beb16a50c
+#EXTINF:-1 tvg-name="CCTV16奥林匹克" group-title="央视",CCTV16奥林匹克
+http://38.75.136.137:98/gslb/dsdqpub/cctv16hd.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="CCTV16超清" group-title="央视",CCTV16超清
+http://38.75.136.137:98/gslb/dsdqpub/cctv16hd.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="CCTV17农业农村" group-title="央视",CCTV17农业农村
 http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/20200324/cctv17hd/51/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699004&netType=4&sid=5501083631&pid=2028597139&timestamp=20260527062332&Channel_ID=0116_2600037000-99000-200300220106502&ProgramID=673168256&ParentNodeID=-99&assertID=5501083631&client_ip=113.6.228.60&SecurityKey=20260527062332&promotionId=&mvid=5102910396&mcid=500020&playurlVersion=WX-A1-9.5.1.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=edf476a0b7c0ca226948c4beb4e0eab5
 #EXTINF:-1 tvg-name="CCTV17超清" group-title="央视",CCTV17超清
@@ -347,6 +351,10 @@ http://119.164.222.242:5140/%F0%9F%8E%AC%E7%89%B9%E8%89%B2%E9%A2%91%E9%81%93/CHC
 http://gxlive.snrtv.com/sx8-SD.m3u8
 #EXTINF:-1 tvg-name="广东影视" group-title="广东",广东影视
 https://hlsbkmgsplive.miguvideo.com/wd_r1/2018/nfmedia/nfys/1000/01.m3u8?&HlsSubType=&encrypt=
+#EXTINF:-1 tvg-name="广东新闻" group-title="广东",广东新闻
+http://38.75.136.137:98/gslb/dsdqpub/gdxw.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="广东民生" group-title="广东",广东民生
+http://38.75.136.137:98/gslb/dsdqpub/gdgg.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="CGTN" group-title="其他",CGTN
 http://119.164.222.242:5140/%F0%9F%8C%8D%E5%9B%BD%E9%99%85%E9%A2%91%E9%81%93/CGTN
 #EXTINF:-1 tvg-name="CGTN" group-title="其他",CGTN
@@ -763,7 +771,7 @@ http://l.cztvcloud.com/channels/lantian/SXputuo1/720p.m3u8
 https://play.kankanlive.com/live/1624439143745981.m3u8
 #EXTINF:-1 tvg-name="曲阜综合" group-title="其他",曲阜综合
 http://119.164.222.242:5140/%F0%9F%8F%98%EF%B8%8F%E5%8E%BF%E7%BA%A7%E9%A2%91%E9%81%93/%E6%9B%B2%E9%98%9C%E7%BB%BC%E5%90%88
-#EXTINF:-1 tvg-name="更新日期: 2026-5-27 07:02:46" group-title="其他",更新日期: 2026-5-27 07:02:46
+#EXTINF:-1 tvg-name="更新日期: 2026-5-27 09:03:26" group-title="其他",更新日期: 2026-5-27 09:03:26
 http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/cctv1hd/1200/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699004&netType=4&sid=2201057821&pid=2028597139&timestamp=20260527063706&Channel_ID=0116_2600037000-99000-200300220106535&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=113.6.228.78&SecurityKey=20260527063706&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=WX-A1-9.5.1.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=1eb1e3429a58f580be3a0637574c9502
 #EXTINF:-1 tvg-name="杞县新闻综合" group-title="其他",杞县新闻综合
 http://tvpull.dxhmt.cn:9081/tv/10221-1.m3u8
