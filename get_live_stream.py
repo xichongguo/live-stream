@@ -7,23 +7,30 @@ import time
 import re
 from urllib.parse import urlparse
 
-
 class IPTVUpdater:
     def __init__(self):
         # --- 核心配置 ---
         self.IPTV_JSON_URL = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
         self.IPTV_SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"
-        self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn" # 辅助源
+        self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
+        
+        # 辅助源配置
         self.PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
         self.TV_M3U_URL = "https://gh-proxy.com/https://raw.githubusercontent.com/xichongguo/xichongys2/refs/heads/main/output.m3u8"
+        
+        # 🔴 目标源：Migu 源
         self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
+        
         self.OUTPUT_DIR = "live"
         self.OUTPUT_FILE = os.path.join(self.OUTPUT_DIR, "current.m3u8")
+        
         self.DEFAULT_HEADERS = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         }
-        print(f"🌍 运行环境：{time.strftime('%Y-%m-%d')} | 广东佛山 (定制版)")
+        
+        # ✅ 已替换时间与地点
+        print(f"🌍 运行环境：2026-05-31 星期日 | 广东省 佛山市 (定制版)")
 
         # 🔴 修改：频道别名映射表
         self.CHANNEL_ALIASES = {
@@ -59,7 +66,8 @@ class IPTVUpdater:
             if response.status_code == 200:
                 data = response.json()
                 prop_value = data.get("data", {})
-                # --- 数据结构解析逻辑保持不变 ---
+                
+                # --- 数据结构解析逻辑 ---
                 if isinstance(prop_value, list) and prop_value:
                     prop_value = prop_value[0]
                 prop_value = prop_value.get("propValue", {})
@@ -71,11 +79,10 @@ class IPTVUpdater:
                 else:
                     items = []
                 # --- 解析结束 ---
-                print(f"✅ 私有源接口连接成功！共发现 {len(items)} 个频道。")
 
+                print(f"✅ 私有源接口连接成功！共发现 {len(items)} 个频道。")
+                
                 # --- 核心修改：延长有效期 ---
-                # 原逻辑：7200秒 (2小时)
-                # 新逻辑：90000秒 (25小时)，相对于原本的2小时，实际上延长了23小时
                 expire_time = int(time.time()) + 90000
                 for i, item in enumerate(items):
                     original_title = item.get("title")
@@ -83,14 +90,14 @@ class IPTVUpdater:
                     final_name = self._rename_channel(i, original_title)
                     channel_id = self._extract_channel_id(live_stream, final_name)
                     path = f"/live/{channel_id}/playlist.m3u8"
+                    
                     # --- 核心修改：生成签名 ---
-                    # 签名必须基于新的过期时间生成
                     ws_secret = self.generate_signature(path, expire_time)
                     final_url = f"{self.IPTV_BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
-                    # 修正：直接传入 final_name 进行分类，不再强制本地
+                    
                     cat, disp = self.categorize_channel(final_name)
                     std_name = self.normalize_channel_name(final_name)
-                    channels.append((std_name, final_url, cat, -3))
+                    channels.append((std_name, final_url, cat, -3)) # 优先级 -3
             else:
                 print(f"❌ 私有源网络请求失败: {response.status_code}")
         except Exception as e:
@@ -126,13 +133,13 @@ class IPTVUpdater:
         return hashlib.md5(name.encode()).hexdigest()[:10]
 
     def categorize_channel(self, name):
-        # 移除了 force_local 参数，统一处理逻辑
         name_lower = name.lower()
+        
         # 本地节目关键词
         local_keywords = ['西充', '南充', '顺庆', '高坪', '嘉陵', '阆中']
         if any(kw in name for kw in local_keywords):
             return '本地节目', name
-
+        
         # 央视
         if any(kw in name_lower for kw in ['cctv', '中央']):
             if "CCTV" in name.upper():
@@ -140,12 +147,12 @@ class IPTVUpdater:
                 if match:
                     return '央视', f"CCTV-{int(match.group(1))}"
             return '央视', name
-
+        
         # 卫视
         major_satellites = ['卫视', '卫星', '湖南卫视', '浙江卫视', '江苏卫视', '东方卫视']
         if any(kw.lower() in name_lower for kw in major_satellites):
             return '卫视', name
-
+        
         # 电影
         movie_keywords = ['电影', '影院', 'CHC', '动作', '喜剧']
         rotation_keywords = ['轮播', '回放']
@@ -153,22 +160,21 @@ class IPTVUpdater:
             if any(kw in name_lower for kw in rotation_keywords):
                 return '电影轮播', name
             return '电影频道', name
-
+        
         # 港澳台
         if any(kw in name for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森', '澳亚']):
             return '港澳台', name
-
+        
         # 省份
         province_map = {
-            '四川': ['四川', '成都'],
-            '广东': ['广东', '广州', '深圳', '珠海', '佛山', '东莞'],
-            '北京': ['北京'],
+            '四川': ['四川', '成都'], 
+            '广东': ['广东', '广州', '深圳', '珠海', '佛山', '东莞'], 
+            '北京': ['北京'], 
             '上海': ['上海']
         }
         for prov, cities in province_map.items():
             if any(city in name for city in cities):
                 return prov, name
-
         return "其他", name
 
     def load_priority_source(self):
@@ -187,7 +193,7 @@ class IPTVUpdater:
                         if url.startswith("http") and self._is_valid_url(url):
                             cat, disp = self.categorize_channel(name)
                             std_name = self.normalize_channel_name(name)
-                            channels.append((std_name, url, cat, -2))
+                            channels.append((std_name, url, cat, -2)) # 优先级 -2
         except Exception as e:
             print(f"❌ 加载高优源失败: {e}")
         return channels
@@ -248,7 +254,8 @@ class IPTVUpdater:
                         if url.startswith("http") and self._is_valid_url(url):
                             cat, disp = self.categorize_channel(name)
                             std_name = self.normalize_channel_name(name)
-                            channels.append((std_name, url, cat, -1))
+                            # 🔴 修改：将优先级从 -1 提升至 -10，强制优先输出
+                            channels.append((std_name, url, cat, -10)) 
             print(f"✅ Migu 源加载完成，共获取 {len(channels)} 个频道。")
         except Exception as e:
             print(f"❌ 加载 Migu 源失败: {e}")
@@ -264,14 +271,18 @@ class IPTVUpdater:
     def merge_and_export(self):
         print("🚀 开始合并直播源...")
         all_channels = []
+        
         # 获取所有源的数据
         all_channels.extend(self.fetch_xichong_channel())
-        all_channels.extend(self.fetch_signed_channels()) # 修改后的逻辑在这里被调用
+        all_channels.extend(self.fetch_signed_channels())
         all_channels.extend(self.load_priority_source())
-        all_channels.extend(self.load_migu_source())
+        
+        # 🔴 确保 Migu 源在列表中
+        all_channels.extend(self.load_migu_source()) 
+        
         all_channels.extend(self.load_remote_whitelist())
         all_channels.extend(self.load_tv_m3u())
-
+        
         # --- 去重逻辑 ---
         # 基于【标准化名称 + 链接】进行去重
         unique_map = {}
@@ -280,10 +291,10 @@ class IPTVUpdater:
             # 如果Key不存在，或者新的优先级更高(数值更小)，则更新
             if key not in unique_map or priority < unique_map[key][3]:
                 unique_map[key] = (name, url, cat, priority)
-        
+                
         deduplicated_list = list(unique_map.values())
         print(f"✅ 去重完成，剩余 {len(deduplicated_list)} 个唯一频道流")
-
+        
         # --- 排序与写入文件 ---
         os.makedirs(self.OUTPUT_DIR, exist_ok=True)
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
@@ -307,7 +318,7 @@ class IPTVUpdater:
             for disp_name, url, cat, _ in deduplicated_list:
                 f.write(f'#EXTINF:-1 tvg-name="{disp_name}" group-title="{cat}",{disp_name}\n')
                 f.write(f'{url}\n')
-        
+                
         print(f"🎉 完成！保存至: {os.path.abspath(self.OUTPUT_FILE)}")
 
     def run(self):
@@ -316,7 +327,6 @@ class IPTVUpdater:
         except Exception as e:
             print(f"❌ 严重错误: {e}")
             sys.exit(1)
-
 
 if __name__ == "__main__":
     updater = IPTVUpdater()
