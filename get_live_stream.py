@@ -15,10 +15,10 @@ class IPTVUpdater:
         self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
         
         # 辅助源
-        self.PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
+        self.PRIORITY_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
         self.TV_M3U_URL = ""
-        self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
+        self.MIGU_SOURCE_URL = "https://lin.305362.xyz/migu66"
         
         self.OUTPUT_DIR = "live"
         self.OUTPUT_FILE = os.path.join(self.OUTPUT_DIR, "current.m3u8")
