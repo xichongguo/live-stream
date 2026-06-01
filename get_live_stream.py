@@ -15,6 +15,7 @@ class IPTVUpdater:
     def __init__(self):
         # === 1. 核心配置 ===
         self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
+        self.MIGU_LOCAL_FILE = "migu.txt" # 兜底方案：本地文件名
         self.HD_SOURCE_URL = "http://114.226.216.63:5140/playlist.m3u"
         
         # 定义输出目录和文件
@@ -31,7 +32,7 @@ class IPTVUpdater:
         self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
         
-        print(f"🌍 运行环境：2026-06-01 星期一 | 广东省 佛山市 (定制版)")
+        print(f"🌍 运行环境：2026-06-02 星期二 | 广东省 佛山市 (定制版)")
         
         # 🔴 频道别名映射表
         self.CHANNEL_ALIASES = {
@@ -125,7 +126,6 @@ class IPTVUpdater:
             return path_parts[-2]
         return hashlib.md5(name.encode()).hexdigest()[:10]
 
-    # ✅ 核心优化：极度细化的频道分类逻辑
     def categorize_channel(self, name):
         name_lower = name.lower()
         
@@ -159,31 +159,31 @@ class IPTVUpdater:
         if any(kw in name for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森', '澳亚', '星空']):
             return '港澳台', name
         
-        # 6. 体育 (新增细化)
+        # 6. 体育
         if any(kw in name_lower for kw in ['体育', '赛事', 'nba', '足球', '篮球']):
             return '体育', name
         
-        # 7. 少儿/动画 (新增细化)
+        # 7. 少儿/动画
         if any(kw in name_lower for kw in ['少儿', '卡通', '动画', '动漫', '哈哈炫动', '金鹰卡通', '卡酷']):
             return '少儿', name
         
-        # 8. 教育/学习 (新增细化)
+        # 8. 教育/学习
         if any(kw in name_lower for kw in ['教育', '学习', '考试', '校园', '中学生']):
             return '教育', name
         
-        # 9. 纪录片/地理 (新增细化)
+        # 9. 纪录片/地理
         if any(kw in name_lower for kw in ['纪录', '探索', '地理', '发现', '历史']):
             return '纪录片', name
         
-        # 10. 音乐 (新增细化)
+        # 10. 音乐
         if any(kw in name_lower for kw in ['音乐', 'mtv', '声乐', '演唱会']):
             return '音乐', name
         
-        # 11. 生活/科教 (新增细化)
+        # 11. 生活/科教
         if any(kw in name_lower for kw in ['生活', '科教', '科技', '农业', '纪实']):
             return '生活科教', name
         
-        # 12. 法治/社会 (新增细化)
+        # 12. 法治/社会
         if any(kw in name_lower for kw in ['法治', '法制', '政法', '社会']):
             return '法治社会', name
         
@@ -201,7 +201,6 @@ class IPTVUpdater:
         # 14. 兜底分类
         return "综合/其他", name
 
-    # ✅ 获取高清源频道的专属函数
     def load_hd_source(self):
         channels = []
         try:
@@ -218,7 +217,6 @@ class IPTVUpdater:
                     if i + 1 < len(lines):
                         url = lines[i+1].strip()
                         if url.startswith("http") and self._is_valid_url(url):
-                            # 强制将所有获取到的频道分类设为 "高清"
                             std_name = self.normalize_channel_name(name)
                             channels.append((std_name, url, '高清', -5))
             print(f"✅ 高清源加载完成，共获取 {len(channels)} 个频道流。")
@@ -245,13 +243,41 @@ class IPTVUpdater:
             print(f"❌ 加载白名单失败: {e}")
         return channels
 
+    # ✅ 核心修改：支持本地文件读取 + 网络重试机制
     def load_migu_source(self):
         channels = []
-        try:
-            print(f"🚀 正在连接 {self.MIGU_SOURCE_URL} 获取 Migu 源...")
-            response = requests.get(self.MIGU_SOURCE_URL, timeout=20, headers=self.DEFAULT_HEADERS)
-            response.encoding = response.apparent_encoding
-            lines = response.text.strip().splitlines()
+        content = ""
+        
+        # 1. 优先尝试读取本地文件（最稳妥）
+        if os.path.exists(self.MIGU_LOCAL_FILE):
+            print(f"📂 发现本地 Migu 文件: {self.MIGU_LOCAL_FILE}，直接读取...")
+            try:
+                with open(self.MIGU_LOCAL_FILE, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                print(f"✅ 本地 Migu 文件读取成功。")
+            except Exception as e:
+                print(f"❌ 读取本地 Migu 文件失败: {e}")
+        
+        # 2. 如果本地没有，再尝试网络抓取（带重试）
+        if not content:
+            print(f"🌍 本地无文件，正在尝试联网获取 Migu 源...")
+            max_retries = 3
+            for attempt in range(max_retries):
+                try:
+                    print(f"🚀 第 {attempt + 1} 次尝试连接 {self.MIGU_SOURCE_URL}...")
+                    response = requests.get(self.MIGU_SOURCE_URL, timeout=15, headers=self.DEFAULT_HEADERS)
+                    response.raise_for_status() # 检查 HTTP 错误
+                    content = response.text
+                    print(f"✅ Migu 源网络抓取成功！")
+                    break
+                except Exception as e:
+                    print(f"⚠️ 第 {attempt + 1} 次尝试失败: {e}")
+                    if attempt < max_retries - 1:
+                        time.sleep(2) # 等待2秒后重试
+        
+        # 3. 解析内容
+        if content:
+            lines = content.strip().splitlines()
             for i in range(len(lines)):
                 if lines[i].startswith("#EXTINF") and "," in lines[i]:
                     try:
@@ -263,11 +289,11 @@ class IPTVUpdater:
                         if url.startswith("http") and self._is_valid_url(url):
                             cat, disp = self.categorize_channel(name)
                             std_name = self.normalize_channel_name(name)
-                            # 保持高优先级 -10
                             channels.append((std_name, url, cat, -10))
-            print(f"✅ Migu 源加载完成，共获取 {len(channels)} 个频道流。")
-        except Exception as e:
-            print(f"❌ 加载 Migu 源失败: {e}")
+            print(f"✅ Migu 源解析完成，共获取 {len(channels)} 个频道流。")
+        else:
+            print(f"❌ 无法获取 Migu 源内容（本地无文件且网络抓取失败）。")
+            
         return channels
 
     def _is_valid_url(self, url):
@@ -282,7 +308,6 @@ class IPTVUpdater:
         all_channels = []
         
         # 获取所有源的数据
-        # 注意顺序：这里决定了同名频道如果不去重会重复出现的顺序
         all_channels.extend(self.fetch_xichong_channel())
         all_channels.extend(self.fetch_signed_channels())
         
@@ -295,8 +320,6 @@ class IPTVUpdater:
         # 加入白名单
         all_channels.extend(self.load_remote_whitelist())
 
-        # --- 去重逻辑已移除 ---
-        # 现在 all_channels 列表包含所有源的所有内容，完全不做去重
         print(f"✅ 跳过去重，共收集 {len(all_channels)} 个频道流（含重复）")
 
         # --- 排序与写入文件 ---
@@ -304,7 +327,7 @@ class IPTVUpdater:
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
-            # ✅ 修改分组顺序：高清放在最后面
+            # ✅ 分组顺序：高清放在最后面
             group_order = {
                 '本地节目': 0,
                 '央视': 1,
@@ -322,11 +345,10 @@ class IPTVUpdater:
                 '法治社会': 13,
                 '港澳台': 14,
                 '综合/其他': 15,
-                '高清': 16 # 高清分类排在最后
+                '高清': 16 
             }
             
             # 排序：先按分组顺序，再按组内名称
-            # 注意：因为不去重，同一个频道可能会在不同分组出现（取决于源里的分类）
             all_channels.sort(key=lambda x: (group_order.get(x[2], 99), x[2], x[0]))
 
             for disp_name, url, cat, _ in all_channels:
