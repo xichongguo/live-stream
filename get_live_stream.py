@@ -9,29 +9,36 @@ from urllib.parse import urlparse
 
 class IPTVUpdater:
     def __init__(self):
-        # --- 核心配置 ---
+        # === 1. 核心配置 (修复报错的关键部分) ===
+        # 定义 Migu 源地址 (根据你的要求优先加载)
+        self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
+        
+        # 定义输出目录和文件
+        self.OUTPUT_DIR = "live"
+        self.OUTPUT_FILE = os.path.join(self.OUTPUT_DIR, "current.m3u8")
+        
+        # 定义请求头，防止部分源站拒绝连接
+        self.DEFAULT_HEADERS = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        }
+
+        # 以下是你原有脚本中的其他配置 (保持不变)
         self.IPTV_JSON_URL = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
         self.IPTV_SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"
         self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
         
         # 辅助源配置
-        self.PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66"
+        # 🔽 已将此源优先级调低 (原为高优源 -2，现改为 9)
+        self.PRIORITY_SOURCE_URL = "https://lin.305362.xyz/migu66" 
+        
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+        
+        # 🔽 已将此源优先级调低 (原为 2，现改为 10)
         self.TV_M3U_URL = "https://gh-proxy.com/https://raw.githubusercontent.com/xichongguo/xichongys2/refs/heads/main/output.m3u8"
         
-        # 🔴 目标源：Migu 源
-        self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
+        # ✅ 修改时间与地点
+        print(f"🌍 运行环境：2026-06-01 星期一 | 广东省 佛山市 (定制版)")
         
-        self.OUTPUT_DIR = "live"
-        self.OUTPUT_FILE = os.path.join(self.OUTPUT_DIR, "current.m3u8")
-        
-        self.DEFAULT_HEADERS = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-        
-        # ✅ 已替换时间与地点
-        print(f"🌍 运行环境：2026-05-31 星期日 | 广东省 佛山市 (定制版)")
-
         # 🔴 修改：频道别名映射表
         self.CHANNEL_ALIASES = {
             "CCTV1": ["CCTV1综合", "cctv1", "cctv-1", "中央1台", "中央一台", "cctv 1", "CCTV-1综合"],
@@ -47,7 +54,6 @@ class IPTVUpdater:
         }
 
     def normalize_channel_name(self, name):
-        """将各种别名统一清洗为标准名称"""
         name_lower = name.lower().strip()
         for standard_name, aliases in self.CHANNEL_ALIASES.items():
             if name_lower == standard_name.lower() or name_lower in [alias.lower() for alias in aliases]:
@@ -66,11 +72,9 @@ class IPTVUpdater:
             if response.status_code == 200:
                 data = response.json()
                 prop_value = data.get("data", {})
-                
-                # --- 数据结构解析逻辑 ---
                 if isinstance(prop_value, list) and prop_value:
                     prop_value = prop_value[0]
-                prop_value = prop_value.get("propValue", {})
+                    prop_value = prop_value.get("propValue", {})
                 if isinstance(prop_value, list) and prop_value:
                     prop_value = prop_value[0]
                 children_list = prop_value.get("children", [])
@@ -78,11 +82,8 @@ class IPTVUpdater:
                     items = children_list[0].get("dataList", [])
                 else:
                     items = []
-                # --- 解析结束 ---
-
                 print(f"✅ 私有源接口连接成功！共发现 {len(items)} 个频道。")
                 
-                # --- 核心修改：延长有效期 ---
                 expire_time = int(time.time()) + 90000
                 for i, item in enumerate(items):
                     original_title = item.get("title")
@@ -90,14 +91,11 @@ class IPTVUpdater:
                     final_name = self._rename_channel(i, original_title)
                     channel_id = self._extract_channel_id(live_stream, final_name)
                     path = f"/live/{channel_id}/playlist.m3u8"
-                    
-                    # --- 核心修改：生成签名 ---
                     ws_secret = self.generate_signature(path, expire_time)
                     final_url = f"{self.IPTV_BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
-                    
                     cat, disp = self.categorize_channel(final_name)
                     std_name = self.normalize_channel_name(final_name)
-                    channels.append((std_name, final_url, cat, -3)) # 优先级 -3
+                    channels.append((std_name, final_url, cat, -3))
             else:
                 print(f"❌ 私有源网络请求失败: {response.status_code}")
         except Exception as e:
@@ -134,42 +132,30 @@ class IPTVUpdater:
 
     def categorize_channel(self, name):
         name_lower = name.lower()
-        
-        # 本地节目关键词
         local_keywords = ['西充', '南充', '顺庆', '高坪', '嘉陵', '阆中']
         if any(kw in name for kw in local_keywords):
             return '本地节目', name
-        
-        # 央视
-        if any(kw in name_lower for kw in ['cctv', '中央']):
+        if any(kw.lower() in name_lower for kw in ['cctv', '中央']):
             if "CCTV" in name.upper():
                 match = re.search(r'CCTV\D*(\d+)', name.upper())
                 if match:
                     return '央视', f"CCTV-{int(match.group(1))}"
             return '央视', name
-        
-        # 卫视
         major_satellites = ['卫视', '卫星', '湖南卫视', '浙江卫视', '江苏卫视', '东方卫视']
         if any(kw.lower() in name_lower for kw in major_satellites):
             return '卫视', name
-        
-        # 电影
         movie_keywords = ['电影', '影院', 'CHC', '动作', '喜剧']
         rotation_keywords = ['轮播', '回放']
         if any(kw.lower() in name_lower for kw in movie_keywords):
             if any(kw in name_lower for kw in rotation_keywords):
                 return '电影轮播', name
             return '电影频道', name
-        
-        # 港澳台
         if any(kw in name for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森', '澳亚']):
             return '港澳台', name
-        
-        # 省份
         province_map = {
-            '四川': ['四川', '成都'], 
-            '广东': ['广东', '广州', '深圳', '珠海', '佛山', '东莞'], 
-            '北京': ['北京'], 
+            '四川': ['四川', '成都'],
+            '广东': ['广东', '广州', '深圳', '珠海', '佛山', '东莞'],
+            '北京': ['北京'],
             '上海': ['上海']
         }
         for prov, cities in province_map.items():
@@ -193,7 +179,8 @@ class IPTVUpdater:
                         if url.startswith("http") and self._is_valid_url(url):
                             cat, disp = self.categorize_channel(name)
                             std_name = self.normalize_channel_name(name)
-                            channels.append((std_name, url, cat, -2)) # 优先级 -2
+                            # 优先级已改为 9 (原为 -2)
+                            channels.append((std_name, url, cat, 9)) 
         except Exception as e:
             print(f"❌ 加载高优源失败: {e}")
         return channels
@@ -232,7 +219,8 @@ class IPTVUpdater:
                         if url.startswith("http") and self._is_valid_url(url):
                             cat, disp = self.categorize_channel(name)
                             std_name = self.normalize_channel_name(name)
-                            channels.append((std_name, url, cat, 2))
+                            # 优先级已改为 10 (原为 2)
+                            channels.append((std_name, url, cat, 10)) 
         except Exception as e:
             print(f"❌ 加载TV M3U失败: {e}")
         return channels
@@ -254,9 +242,9 @@ class IPTVUpdater:
                         if url.startswith("http") and self._is_valid_url(url):
                             cat, disp = self.categorize_channel(name)
                             std_name = self.normalize_channel_name(name)
-                            # 🔴 修改：将优先级从 -1 提升至 -10，强制优先输出
+                            # 🔴 保持高优先级 -10，确保 Migu 源排在最前面
                             channels.append((std_name, url, cat, -10)) 
-            print(f"✅ Migu 源加载完成，共获取 {len(channels)} 个频道。")
+            print(f"✅ Migu 源加载完成，共获取 {len(channels)} 个频道流。")
         except Exception as e:
             print(f"❌ 加载 Migu 源失败: {e}")
         return channels
@@ -275,20 +263,19 @@ class IPTVUpdater:
         # 获取所有源的数据
         all_channels.extend(self.fetch_xichong_channel())
         all_channels.extend(self.fetch_signed_channels())
+        
+        # === 2. 插入 Migu 源 ===
+        all_channels.extend(self.load_migu_source())
+        
+        # === 3. 加载其他辅助源 ===
         all_channels.extend(self.load_priority_source())
-        
-        # 🔴 确保 Migu 源在列表中
-        all_channels.extend(self.load_migu_source()) 
-        
         all_channels.extend(self.load_remote_whitelist())
         all_channels.extend(self.load_tv_m3u())
         
         # --- 去重逻辑 ---
-        # 基于【标准化名称 + 链接】进行去重
         unique_map = {}
         for name, url, cat, priority in all_channels:
             key = (name, url)
-            # 如果Key不存在，或者新的优先级更高(数值更小)，则更新
             if key not in unique_map or priority < unique_map[key][3]:
                 unique_map[key] = (name, url, cat, priority)
                 
