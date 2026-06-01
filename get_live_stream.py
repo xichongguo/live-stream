@@ -272,7 +272,7 @@ class IPTVUpdater:
                             cat, disp = self.categorize_channel(name)
                             std_name = self.normalize_channel_name(name)
                             # 保持高优先级 -10
-                            channels.append((std_name, url, cat, -10)) 
+                            channels.append((std_name, url, cat, 10)) 
             print(f"✅ Migu 源加载完成，共获取 {len(channels)} 个频道流。")
         except Exception as e:
             print(f"❌ 加载 Migu 源失败: {e}")
