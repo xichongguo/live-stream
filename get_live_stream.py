@@ -16,7 +16,7 @@ class IPTVUpdater:
         # === 1. 核心配置 ===
         self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
         self.MIGU_LOCAL_FILE = "migu.txt" # 兜底方案：本地文件名
-        self.HD_SOURCE_URL = "http://114.226.216.63:5140/playlist.m3u"
+        self.HD_SOURCE_URL = "https://raw.githubusercontent.com/xichongguo/xichongys2/refs/heads/main/output.m3u8"
         
         # 定义输出目录和文件
         self.OUTPUT_DIR = "live"
@@ -30,7 +30,8 @@ class IPTVUpdater:
         self.IPTV_JSON_URL = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
         self.IPTV_SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"
         self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
-        self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+        # 这个白名单IP在GitHub服务器上极易造成网络阻塞，已将其加载顺序挪到最后
+        self.REMOTE_WHITELIST_URL = "http://114.226.216.63:5140/playlist.m3u"
         
         print(f"🌍 运行环境：2026-06-02 星期二 | 广东省 佛山市 (定制版)")
         
@@ -63,7 +64,7 @@ class IPTVUpdater:
         channels = []
         try:
             print(f"🚀 正在连接 kstatic.sctvcloud.com 获取私有源...")
-            response = requests.get(self.IPTV_JSON_URL, headers=self.DEFAULT_HEADERS, timeout=10)
+            response = requests.get(self.IPTV_JSON_URL, headers=self.DEFAULT_HEADERS, timeout=10, verify=False)
             response.encoding = response.apparent_encoding
             if response.status_code == 200:
                 data = response.json()
@@ -94,7 +95,7 @@ class IPTVUpdater:
             else:
                 print(f"❌ 私有源网络请求失败: {response.status_code}")
         except Exception as e:
-            print(f"❌ 私有源处理异常: {e}")
+            print(f"⚠️ 私有源连接超时或失败(GitHub服务器可能无法访问国内接口)，已自动跳过: {e}")
         return channels
 
     def fetch_xichong_channel(self):
@@ -113,7 +114,7 @@ class IPTVUpdater:
                         print(f"✅ 成功获取西充综合直播流！")
                         channels.append(("西充综合", m3u8_url, '本地节目', -4))
         except Exception as e:
-            print(f"❌ 西充频道处理异常: {e}")
+            print(f"⚠️ 西充频道连接超时或失败(GitHub服务器可能无法访问国内接口)，已自动跳过: {e}")
         return channels
 
     def _rename_channel(self, index, original_title):
@@ -201,7 +202,6 @@ class IPTVUpdater:
         # 14. 兜底分类
         return "综合/其他", name
 
-    # 强制将 GitHub 源的分类指定为“高清节目”
     def load_hd_source(self):
         channels = []
         try:
@@ -219,33 +219,12 @@ class IPTVUpdater:
                         url = lines[i+1].strip()
                         if url.startswith("http") and self._is_valid_url(url):
                             std_name = self.normalize_channel_name(name)
-                            # 强制归类为“高清节目”，并设置较高的权重(-5)使其排在前面
                             channels.append((std_name, url, '高清节目', -5))
             print(f"✅ 高清源加载完成，共获取 {len(channels)} 个频道流。")
         except Exception as e:
             print(f"❌ 加载高清源失败: {e}")
         return channels
 
-    def load_remote_whitelist(self):
-        channels = []
-        try:
-            print(f"🚀 正在连接远程白名单获取本地节目...")
-            response = requests.get(self.REMOTE_WHITELIST_URL, timeout=20)
-            response.encoding = response.apparent_encoding
-            for line in response.text.strip().splitlines():
-                if "," in line:
-                    parts = line.split(",", 1)
-                    name, url = parts[0].strip(), parts[1].strip()
-                    if name and url and self._is_valid_url(url):
-                        cat, disp = self.categorize_channel(name)
-                        std_name = self.normalize_channel_name(name)
-                        channels.append((std_name, url, cat, 1))
-            print(f"✅ 白名单加载完成。")
-        except Exception as e:
-            print(f"❌ 加载白名单失败: {e}")
-        return channels
-
-    # 修复版：解决乱码问题
     def load_migu_source(self):
         channels = []
         content = ""
@@ -254,12 +233,10 @@ class IPTVUpdater:
         if os.path.exists(self.MIGU_LOCAL_FILE):
             print(f"📂 发现本地 Migu 文件: {self.MIGU_LOCAL_FILE}，直接读取...")
             try:
-                # 尝试用 UTF-8 读取
                 with open(self.MIGU_LOCAL_FILE, 'r', encoding='utf-8') as f:
                     content = f.read()
                 print(f"✅ 本地 Migu 文件读取成功 (UTF-8)。")
             except UnicodeDecodeError:
-                # 如果 UTF-8 失败，尝试 GBK (解决乱码的关键)
                 try:
                     with open(self.MIGU_LOCAL_FILE, 'r', encoding='gbk') as f:
                         content = f.read()
@@ -270,38 +247,31 @@ class IPTVUpdater:
         # 2. 如果本地没有，再尝试网络抓取
         if not content:
             print(f"🌍 本地无文件，正在尝试联网获取 Migu 源...")
-            max_retries = 3
+            max_retries = 2
             for attempt in range(max_retries):
                 try:
                     print(f"🚀 第 {attempt + 1} 次尝试连接 {self.MIGU_SOURCE_URL}...")
-                    response = requests.get(self.MIGU_SOURCE_URL, timeout=15, headers=self.DEFAULT_HEADERS)
+                    response = requests.get(self.MIGU_SOURCE_URL, timeout=10, headers=self.DEFAULT_HEADERS, verify=False)
                     
-                    # 尝试自动检测编码
                     detected_encoding = response.apparent_encoding
-                    print(f"   🔍 检测到编码: {detected_encoding}")
-                    
-                    # 尝试用检测到的编码解码
                     try:
                         content = response.content.decode(detected_encoding)
                     except:
-                        # 如果失败，尝试 GBK
                         content = response.content.decode('gbk')
                     
                     print(f"✅ Migu 源网络抓取成功！")
                     break
                 except Exception as e:
-                    print(f"⚠️ 第 {attempt + 1} 次尝试失败: {e}")
+                    print(f"⚠️ 第 {attempt + 1} 次尝试失败 (GitHub服务器可能无法访问该国内HTTP接口): {e}")
                     if attempt < max_retries - 1:
-                        time.sleep(2)
+                        time.sleep(1)
 
         # 3. 解析内容
         if content:
-            # 将获取到的内容写入临时文件再读取，确保编码一致
             temp_file = "temp_migu.m3u"
             with open(temp_file, 'w', encoding='utf-8') as f:
                 f.write(content)
             
-            # 重新读取文件
             with open(temp_file, 'r', encoding='utf-8') as f:
                 lines = f.read().strip().splitlines()
             
@@ -314,23 +284,41 @@ class IPTVUpdater:
                     if i + 1 < len(lines):
                         url = lines[i+1].strip()
                         if url.startswith("http") and self._is_valid_url(url):
-                            # --- 核心修复逻辑 ---
                             std_name = self.normalize_channel_name(name)
                             cat, disp = self.categorize_channel(std_name)
-                            # 强制规则
                             if 'cctv' in std_name.lower() or '中央' in std_name:
                                 cat = '央视'
                             elif '卫视' in std_name:
                                 cat = '卫视'
                             channels.append((std_name, url, cat, -10))
             
-            # 清理临时文件
             if os.path.exists(temp_file):
                 os.remove(temp_file)
                 
             print(f"✅ Migu 源解析完成，共获取 {len(channels)} 个频道流。")
         else:
-            print(f"❌ 无法获取 Migu 源内容。")
+            print(f"⚠️ 无法获取 Migu 源内容。")
+        return channels
+
+    # 优化了白名单的加载逻辑，缩短超时时间，防止阻塞主流程
+    def load_remote_whitelist(self):
+        channels = []
+        try:
+            print(f"🚀 正在连接远程白名单获取本地节目...")
+            # 缩短超时时间，并忽略SSL验证，避免长时间阻塞
+            response = requests.get(self.REMOTE_WHITELIST_URL, timeout=8, verify=False)
+            response.encoding = response.apparent_encoding
+            for line in response.text.strip().splitlines():
+                if "," in line:
+                    parts = line.split(",", 1)
+                    name, url = parts[0].strip(), parts[1].strip()
+                    if name and url and self._is_valid_url(url):
+                        cat, disp = self.categorize_channel(name)
+                        std_name = self.normalize_channel_name(name)
+                        channels.append((std_name, url, cat, 1))
+            print(f"✅ 白名单加载完成。")
+        except Exception as e:
+            print(f"⚠️ 加载白名单失败或超时 (该IP在GitHub服务器上极易被拦截，已自动跳过): {e}")
         return channels
 
     def _is_valid_url(self, url):
@@ -345,11 +333,12 @@ class IPTVUpdater:
         all_channels = []
         
         # 获取所有源的数据
+        # ⚠️ 核心修复：将容易阻塞网络的 load_remote_whitelist 挪到了最后执行
         all_channels.extend(self.fetch_xichong_channel())
         all_channels.extend(self.fetch_signed_channels())
         all_channels.extend(self.load_hd_source())
-        all_channels.extend(self.load_migu_source()) # 使用修复后的版本
-        all_channels.extend(self.load_remote_whitelist())
+        all_channels.extend(self.load_migu_source()) 
+        all_channels.extend(self.load_remote_whitelist()) # 放在最后，即使失败也不影响前面的源
         
         print(f"✅ 跳过去重，共收集 {len(all_channels)} 个频道流（含重复）")
         
@@ -358,7 +347,6 @@ class IPTVUpdater:
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
-            # 在排序规则中加入“高清节目”，并将其排在“本地节目”和“央视”之后
             group_order = {
                 '本地节目': 0, '央视': 1, '高清节目': 2, '卫视': 3, '四川': 4, '广东': 5,
                 '电影频道': 6, '电影轮播': 7, '体育': 8, '少儿': 9, '教育': 10,
