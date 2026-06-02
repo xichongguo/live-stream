@@ -1,199 +1,211 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="南充科教" group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=94851dc56a12549e0bfabc56f63974f5&wsTime=1780460653
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=9b12135c239d1a924bf9b94b72040d52&wsTime=1780462069
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=70715fd17ddcc11d6c67609d69155c97&wsTime=1780460653
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=9236df9837b1cc21c5d9dbcc446b3a3f&wsTime=1780462069
+#EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
+https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
+#EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
+https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
+#EXTINF:-1 tvg-name="西充县华光乡黄家庙村桅杆湾志" group-title="本地节目",西充县华光乡黄家庙村桅杆湾志
+https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
+#EXTINF:-1 tvg-name="西充王河湾冬季风景" group-title="本地节目",西充王河湾冬季风景
+https://us-xpc5.xpccdn.com/25fc9e48-6a27-4148-8169-00255208627b/2b4c670a-6231-4a28-8707-5835df8568d3.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%2234m0k6dcmmnkfyi6w%22%2C%22ip%22%3A%22223.73.134.245%2C120.241.65.73%22%7D
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
-#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV1HD
-#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+#EXTINF:-1 tvg-name="西充莲花湖夜景" group-title="本地节目",西充莲花湖夜景
+https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
+#EXTINF:-1 tvg-name="走进四川西充" group-title="本地节目",走进四川西充
+https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
+#EXTINF:-1 tvg-name="CCTV10HD" group-title="高清",CCTV10HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV10HD
-#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+#EXTINF:-1 tvg-name="CCTV11HD" group-title="高清",CCTV11HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV11HD
-#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+#EXTINF:-1 tvg-name="CCTV12HD" group-title="高清",CCTV12HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV12HD
-#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+#EXTINF:-1 tvg-name="CCTV13HD" group-title="高清",CCTV13HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV13HD
-#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+#EXTINF:-1 tvg-name="CCTV14HD" group-title="高清",CCTV14HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV14HD
-#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+#EXTINF:-1 tvg-name="CCTV164K（SDR）" group-title="高清",CCTV164K（SDR）
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV164K%EF%BC%88SDR%EF%BC%89
-#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+#EXTINF:-1 tvg-name="CCTV16HD" group-title="高清",CCTV16HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV16HD
-#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+#EXTINF:-1 tvg-name="CCTV17HD" group-title="高清",CCTV17HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV17HD
-#EXTINF:-1 tvg-name="CCTV-5 体育" group-title="高清节目",CCTV-5 体育
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5HD
-#EXTINF:-1 tvg-name="CCTV-5 体育" group-title="高清节目",CCTV-5 体育
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5%2BHD
-#EXTINF:-1 tvg-name="CCTV2HD" group-title="高清节目",CCTV2HD
+#EXTINF:-1 tvg-name="CCTV1HD" group-title="高清",CCTV1HD
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV1HD
+#EXTINF:-1 tvg-name="CCTV2HD" group-title="高清",CCTV2HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV2HD
-#EXTINF:-1 tvg-name="CCTV3HD" group-title="高清节目",CCTV3HD
+#EXTINF:-1 tvg-name="CCTV3HD" group-title="高清",CCTV3HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV3HD
-#EXTINF:-1 tvg-name="CCTV4HD" group-title="高清节目",CCTV4HD
+#EXTINF:-1 tvg-name="CCTV4HD" group-title="高清",CCTV4HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV4HD
-#EXTINF:-1 tvg-name="CCTV4K" group-title="高清节目",CCTV4K
+#EXTINF:-1 tvg-name="CCTV4K" group-title="高清",CCTV4K
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV4K
-#EXTINF:-1 tvg-name="CCTV6HD" group-title="高清节目",CCTV6HD
+#EXTINF:-1 tvg-name="CCTV5+HD" group-title="高清",CCTV5+HD
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5%2BHD
+#EXTINF:-1 tvg-name="CCTV5HD" group-title="高清",CCTV5HD
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5HD
+#EXTINF:-1 tvg-name="CCTV6HD" group-title="高清",CCTV6HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV6HD
-#EXTINF:-1 tvg-name="CCTV7HD" group-title="高清节目",CCTV7HD
+#EXTINF:-1 tvg-name="CCTV7HD" group-title="高清",CCTV7HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV7HD
-#EXTINF:-1 tvg-name="CCTV8HD" group-title="高清节目",CCTV8HD
+#EXTINF:-1 tvg-name="CCTV8HD" group-title="高清",CCTV8HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV8HD
-#EXTINF:-1 tvg-name="CCTV9HD" group-title="高清节目",CCTV9HD
+#EXTINF:-1 tvg-name="CCTV9HD" group-title="高清",CCTV9HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV9HD
-#EXTINF:-1 tvg-name="CCTV音乐HD" group-title="高清节目",CCTV音乐HD
+#EXTINF:-1 tvg-name="CCTV音乐HD" group-title="高清",CCTV音乐HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV%E9%9F%B3%E4%B9%90HD
-#EXTINF:-1 tvg-name="CETV1HD" group-title="高清节目",CETV1HD
+#EXTINF:-1 tvg-name="CETV1HD" group-title="高清",CETV1HD
 http://114.226.216.63:5140/%E6%95%99%E8%82%B2/CETV1HD
-#EXTINF:-1 tvg-name="CETV4HD" group-title="高清节目",CETV4HD
+#EXTINF:-1 tvg-name="CETV4HD" group-title="高清",CETV4HD
 http://114.226.216.63:5140/%E6%95%99%E8%82%B2/CETV4HD
-#EXTINF:-1 tvg-name="CGTN俄语HD" group-title="高清节目",CGTN俄语HD
+#EXTINF:-1 tvg-name="CGTN俄语HD" group-title="高清",CGTN俄语HD
 http://114.226.216.63:5140/%E5%9B%BD%E9%99%85/CGTN%E4%BF%84%E8%AF%ADHD
-#EXTINF:-1 tvg-name="CGTN法语HD" group-title="高清节目",CGTN法语HD
+#EXTINF:-1 tvg-name="CGTN法语HD" group-title="高清",CGTN法语HD
 http://114.226.216.63:5140/%E5%9B%BD%E9%99%85/CGTN%E6%B3%95%E8%AF%ADHD
-#EXTINF:-1 tvg-name="CGTN西班牙语HD" group-title="高清节目",CGTN西班牙语HD
+#EXTINF:-1 tvg-name="CGTN西班牙语HD" group-title="高清",CGTN西班牙语HD
 http://114.226.216.63:5140/%E5%9B%BD%E9%99%85/CGTN%E8%A5%BF%E7%8F%AD%E7%89%99%E8%AF%ADHD
-#EXTINF:-1 tvg-name="三沙卫视HD" group-title="高清节目",三沙卫视HD
+#EXTINF:-1 tvg-name="三沙卫视HD" group-title="高清",三沙卫视HD
 http://114.226.216.63:5140/%E6%B5%B7%E5%8D%97/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="东南卫视HD" group-title="高清节目",东南卫视HD
+#EXTINF:-1 tvg-name="东南卫视HD" group-title="高清",东南卫视HD
 http://114.226.216.63:5140/%E7%A6%8F%E5%BB%BA/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="东方卫视4KSDR" group-title="高清节目",东方卫视4KSDR
+#EXTINF:-1 tvg-name="东方卫视4KSDR" group-title="高清",东方卫视4KSDR
 http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 tvg-name="东方卫视HD" group-title="高清节目",东方卫视HD
+#EXTINF:-1 tvg-name="东方卫视HD" group-title="高清",东方卫视HD
 http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="东方财经HD" group-title="高清节目",东方财经HD
+#EXTINF:-1 tvg-name="东方财经HD" group-title="高清",东方财经HD
 http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E4%B8%9C%E6%96%B9%E8%B4%A2%E7%BB%8FHD
-#EXTINF:-1 tvg-name="中国天气HD" group-title="高清节目",中国天气HD
+#EXTINF:-1 tvg-name="中国天气HD" group-title="高清",中国天气HD
 http://114.226.216.63:5140/%E8%B5%84%E8%AE%AF/%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94HD
-#EXTINF:-1 tvg-name="云南卫视HD" group-title="高清节目",云南卫视HD
+#EXTINF:-1 tvg-name="云南卫视HD" group-title="高清",云南卫视HD
 http://114.226.216.63:5140/%E4%BA%91%E5%8D%97/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="优漫卡通HD" group-title="高清节目",优漫卡通HD
+#EXTINF:-1 tvg-name="优漫卡通HD" group-title="高清",优漫卡通HD
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E4%BC%98%E6%BC%AB%E5%8D%A1%E9%80%9AHD
-#EXTINF:-1 tvg-name="兵团卫视HD" group-title="高清节目",兵团卫视HD
+#EXTINF:-1 tvg-name="兵团卫视HD" group-title="高清",兵团卫视HD
 http://114.226.216.63:5140/%E6%96%B0%E7%96%86/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="北京卫视4K" group-title="高清节目",北京卫视4K
+#EXTINF:-1 tvg-name="北京卫视4K" group-title="高清",北京卫视4K
 http://114.226.216.63:5140/%E5%8C%97%E4%BA%AC/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%864K
-#EXTINF:-1 tvg-name="北京卫视4K(HDR)" group-title="高清节目",北京卫视4K(HDR)
+#EXTINF:-1 tvg-name="北京卫视4K(HDR)" group-title="高清",北京卫视4K(HDR)
 http://114.226.216.63:5140/%E5%8C%97%E4%BA%AC/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%864K%28HDR%29
-#EXTINF:-1 tvg-name="北京卫视HD" group-title="高清节目",北京卫视HD
+#EXTINF:-1 tvg-name="北京卫视HD" group-title="高清",北京卫视HD
 http://114.226.216.63:5140/%E5%8C%97%E4%BA%AC/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="卡酷少儿HD" group-title="高清节目",卡酷少儿HD
+#EXTINF:-1 tvg-name="卡酷少儿HD" group-title="高清",卡酷少儿HD
 http://114.226.216.63:5140/%E5%8C%97%E4%BA%AC/%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BFHD
-#EXTINF:-1 tvg-name="吉林卫视HD" group-title="高清节目",吉林卫视HD
+#EXTINF:-1 tvg-name="吉林卫视HD" group-title="高清",吉林卫视HD
 http://114.226.216.63:5140/%E5%90%89%E6%9E%97/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="四川卫视4KSDR" group-title="高清节目",四川卫视4KSDR
+#EXTINF:-1 tvg-name="四川卫视4KSDR" group-title="高清",四川卫视4KSDR
 http://114.226.216.63:5140/%E5%9B%9B%E5%B7%9D/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 tvg-name="四川卫视HD" group-title="高清节目",四川卫视HD
+#EXTINF:-1 tvg-name="四川卫视HD" group-title="高清",四川卫视HD
 http://114.226.216.63:5140/%E5%9B%9B%E5%B7%9D/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="天津卫视HD" group-title="高清节目",天津卫视HD
+#EXTINF:-1 tvg-name="天津卫视HD" group-title="高清",天津卫视HD
 http://114.226.216.63:5140/%E5%A4%A9%E6%B4%A5/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="宁夏卫视HD" group-title="高清节目",宁夏卫视HD
+#EXTINF:-1 tvg-name="宁夏卫视HD" group-title="高清",宁夏卫视HD
 http://114.226.216.63:5140/%E5%AE%81%E5%A4%8F/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="安徽卫视HD" group-title="高清节目",安徽卫视HD
+#EXTINF:-1 tvg-name="安徽卫视HD" group-title="高清",安徽卫视HD
 http://114.226.216.63:5140/%E5%AE%89%E5%BE%BD/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="山东卫视4KSDR" group-title="高清节目",山东卫视4KSDR
+#EXTINF:-1 tvg-name="山东卫视4KSDR" group-title="高清",山东卫视4KSDR
 http://114.226.216.63:5140/%E5%B1%B1%E4%B8%9C/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 tvg-name="山东卫视HD" group-title="高清节目",山东卫视HD
+#EXTINF:-1 tvg-name="山东卫视HD" group-title="高清",山东卫视HD
 http://114.226.216.63:5140/%E5%B1%B1%E4%B8%9C/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="山东教育卫视HD" group-title="高清节目",山东教育卫视HD
+#EXTINF:-1 tvg-name="山东教育卫视HD" group-title="高清",山东教育卫视HD
 http://114.226.216.63:5140/%E6%95%99%E8%82%B2/%E5%B1%B1%E4%B8%9C%E6%95%99%E8%82%B2%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="山西卫视HD" group-title="高清节目",山西卫视HD
+#EXTINF:-1 tvg-name="山西卫视HD" group-title="高清",山西卫视HD
 http://114.226.216.63:5140/%E5%B1%B1%E8%A5%BF/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="广东卫视4K(HDR)" group-title="高清节目",广东卫视4K(HDR)
+#EXTINF:-1 tvg-name="广东卫视4K(HDR)" group-title="高清",广东卫视4K(HDR)
 http://114.226.216.63:5140/%E5%B9%BF%E4%B8%9C/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%864K%28HDR%29
-#EXTINF:-1 tvg-name="广东卫视4K(SDR)" group-title="高清节目",广东卫视4K(SDR)
+#EXTINF:-1 tvg-name="广东卫视4K(SDR)" group-title="高清",广东卫视4K(SDR)
 http://114.226.216.63:5140/%E5%B9%BF%E4%B8%9C/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%864K%28SDR%29
-#EXTINF:-1 tvg-name="广东卫视HD" group-title="高清节目",广东卫视HD
+#EXTINF:-1 tvg-name="广东卫视HD" group-title="高清",广东卫视HD
 http://114.226.216.63:5140/%E5%B9%BF%E4%B8%9C/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="广西卫视HD" group-title="高清节目",广西卫视HD
+#EXTINF:-1 tvg-name="广西卫视HD" group-title="高清",广西卫视HD
 http://114.226.216.63:5140/%E5%B9%BF%E8%A5%BF/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="快乐垂钓HD" group-title="高清节目",快乐垂钓HD
+#EXTINF:-1 tvg-name="快乐垂钓HD" group-title="高清",快乐垂钓HD
 http://114.226.216.63:5140/%E4%BC%91%E9%97%B2/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93HD
-#EXTINF:-1 tvg-name="文物宝库HD" group-title="高清节目",文物宝库HD
+#EXTINF:-1 tvg-name="文物宝库HD" group-title="高清",文物宝库HD
 http://114.226.216.63:5140/%E6%96%87%E5%8C%96/%E6%96%87%E7%89%A9%E5%AE%9D%E5%BA%93HD
-#EXTINF:-1 tvg-name="新疆卫视HD" group-title="高清节目",新疆卫视HD
+#EXTINF:-1 tvg-name="新疆卫视HD" group-title="高清",新疆卫视HD
 http://114.226.216.63:5140/%E6%96%B0%E7%96%86/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="梨园HD" group-title="高清节目",梨园HD
+#EXTINF:-1 tvg-name="梨园HD" group-title="高清",梨园HD
 http://114.226.216.63:5140/%E6%88%8F%E6%9B%B2/%E6%A2%A8%E5%9B%ADHD
-#EXTINF:-1 tvg-name="武术世界HD" group-title="高清节目",武术世界HD
+#EXTINF:-1 tvg-name="武术世界HD" group-title="高清",武术世界HD
 http://114.226.216.63:5140/%E4%BD%93%E8%82%B2/%E6%AD%A6%E6%9C%AF%E4%B8%96%E7%95%8CHD
-#EXTINF:-1 tvg-name="江苏体育休闲HD" group-title="高清节目",江苏体育休闲HD
+#EXTINF:-1 tvg-name="江苏体育休闲HD" group-title="高清",江苏体育休闲HD
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E4%BD%93%E8%82%B2%E4%BC%91%E9%97%B2HD
-#EXTINF:-1 tvg-name="江苏卫视4K(HDR)" group-title="高清节目",江苏卫视4K(HDR)
+#EXTINF:-1 tvg-name="江苏卫视4K(HDR)" group-title="高清",江苏卫视4K(HDR)
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%864K%28HDR%29
-#EXTINF:-1 tvg-name="江苏卫视4KSDR" group-title="高清节目",江苏卫视4KSDR
+#EXTINF:-1 tvg-name="江苏卫视4KSDR" group-title="高清",江苏卫视4KSDR
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 tvg-name="江苏卫视HD" group-title="高清节目",江苏卫视HD
+#EXTINF:-1 tvg-name="江苏卫视HD" group-title="高清",江苏卫视HD
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="江苏城市HD" group-title="高清节目",江苏城市HD
+#EXTINF:-1 tvg-name="江苏城市HD" group-title="高清",江苏城市HD
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%9F%8E%E5%B8%82HD
-#EXTINF:-1 tvg-name="江苏影视HD" group-title="高清节目",江苏影视HD
+#EXTINF:-1 tvg-name="江苏影视HD" group-title="高清",江苏影视HD
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%BD%B1%E8%A7%86HD
-#EXTINF:-1 tvg-name="江苏教育HD" group-title="高清节目",江苏教育HD
+#EXTINF:-1 tvg-name="江苏教育HD" group-title="高清",江苏教育HD
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E6%95%99%E8%82%B2HD
-#EXTINF:-1 tvg-name="江苏新闻HD" group-title="高清节目",江苏新闻HD
+#EXTINF:-1 tvg-name="江苏新闻HD" group-title="高清",江苏新闻HD
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E6%96%B0%E9%97%BBHD
-#EXTINF:-1 tvg-name="江苏综艺HD" group-title="高清节目",江苏综艺HD
+#EXTINF:-1 tvg-name="江苏综艺HD" group-title="高清",江苏综艺HD
 http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E7%BB%BC%E8%89%BAHD
-#EXTINF:-1 tvg-name="江西卫视HD" group-title="高清节目",江西卫视HD
+#EXTINF:-1 tvg-name="江西卫视HD" group-title="高清",江西卫视HD
 http://114.226.216.63:5140/%E6%B1%9F%E8%A5%BF/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="河北卫视HD" group-title="高清节目",河北卫视HD
+#EXTINF:-1 tvg-name="河北卫视HD" group-title="高清",河北卫视HD
 http://114.226.216.63:5140/%E6%B2%B3%E5%8C%97/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="河南卫视HD" group-title="高清节目",河南卫视HD
+#EXTINF:-1 tvg-name="河南卫视HD" group-title="高清",河南卫视HD
 http://114.226.216.63:5140/%E6%B2%B3%E5%8D%97/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="法治天地HD" group-title="高清节目",法治天地HD
+#EXTINF:-1 tvg-name="法治天地HD" group-title="高清",法治天地HD
 http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E6%B3%95%E6%B2%BB%E5%A4%A9%E5%9C%B0HD
-#EXTINF:-1 tvg-name="浙江卫视4KSDR" group-title="高清节目",浙江卫视4KSDR
+#EXTINF:-1 tvg-name="浙江卫视4KSDR" group-title="高清",浙江卫视4KSDR
 http://114.226.216.63:5140/%E6%B5%99%E6%B1%9F/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 tvg-name="浙江卫视HD" group-title="高清节目",浙江卫视HD
+#EXTINF:-1 tvg-name="浙江卫视HD" group-title="高清",浙江卫视HD
 http://114.226.216.63:5140/%E6%B5%99%E6%B1%9F/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="海南卫视HD" group-title="高清节目",海南卫视HD
+#EXTINF:-1 tvg-name="海南卫视HD" group-title="高清",海南卫视HD
 http://114.226.216.63:5140/%E6%B5%B7%E5%8D%97/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="深圳卫视4K(HDR)" group-title="高清节目",深圳卫视4K(HDR)
+#EXTINF:-1 tvg-name="深圳卫视4K(HDR)" group-title="高清",深圳卫视4K(HDR)
 http://114.226.216.63:5140/%E6%B7%B1%E5%9C%B3/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%864K%28HDR%29
-#EXTINF:-1 tvg-name="深圳卫视4K(SDR)" group-title="高清节目",深圳卫视4K(SDR)
+#EXTINF:-1 tvg-name="深圳卫视4K(SDR)" group-title="高清",深圳卫视4K(SDR)
 http://114.226.216.63:5140/%E6%B7%B1%E5%9C%B3/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%864K%28SDR%29
-#EXTINF:-1 tvg-name="深圳卫视HD" group-title="高清节目",深圳卫视HD
+#EXTINF:-1 tvg-name="深圳卫视HD" group-title="高清",深圳卫视HD
 http://114.226.216.63:5140/%E6%B7%B1%E5%9C%B3/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="湖北卫视HD" group-title="高清节目",湖北卫视HD
+#EXTINF:-1 tvg-name="湖北卫视HD" group-title="高清",湖北卫视HD
 http://114.226.216.63:5140/%E6%B9%96%E5%8C%97/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="湖南卫视" group-title="高清节目",湖南卫视
+#EXTINF:-1 tvg-name="湖南卫视" group-title="高清",湖南卫视
 http://114.226.216.63:5140/%E6%B9%96%E5%8D%97/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="湖南卫视4KSDR" group-title="高清节目",湖南卫视4KSDR
+#EXTINF:-1 tvg-name="湖南卫视4KSDR" group-title="高清",湖南卫视4KSDR
 http://114.226.216.63:5140/%E6%B9%96%E5%8D%97/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 tvg-name="环球购物HD" group-title="高清节目",环球购物HD
+#EXTINF:-1 tvg-name="环球购物HD" group-title="高清",环球购物HD
 http://114.226.216.63:5140/%E8%B4%AD%E7%89%A9/%E7%8E%AF%E7%90%83%E8%B4%AD%E7%89%A9HD
-#EXTINF:-1 tvg-name="甘肃卫视HD" group-title="高清节目",甘肃卫视HD
+#EXTINF:-1 tvg-name="甘肃卫视HD" group-title="高清",甘肃卫视HD
 http://114.226.216.63:5140/%E7%94%98%E8%82%83/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="生活时尚HD" group-title="高清节目",生活时尚HD
+#EXTINF:-1 tvg-name="生活时尚HD" group-title="高清",生活时尚HD
 http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9AHD
-#EXTINF:-1 tvg-name="睛彩广场舞HD（限免）" group-title="高清节目",睛彩广场舞HD（限免）
+#EXTINF:-1 tvg-name="睛彩广场舞HD（限免）" group-title="高清",睛彩广场舞HD（限免）
 http://114.226.216.63:5140/%E5%B9%BF%E5%9C%BA%E8%88%9E/%E7%9D%9B%E5%BD%A9%E5%B9%BF%E5%9C%BA%E8%88%9EHD%EF%BC%88%E9%99%90%E5%85%8D%EF%BC%89
-#EXTINF:-1 tvg-name="睛彩竞技HD（限免）" group-title="高清节目",睛彩竞技HD（限免）
+#EXTINF:-1 tvg-name="睛彩竞技HD（限免）" group-title="高清",睛彩竞技HD（限免）
 http://114.226.216.63:5140/%E4%BD%93%E8%82%B2/%E7%9D%9B%E5%BD%A9%E7%AB%9E%E6%8A%80HD%EF%BC%88%E9%99%90%E5%85%8D%EF%BC%89
-#EXTINF:-1 tvg-name="睛彩篮球HD（限免）" group-title="高清节目",睛彩篮球HD（限免）
+#EXTINF:-1 tvg-name="睛彩篮球HD（限免）" group-title="高清",睛彩篮球HD（限免）
 http://114.226.216.63:5140/%E4%BD%93%E8%82%B2/%E7%9D%9B%E5%BD%A9%E7%AF%AE%E7%90%83HD%EF%BC%88%E9%99%90%E5%85%8D%EF%BC%89
-#EXTINF:-1 tvg-name="睛彩青少HD（限免）" group-title="高清节目",睛彩青少HD（限免）
+#EXTINF:-1 tvg-name="睛彩青少HD（限免）" group-title="高清",睛彩青少HD（限免）
 http://114.226.216.63:5140/%E5%B0%91%E5%84%BF/%E7%9D%9B%E5%BD%A9%E9%9D%92%E5%B0%91HD%EF%BC%88%E9%99%90%E5%85%8D%EF%BC%89
-#EXTINF:-1 tvg-name="茶HD" group-title="高清节目",茶HD
+#EXTINF:-1 tvg-name="茶HD" group-title="高清",茶HD
 http://114.226.216.63:5140/%E7%94%9F%E6%B4%BB/%E8%8C%B6HD
-#EXTINF:-1 tvg-name="西藏卫视HD" group-title="高清节目",西藏卫视HD
+#EXTINF:-1 tvg-name="西藏卫视HD" group-title="高清",西藏卫视HD
 http://114.226.216.63:5140/%E8%A5%BF%E8%97%8F/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="贵州卫视HD" group-title="高清节目",贵州卫视HD
+#EXTINF:-1 tvg-name="贵州卫视HD" group-title="高清",贵州卫视HD
 http://114.226.216.63:5140/%E8%B4%B5%E5%B7%9E/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="辽宁卫视HD" group-title="高清节目",辽宁卫视HD
+#EXTINF:-1 tvg-name="辽宁卫视HD" group-title="高清",辽宁卫视HD
 http://114.226.216.63:5140/%E8%BE%BD%E5%AE%81/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="都市剧场HD" group-title="高清节目",都市剧场HD
+#EXTINF:-1 tvg-name="都市剧场HD" group-title="高清",都市剧场HD
 http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E9%83%BD%E5%B8%82%E5%89%A7%E5%9C%BAHD
-#EXTINF:-1 tvg-name="重庆卫视HD" group-title="高清节目",重庆卫视HD
+#EXTINF:-1 tvg-name="重庆卫视HD" group-title="高清",重庆卫视HD
 http://114.226.216.63:5140/%E9%87%8D%E5%BA%86/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="金鹰卡通HD" group-title="高清节目",金鹰卡通HD
+#EXTINF:-1 tvg-name="金鹰卡通HD" group-title="高清",金鹰卡通HD
 http://114.226.216.63:5140/%E6%B9%96%E5%8D%97/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9AHD
-#EXTINF:-1 tvg-name="金鹰纪实HD" group-title="高清节目",金鹰纪实HD
+#EXTINF:-1 tvg-name="金鹰纪实HD" group-title="高清",金鹰纪实HD
 http://114.226.216.63:5140/%E6%B9%96%E5%8D%97/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9EHD
-#EXTINF:-1 tvg-name="青海卫视HD" group-title="高清节目",青海卫视HD
+#EXTINF:-1 tvg-name="青海卫视HD" group-title="高清",青海卫视HD
 http://114.226.216.63:5140/%E9%9D%92%E6%B5%B7/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 tvg-name="黑龙江卫视HD" group-title="高清节目",黑龙江卫视HD
+#EXTINF:-1 tvg-name="黑龙江卫视HD" group-title="高清",黑龙江卫视HD
 http://114.226.216.63:5140/%E9%BB%91%E9%BE%99%E6%B1%9F/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86HD
