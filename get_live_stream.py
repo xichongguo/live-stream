@@ -16,7 +16,7 @@ class IPTVUpdater:
         # === 1. 核心配置 ===
         self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
         self.MIGU_LOCAL_FILE = "migu.txt" # 兜底方案：本地文件名
-        self.HD_SOURCE_URL = "http://114.226.216.63:5140/playlist.m3u"
+        self.HD_SOURCE_URL = "https://raw.githubusercontent.com/xichongguo/xichongys2/refs/heads/main/output.m3u8"
         
         # 定义输出目录和文件
         self.OUTPUT_DIR = "live"
