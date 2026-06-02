@@ -381,7 +381,7 @@ class IPTVUpdater:
         all_channels.extend(self.fetch_xichong_channel())
         all_channels.extend(self.fetch_signed_channels())
         all_channels.extend(self.load_hd_source())
-        all_channels.extend(self.load_migu_source()) # 使用修复后的版本
+        all_channels.extend(self.load_migu_source())
         all_channels.extend(self.load_remote_whitelist())
         
         print(f"✅ 跳过去重，共收集 {len(all_channels)} 个频道流（含重复）")
@@ -391,34 +391,42 @@ class IPTVUpdater:
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"\n')
             
+            # 调整分类顺序：本地节目、央视、卫视、高清...
             group_order = { 
-                '本地节目': 0, '央视': 1, '卫视': 2, '四川': 3, '广东': 4, 
-                '电影频道': 5, '电影轮播': 6, '体育': 7, '少儿': 8, '教育': 9, 
-                '纪录片': 10, '音乐': 11, '生活科教': 12, '法治社会': 13, 
-                '港澳台': 13, '综合/其他': 15, '高清': 99 
+                '本地节目': 0,
+                '央视': 1,
+                '卫视': 2,
+                '高清': 3,
+                '四川': 4,
+                '广东': 5,
+                '电影频道': 6,
+                '电影轮播': 7,
+                '体育': 8,
+                '少儿': 9,
+                '教育': 10,
+                '纪录片': 11,
+                '音乐': 12,
+                '生活科教': 13,
+                '法治社会': 14,
+                '港澳台': 15,
+                '综合/其他': 16 
             }
             
             def sort_key(x):
                 group = x[2]
                 order = group_order.get(group, 99)
                 return (order, group, x[0])
-            
+                
             all_channels.sort(key=sort_key)
             
             for disp_name, url, cat, _ in all_channels:
                 f.write(f'#EXTINF:-1 tvg-name="{disp_name}" group-title="{cat}",{disp_name}\n')
                 f.write(f'{url}\n')
-        
+                
         print(f"🎉 完成！保存至: {os.path.abspath(self.OUTPUT_FILE)}")
 
-    def run(self):
-        try:
-            self.merge_and_export()
-        except Exception as e:
-            print(f"❌ 严重错误: {e}")
-            sys.exit(1)
 
-# --- 程序入口 ---
+# 程序主入口
 if __name__ == "__main__":
     updater = IPTVUpdater()
-    updater.run()
+    updater.merge_and_export()
