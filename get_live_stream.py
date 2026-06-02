@@ -14,7 +14,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 class IPTVUpdater:
     def __init__(self):
         # === 1. 核心配置 ===
-        self.MIGU_SOURCE_URL = "http://www.52top.com.cn:678/downloads/migu.txt"
+        self.MIGU_SOURCE_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/refs/heads/main/migu.txt"
         self.MIGU_LOCAL_FILE = "migu.txt" # 兜底方案：本地文件名
         self.HD_SOURCE_URL = "http://114.226.216.63:5140/playlist.m3u"
         
