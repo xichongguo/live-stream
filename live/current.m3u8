@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="南充科教" group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=cd897073d0d6b70b3533bb21d33fa8cd&wsTime=1780449429
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=c721d5fac1f5049535fb3c9561280f1f&wsTime=1780452290
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=2b5994e02c723d125453972e843797ca&wsTime=1780449429
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=72fe203ddc162105c21af41a9cd817cf&wsTime=1780452290
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
 https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
@@ -17,24 +17,28 @@ https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df8
 https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
 #EXTINF:-1 tvg-name="走进四川西充" group-title="本地节目",走进四川西充
 https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
-#EXTINF:-1 tvg-name="CCTV10HD" group-title="高清",CCTV10HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV10HD
-#EXTINF:-1 tvg-name="CCTV11HD" group-title="高清",CCTV11HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV11HD
-#EXTINF:-1 tvg-name="CCTV12HD" group-title="高清",CCTV12HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV12HD
-#EXTINF:-1 tvg-name="CCTV13HD" group-title="高清",CCTV13HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV13HD
-#EXTINF:-1 tvg-name="CCTV14HD" group-title="高清",CCTV14HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV14HD
-#EXTINF:-1 tvg-name="CCTV164K（SDR）" group-title="高清",CCTV164K（SDR）
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV164K%EF%BC%88SDR%EF%BC%89
-#EXTINF:-1 tvg-name="CCTV16HD" group-title="高清",CCTV16HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV16HD
-#EXTINF:-1 tvg-name="CCTV17HD" group-title="高清",CCTV17HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV17HD
-#EXTINF:-1 tvg-name="CCTV1HD" group-title="高清",CCTV1HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清",CCTV-1 综合
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV1HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV10HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV11HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV12HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV13HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV14HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV164K%EF%BC%88SDR%EF%BC%89
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV16HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV17HD
+#EXTINF:-1 tvg-name="CCTV-5 体育" group-title="高清",CCTV-5 体育
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5HD
+#EXTINF:-1 tvg-name="CCTV-5 体育" group-title="高清",CCTV-5 体育
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5%2BHD
 #EXTINF:-1 tvg-name="CCTV2HD" group-title="高清",CCTV2HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV2HD
 #EXTINF:-1 tvg-name="CCTV3HD" group-title="高清",CCTV3HD
@@ -43,10 +47,6 @@ http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV3HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV4HD
 #EXTINF:-1 tvg-name="CCTV4K" group-title="高清",CCTV4K
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV4K
-#EXTINF:-1 tvg-name="CCTV5+HD" group-title="高清",CCTV5+HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5%2BHD
-#EXTINF:-1 tvg-name="CCTV5HD" group-title="高清",CCTV5HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5HD
 #EXTINF:-1 tvg-name="CCTV6HD" group-title="高清",CCTV6HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV6HD
 #EXTINF:-1 tvg-name="CCTV7HD" group-title="高清",CCTV7HD
