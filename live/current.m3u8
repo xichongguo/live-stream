@@ -1,40 +1,32 @@
 #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml.gz"
 #EXTINF:-1 tvg-name="南充科教" group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=7219895af0e186d50ca7cb30695e54dd&wsTime=1780459792
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=94851dc56a12549e0bfabc56f63974f5&wsTime=1780460653
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=ffca50e98552700a0f6da51e9d1f508b&wsTime=1780459792
-#EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
-https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
-#EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
-https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
-#EXTINF:-1 tvg-name="西充县华光乡黄家庙村桅杆湾志" group-title="本地节目",西充县华光乡黄家庙村桅杆湾志
-https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
-#EXTINF:-1 tvg-name="西充王河湾冬季风景" group-title="本地节目",西充王河湾冬季风景
-https://us-xpc5.xpccdn.com/25fc9e48-6a27-4148-8169-00255208627b/2b4c670a-6231-4a28-8707-5835df8568d3.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%2234m0k6dcmmnkfyi6w%22%2C%22ip%22%3A%22223.73.134.245%2C120.241.65.73%22%7D
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=70715fd17ddcc11d6c67609d69155c97&wsTime=1780460653
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
-#EXTINF:-1 tvg-name="西充莲花湖夜景" group-title="本地节目",西充莲花湖夜景
-https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
-#EXTINF:-1 tvg-name="走进四川西充" group-title="本地节目",走进四川西充
-https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
-#EXTINF:-1 tvg-name="CCTV10HD" group-title="高清节目",CCTV10HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV10HD
-#EXTINF:-1 tvg-name="CCTV11HD" group-title="高清节目",CCTV11HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV11HD
-#EXTINF:-1 tvg-name="CCTV12HD" group-title="高清节目",CCTV12HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV12HD
-#EXTINF:-1 tvg-name="CCTV13HD" group-title="高清节目",CCTV13HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV13HD
-#EXTINF:-1 tvg-name="CCTV14HD" group-title="高清节目",CCTV14HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV14HD
-#EXTINF:-1 tvg-name="CCTV164K（SDR）" group-title="高清节目",CCTV164K（SDR）
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV164K%EF%BC%88SDR%EF%BC%89
-#EXTINF:-1 tvg-name="CCTV16HD" group-title="高清节目",CCTV16HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV16HD
-#EXTINF:-1 tvg-name="CCTV17HD" group-title="高清节目",CCTV17HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV17HD
-#EXTINF:-1 tvg-name="CCTV1HD" group-title="高清节目",CCTV1HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV1HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV10HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV11HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV12HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV13HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV14HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV164K%EF%BC%88SDR%EF%BC%89
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV16HD
+#EXTINF:-1 tvg-name="CCTV-1 综合" group-title="高清节目",CCTV-1 综合
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV17HD
+#EXTINF:-1 tvg-name="CCTV-5 体育" group-title="高清节目",CCTV-5 体育
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5HD
+#EXTINF:-1 tvg-name="CCTV-5 体育" group-title="高清节目",CCTV-5 体育
+http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5%2BHD
 #EXTINF:-1 tvg-name="CCTV2HD" group-title="高清节目",CCTV2HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV2HD
 #EXTINF:-1 tvg-name="CCTV3HD" group-title="高清节目",CCTV3HD
@@ -43,10 +35,6 @@ http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV3HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV4HD
 #EXTINF:-1 tvg-name="CCTV4K" group-title="高清节目",CCTV4K
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV4K
-#EXTINF:-1 tvg-name="CCTV5+HD" group-title="高清节目",CCTV5+HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5%2BHD
-#EXTINF:-1 tvg-name="CCTV5HD" group-title="高清节目",CCTV5HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5HD
 #EXTINF:-1 tvg-name="CCTV6HD" group-title="高清节目",CCTV6HD
 http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV6HD
 #EXTINF:-1 tvg-name="CCTV7HD" group-title="高清节目",CCTV7HD
