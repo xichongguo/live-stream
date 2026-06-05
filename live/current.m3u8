@@ -14,9 +14,9 @@ https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94
 #EXTINF:-1 group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
 #EXTINF:-1 group-title="本地节目",南充科教
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=e067c4698ccfc9cae0cd98521eb2ccf1&wsTime=1780708414
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=5770955ab01cb5d49fe57838431a6dad&wsTime=1780729013
 #EXTINF:-1 group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=21f409beb2765ffef29e8ae2c9459c51&wsTime=1780708414
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=3cc898e5ce28f932af409ed0cc8f60cf&wsTime=1780729013
 #EXTINF:-1 group-title="央视",CCTV1
 http://gslbmgsplive.miguvideo.com/wd_r2/cctv/cctv1hd/600/index.m3u8?msisdn=20260605060048c3e17079d98343358ec49cede8a11775&mdspid=&spid=699004&netType=0&sid=2201057821&pid=2028597139&timestamp=20260605060048&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=117.129.11.173&SecurityKey=20260605060048&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f7dfde536f953aede0aaf2a2fe6f81b3&ddCalcu=3fb7e1d08f8fd06ee5f326af29f5a3aa0eed
 #EXTINF:-1 group-title="央视",CCTV10科教
@@ -55,46 +55,46 @@ http://gslbmgsplive.miguvideo.com/migu/kailu/20200324/cctv7hd/50/index.m3u8?msis
 http://gslbmgsplive.miguvideo.com/wd_r2/2018/ocn/cctv8hd/1000/index.m3u8?msisdn=202606050600543c6a11e31b684107957c4498a8e6e911&mdspid=&spid=699004&netType=0&sid=5500212868&pid=2028597139&timestamp=20260605060054&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878356&ParentNodeID=-99&assertID=5500212868&client_ip=114.245.215.143&SecurityKey=20260605060054&promotionId=&mvid=5100001695&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f3fcb96da4d82e38256c256e54c00592&ddCalcu=2f93e5f00c40b0c9465dea645d28c26e5328
 #EXTINF:-1 group-title="央视",CCTV9纪录
 http://gslbmgsplive.miguvideo.com/migu/kailu/20200324/cctv9hd/50/index.m3u8?msisdn=20260605060055097e3ce8cf4a4dc08c58c0c727283ef3&mdspid=&spid=699004&netType=0&sid=5501083624&pid=2028597139&timestamp=20260605060055&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=673168140&ParentNodeID=-99&assertID=5501083624&client_ip=114.245.215.143&SecurityKey=20260605060055&promotionId=&mvid=5102910384&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=001b77ce784fba0fec4c4d11015c95d9&ddCalcu=90d0e5109b3c70571c0e1718d44fcb4ac0ef
-#EXTINF:-1 group-title="央视",CCTV10HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV10HD
-#EXTINF:-1 group-title="央视",CCTV11HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV11HD
-#EXTINF:-1 group-title="央视",CCTV12HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV12HD
-#EXTINF:-1 group-title="央视",CCTV13HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV13HD
-#EXTINF:-1 group-title="央视",CCTV14HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV14HD
-#EXTINF:-1 group-title="央视",CCTV164K（SDR）
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV164K%EF%BC%88SDR%EF%BC%89
-#EXTINF:-1 group-title="央视",CCTV16HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV16HD
-#EXTINF:-1 group-title="央视",CCTV17HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV17HD
-#EXTINF:-1 group-title="央视",CCTV1HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV1HD
-#EXTINF:-1 group-title="央视",CCTV2HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV2HD
-#EXTINF:-1 group-title="央视",CCTV3HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV3HD
-#EXTINF:-1 group-title="央视",CCTV4HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV4HD
+#EXTINF:-1 group-title="央视",CCTV1
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV1
+#EXTINF:-1 group-title="央视",CCTV10
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV10
+#EXTINF:-1 group-title="央视",CCTV11
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV11
+#EXTINF:-1 group-title="央视",CCTV12
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV12
+#EXTINF:-1 group-title="央视",CCTV13
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV13
+#EXTINF:-1 group-title="央视",CCTV14
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV14
+#EXTINF:-1 group-title="央视",CCTV15
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV15
+#EXTINF:-1 group-title="央视",CCTV17
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV17
+#EXTINF:-1 group-title="央视",CCTV2财经
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV2
+#EXTINF:-1 group-title="央视",CCTV3综艺
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV3
 #EXTINF:-1 group-title="央视",CCTV4K
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV4K
-#EXTINF:-1 group-title="央视",CCTV5+HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5%2BHD
-#EXTINF:-1 group-title="央视",CCTV5HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV5HD
-#EXTINF:-1 group-title="央视",CCTV6HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV6HD
-#EXTINF:-1 group-title="央视",CCTV7HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV7HD
-#EXTINF:-1 group-title="央视",CCTV8HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV8HD
-#EXTINF:-1 group-title="央视",CCTV9HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV9HD
-#EXTINF:-1 group-title="央视",CCTV音乐HD
-http://114.226.216.63:5140/%E5%A4%AE%E8%A7%86/CCTV%E9%9F%B3%E4%B9%90HD
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV4K
+#EXTINF:-1 group-title="央视",CCTV4中文国际
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV4
+#EXTINF:-1 group-title="央视",CCTV4欧洲
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV4%E6%AC%A7%E6%B4%B2
+#EXTINF:-1 group-title="央视",CCTV4美洲
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV4%E7%BE%8E%E6%B4%B2
+#EXTINF:-1 group-title="央视",CCTV5+体育赛事
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV5%2B
+#EXTINF:-1 group-title="央视",CCTV5体育
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV5
+#EXTINF:-1 group-title="央视",CCTV6电影
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV6
+#EXTINF:-1 group-title="央视",CCTV7
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV7
+#EXTINF:-1 group-title="央视",CCTV8
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV8
+#EXTINF:-1 group-title="央视",CCTV9
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CCTV9
 #EXTINF:-1 group-title="卫视",三沙卫视
 http://gslbmgsplive.miguvideo.com/migu/kailu/ssws/50/20251127/index.m3u8?msisdn=202606050601297d8b60f0c6f847f7983418a4c1a3d5b0&mdspid=&spid=600697&netType=0&sid=5910022307&pid=2028597139&timestamp=20260605060129&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=961023778&ParentNodeID=-99&assertID=5910022307&client_ip=117.129.11.173&SecurityKey=20260605060129&promotionId=&mvid=5900006777&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=938a4ad9cdc252e9ff9bd08719234749&ddCalcu=9943e7804a13402a9d197c8d0cd2b592fef9
 #EXTINF:-1 group-title="卫视",东方卫视
@@ -129,112 +129,134 @@ http://gslbmgsplive.miguvideo.com/envivo_x/2018/SD/chongqing/1000/index.m3u8?msi
 http://gslbmgsplive.miguvideo.com/migu/kailu/shan3xiws/50/20220809/index.m3u8?msisdn=20260605060120037cca5aa6e841708e7ad8d68f3f45fe&mdspid=&spid=600633&netType=0&sid=5910020475&pid=2028597139&timestamp=20260605060120&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=738910838&ParentNodeID=-99&assertID=5910020475&client_ip=114.245.215.143&SecurityKey=20260605060120&promotionId=&mvid=5900004331&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=ab524b6f023f1ec99c1ca147b6f3abde&ddCalcu=eadbeb50a28340fb66bf704213afc11ecc99
 #EXTINF:-1 group-title="卫视",青海卫视
 http://gslbmgsplive.miguvideo.com/envivo_w/2018/SD/qinghai/1000/index.m3u8?msisdn=20260605060123fe90864f194740bca5406fd6f2264e19&mdspid=&spid=600633&netType=0&sid=5910022166&pid=2028597139&timestamp=20260605060123&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=947472506&ParentNodeID=-99&assertID=5910022166&client_ip=117.129.11.173&SecurityKey=20260605060123&promotionId=&mvid=5900004353&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=1f4daeefe8399688d1a5de876464d9df&ddCalcu=f1dfe940dd74a06e4e6f7e88e3d959a618d8
-#EXTINF:-1 group-title="卫视",三沙卫视HD
-http://114.226.216.63:5140/%E6%B5%B7%E5%8D%97/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",东南卫视HD
-http://114.226.216.63:5140/%E7%A6%8F%E5%BB%BA/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",东方卫视4KSDR
-http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 group-title="卫视",东方卫视HD
-http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",云南卫视HD
-http://114.226.216.63:5140/%E4%BA%91%E5%8D%97/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",兵团卫视HD
-http://114.226.216.63:5140/%E6%96%B0%E7%96%86/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86HD
+#EXTINF:-1 group-title="卫视",三沙卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",东南卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",东方卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",东方卫视4K
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%864K
+#EXTINF:-1 group-title="卫视",云南卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",兵团卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",内蒙古卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",农林卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",北京卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86
 #EXTINF:-1 group-title="卫视",北京卫视4K
-http://114.226.216.63:5140/%E5%8C%97%E4%BA%AC/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%864K
-#EXTINF:-1 group-title="卫视",北京卫视4K(HDR)
-http://114.226.216.63:5140/%E5%8C%97%E4%BA%AC/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%864K%28HDR%29
-#EXTINF:-1 group-title="卫视",北京卫视HD
-http://114.226.216.63:5140/%E5%8C%97%E4%BA%AC/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",吉林卫视HD
-http://114.226.216.63:5140/%E5%90%89%E6%9E%97/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",四川卫视4KSDR
-http://114.226.216.63:5140/%E5%9B%9B%E5%B7%9D/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 group-title="卫视",四川卫视HD
-http://114.226.216.63:5140/%E5%9B%9B%E5%B7%9D/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",天津卫视HD
-http://114.226.216.63:5140/%E5%A4%A9%E6%B4%A5/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",宁夏卫视HD
-http://114.226.216.63:5140/%E5%AE%81%E5%A4%8F/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",安徽卫视HD
-http://114.226.216.63:5140/%E5%AE%89%E5%BE%BD/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",山东卫视4KSDR
-http://114.226.216.63:5140/%E5%B1%B1%E4%B8%9C/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 group-title="卫视",山东卫视HD
-http://114.226.216.63:5140/%E5%B1%B1%E4%B8%9C/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",山东教育卫视HD
-http://114.226.216.63:5140/%E6%95%99%E8%82%B2/%E5%B1%B1%E4%B8%9C%E6%95%99%E8%82%B2%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",山西卫视HD
-http://114.226.216.63:5140/%E5%B1%B1%E8%A5%BF/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",广东卫视4K(HDR)
-http://114.226.216.63:5140/%E5%B9%BF%E4%B8%9C/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%864K%28HDR%29
-#EXTINF:-1 group-title="卫视",广东卫视4K(SDR)
-http://114.226.216.63:5140/%E5%B9%BF%E4%B8%9C/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%864K%28SDR%29
-#EXTINF:-1 group-title="卫视",广东卫视HD
-http://114.226.216.63:5140/%E5%B9%BF%E4%B8%9C/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",广西卫视HD
-http://114.226.216.63:5140/%E5%B9%BF%E8%A5%BF/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",新疆卫视HD
-http://114.226.216.63:5140/%E6%96%B0%E7%96%86/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",江苏卫视4K(HDR)
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%864K%28HDR%29
-#EXTINF:-1 group-title="卫视",江苏卫视4KSDR
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 group-title="卫视",江苏卫视HD
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",江西卫视HD
-http://114.226.216.63:5140/%E6%B1%9F%E8%A5%BF/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",河北卫视HD
-http://114.226.216.63:5140/%E6%B2%B3%E5%8C%97/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",河南卫视HD
-http://114.226.216.63:5140/%E6%B2%B3%E5%8D%97/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",浙江卫视4KSDR
-http://114.226.216.63:5140/%E6%B5%99%E6%B1%9F/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 group-title="卫视",浙江卫视HD
-http://114.226.216.63:5140/%E6%B5%99%E6%B1%9F/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",海南卫视HD
-http://114.226.216.63:5140/%E6%B5%B7%E5%8D%97/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",深圳卫视4K(HDR)
-http://114.226.216.63:5140/%E6%B7%B1%E5%9C%B3/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%864K%28HDR%29
-#EXTINF:-1 group-title="卫视",深圳卫视4K(SDR)
-http://114.226.216.63:5140/%E6%B7%B1%E5%9C%B3/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%864K%28SDR%29
-#EXTINF:-1 group-title="卫视",深圳卫视HD
-http://114.226.216.63:5140/%E6%B7%B1%E5%9C%B3/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",湖北卫视HD
-http://114.226.216.63:5140/%E6%B9%96%E5%8C%97/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86HD
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%864K
+#EXTINF:-1 group-title="卫视",厦门卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%8E%A6%E9%97%A8%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",吉林卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",四川卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",四川卫视4K
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%864K
+#EXTINF:-1 group-title="卫视",天津卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",宁夏卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",安徽卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",山东卫视
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",山东卫视4K
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%864K
+#EXTINF:-1 group-title="卫视",山西卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",广东卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",广东卫视4K
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%864K
+#EXTINF:-1 group-title="卫视",广西卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",延边卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E5%BB%B6%E8%BE%B9%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",新疆卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",江苏卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",江苏卫视4K
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%864K
+#EXTINF:-1 group-title="卫视",江西卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",河北卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",河南卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",浙江卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",浙江卫视4K
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%864K
+#EXTINF:-1 group-title="卫视",海南卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",深圳卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",深圳卫视4K
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%864K
+#EXTINF:-1 group-title="卫视",湖北卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86
 #EXTINF:-1 group-title="卫视",湖南卫视
-http://114.226.216.63:5140/%E6%B9%96%E5%8D%97/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",湖南卫视4KSDR
-http://114.226.216.63:5140/%E6%B9%96%E5%8D%97/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%864KSDR
-#EXTINF:-1 group-title="卫视",甘肃卫视HD
-http://114.226.216.63:5140/%E7%94%98%E8%82%83/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",西藏卫视HD
-http://114.226.216.63:5140/%E8%A5%BF%E8%97%8F/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",贵州卫视HD
-http://114.226.216.63:5140/%E8%B4%B5%E5%B7%9E/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",辽宁卫视HD
-http://114.226.216.63:5140/%E8%BE%BD%E5%AE%81/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",重庆卫视HD
-http://114.226.216.63:5140/%E9%87%8D%E5%BA%86/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",青海卫视HD
-http://114.226.216.63:5140/%E9%9D%92%E6%B5%B7/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86HD
-#EXTINF:-1 group-title="卫视",黑龙江卫视HD
-http://114.226.216.63:5140/%E9%BB%91%E9%BE%99%E6%B1%9F/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86HD
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",湖南卫视4K
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%864K
+#EXTINF:-1 group-title="卫视",甘肃卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",西藏卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",贵州卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",辽宁卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",重庆卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",陕西卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E9%99%95%E8%A5%BF%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",青海卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86
+#EXTINF:-1 group-title="卫视",黑龙江卫视
+http://119.164.222.242:5140/%E5%8D%AB%E8%A7%86%E9%A2%91%E9%81%93/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86
 #EXTINF:-1 group-title="电影频道",CHC影迷电影
 http://gslbmgsplive.miguvideo.com/migu/kailu/chcymdy/50/20250415/index.m3u8?msisdn=20260605060200dda91feccdee419ab917b0dad778aa72&mdspid=&spid=699004&netType=0&sid=5910022176&pid=2028597139&timestamp=20260605060200&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=952383261&ParentNodeID=-99&assertID=5910022176&client_ip=114.245.215.143&SecurityKey=20260605060200&promotionId=&mvid=5900006704&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f63449485ae3546b286580a20517a7d0&ddCalcu=0fd6e730a4274019540825aa0e835564862b
 #EXTINF:-1 group-title="电影频道",经典香港电影
 http://gslbmgsplive.miguvideo.com/wd_r2/virtuallive/5100180869/75/index.m3u8?msisdn=20260605060157f8d2028739c34e5c9d34a5fa01290d32&mdspid=&spid=800033&netType=0&sid=5500242089&pid=2028597139&timestamp=20260605060157&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=625703337&ParentNodeID=-99&assertID=5500242089&client_ip=117.129.11.173&SecurityKey=20260605060157&promotionId=&mvid=5100180869&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f79290cf579a7692b6dc7e5f57cfa4d0&ddCalcu=0fd7e490a25f90c07c5ff557e97ac7d669b2
+#EXTINF:-1 group-title="电影频道",CHC动作电影
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/CHC%E5%8A%A8%E4%BD%9C%E7%94%B5%E5%BD%B1
+#EXTINF:-1 group-title="电影频道",CHC家庭影院
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/CHC%E5%AE%B6%E5%BA%AD%E5%BD%B1%E9%99%A2
+#EXTINF:-1 group-title="电影频道",CHC影迷电影
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/CHC%E5%BD%B1%E8%BF%B7%E7%94%B5%E5%BD%B1
+#EXTINF:-1 group-title="电影频道",动作影院
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%8A%A8%E4%BD%9C%E5%BD%B1%E9%99%A2
+#EXTINF:-1 group-title="电影频道",喜剧影院
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%96%9C%E5%89%A7%E5%BD%B1%E9%99%A2
+#EXTINF:-1 group-title="电影频道",家庭影院
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%AE%B6%E5%BA%AD%E5%BD%B1%E9%99%A2
+#EXTINF:-1 group-title="电影频道",爱电影
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%88%B1%E7%94%B5%E5%BD%B1
+#EXTINF:-1 group-title="电影频道",红色影院
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%BA%A2%E8%89%B2%E5%BD%B1%E9%99%A2
+#EXTINF:-1 group-title="电影频道",经典电影
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%BB%8F%E5%85%B8%E7%94%B5%E5%BD%B1
 #EXTINF:-1 group-title="体育",体育休闲频道
 http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jstiyu/600/index.m3u8?msisdn=2026060506013439a260ceec44465f90e59061e8d35431&mdspid=&spid=699067&netType=0&sid=5500260554&pid=2028597139&timestamp=20260605060134&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064707&ParentNodeID=-99&assertID=5500260554&client_ip=114.245.215.143&SecurityKey=20260605060134&promotionId=&mvid=5100186459&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=989c63b51f17b2ae72eb1b19dc98068a&ddCalcu=a988e6900c686093cbd5911fb117bbe22a7e
 #EXTINF:-1 group-title="体育",赛事最经典
 http://gslbmgsplive.miguvideo.com/wd_r3/cctv/saishijingdian/600/index.m3u8?msisdn=20260605060109ec94ed863b3d4ab999106ab65655b81e&mdspid=&spid=699004&netType=0&sid=5500592947&pid=2028597139&timestamp=20260605060109&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=646596895&ParentNodeID=-99&assertID=5500592947&client_ip=117.129.11.173&SecurityKey=20260605060109&promotionId=&mvid=5101034296&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=9302e05810d037cd86cc1269fddc1272&ddCalcu=2973e200126ce0d0d5f891602d10c3c76c8d
 #EXTINF:-1 group-title="体育",陕西体育休闲频道
 http://gslbmgsplive.miguvideo.com/migu/kailu/sxtyxx/50/20250804/index.m3u8?msisdn=20260605060112c01f394e09834833a461de6529c4cc50&mdspid=&spid=600572&netType=0&sid=5910022189&pid=2028597139&timestamp=20260605060112&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=956909356&ParentNodeID=-99&assertID=5910022189&client_ip=114.245.215.143&SecurityKey=20260605060112&promotionId=&mvid=5900006712&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=8a1e83c40a92a5dd3648cf090f55c84d&ddCalcu=d84ae810ce658053fc04900af9c28a456d3d
-#EXTINF:-1 group-title="体育",江苏体育休闲HD
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E4%BD%93%E8%82%B2%E4%BC%91%E9%97%B2HD
-#EXTINF:-1 group-title="体育",睛彩篮球HD（限免）
-http://114.226.216.63:5140/%E4%BD%93%E8%82%B2/%E7%9D%9B%E5%BD%A9%E7%AF%AE%E7%90%83HD%EF%BC%88%E9%99%90%E5%85%8D%EF%BC%89
+#EXTINF:-1 group-title="体育",山东体育
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E4%BD%93%E8%82%B2
+#EXTINF:-1 group-title="体育",爱体育
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%88%B1%E4%BD%93%E8%82%B2
+#EXTINF:-1 group-title="体育",爱体育
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%88%B1%E4%BD%93%E8%82%B2/2
+#EXTINF:-1 group-title="体育",足球
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E8%B6%B3%E7%90%83
 #EXTINF:-1 group-title="少儿",优漫卡通频道
 http://gslbmgsplive.miguvideo.com/wd_r2/jstv/ymkt/600/index.m3u8?msisdn=20260605060144238221116af944e1a89bbedb7ef1793c&mdspid=&spid=699067&netType=0&sid=5500260553&pid=2028597139&timestamp=20260605060144&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064703&ParentNodeID=-99&assertID=5500260553&client_ip=114.245.215.143&SecurityKey=20260605060144&promotionId=&mvid=5100186455&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=9c3a8a8b93b615e53338147f6cbbc9ea&ddCalcu=a9ece930ca6b80bac86bf9734b1681353e35
 #EXTINF:-1 group-title="少儿",嘉佳卡通
@@ -245,40 +267,78 @@ http://gslbmgsplive.miguvideo.com/migu/kailu/ydcmxdm/50/20251225/index.m3u8?msis
 http://gslbmgsplive.miguvideo.com/migu/kailu/nxwl/50/20251225/index.m3u8?msisdn=202606050601573620cb5d3120464b93eba068ba75a560&mdspid=&spid=600697&netType=0&sid=5910022328&pid=2028597139&timestamp=20260605060157&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=962067523&ParentNodeID=-99&assertID=5910022328&client_ip=117.129.11.173&SecurityKey=20260605060157&promotionId=&mvid=5900006788&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=4322a24917fdcd5dd1d6d6b8e8ed2af6&ddCalcu=64f3ea20222da0e284e981b76fdd6cdd15dd
 #EXTINF:-1 group-title="少儿",经典动画大集合
 http://gslbmgsplive.miguvideo.com/wd_r3/cctv/jingdiandonghua/600/index.m3u8?msisdn=202606050602162d24d5f46575400a9de173c585efd0e6&mdspid=&spid=699004&netType=0&sid=5500315652&pid=2028597139&timestamp=20260605060216&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=629942219&ParentNodeID=-99&assertID=5500315652&client_ip=114.245.215.143&SecurityKey=20260605060216&promotionId=&mvid=5101034205&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=96310f2dbcb74586881662d0d916f6db&ddCalcu=b9d6e630f196001f92dd0bdc2b6764158886
-#EXTINF:-1 group-title="少儿",优漫卡通HD
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E4%BC%98%E6%BC%AB%E5%8D%A1%E9%80%9AHD
-#EXTINF:-1 group-title="少儿",卡酷少儿HD
-http://114.226.216.63:5140/%E5%8C%97%E4%BA%AC/%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BFHD
-#EXTINF:-1 group-title="少儿",金鹰卡通HD
-http://114.226.216.63:5140/%E6%B9%96%E5%8D%97/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9AHD
+#EXTINF:-1 group-title="少儿",优漫卡通
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%BC%98%E6%BC%AB%E5%8D%A1%E9%80%9A
+#EXTINF:-1 group-title="少儿",动漫秀场
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E5%8A%A8%E6%BC%AB%E7%A7%80%E5%9C%BA
+#EXTINF:-1 group-title="少儿",动画
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%8A%A8%E7%94%BB
+#EXTINF:-1 group-title="少儿",卡酷少儿
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E5%8D%A1%E9%85%B7%E5%B0%91%E5%84%BF
+#EXTINF:-1 group-title="少儿",嘉佳卡通
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E5%98%89%E4%BD%B3%E5%8D%A1%E9%80%9A
+#EXTINF:-1 group-title="少儿",少儿动画
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%B0%91%E5%84%BF%E5%8A%A8%E7%94%BB
+#EXTINF:-1 group-title="少儿",山东少儿
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E5%B0%91%E5%84%BF
+#EXTINF:-1 group-title="少儿",新动漫
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E6%96%B0%E5%8A%A8%E6%BC%AB
+#EXTINF:-1 group-title="少儿",金鹰卡通
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E9%87%91%E9%B9%B0%E5%8D%A1%E9%80%9A
 #EXTINF:-1 group-title="纪录片",CGTN外语纪录
 http://gslbmgsplive.miguvideo.com/envivo_v/2018/SD/cctv/doc/1000/index.m3u8?msisdn=2026060506010399fa657242074bf387593f2e761c3a33&mdspid=&spid=699004&netType=0&sid=2200179356&pid=2028597139&timestamp=20260605060103&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609006487&ParentNodeID=-99&assertID=2200179356&client_ip=117.129.11.173&SecurityKey=20260605060103&promotionId=&mvid=2200179356&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f1c10f025d0992241e45df192e3a2f84&ddCalcu=4f81efc0219a003fe022951df0d95942e214
 #EXTINF:-1 group-title="纪录片",发现之旅
 http://gslbmgsplive.miguvideo.com/wd_r3/cnr/faxianzhilv/1000/index.m3u8?msisdn=2026060506010799736378ed3f4609bdcda1564fe17ebb&mdspid=&spid=699004&netType=0&sid=5500212893&pid=2028597139&timestamp=20260605060107&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=624878970&ParentNodeID=-99&assertID=5500212893&client_ip=114.245.215.143&SecurityKey=20260605060107&promotionId=&mvid=5100001701&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=8b5b71ba9f7a74d20c9916ec3b9b3abe&ddCalcu=e8bbea503b4b7091bb3ac9ef671a9794cd02
+#EXTINF:-1 group-title="纪录片",CGTN纪录
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CGTN%E7%BA%AA%E5%BD%95
+#EXTINF:-1 group-title="纪录片",发现之旅
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E5%8F%91%E7%8E%B0%E4%B9%8B%E6%97%85
+#EXTINF:-1 group-title="纪录片",地理
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%9C%B0%E7%90%86
+#EXTINF:-1 group-title="纪录片",求索纪录
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E6%B1%82%E7%B4%A2%E7%BA%AA%E5%BD%95
+#EXTINF:-1 group-title="音乐",音乐现场
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E9%9F%B3%E4%B9%90%E7%8E%B0%E5%9C%BA
 #EXTINF:-1 group-title="教育",中学生
 http://gslbmgsplive.miguvideo.com/migu/kailu/20210415/cctvzhongxuesheng/50/index.m3u8?msisdn=20260605060108319ec31fb6964bd2856b48d248eed77f&mdspid=&spid=699004&netType=0&sid=5910019355&pid=2028597139&timestamp=20260605060108&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=708869532&ParentNodeID=-99&assertID=5910019355&client_ip=114.245.215.143&SecurityKey=20260605060108&promotionId=&mvid=5900002149&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f188c2eadf5a5f2e5f29195dd078d6aa&ddCalcu=afa1e680d888c0720edadd5f951a952ff25e
 #EXTINF:-1 group-title="教育",山东教育
 http://gslbmgsplive.miguvideo.com/migu/kailu/sdjyws/50/20250915/index.m3u8?msisdn=20260605060206a0035a9cff504ba196bf92af2aaeb571&mdspid=&spid=600697&netType=0&sid=5910022199&pid=2028597139&timestamp=20260605060206&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609154353&ParentNodeID=-99&assertID=5910022199&client_ip=114.245.215.143&SecurityKey=20260605060206&promotionId=&mvid=2200208305&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=468f03d44b116d41373201ce29ca1ae9&ddCalcu=94e6ea801f9a00c39d24e4cb1101263d7431
 #EXTINF:-1 group-title="教育",江苏教育
 http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jsjiaoyu/600/index.m3u8?msisdn=20260605060136f262915bdb094dcdbb021ef24bc1d77f&mdspid=&spid=699067&netType=0&sid=5500287493&pid=2028597139&timestamp=20260605060136&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=628008321&ParentNodeID=-99&assertID=5500287493&client_ip=114.245.215.143&SecurityKey=20260605060136&promotionId=&mvid=5101012819&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=342423724544f310a0b4df87e02c8e16&ddCalcu=6314ee20848c202307e27485f4d44fb301a0
-#EXTINF:-1 group-title="教育",江苏教育HD
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E6%95%99%E8%82%B2HD
-#EXTINF:-1 group-title="生活科教",生活时尚HD
-http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9AHD
-#EXTINF:-1 group-title="生活科教",金鹰纪实HD
-http://114.226.216.63:5140/%E6%B9%96%E5%8D%97/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9EHD
+#EXTINF:-1 group-title="教育",中国教育1
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B21
+#EXTINF:-1 group-title="教育",中国教育2
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B22
+#EXTINF:-1 group-title="教育",中国教育4
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B24
+#EXTINF:-1 group-title="教育",中学生
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%B8%AD%E5%AD%A6%E7%94%9F
+#EXTINF:-1 group-title="教育",山东教育
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E6%95%99%E8%82%B2
+#EXTINF:-1 group-title="生活科教",北京纪实科教
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E5%8C%97%E4%BA%AC%E7%BA%AA%E5%AE%9E%E7%A7%91%E6%95%99
+#EXTINF:-1 group-title="生活科教",山东生活
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E7%94%9F%E6%B4%BB
+#EXTINF:-1 group-title="生活科教",爱生活
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%88%B1%E7%94%9F%E6%B4%BB
+#EXTINF:-1 group-title="生活科教",生活时尚
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E7%94%9F%E6%B4%BB%E6%97%B6%E5%B0%9A
+#EXTINF:-1 group-title="生活科教",金鹰纪实
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E9%87%91%E9%B9%B0%E7%BA%AA%E5%AE%9E
 #EXTINF:-1 group-title="法治社会",海南广播电视总台社会与法频道
 http://gslbmgsplive.miguvideo.com/migu/kailu/lngg/50/20251225/index.m3u8?msisdn=20260605060155518b659ee52a408c999aefa1efe344d1&mdspid=&spid=600697&netType=0&sid=5910022323&pid=2028597139&timestamp=20260605060155&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=962045223&ParentNodeID=-99&assertID=5910022323&client_ip=117.129.11.173&SecurityKey=20260605060155&promotionId=&mvid=5900006791&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=3abf51183f5f0459877929000c81e307&ddCalcu=730ae3b0ef215081c108030f952f90747589
-#EXTINF:-1 group-title="法治社会",法治天地HD
-http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E6%B3%95%E6%B2%BB%E5%A4%A9%E5%9C%B0HD
+#EXTINF:-1 group-title="法治社会",IPTV法治
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/IPTV%E6%B3%95%E6%B2%BB
+#EXTINF:-1 group-title="法治社会",法治天地
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E6%B3%95%E6%B2%BB%E5%A4%A9%E5%9C%B0
 #EXTINF:-1 group-title="上海",上海新闻综合
 http://gslbmgsplive.miguvideo.com/wd_r4/dfl/xinwenzonghehd/600/index.m3u8?msisdn=202606050601296c32856a067d47f7981d251e83bbf8be&mdspid=&spid=600697&netType=0&sid=5910022325&pid=2028597139&timestamp=20260605060129&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=651632657&ParentNodeID=-99&assertID=5910022325&client_ip=117.129.11.173&SecurityKey=20260605060129&promotionId=&mvid=5100001716&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=5aeb3b55cfece9c0cbcbc75e4b5cd4be&ddCalcu=e5bae4e0db1c305bb545ec5f7eccbec9bcc0
 #EXTINF:-1 group-title="上海",上海第一财经
 http://gslbmgsplive.miguvideo.com/wd_r1/2018/bestv/dycj/1000/index.m3u8?msisdn=2026060506013141c7585cd8b345deb62157b3762f2813&mdspid=&spid=699212&netType=0&sid=2201008312&pid=2028597139&timestamp=20260605060131&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=608780988&ParentNodeID=-99&assertID=2201008312&client_ip=117.129.11.173&SecurityKey=20260605060131&promotionId=&mvid=2201008312&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=0f79a52252919fc1b5c559ca2e798721&ddCalcu=102fe7708989a075e222a5c2995159cf5cb1
 #EXTINF:-1 group-title="上海",上视东方影视
 http://gslbmgsplive.miguvideo.com/wd_r4/dfl/dianshijuhd/600/index.m3u8?msisdn=20260605060130535c89d9b8b344e897b2764d577bdf7c&mdspid=&spid=699212&netType=0&sid=5500002274&pid=2028597139&timestamp=20260605060130&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=617290047&ParentNodeID=-99&assertID=5500002274&client_ip=117.129.11.173&SecurityKey=20260605060130&promotionId=&mvid=5100001715&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=26482856784e4aa4f1af75c09b2149f1&ddCalcu=12f6e94048712028b59607c8547ef4aa1af4
-#EXTINF:-1 group-title="上海",东方财经HD
-http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E4%B8%9C%E6%96%B9%E8%B4%A2%E7%BB%8FHD
+#EXTINF:-1 group-title="上海",东方财经
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%B8%9C%E6%96%B9%E8%B4%A2%E7%BB%8F
 #EXTINF:-1 group-title="综合/其他",24小时城市联赛轮播台
 http://gslbmgsplive.miguvideo.com/migu/lunbo/ouzhoubei/50/20240603/index.m3u8?msisdn=2026060506011247da00ef364b426aab5a15f209127207&mdspid=&spid=800033&netType=0&sid=5910022136&pid=2028597139&timestamp=20260605060112&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=915512915&ParentNodeID=-99&assertID=5910022136&client_ip=117.129.11.173&SecurityKey=20260605060112&promotionId=&mvid=5900006618&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f010cbdd9d15d7e02d63a935f6ed2fbd&ddCalcu=dfb0ef10205dc0eb6dfd593d91a53d67de20
 #EXTINF:-1 group-title="综合/其他",CETV1
@@ -405,43 +465,121 @@ http://gslbmgsplive.miguvideo.com/migu/kailu/sxqqpd/50/20250804/index.m3u8?msisd
 http://gslbmgsplive.miguvideo.com/migu/kailu/sxdsqc/50/20250804/index.m3u8?msisdn=20260605060149c7056252e0c845cd8ddc959cd5c0f8fe&mdspid=&spid=600572&netType=0&sid=5910022190&pid=2028597139&timestamp=20260605060149&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=956909358&ParentNodeID=-99&assertID=5910022190&client_ip=114.245.215.143&SecurityKey=20260605060149&promotionId=&mvid=5900006713&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=dd8d3972844b990d3376f2fb36ff54c9&ddCalcu=9dcde4805d6f30f96732b8f424fb6979303d
 #EXTINF:-1 group-title="综合/其他",陕西银龄频道
 http://gslbmgsplive.miguvideo.com/migu/kailu/sxylpd/50/20250804/index.m3u8?msisdn=202606050601493972c8a8c5774a49a285b7690383078f&mdspid=&spid=600572&netType=0&sid=5910022191&pid=2028597139&timestamp=20260605060149&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=956909362&ParentNodeID=-99&assertID=5910022191&client_ip=117.129.11.173&SecurityKey=20260605060149&promotionId=&mvid=5900006714&mcid=500020&playurlVersion=ZQ-A1-9.5.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=99c1bce85a2d36a6edaaa0daa4fbf56b&ddCalcu=b969e5c0f16bb0fc4ea8a5da02ada3a6dae6
-#EXTINF:-1 group-title="综合/其他",CETV1HD
-http://114.226.216.63:5140/%E6%95%99%E8%82%B2/CETV1HD
-#EXTINF:-1 group-title="综合/其他",CETV4HD
-http://114.226.216.63:5140/%E6%95%99%E8%82%B2/CETV4HD
-#EXTINF:-1 group-title="综合/其他",CGTN俄语HD
-http://114.226.216.63:5140/%E5%9B%BD%E9%99%85/CGTN%E4%BF%84%E8%AF%ADHD
-#EXTINF:-1 group-title="综合/其他",CGTN法语HD
-http://114.226.216.63:5140/%E5%9B%BD%E9%99%85/CGTN%E6%B3%95%E8%AF%ADHD
-#EXTINF:-1 group-title="综合/其他",CGTN西班牙语HD
-http://114.226.216.63:5140/%E5%9B%BD%E9%99%85/CGTN%E8%A5%BF%E7%8F%AD%E7%89%99%E8%AF%ADHD
-#EXTINF:-1 group-title="综合/其他",中国天气HD
-http://114.226.216.63:5140/%E8%B5%84%E8%AE%AF/%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94HD
-#EXTINF:-1 group-title="综合/其他",快乐垂钓HD
-http://114.226.216.63:5140/%E4%BC%91%E9%97%B2/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93HD
-#EXTINF:-1 group-title="综合/其他",文物宝库HD
-http://114.226.216.63:5140/%E6%96%87%E5%8C%96/%E6%96%87%E7%89%A9%E5%AE%9D%E5%BA%93HD
-#EXTINF:-1 group-title="综合/其他",梨园HD
-http://114.226.216.63:5140/%E6%88%8F%E6%9B%B2/%E6%A2%A8%E5%9B%ADHD
-#EXTINF:-1 group-title="综合/其他",武术世界HD
-http://114.226.216.63:5140/%E4%BD%93%E8%82%B2/%E6%AD%A6%E6%9C%AF%E4%B8%96%E7%95%8CHD
-#EXTINF:-1 group-title="综合/其他",江苏城市HD
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%9F%8E%E5%B8%82HD
-#EXTINF:-1 group-title="综合/其他",江苏影视HD
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E5%BD%B1%E8%A7%86HD
-#EXTINF:-1 group-title="综合/其他",江苏新闻HD
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E6%96%B0%E9%97%BBHD
-#EXTINF:-1 group-title="综合/其他",江苏综艺HD
-http://114.226.216.63:5140/%E6%B1%9F%E8%8B%8F/%E6%B1%9F%E8%8B%8F%E7%BB%BC%E8%89%BAHD
-#EXTINF:-1 group-title="综合/其他",环球购物HD
-http://114.226.216.63:5140/%E8%B4%AD%E7%89%A9/%E7%8E%AF%E7%90%83%E8%B4%AD%E7%89%A9HD
-#EXTINF:-1 group-title="综合/其他",睛彩广场舞HD（限免）
-http://114.226.216.63:5140/%E5%B9%BF%E5%9C%BA%E8%88%9E/%E7%9D%9B%E5%BD%A9%E5%B9%BF%E5%9C%BA%E8%88%9EHD%EF%BC%88%E9%99%90%E5%85%8D%EF%BC%89
-#EXTINF:-1 group-title="综合/其他",睛彩竞技HD（限免）
-http://114.226.216.63:5140/%E4%BD%93%E8%82%B2/%E7%9D%9B%E5%BD%A9%E7%AB%9E%E6%8A%80HD%EF%BC%88%E9%99%90%E5%85%8D%EF%BC%89
-#EXTINF:-1 group-title="综合/其他",睛彩青少HD（限免）
-http://114.226.216.63:5140/%E5%B0%91%E5%84%BF/%E7%9D%9B%E5%BD%A9%E9%9D%92%E5%B0%91HD%EF%BC%88%E9%99%90%E5%85%8D%EF%BC%89
-#EXTINF:-1 group-title="综合/其他",茶HD
-http://114.226.216.63:5140/%E7%94%9F%E6%B4%BB/%E8%8C%B6HD
-#EXTINF:-1 group-title="综合/其他",都市剧场HD
-http://114.226.216.63:5140/%E4%B8%8A%E6%B5%B7/%E9%83%BD%E5%B8%82%E5%89%A7%E5%9C%BAHD
+#EXTINF:-1 group-title="综合/其他",CGTN
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CGTN
+#EXTINF:-1 group-title="综合/其他",CGTN俄语
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CGTN%E4%BF%84%E8%AF%AD
+#EXTINF:-1 group-title="综合/其他",CGTN法语
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CGTN%E6%B3%95%E8%AF%AD
+#EXTINF:-1 group-title="综合/其他",CGTN西语
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CGTN%E8%A5%BF%E8%AF%AD
+#EXTINF:-1 group-title="综合/其他",CGTN阿语
+http://119.164.222.242:5140/%E5%A4%AE%E8%A7%86%E9%A2%91%E9%81%93/CGTN%E9%98%BF%E8%AF%AD
+#EXTINF:-1 group-title="综合/其他",IPTV野外
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/IPTV%E9%87%8E%E5%A4%96
+#EXTINF:-1 group-title="综合/其他",中国交通
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%B8%AD%E5%9B%BD%E4%BA%A4%E9%80%9A
+#EXTINF:-1 group-title="综合/其他",乐游
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%B9%90%E6%B8%B8
+#EXTINF:-1 group-title="综合/其他",书画
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%B9%A6%E7%94%BB
+#EXTINF:-1 group-title="综合/其他",优优宝贝
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E4%BC%98%E4%BC%98%E5%AE%9D%E8%B4%9D
+#EXTINF:-1 group-title="综合/其他",光影
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%85%89%E5%BD%B1
+#EXTINF:-1 group-title="综合/其他",军事
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%86%9B%E4%BA%8B
+#EXTINF:-1 group-title="综合/其他",军旅剧场
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%86%9B%E6%97%85%E5%89%A7%E5%9C%BA
+#EXTINF:-1 group-title="综合/其他",古装剧场
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%8F%A4%E8%A3%85%E5%89%A7%E5%9C%BA
+#EXTINF:-1 group-title="综合/其他",四海钓鱼
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E5%9B%9B%E6%B5%B7%E9%92%93%E9%B1%BC
+#EXTINF:-1 group-title="综合/其他",国学
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%9B%BD%E5%AD%A6
+#EXTINF:-1 group-title="综合/其他",城市剧场
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%9F%8E%E5%B8%82%E5%89%A7%E5%9C%BA
+#EXTINF:-1 group-title="综合/其他",墨宝
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%A2%A8%E5%AE%9D
+#EXTINF:-1 group-title="综合/其他",好学生
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E5%A5%BD%E5%AD%A6%E7%94%9F
+#EXTINF:-1 group-title="综合/其他",山东农科
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E5%86%9C%E7%A7%91
+#EXTINF:-1 group-title="综合/其他",山东文旅
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E6%96%87%E6%97%85
+#EXTINF:-1 group-title="综合/其他",山东新闻
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E6%96%B0%E9%97%BB
+#EXTINF:-1 group-title="综合/其他",山东海洋频道
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E6%B5%B7%E6%B4%8B%E9%A2%91%E9%81%93
+#EXTINF:-1 group-title="综合/其他",山东经济广播
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E7%BB%8F%E6%B5%8E%E5%B9%BF%E6%92%AD
+#EXTINF:-1 group-title="综合/其他",山东综艺
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E7%BB%BC%E8%89%BA
+#EXTINF:-1 group-title="综合/其他",山东齐鲁
+http://119.164.222.242:5140/%E5%B1%B1%E4%B8%9C%E9%A2%91%E9%81%93/%E5%B1%B1%E4%B8%9C%E9%BD%90%E9%B2%81
+#EXTINF:-1 group-title="综合/其他",快乐垂钓
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E5%BF%AB%E4%B9%90%E5%9E%82%E9%92%93
+#EXTINF:-1 group-title="综合/其他",戏曲
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E6%88%8F%E6%9B%B2
+#EXTINF:-1 group-title="综合/其他",收视指南
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E6%94%B6%E8%A7%86%E6%8C%87%E5%8D%97
+#EXTINF:-1 group-title="综合/其他",文物宝库
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E6%96%87%E7%89%A9%E5%AE%9D%E5%BA%93
+#EXTINF:-1 group-title="综合/其他",早教
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E6%97%A9%E6%95%99
+#EXTINF:-1 group-title="综合/其他",星影
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E6%98%9F%E5%BD%B1
+#EXTINF:-1 group-title="综合/其他",梨园
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E6%A2%A8%E5%9B%AD
+#EXTINF:-1 group-title="综合/其他",武侠剧场
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E6%AD%A6%E4%BE%A0%E5%89%A7%E5%9C%BA
+#EXTINF:-1 group-title="综合/其他",武术
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E6%AD%A6%E6%9C%AF
+#EXTINF:-1 group-title="综合/其他",武术世界
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E6%AD%A6%E6%9C%AF%E4%B8%96%E7%95%8C
+#EXTINF:-1 group-title="综合/其他",汽摩
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E6%B1%BD%E6%91%A9
+#EXTINF:-1 group-title="综合/其他",海看演艺
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E6%B5%B7%E7%9C%8B%E6%BC%94%E8%89%BA
+#EXTINF:-1 group-title="综合/其他",游戏风云
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E6%B8%B8%E6%88%8F%E9%A3%8E%E4%BA%91
+#EXTINF:-1 group-title="综合/其他",热播剧场
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%83%AD%E6%92%AD%E5%89%A7%E5%9C%BA
+#EXTINF:-1 group-title="综合/其他",爱上4K测试体验
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E7%88%B1%E4%B8%8A4K%E6%B5%8B%E8%AF%95%E4%BD%93%E9%AA%8C
+#EXTINF:-1 group-title="综合/其他",爱大剧
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%88%B1%E5%A4%A7%E5%89%A7
+#EXTINF:-1 group-title="综合/其他",爱综艺
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%88%B1%E7%BB%BC%E8%89%BA
+#EXTINF:-1 group-title="综合/其他",环球旅游
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E7%8E%AF%E7%90%83%E6%97%85%E6%B8%B8
+#EXTINF:-1 group-title="综合/其他",生态环境
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E7%94%9F%E6%80%81%E7%8E%AF%E5%A2%83
+#EXTINF:-1 group-title="综合/其他",相声小品
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%9B%B8%E5%A3%B0%E5%B0%8F%E5%93%81
+#EXTINF:-1 group-title="综合/其他",精彩影视
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E7%B2%BE%E5%BD%A9%E5%BD%B1%E8%A7%86
+#EXTINF:-1 group-title="综合/其他",精选
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%B2%BE%E9%80%89
+#EXTINF:-1 group-title="综合/其他",经典剧场
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%BB%8F%E5%85%B8%E5%89%A7%E5%9C%BA
+#EXTINF:-1 group-title="综合/其他",美人
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%BE%8E%E4%BA%BA
+#EXTINF:-1 group-title="综合/其他",美妆
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E7%BE%8E%E5%A6%86
+#EXTINF:-1 group-title="综合/其他",老故事
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E8%80%81%E6%95%85%E4%BA%8B
+#EXTINF:-1 group-title="综合/其他",解密
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E8%A7%A3%E5%AF%86
+#EXTINF:-1 group-title="综合/其他",谍战剧场
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E8%B0%8D%E6%88%98%E5%89%A7%E5%9C%BA
+#EXTINF:-1 group-title="综合/其他",财富天下
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E8%B4%A2%E5%AF%8C%E5%A4%A9%E4%B8%8B
+#EXTINF:-1 group-title="综合/其他",都市剧场
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E9%83%BD%E5%B8%82%E5%89%A7%E5%9C%BA
+#EXTINF:-1 group-title="综合/其他",金色学堂
+http://119.164.222.242:5140/%E5%85%B6%E4%BB%96%E9%A2%91%E9%81%93/%E9%87%91%E8%89%B2%E5%AD%A6%E5%A0%82
+#EXTINF:-1 group-title="综合/其他",鉴赏
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E9%89%B4%E8%B5%8F
+#EXTINF:-1 group-title="综合/其他",魅力时尚
+http://119.164.222.242:5140/%E8%BD%AE%E6%92%AD%E9%A2%91%E9%81%93/%E9%AD%85%E5%8A%9B%E6%97%B6%E5%B0%9A
