@@ -12,7 +12,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 class IPTVUpdater:
     def __init__(self):
-        self.MIGU_SOURCE_URL = "https://raw.githubusercontent.com/xichongguo/xichongys2/refs/heads/main/migu.m3u"
+        self.MIGU_SOURCE_URL = "http://fn.gcl.de5.net:5908/gsh950428"
         self.MIGU_LOCAL_FILE = "migu.txt"
         self.HD_SOURCE_URL = "http://119.164.222.242:5140/playlist.m3u"
         self.LOCAL_WHITELIST = "whitelist.txt"
