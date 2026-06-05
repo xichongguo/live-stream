@@ -14,7 +14,7 @@ class IPTVUpdater:
     def __init__(self):
         self.MIGU_SOURCE_URL = "https://develop202.github.io/migu_video/interface.txt"
         self.MIGU_LOCAL_FILE = "migu.txt"
-        self.HD_SOURCE_URL = "http://119.164.222.242:5140/playlist.m3u"
+        self.HD_SOURCE_URL = "http://119.164.29.244:5140/playlist.m3u"
         self.LOCAL_WHITELIST = "whitelist.txt"
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
         self.OUTPUT_DIR = "live"
