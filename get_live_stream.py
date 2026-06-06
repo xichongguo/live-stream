@@ -307,7 +307,7 @@ class IPTVUpdater:
         print("-" * 50)
         print(f"🎉 生成完成！文件已保存至: {os.path.abspath(self.OUTPUT_FILE)}")
         print(f"📊 总计频道数: {len(unique_channels)}")
-        
+        print("=" * 50)
 
 
 if __name__ == "__main__":
@@ -315,4 +315,3 @@ if __name__ == "__main__":
     updater = IPTVUpdater()
     updater.run()
     print("\n💡 提示：脚本运行完毕，按回车键退出...")
-    input()
