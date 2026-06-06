@@ -1,389 +1,357 @@
-# -*- coding: utf-8 -*-
 import requests
-import os
-import sys
-import io
 import hashlib
 import time
+import warnings
+import os
+import json
 import re
 from urllib.parse import urlparse
+import io
+import sys
 
+# 设置标准输出编码为 UTF-8，防止中文乱码
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+# 屏蔽版本依赖警告
+warnings.filterwarnings("ignore", category=requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
 class IPTVUpdater:
     def __init__(self):
-        self.MIGU_SOURCE_URL = "https://develop202.github.io/migu_video/interface.txt"
-        self.MIGU_LOCAL_FILE = "migu.txt"
-        self.HD_SOURCE_URL = "http://119.164.29.244:5140/playlist.m3u"
-        self.LOCAL_WHITELIST = "whitelist.txt"
-        self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+        # --- 数据源配置 ---
+        self.NANCHONG_JSON_URL = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
+        
+        # --- 西充源配置 (已恢复) ---
+        self.XICHONG_API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
+        self.XICHONG_FALLBACK_URL = "http://60.255.240.247:8090/live/xczh_2000.m3u8" # 备用组播
+        
+        # --- 咪咕视频源配置 (新增) ---
+        self.MIGU_INTERFACE_URL = "https://develop202.github.io/migu_video/interface.txt"
+        
+        # --- 签名与域名配置 (南充源)---
+        self.SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"
+        self.BASE_DOMAIN = "https://ncpull.cnncw.cn"
+        
+        # --- 输出配置 ---
         self.OUTPUT_DIR = "live"
         self.OUTPUT_FILE = os.path.join(self.OUTPUT_DIR, "current.m3u8")
-        self.DEFAULT_HEADERS = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
-            "Accept-Encoding": "gzip, deflate",
-            "Connection": "keep-alive",
-        }
-        self.IPTV_JSON_URL = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
-        self.IPTV_SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"
-        self.IPTV_BASE_DOMAIN = "https://ncpull.cnncw.cn"
-        print(f"🌍 运行环境：{time.strftime('%Y-%m-%d %A')} | 广东省 佛山市 (定制版)")
-
-        self.CHANNEL_ALIASES = {
-            "CCTV1": ["CCTV1综合", "cctv1", "cctv-1", "中央1台", "中央一台", "cctv 1", "CCTV-1综合"],
-            "CCTV2财经": ["cctv2", "cctv-2", "中央2台", "中央二台", "财经", "cctv 2"],
-            "CCTV3综艺": ["cctv3", "cctv-3", "中央3台", "综艺", "cctv 3"],
-            "CCTV4中文国际": ["cctv4", "cctv-4", "中央4台", "中文国际", "cctv 4"],
-            "CCTV5体育": ["cctv5", "cctv-5", "中央5台", "体育", "cctv 5"],
-            "CCTV5+体育赛事": ["cctv5+", "cctv-5+", "体育赛事", "cctv 5+"],
-            "CCTV6电影": ["cctv6", "cctv-6", "中央6台", "电影", "cctv 6"],
-            "湖南卫视": ["湖南卫视hd", "湖南卫视高清", "hunantv"],
-            "南充综合": ["南充综合频道", "南充1台"],
-            "西充综合": ["西充综合频道", "西充1台"],
-        }
+        
+    def generate_signature(self, path, timestamp):
+        """生成MD5签名"""
+        raw_string = f"{self.SECRET_KEY}{path}{timestamp}"
+        return hashlib.md5(raw_string.encode('utf-8')).hexdigest()
+    
+    def find_datalist(self, obj, depth=0):
+        """递归深度搜索JSON，寻找dataList"""
+        if depth > 10: return None
+        if isinstance(obj, dict):
+            if "dataList" in obj and isinstance(obj["dataList"], list):
+                return obj["dataList"]
+            for value in obj.values():
+                result = self.find_datalist(value, depth + 1)
+                if result: return result
+        elif isinstance(obj, list):
+            for item in obj:
+                result = self.find_datalist(item, depth + 1)
+                if result: return result
+        return None
 
     def fix_mojibake(self, text):
-        if not isinstance(text, str):
-            return text
+        """简单的乱码修复函数"""
+        if not isinstance(text, str): return text
         if re.search(r'[\xc0-\xff][\x80-\xbf]', text):
             try:
                 fixed = text.encode('latin1', errors='ignore').decode('utf-8', errors='ignore')
                 if len(re.findall(r'[\u4e00-\u9fa5]', fixed)) > len(re.findall(r'[\u4e00-\u9fa5]', text)):
-                    print(f"🔧 乱码修复: '{text}' -> '{fixed}'")
                     return fixed
             except:
                 pass
         return text
 
-    def normalize_channel_name(self, name):
-        name = self.fix_mojibake(name)
-        name_lower = name.lower().strip()
-        for standard_name, aliases in self.CHANNEL_ALIASES.items():
-            if name_lower == standard_name.lower() or name_lower in [alias.lower() for alias in aliases]:
-                return standard_name
-        return name.strip()
-
-    def generate_signature(self, path, timestamp):
-        raw_string = f"{self.IPTV_SECRET_KEY}{path}{timestamp}"
-        return hashlib.md5(raw_string.encode('utf-8')).hexdigest()
-
-    def categorize_channel(self, name):
-        name = self.fix_mojibake(name)
-        name_lower = name.lower()
-        if any(kw in name for kw in ['西充', '南充', '顺庆', '高坪', '嘉陵', '阆中']):
-            return '本地节目', name
-        if any(kw in name_lower for kw in ['cctv', '中央']):
-            if "CCTV" in name.upper():
-                match = re.search(r'CCTV\D*(\d+)', name.upper())
-                if match:
-                    return '央视', f"CCTV-{int(match.group(1))}"
-            return '央视', name
-        if any(kw in name_lower for kw in ['卫视', '卫星']):
-            return '卫视', name
-        movie_keywords = ['电影', '影院', 'CHC', '动作电影', '喜剧电影', '爱情电影', '科幻电影', '恐怖电影']
-        if any(kw.lower() in name_lower for kw in movie_keywords):
-            if '轮播' in name_lower or '回放' in name_lower:
-                return '电影轮播', name
-            return '电影频道', name
-        if any(kw in name for kw in ['凤凰', 'TVB', '翡翠', '明珠', '东森', '澳亚', '星空']):
-            return '港澳台', name
-        if any(kw in name_lower for kw in ['体育', '赛事', 'nba', '足球', '篮球']):
-            return '体育', name
-        if any(kw in name_lower for kw in ['少儿', '卡通', '动画', '动漫', '哈哈炫动', '金鹰卡通', '卡酷']):
-            return '少儿', name
-        if any(kw in name_lower for kw in ['教育', '学习', '考试', '校园', '中学生']):
-            return '教育', name
-        if any(kw in name_lower for kw in ['纪录', '探索', '地理', '发现', '历史']):
-            return '纪录片', name
-        if any(kw in name_lower for kw in ['音乐', 'mtv', '声乐', '演唱会']):
-            return '音乐', name
-        if any(kw in name_lower for kw in ['生活', '科教', '科技', '农业', '纪实']):
-            return '生活科教', name
-        if any(kw in name_lower for kw in ['法治', '法制', '政法', '社会']):
-            return '法治社会', name
-        province_map = {
-            '四川': ['四川', '成都', '峨眉'],
-            '广东': ['广东', '广州', '深圳', '珠海', '佛山', '东莞', '南方卫视'],
-            '北京': ['北京'],
-            '上海': ['上海', '东方', '第一财经']
-        }
-        for prov, cities in province_map.items():
-            if any(city in name for city in cities):
-                return prov, name
-        return "综合/其他", name
-
-    def _rename_channel(self, index, original_title):
-        rename_map = {0: "南充综合", 1: "南充科教"}
-        return rename_map.get(index, original_title)
-
-    def _extract_channel_id(self, live_stream, name):
-        path_parts = [p for p in live_stream.split("/") if p]
-        if len(path_parts) >= 2:
-            return path_parts[-2]
-        return hashlib.md5(name.encode()).hexdigest()[:10]
-
-    def _is_valid_url(self, url):
-        try:
-            result = urlparse(url)
-            return all([result.scheme, result.netloc])
-        except:
-            return False
-
-    def fetch_signed_channels(self):
+    def fetch_nanchong_channels(self):
+        """获取南充频道并重命名"""
+        print(f"🚀 正在获取【南充】频道列表...")
         channels = []
         try:
-            print(f"🚀 正在连接 kstatic.sctvcloud.com 获取私有源...")
-            response = requests.get(self.IPTV_JSON_URL, headers=self.DEFAULT_HEADERS, timeout=10)
-            raw_text = response.content.decode('utf-8', errors='ignore')
-            clean_text = self.fix_mojibake(raw_text)
+            response = requests.get(self.NANCHONG_JSON_URL, timeout=10)
             if response.status_code == 200:
-                import json
-                data = json.loads(clean_text)
-                prop_value = data.get("data", {})
-                if isinstance(prop_value, list) and prop_value:
-                    prop_value = prop_value[0]
-                prop_value = prop_value.get("propValue", {})
-                if isinstance(prop_value, list) and prop_value:
-                    prop_value = prop_value[0]
-                children_list = prop_value.get("children", [])
-                items = children_list[0].get("dataList", []) if isinstance(children_list, list) and children_list else []
-                print(f"✅ 私有源接口连接成功！共发现 {len(items)} 个频道流。")
-                expire_time = int(time.time()) + 90000
-                for i, item in enumerate(items):
-                    original_title = self.fix_mojibake(item.get("title"))
-                    live_stream = item.get("liveStream", "")
-                    final_name = self._rename_channel(i, original_title)
-                    channel_id = self._extract_channel_id(live_stream, final_name)
-                    path = f"/live/{channel_id}/playlist.m3u8"
-                    ws_secret = self.generate_signature(path, expire_time)
-                    final_url = f"{self.IPTV_BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
-                    cat, disp = self.categorize_channel(final_name)
-                    std_name = self.normalize_channel_name(final_name)
-                    channels.append((std_name, final_url, cat, -3))
+                data = response.json()
+                if data.get("isSuccess"):
+                    items = self.find_datalist(data)
+                    if items:
+                        expire_time = int(time.time()) + 86400 # 24小时有效
+                        for item in items:
+                            if not isinstance(item, dict): continue
+                            title = item.get("title", "").strip()
+                            if not title: continue
+                            
+                            # --- 名称映射逻辑 ---
+                            if "综合频道" in title: title = "南充综合"
+                            elif "科教生活" in title: title = "南充科教生活"
+                            
+                            stream_id = item.get("liveStreamId")
+                            if not stream_id:
+                                stream_url = item.get("liveStream", "")
+                                if stream_url:
+                                    path_parts = urlparse(stream_url).path.rstrip('/').split('/')
+                                    if len(path_parts) >= 2:
+                                        stream_id = path_parts[-2]
+                            if not stream_id: continue
+                                
+                            path = f"/live/{stream_id}/playlist.m3u8"
+                            ws_secret = self.generate_signature(path, expire_time)
+                            final_url = f"{self.BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
+                            channels.append((title, final_url, '本地节目'))
+                else:
+                    print(f"❌ 南充API返回失败: {data.get('msg')}")
             else:
-                print(f"❌ 私有源网络请求失败: {response.status_code}")
+                print(f"❌ 南充API请求状态码异常: {response.status_code}")
         except Exception as e:
-            print(f"❌ 私有源处理异常: {e}")
+            print(f"❌ 获取南充频道异常: {e}")
+        
+        print(f"✅ 成功获取 {len(channels)} 个南充频道")
         return channels
 
-    def fetch_xichong_channel(self):
+    def fetch_xichong_channels(self):
+        """
+        获取西充综合频道
+        策略：优先尝试动态API获取，失败则回退到备用组播源
+        """
+        print(f"📡 正在获取【西充综合】频道 (优先尝试API)...")
         channels = []
-        api_url = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
-        headers = {'User-Agent': 'okhttp/3.12.12', 'Accept': 'application/json, text/plain, */*'}
+        
+        # --- 第一优先级：尝试从 API 动态获取 ---
         try:
-            print(f"🚀 正在连接 lwydapi.xichongtv.cn 获取西充综合...")
-            response = requests.get(api_url, headers=headers, verify=False, timeout=10)
-            raw_text = response.content.decode('utf-8', errors='ignore')
-            clean_text = self.fix_mojibake(raw_text)
+            headers = { 
+                'User-Agent': 'okhttp/3.12.12', 
+                'Accept': 'application/json, text/plain, */*'
+            }
+            response = requests.get(self.XICHONG_API_URL, headers=headers, verify=False, timeout=10)
+            
+            if response.status_code == 0: # 有些代理或网络环境可能返回0
+                raise Exception("网络连接异常")
+                
             if response.status_code == 200:
-                import json
+                raw_text = response.content.decode('utf-8', errors='ignore')
+                # 尝试修复可能的乱码
+                clean_text = self.fix_mojibake(raw_text)
                 data = json.loads(clean_text)
+                
+                # 核心提取逻辑
                 if 'data' in data and 'm3u8Url' in data['data']:
                     m3u8_url = data['data']['m3u8Url']
-                    if m3u8_url:
-                        print(f"✅ 成功获取西充综合直播流！")
-                        channels.append(("西充综合", m3u8_url, '本地节目', -4))
+                    if m3u8_url and m3u8_url.startswith('http'):
+                        channels.append(("西充综合", m3u8_url, '本地节目'))
+                        print(f"✅ 【成功-动态API】获取到西充综合流。")
+                        return channels # 成功则直接返回
+            
+            print(f"⚠️ API 请求未成功(状态码: {response.status_code})，即将使用备用源。")
+            
         except Exception as e:
-            print(f"❌ 西充频道处理异常: {e}")
+            print(f"❌ API 获取失败: {e}，将使用备用源。")
+
+        # --- 第二优先级：API失败，使用备用组播源 ---
+        try:
+            # 简单验证备用源是否可达
+            test_response = requests.head(self.XICHONG_FALLBACK_URL, timeout=5)
+            if test_response.status_code < 400:
+                channels.append(("西充综合", self.XICHONG_FALLBACK_URL, '本地节目'))
+                print(f"✅ 【回退-备用源】API失效，已启用备用组播源。")
+            else:
+                print(f"❌ 备用源似乎也失效了 (状态码: {test_response.status_code})")
+                
+        except Exception as e:
+            print(f"❌ 备用源连接失败: {e}")
+
         return channels
 
-    def fetch_m3u_via_proxy(self, url):
-        proxies = [
-            f"https://corsproxy.io/?{url}",
-            f"https://api.codetabs.com/v1/proxy?quest={url}"
-        ]
-        headers = {'User-Agent': self.DEFAULT_HEADERS['User-Agent']}
-        content = None
-        for proxy_url in proxies:
-            try:
-                print(f"🚀 正在尝试通过代理获取: {proxy_url[:50]}...")
-                response = requests.get(proxy_url, headers=headers, timeout=15)
-                if response.status_code == 200:
-                    raw_text = response.content.decode('utf-8', errors='ignore')
-                    clean_text = self.fix_mojibake(raw_text)
-                    if len([line for line in clean_text.splitlines() if "#EXTINF" in line]) > 0:
-                        content = clean_text
-                        print(f"✅ 成功获取内容！")
-                        break
-                    else:
-                        print("⚠️ 内容格式异常，尝试下一个代理...")
-            except Exception as e:
-                print(f"❌ 代理连接异常: {e}")
-                continue
-        return content
-
-    def load_whitelist(self):
+    def fetch_migu_channels(self):
+        """从指定URL获取咪咕直播源并分类"""
+        print(f"🌐 正在获取【咪咕/外部】直播源...")
         channels = []
-        content = None
-        if os.path.exists(self.LOCAL_WHITELIST):
-            print(f"📂 发现本地白名单文件: {self.LOCAL_WHITELIST}，正在读取...")
-            for enc in ['utf-8', 'gbk', 'gb2312']:
-                try:
-                    with open(self.LOCAL_WHITELIST, 'r', encoding=enc) as f:
-                        content = f.read()
-                    print(f"✅ 本地白名单读取成功 (编码: {enc})")
-                    break
-                except Exception as e:
-                    continue
-        if content is None:
-            print(f"🌐 本地文件不可用，正在尝试从远程获取白名单...")
-            try:
-                response = requests.get(self.REMOTE_WHITELIST_URL, headers=self.DEFAULT_HEADERS, timeout=10)
-                if response.status_code == 200:
-                    content = response.text
-                    print(f"✅ 远程白名单获取成功！")
-                else:
-                    print(f"❌ 远程白名单获取失败，状态码: {response.status_code}")
-            except Exception as e:
-                print(f"❌ 远程白名单连接异常: {e}")
-        if content:
-            if content.startswith('\ufeff'):
-                content = content[1:]
-            lines = content.strip().splitlines()
+        try:
+            # 获取文件内容
+            response = requests.get(self.MIGU_INTERFACE_URL, timeout=15)
+            if response.status_code != 200:
+                print(f"❌ 获取远程列表失败，状态码: {response.status_code}")
+                return channels
+                
+            content = response.text
+            lines = content.splitlines()
+            
             i = 0
             while i < len(lines):
                 line = lines[i].strip()
-                name = None
-                url = None
-                if line.startswith("#EXTINF") and "," in line:
+                
+                # 识别频道信息行 (#EXTINF)
+                if line.startswith("#EXTINF") and 'group-title' in line:
                     try:
-                        name = line.split(",", 1)[1].strip()
+                        # 提取 tvg-name 或 逗号后的名称
+                        name_match = re.search(r'tvg-name="([^"]+)"', line)
+                        if not name_match:
+                            # 如果没有tvg-name，取逗号后面的名字
+                            name_match = re.search(r',([^,]+)$', line)
+                        if not name_match:
+                            i += 1
+                            continue
+                            
+                        channel_name = name_match.group(1).strip()
+                        
+                        # 确定分类 (优先使用原文件的 group-title，否则根据名字判断)
+                        group_match = re.search(r'group-title="([^"]+)"', line)
+                        if group_match:
+                            raw_group = group_match.group(1)
+                            # 规范化分类名称
+                            if "超清" in raw_group or "4K" in raw_group:
+                                category = "超清频道"
+                            elif "央视频道" in raw_group or "CCTV" in raw_group:
+                                category = "央视频道"
+                            elif "卫视频道" in raw_group or "卫视" in raw_group:
+                                category = "卫视频道"
+                            else:
+                                category = "其他频道"
+                        else:
+                            # 如果原文件没写group-title，根据名字判断
+                            if "CCTV" in channel_name or "中央" in channel_name:
+                                category = "央视频道"
+                            elif "卫视" in channel_name:
+                                category = "卫视频道"
+                            elif "超清" in channel_name or "4K" in channel_name:
+                                category = "超清频道"
+                            else:
+                                category = "其他频道"
+                        
+                        # 获取下一行的URL
                         if i + 1 < len(lines):
-                            url = lines[i + 1].strip()
-                    except:
-                        pass
-                elif "," in line and not line.startswith("#"):
-                    parts = line.split(",", 1)
-                    name = parts[0].strip()
-                    url = parts[1].strip() if len(parts) > 1 else ""
-                if name and url and url.startswith("http") and self._is_valid_url(url):
-                    std_name = self.normalize_channel_name(name)
-                    cat, _ = self.categorize_channel(std_name)
-                    channels.append((std_name, url, cat, -5))
+                            url_line = lines[i + 1].strip()
+                            if url_line.startswith('http'):
+                                channels.append((channel_name, url_line, category))
+                        
+                        i += 2 # 跳过URL行
+                        continue
+                    except Exception as e:
+                        print(f"解析行出错: {line[:30]}... 错误: {e}")
+                
                 i += 1
-            print(f"✅ 白名单处理完成，共加载 {len(channels)} 个频道。")
-        else:
-            print(f"❌ 无法获取白名单内容。")
+                
+        except Exception as e:
+            print(f"❌ 获取/解析咪咕源异常: {e}")
+        
+        print(f"✅ 成功获取 {len(channels)} 个咪咕/外部频道")
         return channels
 
-    def load_migu_source(self):
+    def load_whitelist(self):
+        """
+        加载白名单。
+        注意：根据你的需求，原白名单内容现在被归类为“本地节目”。
+        """
+        print(f"📝 正在加载本地白名单...")
         channels = []
-        content = ""
-        if os.path.exists(self.MIGU_LOCAL_FILE):
-            print(f"📂 发现本地咪咕文件，尝试读取...")
-            for enc in ['utf-8', 'gbk', 'gb2312']:
-                try:
-                    with open(self.MIGU_LOCAL_FILE, 'r', encoding=enc) as f:
-                        content = f.read()
-                    print(f"✅ 本地读取成功 (编码: {enc})")
-                    break
-                except:
-                    continue
-        if not content:
-            print(f"🌐 本地无数据，正在联网获取...")
-            content = self.fetch_m3u_via_proxy(self.MIGU_SOURCE_URL)
-        if content:
-            lines = content.strip().splitlines()
-            for i in range(len(lines)):
-                if lines[i].startswith("#EXTINF") and "," in lines[i]:
-                    try:
-                        name = lines[i].split(",", 1)[1].strip()
-                        if i + 1 < len(lines):
-                            url = lines[i + 1].strip()
-                            if url.startswith("http") and self._is_valid_url(url):
-                                std_name = self.normalize_channel_name(name)
-                                cat, _ = self.categorize_channel(std_name)
-                                channels.append((std_name, url, cat, -10))
-                    except:
-                        pass
-            print(f"✅ 咪咕源解析完成，共获取 {len(channels)} 个频道流。")
+        local_file = "whitelist.txt"
+        
+        if os.path.exists(local_file):
+            try:
+                with open(local_file, 'r', encoding='utf-8') as f:
+                    lines = f.readlines()
+                
+                i = 0
+                while i < len(lines):
+                    line = lines[i].strip()
+                    if not line or line.startswith('#'): 
+                        i += 1
+                        continue
+                    
+                    name = url = None
+                    if line.startswith("#EXTINF"):
+                        # 简单解析白名单中的名称
+                        parts = line.split(',', maxsplit=1)
+                        if len(parts) == 2:
+                            name = parts[1].strip()
+                            if i + 1 < len(lines):
+                                next_line = lines[i + 1].strip()
+                                if next_line.startswith('http'):
+                                    url = next_line
+                                    i += 2
+                                else:
+                                    i += 1
+                            else:
+                                i += 1
+                    else:
+                        # 纯文本格式: 名称,URL
+                        if ',' in line:
+                            parts = line.split(',', maxsplit=1)
+                            name = parts[0].strip()
+                            url = parts[1].strip()
+                            i += 1
+                        else:
+                            i += 1
+                            continue
+                    
+                    if name and url and urlparse(url).scheme in ['http', 'https']:
+                        channels.append((name, url, '本地节目')) # 强制分类为本地节目
+                        continue
+                    
+                    i += 1
+                    
+            except Exception as e:
+                print(f"❌ 读取本地白名单文件异常: {e}")
         else:
-            print(f"❌ 无法获取咪咕源内容。")
+            print("ℹ️ 未找到本地 whitelist.txt 文件，跳过。")
+            
+        print(f"✅ 白名单处理完成，共加载 {len(channels)} 个频道")
         return channels
-
-    def load_hd_source(self):
-        channels = []
-        content = self.fetch_m3u_via_proxy(self.HD_SOURCE_URL)
-        if content:
-            lines = content.strip().splitlines()
-            for i in range(len(lines)):
-                if lines[i].startswith("#EXTINF") and "," in lines[i]:
-                    try:
-                        name = lines[i].split(",", 1)[1].strip()
-                        if i + 1 < len(lines):
-                            url = lines[i + 1].strip()
-                            if url.startswith("http") and self._is_valid_url(url):
-                                std_name = self.normalize_channel_name(name)
-                                cat, _ = self.categorize_channel(std_name)
-                                channels.append((std_name, url, cat, -5))
-                    except:
-                        pass
-            print(f"✅ 高清源加载完成，共获取 {len(channels)} 个频道流。")
-        else:
-            print(f"❌ 加载高清源失败。")
-        return channels
-
-    def deduplicate_channels(self, channels):
-        seen = set()
-        unique_channels = []
-        for name, url, cat, priority in channels:
-            key = (name, url)
-            if key not in seen:
-                seen.add(key)
-                unique_channels.append((name, url, cat, priority))
-        return unique_channels
-
-    def sort_channels(self, channels):
-        cat_priority = {
-            '本地节目': 0, '央视': 1, '卫视': 2, '电影频道': 3,
-            '电影轮播': 4, '体育': 5, '少儿': 6, '港澳台': 7,
-            '纪录片': 8, '音乐': 9, '教育': 10, '生活科教': 11,
-            '法治社会': 12, '四川': 13, '广东': 14, '北京': 15,
-            '上海': 16, '高清': 17, '综合/其他': 99
-        }
-        def get_sort_key(item):
-            name, url, cat, priority = item
-            base_prio = cat_priority.get(cat, 99)
-            return (base_prio, priority, name)
-        return sorted(channels, key=get_sort_key)
-
-    def export_m3u8(self, channels):
-        os.makedirs(self.OUTPUT_DIR, exist_ok=True)
-        with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
-            f.write('#EXTM3U\n')
-            for name, url, cat, priority in channels:
-                f.write(f'#EXTINF:-1 group-title="{cat}",{name}\n')
-                f.write(f'{url}\n')
-        print(f"✅ 输出文件已生成: {self.OUTPUT_FILE}")
-        print(f"📊 总计 {len(channels)} 个频道")
-        cats = {}
-        for _, _, cat, _ in channels:
-            cats[cat] = cats.get(cat, 0) + 1
-        print("📂 分类统计:")
-        for cat, count in sorted(cats.items(), key=lambda x: x[1], reverse=True):
-            print(f"   {cat}: {count} 个")
 
     def run(self):
+        """主运行逻辑"""
         print("=" * 50)
-        print("📺 IPTV 直播源合并工具 (完整版)")
+        print("📺 IPTV 直播源更新工具")
         print("=" * 50)
+        
+        # 创建输出目录
+        os.makedirs(self.OUTPUT_DIR, exist_ok=True)
         all_channels = []
-        all_channels.extend(self.fetch_xichong_channel())
-        all_channels.extend(self.fetch_signed_channels())
-        all_channels.extend(self.load_hd_source())
-        all_channels.extend(self.load_migu_source())
+        
+        # --- 执行获取任务 ---
+        
+        # 1. 获取南充频道 (本地节目)
+        all_channels.extend(self.fetch_nanchong_channels())
+        
+        # 2. 获取西充综合 (本地节目)
+        all_channels.extend(self.fetch_xichong_channels())
+        
+        # 3. 获取原白名单内容 (分类为本地节目)
         all_channels.extend(self.load_whitelist())
-        print(f"✅ 共收集 {len(all_channels)} 个频道流（含重复）")
-        all_channels = self.deduplicate_channels(all_channels)
-        print(f"✅ 去重后剩余 {len(all_channels)} 个频道流")
-        all_channels = self.sort_channels(all_channels)
-        self.export_m3u8(all_channels)
-        print("=" * 50)
-        print("🎉 全部完成！")
+        
+        # 4. 获取新的咪咕/外部源 (分类为央视频道、卫视频道等)
+        all_channels.extend(self.fetch_migu_channels())
+
+        if not all_channels:
+            print("❌ 未能获取到任何频道数据。")
+            return
+
+        # --- 去重 ---
+        seen = set()
+        unique_channels = []
+        for name, url, cat in all_channels:
+            # 根据 URL 去重
+            key = url 
+            if key not in seen:
+                seen.add(key)
+                unique_channels.append((name, url, cat))
+
+        # --- 写入文件 ---
+        with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
+            f.write('#EXTM3U x-tvg-url="epg.xml"\n')
+            for name, url, cat in unique_channels:
+                f.write(f'#EXTINF:-1 group-title="{cat}",{name}\n')
+                f.write(f'{url}\n')
+                
+        print("-" * 50)
+        print(f"🎉 生成完成！文件已保存至: {os.path.abspath(self.OUTPUT_FILE)}")
+        print(f"📊 总计频道数: {len(unique_channels)}")
         print("=" * 50)
 
 if __name__ == "__main__":
+    print(f"🌍 运行环境：{time.strftime('%Y-%m-%d %A')}")
     updater = IPTVUpdater()
     updater.run()
+    print("\n💡 提示：脚本运行完毕，按回车键退出...")
+    input()
