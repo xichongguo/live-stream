@@ -9,9 +9,8 @@ from urllib.parse import urlparse
 import io
 import sys
 
-# 设置标准输出编码为 UTF-8，防止中文乱码
+# 设置标准输出编码为 UTF-8
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-# 屏蔽版本依赖警告
 warnings.filterwarnings("ignore", category=requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
 class IPTVUpdater:
@@ -30,31 +29,28 @@ class IPTVUpdater:
         self.OUTPUT_DIR = "live"
         self.OUTPUT_FILE = os.path.join(self.OUTPUT_DIR, "current.m3u8")
         
-        # --- 新增：西充综合专用配置 (基于 codi.txt 逻辑) ---
+        # --- 新增：西充综合专用配置 ---
         self.XICHONG_API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
-        # 使用 codi.txt 中的 Headers，可能对解决播放失效有效
         self.XICHONG_HEADERS = {
             'User-Agent': 'okhttp/3.12.12',
             'Accept': 'application/json, text/plain, */*'
         }
+        
+        # --- 新增：白名单配置 (参考 codi.txt) ---
+        self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
 
     def fetch_xichong_channel(self):
-        """
-        使用 codi.txt 的逻辑获取西充综合频道
-        """
+        """ 使用 codi.txt 的逻辑获取西充综合频道 """
         print(f"🚀 正在连接 {self.XICHONG_API_URL} 获取【西充综合】...")
         channels = []
         try:
-            # verify=False 忽略 SSL 证书错误
             response = requests.get(self.XICHONG_API_URL, headers=self.XICHONG_HEADERS, verify=False, timeout=10)
             if response.status_code == 200:
                 data = response.json()
-                # 检查接口返回状态
                 if data.get('status') == 200 and 'data' in data and 'm3u8Url' in data['data']:
                     m3u8_url = data['data']['m3u8Url']
                     if m3u8_url:
                         print(f"✅ 成功获取西充综合直播流！")
-                        # 直接返回标准格式，归类为'本地节目'
                         channels.append(("西充综合", m3u8_url, '本地节目'))
                     else:
                         print(f"❌ 西充API返回数据中缺少 m3u8Url")
@@ -67,12 +63,10 @@ class IPTVUpdater:
         return channels
 
     def generate_signature(self, path, timestamp):
-        """生成MD5签名"""
         raw_string = f"{self.SECRET_KEY}{path}{timestamp}"
         return hashlib.md5(raw_string.encode('utf-8')).hexdigest()
 
     def find_datalist(self, obj, depth=0):
-        """递归深度搜索JSON，寻找dataList"""
         if depth > 10: return None
         if isinstance(obj, dict):
             if "dataList" in obj and isinstance(obj["dataList"], list):
@@ -87,7 +81,6 @@ class IPTVUpdater:
         return None
 
     def fetch_nanchong_channels(self):
-        """获取南充频道并重命名"""
         print(f"🚀 正在获取【南充】频道列表...")
         channels = []
         try:
@@ -97,7 +90,7 @@ class IPTVUpdater:
                 if data.get("isSuccess"):
                     items = self.find_datalist(data)
                     if items:
-                        expire_time = int(time.time()) + 86400 # 24小时有效
+                        expire_time = int(time.time()) + 86400
                         for item in items:
                             if not isinstance(item, dict): continue
                             title = item.get("title", "").strip()
@@ -132,12 +125,10 @@ class IPTVUpdater:
         return channels
 
     def fetch_migu_channels(self):
-        """从指定URL获取咪咕直播源并分类"""
         print(f"📡 正在获取【咪咕/外部】直播源...")
         channels = []
         try:
             response = requests.get(self.MIGU_INTERFACE_URL, timeout=15)
-            # 修复了之前把 200 写成 2OO 的致命错误
             if response.status_code != 200:
                 print(f"❌ 获取远程列表失败，状态码: {response.status_code}")
                 return channels
@@ -166,7 +157,6 @@ class IPTVUpdater:
                         group_match = re.search(r'group-title="([^"]+)"', line)
                         if group_match:
                             category = group_match.group(1)
-                            
                         if "超清" in category or "4K" in channel_name:
                             category = "超清频道"
                         elif "央视频道" in category or "CCTV" in channel_name or "中央" in channel_name:
@@ -188,14 +178,24 @@ class IPTVUpdater:
         print(f"✅ 成功获取 {len(channels)} 个咪咕/外部频道")
         return channels
 
+
+    # ================================
+    # 修改部分：参考 codi.txt 的白名单逻辑
+    # ================================
+    
     def load_whitelist(self):
-        """ 加载白名单。"""
-        print(f"📝 正在加载本地白名单...")
+        """ 
+        加载本地及远程白名单。
+        参考 codi.txt 逻辑，优先级最高，且强制归类为【本地节目】 
+        """
+        print(f"📝 正在加载白名单 (本地 & 远程)...")
         channels = []
+        
+        # 1. 加载本地 whitelist.txt
         local_file = "whitelist.txt"
         if os.path.exists(local_file):
             try:
-                with open(local_file, 'r', encoding='utf-误') as f:
+                with open(local_file, 'r', encoding='utf-8') as f:
                     lines = f.readlines()
                 i = 0
                 while i < len(lines):
@@ -222,16 +222,39 @@ class IPTVUpdater:
                             i += 1
                         else:
                             i += 1
-                        continue
-                        
+                            continue
+                            
+                    # 强制将白名单频道分类为【本地节目】
                     if name and url and urlparse(url).scheme in ['http', 'https']:
                         channels.append((name, url, '本地节目'))
             except Exception as e:
                 print(f"❌ 读取本地白名单文件异常: {e}")
         else:
             print("⚠️ 未找到本地 whitelist.txt 文件，跳过。")
+
+        # 2. 加载远程白名单 (参考 codi.txt)
+        try:
+            print(f"🚀 正在获取远程白名单: {self.REMOTE_WHITELIST_URL}")
+            response = requests.get(self.REMOTE_WHITELIST_URL, timeout=10)
+            response.raise_for_status()
+            for line in response.text.strip().splitlines():
+                line = line.strip()
+                if not line or line.startswith('#') or ',' not in line:
+                    continue
+                parts = line.split(',', 1)
+                name = parts[0].strip()
+                url = parts[1].strip()
+                
+                # 强制将远程白名单频道也分类为【本地节目】
+                if name and url and urlparse(url).scheme in ['http', 'https']:
+                    channels.append((name, url, '本地节目'))
+            print(f"✅ 成功加载远程白名单频道。")
+        except Exception as e:
+            print(f"❌ 获取远程白名单失败: {e}")
+
         print(f"✅ 白名单处理完成，共加载 {len(channels)} 个频道")
         return channels
+
 
     def run(self):
         """主运行逻辑"""
@@ -241,34 +264,35 @@ class IPTVUpdater:
         
         # 创建输出目录
         os.makedirs(self.OUTPUT_DIR, exist_ok=True)
-        all_channels = []
         
         # --- 执行获取任务 ---
-        # 1. 获取南充频道 (本地节目)
-        all_channels.extend(self.fetch_nanchong_channels())
+        # 1. 获取南充频道 (此处已修复拼写错误)
+        nanchong_chans = self.fetch_nanchong_channels() 
+        # 2. 获取西充综合频道
+        xichong_chans = self.fetch_xichong_channel()
+        # 3. 获取咪咕/外部源
+        migu_chans = self.fetch_migu_channels()
+        # 4. 获取白名单
+        whitelist_chans = self.load_whitelist()
         
-        # 2. 获取西充综合频道 (使用 codi.txt 的新逻辑)
-        all_channels.extend(self.fetch_xichong_channel())
+        # --- 核心修改：基于【频道名称】去重，白名单优先级最高 ---
+        channel_dict = {}
         
-        # 3. 获取原白名单内容 (分类为本地节目)
-        all_channels.extend(self.load_whitelist())
+        # 步骤1: 先存入非白名单的数据
+        for name, url, cat in nanchong_chans + xichong_chans + migu_chans:
+            if name not in channel_dict:
+                channel_dict[name] = (name, url, cat)
         
-        # 4. 获取新的咪咕/外部源
-        all_channels.extend(self.fetch_migu_channels())
+        # 步骤2: 再存入白名单数据 (覆盖前面同名的)
+        for name, url, cat in whitelist_chans:
+            channel_dict[name] = (name, url, cat)
         
-        if not all_channels:
+        unique_channels = list(channel_dict.values())
+        
+        if not unique_channels:
             print("❌ 未能获取到任何频道数据。")
             return
             
-        # --- 去重 ---
-        seen = set()
-        unique_channels = []
-        for name, url, cat in all_channels:
-            key = url # 仅根据URL去重
-            if key not in seen:
-                seen.add(key)
-                unique_channels.append((name, url, cat))
-                
         # --- 写入文件 ---
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write('#EXTM3U x-tvg-url="epg.xml"\n')
