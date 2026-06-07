@@ -1,22 +1,10 @@
 #EXTM3U x-tvg-url="epg.xml"
 #EXTINF:-1 group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=c6104edd5566741d60b6589fc9f38ffe&wsTime=1780877269
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=51586269bc7f38f6cbda0b145486ad15&wsTime=1780884943
 #EXTINF:-1 group-title="本地节目",南充科教生活
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=3ac946d67c8cb4334ec8be7afcb3dbcd&wsTime=1780877269
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=b70e7050cd0551bdf05ef4cfc987f0c3&wsTime=1780884943
 #EXTINF:-1 group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
-#EXTINF:-1 group-title="本地节目",直播南充
-https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
-#EXTINF:-1 group-title="本地节目",直播南充
-https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
-#EXTINF:-1 group-title="本地节目",走进四川西充
-https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
-#EXTINF:-1 group-title="本地节目",西充王河湾冬季风景
-https://us-xpc5.xpccdn.com/25fc9e48-6a27-4148-8169-00255208627b/2b4c670a-6231-4a28-8707-5835df8568d3.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%2234m0k6dcmmnkfyi6w%22%2C%22ip%22%3A%22223.73.134.245%2C120.241.65.73%22%7D
-#EXTINF:-1 group-title="本地节目",西充莲花湖夜景
-https://us-xpc5.xpccdn.com/5d6d2eead09db.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.52%22%7D
-#EXTINF:-1 group-title="本地节目",西充华光黄家庙村桅杆湾志
-https://us-xpc5.xpccdn.com/5bddb2ca52ba6.mp4?j=%7B%22userId%22%3A0%2C%22deviceId%22%3A%22f2f23143-4b9d-4169-a13b-bc1e557d73e6%22%2C%22ip%22%3A%2214.213.49.135%2C113.96.178.53%22%7D
 #EXTINF:-1 group-title="央视频道",CCTV1综合
 http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/cctv1hd/1200/index.m3u8?msisdn=f863b466d46e2ff46401579155d4a125&mdspid=&spid=699004&netType=4&sid=2201057821&pid=2028597139&timestamp=20260607060557&Channel_ID=0116_2600037000-99000-200300220108164&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=113.6.228.143&SecurityKey=20260607060557&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=WX-A1-9.5.1.2-RELEASE&userid=1834153345&jmhm=f863b466d46e2ff46401579155d4a125&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=802a1537fb33a7f81b7f65cb1344fd5c
 #EXTINF:-1 group-title="央视频道",CCTV1综合
