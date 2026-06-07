@@ -30,28 +30,31 @@ class IPTVUpdater:
         self.OUTPUT_DIR = "live"
         self.OUTPUT_FILE = os.path.join(self.OUTPUT_DIR, "current.m3u8")
         
-        # --- 新增：西充综合专用配置 ---
+        # --- 新增：西充综合专用配置 (基于 codi.txt 逻辑) ---
         self.XICHONG_API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
+        # 使用 codi.txt 中的 Headers，可能对解决播放失效有效
         self.XICHONG_HEADERS = {
             'User-Agent': 'okhttp/3.12.12',
             'Accept': 'application/json, text/plain, */*'
         }
 
-    def fetch_xichong_channel_new(self):
-        """使用参考代码逻辑获取西充综合频道"""
+    def fetch_xichong_channel(self):
+        """
+        使用 codi.txt 的逻辑获取西充综合频道
+        """
         print(f"🚀 正在连接 {self.XICHONG_API_URL} 获取【西充综合】...")
         channels = []
         try:
             # verify=False 忽略 SSL 证书错误
             response = requests.get(self.XICHONG_API_URL, headers=self.XICHONG_HEADERS, verify=False, timeout=10)
-            
             if response.status_code == 200:
                 data = response.json()
-                # 直接解析 JSON
-                if data.get("status") == 200 and 'data' in data:
-                    m3u8_url = data['data'].get('m3u8Url')
+                # 检查接口返回状态
+                if data.get('status') == 200 and 'data' in data and 'm3u8Url' in data['data']:
+                    m3u8_url = data['data']['m3u8Url']
                     if m3u8_url:
                         print(f"✅ 成功获取西充综合直播流！")
+                        # 直接返回标准格式，归类为'本地节目'
                         channels.append(("西充综合", m3u8_url, '本地节目'))
                     else:
                         print(f"❌ 西充API返回数据中缺少 m3u8Url")
@@ -114,7 +117,7 @@ class IPTVUpdater:
                                     if len(path_parts) >= 2:
                                         stream_id = path_parts[-2]
                             if not stream_id: continue
-                            
+                                
                             path = f"/live/{stream_id}/playlist.m3u8"
                             ws_secret = self.generate_signature(path, expire_time)
                             final_url = f"{self.BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
@@ -138,6 +141,7 @@ class IPTVUpdater:
             if response.status_code != 200:
                 print(f"❌ 获取远程列表失败，状态码: {response.status_code}")
                 return channels
+                
             content = response.text
             lines = content.splitlines()
             i = 0
@@ -153,25 +157,29 @@ class IPTVUpdater:
                             comma_split = line.split(',', 1)
                             if len(comma_split) == 2:
                                 channel_name = comma_split[1].strip()
+                                
                         if not channel_name:
                             i += 1
                             continue
+                            
                         category = "其他频道"
                         group_match = re.search(r'group-title="([^"]+)"', line)
                         if group_match:
                             category = group_match.group(1)
+                            
                         if "超清" in category or "4K" in channel_name:
                             category = "超清频道"
                         elif "央视频道" in category or "CCTV" in channel_name or "中央" in channel_name:
                             category = "央视频道"
                         elif "卫视频道" in category or "卫视" in channel_name:
                             category = "卫视频道"
+                            
                         if i + 1 < len(lines):
                             url_line = lines[i + 1].strip()
                             if url_line.startswith('http'):
                                 channels.append((channel_name, url_line, category))
-                        i += 2
-                        continue
+                                i += 2
+                                continue
                     except Exception as e:
                         print(f"❌ 解析行出错: {line[:30]}... 错误: {e}")
                 i += 1
@@ -187,7 +195,7 @@ class IPTVUpdater:
         local_file = "whitelist.txt"
         if os.path.exists(local_file):
             try:
-                with open(local_file, 'r', encoding='utf-8') as f:
+                with open(local_file, 'r', encoding='utf-误') as f:
                     lines = f.readlines()
                 i = 0
                 while i < len(lines):
@@ -214,8 +222,8 @@ class IPTVUpdater:
                             i += 1
                         else:
                             i += 1
-                            continue
-                            
+                        continue
+                        
                     if name and url and urlparse(url).scheme in ['http', 'https']:
                         channels.append((name, url, '本地节目'))
             except Exception as e:
@@ -239,8 +247,8 @@ class IPTVUpdater:
         # 1. 获取南充频道 (本地节目)
         all_channels.extend(self.fetch_nanchong_channels())
         
-        # 2. 获取西充综合频道 (使用修复后的新逻辑)
-        all_channels.extend(self.fetch_xichong_channel_new())
+        # 2. 获取西充综合频道 (使用 codi.txt 的新逻辑)
+        all_channels.extend(self.fetch_xichong_channel())
         
         # 3. 获取原白名单内容 (分类为本地节目)
         all_channels.extend(self.load_whitelist())
@@ -256,7 +264,7 @@ class IPTVUpdater:
         seen = set()
         unique_channels = []
         for name, url, cat in all_channels:
-            key = url
+            key = url # 仅根据URL去重
             if key not in seen:
                 seen.add(key)
                 unique_channels.append((name, url, cat))
@@ -277,4 +285,3 @@ if __name__ == "__main__":
     print(f"🌍 运行环境：{time.strftime('%Y-%m-%d %A')} | 广东佛山")
     updater = IPTVUpdater()
     updater.run()
-    
