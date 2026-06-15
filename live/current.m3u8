@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="epg.xml"
 #EXTINF:-1 group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=4e674f0d48b32a21ee5bf77036e999b7&wsTime=1781596164
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=821fb93ad6ae5cebe06ccdb782a34537&wsTime=1781602028
 #EXTINF:-1 group-title="本地节目",南充科教生活
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=820724eb9e1a6e008d3f3c3efa68d030&wsTime=1781596164
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=5e093eb0399c330f7842c2531cb65389&wsTime=1781602028
 #EXTINF:-1 group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
 #EXTINF:-1 group-title="央视频道",CCTV1综合
@@ -703,16 +703,6 @@ https://isus.cc/php/huya.php?id=20985816
 https://isus.cc/php/huya.php?id=26355857
 #EXTINF:-1 group-title="📺电视剧直播",年代剧专区
 https://isus.cc/php/huya.php?id=20969095
-#EXTINF:-1 group-title="💽纪录片直播",幻海航行
-http://222.186.39.21:35466/douyu/17105786
-#EXTINF:-1 group-title="💽纪录片直播",碎片记
-http://222.186.39.21:35466/douyu/9412981
-#EXTINF:-1 group-title="💽纪录片直播",宇宙视界
-http://222.186.39.21:35466/douyu/9498354
-#EXTINF:-1 group-title="💽纪录片直播",宇宙探索飞船
-http://222.186.39.21:35466/douyu/9456028
-#EXTINF:-1 group-title="💽纪录片直播",世界未解之谜
-http://222.186.39.21:35466/douyu/9369468
 #EXTINF:-1 group-title="💽纪录片直播",贝爷
 https://isus.cc/php/huya.php?id=20969143
 #EXTINF:-1 group-title="💽纪录片直播",生存记
@@ -725,34 +715,6 @@ https://isus.cc/php/huya.php?id=20985822
 https://isus.cc/php/huya.php?id=19743457
 #EXTINF:-1 group-title="💽纪录片直播",云游故宫2
 https://isus.cc/php/huya.php?id=19743452
-#EXTINF:-1 group-title="🍿短剧直播",陈翔六点半
-https://isus.cc/php/huya.php?id=11274154
-#EXTINF:-1 group-title="🍿短剧直播",人生回答机本机
-http://222.186.39.21:35466/douyu/9409722
-#EXTINF:-1 group-title="🍿短剧直播",郑云工作室
-http://222.186.39.21:35466/douyu/2995636
-#EXTINF:-1 group-title="🍿短剧直播",王Li差点红
-http://222.186.39.21:35466/douyu/9348469
-#EXTINF:-1 group-title="🍿短剧直播",田小豆短剧
-http://222.186.39.21:35466/douyu/10378551
-#EXTINF:-1 group-title="🍿短剧直播",哈利影视
-http://222.186.39.21:35466/douyu/8475821
-#EXTINF:-1 group-title="🍿短剧直播",不思异剧场
-http://222.186.39.21:35466/douyu/9297412
-#EXTINF:-1 group-title="🧨小品直播",赵本山专场
-http://222.186.39.21:35466/douyu/9817716
-#EXTINF:-1 group-title="🧨小品直播",宋小宝专场
-http://222.186.39.21:35466/douyu/9817729
-#EXTINF:-1 group-title="🧨小品直播",贾玲专场
-http://222.186.39.21:35466/douyu/10419541
-#EXTINF:-1 group-title="🧨小品直播",许君聪专场
-http://222.186.39.21:35466/douyu/10419558
-#EXTINF:-1 group-title="🧨小品直播",沈腾马丽专场
-http://222.186.39.21:35466/douyu/10153463
-#EXTINF:-1 group-title="🧨小品直播",德云哈啤分社
-https://isus.cc/php/huya.php?id=26631018
-#EXTINF:-1 group-title="🧨小品直播",小饭事件薄
-https://isus.cc/php/huya.php?id=20985830
 #EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",武林外传
 https://lvbdcdncmn.inter.71edge.com/tslive/l1/c52_lb_553_300_t10/I67sb6wvoWaxfjPEdSuB8xyBShFln4Poub7LGIzPt5oGLcKaLXD21aR_t20nEIxJFmaf_i6EYQ77gA-gLJ3xOTtq6K7hpgCREwLfbuNMXruJdFta9-ai9bYk4cTMbhQgRh9SCkE3yt46X4E0qOVADDdga3TMRSLnFscFYr-_s4Sd2sgykmnFa4-hdgX9599FiW_RX5VYGH9B1jyj748_CAu4VgqqTDwxUx8w556tCWY7mlb1r84RWuip72e4H8-HkUuBUoFeD4aw9m1HOUfgwx7ixDqJUFOmq9F-LeKLTZ2Ap6fobRuaUiaSqHsCWvuy9XWe5KWBiZv6bUJ8oAuqkA/1a6758d872929c8d41a7629db52a831f7/c52_lb_553_300_t10.m3u8?key=0baa5db205ac0d29618a2e8d7964b7e4e&dis_t=1752408084&uuid=6f1d53dc-6873a014-459&qdpv=3&qd_bid=1&qd_sft=0&pv=0.1&cpt=0
 #EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",2024年春节档
