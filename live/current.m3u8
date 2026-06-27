@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="epg.xml"
 #EXTINF:-1 group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=64ad44539d6a0959924ad08f55b901c4&wsTime=1782628312
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=db4eba7cde5c7168899ccdd621b7bf4a&wsTime=1782642336
 #EXTINF:-1 group-title="本地节目",南充科教生活
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=d5c74aaa6954e5c9f697348a3ba5d36e&wsTime=1782628312
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=68765fde3610181e47b4c94e9c7a819f&wsTime=1782642336
 #EXTINF:-1 group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
 #EXTINF:-1 group-title="央视频道",CCTV1综合
@@ -1861,6 +1861,8 @@ https://tylive.kan0512.com/norecord/csztv4k_4k.m3u8
 https://event.pull.hebtv.com:443/live/live101.m3u8
 #EXTINF:-1 group-title="4K测试",南国都市4K
 https://tencentplay.gztv.com/live/nanguodushi.m3u8?txSecret=550af55c0ea34ce492748481415b6dfa&txTime=1903e7b17de$LR•IPV4
+#EXTINF:-1 group-title="本地节目",川超
+https://mmslivef.scgczm.com/live/16905_6M264hdr1080.m3u8?auth_key=1782463179-0-0-d26e625fb0df5d5e99b774c391644893
 #EXTINF:-1 group-title="本地节目",直播南充
 https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
 #EXTINF:-1 group-title="本地节目",走进四川西充
