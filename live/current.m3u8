@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="epg.xml"
 #EXTINF:-1 group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=1a8d1e7d8ebddf9f2db9df9de53a2b9c&wsTime=1783296281
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=23502baf7db07615c30e4c78a25c5e53&wsTime=1783320220
 #EXTINF:-1 group-title="本地节目",南充科教生活
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=681a630a5a411f362a1da020955328b3&wsTime=1783296281
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=62d26821e3dcaa02b1a101265a692560&wsTime=1783320220
 #EXTINF:-1 group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
 #EXTINF:-1 group-title="央视频道",CCTV1综合
