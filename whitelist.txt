@@ -5,7 +5,7 @@
 # 填写频道名称将直接将记录保留到最终结果，例如：CCTV-1,url，仅填写界面地址将对所有频道有效，多条记录 newline 输入。
 📺本地频道，#类型#
 
-川超,https://gh-proxy.org/https://raw.githubusercontent.com/xichongguo/xichongys/refs/heads/main/chuanchao.mp4
+川超,https://mmslivef.scgczm.com/live/17271_6M264hdr1080.m3u8?auth_key=1783739405-0-0-7f0dc0ec6d14db0097db539096a1811f
 
 直播南充,https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 直播南充,https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
