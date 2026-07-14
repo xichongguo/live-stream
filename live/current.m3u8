@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="epg.xml"
 #EXTINF:-1 group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=c01758d89c457c3e819dd10942717564&wsTime=1784073374
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=192ccf3546269cacd522d0a999dee3f0&wsTime=1784093697
 #EXTINF:-1 group-title="本地节目",南充科教生活
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=a16f43198655f2c03370a47e26d668f3&wsTime=1784073374
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=828e6caa30c1bde336eed13e483c3325&wsTime=1784093697
 #EXTINF:-1 group-title="本地节目",西充综合
 https://bl.xichongtv.cn/Xcrm2026/xczhpd0330.m3u8?auth_key=1774838563-0-0-f0e5df823f9a7c002740d0a07109ddca
 #EXTINF:-1 group-title="央视频道",CCTV1综合
@@ -20,7 +20,7 @@ http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/cctv8hd/2000/index.m3u8?
 #EXTINF:-1 group-title="央视频道",CCTV5+体育赛事
 http://hlsztemgsplive.miguvideo.com:8080/wd_r2/cctv/cctv5plusnew/1200/index.m3u8?msisdn=b3b46037161ad460a145086ca2d3353f&mdspid=&spid=699004&netType=0&sid=5500516288&pid=2028597139&timestamp=20260714065354&Channel_ID=0116_2600034600-99000-201600010076502&ProgramID=641886773&ParentNodeID=-99&assertID=5500516288&client_ip=113.6.228.247&SecurityKey=20260714065354&promotionId=&mvid=5102048803&mcid=500020&playurlVersion=ZQ-A1-9.6.1.6-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=3341595f6ad138af7e84b8508965648d&sv=10004&ct=android
 #EXTINF:-1 group-title="央视频道",CCTV13新闻
-http://pull-hls-f1.douyinliving.com/media/stream-696107587393815378/playlist.m3u8?keeptime=00093a80&wsSecret=bbbd054778ab532edfa97bf7c5395746&wsTime=6a544fee&arch_hrchy=s2&s_anchor=1&major_anchor_level=vip&t_id=037-2026071310394131FD5A22CCB9DDAFA77E-5XIF43
+http://hlsztemgsplive.miguvideo.com:8080/envivo_x/2018/SD/cctv13/2000/index.m3u8?msisdn=998eabf6b92b2d5c5c7cc5896ee0422c&mdspid=&spid=699004&netType=0&sid=2202208864&pid=2028597139&timestamp=20260714062257&Channel_ID=0116_2600034600-99000-201600010069053&ProgramID=608807423&ParentNodeID=-99&assertID=2202208864&client_ip=113.6.228.132&SecurityKey=20260714062257&promotionId=&mvid=2202208864&mcid=500020&playurlVersion=ZQ-A1-9.6.1.6-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=377d36a6537a4c4ffc711596d07d88c0&sv=10004&ct=android
 #EXTINF:-1 group-title="央视频道",CCTV14少儿
 http://hlsztemgsplive.miguvideo.com:8080/wd_r2/2018/ocn/cctv14hd/2000/index.m3u8?msisdn=998eabf6b92b2d5c5c7cc5896ee0422c&mdspid=&spid=699004&netType=0&sid=5500212875&pid=2028597139&timestamp=20260714062402&Channel_ID=0116_2600034600-99000-201600010066800&ProgramID=624878440&ParentNodeID=-99&assertID=5500212875&client_ip=113.6.228.133&SecurityKey=20260714062402&promotionId=&mvid=5100001697&mcid=500020&playurlVersion=ZQ-A1-9.6.1.6-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=c5bc84fdd84eaf43bfd46f96b42ebebe&sv=10004&ct=android
 #EXTINF:-1 group-title="央视频道",CCTV17农业农村
@@ -287,8 +287,6 @@ http://tvpull.dxhmt.cn:9081/tv/10523-1.m3u8
 http://tvpull.dxhmt.cn:9081/tv/10721-1.m3u8
 #EXTINF:-1 group-title="河南地区",舞钢综合
 http://tvpull.dxhmt.cn:9081/tv/10481-1.m3u8
-#EXTINF:-1 group-title="河南地区",鹤壁新闻
-http://pili-live-hls.hebitv.com/hebi/hbtv.m3u8
 #EXTINF:-1 group-title="河南地区",灵宝新闻综合
 http://tvpull.dxhmt.cn:9081/tv/11282-1.m3u8
 #EXTINF:-1 group-title="河南地区",淮滨综合
