@@ -18,7 +18,7 @@ class IPTVUpdater:
         # --- 数据源配置 ---
         self.NANCHONG_JSON_URL = "http://kstatic.sctvcloud.com/static/N1300/list/1835203958696394753.json"
         # --- 咪咕视频源配置 ---
-        self.MIGU_INTERFACE_URL = "https://develop2027.github.io/migu_video/interface.txt"
+        self.MIGU_INTERFACE_URL = "https://develop202.github.io/migu_video/interface.txt"
         # --- 签名与域名配置 (南充源)---
         self.SECRET_KEY = "5df6d8b743257e0e38b869a07d8819d2"
         self.BASE_DOMAIN = "https://ncpull.cnncw.cn"
