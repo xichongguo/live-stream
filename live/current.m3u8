@@ -1,1735 +1,2709 @@
-#EXTM3U x-tvg-url="epg.xml"
-#EXTINF:-1 group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=78b7327c7d0f7493513b59d952ec9b35&wsTime=1785401418
-#EXTINF:-1 group-title="本地节目",南充科教生活
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=d31881fbbf9b963e35d8a1be1223f52a&wsTime=1785401418
-#EXTINF:-1 group-title="本地节目",西充综合
+#EXTM3U
+#EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=39fbac44b4692315638dddf9bfcdb361&wsTime=1785403126
+#EXTINF:-1 tvg-name="南充科教生活" group-title="本地节目",南充科教生活
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=85f0e13fc6107353ef26cf676f108d02&wsTime=1785403126
+#EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://bl.xichongtv.cn/xcrm2026/ZHPD0724.m3u8?auth_key=1784864504-0-0-e2bb29f014c4f5b19cefb6b59648a2c1
-#EXTINF:-1 group-title="🎞️电影直播",邵氏电影
+#EXTINF:-1 tvg-name="邵氏电影" group-title="电影/电视剧",邵氏电影
 http://38.75.136.137:98/gslb/dsdqpub/lbssdy.m3u8?auth=testpub
-#EXTINF:-1 group-title="🎞️电影直播",邵氏武侠
+#EXTINF:-1 tvg-name="邵氏武侠" group-title="电影/电视剧",邵氏武侠
 http://38.75.136.137:98/gslb/dsdqpub/lbsswx.m3u8?auth=testpub
-#EXTINF:-1 group-title="🎞️电影直播",邵氏动作
+#EXTINF:-1 tvg-name="邵氏动作" group-title="电影/电视剧",邵氏动作
 http://38.75.136.137:98/gslb/dsdqpub/lbssdz.m3u8?auth=testpub
-#EXTINF:-1 group-title="🎞️电影直播",邵氏喜剧
+#EXTINF:-1 tvg-name="邵氏喜剧" group-title="电影/电视剧",邵氏喜剧
 http://38.75.136.137:98/gslb/dsdqpub/lbssxj.m3u8?auth=testpub
-#EXTINF:-1 group-title="🎞️电影直播",华数电影
+#EXTINF:-1 tvg-name="华数电影" group-title="电影/电视剧",华数电影
 http://hmfs.f3322.net:3388/hls/40/index.m3u8
-#EXTINF:-1 group-title="🎞️电影直播",华数动作影院
+#EXTINF:-1 tvg-name="华数动作影院" group-title="电影/电视剧",华数动作影院
 http://113.25.252.226:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 group-title="🎞️电影直播",华数经典电影
+#EXTINF:-1 tvg-name="华数经典电影" group-title="电影/电视剧",华数经典电影
 http://123.129.70.178:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 group-title="🎞️电影直播",CHC家庭影院
+#EXTINF:-1 tvg-name="CHC家庭影院" group-title="电影/电视剧",CHC家庭影院
 http://38.75.136.137:98/gslb/dsdqpub/chcjt.m3u8?auth=testpub
-#EXTINF:-1 group-title="🎞️电影直播",CHC动作电影
+#EXTINF:-1 tvg-name="CHC家庭影院" group-title="电影/电视剧",CHC家庭影院
+http://27.41.245.32:801/hls/905/index.m3u8
+#EXTINF:-1 tvg-name="CHC家庭影院" group-title="电影/电视剧",CHC家庭影院
+http://go.bkpcp.top/mg/jtyy
+#EXTINF:-1 tvg-name="CHC动作电影" group-title="电影/电视剧",CHC动作电影
 http://38.75.136.137:98/gslb/dsdqpub/chcdz.m3u8?auth=testpub
-#EXTINF:-1 group-title="🎞️电影直播",CHC影迷电影
+#EXTINF:-1 tvg-name="CHC动作电影" group-title="电影/电视剧",CHC动作电影
+http://go.bkpcp.top/mg/dzdy
+#EXTINF:-1 tvg-name="CHC影迷电影" group-title="电影/电视剧",CHC影迷电影
 http://38.75.136.137:98/gslb/dsdqpub/chchd.m3u8?auth=testpub
-#EXTINF:-1 group-title="🎞️电影直播",1905环球经典
+#EXTINF:-1 tvg-name="CHC影迷电影" group-title="电影/电视剧",CHC影迷电影
+http://go.bkpcp.top/mg/ymdy
+#EXTINF:-1 tvg-name="1905环球经典" group-title="电影/电视剧",1905环球经典
 http://xxwx.yoesun.com/xxw/1905电影网.php?id=1905b
-#EXTINF:-1 group-title="🎞️电影直播",1905电影网
+#EXTINF:-1 tvg-name="1905电影网" group-title="电影/电视剧",1905电影网
 http://xxwx.yoesun.com/xxw/1905电影网.php?id=1905
-#EXTINF:-1 group-title="🎞️电影直播",新视觉HD
+#EXTINF:-1 tvg-name="新视觉HD" group-title="电影/电视剧",新视觉HD
 http://gat.bkpcp.top/ymg.php?id=mlzq
-#EXTINF:-1 group-title="🎞️电影直播",周星驰专场
+#EXTINF:-1 tvg-name="周星驰专场" group-title="电影/电视剧",周星驰专场
 https://isus.cc/php/huya.php?id=11336587
-#EXTINF:-1 group-title="🎞️电影直播",李连杰专场
+#EXTINF:-1 tvg-name="李连杰专场" group-title="电影/电视剧",李连杰专场
 https://isus.cc/php/huya.php?id=11342390
-#EXTINF:-1 group-title="🎞️电影直播",刘德华专场
+#EXTINF:-1 tvg-name="刘德华专场" group-title="电影/电视剧",刘德华专场
 https://isus.cc/php/huya.php?id=11342424
-#EXTINF:-1 group-title="🎞️电影直播",林正英专场
+#EXTINF:-1 tvg-name="林正英专场" group-title="电影/电视剧",林正英专场
 https://isus.cc/php/huya.php?id=11342421
-#EXTINF:-1 group-title="🎞️电影直播",甄子丹专场
+#EXTINF:-1 tvg-name="甄子丹专场" group-title="电影/电视剧",甄子丹专场
 https://isus.cc/php/huya.php?id=11352935
-#EXTINF:-1 group-title="🎞️电影直播",沈腾专场
+#EXTINF:-1 tvg-name="沈腾专场" group-title="电影/电视剧",沈腾专场
 https://isus.cc/php/huya.php?id=11601968
-#EXTINF:-1 group-title="🎞️电影直播",黄渤专场
+#EXTINF:-1 tvg-name="黄渤专场" group-title="电影/电视剧",黄渤专场
 https://isus.cc/php/huya.php?id=11352876
-#EXTINF:-1 group-title="🎞️电影直播",周润发专场
+#EXTINF:-1 tvg-name="周润发专场" group-title="电影/电视剧",周润发专场
 https://isus.cc/php/huya.php?id=11342387
-#EXTINF:-1 group-title="🎞️电影直播",成龙专场
+#EXTINF:-1 tvg-name="成龙专场" group-title="电影/电视剧",成龙专场
 https://isus.cc/php/huya.php?id=11342386
-#EXTINF:-1 group-title="🎞️电影直播",古天乐专场
+#EXTINF:-1 tvg-name="古天乐专场" group-title="电影/电视剧",古天乐专场
 https://isus.cc/php/huya.php?id=29982675
-#EXTINF:-1 group-title="🎞️电影直播",王晶专场
+#EXTINF:-1 tvg-name="王晶专场" group-title="电影/电视剧",王晶专场
 https://isus.cc/php/huya.php?id=11602058
-#EXTINF:-1 group-title="🎞️电影直播",吴京专场
+#EXTINF:-1 tvg-name="吴京专场" group-title="电影/电视剧",吴京专场
 https://isus.cc/php/huya.php?id=11602077
-#EXTINF:-1 group-title="🎞️电影直播",洪金宝专场
+#EXTINF:-1 tvg-name="洪金宝专场" group-title="电影/电视剧",洪金宝专场
 https://isus.cc/php/huya.php?id=11279251
-#EXTINF:-1 group-title="🎞️电影直播",徐克专场
+#EXTINF:-1 tvg-name="徐克专场" group-title="电影/电视剧",徐克专场
 https://isus.cc/php/huya.php?id=11352909
-#EXTINF:-1 group-title="🎞️电影直播",徐峥专场
+#EXTINF:-1 tvg-name="徐峥专场" group-title="电影/电视剧",徐峥专场
 https://isus.cc/php/huya.php?id=11602043
-#EXTINF:-1 group-title="🎞️电影直播",邓超专场
+#EXTINF:-1 tvg-name="邓超专场" group-title="电影/电视剧",邓超专场
 https://isus.cc/php/huya.php?id=11336592
-#EXTINF:-1 group-title="🎞️电影直播",梁家辉专场
+#EXTINF:-1 tvg-name="梁家辉专场" group-title="电影/电视剧",梁家辉专场
 https://isus.cc/php/huya.php?id=11342429
-#EXTINF:-1 group-title="🎞️电影直播",张卫健专场
+#EXTINF:-1 tvg-name="张卫健专场" group-title="电影/电视剧",张卫健专场
 https://isus.cc/php/huya.php?id=11342423
-#EXTINF:-1 group-title="🎞️电影直播",王宝强专场
+#EXTINF:-1 tvg-name="王宝强专场" group-title="电影/电视剧",王宝强专场
 https://isus.cc/php/huya.php?id=30080251
-#EXTINF:-1 group-title="🎞️电影直播",陈小春专场
+#EXTINF:-1 tvg-name="陈小春专场" group-title="电影/电视剧",陈小春专场
 https://isus.cc/php/huya.php?id=11336719
-#EXTINF:-1 group-title="🎞️电影直播",郭富城专场
+#EXTINF:-1 tvg-name="郭富城专场" group-title="电影/电视剧",郭富城专场
 https://isus.cc/php/huya.php?id=20985865
-#EXTINF:-1 group-title="🎞️电影直播",吴镇宇专场
+#EXTINF:-1 tvg-name="吴镇宇专场" group-title="电影/电视剧",吴镇宇专场
 https://isus.cc/php/huya.php?id=23865096
-#EXTINF:-1 group-title="🎞️电影直播",陆小凤专场
+#EXTINF:-1 tvg-name="陆小凤专场" group-title="电影/电视剧",陆小凤专场
 https://isus.cc/php/huya.php?id=11342427
-#EXTINF:-1 group-title="🎞️电影直播",强森专场
+#EXTINF:-1 tvg-name="强森专场" group-title="电影/电视剧",强森专场
 https://isus.cc/php/huya.php?id=21059581
-#EXTINF:-1 group-title="🎞️电影直播",斯坦森专场
+#EXTINF:-1 tvg-name="斯坦森专场" group-title="电影/电视剧",斯坦森专场
 https://isus.cc/php/huya.php?id=21059588
-#EXTINF:-1 group-title="🎞️电影直播",马东锡专场
+#EXTINF:-1 tvg-name="马东锡专场" group-title="电影/电视剧",马东锡专场
 https://isus.cc/php/huya.php?id=21059556
-#EXTINF:-1 group-title="🎞️电影直播",灾难片系列
+#EXTINF:-1 tvg-name="灾难片系列" group-title="电影/电视剧",灾难片系列
 https://isus.cc/php/huya.php?id=23728647
-#EXTINF:-1 group-title="🎞️电影直播",贺岁片系列
+#EXTINF:-1 tvg-name="贺岁片系列" group-title="电影/电视剧",贺岁片系列
 https://isus.cc/php/huya.php?id=11601986
-#EXTINF:-1 group-title="🎞️电影直播",科幻片系列
+#EXTINF:-1 tvg-name="科幻片系列" group-title="电影/电视剧",科幻片系列
 https://isus.cc/php/huya.php?id=11352965
-#EXTINF:-1 group-title="🎞️电影直播",丧尸片系列
+#EXTINF:-1 tvg-name="丧尸片系列" group-title="电影/电视剧",丧尸片系列
 https://isus.cc/php/huya.php?id=24314160
-#EXTINF:-1 group-title="🎞️电影直播",怪兽片系列
+#EXTINF:-1 tvg-name="怪兽片系列" group-title="电影/电视剧",怪兽片系列
 https://isus.cc/php/huya.php?id=29982674
-#EXTINF:-1 group-title="🎞️电影直播",战争片系列
+#EXTINF:-1 tvg-name="战争片系列" group-title="电影/电视剧",战争片系列
 https://isus.cc/php/huya.php?id=21059618
-#EXTINF:-1 group-title="🎞️电影直播",硬汉片系列
+#EXTINF:-1 tvg-name="硬汉片系列" group-title="电影/电视剧",硬汉片系列
 https://isus.cc/php/huya.php?id=23864973
-#EXTINF:-1 group-title="🎞️电影直播",竞速片系列
+#EXTINF:-1 tvg-name="竞速片系列" group-title="电影/电视剧",竞速片系列
 https://isus.cc/php/huya.php?id=29982635
-#EXTINF:-1 group-title="🎞️电影直播",动作片系列
+#EXTINF:-1 tvg-name="动作片系列" group-title="电影/电视剧",动作片系列
 https://isus.cc/php/huya.php?id=10871113
-#EXTINF:-1 group-title="🎞️电影直播",爱情片系列
+#EXTINF:-1 tvg-name="爱情片系列" group-title="电影/电视剧",爱情片系列
 https://isus.cc/php/huya.php?id=29982639
-#EXTINF:-1 group-title="🎞️电影直播",犯罪片系列
+#EXTINF:-1 tvg-name="犯罪片系列" group-title="电影/电视剧",犯罪片系列
 https://isus.cc/php/huya.php?id=30080165
-#EXTINF:-1 group-title="🎞️电影直播",奇幻片系列
+#EXTINF:-1 tvg-name="奇幻片系列" group-title="电影/电视剧",奇幻片系列
 https://isus.cc/php/huya.php?id=26355847
-#EXTINF:-1 group-title="🎞️电影直播",冒险片系列
+#EXTINF:-1 tvg-name="冒险片系列" group-title="电影/电视剧",冒险片系列
 https://isus.cc/php/huya.php?id=21059566
-#EXTINF:-1 group-title="🎞️电影直播",盗墓片系列
+#EXTINF:-1 tvg-name="盗墓片系列" group-title="电影/电视剧",盗墓片系列
 https://isus.cc/php/huya.php?id=11601981
-#EXTINF:-1 group-title="🎞️电影直播",穿越片系列
+#EXTINF:-1 tvg-name="穿越片系列" group-title="电影/电视剧",穿越片系列
 https://isus.cc/php/huya.php?id=29465892
-#EXTINF:-1 group-title="🎞️电影直播",悬疑片系列
+#EXTINF:-1 tvg-name="悬疑片系列" group-title="电影/电视剧",悬疑片系列
 https://isus.cc/php/huya.php?id=21059530
-#EXTINF:-1 group-title="🎞️电影直播",喜剧片系列
+#EXTINF:-1 tvg-name="喜剧片系列" group-title="电影/电视剧",喜剧片系列
 https://isus.cc/php/huya.php?id=11602044
-#EXTINF:-1 group-title="🎞️电影直播",英雄片系列
+#EXTINF:-1 tvg-name="英雄片系列" group-title="电影/电视剧",英雄片系列
 https://isus.cc/php/huya.php?id=11601980
-#EXTINF:-1 group-title="🎞️电影直播",枪战片系列
+#EXTINF:-1 tvg-name="枪战片系列" group-title="电影/电视剧",枪战片系列
 https://isus.cc/php/huya.php?id=21059579
-#EXTINF:-1 group-title="🎞️电影直播",武侠片系列
+#EXTINF:-1 tvg-name="武侠片系列" group-title="电影/电视剧",武侠片系列
 https://isus.cc/php/huya.php?id=29982611
-#EXTINF:-1 group-title="🎞️电影直播",复仇片系列
+#EXTINF:-1 tvg-name="复仇片系列" group-title="电影/电视剧",复仇片系列
 https://isus.cc/php/huya.php?id=29982645
-#EXTINF:-1 group-title="🎞️电影直播",星球片系列
+#EXTINF:-1 tvg-name="星球片系列" group-title="电影/电视剧",星球片系列
 https://isus.cc/php/huya.php?id=30080234
-#EXTINF:-1 group-title="🎞️电影直播",校园片系列
+#EXTINF:-1 tvg-name="校园片系列" group-title="电影/电视剧",校园片系列
 https://isus.cc/php/huya.php?id=11352934
-#EXTINF:-1 group-title="🎞️电影直播",警匪片系列
+#EXTINF:-1 tvg-name="警匪片系列" group-title="电影/电视剧",警匪片系列
 https://isus.cc/php/huya.php?id=30041512
-#EXTINF:-1 group-title="🎞️电影直播",谍战片系列
+#EXTINF:-1 tvg-name="谍战片系列" group-title="电影/电视剧",谍战片系列
 https://isus.cc/php/huya.php?id=26355810
-#EXTINF:-1 group-title="🎞️电影直播",动画片系列
+#EXTINF:-1 tvg-name="动画片系列" group-title="少儿频道",动画片系列
 https://isus.cc/php/huya.php?id=11352878
-#EXTINF:-1 group-title="🎞️电影直播",恐怖片系列
+#EXTINF:-1 tvg-name="恐怖片系列" group-title="电影/电视剧",恐怖片系列
 https://isus.cc/php/huya.php?id=24884334
-#EXTINF:-1 group-title="🎞️电影直播",惊悚片系列
+#EXTINF:-1 tvg-name="惊悚片系列" group-title="电影/电视剧",惊悚片系列
 https://isus.cc/php/huya.php?id=26355802
-#EXTINF:-1 group-title="🎞️电影直播",僵尸片系列
+#EXTINF:-1 tvg-name="僵尸片系列" group-title="电影/电视剧",僵尸片系列
 https://isus.cc/php/huya.php?id=11352917
-#EXTINF:-1 group-title="🎞️电影直播",音乐片系列
+#EXTINF:-1 tvg-name="音乐片系列" group-title="电影/电视剧",音乐片系列
 https://isus.cc/php/huya.php?id=23860057
-#EXTINF:-1 group-title="🎞️电影直播",杀手片系列
+#EXTINF:-1 tvg-name="杀手片系列" group-title="电影/电视剧",杀手片系列
 https://isus.cc/php/huya.php?id=23728689
-#EXTINF:-1 group-title="🎞️电影直播",体育片系列
+#EXTINF:-1 tvg-name="体育片系列" group-title="体育频道",体育片系列
 https://isus.cc/php/huya.php?id=23864480
-#EXTINF:-1 group-title="🎞️电影直播",西部片系列
+#EXTINF:-1 tvg-name="西部片系列" group-title="电影/电视剧",西部片系列
 https://isus.cc/php/huya.php?id=30080177
-#EXTINF:-1 group-title="🎞️电影直播",香港片系列
+#EXTINF:-1 tvg-name="香港片系列" group-title="电影/电视剧",香港片系列
 https://isus.cc/php/huya.php?id=29982660
-#EXTINF:-1 group-title="🎞️电影直播",印度片系列
+#EXTINF:-1 tvg-name="印度片系列" group-title="电影/电视剧",印度片系列
 https://isus.cc/php/huya.php?id=26355799
-#EXTINF:-1 group-title="🎞️电影直播",热门片系列
+#EXTINF:-1 tvg-name="热门片系列" group-title="电影/电视剧",热门片系列
 https://isus.cc/php/huya.php?id=880261
-#EXTINF:-1 group-title="🎞️电影直播",高分片系列
+#EXTINF:-1 tvg-name="高分片系列" group-title="电影/电视剧",高分片系列
 https://isus.cc/php/huya.php?id=23902225
-#EXTINF:-1 group-title="🎞️电影直播",短片系列
+#EXTINF:-1 tvg-name="短片系列" group-title="电影/电视剧",短片系列
 https://isus.cc/php/huya.php?id=17098448
-#EXTINF:-1 group-title="📺电视剧直播",探案剧专区
+#EXTINF:-1 tvg-name="探案剧专区" group-title="电影/电视剧",探案剧专区
 https://isus.cc/php/huya.php?id=20969144
-#EXTINF:-1 group-title="📺电视剧直播",都市剧专区
+#EXTINF:-1 tvg-name="都市剧专区" group-title="电影/电视剧",都市剧专区
 https://isus.cc/php/huya.php?id=29982666
-#EXTINF:-1 group-title="📺电视剧直播",刑侦剧专区
+#EXTINF:-1 tvg-name="刑侦剧专区" group-title="电影/电视剧",刑侦剧专区
 https://isus.cc/php/huya.php?id=20969130
-#EXTINF:-1 group-title="📺电视剧直播",家庭剧专区
+#EXTINF:-1 tvg-name="家庭剧专区" group-title="电影/电视剧",家庭剧专区
 https://isus.cc/php/huya.php?id=11352872
-#EXTINF:-1 group-title="📺电视剧直播",经典剧专区
+#EXTINF:-1 tvg-name="经典剧专区" group-title="电影/电视剧",经典剧专区
 https://isus.cc/php/huya.php?id=11602081
-#EXTINF:-1 group-title="📺电视剧直播",怀旧剧专区
+#EXTINF:-1 tvg-name="怀旧剧专区" group-title="电影/电视剧",怀旧剧专区
 https://isus.cc/php/huya.php?id=30080241
-#EXTINF:-1 group-title="📺电视剧直播",僵尸剧专区
+#EXTINF:-1 tvg-name="僵尸剧专区" group-title="电影/电视剧",僵尸剧专区
 https://isus.cc/php/huya.php?id=23865148
-#EXTINF:-1 group-title="📺电视剧直播",抗战剧专区
+#EXTINF:-1 tvg-name="抗战剧专区" group-title="电影/电视剧",抗战剧专区
 https://isus.cc/php/huya.php?id=30080238
-#EXTINF:-1 group-title="📺电视剧直播",台湾剧专区
+#EXTINF:-1 tvg-name="台湾剧专区" group-title="电影/电视剧",台湾剧专区
 https://isus.cc/php/huya.php?id=11342436
-#EXTINF:-1 group-title="📺电视剧直播",韩国剧专区
+#EXTINF:-1 tvg-name="韩国剧专区" group-title="电影/电视剧",韩国剧专区
 https://isus.cc/php/huya.php?id=23863787
-#EXTINF:-1 group-title="📺电视剧直播",美国剧专区
+#EXTINF:-1 tvg-name="美国剧专区" group-title="电影/电视剧",美国剧专区
 https://isus.cc/php/huya.php?id=30080138
-#EXTINF:-1 group-title="📺电视剧直播",英国剧专区
+#EXTINF:-1 tvg-name="英国剧专区" group-title="电影/电视剧",英国剧专区
 https://isus.cc/php/huya.php?id=29982659
-#EXTINF:-1 group-title="📺电视剧直播",校园剧专区
+#EXTINF:-1 tvg-name="校园剧专区" group-title="电影/电视剧",校园剧专区
 https://isus.cc/php/huya.php?id=30080228
-#EXTINF:-1 group-title="📺电视剧直播",谍战剧专区
+#EXTINF:-1 tvg-name="谍战剧专区" group-title="电影/电视剧",谍战剧专区
 https://isus.cc/php/huya.php?id=30080225
-#EXTINF:-1 group-title="📺电视剧直播",古装剧专区
+#EXTINF:-1 tvg-name="古装剧专区" group-title="电影/电视剧",古装剧专区
 https://isus.cc/php/huya.php?id=24314158
-#EXTINF:-1 group-title="📺电视剧直播",乡村剧专区
+#EXTINF:-1 tvg-name="乡村剧专区" group-title="电影/电视剧",乡村剧专区
 https://isus.cc/php/huya.php?id=30080255
-#EXTINF:-1 group-title="📺电视剧直播",偶像剧专区
+#EXTINF:-1 tvg-name="偶像剧专区" group-title="电影/电视剧",偶像剧专区
 https://isus.cc/php/huya.php?id=11601964
-#EXTINF:-1 group-title="📺电视剧直播",爱情剧专区
+#EXTINF:-1 tvg-name="爱情剧专区" group-title="电影/电视剧",爱情剧专区
 https://isus.cc/php/huya.php?id=29982671
-#EXTINF:-1 group-title="📺电视剧直播",搞笑剧专区
+#EXTINF:-1 tvg-name="搞笑剧专区" group-title="电影/电视剧",搞笑剧专区
 https://isus.cc/php/huya.php?id=21059634
-#EXTINF:-1 group-title="📺电视剧直播",武侠剧专区
+#EXTINF:-1 tvg-name="武侠剧专区" group-title="电影/电视剧",武侠剧专区
 https://isus.cc/php/huya.php?id=20985816
-#EXTINF:-1 group-title="📺电视剧直播",穿越剧专区
+#EXTINF:-1 tvg-name="穿越剧专区" group-title="电影/电视剧",穿越剧专区
 https://isus.cc/php/huya.php?id=26355857
-#EXTINF:-1 group-title="📺电视剧直播",年代剧专区
+#EXTINF:-1 tvg-name="年代剧专区" group-title="电影/电视剧",年代剧专区
 https://isus.cc/php/huya.php?id=20969095
-#EXTINF:-1 group-title="💽纪录片直播",贝爷
+#EXTINF:-1 tvg-name="贝爷" group-title="电影/电视剧",贝爷
 https://isus.cc/php/huya.php?id=20969143
-#EXTINF:-1 group-title="💽纪录片直播",生存记
+#EXTINF:-1 tvg-name="生存记" group-title="电影/电视剧",生存记
 https://isus.cc/php/huya.php?id=20985861
-#EXTINF:-1 group-title="💽纪录片直播",航拍中国专场
+#EXTINF:-1 tvg-name="航拍中国专场" group-title="电影/电视剧",航拍中国专场
 https://isus.cc/php/huya.php?id=22414123
-#EXTINF:-1 group-title="💽纪录片直播",中国通史
+#EXTINF:-1 tvg-name="中国通史" group-title="电影/电视剧",中国通史
 https://isus.cc/php/huya.php?id=20985822
-#EXTINF:-1 group-title="💽纪录片直播",云游故宫1
+#EXTINF:-1 tvg-name="云游故宫1" group-title="电影/电视剧",云游故宫1
 https://isus.cc/php/huya.php?id=19743457
-#EXTINF:-1 group-title="💽纪录片直播",云游故宫2
+#EXTINF:-1 tvg-name="云游故宫2" group-title="电影/电视剧",云游故宫2
 https://isus.cc/php/huya.php?id=19743452
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",武林外传
+#EXTINF:-1 tvg-name="武林外传" group-title="电影/电视剧",武林外传
 https://lvbdcdncmn.inter.71edge.com/tslive/l1/c52_lb_553_300_t10/I67sb6wvoWaxfjPEdSuB8xyBShFln4Poub7LGIzPt5oGLcKaLXD21aR_t20nEIxJFmaf_i6EYQ77gA-gLJ3xOTtq6K7hpgCREwLfbuNMXruJdFta9-ai9bYk4cTMbhQgRh9SCkE3yt46X4E0qOVADDdga3TMRSLnFscFYr-_s4Sd2sgykmnFa4-hdgX9599FiW_RX5VYGH9B1jyj748_CAu4VgqqTDwxUx8w556tCWY7mlb1r84RWuip72e4H8-HkUuBUoFeD4aw9m1HOUfgwx7ixDqJUFOmq9F-LeKLTZ2Ap6fobRuaUiaSqHsCWvuy9XWe5KWBiZv6bUJ8oAuqkA/1a6758d872929c8d41a7629db52a831f7/c52_lb_553_300_t10.m3u8?key=0baa5db205ac0d29618a2e8d7964b7e4e&dis_t=1752408084&uuid=6f1d53dc-6873a014-459&qdpv=3&qd_bid=1&qd_sft=0&pv=0.1&cpt=0
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",2024年春节档
+#EXTINF:-1 tvg-name="2024年春节档" group-title="电影/电视剧",2024年春节档
 https://lvbdcdncmn.inter.71edge.com/tslive/l1/c51_lb_1018_300_t10/FVCO_jz_IvuxsWIbLCEvdstzbdQ5JLXxRlDL_J0vn0ZfgVYlA8ZxkNsXDoN4tEEtdVVarW6sgCF_YG8SB_oH0KY1zskp9-1iKJVEaWYyfIcsLVb4uKAdavgO_OSZkELLKJjUkk8t-S2ZKMnCiMEnykukS-GLvkY3RPIYLqhh_sgtY8UdWfdJc3EC9bm2mWz6FtFwc60bdNNWJi8gc-IP6buv-YaAeEN1nX9gHHHlH-fHifCyKKz5ppVfKts6RkTExgx82j5eLn6Mhz1s-bWGltEsWZfVmO_fakc0UlGwpKI9Sib9yjNKUMrfspPL8C80AuU4zeRqbSgkzjAcoovjnw/19eafbac982c8ac667d9bbc7c395db940/c51_lb_1018_300_t10.m3u8?key=0baa5db205ac0d296d2a304d3de433222&dis_t=1752408161&uuid=6f1d53dc-6873a061-45a&qdpv=3&qd_bid=1&qd_sft=0&pv=0.1&cpt=0
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",四大名著
+#EXTINF:-1 tvg-name="四大名著" group-title="电影/电视剧",四大名著
 https://lvbdcdncmn.inter.71edge.com/tslive/l1/c52_lb_568_300_t10/JuZaYFfgAtgzeXENAS1zAE098-EGizvi9nPyECctaYL6rieOqt7Q1KcZ4FGU4o3UUwpf5CbV_nUsDbQg6NsUgbaKgmctqIUwA_QC1rbrgBQxdxXRLPaFs_72-dTZ9RfNKlNk-q4ijiT_NDcjcHKt9xDb1Eqjc_SZlsuONXiTyrN7Pf0NpHYoo8TtkhTnxhUA1rZTDlGr_OhabLQs7kUhuQmWsru0TSRbLz5HGJh_c3Dyx5K_G39iq69d-esVm-DuOSYw2HZW5BZdIPhr87zSBI2nAkwdKUaqY00Hzz-AXgJ6-Cx--ZL-3uMHEMgiE9SUmFSErHMOhGX8s8ogQkI3lg/11e4badc79479921d33b383ae671d68fc/c52_lb_568_300_t10.m3u8?key=0baa5db205ac0d296684015f97ee400bf&dis_t=1752408227&uuid=6f1d53dc-6873a0a3-45b&qdpv=3&qd_bid=1&qd_sft=0&pv=0.1&cpt=0
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",一年一度喜剧大赛
+#EXTINF:-1 tvg-name="一年一度喜剧大赛" group-title="电影/电视剧",一年一度喜剧大赛
 https://alicoccdncmnet-hd.inter.71edge.com/tslive/l1/c51_lb_728_300_t10/S2SosBg_68g057-zBj7nmfrgs91iP37_pf6vxKx85ogguLIU3CU8SW_Y7H-1PHvyi99Ii2JFYijxYOei6iZner8QzyvFSNdDHH4HKjClgQKWGTbBdcHKOCHdsU3b1N-BrKiw3S7j3SCX6dyCTs7rcy64zcIPximAOEVgehMq3yBKfCmtJcbxGNJTLBalpWxFnS9TqEPfTjxnpz6YXBKxsqktgAuvSZh0YMwgtqXXpGW4Acf6eDoCMetaXupxvOjeXiYwJ8PWE2EHCz8E5RUSVIkgzqdr0H_UCDMLBgDOxh9Fx5wQklSuDVjds1N736MIdknpyHFEh4FV_aYUv-nsSA/1dd9185f7c7a34c902ab9b23bf6e849c8/c51_lb_728_300_t10.m3u8?key=0baa5db205ac0d2962788b935d5dc8a5c&dis_t=1752408293&random=1&rand_hash=0&uuid=6f1d53dc-6873a0e5-454&qdpv=3&qd_bid=1&qd_sft=0&pv=0.1&cpt=0
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",战争大片不间断
+#EXTINF:-1 tvg-name="战争大片不间断" group-title="电影/电视剧",战争大片不间断
 https://bscdncmnet.inter.71edge.com/tslive/l1/c53_lb_549_300_t10/nyNwfh1_ucKhYKBD_TC9H1cpPSW_kASRIHpzOyCbAlSQKCoa7yX04RS-69HeMU8vCtcLuBJr7PGxskrxih6fuqCnWcqae7adNI637bzmiWKfT_5A6rzyfSZ0MGGLVBTtyXGJSL_WfsYMsulW2MG8itaUpLb_fvhCXnp17W6sSRRqLz0TAntuHJX6Y_vRC2F5yK9Obu3pf-GYMV6g9nu9HxQQtP3HHX0Mv6VU0Jt4MbYOz49rR_krhRY1JjgFrM36_XgKxzRdQ9Z3pV96146JaeZMoAEJa9thzHYsP180Ex4pnwDC-hKCjxCHkeys7slENFpiSFYXlRqpkcxXAM9_Uw/1a38f2e9c9e4c3cce8152b1a430323419/c53_lb_549_300_t10.m3u8?key=0baa5db205ac0d2966049d19ebdc0a20d&dis_t=1752408382&uuid=6f1d53dc-6873a13e-458&qdpv=3&qd_bid=1&qd_sft=0&pv=0.1&cpt=0
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",楚汉骄雄
+#EXTINF:-1 tvg-name="楚汉骄雄" group-title="电影/电视剧",楚汉骄雄
 https://isus.cc/php/huya.php?id=29465854
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",封神榜
+#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
 https://isus.cc/php/huya.php?id=29465849
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",天地争霸美猴王
+#EXTINF:-1 tvg-name="天地争霸美猴王" group-title="电影/电视剧",天地争霸美猴王
 https://isus.cc/php/huya.php?id=29465859
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",大唐双龙传
+#EXTINF:-1 tvg-name="大唐双龙传" group-title="电影/电视剧",大唐双龙传
 https://isus.cc/php/huya.php?id=29465850
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",刑事侦缉档案
+#EXTINF:-1 tvg-name="刑事侦缉档案" group-title="电影/电视剧",刑事侦缉档案
 https://isus.cc/php/huya.php?id=29465856
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",洗冤录
+#EXTINF:-1 tvg-name="洗冤录" group-title="电影/电视剧",洗冤录
 https://isus.cc/php/huya.php?id=29465851
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",陀枪师姐
+#EXTINF:-1 tvg-name="陀枪师姐" group-title="电影/电视剧",陀枪师姐
 https://isus.cc/php/huya.php?id=29465857
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",扫黄先锋
+#EXTINF:-1 tvg-name="扫黄先锋" group-title="电影/电视剧",扫黄先锋
 https://isus.cc/php/huya.php?id=29465855
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",妙手仁心
+#EXTINF:-1 tvg-name="妙手仁心" group-title="电影/电视剧",妙手仁心
 https://isus.cc/php/huya.php?id=29465853
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",野蛮亲家
+#EXTINF:-1 tvg-name="野蛮亲家" group-title="电影/电视剧",野蛮亲家
 https://isus.cc/php/huya.php?id=23863796
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",笑看风云
+#EXTINF:-1 tvg-name="笑看风云" group-title="电影/电视剧",笑看风云
 https://isus.cc/php/huya.php?id=29465858
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",韦小宝
+#EXTINF:-1 tvg-name="韦小宝" group-title="电影/电视剧",韦小宝
 https://isus.cc/php/huya.php?id=23650774
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",港版西游记
+#EXTINF:-1 tvg-name="港版西游记" group-title="电影/电视剧",港版西游记
 https://isus.cc/php/huya.php?id=29465860
-#EXTINF:-1 group-title="💖埋堆堆爱奇艺直播",雪山飞狐
+#EXTINF:-1 tvg-name="雪山飞狐" group-title="电影/电视剧",雪山飞狐
 https://isus.cc/php/huya.php?id=23734176
-#EXTINF:-1 group-title="轮播频道",亮剑
+#EXTINF:-1 tvg-name="亮剑" group-title="电影/电视剧",亮剑
 http://8.155.43.98:35455/huya/30080238
-#EXTINF:-1 group-title="轮播频道",民兵葛二蛋
+#EXTINF:-1 tvg-name="民兵葛二蛋" group-title="电影/电视剧",民兵葛二蛋
 http://8.155.43.98:35455/huya/11602072
-#EXTINF:-1 group-title="轮播频道",鹿鼎记
+#EXTINF:-1 tvg-name="鹿鼎记" group-title="电影/电视剧",鹿鼎记
 http://8.155.43.98:35455/huya/23650774
-#EXTINF:-1 group-title="轮播频道",新鹿鼎记
+#EXTINF:-1 tvg-name="新鹿鼎记" group-title="电影/电视剧",新鹿鼎记
 http://8.155.43.98:35455/huya/11342388
-#EXTINF:-1 group-title="轮播频道",三国演义
+#EXTINF:-1 tvg-name="三国演义" group-title="电影/电视剧",三国演义
 http://8.155.43.98:35455/huya/11602081
-#EXTINF:-1 group-title="轮播频道",新三国演义
+#EXTINF:-1 tvg-name="新三国演义" group-title="电影/电视剧",新三国演义
 http://8.155.43.98:35455/huya/11352944
-#EXTINF:-1 group-title="轮播频道",水浒传
+#EXTINF:-1 tvg-name="水浒传" group-title="电影/电视剧",水浒传
 http://8.155.43.98:35455/huya/26355860
-#EXTINF:-1 group-title="轮播频道",新水浒传
+#EXTINF:-1 tvg-name="新水浒传" group-title="电影/电视剧",新水浒传
 http://8.155.43.98:35455/huya/11342384
-#EXTINF:-1 group-title="轮播频道",西游记
+#EXTINF:-1 tvg-name="西游记" group-title="电影/电视剧",西游记
 http://8.155.43.98:35455/huya/20985836
-#EXTINF:-1 group-title="轮播频道",寻秦记
+#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
+http://8.155.43.98:35455/huya/20432237
+#EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
 http://8.155.43.98:35455/huya/30080146
-#EXTINF:-1 group-title="轮播频道",大宋提刑官
+#EXTINF:-1 tvg-name="大宋提刑官" group-title="电影/电视剧",大宋提刑官
 http://8.155.43.98:35455/huya/26355856
-#EXTINF:-1 group-title="轮播频道",家有儿女
+#EXTINF:-1 tvg-name="家有儿女" group-title="电影/电视剧",家有儿女
 http://8.155.43.98:35455/huya/11352872
-#EXTINF:-1 group-title="轮播频道",问心
+#EXTINF:-1 tvg-name="问心" group-title="电影/电视剧",问心
 http://8.155.43.98:35455/huya/11352890
-#EXTINF:-1 group-title="轮播频道",你是我的荣耀
+#EXTINF:-1 tvg-name="你是我的荣耀" group-title="电影/电视剧",你是我的荣耀
 http://8.155.43.98:35455/huya/11352920
-#EXTINF:-1 group-title="轮播频道",与凤行
+#EXTINF:-1 tvg-name="与凤行" group-title="电影/电视剧",与凤行
 http://8.155.43.98:35455/huya/26355866
-#EXTINF:-1 group-title="轮播频道",我和僵尸有个约会
+#EXTINF:-1 tvg-name="我和僵尸有个约会" group-title="电影/电视剧",我和僵尸有个约会
 http://8.155.43.98:35455/huya/21059571
-#EXTINF:-1 group-title="轮播频道",美人心计
+#EXTINF:-1 tvg-name="美人心计" group-title="电影/电视剧",美人心计
 http://8.155.43.98:35455/huya/26355837
-#EXTINF:-1 group-title="轮播频道",延禧攻略
+#EXTINF:-1 tvg-name="延禧攻略" group-title="电影/电视剧",延禧攻略
 http://8.155.43.98:35455/huya/26355864
-#EXTINF:-1 group-title="轮播频道",读心专家
+#EXTINF:-1 tvg-name="读心专家" group-title="电影/电视剧",读心专家
 http://8.155.43.98:35455/huya/30590779
-#EXTINF:-1 group-title="轮播频道",如懿传
+#EXTINF:-1 tvg-name="如懿传" group-title="电影/电视剧",如懿传
 http://8.155.43.98:35455/huya/29465868
-#EXTINF:-1 group-title="轮播频道",爱情公寓
+#EXTINF:-1 tvg-name="爱情公寓" group-title="电影/电视剧",爱情公寓
 http://8.155.43.98:35455/huya/11336726
-#EXTINF:-1 group-title="轮播频道",还珠格格
+#EXTINF:-1 tvg-name="还珠格格" group-title="电影/电视剧",还珠格格
 http://8.155.43.98:35455/huya/30080241
-#EXTINF:-1 group-title="轮播频道",创世纪
+#EXTINF:-1 tvg-name="创世纪" group-title="电影/电视剧",创世纪
 http://8.155.43.98:35455/huya/29465852
-#EXTINF:-1 group-title="轮播频道",笑傲江湖
+#EXTINF:-1 tvg-name="笑傲江湖" group-title="电影/电视剧",笑傲江湖
 http://8.155.43.98:35455/huya/26355790
-#EXTINF:-1 group-title="轮播频道",倚天屠龙记
+#EXTINF:-1 tvg-name="倚天屠龙记" group-title="电影/电视剧",倚天屠龙记
 http://8.155.43.98:35455/huya/11342403
-#EXTINF:-1 group-title="轮播频道",沈腾电影
+#EXTINF:-1 tvg-name="雪山飞狐" group-title="电影/电视剧",雪山飞狐
+http://8.155.43.98:35455/huya/23734176
+#EXTINF:-1 tvg-name="沈腾电影" group-title="电影/电视剧",沈腾电影
 http://8.155.43.98:35455/huya/11601968
-#EXTINF:-1 group-title="轮播频道",黄渤电影
+#EXTINF:-1 tvg-name="黄渤电影" group-title="电影/电视剧",黄渤电影
 http://8.155.43.98:35455/huya/11352876
-#EXTINF:-1 group-title="轮播频道",徐峥电影
+#EXTINF:-1 tvg-name="徐峥电影" group-title="电影/电视剧",徐峥电影
 http://8.155.43.98:35455/huya/11602043
-#EXTINF:-1 group-title="轮播频道",周星驰电影
+#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
 http://8.155.43.98:35455/huya/11342412
-#EXTINF:-1 group-title="轮播频道",林正英电影
+#EXTINF:-1 tvg-name="亮剑" group-title="电影/电视剧",亮剑
+http://222.186.39.21:35466/huya/30080238
+#EXTINF:-1 tvg-name="民兵葛二蛋" group-title="电影/电视剧",民兵葛二蛋
+http://222.186.39.21:35466/huya/11602072
+#EXTINF:-1 tvg-name="鹿鼎记" group-title="电影/电视剧",鹿鼎记
+http://222.186.39.21:35466/huya/23650774
+#EXTINF:-1 tvg-name="新鹿鼎记" group-title="电影/电视剧",新鹿鼎记
+http://222.186.39.21:35466/huya/11342388
+#EXTINF:-1 tvg-name="三国演义" group-title="电影/电视剧",三国演义
+http://222.186.39.21:35466/huya/11602081
+#EXTINF:-1 tvg-name="新三国演义" group-title="电影/电视剧",新三国演义
+http://222.186.39.21:35466/huya/11352944
+#EXTINF:-1 tvg-name="水浒传" group-title="电影/电视剧",水浒传
+http://222.186.39.21:35466/huya/26355860
+#EXTINF:-1 tvg-name="新水浒传" group-title="电影/电视剧",新水浒传
+http://222.186.39.21:35466/huya/11342384
+#EXTINF:-1 tvg-name="西游记" group-title="电影/电视剧",西游记
+http://222.186.39.21:35466/huya/20985836
+#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
+http://222.186.39.21:35466/huya/20432237
+#EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
+http://222.186.39.21:35466/huya/30080146
+#EXTINF:-1 tvg-name="大宋提刑官" group-title="电影/电视剧",大宋提刑官
+http://222.186.39.21:35466/huya/26355856
+#EXTINF:-1 tvg-name="家有儿女" group-title="电影/电视剧",家有儿女
+http://222.186.39.21:35466/huya/11352872
+#EXTINF:-1 tvg-name="问心" group-title="电影/电视剧",问心
+http://222.186.39.21:35466/huya/11352890
+#EXTINF:-1 tvg-name="你是我的荣耀" group-title="电影/电视剧",你是我的荣耀
+http://222.186.39.21:35466/huya/11352920
+#EXTINF:-1 tvg-name="与凤行" group-title="电影/电视剧",与凤行
+http://222.186.39.21:35466/huya/26355866
+#EXTINF:-1 tvg-name="我和僵尸有个约会" group-title="电影/电视剧",我和僵尸有个约会
+http://222.186.39.21:35466/huya/21059571
+#EXTINF:-1 tvg-name="美人心计" group-title="电影/电视剧",美人心计
+http://222.186.39.21:35466/huya/26355837
+#EXTINF:-1 tvg-name="延禧攻略" group-title="电影/电视剧",延禧攻略
+http://222.186.39.21:35466/huya/26355864
+#EXTINF:-1 tvg-name="读心专家" group-title="电影/电视剧",读心专家
+http://222.186.39.21:35466/huya/30590779
+#EXTINF:-1 tvg-name="如懿传" group-title="电影/电视剧",如懿传
+http://222.186.39.21:35466/huya/29465868
+#EXTINF:-1 tvg-name="爱情公寓" group-title="电影/电视剧",爱情公寓
+http://222.186.39.21:35466/huya/11336726
+#EXTINF:-1 tvg-name="还珠格格" group-title="电影/电视剧",还珠格格
+http://222.186.39.21:35466/huya/30080241
+#EXTINF:-1 tvg-name="创世纪" group-title="电影/电视剧",创世纪
+http://222.186.39.21:35466/huya/29465852
+#EXTINF:-1 tvg-name="笑傲江湖" group-title="电影/电视剧",笑傲江湖
+http://222.186.39.21:35466/huya/26355790
+#EXTINF:-1 tvg-name="倚天屠龙记" group-title="电影/电视剧",倚天屠龙记
+http://222.186.39.21:35466/huya/11342403
+#EXTINF:-1 tvg-name="雪山飞狐" group-title="电影/电视剧",雪山飞狐
+http://222.186.39.21:35466/huya/23734176
+#EXTINF:-1 tvg-name="沈腾电影" group-title="电影/电视剧",沈腾电影
+http://222.186.39.21:35466/huya/11601968
+#EXTINF:-1 tvg-name="黄渤电影" group-title="电影/电视剧",黄渤电影
+http://222.186.39.21:35466/huya/11352876
+#EXTINF:-1 tvg-name="徐峥电影" group-title="电影/电视剧",徐峥电影
+http://222.186.39.21:35466/huya/11602043
+#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
+http://222.186.39.21:35466/huya/11342412
+#EXTINF:-1 tvg-name="亮剑" group-title="电影/电视剧",亮剑
+http://39.153.130.167:35455/huya/30080238
+#EXTINF:-1 tvg-name="民兵葛二蛋" group-title="电影/电视剧",民兵葛二蛋
+http://39.153.130.167:35455/huya/11602072
+#EXTINF:-1 tvg-name="鹿鼎记" group-title="电影/电视剧",鹿鼎记
+http://39.153.130.167:35455/huya/23650774
+#EXTINF:-1 tvg-name="新鹿鼎记" group-title="电影/电视剧",新鹿鼎记
+http://39.153.130.167:35455/huya/11342388
+#EXTINF:-1 tvg-name="三国演义" group-title="电影/电视剧",三国演义
+http://39.153.130.167:35455/huya/11602081
+#EXTINF:-1 tvg-name="新三国演义" group-title="电影/电视剧",新三国演义
+http://39.153.130.167:35455/huya/11352944
+#EXTINF:-1 tvg-name="水浒传" group-title="电影/电视剧",水浒传
+http://39.153.130.167:35455/huya/26355860
+#EXTINF:-1 tvg-name="新水浒传" group-title="电影/电视剧",新水浒传
+http://39.153.130.167:35455/huya/11342384
+#EXTINF:-1 tvg-name="西游记" group-title="电影/电视剧",西游记
+http://39.153.130.167:35455/huya/20985836
+#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
+http://39.153.130.167:35455/huya/20432237
+#EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
+http://39.153.130.167:35455/huya/30080146
+#EXTINF:-1 tvg-name="大宋提刑官" group-title="电影/电视剧",大宋提刑官
+http://39.153.130.167:35455/huya/26355856
+#EXTINF:-1 tvg-name="家有儿女" group-title="电影/电视剧",家有儿女
+http://39.153.130.167:35455/huya/11352872
+#EXTINF:-1 tvg-name="问心" group-title="电影/电视剧",问心
+http://39.153.130.167:35455/huya/11352890
+#EXTINF:-1 tvg-name="你是我的荣耀" group-title="电影/电视剧",你是我的荣耀
+http://39.153.130.167:35455/huya/11352920
+#EXTINF:-1 tvg-name="与凤行" group-title="电影/电视剧",与凤行
+http://39.153.130.167:35455/huya/26355866
+#EXTINF:-1 tvg-name="我和僵尸有个约会" group-title="电影/电视剧",我和僵尸有个约会
+http://39.153.130.167:35455/huya/21059571
+#EXTINF:-1 tvg-name="美人心计" group-title="电影/电视剧",美人心计
+http://39.153.130.167:35455/huya/26355837
+#EXTINF:-1 tvg-name="延禧攻略" group-title="电影/电视剧",延禧攻略
+http://39.153.130.167:35455/huya/26355864
+#EXTINF:-1 tvg-name="读心专家" group-title="电影/电视剧",读心专家
+http://39.153.130.167:35455/huya/30590779
+#EXTINF:-1 tvg-name="如懿传" group-title="电影/电视剧",如懿传
+http://39.153.130.167:35455/huya/29465868
+#EXTINF:-1 tvg-name="爱情公寓" group-title="电影/电视剧",爱情公寓
+http://39.153.130.167:35455/huya/11336726
+#EXTINF:-1 tvg-name="还珠格格" group-title="电影/电视剧",还珠格格
+http://39.153.130.167:35455/huya/30080241
+#EXTINF:-1 tvg-name="创世纪" group-title="电影/电视剧",创世纪
+http://39.153.130.167:35455/huya/29465852
+#EXTINF:-1 tvg-name="笑傲江湖" group-title="电影/电视剧",笑傲江湖
+http://39.153.130.167:35455/huya/26355790
+#EXTINF:-1 tvg-name="倚天屠龙记" group-title="电影/电视剧",倚天屠龙记
+http://39.153.130.167:35455/huya/11342403
+#EXTINF:-1 tvg-name="雪山飞狐" group-title="电影/电视剧",雪山飞狐
+http://39.153.130.167:35455/huya/23734176
+#EXTINF:-1 tvg-name="沈腾电影" group-title="电影/电视剧",沈腾电影
+http://39.153.130.167:35455/huya/11601968
+#EXTINF:-1 tvg-name="黄渤电影" group-title="电影/电视剧",黄渤电影
+http://39.153.130.167:35455/huya/11352876
+#EXTINF:-1 tvg-name="徐峥电影" group-title="电影/电视剧",徐峥电影
+http://39.153.130.167:35455/huya/11602043
+#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
+http://39.153.130.167:35455/huya/11342412
+#EXTINF:-1 tvg-name="亮剑" group-title="电影/电视剧",亮剑
+http://live.ottiptv.cc/huya/30080238
+#EXTINF:-1 tvg-name="民兵葛二蛋" group-title="电影/电视剧",民兵葛二蛋
+http://live.ottiptv.cc/huya/11602072
+#EXTINF:-1 tvg-name="鹿鼎记" group-title="电影/电视剧",鹿鼎记
+http://live.ottiptv.cc/huya/23650774
+#EXTINF:-1 tvg-name="新鹿鼎记" group-title="电影/电视剧",新鹿鼎记
+http://live.ottiptv.cc/huya/11342388
+#EXTINF:-1 tvg-name="三国演义" group-title="电影/电视剧",三国演义
+http://live.ottiptv.cc/huya/11602081
+#EXTINF:-1 tvg-name="新三国演义" group-title="电影/电视剧",新三国演义
+http://live.ottiptv.cc/huya/11352944
+#EXTINF:-1 tvg-name="水浒传" group-title="电影/电视剧",水浒传
+http://live.ottiptv.cc/huya/26355860
+#EXTINF:-1 tvg-name="新水浒传" group-title="电影/电视剧",新水浒传
+http://live.ottiptv.cc/huya/11342384
+#EXTINF:-1 tvg-name="西游记" group-title="电影/电视剧",西游记
+http://live.ottiptv.cc/huya/20985836
+#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
+http://live.ottiptv.cc/huya/20432237
+#EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
+http://live.ottiptv.cc/huya/30080146
+#EXTINF:-1 tvg-name="大宋提刑官" group-title="电影/电视剧",大宋提刑官
+http://live.ottiptv.cc/huya/26355856
+#EXTINF:-1 tvg-name="家有儿女" group-title="电影/电视剧",家有儿女
+http://live.ottiptv.cc/huya/11352872
+#EXTINF:-1 tvg-name="问心" group-title="电影/电视剧",问心
+http://live.ottiptv.cc/huya/11352890
+#EXTINF:-1 tvg-name="你是我的荣耀" group-title="电影/电视剧",你是我的荣耀
+http://live.ottiptv.cc/huya/11352920
+#EXTINF:-1 tvg-name="与凤行" group-title="电影/电视剧",与凤行
+http://live.ottiptv.cc/huya/26355866
+#EXTINF:-1 tvg-name="我和僵尸有个约会" group-title="电影/电视剧",我和僵尸有个约会
+http://live.ottiptv.cc/huya/21059571
+#EXTINF:-1 tvg-name="美人心计" group-title="电影/电视剧",美人心计
+http://live.ottiptv.cc/huya/26355837
+#EXTINF:-1 tvg-name="延禧攻略" group-title="电影/电视剧",延禧攻略
+http://live.ottiptv.cc/huya/26355864
+#EXTINF:-1 tvg-name="读心专家" group-title="电影/电视剧",读心专家
+http://live.ottiptv.cc/huya/30590779
+#EXTINF:-1 tvg-name="如懿传" group-title="电影/电视剧",如懿传
+http://live.ottiptv.cc/huya/29465868
+#EXTINF:-1 tvg-name="爱情公寓" group-title="电影/电视剧",爱情公寓
+http://live.ottiptv.cc/huya/11336726
+#EXTINF:-1 tvg-name="还珠格格" group-title="电影/电视剧",还珠格格
+http://live.ottiptv.cc/huya/30080241
+#EXTINF:-1 tvg-name="创世纪" group-title="电影/电视剧",创世纪
+http://live.ottiptv.cc/huya/29465852
+#EXTINF:-1 tvg-name="笑傲江湖" group-title="电影/电视剧",笑傲江湖
+http://live.ottiptv.cc/huya/26355790
+#EXTINF:-1 tvg-name="倚天屠龙记" group-title="电影/电视剧",倚天屠龙记
+http://live.ottiptv.cc/huya/11342403
+#EXTINF:-1 tvg-name="雪山飞狐" group-title="电影/电视剧",雪山飞狐
+http://live.ottiptv.cc/huya/23734176
+#EXTINF:-1 tvg-name="沈腾电影" group-title="电影/电视剧",沈腾电影
+http://live.ottiptv.cc/huya/11601968
+#EXTINF:-1 tvg-name="黄渤电影" group-title="电影/电视剧",黄渤电影
+http://live.ottiptv.cc/huya/11352876
+#EXTINF:-1 tvg-name="徐峥电影" group-title="电影/电视剧",徐峥电影
+http://live.ottiptv.cc/huya/11602043
+#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
+http://live.ottiptv.cc/huya/11342412
+#EXTINF:-1 tvg-name="林正英电影" group-title="电影/电视剧",林正英电影
 http://8.155.43.98:35455/yy/1351505899
-#EXTINF:-1 group-title="轮播频道",狂飙
+#EXTINF:-1 tvg-name="狂飙" group-title="电影/电视剧",狂飙
 http://8.155.43.98:35455/yy/1354936131
-#EXTINF:-1 group-title="轮播频道",插翅难逃
+#EXTINF:-1 tvg-name="插翅难逃" group-title="电影/电视剧",插翅难逃
 http://8.155.43.98:35455/yy/23402146
-#EXTINF:-1 group-title="轮播频道",新白娘子传奇
+#EXTINF:-1 tvg-name="新白娘子传奇" group-title="电影/电视剧",新白娘子传奇
 http://8.155.43.98:35455/yy/1354490667
-#EXTINF:-1 group-title="轮播频道",康熙微服私访记
+#EXTINF:-1 tvg-name="康熙微服私访记" group-title="电影/电视剧",康熙微服私访记
 http://8.155.43.98:35455/yy/1352811698
-#EXTINF:-1 group-title="轮播频道",射雕英雄传83版
+#EXTINF:-1 tvg-name="射雕英雄传83版" group-title="电影/电视剧",射雕英雄传83版
 http://8.155.43.98:35455/yy/1354210357
-#EXTINF:-1 group-title="轮播频道",神雕侠侣
+#EXTINF:-1 tvg-name="神雕侠侣" group-title="电影/电视剧",神雕侠侣
 http://8.155.43.98:35455/yy/1351762426
-#EXTINF:-1 group-title="轮播频道",天龙八部
+#EXTINF:-1 tvg-name="天龙八部" group-title="电影/电视剧",天龙八部
 http://8.155.43.98:35455/yy/1351814644
-#EXTINF:-1 group-title="轮播频道",隋唐英雄传
+#EXTINF:-1 tvg-name="隋唐英雄传" group-title="电影/电视剧",隋唐英雄传
 http://8.155.43.98:35455/yy/1352475619
-#EXTINF:-1 group-title="轮播频道",超精彩武打场景
+#EXTINF:-1 tvg-name="林正英电影" group-title="电影/电视剧",林正英电影
+http://222.186.39.21:35466/yy/1351505899
+#EXTINF:-1 tvg-name="狂飙" group-title="电影/电视剧",狂飙
+http://222.186.39.21:35466/yy/1354936131
+#EXTINF:-1 tvg-name="插翅难逃" group-title="电影/电视剧",插翅难逃
+http://222.186.39.21:35466/yy/23402146
+#EXTINF:-1 tvg-name="新白娘子传奇" group-title="电影/电视剧",新白娘子传奇
+http://222.186.39.21:35466/yy/1354490667
+#EXTINF:-1 tvg-name="康熙微服私访记" group-title="电影/电视剧",康熙微服私访记
+http://222.186.39.21:35466/yy/1352811698
+#EXTINF:-1 tvg-name="射雕英雄传83版" group-title="电影/电视剧",射雕英雄传83版
+http://222.186.39.21:35466/yy/1354210357
+#EXTINF:-1 tvg-name="神雕侠侣" group-title="电影/电视剧",神雕侠侣
+http://222.186.39.21:35466/yy/1351762426
+#EXTINF:-1 tvg-name="天龙八部" group-title="电影/电视剧",天龙八部
+http://222.186.39.21:35466/yy/1351814644
+#EXTINF:-1 tvg-name="隋唐英雄传" group-title="电影/电视剧",隋唐英雄传
+http://222.186.39.21:35466/yy/1352475619
+#EXTINF:-1 tvg-name="林正英电影" group-title="电影/电视剧",林正英电影
+http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1351505899
+#EXTINF:-1 tvg-name="狂飙" group-title="电影/电视剧",狂飙
+http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1354936131
+#EXTINF:-1 tvg-name="插翅难逃" group-title="电影/电视剧",插翅难逃
+http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/23402146
+#EXTINF:-1 tvg-name="新白娘子传奇" group-title="电影/电视剧",新白娘子传奇
+http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1354490667
+#EXTINF:-1 tvg-name="康熙微服私访记" group-title="电影/电视剧",康熙微服私访记
+http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1352811698
+#EXTINF:-1 tvg-name="射雕英雄传83版" group-title="电影/电视剧",射雕英雄传83版
+http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1354210357
+#EXTINF:-1 tvg-name="神雕侠侣" group-title="电影/电视剧",神雕侠侣
+http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1351762426
+#EXTINF:-1 tvg-name="天龙八部" group-title="电影/电视剧",天龙八部
+http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1351814644
+#EXTINF:-1 tvg-name="隋唐英雄传" group-title="电影/电视剧",隋唐英雄传
+http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1352475619
+#EXTINF:-1 tvg-name="林正英电影" group-title="电影/电视剧",林正英电影
+http://live.ottiptv.cc/yy/1351505899
+#EXTINF:-1 tvg-name="狂飙" group-title="电影/电视剧",狂飙
+http://live.ottiptv.cc/yy/1354936131
+#EXTINF:-1 tvg-name="插翅难逃" group-title="电影/电视剧",插翅难逃
+http://live.ottiptv.cc/yy/23402146
+#EXTINF:-1 tvg-name="新白娘子传奇" group-title="电影/电视剧",新白娘子传奇
+http://live.ottiptv.cc/yy/1354490667
+#EXTINF:-1 tvg-name="康熙微服私访记" group-title="电影/电视剧",康熙微服私访记
+http://live.ottiptv.cc/yy/1352811698
+#EXTINF:-1 tvg-name="射雕英雄传83版" group-title="电影/电视剧",射雕英雄传83版
+http://live.ottiptv.cc/yy/1354210357
+#EXTINF:-1 tvg-name="神雕侠侣" group-title="电影/电视剧",神雕侠侣
+http://live.ottiptv.cc/yy/1351762426
+#EXTINF:-1 tvg-name="天龙八部" group-title="电影/电视剧",天龙八部
+http://live.ottiptv.cc/yy/1351814644
+#EXTINF:-1 tvg-name="隋唐英雄传" group-title="电影/电视剧",隋唐英雄传
+http://live.ottiptv.cc/yy/1352475619
+#EXTINF:-1 tvg-name="超精彩武打场景" group-title="电影/电视剧",超精彩武打场景
 https://live.ottiptv.cc/yy/1354936131
-#EXTINF:-1 group-title="轮播频道",举起手来-惊险抗日
+#EXTINF:-1 tvg-name="举起手来-惊险抗日" group-title="电影/电视剧",举起手来-惊险抗日
 https://live.ottiptv.cc/yy/1382736877
-#EXTINF:-1 group-title="轮播频道",地下交通站
+#EXTINF:-1 tvg-name="地下交通站" group-title="电影/电视剧",地下交通站
 https://live.ottiptv.cc/yy/1382736795
-#EXTINF:-1 group-title="轮播频道",正阳门下
+#EXTINF:-1 tvg-name="正阳门下" group-title="电影/电视剧",正阳门下
 https://live.ottiptv.cc/yy/1354931580
-#EXTINF:-1 group-title="轮播频道",终结者2：审判日
+#EXTINF:-1 tvg-name="终结者2：审判日" group-title="电影/电视剧",终结者2：审判日
 https://live.ottiptv.cc/yy/1382851148
-#EXTINF:-1 group-title="轮播频道",papi酱主演，北漂生活中的爱情与梦想
+#EXTINF:-1 tvg-name="papi酱主演，北漂生活中的爱情与梦想" group-title="电影/电视剧",papi酱主演，北漂生活中的爱情与梦想
 https://live.ottiptv.cc/yy/1382745124
-#EXTINF:-1 group-title="轮播频道",无双花木兰
+#EXTINF:-1 tvg-name="无双花木兰" group-title="电影/电视剧",无双花木兰
 https://live.ottiptv.cc/yy/1382749917
-#EXTINF:-1 group-title="轮播频道",王牌保镖在此
+#EXTINF:-1 tvg-name="王牌保镖在此" group-title="电影/电视剧",王牌保镖在此
 https://live.ottiptv.cc/yy/1382749913
-#EXTINF:-1 group-title="轮播频道",女医明妃传
+#EXTINF:-1 tvg-name="女医明妃传" group-title="电影/电视剧",女医明妃传
 https://live.ottiptv.cc/yy/1382736861
-#EXTINF:-1 group-title="轮播频道",绝对让你笑翻天！
+#EXTINF:-1 tvg-name="绝对让你笑翻天！" group-title="电影/电视剧",绝对让你笑翻天！
 https://live.ottiptv.cc/yy/1354936159
-#EXTINF:-1 group-title="轮播频道",鹿鼎记-周星驰版
+#EXTINF:-1 tvg-name="鹿鼎记-周星驰版" group-title="电影/电视剧",鹿鼎记-周星驰版
 https://live.ottiptv.cc/yy/1354658049
-#EXTINF:-1 group-title="轮播频道",震撼！国内功夫大片
+#EXTINF:-1 tvg-name="震撼！国内功夫大片" group-title="电影/电视剧",震撼！国内功夫大片
 https://live.ottiptv.cc/yy/1382736902
-#EXTINF:-1 group-title="轮播频道",神探狄仁杰2
+#EXTINF:-1 tvg-name="神探狄仁杰2" group-title="电影/电视剧",神探狄仁杰2
 https://live.ottiptv.cc/yy/1382828767
-#EXTINF:-1 group-title="轮播频道",宰相刘罗锅
+#EXTINF:-1 tvg-name="宰相刘罗锅" group-title="电影/电视剧",宰相刘罗锅
 https://live.ottiptv.cc/yy/1382745191
-#EXTINF:-1 group-title="轮播频道",欢乐集结号-每天笑不停
+#EXTINF:-1 tvg-name="欢乐集结号-每天笑不停" group-title="电影/电视剧",欢乐集结号-每天笑不停
 https://live.ottiptv.cc/yy/1382741642
-#EXTINF:-1 group-title="轮播频道",丸子
+#EXTINF:-1 tvg-name="丸子" group-title="电影/电视剧",丸子
 https://live.ottiptv.cc/yy/1382851588
-#EXTINF:-1 group-title="轮播频道",少年包青天第三部
+#EXTINF:-1 tvg-name="少年包青天第三部" group-title="电影/电视剧",少年包青天第三部
 https://live.ottiptv.cc/yy/1382736814
-#EXTINF:-1 group-title="轮播频道",三国演义94年经典版
+#EXTINF:-1 tvg-name="神探狄仁杰2" group-title="电影/电视剧",神探狄仁杰2
+https://live.ottiptv.cc/yy/1382851146
+#EXTINF:-1 tvg-name="三国演义94年经典版" group-title="电影/电视剧",三国演义94年经典版
 https://live.ottiptv.cc/yy/1354936241
-#EXTINF:-1 group-title="轮播频道",内在美-伊人有约
+#EXTINF:-1 tvg-name="内在美-伊人有约" group-title="电影/电视剧",内在美-伊人有约
 https://live.ottiptv.cc/yy/1382737892
-#EXTINF:-1 group-title="轮播频道",宫心计-港剧-古装
+#EXTINF:-1 tvg-name="宫心计-港剧-古装" group-title="电影/电视剧",宫心计-港剧-古装
 https://live.ottiptv.cc/yy/1354933540
-#EXTINF:-1 group-title="轮播频道",暖暖1999
+#EXTINF:-1 tvg-name="暖暖1999" group-title="电影/电视剧",暖暖1999
 https://live.ottiptv.cc/yy/1382851591
-#EXTINF:-1 group-title="轮播频道",这部剧你居然没看过？
+#EXTINF:-1 tvg-name="这部剧你居然没看过？" group-title="电影/电视剧",这部剧你居然没看过？
 https://live.ottiptv.cc/yy/1354932355
-#EXTINF:-1 group-title="轮播频道",经典大片合集
+#EXTINF:-1 tvg-name="经典大片合集" group-title="电影/电视剧",经典大片合集
 https://live.ottiptv.cc/yy/1382749895
-#EXTINF:-1 group-title="轮播频道",华子系列
+#EXTINF:-1 tvg-name="华子系列" group-title="电影/电视剧",华子系列
 https://live.ottiptv.cc/yy/1354888726
-#EXTINF:-1 group-title="轮播频道",情满四合院-高分电视剧
+#EXTINF:-1 tvg-name="情满四合院-高分电视剧" group-title="电影/电视剧",情满四合院-高分电视剧
 https://live.ottiptv.cc/yy/1382735541
-#EXTINF:-1 group-title="轮播频道",你最爱的宋小宝
+#EXTINF:-1 tvg-name="你最爱的宋小宝" group-title="电影/电视剧",你最爱的宋小宝
 https://live.ottiptv.cc/yy/1354936198
-#EXTINF:-1 group-title="轮播频道",神探狄仁杰1
+#EXTINF:-1 tvg-name="神探狄仁杰1" group-title="电影/电视剧",神探狄仁杰1
 https://live.ottiptv.cc/yy/1354930934
-#EXTINF:-1 group-title="轮播频道",�逋鞠盗�-国产喜剧
+#EXTINF:-1 tvg-name="�逋鞠盗�-国产喜剧" group-title="电影/电视剧",�逋鞠盗�-国产喜剧
 https://live.ottiptv.cc/yy/1382736856
-#EXTINF:-1 group-title="轮播频道",YY用户
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
 https://live.ottiptv.cc/yy/1382736808
-#EXTINF:-1 group-title="轮播频道",恋歌
+#EXTINF:-1 tvg-name="恋歌" group-title="电影/电视剧",恋歌
 https://live.ottiptv.cc/yy/1382746276
-#EXTINF:-1 group-title="轮播频道",新白娘子传奇-女神赵雅芝
+#EXTINF:-1 tvg-name="新白娘子传奇-女神赵雅芝" group-title="电影/电视剧",新白娘子传奇-女神赵雅芝
 https://live.ottiptv.cc/yy/1354930969
-#EXTINF:-1 group-title="轮播频道",读心神探
+#EXTINF:-1 tvg-name="读心神探" group-title="电影/电视剧",读心神探
 https://live.ottiptv.cc/yy/1382736875
-#EXTINF:-1 group-title="轮播频道",成龙系列
+#EXTINF:-1 tvg-name="成龙系列" group-title="电影/电视剧",成龙系列
 https://live.ottiptv.cc/yy/1354888751
-#EXTINF:-1 group-title="轮播频道",双月之城-国漫
+#EXTINF:-1 tvg-name="双月之城-国漫" group-title="电影/电视剧",双月之城-国漫
 https://live.ottiptv.cc/yy/1382736907
-#EXTINF:-1 group-title="轮播频道",国内玄幻电影-林正英
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736818
+#EXTINF:-1 tvg-name="国内玄幻电影-林正英" group-title="电影/电视剧",国内玄幻电影-林正英
 https://live.ottiptv.cc/yy/1354932444
-#EXTINF:-1 group-title="轮播频道",杭小妞
+#EXTINF:-1 tvg-name="杭小妞" group-title="电影/电视剧",杭小妞
 https://live.ottiptv.cc/yy/1382851590
-#EXTINF:-1 group-title="轮播频道",西游记后传
+#EXTINF:-1 tvg-name="西游记后传" group-title="电影/电视剧",西游记后传
 https://live.ottiptv.cc/yy/1382736846
-#EXTINF:-1 group-title="轮播频道",智取威虎山
+#EXTINF:-1 tvg-name="智取威虎山" group-title="电影/电视剧",智取威虎山
 https://live.ottiptv.cc/yy/1382736843
-#EXTINF:-1 group-title="轮播频道",变形金刚
+#EXTINF:-1 tvg-name="变形金刚" group-title="电影/电视剧",变形金刚
 https://live.ottiptv.cc/yy/1382736803
-#EXTINF:-1 group-title="轮播频道",法证先锋
+#EXTINF:-1 tvg-name="法证先锋" group-title="电影/电视剧",法证先锋
 https://live.ottiptv.cc/yy/1354930939
-#EXTINF:-1 group-title="轮播频道",天道-9.2高分好剧
+#EXTINF:-1 tvg-name="天道-9.2高分好剧" group-title="电影/电视剧",天道-9.2高分好剧
 https://live.ottiptv.cc/yy/1382735574
-#EXTINF:-1 group-title="轮播频道",欢乐颂
+#EXTINF:-1 tvg-name="欢乐颂" group-title="电影/电视剧",欢乐颂
 https://live.ottiptv.cc/yy/1382735624
-#EXTINF:-1 group-title="轮播频道",开心小泡芙
+#EXTINF:-1 tvg-name="开心小泡芙" group-title="电影/电视剧",开心小泡芙
 https://live.ottiptv.cc/yy/1382851578
-#EXTINF:-1 group-title="轮播频道",速度与激情系列！-精彩大片
+#EXTINF:-1 tvg-name="速度与激情系列！-精彩大片" group-title="电影/电视剧",速度与激情系列！-精彩大片
 https://live.ottiptv.cc/yy/1382736911
-#EXTINF:-1 group-title="轮播频道",七色小彩虹
+#EXTINF:-1 tvg-name="七色小彩虹" group-title="电影/电视剧",七色小彩虹
 https://live.ottiptv.cc/yy/1382851601
-#EXTINF:-1 group-title="轮播频道",情满四合院
+#EXTINF:-1 tvg-name="少年包青天第三部" group-title="电影/电视剧",少年包青天第三部
+https://live.ottiptv.cc/yy/1382851540
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736838
+#EXTINF:-1 tvg-name="恋歌" group-title="电影/电视剧",恋歌
+https://live.ottiptv.cc/yy/1382851594
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736890
+#EXTINF:-1 tvg-name="情满四合院" group-title="电影/电视剧",情满四合院
 https://live.ottiptv.cc/yy/1382851524
-#EXTINF:-1 group-title="轮播频道",士兵突击
+#EXTINF:-1 tvg-name="士兵突击" group-title="电影/电视剧",士兵突击
 https://live.ottiptv.cc/yy/1382851600
-#EXTINF:-1 group-title="轮播频道",三国演义【1994】
+#EXTINF:-1 tvg-name="三国演义【1994】" group-title="电影/电视剧",三国演义【1994】
 https://live.ottiptv.cc/yy/1354930932
-#EXTINF:-1 group-title="轮播频道",流行古装剧—知否知否应是绿肥红瘦
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736910
+#EXTINF:-1 tvg-name="流行古装剧—知否知否应是绿肥红瘦" group-title="电影/电视剧",流行古装剧—知否知否应是绿肥红瘦
 https://live.ottiptv.cc/yy/1354936134
-#EXTINF:-1 group-title="轮播频道",二号交通站
+#EXTINF:-1 tvg-name="二号交通站" group-title="电影/电视剧",二号交通站
 https://live.ottiptv.cc/yy/1354930965
-#EXTINF:-1 group-title="轮播频道",香港院线大片-最新
+#EXTINF:-1 tvg-name="香港院线大片-最新" group-title="电影/电视剧",香港院线大片-最新
 https://live.ottiptv.cc/yy/1354936242
-#EXTINF:-1 group-title="轮播频道",爆笑小品大合集
+#EXTINF:-1 tvg-name="爆笑小品大合集" group-title="电影/电视剧",爆笑小品大合集
 https://live.ottiptv.cc/yy/1382736821
-#EXTINF:-1 group-title="轮播频道",你是最美的风景
+#EXTINF:-1 tvg-name="你是最美的风景" group-title="电影/电视剧",你是最美的风景
 https://live.ottiptv.cc/yy/1382851599
-#EXTINF:-1 group-title="轮播频道",欢乐集结号
+#EXTINF:-1 tvg-name="欢乐集结号" group-title="电影/电视剧",欢乐集结号
 https://live.ottiptv.cc/yy/1354931582
-#EXTINF:-1 group-title="轮播频道",叶问全集
+#EXTINF:-1 tvg-name="叶问全集" group-title="电影/电视剧",叶问全集
 https://live.ottiptv.cc/yy/1382828771
-#EXTINF:-1 group-title="轮播频道",父母爱情
+#EXTINF:-1 tvg-name="父母爱情" group-title="电影/电视剧",父母爱情
 https://live.ottiptv.cc/yy/1354926650
-#EXTINF:-1 group-title="轮播频道",颜值永远在线
+#EXTINF:-1 tvg-name="颜值永远在线" group-title="电影/电视剧",颜值永远在线
 https://live.ottiptv.cc/yy/1382851582
-#EXTINF:-1 group-title="轮播频道",国内喜剧
+#EXTINF:-1 tvg-name="国内喜剧" group-title="电影/电视剧",国内喜剧
 https://live.ottiptv.cc/yy/1382736862
-#EXTINF:-1 group-title="轮播频道",张国荣与周润发的兄弟情
+#EXTINF:-1 tvg-name="神探狄仁杰1" group-title="电影/电视剧",神探狄仁杰1
+https://live.ottiptv.cc/yy/1382851575
+#EXTINF:-1 tvg-name="张国荣与周润发的兄弟情" group-title="电影/电视剧",张国荣与周润发的兄弟情
 https://live.ottiptv.cc/yy/1354930961
-#EXTINF:-1 group-title="轮播频道",郝蕾演绎-情满四合院
+#EXTINF:-1 tvg-name="情满四合院" group-title="电影/电视剧",情满四合院
+https://live.ottiptv.cc/yy/1382736848
+#EXTINF:-1 tvg-name="郝蕾演绎-情满四合院" group-title="电影/电视剧",郝蕾演绎-情满四合院
 https://live.ottiptv.cc/yy/1382745089
-#EXTINF:-1 group-title="轮播频道",大家都在看的电视剧
+#EXTINF:-1 tvg-name="大家都在看的电视剧" group-title="电影/电视剧",大家都在看的电视剧
 https://live.ottiptv.cc/yy/1354930964
-#EXTINF:-1 group-title="轮播频道",大进军全集：红色系列电影
+#EXTINF:-1 tvg-name="大进军全集：红色系列电影" group-title="电影/电视剧",大进军全集：红色系列电影
 https://live.ottiptv.cc/yy/1382745083
-#EXTINF:-1 group-title="轮播频道",伪装者
+#EXTINF:-1 tvg-name="伪装者" group-title="电影/电视剧",伪装者
 https://live.ottiptv.cc/yy/1354936244
-#EXTINF:-1 group-title="轮播频道",速度与激情全集
+#EXTINF:-1 tvg-name="速度与激情全集" group-title="电影/电视剧",速度与激情全集
 https://live.ottiptv.cc/yy/1382749892
-#EXTINF:-1 group-title="轮播频道",妖神记
+#EXTINF:-1 tvg-name="妖神记" group-title="电影/电视剧",妖神记
 https://live.ottiptv.cc/yy/1382745171
-#EXTINF:-1 group-title="轮播频道",小惠_郭德纲相声迷
+#EXTINF:-1 tvg-name="小惠_郭德纲相声迷" group-title="电影/电视剧",小惠_郭德纲相声迷
 https://live.ottiptv.cc/yy/1382851593
-#EXTINF:-1 group-title="轮播频道",我的体育老师
+#EXTINF:-1 tvg-name="我的体育老师" group-title="体育频道",我的体育老师
 https://live.ottiptv.cc/yy/1382745169
-#EXTINF:-1 group-title="轮播频道",炊事班的故事III
+#EXTINF:-1 tvg-name="炊事班的故事III" group-title="电影/电视剧",炊事班的故事III
 https://live.ottiptv.cc/yy/1382736716
-#EXTINF:-1 group-title="轮播频道",精武英雄-李连杰主演经典动作片
+#EXTINF:-1 tvg-name="精武英雄-李连杰主演经典动作片" group-title="电影/电视剧",精武英雄-李连杰主演经典动作片
 https://live.ottiptv.cc/yy/1382736873
-#EXTINF:-1 group-title="轮播频道",易中天品三国
+#EXTINF:-1 tvg-name="易中天品三国" group-title="电影/电视剧",易中天品三国
 https://live.ottiptv.cc/yy/1354931498
-#EXTINF:-1 group-title="轮播频道",魔幻手机
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736885
+#EXTINF:-1 tvg-name="魔幻手机" group-title="电影/电视剧",魔幻手机
 https://live.ottiptv.cc/yy/1382735544
-#EXTINF:-1 group-title="轮播频道",纯纯纯儿
+#EXTINF:-1 tvg-name="纯纯纯儿" group-title="电影/电视剧",纯纯纯儿
 https://live.ottiptv.cc/yy/1382851589
-#EXTINF:-1 group-title="轮播频道",夏洛特烦恼-国内电影-喜剧
+#EXTINF:-1 tvg-name="二号交通站" group-title="电影/电视剧",二号交通站
+https://live.ottiptv.cc/yy/1382735582
+#EXTINF:-1 tvg-name="夏洛特烦恼-国内电影-喜剧" group-title="电影/电视剧",夏洛特烦恼-国内电影-喜剧
 https://live.ottiptv.cc/yy/1354936201
-#EXTINF:-1 group-title="轮播频道",宫锁珠帘
+#EXTINF:-1 tvg-name="宫锁珠帘" group-title="电影/电视剧",宫锁珠帘
 https://live.ottiptv.cc/yy/1354926666
-#EXTINF:-1 group-title="轮播频道",老广的味道-美食之旅
+#EXTINF:-1 tvg-name="老广的味道-美食之旅" group-title="电影/电视剧",老广的味道-美食之旅
 https://live.ottiptv.cc/yy/1354932375
-#EXTINF:-1 group-title="轮播频道",甜甜的恋爱 这狗粮我吃了
+#EXTINF:-1 tvg-name="甜甜的恋爱 这狗粮我吃了" group-title="电影/电视剧",甜甜的恋爱 这狗粮我吃了
 https://live.ottiptv.cc/yy/1354932438
-#EXTINF:-1 group-title="轮播频道",妖神记-全集
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382735572
+#EXTINF:-1 tvg-name="妖神记-全集" group-title="电影/电视剧",妖神记-全集
 https://live.ottiptv.cc/yy/1382735551
-#EXTINF:-1 group-title="轮播频道",老广的味道 第3季-美食纪录片
+#EXTINF:-1 tvg-name="老广的味道 第3季-美食纪录片" group-title="电影/电视剧",老广的味道 第3季-美食纪录片
 https://live.ottiptv.cc/yy/1382735565
-#EXTINF:-1 group-title="轮播频道",洪金宝福星系列
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382745085
+#EXTINF:-1 tvg-name="洪金宝福星系列" group-title="电影/电视剧",洪金宝福星系列
 https://live.ottiptv.cc/yy/1354924839
-#EXTINF:-1 group-title="轮播频道",风筝
+#EXTINF:-1 tvg-name="风筝" group-title="电影/电视剧",风筝
 https://live.ottiptv.cc/yy/1382828770
-#EXTINF:-1 group-title="轮播频道",国内动作大片
+#EXTINF:-1 tvg-name="欢乐颂" group-title="电影/电视剧",欢乐颂
+https://live.ottiptv.cc/yy/1382851577
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736886
+#EXTINF:-1 tvg-name="国内动作大片" group-title="电影/电视剧",国内动作大片
 https://live.ottiptv.cc/yy/1382745176
-#EXTINF:-1 group-title="轮播频道",穿越时空的爱恋
+#EXTINF:-1 tvg-name="穿越时空的爱恋" group-title="电影/电视剧",穿越时空的爱恋
 https://live.ottiptv.cc/yy/1382735567
-#EXTINF:-1 group-title="轮播频道",院线动作大片
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382745117
+#EXTINF:-1 tvg-name="院线动作大片" group-title="电影/电视剧",院线动作大片
 https://live.ottiptv.cc/yy/1382736900
-#EXTINF:-1 group-title="轮播频道",亲爱的热爱的
+#EXTINF:-1 tvg-name="亲爱的热爱的" group-title="电影/电视剧",亲爱的热爱的
 https://live.ottiptv.cc/yy/1354932433
-#EXTINF:-1 group-title="轮播频道",无敌县令
+#EXTINF:-1 tvg-name="无敌县令" group-title="电影/电视剧",无敌县令
 https://live.ottiptv.cc/yy/1354932390
-#EXTINF:-1 group-title="轮播频道",非常保镖-经典港剧
+#EXTINF:-1 tvg-name="非常保镖-经典港剧" group-title="电影/电视剧",非常保镖-经典港剧
 https://live.ottiptv.cc/yy/1382736903
-#EXTINF:-1 group-title="轮播频道",欢乐集结号3
+#EXTINF:-1 tvg-name="欢乐集结号3" group-title="电影/电视剧",欢乐集结号3
 https://live.ottiptv.cc/yy/1382736822
-#EXTINF:-1 group-title="轮播频道",漫威十年老粉福利来了
+#EXTINF:-1 tvg-name="漫威十年老粉福利来了" group-title="电影/电视剧",漫威十年老粉福利来了
 https://live.ottiptv.cc/yy/1354930233
-#EXTINF:-1 group-title="轮播频道",灌篮高手
+#EXTINF:-1 tvg-name="灌篮高手" group-title="电影/电视剧",灌篮高手
 https://live.ottiptv.cc/yy/1382735626
-#EXTINF:-1 group-title="轮播频道",时光的海
+#EXTINF:-1 tvg-name="时光的海" group-title="电影/电视剧",时光的海
 https://live.ottiptv.cc/yy/1382851579
-#EXTINF:-1 group-title="轮播频道",北京爱情故事，心动不打烊
+#EXTINF:-1 tvg-name="北京爱情故事，心动不打烊" group-title="地方频道",北京爱情故事，心动不打烊
 https://live.ottiptv.cc/yy/1382744423
-#EXTINF:-1 group-title="轮播频道",炊事班的故事
+#EXTINF:-1 tvg-name="炊事班的故事" group-title="电影/电视剧",炊事班的故事
 https://live.ottiptv.cc/yy/1382749901
-#EXTINF:-1 group-title="轮播频道",大汉贤后卫子夫
+#EXTINF:-1 tvg-name="大汉贤后卫子夫" group-title="电影/电视剧",大汉贤后卫子夫
 https://live.ottiptv.cc/yy/1382735569
-#EXTINF:-1 group-title="轮播频道",超精彩！系列动作电影
+#EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
+https://live.ottiptv.cc/yy/1354658048
+#EXTINF:-1 tvg-name="超精彩！系列动作电影" group-title="电影/电视剧",超精彩！系列动作电影
 https://live.ottiptv.cc/yy/1382745096
-#EXTINF:-1 group-title="轮播频道",电影百团大战
+#EXTINF:-1 tvg-name="电影百团大战" group-title="电影/电视剧",电影百团大战
 https://live.ottiptv.cc/yy/1382736871
-#EXTINF:-1 group-title="轮播频道",最美的青春
+#EXTINF:-1 tvg-name="最美的青春" group-title="电影/电视剧",最美的青春
 https://live.ottiptv.cc/yy/1382745116
-#EXTINF:-1 group-title="轮播频道",我的前半生
+#EXTINF:-1 tvg-name="我的前半生" group-title="电影/电视剧",我的前半生
 https://live.ottiptv.cc/yy/1382735564
-#EXTINF:-1 group-title="轮播频道",仙剑奇侠传-神仙姐姐驾到
+#EXTINF:-1 tvg-name="仙剑奇侠传-神仙姐姐驾到" group-title="电影/电视剧",仙剑奇侠传-神仙姐姐驾到
 https://live.ottiptv.cc/yy/1382749903
-#EXTINF:-1 group-title="轮播频道",以家人之名
+#EXTINF:-1 tvg-name="以家人之名" group-title="电影/电视剧",以家人之名
 https://live.ottiptv.cc/yy/1382736908
-#EXTINF:-1 group-title="轮播频道",真心想让你幸福
+#EXTINF:-1 tvg-name="真心想让你幸福" group-title="电影/电视剧",真心想让你幸福
 https://live.ottiptv.cc/yy/1382736876
-#EXTINF:-1 group-title="轮播频道",强悍“杀猪婆”的励志人生
+#EXTINF:-1 tvg-name="强悍“杀猪婆”的励志人生" group-title="电影/电视剧",强悍“杀猪婆”的励志人生
 https://live.ottiptv.cc/yy/1354658062
-#EXTINF:-1 group-title="轮播频道",欢乐一起看
+#EXTINF:-1 tvg-name="欢乐一起看" group-title="电影/电视剧",欢乐一起看
 https://live.ottiptv.cc/yy/1354930926
-#EXTINF:-1 group-title="轮播频道",活力满满
+#EXTINF:-1 tvg-name="活力满满" group-title="电影/电视剧",活力满满
 https://live.ottiptv.cc/yy/1382851585
-#EXTINF:-1 group-title="轮播频道",史诗级科幻电影-阿凡达
+#EXTINF:-1 tvg-name="史诗级科幻电影-阿凡达" group-title="电影/电视剧",史诗级科幻电影-阿凡达
 https://live.ottiptv.cc/yy/1382735577
-#EXTINF:-1 group-title="轮播频道",赌神-发哥
+#EXTINF:-1 tvg-name="赌神-发哥" group-title="电影/电视剧",赌神-发哥
 https://live.ottiptv.cc/yy/1354889044
-#EXTINF:-1 group-title="轮播频道",熊出没之探险日记S1-国漫
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382745084
+#EXTINF:-1 tvg-name="熊出没之探险日记S1-国漫" group-title="电影/电视剧",熊出没之探险日记S1-国漫
 https://live.ottiptv.cc/yy/1354930977
-#EXTINF:-1 group-title="轮播频道",笑傲帮
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382735578
+#EXTINF:-1 tvg-name="笑傲帮" group-title="电影/电视剧",笑傲帮
 https://live.ottiptv.cc/yy/1382735555
-#EXTINF:-1 group-title="轮播频道",鸭子天空-翱翔于篮球的梦想
+#EXTINF:-1 tvg-name="鸭子天空-翱翔于篮球的梦想" group-title="电影/电视剧",鸭子天空-翱翔于篮球的梦想
 https://live.ottiptv.cc/yy/1354930894
-#EXTINF:-1 group-title="轮播频道",巩汉林春晚小品合集
+#EXTINF:-1 tvg-name="巩汉林春晚小品合集" group-title="电影/电视剧",巩汉林春晚小品合集
 https://live.ottiptv.cc/yy/1354889035
-#EXTINF:-1 group-title="轮播频道",精彩动作电影享不停
+#EXTINF:-1 tvg-name="精彩动作电影享不停" group-title="电影/电视剧",精彩动作电影享不停
 https://live.ottiptv.cc/yy/1382736809
-#EXTINF:-1 group-title="轮播频道",小朋友可爱到家了
+#EXTINF:-1 tvg-name="小朋友可爱到家了" group-title="电影/电视剧",小朋友可爱到家了
 https://live.ottiptv.cc/yy/1354930887
-#EXTINF:-1 group-title="轮播频道",国产大片电影
+#EXTINF:-1 tvg-name="国产大片电影" group-title="电影/电视剧",国产大片电影
 https://live.ottiptv.cc/yy/1354926655
-#EXTINF:-1 group-title="轮播频道",哈利波特全集
+#EXTINF:-1 tvg-name="哈利波特全集" group-title="电影/电视剧",哈利波特全集
 https://live.ottiptv.cc/yy/1382745105
-#EXTINF:-1 group-title="轮播频道",超燃警匪片
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382735553
+#EXTINF:-1 tvg-name="超燃警匪片" group-title="电影/电视剧",超燃警匪片
 https://live.ottiptv.cc/yy/1382735576
-#EXTINF:-1 group-title="轮播频道",小鬼当家-童年回忆
+#EXTINF:-1 tvg-name="小鬼当家-童年回忆" group-title="少儿频道",小鬼当家-童年回忆
 https://live.ottiptv.cc/yy/1382745104
-#EXTINF:-1 group-title="轮播频道",野山鹰-影视剧
+#EXTINF:-1 tvg-name="野山鹰-影视剧" group-title="电影/电视剧",野山鹰-影视剧
 https://live.ottiptv.cc/yy/1354932395
-#EXTINF:-1 group-title="轮播频道",叛逆者
+#EXTINF:-1 tvg-name="叛逆者" group-title="电影/电视剧",叛逆者
 https://live.ottiptv.cc/yy/1382736868
-#EXTINF:-1 group-title="轮播频道",密子君
+#EXTINF:-1 tvg-name="密子君" group-title="电影/电视剧",密子君
 https://live.ottiptv.cc/yy/1382736717
-#EXTINF:-1 group-title="轮播频道",0
+#EXTINF:-1 tvg-name="0" group-title="电影/电视剧",0
 https://live.ottiptv.cc/yy/1382851580
-#EXTINF:-1 group-title="轮播频道",陈情令
+#EXTINF:-1 tvg-name="陈情令" group-title="电影/电视剧",陈情令
 https://live.ottiptv.cc/yy/1382745121
-#EXTINF:-1 group-title="轮播频道",猩球崛起-怪兽片合集
+#EXTINF:-1 tvg-name="猩球崛起-怪兽片合集" group-title="电影/电视剧",猩球崛起-怪兽片合集
 https://live.ottiptv.cc/yy/1354930181
-#EXTINF:-1 group-title="轮播频道",复仇者联盟全季
+#EXTINF:-1 tvg-name="魔幻手机" group-title="电影/电视剧",魔幻手机
+https://live.ottiptv.cc/yy/1382851541
+#EXTINF:-1 tvg-name="复仇者联盟全季" group-title="电影/电视剧",复仇者联盟全季
 https://live.ottiptv.cc/yy/1354936167
-#EXTINF:-1 group-title="轮播频道",寻秦记-穿越剧经典
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736888
+#EXTINF:-1 tvg-name="寻秦记-穿越剧经典" group-title="电影/电视剧",寻秦记-穿越剧经典
 https://live.ottiptv.cc/yy/1382749900
-#EXTINF:-1 group-title="轮播频道",你的回忆有我吗
+#EXTINF:-1 tvg-name="你的回忆有我吗" group-title="电影/电视剧",你的回忆有我吗
 https://live.ottiptv.cc/yy/1354889024
-#EXTINF:-1 group-title="轮播频道",苦乐村官
+#EXTINF:-1 tvg-name="苦乐村官" group-title="电影/电视剧",苦乐村官
 https://live.ottiptv.cc/yy/1382736864
-#EXTINF:-1 group-title="轮播频道",周星星系列
+#EXTINF:-1 tvg-name="周星星系列" group-title="电影/电视剧",周星星系列
 https://live.ottiptv.cc/yy/1354888671
-#EXTINF:-1 group-title="轮播频道",粟裕大将-影视
+#EXTINF:-1 tvg-name="粟裕大将-影视" group-title="电影/电视剧",粟裕大将-影视
 https://live.ottiptv.cc/yy/1354926542
-#EXTINF:-1 group-title="轮播频道",我爱我家
+#EXTINF:-1 tvg-name="我爱我家" group-title="电影/电视剧",我爱我家
 https://live.ottiptv.cc/yy/1382735557
-#EXTINF:-1 group-title="轮播频道",侏罗纪世界-国外科幻大片合集
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736805
+#EXTINF:-1 tvg-name="侏罗纪世界-国外科幻大片合集" group-title="电影/电视剧",侏罗纪世界-国外科幻大片合集
 https://live.ottiptv.cc/yy/1382736851
-#EXTINF:-1 group-title="轮播频道",海洋幻梦-泰剧
+#EXTINF:-1 tvg-name="海洋幻梦-泰剧" group-title="电影/电视剧",海洋幻梦-泰剧
 https://live.ottiptv.cc/yy/1382749889
-#EXTINF:-1 group-title="轮播频道",Blingbling
+#EXTINF:-1 tvg-name="Blingbling" group-title="电影/电视剧",Blingbling
 https://live.ottiptv.cc/yy/1382851598
-#EXTINF:-1 group-title="轮播频道",本山快乐营
+#EXTINF:-1 tvg-name="本山快乐营" group-title="电影/电视剧",本山快乐营
 https://live.ottiptv.cc/yy/1354933529
-#EXTINF:-1 group-title="轮播频道",保护我家蓉儿
+#EXTINF:-1 tvg-name="保护我家蓉儿" group-title="电影/电视剧",保护我家蓉儿
 https://live.ottiptv.cc/yy/1370293254
-#EXTINF:-1 group-title="轮播频道",动作大片-热血开打
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736975
+#EXTINF:-1 tvg-name="动作大片-热血开打" group-title="电影/电视剧",动作大片-热血开打
 https://live.ottiptv.cc/yy/1354936168
-#EXTINF:-1 group-title="轮播频道",高分科幻动作片
+#EXTINF:-1 tvg-name="高分科幻动作片" group-title="电影/电视剧",高分科幻动作片
 https://live.ottiptv.cc/yy/1382749948
-#EXTINF:-1 group-title="轮播频道",俺娘田小草
+#EXTINF:-1 tvg-name="俺娘田小草" group-title="电影/电视剧",俺娘田小草
 https://live.ottiptv.cc/yy/1382741638
-#EXTINF:-1 group-title="轮播频道",新世界
+#EXTINF:-1 tvg-name="新世界" group-title="电影/电视剧",新世界
 https://live.ottiptv.cc/yy/1382736850
-#EXTINF:-1 group-title="轮播频道",人生必看的科幻片
+#EXTINF:-1 tvg-name="欢乐集结号" group-title="电影/电视剧",欢乐集结号
+https://live.ottiptv.cc/yy/1382735550
+#EXTINF:-1 tvg-name="人生必看的科幻片" group-title="电影/电视剧",人生必看的科幻片
 https://live.ottiptv.cc/yy/1382745114
-#EXTINF:-1 group-title="轮播频道",啊咧
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382745093
+#EXTINF:-1 tvg-name="啊咧" group-title="电影/电视剧",啊咧
 https://live.ottiptv.cc/yy/1459243913
-#EXTINF:-1 group-title="轮播频道",功夫小子进城
+#EXTINF:-1 tvg-name="功夫小子进城" group-title="电影/电视剧",功夫小子进城
 https://live.ottiptv.cc/yy/1382749890
-#EXTINF:-1 group-title="轮播频道",加勒比海盗系列
+#EXTINF:-1 tvg-name="加勒比海盗系列" group-title="电影/电视剧",加勒比海盗系列
 https://live.ottiptv.cc/yy/1382749914
-#EXTINF:-1 group-title="轮播频道",飞虎之潜行极战
+#EXTINF:-1 tvg-name="飞虎之潜行极战" group-title="电影/电视剧",飞虎之潜行极战
 https://live.ottiptv.cc/yy/1354932420
-#EXTINF:-1 group-title="轮播频道",大明王朝
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736842
+#EXTINF:-1 tvg-name="大明王朝" group-title="电影/电视剧",大明王朝
 https://live.ottiptv.cc/yy/1382736879
-#EXTINF:-1 group-title="轮播频道",中国味道 第4季-美食纪录片
+#EXTINF:-1 tvg-name="中国味道 第4季-美食纪录片" group-title="电影/电视剧",中国味道 第4季-美食纪录片
 https://live.ottiptv.cc/yy/1382736845
-#EXTINF:-1 group-title="轮播频道",无厘头的出处
+#EXTINF:-1 tvg-name="无厘头的出处" group-title="电影/电视剧",无厘头的出处
 https://live.ottiptv.cc/yy/1354930891
-#EXTINF:-1 group-title="轮播频道",重生之超级赛亚人
+#EXTINF:-1 tvg-name="重生之超级赛亚人" group-title="电影/电视剧",重生之超级赛亚人
 https://live.ottiptv.cc/yy/1354936124
-#EXTINF:-1 group-title="轮播频道",金玉满堂：精彩港剧
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736834
+#EXTINF:-1 tvg-name="金玉满堂：精彩港剧" group-title="电影/电视剧",金玉满堂：精彩港剧
 https://live.ottiptv.cc/yy/1382736881
-#EXTINF:-1 group-title="轮播频道",国外院线动作大片
+#EXTINF:-1 tvg-name="国外院线动作大片" group-title="电影/电视剧",国外院线动作大片
 https://live.ottiptv.cc/yy/1382735570
-#EXTINF:-1 group-title="轮播频道",辉煌或疯狂-韩剧
+#EXTINF:-1 tvg-name="辉煌或疯狂-韩剧" group-title="电影/电视剧",辉煌或疯狂-韩剧
 https://live.ottiptv.cc/yy/1382749902
-#EXTINF:-1 group-title="轮播频道",笑傲江湖 第1季
+#EXTINF:-1 tvg-name="笑傲江湖 第1季" group-title="电影/电视剧",笑傲江湖 第1季
 https://live.ottiptv.cc/yy/1382749896
-#EXTINF:-1 group-title="轮播频道",科幻片：来看神奇的地球
+#EXTINF:-1 tvg-name="科幻片：来看神奇的地球" group-title="电影/电视剧",科幻片：来看神奇的地球
 https://live.ottiptv.cc/yy/1354930897
-#EXTINF:-1 group-title="轮播频道",爆笑电影！王牌大贱谍2-3
+#EXTINF:-1 tvg-name="爆笑电影！王牌大贱谍2-3" group-title="电影/电视剧",爆笑电影！王牌大贱谍2-3
 https://live.ottiptv.cc/yy/1382735556
-#EXTINF:-1 group-title="轮播频道",来自星星的你
+#EXTINF:-1 tvg-name="来自星星的你" group-title="电影/电视剧",来自星星的你
 https://live.ottiptv.cc/yy/1354930976
-#EXTINF:-1 group-title="轮播频道",笑傲江湖 第2季
+#EXTINF:-1 tvg-name="笑傲江湖 第2季" group-title="电影/电视剧",笑傲江湖 第2季
 https://live.ottiptv.cc/yy/1382736914
-#EXTINF:-1 group-title="轮播频道",回家的诱惑
+#EXTINF:-1 tvg-name="回家的诱惑" group-title="电影/电视剧",回家的诱惑
 https://live.ottiptv.cc/yy/1354658043
-#EXTINF:-1 group-title="轮播频道",黑衣人1、2—动作喜剧大片
+#EXTINF:-1 tvg-name="黑衣人1、2—动作喜剧大片" group-title="电影/电视剧",黑衣人1、2—动作喜剧大片
 https://live.ottiptv.cc/yy/1354930936
-#EXTINF:-1 group-title="轮播频道",陪你一起看好剧
+#EXTINF:-1 tvg-name="陪你一起看好剧" group-title="电影/电视剧",陪你一起看好剧
 https://live.ottiptv.cc/yy/1354932359
-#EXTINF:-1 group-title="轮播频道",本山快乐营-爆笑小品
+#EXTINF:-1 tvg-name="本山快乐营-爆笑小品" group-title="电影/电视剧",本山快乐营-爆笑小品
 https://live.ottiptv.cc/yy/1354930948
-#EXTINF:-1 group-title="轮播频道",高分动作大片-热血出击
+#EXTINF:-1 tvg-name="高分动作大片-热血出击" group-title="电影/电视剧",高分动作大片-热血出击
 https://live.ottiptv.cc/yy/1382736909
-#EXTINF:-1 group-title="轮播频道",美国队长史蒂夫
+#EXTINF:-1 tvg-name="美国队长史蒂夫" group-title="电影/电视剧",美国队长史蒂夫
 https://live.ottiptv.cc/yy/1382736813
-#EXTINF:-1 group-title="轮播频道",法国版《家有儿女》治愈所有不开心
+#EXTINF:-1 tvg-name="法国版《家有儿女》治愈所有不开心" group-title="电影/电视剧",法国版《家有儿女》治愈所有不开心
 https://live.ottiptv.cc/yy/1382851137
-#EXTINF:-1 group-title="轮播频道",国产喜剧
+#EXTINF:-1 tvg-name="国产喜剧" group-title="电影/电视剧",国产喜剧
 https://live.ottiptv.cc/yy/1382735584
-#EXTINF:-1 group-title="轮播频道",钟馗传说
+#EXTINF:-1 tvg-name="大唐双龙传" group-title="电影/电视剧",大唐双龙传
+https://live.ottiptv.cc/yy/1354930979
+#EXTINF:-1 tvg-name="钟馗传说" group-title="电影/电视剧",钟馗传说
 https://live.ottiptv.cc/yy/1382736839
-#EXTINF:-1 group-title="轮播频道",国内高分悬疑剧-风筝
+#EXTINF:-1 tvg-name="国内高分悬疑剧-风筝" group-title="电影/电视剧",国内高分悬疑剧-风筝
 https://live.ottiptv.cc/yy/1354931585
-#EXTINF:-1 group-title="轮播频道",金牌配角达叔系列
+#EXTINF:-1 tvg-name="金牌配角达叔系列" group-title="电影/电视剧",金牌配角达叔系列
 https://live.ottiptv.cc/yy/1354888728
-#EXTINF:-1 group-title="轮播频道",萌鸡小队S1-国漫
+#EXTINF:-1 tvg-name="萌鸡小队S1-国漫" group-title="电影/电视剧",萌鸡小队S1-国漫
 https://live.ottiptv.cc/yy/1382736904
-#EXTINF:-1 group-title="轮播频道",大江大河2-高分影视推荐
+#EXTINF:-1 tvg-name="大江大河2-高分影视推荐" group-title="电影/电视剧",大江大河2-高分影视推荐
 https://live.ottiptv.cc/yy/1382736797
-#EXTINF:-1 group-title="轮播频道",田园生活
+#EXTINF:-1 tvg-name="田园生活" group-title="电影/电视剧",田园生活
 https://live.ottiptv.cc/yy/1382736898
-#EXTINF:-1 group-title="轮播频道",第8号当铺
+#EXTINF:-1 tvg-name="第8号当铺" group-title="电影/电视剧",第8号当铺
 https://live.ottiptv.cc/yy/1382736905
-#EXTINF:-1 group-title="轮播频道",公主嫁到
+#EXTINF:-1 tvg-name="公主嫁到" group-title="电影/电视剧",公主嫁到
 https://live.ottiptv.cc/yy/1382736915
-#EXTINF:-1 group-title="轮播频道",国内经典动作电影
+#EXTINF:-1 tvg-name="国内经典动作电影" group-title="电影/电视剧",国内经典动作电影
 https://live.ottiptv.cc/yy/1382851522
-#EXTINF:-1 group-title="轮播频道",末日系列-外国电影合集
+#EXTINF:-1 tvg-name="末日系列-外国电影合集" group-title="电影/电视剧",末日系列-外国电影合集
 https://live.ottiptv.cc/yy/1354889019
-#EXTINF:-1 group-title="轮播频道",精彩动作电影
+#EXTINF:-1 tvg-name="精彩动作电影" group-title="电影/电视剧",精彩动作电影
 https://live.ottiptv.cc/yy/1382736823
-#EXTINF:-1 group-title="轮播频道",港剧-警犬巴打
+#EXTINF:-1 tvg-name="港剧-警犬巴打" group-title="电影/电视剧",港剧-警犬巴打
 https://live.ottiptv.cc/yy/1354932397
-#EXTINF:-1 group-title="轮播频道",国内科幻片来袭
+#EXTINF:-1 tvg-name="国内科幻片来袭" group-title="电影/电视剧",国内科幻片来袭
 https://live.ottiptv.cc/yy/1354930821
-#EXTINF:-1 group-title="轮播频道",深海利剑
+#EXTINF:-1 tvg-name="深海利剑" group-title="电影/电视剧",深海利剑
 https://live.ottiptv.cc/yy/1382736906
-#EXTINF:-1 group-title="轮播频道",国外黑色喜剧：冷幽默小剧场
+#EXTINF:-1 tvg-name="国外黑色喜剧：冷幽默小剧场" group-title="电影/电视剧",国外黑色喜剧：冷幽默小剧场
 https://live.ottiptv.cc/yy/1382745175
-#EXTINF:-1 group-title="轮播频道",电影黑豹
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382745113
+#EXTINF:-1 tvg-name="电影黑豹" group-title="电影/电视剧",电影黑豹
 https://live.ottiptv.cc/yy/1382736816
-#EXTINF:-1 group-title="轮播频道",缺宅男女
+#EXTINF:-1 tvg-name="缺宅男女" group-title="电影/电视剧",缺宅男女
 https://live.ottiptv.cc/yy/1354930937
-#EXTINF:-1 group-title="轮播频道",永远的经典系列
+#EXTINF:-1 tvg-name="永远的经典系列" group-title="电影/电视剧",永远的经典系列
 https://live.ottiptv.cc/yy/1354930204
-#EXTINF:-1 group-title="轮播频道",明天和你-韩剧
+#EXTINF:-1 tvg-name="明天和你-韩剧" group-title="电影/电视剧",明天和你-韩剧
 https://live.ottiptv.cc/yy/1382749905
-#EXTINF:-1 group-title="轮播频道",许多多
+#EXTINF:-1 tvg-name="许多多" group-title="电影/电视剧",许多多
 https://live.ottiptv.cc/yy/1382851583
-#EXTINF:-1 group-title="轮播频道",飓风营救
+#EXTINF:-1 tvg-name="飓风营救" group-title="电影/电视剧",飓风营救
 https://live.ottiptv.cc/yy/1382735547
-#EXTINF:-1 group-title="轮播频道",外国科幻大片
+#EXTINF:-1 tvg-name="外国科幻大片" group-title="电影/电视剧",外国科幻大片
 https://live.ottiptv.cc/yy/1382747628
-#EXTINF:-1 group-title="轮播频道",国外动作大片
+#EXTINF:-1 tvg-name="国外动作大片" group-title="电影/电视剧",国外动作大片
 https://live.ottiptv.cc/yy/1382735540
-#EXTINF:-1 group-title="轮播频道",宝莲灯前传
+#EXTINF:-1 tvg-name="宝莲灯前传" group-title="电影/电视剧",宝莲灯前传
 https://live.ottiptv.cc/yy/1354931631
-#EXTINF:-1 group-title="轮播频道",燃爆动作片
+#EXTINF:-1 tvg-name="燃爆动作片" group-title="电影/电视剧",燃爆动作片
 https://live.ottiptv.cc/yy/1382736801
-#EXTINF:-1 group-title="轮播频道",躺平还是奋斗？搞笑中见真谛
+#EXTINF:-1 tvg-name="躺平还是奋斗？搞笑中见真谛" group-title="电影/电视剧",躺平还是奋斗？搞笑中见真谛
 https://live.ottiptv.cc/yy/1382851586
-#EXTINF:-1 group-title="轮播频道",嘻嘻熙熙
+#EXTINF:-1 tvg-name="嘻嘻熙熙" group-title="电影/电视剧",嘻嘻熙熙
 https://live.ottiptv.cc/yy/1382735585
-#EXTINF:-1 group-title="轮播频道",国外经典—小鬼当家
+#EXTINF:-1 tvg-name="最美的青春" group-title="电影/电视剧",最美的青春
+https://live.ottiptv.cc/yy/1382851530
+#EXTINF:-1 tvg-name="国外经典—小鬼当家" group-title="电影/电视剧",国外经典—小鬼当家
 https://live.ottiptv.cc/yy/1354658064
-#EXTINF:-1 group-title="轮播频道",请回答1988
+#EXTINF:-1 tvg-name="国内喜剧" group-title="电影/电视剧",国内喜剧
+https://live.ottiptv.cc/yy/1382735563
+#EXTINF:-1 tvg-name="请回答1988" group-title="电影/电视剧",请回答1988
 https://live.ottiptv.cc/yy/1354932362
-#EXTINF:-1 group-title="轮播频道",少年四大名捕
+#EXTINF:-1 tvg-name="少年四大名捕" group-title="电影/电视剧",少年四大名捕
 https://live.ottiptv.cc/yy/1354936203
-#EXTINF:-1 group-title="轮播频道",国外高分大片
+#EXTINF:-1 tvg-name="国外高分大片" group-title="电影/电视剧",国外高分大片
 https://live.ottiptv.cc/yy/1382736867
-#EXTINF:-1 group-title="轮播频道",毒液：致命守护者
+#EXTINF:-1 tvg-name="毒液：致命守护者" group-title="电影/电视剧",毒液：致命守护者
 https://live.ottiptv.cc/yy/1382745095
-#EXTINF:-1 group-title="轮播频道",神厨小福贵
+#EXTINF:-1 tvg-name="神厨小福贵" group-title="电影/电视剧",神厨小福贵
 https://live.ottiptv.cc/yy/1382736860
-#EXTINF:-1 group-title="轮播频道",缺宅男女-精彩港剧
+#EXTINF:-1 tvg-name="缺宅男女-精彩港剧" group-title="电影/电视剧",缺宅男女-精彩港剧
 https://live.ottiptv.cc/yy/1382745088
-#EXTINF:-1 group-title="轮播频道",流金岁月-经典港剧
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736807
+#EXTINF:-1 tvg-name="流金岁月-经典港剧" group-title="电影/电视剧",流金岁月-经典港剧
 https://live.ottiptv.cc/yy/1382736891
-#EXTINF:-1 group-title="轮播频道",憨豆先生-经典喜剧
+#EXTINF:-1 tvg-name="憨豆先生-经典喜剧" group-title="电影/电视剧",憨豆先生-经典喜剧
 https://live.ottiptv.cc/yy/1354936239
-#EXTINF:-1 group-title="轮播频道",战争与女性
+#EXTINF:-1 tvg-name="战争与女性" group-title="电影/电视剧",战争与女性
 https://live.ottiptv.cc/yy/1382745179
-#EXTINF:-1 group-title="轮播频道",能耐大了第1季
+#EXTINF:-1 tvg-name="能耐大了第1季" group-title="电影/电视剧",能耐大了第1季
 https://live.ottiptv.cc/yy/1354930195
-#EXTINF:-1 group-title="轮播频道",国外科幻
+#EXTINF:-1 tvg-name="国外科幻" group-title="电影/电视剧",国外科幻
 https://live.ottiptv.cc/yy/1382736800
-#EXTINF:-1 group-title="轮播频道",我的父亲我的兵
+#EXTINF:-1 tvg-name="我的父亲我的兵" group-title="电影/电视剧",我的父亲我的兵
 https://live.ottiptv.cc/yy/1353413714
-#EXTINF:-1 group-title="轮播频道",大江大河-高分影视推荐
+#EXTINF:-1 tvg-name="大江大河-高分影视推荐" group-title="电影/电视剧",大江大河-高分影视推荐
 https://live.ottiptv.cc/yy/1382736806
-#EXTINF:-1 group-title="轮播频道",国产电影-就是闹着玩的
+#EXTINF:-1 tvg-name="国产电影-就是闹着玩的" group-title="电影/电视剧",国产电影-就是闹着玩的
 https://live.ottiptv.cc/yy/1354931503
-#EXTINF:-1 group-title="轮播频道",晨晨的影视小窝
+#EXTINF:-1 tvg-name="晨晨的影视小窝" group-title="电影/电视剧",晨晨的影视小窝
 https://live.ottiptv.cc/yy/1382851576
-#EXTINF:-1 group-title="轮播频道",洪大哥系列
+#EXTINF:-1 tvg-name="洪大哥系列" group-title="电影/电视剧",洪大哥系列
 https://live.ottiptv.cc/yy/1354888743
-#EXTINF:-1 group-title="轮播频道",热门喜剧
+#EXTINF:-1 tvg-name="热门喜剧" group-title="电影/电视剧",热门喜剧
 https://live.ottiptv.cc/yy/1354931495
-#EXTINF:-1 group-title="轮播频道",百家讲坛――之明太祖朱元璋
+#EXTINF:-1 tvg-name="百家讲坛――之明太祖朱元璋" group-title="电影/电视剧",百家讲坛――之明太祖朱元璋
 https://live.ottiptv.cc/yy/1354936149
-#EXTINF:-1 group-title="轮播频道",珍珠港-电影
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382745103
+#EXTINF:-1 tvg-name="珍珠港-电影" group-title="电影/电视剧",珍珠港-电影
 https://live.ottiptv.cc/yy/1354936234
-#EXTINF:-1 group-title="轮播频道",福贵
+#EXTINF:-1 tvg-name="福贵" group-title="电影/电视剧",福贵
 https://live.ottiptv.cc/yy/1354926537
-#EXTINF:-1 group-title="轮播频道",科幻惊悚片-异形
+#EXTINF:-1 tvg-name="科幻惊悚片-异形" group-title="电影/电视剧",科幻惊悚片-异形
 https://live.ottiptv.cc/yy/1382735543
-#EXTINF:-1 group-title="轮播频道",单挑荒野第一季
+#EXTINF:-1 tvg-name="单挑荒野第一季" group-title="电影/电视剧",单挑荒野第一季
 https://live.ottiptv.cc/yy/1354933535
-#EXTINF:-1 group-title="轮播频道",舌尖上的中国第2季
+#EXTINF:-1 tvg-name="舌尖上的中国第2季" group-title="电影/电视剧",舌尖上的中国第2季
 https://live.ottiptv.cc/yy/1354930943
-#EXTINF:-1 group-title="轮播频道",从溺水到冠军，热血泳坛励志传奇
+#EXTINF:-1 tvg-name="从溺水到冠军，热血泳坛励志传奇" group-title="电影/电视剧",从溺水到冠军，热血泳坛励志传奇
 https://live.ottiptv.cc/yy/1382736723
-#EXTINF:-1 group-title="轮播频道",超炫科幻大片
+#EXTINF:-1 tvg-name="超炫科幻大片" group-title="电影/电视剧",超炫科幻大片
 https://live.ottiptv.cc/yy/1382736840
-#EXTINF:-1 group-title="轮播频道",欢乐集结号2
+#EXTINF:-1 tvg-name="欢乐集结号2" group-title="电影/电视剧",欢乐集结号2
 https://live.ottiptv.cc/yy/1354930919
-#EXTINF:-1 group-title="轮播频道",欢乐集结号4
+#EXTINF:-1 tvg-name="欢乐集结号4" group-title="电影/电视剧",欢乐集结号4
 https://live.ottiptv.cc/yy/1382736889
-#EXTINF:-1 group-title="轮播频道",动物世界-领略原始野性
+#EXTINF:-1 tvg-name="动物世界-领略原始野性" group-title="电影/电视剧",动物世界-领略原始野性
 https://live.ottiptv.cc/yy/1382743138
-#EXTINF:-1 group-title="轮播频道",欢喜冤家的爱情-夏日乐悠悠
+#EXTINF:-1 tvg-name="欢喜冤家的爱情-夏日乐悠悠" group-title="电影/电视剧",欢喜冤家的爱情-夏日乐悠悠
 https://live.ottiptv.cc/yy/1354936191
-#EXTINF:-1 group-title="轮播频道",本山选谁上-喜剧人选拔
+#EXTINF:-1 tvg-name="本山选谁上-喜剧人选拔" group-title="电影/电视剧",本山选谁上-喜剧人选拔
 https://live.ottiptv.cc/yy/1382749878
-#EXTINF:-1 group-title="轮播频道",农家小菜
+#EXTINF:-1 tvg-name="农家小菜" group-title="电影/电视剧",农家小菜
 https://live.ottiptv.cc/yy/1382736894
-#EXTINF:-1 group-title="轮播频道",欢乐集结号58-70
+#EXTINF:-1 tvg-name="欢乐集结号58-70" group-title="电影/电视剧",欢乐集结号58-70
 https://live.ottiptv.cc/yy/1382745119
-#EXTINF:-1 group-title="轮播频道",妖神记之黑狱篇
+#EXTINF:-1 tvg-name="妖神记之黑狱篇" group-title="电影/电视剧",妖神记之黑狱篇
 https://live.ottiptv.cc/yy/1382745173
-#EXTINF:-1 group-title="轮播频道",河山
+#EXTINF:-1 tvg-name="河山" group-title="电影/电视剧",河山
 https://live.ottiptv.cc/yy/1382749952
-#EXTINF:-1 group-title="轮播频道",溏心风暴之家好月圆
+#EXTINF:-1 tvg-name="溏心风暴之家好月圆" group-title="电影/电视剧",溏心风暴之家好月圆
 https://live.ottiptv.cc/yy/1354888747
-#EXTINF:-1 group-title="轮播频道",太空荒野求生记-火星救援
+#EXTINF:-1 tvg-name="太空荒野求生记-火星救援" group-title="电影/电视剧",太空荒野求生记-火星救援
 https://live.ottiptv.cc/yy/1354930957
-#EXTINF:-1 group-title="轮播频道",贾玲春晚小品
+#EXTINF:-1 tvg-name="贾玲春晚小品" group-title="电影/电视剧",贾玲春晚小品
 https://live.ottiptv.cc/yy/1382736720
-#EXTINF:-1 group-title="轮播频道",科幻电影
+#EXTINF:-1 tvg-name="科幻电影" group-title="电影/电视剧",科幻电影
 https://live.ottiptv.cc/yy/1354930209
-#EXTINF:-1 group-title="轮播频道",来看修牛蹄
+#EXTINF:-1 tvg-name="来看修牛蹄" group-title="电影/电视剧",来看修牛蹄
 https://live.ottiptv.cc/yy/1382749887
-#EXTINF:-1 group-title="轮播频道",拳拳到肉，搏击燃情
+#EXTINF:-1 tvg-name="拳拳到肉，搏击燃情" group-title="电影/电视剧",拳拳到肉，搏击燃情
 https://live.ottiptv.cc/yy/1382736870
-#EXTINF:-1 group-title="轮播频道",哑巴竟然会说话
+#EXTINF:-1 tvg-name="哑巴竟然会说话" group-title="电影/电视剧",哑巴竟然会说话
 https://live.ottiptv.cc/yy/1354932427
-#EXTINF:-1 group-title="轮播频道",蔡明春晚小品
+#EXTINF:-1 tvg-name="蔡明春晚小品" group-title="电影/电视剧",蔡明春晚小品
 https://live.ottiptv.cc/yy/1354936177
-#EXTINF:-1 group-title="轮播频道",抗日神片，燃爆抗战热血魂
+#EXTINF:-1 tvg-name="抗日神片，燃爆抗战热血魂" group-title="电影/电视剧",抗日神片，燃爆抗战热血魂
 https://live.ottiptv.cc/yy/1354926600
-#EXTINF:-1 group-title="轮播频道",一起来笑吧
+#EXTINF:-1 tvg-name="一起来笑吧" group-title="电影/电视剧",一起来笑吧
 https://live.ottiptv.cc/yy/1454859415
-#EXTINF:-1 group-title="轮播频道",舌尖上的中国第一季
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382735579
+#EXTINF:-1 tvg-name="舌尖上的中国第一季" group-title="电影/电视剧",舌尖上的中国第一季
 https://live.ottiptv.cc/yy/1354930952
-#EXTINF:-1 group-title="轮播频道",发哥系列
+#EXTINF:-1 tvg-name="发哥系列" group-title="电影/电视剧",发哥系列
 https://live.ottiptv.cc/yy/1354888733
-#EXTINF:-1 group-title="轮播频道",宋小宝春晚小品合集
+#EXTINF:-1 tvg-name="宋小宝春晚小品合集" group-title="电影/电视剧",宋小宝春晚小品合集
 https://live.ottiptv.cc/yy/1382736866
-#EXTINF:-1 group-title="轮播频道",百家讲坛-红楼梦篇
+#EXTINF:-1 tvg-name="百家讲坛-红楼梦篇" group-title="电影/电视剧",百家讲坛-红楼梦篇
 https://live.ottiptv.cc/yy/1382741639
-#EXTINF:-1 group-title="轮播频道",抹茶少女
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736918
+#EXTINF:-1 tvg-name="抹茶少女" group-title="电影/电视剧",抹茶少女
 https://live.ottiptv.cc/yy/1382737888
-#EXTINF:-1 group-title="轮播频道",机械战警1-3
+#EXTINF:-1 tvg-name="机械战警1-3" group-title="电影/电视剧",机械战警1-3
 https://live.ottiptv.cc/yy/1382736854
-#EXTINF:-1 group-title="轮播频道",远去的飞鹰-影视剧
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382736887
+#EXTINF:-1 tvg-name="远去的飞鹰-影视剧" group-title="电影/电视剧",远去的飞鹰-影视剧
 https://live.ottiptv.cc/yy/1354930912
-#EXTINF:-1 group-title="轮播频道",电视剧-流金岁月
+#EXTINF:-1 tvg-name="电视剧-流金岁月" group-title="电影/电视剧",电视剧-流金岁月
 https://live.ottiptv.cc/yy/1382749906
-#EXTINF:-1 group-title="轮播频道",致敬星爷致敬经典
+#EXTINF:-1 tvg-name="致敬星爷致敬经典" group-title="电影/电视剧",致敬星爷致敬经典
 https://live.ottiptv.cc/yy/1354889048
-#EXTINF:-1 group-title="轮播频道",高分动作片——创可贴
+#EXTINF:-1 tvg-name="高分动作片——创可贴" group-title="电影/电视剧",高分动作片——创可贴
 https://live.ottiptv.cc/yy/1382735568
-#EXTINF:-1 group-title="轮播频道",本山快乐营1
+#EXTINF:-1 tvg-name="本山快乐营1" group-title="电影/电视剧",本山快乐营1
 https://live.ottiptv.cc/yy/1354936209
-#EXTINF:-1 group-title="轮播频道",少年包青天美黑之旅
+#EXTINF:-1 tvg-name="少年包青天美黑之旅" group-title="电影/电视剧",少年包青天美黑之旅
 https://live.ottiptv.cc/yy/1354936141
-#EXTINF:-1 group-title="轮播频道",热血少年上线，《长歌行》开播
+#EXTINF:-1 tvg-name="热血少年上线，《长歌行》开播" group-title="电影/电视剧",热血少年上线，《长歌行》开播
 https://live.ottiptv.cc/yy/1382736802
-#EXTINF:-1 group-title="轮播频道",大台风
+#EXTINF:-1 tvg-name="大台风" group-title="电影/电视剧",大台风
 https://live.ottiptv.cc/yy/1382735583
-#EXTINF:-1 group-title="轮播频道",搬山道人之落天荒
+#EXTINF:-1 tvg-name="搬山道人之落天荒" group-title="电影/电视剧",搬山道人之落天荒
 https://live.ottiptv.cc/yy/1382736916
-#EXTINF:-1 group-title="轮播频道",紧急营救
+#EXTINF:-1 tvg-name="洪金宝福星系列" group-title="电影/电视剧",洪金宝福星系列
+https://live.ottiptv.cc/yy/1382851602
+#EXTINF:-1 tvg-name="紧急营救" group-title="电影/电视剧",紧急营救
 https://live.ottiptv.cc/yy/1354926676
-#EXTINF:-1 group-title="轮播频道",一分钟学道菜
+#EXTINF:-1 tvg-name="一分钟学道菜" group-title="电影/电视剧",一分钟学道菜
 https://live.ottiptv.cc/yy/1382736901
-#EXTINF:-1 group-title="轮播频道",辣警狂花2
+#EXTINF:-1 tvg-name="辣警狂花2" group-title="电影/电视剧",辣警狂花2
 https://live.ottiptv.cc/yy/1382745110
-#EXTINF:-1 group-title="轮播频道",渴望
+#EXTINF:-1 tvg-name="渴望" group-title="电影/电视剧",渴望
 https://live.ottiptv.cc/yy/1354930963
-#EXTINF:-1 group-title="轮播频道",超英集结
+#EXTINF:-1 tvg-name="超英集结" group-title="电影/电视剧",超英集结
 https://live.ottiptv.cc/yy/1382745091
-#EXTINF:-1 group-title="轮播频道",银河护卫队-国外科幻巨作
+#EXTINF:-1 tvg-name="银河护卫队-国外科幻巨作" group-title="电影/电视剧",银河护卫队-国外科幻巨作
 https://live.ottiptv.cc/yy/1382736815
-#EXTINF:-1 group-title="轮播频道",白领被迫当楼奴？
+#EXTINF:-1 tvg-name="白领被迫当楼奴？" group-title="电影/电视剧",白领被迫当楼奴？
 https://live.ottiptv.cc/yy/1382736832
-#EXTINF:-1 group-title="轮播频道",国产家庭电视剧-如果岁月可回头
+#EXTINF:-1 tvg-name="国产家庭电视剧-如果岁月可回头" group-title="电影/电视剧",国产家庭电视剧-如果岁月可回头
 https://live.ottiptv.cc/yy/1382736883
-#EXTINF:-1 group-title="轮播频道",带你领略四季的变化
+#EXTINF:-1 tvg-name="带你领略四季的变化" group-title="电影/电视剧",带你领略四季的变化
 https://live.ottiptv.cc/yy/1354930816
-#EXTINF:-1 group-title="轮播频道",施公奇案2-欧阳震华
+#EXTINF:-1 tvg-name="施公奇案2-欧阳震华" group-title="电影/电视剧",施公奇案2-欧阳震华
 https://live.ottiptv.cc/yy/1382736824
-#EXTINF:-1 group-title="轮播频道",名媛望族-精彩港剧
+#EXTINF:-1 tvg-name="名媛望族-精彩港剧" group-title="电影/电视剧",名媛望族-精彩港剧
 https://live.ottiptv.cc/yy/1354932431
-#EXTINF:-1 group-title="轮播频道",辣警狂花
+#EXTINF:-1 tvg-name="辣警狂花" group-title="电影/电视剧",辣警狂花
 https://live.ottiptv.cc/yy/1382736892
-#EXTINF:-1 group-title="轮播频道",高能博弈—大事件
+#EXTINF:-1 tvg-name="高能博弈—大事件" group-title="电影/电视剧",高能博弈—大事件
 https://live.ottiptv.cc/yy/1382749898
-#EXTINF:-1 group-title="轮播频道",碟中谍系列电影
+#EXTINF:-1 tvg-name="碟中谍系列电影" group-title="电影/电视剧",碟中谍系列电影
 https://live.ottiptv.cc/yy/1382736836
-#EXTINF:-1 group-title="轮播频道",另类猪妖爆笑逆袭
+#EXTINF:-1 tvg-name="另类猪妖爆笑逆袭" group-title="电影/电视剧",另类猪妖爆笑逆袭
 https://live.ottiptv.cc/yy/1354936155
-#EXTINF:-1 group-title="轮播频道",忠诚无畏，战犬出击
+#EXTINF:-1 tvg-name="忠诚无畏，战犬出击" group-title="电影/电视剧",忠诚无畏，战犬出击
 https://live.ottiptv.cc/yy/1354930225
-#EXTINF:-1 group-title="轮播频道",超燃科幻大片：明日边缘
+#EXTINF:-1 tvg-name="超燃科幻大片：明日边缘" group-title="电影/电视剧",超燃科幻大片：明日边缘
 https://live.ottiptv.cc/yy/1382736835
-#EXTINF:-1 group-title="轮播频道",霹雳火：速度与激情
+#EXTINF:-1 tvg-name="霹雳火：速度与激情" group-title="电影/电视剧",霹雳火：速度与激情
 https://live.ottiptv.cc/yy/1382736895
-#EXTINF:-1 group-title="轮播频道",学生兵
+#EXTINF:-1 tvg-name="学生兵" group-title="电影/电视剧",学生兵
 https://live.ottiptv.cc/yy/1354658003
-#EXTINF:-1 group-title="轮播频道",影视小艺
+#EXTINF:-1 tvg-name="影视小艺" group-title="电影/电视剧",影视小艺
 https://live.ottiptv.cc/yy/1382737886
-#EXTINF:-1 group-title="轮播频道",名不虚传-韩剧
+#EXTINF:-1 tvg-name="名不虚传-韩剧" group-title="电影/电视剧",名不虚传-韩剧
 https://live.ottiptv.cc/yy/1382749904
-#EXTINF:-1 group-title="轮播频道",本山快乐营2
+#EXTINF:-1 tvg-name="本山快乐营2" group-title="电影/电视剧",本山快乐营2
 https://live.ottiptv.cc/yy/1382736718
-#EXTINF:-1 group-title="轮播频道",狄仁杰智破红瞳谜案
+#EXTINF:-1 tvg-name="狄仁杰智破红瞳谜案" group-title="电影/电视剧",狄仁杰智破红瞳谜案
 https://live.ottiptv.cc/yy/1354936116
-#EXTINF:-1 group-title="轮播频道",喜剧闹翻天
+#EXTINF:-1 tvg-name="喜剧闹翻天" group-title="电影/电视剧",喜剧闹翻天
 https://live.ottiptv.cc/yy/1382735548
-#EXTINF:-1 group-title="轮播频道",当旺爸爸-港剧
+#EXTINF:-1 tvg-name="当旺爸爸-港剧" group-title="电影/电视剧",当旺爸爸-港剧
 https://live.ottiptv.cc/yy/1354936208
-#EXTINF:-1 group-title="轮播频道",致命武器3
+#EXTINF:-1 tvg-name="致命武器3" group-title="电影/电视剧",致命武器3
 https://live.ottiptv.cc/yy/1382749918
-#EXTINF:-1 group-title="轮播频道",国产动作电影
+#EXTINF:-1 tvg-name="国产动作电影" group-title="电影/电视剧",国产动作电影
 https://live.ottiptv.cc/yy/1382736858
-#EXTINF:-1 group-title="轮播频道",初恋脸
+#EXTINF:-1 tvg-name="初恋脸" group-title="电影/电视剧",初恋脸
 https://live.ottiptv.cc/yy/1382851597
-#EXTINF:-1 group-title="轮播频道",PK地球神
+#EXTINF:-1 tvg-name="PK地球神" group-title="电影/电视剧",PK地球神
 https://live.ottiptv.cc/yy/1382736872
-#EXTINF:-1 group-title="轮播频道",爱在璀璨时
+#EXTINF:-1 tvg-name="爱在璀璨时" group-title="电影/电视剧",爱在璀璨时
 https://live.ottiptv.cc/yy/1354926671
-#EXTINF:-1 group-title="轮播频道",清官难当？看芝麻官如何破局
+#EXTINF:-1 tvg-name="清官难当？看芝麻官如何破局" group-title="电影/电视剧",清官难当？看芝麻官如何破局
 https://live.ottiptv.cc/yy/1382749909
-#EXTINF:-1 group-title="轮播频道",每天都要快乐哦！
+#EXTINF:-1 tvg-name="每天都要快乐哦！" group-title="电影/电视剧",每天都要快乐哦！
 https://live.ottiptv.cc/yy/1354930909
-#EXTINF:-1 group-title="轮播频道",一段关于救赎与坚守的西部传奇
+#EXTINF:-1 tvg-name="一段关于救赎与坚守的西部传奇" group-title="电影/电视剧",一段关于救赎与坚守的西部传奇
 https://live.ottiptv.cc/yy/1382741640
-#EXTINF:-1 group-title="轮播频道",封神：祸商
+#EXTINF:-1 tvg-name="封神：祸商" group-title="电影/电视剧",封神：祸商
 https://live.ottiptv.cc/yy/1354932407
-#EXTINF:-1 group-title="轮播频道",娘亲舅大
+#EXTINF:-1 tvg-name="娘亲舅大" group-title="电影/电视剧",娘亲舅大
 https://live.ottiptv.cc/yy/1354932360
-#EXTINF:-1 group-title="轮播频道",Simon Amstell：躺平哲学
+#EXTINF:-1 tvg-name="Simon Amstell：躺平哲学" group-title="电影/电视剧",Simon Amstell：躺平哲学
 https://live.ottiptv.cc/yy/1382749951
-#EXTINF:-1 group-title="轮播频道",悬疑反转，直击真相
+#EXTINF:-1 tvg-name="悬疑反转，直击真相" group-title="电影/电视剧",悬疑反转，直击真相
 https://live.ottiptv.cc/yy/1354930954
-#EXTINF:-1 group-title="轮播频道",热血战争巨作
+#EXTINF:-1 tvg-name="热血战争巨作" group-title="电影/电视剧",热血战争巨作
 https://live.ottiptv.cc/yy/1382745087
-#EXTINF:-1 group-title="轮播频道",动作大片
+#EXTINF:-1 tvg-name="动作大片" group-title="电影/电视剧",动作大片
 https://live.ottiptv.cc/yy/1354888739
-#EXTINF:-1 group-title="轮播频道",热血抗日电影
+#EXTINF:-1 tvg-name="热血抗日电影" group-title="电影/电视剧",热血抗日电影
 https://live.ottiptv.cc/yy/1382749907
-#EXTINF:-1 group-title="轮播频道",艾迪格里芬：经典就是我
+#EXTINF:-1 tvg-name="艾迪格里芬：经典就是我" group-title="电影/电视剧",艾迪格里芬：经典就是我
 https://live.ottiptv.cc/yy/1354932409
-#EXTINF:-1 group-title="轮播频道",巾帼枭雄之义海豪情
+#EXTINF:-1 tvg-name="巾帼枭雄之义海豪情" group-title="电影/电视剧",巾帼枭雄之义海豪情
 https://live.ottiptv.cc/yy/1382736859
-#EXTINF:-1 group-title="轮播频道",笑傲江湖-电视剧
+#EXTINF:-1 tvg-name="笑傲江湖-电视剧" group-title="电影/电视剧",笑傲江湖-电视剧
 https://live.ottiptv.cc/yy/1354936128
-#EXTINF:-1 group-title="轮播频道",老夫少妻搞笑忘年恋
+#EXTINF:-1 tvg-name="老夫少妻搞笑忘年恋" group-title="电影/电视剧",老夫少妻搞笑忘年恋
 https://live.ottiptv.cc/yy/1354932391
-#EXTINF:-1 group-title="轮播频道",最佳下饭小甜剧，暖心暖胃
+#EXTINF:-1 tvg-name="最佳下饭小甜剧，暖心暖胃" group-title="电影/电视剧",最佳下饭小甜剧，暖心暖胃
 https://live.ottiptv.cc/yy/1382741637
-#EXTINF:-1 group-title="轮播频道",笔墨传情，致敬经典——妙墨中国心
+#EXTINF:-1 tvg-name="笔墨传情，致敬经典——妙墨中国心" group-title="电影/电视剧",笔墨传情，致敬经典——妙墨中国心
 https://live.ottiptv.cc/yy/1382745178
-#EXTINF:-1 group-title="轮播频道",深海巨兽惊现，渔民与神秘生物的生存博弈
+#EXTINF:-1 tvg-name="深海巨兽惊现，渔民与神秘生物的生存博弈" group-title="电影/电视剧",深海巨兽惊现，渔民与神秘生物的生存博弈
 https://live.ottiptv.cc/yy/1382745111
-#EXTINF:-1 group-title="轮播频道",乔·科伊热辣开麦
+#EXTINF:-1 tvg-name="乔·科伊热辣开麦" group-title="电影/电视剧",乔·科伊热辣开麦
 https://live.ottiptv.cc/yy/1382735625
-#EXTINF:-1 group-title="轮播频道",手机APP掌控人生
+#EXTINF:-1 tvg-name="手机APP掌控人生" group-title="电影/电视剧",手机APP掌控人生
 https://live.ottiptv.cc/yy/1382736874
-#EXTINF:-1 group-title="轮播频道",铁血拍档：并肩破局的燃魂对决
+#EXTINF:-1 tvg-name="铁血拍档：并肩破局的燃魂对决" group-title="电影/电视剧",铁血拍档：并肩破局的燃魂对决
 https://live.ottiptv.cc/yy/1382736884
-#EXTINF:-1 group-title="轮播频道",黄大妮-电视剧
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382745182
+#EXTINF:-1 tvg-name="黄大妮-电视剧" group-title="电影/电视剧",黄大妮-电视剧
 https://live.ottiptv.cc/yy/1354930904
-#EXTINF:-1 group-title="轮播频道",海王-院线大片
+#EXTINF:-1 tvg-name="海王-院线大片" group-title="电影/电视剧",海王-院线大片
 https://live.ottiptv.cc/yy/1354936142
-#EXTINF:-1 group-title="轮播频道",高分经典动作片
+#EXTINF:-1 tvg-name="高分经典动作片" group-title="电影/电视剧",高分经典动作片
 https://live.ottiptv.cc/yy/1382749944
-#EXTINF:-1 group-title="轮播频道",了不起的萝莉小玲
+#EXTINF:-1 tvg-name="了不起的萝莉小玲" group-title="电影/电视剧",了不起的萝莉小玲
 https://live.ottiptv.cc/yy/1382736799
-#EXTINF:-1 group-title="轮播频道",牧野诡事之赤丹珠
+#EXTINF:-1 tvg-name="牧野诡事之赤丹珠" group-title="电影/电视剧",牧野诡事之赤丹珠
 https://live.ottiptv.cc/yy/1382736863
-#EXTINF:-1 group-title="轮播频道",美好的意外治愈邂逅
+#EXTINF:-1 tvg-name="美好的意外治愈邂逅" group-title="电影/电视剧",美好的意外治愈邂逅
 https://live.ottiptv.cc/yy/1382828766
-#EXTINF:-1 group-title="轮播频道",小人国——介子鬼城
+#EXTINF:-1 tvg-name="小人国——介子鬼城" group-title="电影/电视剧",小人国——介子鬼城
 https://live.ottiptv.cc/yy/1382749950
-#EXTINF:-1 group-title="轮播频道",全村一起搞艺术
+#EXTINF:-1 tvg-name="全村一起搞艺术" group-title="电影/电视剧",全村一起搞艺术
 https://live.ottiptv.cc/yy/1354936210
-#EXTINF:-1 group-title="轮播频道",不可能的任务-碟中谍4
+#EXTINF:-1 tvg-name="不可能的任务-碟中谍4" group-title="电影/电视剧",不可能的任务-碟中谍4
 https://live.ottiptv.cc/yy/1354930967
-#EXTINF:-1 group-title="轮播频道",岳云鹏宋小宝也来演电影了？
+#EXTINF:-1 tvg-name="岳云鹏宋小宝也来演电影了？" group-title="电影/电视剧",岳云鹏宋小宝也来演电影了？
 https://live.ottiptv.cc/yy/1354926612
-#EXTINF:-1 group-title="轮播频道",毒力觉醒的异能逆袭狂潮
+#EXTINF:-1 tvg-name="毒力觉醒的异能逆袭狂潮" group-title="电影/电视剧",毒力觉醒的异能逆袭狂潮
 https://live.ottiptv.cc/yy/1354926735
-#EXTINF:-1 group-title="轮播频道",金牌喜剧班
+#EXTINF:-1 tvg-name="金牌喜剧班" group-title="电影/电视剧",金牌喜剧班
 https://live.ottiptv.cc/yy/1354889009
-#EXTINF:-1 group-title="轮播频道",还原英雄最后的壮烈！
+#EXTINF:-1 tvg-name="还原英雄最后的壮烈！" group-title="电影/电视剧",还原英雄最后的壮烈！
 https://live.ottiptv.cc/yy/1354930984
-#EXTINF:-1 group-title="轮播频道",新木乃伊：古埃及公主复活的灾难对决
+#EXTINF:-1 tvg-name="新木乃伊：古埃及公主复活的灾难对决" group-title="电影/电视剧",新木乃伊：古埃及公主复活的灾难对决
 https://live.ottiptv.cc/yy/1354936169
-#EXTINF:-1 group-title="轮播频道",高分港剧合集
+#EXTINF:-1 tvg-name="高分港剧合集" group-title="电影/电视剧",高分港剧合集
 https://live.ottiptv.cc/yy/1382735542
-#EXTINF:-1 group-title="轮播频道",匪帮传奇故事
+#EXTINF:-1 tvg-name="匪帮传奇故事" group-title="电影/电视剧",匪帮传奇故事
 https://live.ottiptv.cc/yy/1382749941
-#EXTINF:-1 group-title="轮播频道",新时代农村青年的热血奋斗记
+#EXTINF:-1 tvg-name="新时代农村青年的热血奋斗记" group-title="电影/电视剧",新时代农村青年的热血奋斗记
 https://live.ottiptv.cc/yy/1382736715
-#EXTINF:-1 group-title="轮播频道",丹尼尔·斯洛斯烧脑谜题
+#EXTINF:-1 tvg-name="丹尼尔·斯洛斯烧脑谜题" group-title="电影/电视剧",丹尼尔·斯洛斯烧脑谜题
 https://live.ottiptv.cc/yy/1354936199
-#EXTINF:-1 group-title="轮播频道",你最爱的小龙女-神雕侠侣
+#EXTINF:-1 tvg-name="你最爱的小龙女-神雕侠侣" group-title="电影/电视剧",你最爱的小龙女-神雕侠侣
 https://live.ottiptv.cc/yy/1354926637
-#EXTINF:-1 group-title="轮播频道",呆萌飞行员
+#EXTINF:-1 tvg-name="呆萌飞行员" group-title="电影/电视剧",呆萌飞行员
 https://live.ottiptv.cc/yy/1354930968
-#EXTINF:-1 group-title="轮播频道",亚洲笑星征服美国
+#EXTINF:-1 tvg-name="亚洲笑星征服美国" group-title="电影/电视剧",亚洲笑星征服美国
 https://live.ottiptv.cc/yy/1382736920
-#EXTINF:-1 group-title="轮播频道",宇宙护卫队--国漫
+#EXTINF:-1 tvg-name="宇宙护卫队--国漫" group-title="电影/电视剧",宇宙护卫队--国漫
 https://live.ottiptv.cc/yy/1382736837
-#EXTINF:-1 group-title="轮播频道",悬疑武侠电影—九门
+#EXTINF:-1 tvg-name="YY用户" group-title="电影/电视剧",YY用户
+https://live.ottiptv.cc/yy/1382735545
+#EXTINF:-1 tvg-name="悬疑武侠电影—九门" group-title="电影/电视剧",悬疑武侠电影—九门
 https://live.ottiptv.cc/yy/1382828768
-#EXTINF:-1 group-title="轮播频道",萌妹特攻队爆笑出击
+#EXTINF:-1 tvg-name="萌妹特攻队爆笑出击" group-title="电影/电视剧",萌妹特攻队爆笑出击
 https://live.ottiptv.cc/yy/1354930971
-#EXTINF:-1 group-title="轮播频道",神秘来客闯入
+#EXTINF:-1 tvg-name="神秘来客闯入" group-title="电影/电视剧",神秘来客闯入
 https://live.ottiptv.cc/yy/1382736820
-#EXTINF:-1 group-title="轮播频道",时间的答卷第二季
+#EXTINF:-1 tvg-name="时间的答卷第二季" group-title="电影/电视剧",时间的答卷第二季
 https://live.ottiptv.cc/yy/1382745106
-#EXTINF:-1 group-title="轮播频道",绝地生死营救
+#EXTINF:-1 tvg-name="绝地生死营救" group-title="电影/电视剧",绝地生死营救
 https://live.ottiptv.cc/yy/1354936214
-#EXTINF:-1 group-title="轮播频道",坑你没商量
+#EXTINF:-1 tvg-name="坑你没商量" group-title="电影/电视剧",坑你没商量
 https://live.ottiptv.cc/yy/1354936160
-#EXTINF:-1 group-title="轮播频道",Bill Burr暴躁经典重现
+#EXTINF:-1 tvg-name="Bill Burr暴躁经典重现" group-title="电影/电视剧",Bill Burr暴躁经典重现
 https://live.ottiptv.cc/yy/1382736917
-#EXTINF:-1 group-title="轮播频道",经典传奇2018
+#EXTINF:-1 tvg-name="经典传奇2018" group-title="电影/电视剧",经典传奇2018
 https://live.ottiptv.cc/yy/1382745184
-#EXTINF:-1 group-title="轮播频道",憨夫憨妇闯情关
+#EXTINF:-1 tvg-name="憨夫憨妇闯情关" group-title="电影/电视剧",憨夫憨妇闯情关
 https://live.ottiptv.cc/yy/1382735581
-#EXTINF:-1 group-title="轮播频道",异地演出，炸场奇遇
+#EXTINF:-1 tvg-name="异地演出，炸场奇遇" group-title="电影/电视剧",异地演出，炸场奇遇
 https://live.ottiptv.cc/yy/1382735561
-#EXTINF:-1 group-title="轮播频道",笑果伴酒，快乐中秋
+#EXTINF:-1 tvg-name="笑果伴酒，快乐中秋" group-title="电影/电视剧",笑果伴酒，快乐中秋
 https://live.ottiptv.cc/yy/1382745092
-#EXTINF:-1 group-title="轮播频道",杰斯尼克暗黑我思我祷
+#EXTINF:-1 tvg-name="杰斯尼克暗黑我思我祷" group-title="电影/电视剧",杰斯尼克暗黑我思我祷
 https://live.ottiptv.cc/yy/1354658051
-#EXTINF:-1 group-title="轮播频道",追踪神秘狐影
+#EXTINF:-1 tvg-name="追踪神秘狐影" group-title="电影/电视剧",追踪神秘狐影
 https://live.ottiptv.cc/yy/1382749953
-#EXTINF:-1 group-title="轮播频道",快递小哥变身英雄
+#EXTINF:-1 tvg-name="快递小哥变身英雄" group-title="电影/电视剧",快递小哥变身英雄
 https://live.ottiptv.cc/yy/1354932405
-#EXTINF:-1 group-title="轮播频道",心动信号甜蜜发酵
+#EXTINF:-1 tvg-name="心动信号甜蜜发酵" group-title="电影/电视剧",心动信号甜蜜发酵
 https://live.ottiptv.cc/yy/1382736819
-#EXTINF:-1 group-title="轮播频道",Storm憋了一年大招
+#EXTINF:-1 tvg-name="Storm憋了一年大招" group-title="电影/电视剧",Storm憋了一年大招
 https://live.ottiptv.cc/yy/1382735559
-#EXTINF:-1 group-title="轮播频道",熊出没之探险日记-森林探险记
+#EXTINF:-1 tvg-name="熊出没之探险日记-森林探险记" group-title="电影/电视剧",熊出没之探险日记-森林探险记
 https://live.ottiptv.cc/yy/1382745122
-#EXTINF:-1 group-title="轮播频道",异类入侵高能反转
+#EXTINF:-1 tvg-name="异类入侵高能反转" group-title="电影/电视剧",异类入侵高能反转
 https://live.ottiptv.cc/yy/1354936217
-#EXTINF:-1 group-title="轮播频道",杀机四伏
+#EXTINF:-1 tvg-name="杀机四伏" group-title="电影/电视剧",杀机四伏
 https://live.ottiptv.cc/yy/1354936195
-#EXTINF:-1 group-title="轮播频道",旺达·塞克丝：怼遍全场
+#EXTINF:-1 tvg-name="旺达·塞克丝：怼遍全场" group-title="电影/电视剧",旺达·塞克丝：怼遍全场
 https://live.ottiptv.cc/yy/1354936221
-#EXTINF:-1 group-title="轮播频道",为妈妈点赞
+#EXTINF:-1 tvg-name="为妈妈点赞" group-title="电影/电视剧",为妈妈点赞
 https://live.ottiptv.cc/yy/1382745098
-#EXTINF:-1 group-title="轮播频道",狼爸硬核带娃
+#EXTINF:-1 tvg-name="狼爸硬核带娃" group-title="电影/电视剧",狼爸硬核带娃
 https://live.ottiptv.cc/yy/1382735627
-#EXTINF:-1 group-title="轮播频道",龙师傅来接招
+#EXTINF:-1 tvg-name="龙师傅来接招" group-title="电影/电视剧",龙师傅来接招
 https://live.ottiptv.cc/yy/1354889015
-#EXTINF:-1 group-title="轮播频道",武状元落魄，神谕指引丐帮逆袭
+#EXTINF:-1 tvg-name="武状元落魄，神谕指引丐帮逆袭" group-title="电影/电视剧",武状元落魄，神谕指引丐帮逆袭
 https://live.ottiptv.cc/yy/1382736882
-#EXTINF:-1 group-title="轮播频道",苍狼特战突击
+#EXTINF:-1 tvg-name="苍狼特战突击" group-title="电影/电视剧",苍狼特战突击
 https://live.ottiptv.cc/yy/1382736849
-#EXTINF:-1 group-title="轮播频道",开放麦现场惊现认亲
+#EXTINF:-1 tvg-name="开放麦现场惊现认亲" group-title="电影/电视剧",开放麦现场惊现认亲
 https://live.ottiptv.cc/yy/1354936181
-#EXTINF:-1 group-title="轮播频道",战俘营大逃亡
+#EXTINF:-1 tvg-name="战俘营大逃亡" group-title="电影/电视剧",战俘营大逃亡
 https://live.ottiptv.cc/yy/1354930915
-#EXTINF:-1 group-title="轮播频道",兵王绝境狙杀
+#EXTINF:-1 tvg-name="兵王绝境狙杀" group-title="电影/电视剧",兵王绝境狙杀
 https://live.ottiptv.cc/yy/1382736833
-#EXTINF:-1 group-title="轮播频道",英伦特工智斗谍影
+#EXTINF:-1 tvg-name="英伦特工智斗谍影" group-title="电影/电视剧",英伦特工智斗谍影
 https://live.ottiptv.cc/yy/1382736841
-#EXTINF:-1 group-title="轮播频道",颠覆秩序的声浪狂潮
+#EXTINF:-1 tvg-name="颠覆秩序的声浪狂潮" group-title="电影/电视剧",颠覆秩序的声浪狂潮
 https://live.ottiptv.cc/yy/1354932426
-#EXTINF:-1 group-title="轮播频道",战火中的兄弟情义
+#EXTINF:-1 tvg-name="战火中的兄弟情义" group-title="电影/电视剧",战火中的兄弟情义
 https://live.ottiptv.cc/yy/1382736844
-#EXTINF:-1 group-title="轮播频道",重启
+#EXTINF:-1 tvg-name="重启" group-title="电影/电视剧",重启
 https://live.ottiptv.cc/yy/1354888736
-#EXTINF:-1 group-title="轮播频道",嗜血巨狼突袭人类
+#EXTINF:-1 tvg-name="嗜血巨狼突袭人类" group-title="电影/电视剧",嗜血巨狼突袭人类
 https://live.ottiptv.cc/yy/1382735560
-#EXTINF:-1 group-title="轮播频道",唐门双雄战神犼
+#EXTINF:-1 tvg-name="唐门双雄战神犼" group-title="电影/电视剧",唐门双雄战神犼
 https://live.ottiptv.cc/yy/1382736897
-#EXTINF:-1 group-title="轮播频道",体验另一种生活！
+#EXTINF:-1 tvg-name="体验另一种生活！" group-title="电影/电视剧",体验另一种生活！
 https://live.ottiptv.cc/yy/1354936229
-#EXTINF:-1 group-title="轮播频道",忠犬救主，一段感动人心的陪伴之旅
+#EXTINF:-1 tvg-name="忠犬救主，一段感动人心的陪伴之旅" group-title="电影/电视剧",忠犬救主，一段感动人心的陪伴之旅
 https://live.ottiptv.cc/yy/1382736719
-#EXTINF:-1 group-title="轮播频道",打破第四面墙
+#EXTINF:-1 tvg-name="打破第四面墙" group-title="电影/电视剧",打破第四面墙
 https://live.ottiptv.cc/yy/1382745090
-#EXTINF:-1 group-title="轮播频道",天龙八部（国语版）
+#EXTINF:-1 tvg-name="天龙八部（国语版）" group-title="电影/电视剧",天龙八部（国语版）
 https://live.ottiptv.cc/yy/1382736855
-#EXTINF:-1 group-title="轮播频道",茅山天师降魔
+#EXTINF:-1 tvg-name="茅山天师降魔" group-title="电影/电视剧",茅山天师降魔
 https://live.ottiptv.cc/yy/1354889042
-#EXTINF:-1 group-title="轮播频道",蜀山伏魔剑
+#EXTINF:-1 tvg-name="蜀山伏魔剑" group-title="电影/电视剧",蜀山伏魔剑
 https://live.ottiptv.cc/yy/1354932365
-#EXTINF:-1 group-title="轮播频道",你好现任
+#EXTINF:-1 tvg-name="你好现任" group-title="电影/电视剧",你好现任
 https://live.ottiptv.cc/yy/1382735566
-#EXTINF:-1 group-title="轮播频道",非典型恋爱
+#EXTINF:-1 tvg-name="非典型恋爱" group-title="电影/电视剧",非典型恋爱
 https://live.ottiptv.cc/yy/1354936157
-#EXTINF:-1 group-title="轮播频道",侏罗纪复活战
+#EXTINF:-1 tvg-name="侏罗纪复活战" group-title="电影/电视剧",侏罗纪复活战
 https://live.ottiptv.cc/yy/1354930945
-#EXTINF:-1 group-title="轮播频道",花木兰巾帼英雄
+#EXTINF:-1 tvg-name="花木兰巾帼英雄" group-title="电影/电视剧",花木兰巾帼英雄
 https://live.ottiptv.cc/yy/1354926622
-#EXTINF:-1 group-title="轮播频道",乔·科伊席卷西雅图
+#EXTINF:-1 tvg-name="乔·科伊席卷西雅图" group-title="电影/电视剧",乔·科伊席卷西雅图
 https://live.ottiptv.cc/yy/1382749911
-#EXTINF:-1 group-title="轮播频道",悬疑剧-河神
+#EXTINF:-1 tvg-name="悬疑剧-河神" group-title="电影/电视剧",悬疑剧-河神
 https://live.ottiptv.cc/yy/1353413683
-#EXTINF:-1 group-title="轮播频道",天师驱魔令
+#EXTINF:-1 tvg-name="天师驱魔令" group-title="电影/电视剧",天师驱魔令
 https://live.ottiptv.cc/yy/1354926643
-#EXTINF:-1 group-title="轮播频道",铁甲狂猴雷霆
+#EXTINF:-1 tvg-name="铁甲狂猴雷霆" group-title="电影/电视剧",铁甲狂猴雷霆
 https://live.ottiptv.cc/yy/1382735552
-#EXTINF:-1 group-title="轮播频道",音乐才女与霸道总裁的治愈之恋
+#EXTINF:-1 tvg-name="音乐才女与霸道总裁的治愈之恋" group-title="电影/电视剧",音乐才女与霸道总裁的治愈之恋
 https://live.ottiptv.cc/yy/1382735573
-#EXTINF:-1 group-title="轮播频道",大闹三界奇幻冒险
+#EXTINF:-1 tvg-name="大闹三界奇幻冒险" group-title="电影/电视剧",大闹三界奇幻冒险
 https://live.ottiptv.cc/yy/1382736804
-#EXTINF:-1 group-title="轮播频道",赵牡丹，辛辣开麦
+#EXTINF:-1 tvg-name="赵牡丹，辛辣开麦" group-title="电影/电视剧",赵牡丹，辛辣开麦
 https://live.ottiptv.cc/yy/1382736893
-#EXTINF:-1 group-title="轮播频道",闲暇观看综艺
+#EXTINF:-1 tvg-name="闲暇观看综艺" group-title="电影/电视剧",闲暇观看综艺
 https://live.ottiptv.cc/yy/1354932379
-#EXTINF:-1 group-title="轮播频道",暗恋成真青春纯爱
+#EXTINF:-1 tvg-name="暗恋成真青春纯爱" group-title="电影/电视剧",暗恋成真青春纯爱
 https://live.ottiptv.cc/yy/1382736817
-#EXTINF:-1 group-title="轮播频道",未来中国
+#EXTINF:-1 tvg-name="未来中国" group-title="电影/电视剧",未来中国
 https://live.ottiptv.cc/yy/1354932429
-#EXTINF:-1 group-title="轮播频道",青龙偃月显威
+#EXTINF:-1 tvg-name="青龙偃月显威" group-title="电影/电视剧",青龙偃月显威
 https://live.ottiptv.cc/yy/1354932402
-#EXTINF:-1 group-title="轮播频道",小小心事，笑着流泪
+#EXTINF:-1 tvg-name="小小心事，笑着流泪" group-title="电影/电视剧",小小心事，笑着流泪
 https://live.ottiptv.cc/yy/1382736852
-#EXTINF:-1 group-title="轮播频道",戴夫吐槽晕头转向的时代
+#EXTINF:-1 tvg-name="戴夫吐槽晕头转向的时代" group-title="电影/电视剧",戴夫吐槽晕头转向的时代
 https://live.ottiptv.cc/yy/1382736869
-#EXTINF:-1 group-title="轮播频道",最佳时机：命运转角的最佳抉择与奔赴
+#EXTINF:-1 tvg-name="最佳时机：命运转角的最佳抉择与奔赴" group-title="电影/电视剧",最佳时机：命运转角的最佳抉择与奔赴
 https://live.ottiptv.cc/yy/1354936207
-#EXTINF:-1 group-title="轮播频道",美女保镖出击！
+#EXTINF:-1 tvg-name="美女保镖出击！" group-title="电影/电视剧",美女保镖出击！
 https://live.ottiptv.cc/yy/1354936231
-#EXTINF:-1 group-title="轮播频道",揭秘！经典传奇背后的未解之谜
+#EXTINF:-1 tvg-name="揭秘！经典传奇背后的未解之谜" group-title="电影/电视剧",揭秘！经典传奇背后的未解之谜
 https://live.ottiptv.cc/yy/1382736912
-#EXTINF:-1 group-title="轮播频道",淮水情深深
+#EXTINF:-1 tvg-name="淮水情深深" group-title="电影/电视剧",淮水情深深
 https://live.ottiptv.cc/yy/1382749888
-#EXTINF:-1 group-title="轮播频道",爆笑诡扯记
+#EXTINF:-1 tvg-name="爆笑诡扯记" group-title="电影/电视剧",爆笑诡扯记
 https://live.ottiptv.cc/yy/1354936249
-#EXTINF:-1 group-title="轮播频道",巅峰救援行动
+#EXTINF:-1 tvg-name="巅峰救援行动" group-title="电影/电视剧",巅峰救援行动
 https://live.ottiptv.cc/yy/1382736857
-#EXTINF:-1 group-title="轮播频道",就是要疯狂
+#EXTINF:-1 tvg-name="就是要疯狂" group-title="电影/电视剧",就是要疯狂
 https://live.ottiptv.cc/yy/1354936145
-#EXTINF:-1 group-title="轮播频道",契约夫妻上线
+#EXTINF:-1 tvg-name="契约夫妻上线" group-title="电影/电视剧",契约夫妻上线
 https://live.ottiptv.cc/yy/1354936154
-#EXTINF:-1 group-title="轮播频道",许光汉主演喜剧大片
+#EXTINF:-1 tvg-name="许光汉主演喜剧大片" group-title="电影/电视剧",许光汉主演喜剧大片
 https://live.ottiptv.cc/yy/1382736825
-#EXTINF:-1 group-title="轮播频道",新弦已张，静候谁的指尖与故事？
+#EXTINF:-1 tvg-name="新弦已张，静候谁的指尖与故事？" group-title="电影/电视剧",新弦已张，静候谁的指尖与故事？
 https://live.ottiptv.cc/yy/1354936170
-#EXTINF:-1 group-title="轮播频道",硬汉搭档扫黑，致命武器2
+#EXTINF:-1 tvg-name="硬汉搭档扫黑，致命武器2" group-title="电影/电视剧",硬汉搭档扫黑，致命武器2
 https://live.ottiptv.cc/yy/1382736865
-#EXTINF:-1 group-title="轮播频道",留学澳大利亚的蓝翔梗王
+#EXTINF:-1 tvg-name="留学澳大利亚的蓝翔梗王" group-title="电影/电视剧",留学澳大利亚的蓝翔梗王
 https://live.ottiptv.cc/yy/1354932441
-#EXTINF:-1 group-title="轮播频道",拳战闸北！
+#EXTINF:-1 tvg-name="拳战闸北！" group-title="电影/电视剧",拳战闸北！
 https://live.ottiptv.cc/yy/1382749910
-#EXTINF:-1 group-title="轮播频道",致命蜂群来袭
+#EXTINF:-1 tvg-name="致命蜂群来袭" group-title="电影/电视剧",致命蜂群来袭
 https://live.ottiptv.cc/yy/1382736896
-#EXTINF:-1 group-title="轮播频道",硬核使命
+#EXTINF:-1 tvg-name="硬核使命" group-title="电影/电视剧",硬核使命
 https://live.ottiptv.cc/yy/1354936122
-#EXTINF:-1 group-title="轮播频道",热烈的玫瑰
+#EXTINF:-1 tvg-name="热烈的玫瑰" group-title="电影/电视剧",热烈的玫瑰
 https://live.ottiptv.cc/yy/1382736798
-#EXTINF:-1 group-title="轮播频道",外星人入侵
+#EXTINF:-1 tvg-name="外星人入侵" group-title="电影/电视剧",外星人入侵
 https://live.ottiptv.cc/yy/1382745181
-#EXTINF:-1 group-title="轮播频道",爱情拯救计划
+#EXTINF:-1 tvg-name="爱情拯救计划" group-title="电影/电视剧",爱情拯救计划
 https://live.ottiptv.cc/yy/1354936238
-#EXTINF:-1 group-title="轮播频道",巨蛛嗜血狂
+#EXTINF:-1 tvg-name="巨蛛嗜血狂" group-title="电影/电视剧",巨蛛嗜血狂
 https://live.ottiptv.cc/yy/1354930903
-#EXTINF:-1 group-title="轮播频道",守护千年雄关
+#EXTINF:-1 tvg-name="守护千年雄关" group-title="电影/电视剧",守护千年雄关
 https://live.ottiptv.cc/yy/1354936228
-#EXTINF:-1 group-title="轮播频道",太空异种惊魂
+#EXTINF:-1 tvg-name="太空异种惊魂" group-title="电影/电视剧",太空异种惊魂
 https://live.ottiptv.cc/yy/1382745094
-#EXTINF:-1 group-title="轮播频道",踮脚拥抱爱情
+#EXTINF:-1 tvg-name="踮脚拥抱爱情" group-title="电影/电视剧",踮脚拥抱爱情
 https://live.ottiptv.cc/yy/1354930927
-#EXTINF:-1 group-title="轮播频道",公主战俘记
+#EXTINF:-1 tvg-name="公主战俘记" group-title="电影/电视剧",公主战俘记
 https://live.ottiptv.cc/yy/1354931488
-#EXTINF:-1 group-title="轮播频道",破解终极密码
+#EXTINF:-1 tvg-name="破解终极密码" group-title="电影/电视剧",破解终极密码
 https://live.ottiptv.cc/yy/1382735571
-#EXTINF:-1 group-title="轮播频道",哮天犬闹龙宫
+#EXTINF:-1 tvg-name="哮天犬闹龙宫" group-title="电影/电视剧",哮天犬闹龙宫
 https://live.ottiptv.cc/yy/1382736913
-#EXTINF:-1 group-title="轮播频道",赛道争锋！
+#EXTINF:-1 tvg-name="赛道争锋！" group-title="电影/电视剧",赛道争锋！
 https://live.ottiptv.cc/yy/1382736853
-#EXTINF:-1 group-title="轮播频道",大铸剑师传奇
+#EXTINF:-1 tvg-name="大铸剑师传奇" group-title="电影/电视剧",大铸剑师传奇
 https://live.ottiptv.cc/yy/1354932371
-#EXTINF:-1 group-title="轮播频道",暗战幽灵毒枭
+#EXTINF:-1 tvg-name="暗战幽灵毒枭" group-title="电影/电视剧",暗战幽灵毒枭
 https://live.ottiptv.cc/yy/1382745099
-#EXTINF:-1 group-title="轮播频道",奇门异人出世
+#EXTINF:-1 tvg-name="奇门异人出世" group-title="电影/电视剧",奇门异人出世
 https://live.ottiptv.cc/yy/1382749912
-#EXTINF:-1 group-title="轮播频道",仙剑风云再起
+#EXTINF:-1 tvg-name="仙剑风云再起" group-title="电影/电视剧",仙剑风云再起
 https://live.ottiptv.cc/yy/1354933556
-#EXTINF:-1 group-title="轮播频道",冰峰惊魂夜
+#EXTINF:-1 tvg-name="冰峰惊魂夜" group-title="电影/电视剧",冰峰惊魂夜
 https://live.ottiptv.cc/yy/1354936136
-#EXTINF:-1 group-title="轮播频道",绝对忠诚使命
+#EXTINF:-1 tvg-name="绝对忠诚使命" group-title="电影/电视剧",绝对忠诚使命
 https://live.ottiptv.cc/yy/1354936178
-#EXTINF:-1 group-title="轮播频道",横行不霸道
+#EXTINF:-1 tvg-name="横行不霸道" group-title="电影/电视剧",横行不霸道
 https://live.ottiptv.cc/yy/1354930189
-#EXTINF:-1 group-title="轮播频道",特派先锋出击
+#EXTINF:-1 tvg-name="特派先锋出击" group-title="电影/电视剧",特派先锋出击
 https://live.ottiptv.cc/yy/1382749940
-#EXTINF:-1 group-title="轮播频道",网剧《冬去春来》
+#EXTINF:-1 tvg-name="经典传奇2018" group-title="电影/电视剧",经典传奇2018
+https://live.ottiptv.cc/yy/1382745189
+#EXTINF:-1 tvg-name="网剧《冬去春来》" group-title="电影/电视剧",网剧《冬去春来》
 https://live.ottiptv.cc/yy/1354808044
-#EXTINF:-1 group-title="轮播频道",天龙 神雕金庸
+#EXTINF:-1 tvg-name="天龙 神雕金庸" group-title="电影/电视剧",天龙 神雕金庸
 https://live.ottiptv.cc/yy/1356043609
-#EXTINF:-1 group-title="轮播频道",靓剑
+#EXTINF:-1 tvg-name="靓剑" group-title="电影/电视剧",靓剑
 https://live.ottiptv.cc/yy/1382788679
-#EXTINF:-1 group-title="轮播频道",24H地下交通站全
+#EXTINF:-1 tvg-name="24H地下交通站全" group-title="电影/电视剧",24H地下交通站全
 https://live.ottiptv.cc/yy/37880083
-#EXTINF:-1 group-title="轮播频道",赵本山宋小宝小品大全
+#EXTINF:-1 tvg-name="赵本山宋小宝小品大全" group-title="电影/电视剧",赵本山宋小宝小品大全
 https://live.ottiptv.cc/yy/1382745331
-#EXTINF:-1 group-title="轮播频道",动漫
+#EXTINF:-1 tvg-name="动漫" group-title="电影/电视剧",动漫
 https://live.ottiptv.cc/yy/23993334
-#EXTINF:-1 group-title="轮播频道",少年包青天
+#EXTINF:-1 tvg-name="靓剑" group-title="电影/电视剧",靓剑
+https://live.ottiptv.cc/yy/1356043643
+#EXTINF:-1 tvg-name="武林外传" group-title="电影/电视剧",武林外传
+https://live.ottiptv.cc/yy/1355652820
+#EXTINF:-1 tvg-name="少年包青天" group-title="电影/电视剧",少年包青天
 https://live.ottiptv.cc/yy/1356043677
-#EXTINF:-1 group-title="轮播频道",和你不见不散
+#EXTINF:-1 tvg-name="和你不见不散" group-title="电影/电视剧",和你不见不散
 https://live.ottiptv.cc/yy/1355635293
-#EXTINF:-1 group-title="轮播频道",林正英-经典电影
+#EXTINF:-1 tvg-name="武林外传" group-title="电影/电视剧",武林外传
+https://live.ottiptv.cc/yy/1355344777
+#EXTINF:-1 tvg-name="林正英-经典电影" group-title="电影/电视剧",林正英-经典电影
 https://live.ottiptv.cc/yy/34229877
-#EXTINF:-1 group-title="轮播频道",古惑仔
+#EXTINF:-1 tvg-name="古惑仔" group-title="电影/电视剧",古惑仔
 https://live.ottiptv.cc/yy/1458015189
-#EXTINF:-1 group-title="轮播频道",【鹿鼎记】金庸经典
+#EXTINF:-1 tvg-name="【鹿鼎记】金庸经典" group-title="电影/电视剧",【鹿鼎记】金庸经典
 https://live.ottiptv.cc/yy/28265277
-#EXTINF:-1 group-title="轮播频道",【狂飙】
+#EXTINF:-1 tvg-name="【狂飙】" group-title="电影/电视剧",【狂飙】
 https://live.ottiptv.cc/yy/1354806550
-#EXTINF:-1 group-title="轮播频道",朵宝陪你看狄仁杰
+#EXTINF:-1 tvg-name="朵宝陪你看狄仁杰" group-title="电影/电视剧",朵宝陪你看狄仁杰
 https://live.ottiptv.cc/yy/1353753252
-#EXTINF:-1 group-title="轮播频道",打狗棍~24h经典好剧
+#EXTINF:-1 tvg-name="打狗棍~24h经典好剧" group-title="电影/电视剧",打狗棍~24h经典好剧
 https://live.ottiptv.cc/yy/1354744544
-#EXTINF:-1 group-title="轮播频道",纪晓岚
+#EXTINF:-1 tvg-name="纪晓岚" group-title="电影/电视剧",纪晓岚
 https://live.ottiptv.cc/yy/1354143978
-#EXTINF:-1 group-title="轮播频道",济公
+#EXTINF:-1 tvg-name="济公" group-title="电影/电视剧",济公
 https://live.ottiptv.cc/yy/1355265814
-#EXTINF:-1 group-title="轮播频道",【周星驰】搞笑电影
+#EXTINF:-1 tvg-name="【周星驰】搞笑电影" group-title="电影/电视剧",【周星驰】搞笑电影
 https://live.ottiptv.cc/yy/38670875
-#EXTINF:-1 group-title="轮播频道",梦涵 正在直播
+#EXTINF:-1 tvg-name="梦涵 正在直播" group-title="电影/电视剧",梦涵 正在直播
 https://live.ottiptv.cc/yy/1352475619
-#EXTINF:-1 group-title="轮播频道",弹幕天团 下饭神剧
+#EXTINF:-1 tvg-name="弹幕天团 下饭神剧" group-title="电影/电视剧",弹幕天团 下饭神剧
 https://live.ottiptv.cc/yy/23512910
-#EXTINF:-1 group-title="轮播频道",晾剑 电视剧
+#EXTINF:-1 tvg-name="晾剑 电视剧" group-title="电影/电视剧",晾剑 电视剧
 https://live.ottiptv.cc/yy/1451866697
-#EXTINF:-1 group-title="轮播频道",真实案件系列
+#EXTINF:-1 tvg-name="真实案件系列" group-title="电影/电视剧",真实案件系列
 https://live.ottiptv.cc/yy/1382671124
-#EXTINF:-1 group-title="轮播频道",豪哥带我们发财
+#EXTINF:-1 tvg-name="豪哥带我们发财" group-title="电影/电视剧",豪哥带我们发财
 https://live.ottiptv.cc/yy/23402146
-#EXTINF:-1 group-title="轮播频道",狄仁杰
+#EXTINF:-1 tvg-name="康熙微服私访记" group-title="电影/电视剧",康熙微服私访记
+https://live.ottiptv.cc/yy/1352811698
+#EXTINF:-1 tvg-name="狄仁杰" group-title="电影/电视剧",狄仁杰
 https://live.ottiptv.cc/yy/1351755386
-#EXTINF:-1 group-title="轮播频道",神医喜来乐
+#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
+https://live.ottiptv.cc/yy/1353426319
+#EXTINF:-1 tvg-name="神医喜来乐" group-title="电影/电视剧",神医喜来乐
 https://live.ottiptv.cc/yy/1382714119
-#EXTINF:-1 group-title="轮播频道",林正英经典
+#EXTINF:-1 tvg-name="林正英经典" group-title="电影/电视剧",林正英经典
 https://live.ottiptv.cc/yy/1351505899
-#EXTINF:-1 group-title="轮播频道",甜心 正在直播
+#EXTINF:-1 tvg-name="甜心 正在直播" group-title="电影/电视剧",甜心 正在直播
 https://live.ottiptv.cc/yy/1454732419
-#EXTINF:-1 group-title="轮播频道",赵本山《超清版》
+#EXTINF:-1 tvg-name="赵本山《超清版》" group-title="电影/电视剧",赵本山《超清版》
 https://live.ottiptv.cc/yy/1382683959
-#EXTINF:-1 group-title="轮播频道",赵本山《蓝光版》
+#EXTINF:-1 tvg-name="赵本山《蓝光版》" group-title="电影/电视剧",赵本山《蓝光版》
 https://live.ottiptv.cc/yy/32160832
-#EXTINF:-1 group-title="轮播频道",雍正王朝
+#EXTINF:-1 tvg-name="雍正王朝" group-title="电影/电视剧",雍正王朝
 https://live.ottiptv.cc/yy/1356043620
-#EXTINF:-1 group-title="轮播频道",李连杰功夫 经典武侠
+#EXTINF:-1 tvg-name="李连杰功夫 经典武侠" group-title="电影/电视剧",李连杰功夫 经典武侠
 https://live.ottiptv.cc/yy/74613175
-#EXTINF:-1 group-title="轮播频道",天龙神雕经典回忆
+#EXTINF:-1 tvg-name="天龙神雕经典回忆" group-title="电影/电视剧",天龙神雕经典回忆
 https://live.ottiptv.cc/yy/68260522
-#EXTINF:-1 group-title="轮播频道",大家车言论
+#EXTINF:-1 tvg-name="大家车言论" group-title="电影/电视剧",大家车言论
 https://live.ottiptv.cc/yy/1382570702
-#EXTINF:-1 group-title="轮播频道",雪中悍刀行
+#EXTINF:-1 tvg-name="雪中悍刀行" group-title="电影/电视剧",雪中悍刀行
 https://live.ottiptv.cc/yy/1462996362
-#EXTINF:-1 group-title="轮播频道",老九门24h
+#EXTINF:-1 tvg-name="老九门24h" group-title="电影/电视剧",老九门24h
 https://live.ottiptv.cc/yy/1355171357
-#EXTINF:-1 group-title="轮播频道",小蓉儿 正在直播
+#EXTINF:-1 tvg-name="小蓉儿 正在直播" group-title="电影/电视剧",小蓉儿 正在直播
 https://live.ottiptv.cc/yy/1351762426
-#EXTINF:-1 group-title="轮播频道",经典港片动作搞笑
+#EXTINF:-1 tvg-name="经典港片动作搞笑" group-title="电影/电视剧",经典港片动作搞笑
 https://live.ottiptv.cc/yy/1459869766
-#EXTINF:-1 group-title="轮播频道",鹿鼎记-高清全集
+#EXTINF:-1 tvg-name="狂飙" group-title="电影/电视剧",狂飙
+https://live.ottiptv.cc/yy/1382626335
+#EXTINF:-1 tvg-name="鹿鼎记-高清全集" group-title="电影/电视剧",鹿鼎记-高清全集
 https://live.ottiptv.cc/yy/1382704650
-#EXTINF:-1 group-title="轮播频道",燕双鹰
+#EXTINF:-1 tvg-name="水浒传" group-title="电影/电视剧",水浒传
+https://live.ottiptv.cc/yy/1353873252
+#EXTINF:-1 tvg-name="燕双鹰" group-title="电影/电视剧",燕双鹰
 https://live.ottiptv.cc/yy/1354143942
-#EXTINF:-1 group-title="轮播频道",小美美 正在直播
+#EXTINF:-1 tvg-name="小美美 正在直播" group-title="电影/电视剧",小美美 正在直播
 https://live.ottiptv.cc/yy/1354143966
-#EXTINF:-1 group-title="轮播频道",周星驰搞笑在线
+#EXTINF:-1 tvg-name="周星驰搞笑在线" group-title="电影/电视剧",周星驰搞笑在线
 https://live.ottiptv.cc/yy/1351537467
-#EXTINF:-1 group-title="轮播频道",小玲儿 正在直播
+#EXTINF:-1 tvg-name="新白娘子传奇" group-title="电影/电视剧",新白娘子传奇
+https://live.ottiptv.cc/yy/1354490667
+#EXTINF:-1 tvg-name="天龙八部" group-title="电影/电视剧",天龙八部
+https://live.ottiptv.cc/yy/1355067965
+#EXTINF:-1 tvg-name="小玲儿 正在直播" group-title="电影/电视剧",小玲儿 正在直播
 https://live.ottiptv.cc/yy/1351814644
-#EXTINF:-1 group-title="轮播频道",昕儿 正在直播
+#EXTINF:-1 tvg-name="燕双鹰" group-title="电影/电视剧",燕双鹰
+https://live.ottiptv.cc/yy/1352227153
+#EXTINF:-1 tvg-name="昕儿 正在直播" group-title="电影/电视剧",昕儿 正在直播
 https://live.ottiptv.cc/yy/1353852605
-#EXTINF:-1 group-title="轮播频道",好先生
+#EXTINF:-1 tvg-name="好先生" group-title="电影/电视剧",好先生
 https://live.ottiptv.cc/yy/79382500
-#EXTINF:-1 group-title="轮播频道",经典电影 港片枪战
+#EXTINF:-1 tvg-name="经典电影 港片枪战" group-title="电影/电视剧",经典电影 港片枪战
 https://live.ottiptv.cc/yy/1355076627
-#EXTINF:-1 group-title="轮播频道",【靓剑】乐乐陪看
+#EXTINF:-1 tvg-name="倚天屠龙记" group-title="电影/电视剧",倚天屠龙记
+https://live.ottiptv.cc/yy/33300793
+#EXTINF:-1 tvg-name="【靓剑】乐乐陪看" group-title="电影/电视剧",【靓剑】乐乐陪看
 https://live.ottiptv.cc/yy/1352946111
-#EXTINF:-1 group-title="轮播频道",铁齿铜牙纪晓岚
+#EXTINF:-1 tvg-name="铁齿铜牙纪晓岚" group-title="电影/电视剧",铁齿铜牙纪晓岚
 https://live.ottiptv.cc/yy/1382781415
-#EXTINF:-1 group-title="轮播频道",83射雕英雄传
+#EXTINF:-1 tvg-name="83射雕英雄传" group-title="电影/电视剧",83射雕英雄传
 https://live.ottiptv.cc/yy/1354210357
-#EXTINF:-1 group-title="轮播频道",超喜剧地下交通站男神贾贵
+#EXTINF:-1 tvg-name="超喜剧地下交通站男神贾贵" group-title="电影/电视剧",超喜剧地下交通站男神贾贵
 https://live.ottiptv.cc/yy/1353428972
-#EXTINF:-1 group-title="轮播频道",苍狼
+#EXTINF:-1 tvg-name="苍狼" group-title="电影/电视剧",苍狼
 https://live.ottiptv.cc/yy/1507704566
-#EXTINF:-1 group-title="轮播频道",鬼经典老片
+#EXTINF:-1 tvg-name="鬼经典老片" group-title="电影/电视剧",鬼经典老片
 https://live.ottiptv.cc/yy/1463783198
-#EXTINF:-1 group-title="轮播频道",薛仁贵传奇
+#EXTINF:-1 tvg-name="动漫" group-title="电影/电视剧",动漫
+https://live.ottiptv.cc/yy/25055036
+#EXTINF:-1 tvg-name="纪晓岚" group-title="电影/电视剧",纪晓岚
+https://live.ottiptv.cc/yy/1352227227
+#EXTINF:-1 tvg-name="动漫" group-title="电影/电视剧",动漫
+https://live.ottiptv.cc/yy/26664495
+#EXTINF:-1 tvg-name="宰相刘罗锅" group-title="电影/电视剧",宰相刘罗锅
+https://live.ottiptv.cc/yy/1353892468
+#EXTINF:-1 tvg-name="动漫" group-title="电影/电视剧",动漫
+https://live.ottiptv.cc/yy/1354143938
+#EXTINF:-1 tvg-name="薛仁贵传奇" group-title="电影/电视剧",薛仁贵传奇
 https://live.ottiptv.cc/yy/1355260662
-#EXTINF:-1 group-title="轮播频道",【战狼3吴京】独播
+#EXTINF:-1 tvg-name="动漫" group-title="电影/电视剧",动漫
+https://live.ottiptv.cc/yy/1382747970
+#EXTINF:-1 tvg-name="【战狼3吴京】独播" group-title="电影/电视剧",【战狼3吴京】独播
 https://live.ottiptv.cc/yy/37999586
-#EXTINF:-1 group-title="轮播频道",知否知否应是绿肥红瘦
+#EXTINF:-1 tvg-name="知否知否应是绿肥红瘦" group-title="电影/电视剧",知否知否应是绿肥红瘦
 https://live.ottiptv.cc/yy/21881901
-#EXTINF:-1 group-title="轮播频道",古装剧
+#EXTINF:-1 tvg-name="古装剧" group-title="电影/电视剧",古装剧
 https://live.ottiptv.cc/yy/1356158015
-#EXTINF:-1 group-title="轮播频道",恐怖电影
+#EXTINF:-1 tvg-name="恐怖电影" group-title="电影/电视剧",恐怖电影
 https://live.ottiptv.cc/yy/24066336
-#EXTINF:-1 group-title="轮播频道",《石敢当》六耳猕猴
+#EXTINF:-1 tvg-name="动漫" group-title="电影/电视剧",动漫
+https://live.ottiptv.cc/yy/1354768831
+#EXTINF:-1 tvg-name="《石敢当》六耳猕猴" group-title="电影/电视剧",《石敢当》六耳猕猴
 https://live.ottiptv.cc/yy/1394156613
-#EXTINF:-1 group-title="轮播频道",大染坊
+#EXTINF:-1 tvg-name="大染坊" group-title="电影/电视剧",大染坊
 https://live.ottiptv.cc/yy/1353215589
-#EXTINF:-1 group-title="轮播频道",五号特工组和平ff
+#EXTINF:-1 tvg-name="五号特工组和平ff" group-title="电影/电视剧",五号特工组和平ff
 https://live.ottiptv.cc/yy/1414967772
-#EXTINF:-1 group-title="轮播频道",鬼片喜剧动作港剧
+#EXTINF:-1 tvg-name="鬼片喜剧动作港剧" group-title="电影/电视剧",鬼片喜剧动作港剧
 https://live.ottiptv.cc/yy/1355269576
-#EXTINF:-1 group-title="轮播频道",少年歌行1.2~
+#EXTINF:-1 tvg-name="少年歌行1.2~" group-title="电影/电视剧",少年歌行1.2~
 https://live.ottiptv.cc/yy/29067083
-#EXTINF:-1 group-title="轮播频道",新主播，求照顾
+#EXTINF:-1 tvg-name="新主播，求照顾" group-title="电影/电视剧",新主播，求照顾
 https://live.ottiptv.cc/yy/1382690406
-#EXTINF:-1 group-title="轮播频道",破案港剧
+#EXTINF:-1 tvg-name="破案港剧" group-title="电影/电视剧",破案港剧
 https://live.ottiptv.cc/yy/1350670730
-#EXTINF:-1 group-title="轮播频道",国漫动漫
+#EXTINF:-1 tvg-name="国漫动漫" group-title="电影/电视剧",国漫动漫
 https://live.ottiptv.cc/yy/1354768828
-#EXTINF:-1 group-title="轮播频道",经典雪豹24h
+#EXTINF:-1 tvg-name="经典雪豹24h" group-title="电影/电视剧",经典雪豹24h
 https://live.ottiptv.cc/yy/1459010966
-#EXTINF:-1 group-title="轮播频道",w_400
+#EXTINF:-1 tvg-name="w_400" group-title="电影/电视剧",w_400
 https://live.ottiptv.cc/yy/1356212303
-#EXTINF:-1 group-title="轮播频道",经典抗战剧
+#EXTINF:-1 tvg-name="经典抗战剧" group-title="电影/电视剧",经典抗战剧
 https://live.ottiptv.cc/yy/1354555195
-#EXTINF:-1 group-title="轮播频道",西游记后传 蓝光
+#EXTINF:-1 tvg-name="西游记后传 蓝光" group-title="电影/电视剧",西游记后传 蓝光
 https://live.ottiptv.cc/yy/1353392400
-#EXTINF:-1 group-title="轮播频道",苹果工会招募主播
+#EXTINF:-1 tvg-name="苹果工会招募主播" group-title="电影/电视剧",苹果工会招募主播
 https://live.ottiptv.cc/yy/1354889234
-#EXTINF:-1 group-title="轮播频道",动漫《火影疾风传》
+#EXTINF:-1 tvg-name="动漫《火影疾风传》" group-title="电影/电视剧",动漫《火影疾风传》
 https://live.ottiptv.cc/yy/1459675153
-#EXTINF:-1 group-title="轮播频道",精彩动漫
+#EXTINF:-1 tvg-name="精彩动漫" group-title="电影/电视剧",精彩动漫
 https://live.ottiptv.cc/yy/1420843376
-#EXTINF:-1 group-title="轮播频道",安安电视剧
+#EXTINF:-1 tvg-name="安安电视剧" group-title="电影/电视剧",安安电视剧
 https://live.ottiptv.cc/yy/1414817779
-#EXTINF:-1 group-title="轮播频道",【新三国】
+#EXTINF:-1 tvg-name="【新三国】" group-title="电影/电视剧",【新三国】
 https://live.ottiptv.cc/yy/1382851415
-#EXTINF:-1 group-title="轮播频道",【经典港片】佟瑶
+#EXTINF:-1 tvg-name="【经典港片】佟瑶" group-title="电影/电视剧",【经典港片】佟瑶
 https://live.ottiptv.cc/yy/23531261
-#EXTINF:-1 group-title="轮播频道",经典港片电影
+#EXTINF:-1 tvg-name="经典港片电影" group-title="电影/电视剧",经典港片电影
 https://live.ottiptv.cc/yy/1461889059
-#EXTINF:-1 group-title="轮播频道",24h唐朝诡实录1234
+#EXTINF:-1 tvg-name="w_400" group-title="电影/电视剧",w_400
+https://live.ottiptv.cc/yy/1394000563
+#EXTINF:-1 tvg-name="24h唐朝诡实录1234" group-title="电影/电视剧",24h唐朝诡实录1234
 https://live.ottiptv.cc/yy/1353913646
-#EXTINF:-1 group-title="轮播频道",【武林客栈】
+#EXTINF:-1 tvg-name="【武林客栈】" group-title="电影/电视剧",【武林客栈】
 https://live.ottiptv.cc/yy/1382773728
-#EXTINF:-1 group-title="轮播频道",老妖私影院
+#EXTINF:-1 tvg-name="老妖私影院" group-title="电影/电视剧",老妖私影院
 https://live.ottiptv.cc/yy/1354952229
-#EXTINF:-1 group-title="轮播频道",绝版僵尸鬼片
+#EXTINF:-1 tvg-name="绝版僵尸鬼片" group-title="电影/电视剧",绝版僵尸鬼片
 https://live.ottiptv.cc/yy/1460889796
-#EXTINF:-1 group-title="轮播频道",鬼片恐怖私家影院
+#EXTINF:-1 tvg-name="鬼片恐怖私家影院" group-title="电影/电视剧",鬼片恐怖私家影院
 https://live.ottiptv.cc/yy/1354209316
-#EXTINF:-1 group-title="轮播频道",军旅剧（回忆经典）
+#EXTINF:-1 tvg-name="军旅剧（回忆经典）" group-title="电影/电视剧",军旅剧（回忆经典）
 https://live.ottiptv.cc/yy/1356306672
-#EXTINF:-1 group-title="轮播频道",惊恐盗暮鬼怪
+#EXTINF:-1 tvg-name="惊恐盗暮鬼怪" group-title="电影/电视剧",惊恐盗暮鬼怪
 https://live.ottiptv.cc/yy/1382749525
-#EXTINF:-1 group-title="轮播频道",经典鬼片3000部
+#EXTINF:-1 tvg-name="经典鬼片3000部" group-title="电影/电视剧",经典鬼片3000部
 https://live.ottiptv.cc/yy/29460894
-#EXTINF:-1 group-title="轮播频道",什么会让你快乐
+#EXTINF:-1 tvg-name="动漫" group-title="电影/电视剧",动漫
+https://live.ottiptv.cc/yy/22777075
+#EXTINF:-1 tvg-name="武林外传" group-title="电影/电视剧",武林外传
+https://live.ottiptv.cc/yy/1354282410
+#EXTINF:-1 tvg-name="什么会让你快乐" group-title="电影/电视剧",什么会让你快乐
 https://live.ottiptv.cc/yy/54886912
-#EXTINF:-1 group-title="轮播频道",时代剧，黄土高天
+#EXTINF:-1 tvg-name="w_400" group-title="电影/电视剧",w_400
+https://live.ottiptv.cc/yy/1382773714
+#EXTINF:-1 tvg-name="雍正王朝" group-title="电影/电视剧",雍正王朝
+https://live.ottiptv.cc/yy/1459714870
+#EXTINF:-1 tvg-name="时代剧，黄土高天" group-title="电影/电视剧",时代剧，黄土高天
 https://live.ottiptv.cc/yy/1414864180
-#EXTINF:-1 group-title="轮播频道",8090.电影一哥
+#EXTINF:-1 tvg-name="8090.电影一哥" group-title="电影/电视剧",8090.电影一哥
 https://live.ottiptv.cc/yy/29197808
-#EXTINF:-1 group-title="轮播频道",【科幻电影】
+#EXTINF:-1 tvg-name="【科幻电影】" group-title="电影/电视剧",【科幻电影】
 https://live.ottiptv.cc/yy/1355065896
-#EXTINF:-1 group-title="轮播频道",今天你喂狗了吗
+#EXTINF:-1 tvg-name="今天你喂狗了吗" group-title="电影/电视剧",今天你喂狗了吗
 https://live.ottiptv.cc/yy/1352300646
-#EXTINF:-1 group-title="轮播频道",1930年代经典电影
+#EXTINF:-1 tvg-name="经典港片电影" group-title="电影/电视剧",经典港片电影
+https://live.ottiptv.cc/yy/1459801818
+#EXTINF:-1 tvg-name="1930年代经典电影" group-title="电影/电视剧",1930年代经典电影
 https://live.ottiptv.cc/yy/1356363815
-#EXTINF:-1 group-title="轮播频道",僵尸道长
+#EXTINF:-1 tvg-name="僵尸道长" group-title="电影/电视剧",僵尸道长
 https://live.ottiptv.cc/yy/1355171231
-#EXTINF:-1 group-title="轮播频道",少年歌行
+#EXTINF:-1 tvg-name="少年歌行" group-title="电影/电视剧",少年歌行
 https://live.ottiptv.cc/yy/1450556636
-#EXTINF:-1 group-title="轮播频道",新白娘子4K高清观看
+#EXTINF:-1 tvg-name="新白娘子4K高清观看" group-title="电影/电视剧",新白娘子4K高清观看
 https://live.ottiptv.cc/yy/1508961855
-#EXTINF:-1 group-title="轮播频道",【战狼3吴京】首播
+#EXTINF:-1 tvg-name="【战狼3吴京】首播" group-title="电影/电视剧",【战狼3吴京】首播
 https://live.ottiptv.cc/yy/1456668939
-#EXTINF:-1 group-title="轮播频道",YY果国际电影频道
+#EXTINF:-1 tvg-name="YY果国际电影频道" group-title="电影/电视剧",YY果国际电影频道
 https://live.ottiptv.cc/yy/1382627144
-#EXTINF:-1 group-title="轮播频道",电影
+#EXTINF:-1 tvg-name="电影" group-title="电影/电视剧",电影
 https://live.ottiptv.cc/yy/37454459
-#EXTINF:-1 group-title="轮播频道",《东北小品》
+#EXTINF:-1 tvg-name="《东北小品》" group-title="电影/电视剧",《东北小品》
 https://live.ottiptv.cc/yy/29600150
-#EXTINF:-1 group-title="轮播频道",易中天品三国完整版
+#EXTINF:-1 tvg-name="士兵突击" group-title="电影/电视剧",士兵突击
+https://live.ottiptv.cc/yy/1382768483
+#EXTINF:-1 tvg-name="易中天品三国完整版" group-title="电影/电视剧",易中天品三国完整版
 https://live.ottiptv.cc/yy/1461244449
-#EXTINF:-1 group-title="轮播频道",欢迎光临
+#EXTINF:-1 tvg-name="欢迎光临" group-title="电影/电视剧",欢迎光临
 https://live.ottiptv.cc/yy/1355532933
-#EXTINF:-1 group-title="轮播频道",东北小品王
+#EXTINF:-1 tvg-name="w_400" group-title="电影/电视剧",w_400
+https://live.ottiptv.cc/yy/1354693629
+#EXTINF:-1 tvg-name="东北小品王" group-title="电影/电视剧",东北小品王
 https://live.ottiptv.cc/yy/34313906
-#EXTINF:-1 group-title="轮播频道",斗破苍穹~24h玄幻剧
+#EXTINF:-1 tvg-name="斗破苍穹~24h玄幻剧" group-title="电影/电视剧",斗破苍穹~24h玄幻剧
 https://live.ottiptv.cc/yy/1356051105
-#EXTINF:-1 group-title="轮播频道",魅力女神别错过
+#EXTINF:-1 tvg-name="魅力女神别错过" group-title="电影/电视剧",魅力女神别错过
 https://live.ottiptv.cc/yy/1356076442
-#EXTINF:-1 group-title="轮播频道",少寒回归啦-真
+#EXTINF:-1 tvg-name="少寒回归啦-真" group-title="电影/电视剧",少寒回归啦-真
 https://live.ottiptv.cc/yy/13739310
-#EXTINF:-1 group-title="轮播频道",你的声音女友
+#EXTINF:-1 tvg-name="你的声音女友" group-title="电影/电视剧",你的声音女友
 https://live.ottiptv.cc/yy/1460008724
-#EXTINF:-1 group-title="4K测试",苏州4k
+#EXTINF:-1 tvg-name="苏州4k" group-title="电影/电视剧",苏州4k
 https://tylive.kan0512.com/norecord/csztv4k_4k.m3u8
-#EXTINF:-1 group-title="4K测试",河北4k
+#EXTINF:-1 tvg-name="河北4k" group-title="地方频道",河北4k
 https://event.pull.hebtv.com:443/live/live101.m3u8
-#EXTINF:-1 group-title="4K测试",南国都市4K
+#EXTINF:-1 tvg-name="南国都市4K" group-title="电影/电视剧",南国都市4K
 https://tencentplay.gztv.com/live/nanguodushi.m3u8?txSecret=550af55c0ea34ce492748481415b6dfa&txTime=1903e7b17de$LR•IPV4
-#EXTINF:-1 group-title="自定义频道",CCTV1hd
+#EXTINF:-1 tvg-name="CCTV1hd" group-title="央视频道",CCTV1hd
 http://107.150.60.122/live/cctv1hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV2hd
+#EXTINF:-1 tvg-name="CCTV2hd" group-title="央视频道",CCTV2hd
 http://107.150.60.122/live/cctv2hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV3hd
+#EXTINF:-1 tvg-name="CCTV3hd" group-title="央视频道",CCTV3hd
 http://107.150.60.122/live/cctv3hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV4hd
+#EXTINF:-1 tvg-name="CCTV4hd" group-title="央视频道",CCTV4hd
 http://107.150.60.122/live/cctv4hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV5hd
+#EXTINF:-1 tvg-name="CCTV5hd" group-title="央视频道",CCTV5hd
 http://107.150.60.122/live/cctv5hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV6hd
+#EXTINF:-1 tvg-name="CCTV6hd" group-title="央视频道",CCTV6hd
 http://107.150.60.122/live/cctv6hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV7hd
+#EXTINF:-1 tvg-name="CCTV7hd" group-title="央视频道",CCTV7hd
 http://107.150.60.122/live/cctv7hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV8hd
+#EXTINF:-1 tvg-name="CCTV8hd" group-title="央视频道",CCTV8hd
 http://107.150.60.122/live/cctv8hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV9hd
+#EXTINF:-1 tvg-name="CCTV9hd" group-title="央视频道",CCTV9hd
 http://107.150.60.122/live/cctv9hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV10hd
+#EXTINF:-1 tvg-name="CCTV10hd" group-title="央视频道",CCTV10hd
 http://107.150.60.122/live/cctv10hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV11hd
+#EXTINF:-1 tvg-name="CCTV11hd" group-title="央视频道",CCTV11hd
 http://107.150.60.122/live/cctv11hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV12hd
+#EXTINF:-1 tvg-name="CCTV12hd" group-title="央视频道",CCTV12hd
 http://107.150.60.122/live/cctv12hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV13hd
+#EXTINF:-1 tvg-name="CCTV13hd" group-title="央视频道",CCTV13hd
 http://107.150.60.122/live/cctv13hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV14hd
+#EXTINF:-1 tvg-name="CCTV14hd" group-title="央视频道",CCTV14hd
 http://107.150.60.122/live/cctv14hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV15hd
+#EXTINF:-1 tvg-name="CCTV15hd" group-title="央视频道",CCTV15hd
 http://107.150.60.122/live/cctv15hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV16hd
+#EXTINF:-1 tvg-name="CCTV16hd" group-title="央视频道",CCTV16hd
 http://107.150.60.122/live/cctv16hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV17hd
+#EXTINF:-1 tvg-name="CCTV17hd" group-title="央视频道",CCTV17hd
 http://107.150.60.122/live/cctv17hd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV5
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视频道",CCTV5
 http://107.150.60.122/live/cctv5p.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV4k超
+#EXTINF:-1 tvg-name="CCTV4k超" group-title="央视频道",CCTV4k超
 http://107.150.60.122/live/cctv4k.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV8k超
+#EXTINF:-1 tvg-name="CCTV8k超" group-title="央视频道",CCTV8k超
 http://107.150.60.122/live/cctv8k.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV电视指南
+#EXTINF:-1 tvg-name="CCTV1hd" group-title="央视频道",CCTV1hd
+http://192.151.150.154/live/cctv1hd.m3u8
+#EXTINF:-1 tvg-name="CCTV2hd" group-title="央视频道",CCTV2hd
+http://192.151.150.154/live/cctv2hd.m3u8
+#EXTINF:-1 tvg-name="CCTV4hd" group-title="央视频道",CCTV4hd
+http://192.151.150.154/live/cctv4hd.m3u8
+#EXTINF:-1 tvg-name="CCTV6hd" group-title="央视频道",CCTV6hd
+http://192.151.150.154/live/cctv6hd.m3u8
+#EXTINF:-1 tvg-name="CCTV7hd" group-title="央视频道",CCTV7hd
+http://192.151.150.154/live/cctv7hd.m3u8
+#EXTINF:-1 tvg-name="CCTV8hd" group-title="央视频道",CCTV8hd
+http://192.151.150.154/live/cctv8hd.m3u8
+#EXTINF:-1 tvg-name="CCTV9hd" group-title="央视频道",CCTV9hd
+http://192.151.150.154/live/cctv9hd.m3u8
+#EXTINF:-1 tvg-name="CCTV10hd" group-title="央视频道",CCTV10hd
+http://192.151.150.154/live/cctv10hd.m3u8
+#EXTINF:-1 tvg-name="CCTV11hd" group-title="央视频道",CCTV11hd
+http://192.151.150.154/live/cctv11hd.m3u8
+#EXTINF:-1 tvg-name="CCTV13hd" group-title="央视频道",CCTV13hd
+http://192.151.150.154/live/cctv13hd.m3u8
+#EXTINF:-1 tvg-name="CCTV17hd" group-title="央视频道",CCTV17hd
+http://192.151.150.154/live/cctv17hd.m3u8
+#EXTINF:-1 tvg-name="CCTV4k超" group-title="央视频道",CCTV4k超
+http://192.151.150.154/live/cctv4k.m3u8
+#EXTINF:-1 tvg-name="CCTV8k超" group-title="央视频道",CCTV8k超
+http://192.151.150.154/live/cctv8k.m3u8
+#EXTINF:-1 tvg-name="CCTV1hd" group-title="央视频道",CCTV1hd
+http://198.204.228.26/live/cctv1hd.m3u8
+#EXTINF:-1 tvg-name="CCTV3hd" group-title="央视频道",CCTV3hd
+http://198.204.228.26/live/cctv3hd.m3u8
+#EXTINF:-1 tvg-name="CCTV4hd" group-title="央视频道",CCTV4hd
+http://198.204.228.26/live/cctv4hd.m3u8
+#EXTINF:-1 tvg-name="CCTV5hd" group-title="央视频道",CCTV5hd
+http://198.204.228.26/live/cctv5hd.m3u8
+#EXTINF:-1 tvg-name="CCTV6hd" group-title="央视频道",CCTV6hd
+http://198.204.228.26/live/cctv6hd.m3u8
+#EXTINF:-1 tvg-name="CCTV8hd" group-title="央视频道",CCTV8hd
+http://198.204.228.26/live/cctv8hd.m3u8
+#EXTINF:-1 tvg-name="CCTV9hd" group-title="央视频道",CCTV9hd
+http://198.204.228.26/live/cctv9hd.m3u8
+#EXTINF:-1 tvg-name="CCTV10hd" group-title="央视频道",CCTV10hd
+http://198.204.228.26/live/cctv10hd.m3u8
+#EXTINF:-1 tvg-name="CCTV11hd" group-title="央视频道",CCTV11hd
+http://198.204.228.26/live/cctv11hd.m3u8
+#EXTINF:-1 tvg-name="CCTV12hd" group-title="央视频道",CCTV12hd
+http://198.204.228.26/live/cctv12hd.m3u8
+#EXTINF:-1 tvg-name="CCTV13hd" group-title="央视频道",CCTV13hd
+http://198.204.228.26/live/cctv13hd.m3u8
+#EXTINF:-1 tvg-name="CCTV14hd" group-title="央视频道",CCTV14hd
+http://198.204.228.26/live/cctv14hd.m3u8
+#EXTINF:-1 tvg-name="CCTV15hd" group-title="央视频道",CCTV15hd
+http://198.204.228.26/live/cctv15hd.m3u8
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视频道",CCTV5
+http://198.204.228.26/live/cctv5p.m3u8
+#EXTINF:-1 tvg-name="CCTV4k超" group-title="央视频道",CCTV4k超
+http://198.204.228.26/live/cctv4k.m3u8
+#EXTINF:-1 tvg-name="CCTV8k超" group-title="央视频道",CCTV8k超
+http://198.204.228.26/live/cctv8k.m3u8
+#EXTINF:-1 tvg-name="CCTV电视指南" group-title="央视频道",CCTV电视指南
 http://198.204.228.26/live/dszn.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV第一剧场
+#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="央视频道",CCTV第一剧场
 http://198.204.228.26/live/dyjc.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV风云剧场
+#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="央视频道",CCTV风云剧场
 http://198.204.228.26/live/fyjc.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV风云音乐
+#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="央视频道",CCTV风云音乐
 http://198.204.228.26/live/fyyy.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV风云足球
+#EXTINF:-1 tvg-name="CCTV风云足球" group-title="央视频道",CCTV风云足球
 http://198.204.228.26/live/fyzq.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV高尔夫网球
+#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="央视频道",CCTV高尔夫网球
 http://198.204.228.26/live/gefwq.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV兵器科技
+#EXTINF:-1 tvg-name="CCTV兵器科技" group-title="央视频道",CCTV兵器科技
 http://198.204.228.26/live/gfjs.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV世界地理
+#EXTINF:-1 tvg-name="CCTV世界地理" group-title="央视频道",CCTV世界地理
 http://198.204.228.26/live/sjdl.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV怀旧剧场
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视频道",CCTV怀旧剧场
 http://198.204.228.26/live/hjjc.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV央视台球
+#EXTINF:-1 tvg-name="CCTV央视台球" group-title="央视频道",CCTV央视台球
 http://198.204.228.26/live/ystq.m3u8
-#EXTINF:-1 group-title="自定义频道",BTV新闻
+#EXTINF:-1 tvg-name="BTV新闻" group-title="其他频道",BTV新闻
 http://103.72.172.253:8041/hls/382837277/index.m3u8
-#EXTINF:-1 group-title="自定义频道",BTV文艺
+#EXTINF:-1 tvg-name="BTV文艺" group-title="其他频道",BTV文艺
 http://103.72.172.253:8041/hls/346478234/index.m3u8
-#EXTINF:-1 group-title="自定义频道",BTV科教
+#EXTINF:-1 tvg-name="BTV科教" group-title="其他频道",BTV科教
 http://103.72.172.253:8041/hls/347295318/index.m3u8
-#EXTINF:-1 group-title="自定义频道",BTV影视
+#EXTINF:-1 tvg-name="BTV影视" group-title="电影/电视剧",BTV影视
 http://103.72.172.253:8041/hls/357945484/index.m3u8
-#EXTINF:-1 group-title="自定义频道",BTV财经
+#EXTINF:-1 tvg-name="BTV财经" group-title="其他频道",BTV财经
 http://103.72.172.253:8041/hls/358948176/index.m3u8
-#EXTINF:-1 group-title="自定义频道",BTV生活
+#EXTINF:-1 tvg-name="BTV生活" group-title="其他频道",BTV生活
 http://103.72.172.253:8041/hls/366415771/index.m3u8
-#EXTINF:-1 group-title="自定义频道",KAKU少儿
+#EXTINF:-1 tvg-name="KAKU少儿" group-title="少儿频道",KAKU少儿
 http://103.72.172.253:8041/hls/385413834/index.m3u8
-#EXTINF:-1 group-title="自定义频道",北京卫视
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
 http://103.72.172.253:8041/hls/345649569/index.m3u8
-#EXTINF:-1 group-title="自定义频道",重温经典
+#EXTINF:-1 tvg-name="CHC动作电影" group-title="电影/电视剧",CHC动作电影
+http://107.150.60.122/live/chcdz.m3u8
+#EXTINF:-1 tvg-name="CHC影迷电影" group-title="电影/电视剧",CHC影迷电影
+http://107.150.60.122/live/chchd.m3u8
+#EXTINF:-1 tvg-name="CHC家庭影院" group-title="电影/电视剧",CHC家庭影院
+http://107.150.60.122/live/chcjt.m3u8
+#EXTINF:-1 tvg-name="重温经典" group-title="其他频道",重温经典
 http://107.150.60.122/live/cwjd.m3u8
-#EXTINF:-1 group-title="自定义频道",天元围棋
+#EXTINF:-1 tvg-name="CCTV电视指南" group-title="央视频道",CCTV电视指南
+http://107.150.60.122/live/dszn.m3u8
+#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="央视频道",CCTV第一剧场
+http://107.150.60.122/live/dyjc.m3u8
+#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="央视频道",CCTV风云剧场
+http://107.150.60.122/live/fyjc.m3u8
+#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="央视频道",CCTV风云音乐
+http://107.150.60.122/live/fyyy.m3u8
+#EXTINF:-1 tvg-name="CCTV风云足球" group-title="央视频道",CCTV风云足球
+http://107.150.60.122/live/fyzq.m3u8
+#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="央视频道",CCTV高尔夫网球
+http://107.150.60.122/live/gefwq.m3u8
+#EXTINF:-1 tvg-name="CCTV兵器科技" group-title="央视频道",CCTV兵器科技
+http://107.150.60.122/live/gfjs.m3u8
+#EXTINF:-1 tvg-name="CCTV世界地理" group-title="央视频道",CCTV世界地理
+http://107.150.60.122/live/sjdl.m3u8
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视频道",CCTV怀旧剧场
+http://107.150.60.122/live/hjjc.m3u8
+#EXTINF:-1 tvg-name="CCTV央视台球" group-title="央视频道",CCTV央视台球
+http://107.150.60.122/live/ystq.m3u8
+#EXTINF:-1 tvg-name="天元围棋" group-title="其他频道",天元围棋
 http://107.150.60.122/live/gztywq.m3u8
-#EXTINF:-1 group-title="自定义频道",北京卡酷少儿
+#EXTINF:-1 tvg-name="北京卡酷少儿" group-title="地方频道",北京卡酷少儿
 http://107.150.60.122/live/btvkk.m3u8
-#EXTINF:-1 group-title="自定义频道",重庆卫视
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
+http://107.150.60.122/live/bjwshd.m3u8
+#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视频道",重庆卫视
 http://107.150.60.122/live/cqwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",大湾区卫视(国际版)
+#EXTINF:-1 tvg-name="大湾区卫视(国际版)" group-title="卫视频道",大湾区卫视(国际版)
 http://107.150.60.122/live/gdgj.m3u8
-#EXTINF:-1 group-title="自定义频道",东方卫视
+#EXTINF:-1 tvg-name="东方卫视" group-title="卫视频道",东方卫视
 http://107.150.60.122/live/dfwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",东南卫视
+#EXTINF:-1 tvg-name="东南卫视" group-title="卫视频道",东南卫视
 http://107.150.60.122/live/dnwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",广东卫视
+#EXTINF:-1 tvg-name="广东卫视" group-title="卫视频道",广东卫视
 http://107.150.60.122/live/gdwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",广西卫视
+#EXTINF:-1 tvg-name="广西卫视" group-title="卫视频道",广西卫视
 http://107.150.60.122/live/gxwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",贵州卫视
+#EXTINF:-1 tvg-name="贵州卫视" group-title="卫视频道",贵州卫视
 http://107.150.60.122/live/gzwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",河南卫视
+#EXTINF:-1 tvg-name="河南卫视" group-title="卫视频道",河南卫视
 http://107.150.60.122/live/hawshd.m3u8
-#EXTINF:-1 group-title="自定义频道",湖北卫视
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视频道",湖北卫视
 http://107.150.60.122/live/hbwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",河北卫视
+#EXTINF:-1 tvg-name="河北卫视" group-title="卫视频道",河北卫视
 http://107.150.60.122/live/hewshd.m3u8
-#EXTINF:-1 group-title="自定义频道",湖南卫视
+#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视频道",湖南卫视
 http://107.150.60.122/live/hnwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",吉林卫视
+#EXTINF:-1 tvg-name="吉林卫视" group-title="卫视频道",吉林卫视
 http://107.150.60.122/live/jlwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",江苏卫视
+#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视频道",江苏卫视
 http://107.150.60.122/live/jswshd.m3u8
-#EXTINF:-1 group-title="自定义频道",辽宁卫视
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视频道",辽宁卫视
 http://107.150.60.122/live/lnwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",内蒙古卫视
+#EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视频道",内蒙古卫视
 http://107.150.60.122/live/nmgws.m3u8
-#EXTINF:-1 group-title="自定义频道",宁夏卫视
+#EXTINF:-1 tvg-name="宁夏卫视" group-title="卫视频道",宁夏卫视
 http://107.150.60.122/live/nxws.m3u8
-#EXTINF:-1 group-title="自定义频道",青海卫视
+#EXTINF:-1 tvg-name="青海卫视" group-title="卫视频道",青海卫视
 http://107.150.60.122/live/qhws.m3u8
-#EXTINF:-1 group-title="自定义频道",陕西卫视
+#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
 http://107.150.60.122/live/snwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",三沙卫视
+#EXTINF:-1 tvg-name="三沙卫视" group-title="卫视频道",三沙卫视
 http://107.150.60.122/live/ssws.m3u8
-#EXTINF:-1 group-title="自定义频道",天津卫视
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视频道",天津卫视
 http://107.150.60.122/live/tjwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",新疆卫视
+#EXTINF:-1 tvg-name="新疆卫视" group-title="卫视频道",新疆卫视
 http://107.150.60.122/live/xjws.m3u8
-#EXTINF:-1 group-title="自定义频道",云南卫视
+#EXTINF:-1 tvg-name="云南卫视" group-title="卫视频道",云南卫视
 http://107.150.60.122/live/ynwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",浙江卫视
+#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视频道",浙江卫视
 http://107.150.60.122/live/zjwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV央视文化精品
+#EXTINF:-1 tvg-name="CCTV央视文化精品" group-title="央视频道",CCTV央视文化精品
 http://107.150.60.122/live/ysjp.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV卫生健康
+#EXTINF:-1 tvg-name="CCTV卫生健康" group-title="央视频道",CCTV卫生健康
 http://107.150.60.122/live/wsjk.m3u8
-#EXTINF:-1 group-title="自定义频道",广东新闻
+#EXTINF:-1 tvg-name="广东新闻" group-title="地方频道",广东新闻
 http://107.150.60.122/live/gdxw.m3u8
-#EXTINF:-1 group-title="自定义频道",广东珠江
+#EXTINF:-1 tvg-name="广东新闻" group-title="地方频道",广东新闻
+http://107.150.60.122/live/gdxwa.m3u8
+#EXTINF:-1 tvg-name="广东珠江" group-title="地方频道",广东珠江
 http://107.150.60.122/live/gdzja.m3u8
-#EXTINF:-1 group-title="自定义频道",广东少儿
+#EXTINF:-1 tvg-name="广东珠江" group-title="地方频道",广东珠江
+http://107.150.60.122/live/gdzj.m3u8
+#EXTINF:-1 tvg-name="广东少儿" group-title="地方频道",广东少儿
 http://107.150.60.122/live/gdtvs5.m3u8
-#EXTINF:-1 group-title="自定义频道",广东体育
+#EXTINF:-1 tvg-name="广东体育" group-title="地方频道",广东体育
 http://107.150.60.122/live/gdty.m3u8
-#EXTINF:-1 group-title="自定义频道",广东民生
+#EXTINF:-1 tvg-name="广东民生" group-title="地方频道",广东民生
 http://107.150.60.122/live/gdgg.m3u8
-#EXTINF:-1 group-title="自定义频道",广西影视
+#EXTINF:-1 tvg-name="广西影视" group-title="地方频道",广西影视
 http://107.150.60.122/live/gxys.m3u8
-#EXTINF:-1 group-title="自定义频道",广西综艺旅游
+#EXTINF:-1 tvg-name="广西综艺旅游" group-title="地方频道",广西综艺旅游
 http://107.150.60.122/live/gxzy.m3u8
-#EXTINF:-1 group-title="自定义频道",广西都市
+#EXTINF:-1 tvg-name="广西都市" group-title="地方频道",广西都市
 http://107.150.60.122/live/gxds.m3u8
-#EXTINF:-1 group-title="自定义频道",广西新闻
+#EXTINF:-1 tvg-name="广西新闻" group-title="地方频道",广西新闻
 http://107.150.60.122/live/gxxw.m3u8
-#EXTINF:-1 group-title="自定义频道",广西国际
+#EXTINF:-1 tvg-name="广西国际" group-title="地方频道",广西国际
 http://107.150.60.122/live/gxgj.m3u8
-#EXTINF:-1 group-title="自定义频道",湖南娱乐
+#EXTINF:-1 tvg-name="湖南娱乐" group-title="地方频道",湖南娱乐
 http://107.150.60.122/live/hnyl.m3u8
-#EXTINF:-1 group-title="自定义频道",湖南教育
+#EXTINF:-1 tvg-name="湖南教育" group-title="地方频道",湖南教育
 http://107.150.60.122/live/hnjy.m3u8
-#EXTINF:-1 group-title="自定义频道",江西新闻频道
+#EXTINF:-1 tvg-name="江西新闻频道" group-title="地方频道",江西新闻频道
 http://107.150.60.122/live/jxtv7.m3u8
-#EXTINF:-1 group-title="自定义频道",成龙电影
+#EXTINF:-1 tvg-name="成龙电影" group-title="电影/电视剧",成龙电影
 http://107.150.60.122/live/lbcl.m3u8
-#EXTINF:-1 group-title="自定义频道",林正英影院
+#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
+http://107.150.60.122/live/lbzxc.m3u8
+#EXTINF:-1 tvg-name="林正英影院" group-title="电影/电视剧",林正英影院
 http://107.150.60.122/live/lblzy.m3u8
-#EXTINF:-1 group-title="自定义频道",黑龙江卫视
+#EXTINF:-1 tvg-name="CHC动作电影" group-title="电影/电视剧",CHC动作电影
+http://192.151.150.154/live/chcdz.m3u8
+#EXTINF:-1 tvg-name="CHC影迷电影" group-title="电影/电视剧",CHC影迷电影
+http://192.151.150.154/live/chchd.m3u8
+#EXTINF:-1 tvg-name="CHC家庭影院" group-title="电影/电视剧",CHC家庭影院
+http://192.151.150.154/live/chcjt.m3u8
+#EXTINF:-1 tvg-name="重温经典" group-title="其他频道",重温经典
+http://192.151.150.154/live/cwjd.m3u8
+#EXTINF:-1 tvg-name="CCTV电视指南" group-title="央视频道",CCTV电视指南
+http://192.151.150.154/live/dszn.m3u8
+#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="央视频道",CCTV第一剧场
+http://192.151.150.154/live/dyjc.m3u8
+#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="央视频道",CCTV风云剧场
+http://192.151.150.154/live/fyjc.m3u8
+#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="央视频道",CCTV风云音乐
+http://192.151.150.154/live/fyyy.m3u8
+#EXTINF:-1 tvg-name="CCTV风云足球" group-title="央视频道",CCTV风云足球
+http://192.151.150.154/live/fyzq.m3u8
+#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="央视频道",CCTV高尔夫网球
+http://192.151.150.154/live/gefwq.m3u8
+#EXTINF:-1 tvg-name="CCTV兵器科技" group-title="央视频道",CCTV兵器科技
+http://192.151.150.154/live/gfjs.m3u8
+#EXTINF:-1 tvg-name="CCTV世界地理" group-title="央视频道",CCTV世界地理
+http://192.151.150.154/live/sjdl.m3u8
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视频道",CCTV怀旧剧场
+http://192.151.150.154/live/hjjc.m3u8
+#EXTINF:-1 tvg-name="CCTV央视台球" group-title="央视频道",CCTV央视台球
+http://192.151.150.154/live/ystq.m3u8
+#EXTINF:-1 tvg-name="天元围棋" group-title="其他频道",天元围棋
+http://192.151.150.154/live/gztywq.m3u8
+#EXTINF:-1 tvg-name="北京卡酷少儿" group-title="地方频道",北京卡酷少儿
+http://192.151.150.154/live/btvkk.m3u8
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
+http://192.151.150.154/live/bjwshd.m3u8
+#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视频道",重庆卫视
+http://192.151.150.154/live/cqwshd.m3u8
+#EXTINF:-1 tvg-name="大湾区卫视(国际版)" group-title="卫视频道",大湾区卫视(国际版)
+http://192.151.150.154/live/gdgj.m3u8
+#EXTINF:-1 tvg-name="广东卫视" group-title="卫视频道",广东卫视
+http://192.151.150.154/live/gdwshd.m3u8
+#EXTINF:-1 tvg-name="广西卫视" group-title="卫视频道",广西卫视
+http://192.151.150.154/live/gxwshd.m3u8
+#EXTINF:-1 tvg-name="贵州卫视" group-title="卫视频道",贵州卫视
+http://192.151.150.154/live/gzwshd.m3u8
+#EXTINF:-1 tvg-name="河南卫视" group-title="卫视频道",河南卫视
+http://192.151.150.154/live/hawshd.m3u8
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视频道",湖北卫视
+http://192.151.150.154/live/hbwshd.m3u8
+#EXTINF:-1 tvg-name="河北卫视" group-title="卫视频道",河北卫视
+http://192.151.150.154/live/hewshd.m3u8
+#EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视
 http://192.151.150.154/live/hljwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",四川卫视
+#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视频道",湖南卫视
+http://192.151.150.154/live/hnwshd.m3u8
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视频道",辽宁卫视
+http://192.151.150.154/live/lnwshd.m3u8
+#EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视频道",内蒙古卫视
+http://192.151.150.154/live/nmgws.m3u8
+#EXTINF:-1 tvg-name="宁夏卫视" group-title="卫视频道",宁夏卫视
+http://192.151.150.154/live/nxws.m3u8
+#EXTINF:-1 tvg-name="青海卫视" group-title="卫视频道",青海卫视
+http://192.151.150.154/live/qhws.m3u8
+#EXTINF:-1 tvg-name="四川卫视" group-title="卫视频道",四川卫视
 http://192.151.150.154/live/scwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",山东卫视
+#EXTINF:-1 tvg-name="山东卫视" group-title="卫视频道",山东卫视
 http://192.151.150.154/live/sdwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",山西卫视
+#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://192.151.150.154/live/snwshd.m3u8
+#EXTINF:-1 tvg-name="三沙卫视" group-title="卫视频道",三沙卫视
+http://192.151.150.154/live/ssws.m3u8
+#EXTINF:-1 tvg-name="山西卫视" group-title="卫视频道",山西卫视
 http://192.151.150.154/live/sxwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",北京纪实科教
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视频道",天津卫视
+http://192.151.150.154/live/tjwshd.m3u8
+#EXTINF:-1 tvg-name="新疆卫视" group-title="卫视频道",新疆卫视
+http://192.151.150.154/live/xjws.m3u8
+#EXTINF:-1 tvg-name="云南卫视" group-title="卫视频道",云南卫视
+http://192.151.150.154/live/ynwshd.m3u8
+#EXTINF:-1 tvg-name="CCTV央视文化精品" group-title="央视频道",CCTV央视文化精品
+http://192.151.150.154/live/ysjp.m3u8
+#EXTINF:-1 tvg-name="广东新闻" group-title="地方频道",广东新闻
+http://192.151.150.154/live/gdxwa.m3u8
+#EXTINF:-1 tvg-name="广东珠江" group-title="地方频道",广东珠江
+http://192.151.150.154/live/gdzja.m3u8
+#EXTINF:-1 tvg-name="广东珠江" group-title="地方频道",广东珠江
+http://192.151.150.154/live/gdzj.m3u8
+#EXTINF:-1 tvg-name="广东少儿" group-title="地方频道",广东少儿
+http://192.151.150.154/live/gdtvs5.m3u8
+#EXTINF:-1 tvg-name="广东体育" group-title="地方频道",广东体育
+http://192.151.150.154/live/gdty.m3u8
+#EXTINF:-1 tvg-name="广东民生" group-title="地方频道",广东民生
+http://192.151.150.154/live/gdgg.m3u8
+#EXTINF:-1 tvg-name="广西影视" group-title="地方频道",广西影视
+http://192.151.150.154/live/gxys.m3u8
+#EXTINF:-1 tvg-name="广西综艺旅游" group-title="地方频道",广西综艺旅游
+http://192.151.150.154/live/gxzy.m3u8
+#EXTINF:-1 tvg-name="广西都市" group-title="地方频道",广西都市
+http://192.151.150.154/live/gxds.m3u8
+#EXTINF:-1 tvg-name="广西新闻" group-title="地方频道",广西新闻
+http://192.151.150.154/live/gxxw.m3u8
+#EXTINF:-1 tvg-name="广西国际" group-title="地方频道",广西国际
+http://192.151.150.154/live/gxgj.m3u8
+#EXTINF:-1 tvg-name="湖南娱乐" group-title="地方频道",湖南娱乐
+http://192.151.150.154/live/hnyl.m3u8
+#EXTINF:-1 tvg-name="湖南教育" group-title="地方频道",湖南教育
+http://192.151.150.154/live/hnjy.m3u8
+#EXTINF:-1 tvg-name="江西新闻频道" group-title="地方频道",江西新闻频道
+http://192.151.150.154/live/jxtv7.m3u8
+#EXTINF:-1 tvg-name="成龙电影" group-title="电影/电视剧",成龙电影
+http://192.151.150.154/live/lbcl.m3u8
+#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
+http://192.151.150.154/live/lbzxc.m3u8
+#EXTINF:-1 tvg-name="林正英影院" group-title="电影/电视剧",林正英影院
+http://192.151.150.154/live/lblzy.m3u8
+#EXTINF:-1 tvg-name="CHC动作电影" group-title="电影/电视剧",CHC动作电影
+http://198.204.228.26/live/chcdz.m3u8
+#EXTINF:-1 tvg-name="CHC影迷电影" group-title="电影/电视剧",CHC影迷电影
+http://198.204.228.26/live/chchd.m3u8
+#EXTINF:-1 tvg-name="CHC家庭影院" group-title="电影/电视剧",CHC家庭影院
+http://198.204.228.26/live/chcjt.m3u8
+#EXTINF:-1 tvg-name="重温经典" group-title="其他频道",重温经典
+http://198.204.228.26/live/cwjd.m3u8
+#EXTINF:-1 tvg-name="天元围棋" group-title="其他频道",天元围棋
+http://198.204.228.26/live/gztywq.m3u8
+#EXTINF:-1 tvg-name="北京纪实科教" group-title="地方频道",北京纪实科教
 http://198.204.228.26/live/btv3.m3u8
-#EXTINF:-1 group-title="自定义频道",安徽卫视
+#EXTINF:-1 tvg-name="北京卡酷少儿" group-title="地方频道",北京卡酷少儿
+http://198.204.228.26/live/btvkk.m3u8
+#EXTINF:-1 tvg-name="安徽卫视" group-title="卫视频道",安徽卫视
 http://198.204.228.26/live/ahwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",江西卫视
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
+http://198.204.228.26/live/bjwshd.m3u8
+#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视频道",重庆卫视
+http://198.204.228.26/live/cqwshd.m3u8
+#EXTINF:-1 tvg-name="大湾区卫视(国际版)" group-title="卫视频道",大湾区卫视(国际版)
+http://198.204.228.26/live/gdgj.m3u8
+#EXTINF:-1 tvg-name="东南卫视" group-title="卫视频道",东南卫视
+http://198.204.228.26/live/dnwshd.m3u8
+#EXTINF:-1 tvg-name="广东卫视" group-title="卫视频道",广东卫视
+http://198.204.228.26/live/gdwshd.m3u8
+#EXTINF:-1 tvg-name="贵州卫视" group-title="卫视频道",贵州卫视
+http://198.204.228.26/live/gzwshd.m3u8
+#EXTINF:-1 tvg-name="河南卫视" group-title="卫视频道",河南卫视
+http://198.204.228.26/live/hawshd.m3u8
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视频道",湖北卫视
+http://198.204.228.26/live/hbwshd.m3u8
+#EXTINF:-1 tvg-name="河北卫视" group-title="卫视频道",河北卫视
+http://198.204.228.26/live/hewshd.m3u8
+#EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视
+http://198.204.228.26/live/hljwshd.m3u8
+#EXTINF:-1 tvg-name="吉林卫视" group-title="卫视频道",吉林卫视
+http://198.204.228.26/live/jlwshd.m3u8
+#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视频道",江苏卫视
+http://198.204.228.26/live/jswshd.m3u8
+#EXTINF:-1 tvg-name="江西卫视" group-title="卫视频道",江西卫视
 http://198.204.228.26/live/jxwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",深圳卫视
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视频道",辽宁卫视
+http://198.204.228.26/live/lnwshd.m3u8
+#EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视频道",内蒙古卫视
+http://198.204.228.26/live/nmgws.m3u8
+#EXTINF:-1 tvg-name="四川卫视" group-title="卫视频道",四川卫视
+http://198.204.228.26/live/scwshd.m3u8
+#EXTINF:-1 tvg-name="山东卫视" group-title="卫视频道",山东卫视
+http://198.204.228.26/live/sdwshd.m3u8
+#EXTINF:-1 tvg-name="三沙卫视" group-title="卫视频道",三沙卫视
+http://198.204.228.26/live/ssws.m3u8
+#EXTINF:-1 tvg-name="深圳卫视" group-title="卫视频道",深圳卫视
 http://198.204.228.26/live/szwshd.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV1
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视频道",天津卫视
+http://198.204.228.26/live/tjwshd.m3u8
+#EXTINF:-1 tvg-name="新疆卫视" group-title="卫视频道",新疆卫视
+http://198.204.228.26/live/xjws.m3u8
+#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视频道",浙江卫视
+http://198.204.228.26/live/zjwshd.m3u8
+#EXTINF:-1 tvg-name="CCTV央视文化精品" group-title="央视频道",CCTV央视文化精品
+http://198.204.228.26/live/ysjp.m3u8
+#EXTINF:-1 tvg-name="广东新闻" group-title="地方频道",广东新闻
+http://198.204.228.26/live/gdxw.m3u8
+#EXTINF:-1 tvg-name="广东新闻" group-title="地方频道",广东新闻
+http://198.204.228.26/live/gdxwa.m3u8
+#EXTINF:-1 tvg-name="广东珠江" group-title="地方频道",广东珠江
+http://198.204.228.26/live/gdzja.m3u8
+#EXTINF:-1 tvg-name="广东珠江" group-title="地方频道",广东珠江
+http://198.204.228.26/live/gdzj.m3u8
+#EXTINF:-1 tvg-name="广东少儿" group-title="地方频道",广东少儿
+http://198.204.228.26/live/gdtvs5.m3u8
+#EXTINF:-1 tvg-name="广东体育" group-title="地方频道",广东体育
+http://198.204.228.26/live/gdty.m3u8
+#EXTINF:-1 tvg-name="广东民生" group-title="地方频道",广东民生
+http://198.204.228.26/live/gdgg.m3u8
+#EXTINF:-1 tvg-name="广西影视" group-title="地方频道",广西影视
+http://198.204.228.26/live/gxys.m3u8
+#EXTINF:-1 tvg-name="广西综艺旅游" group-title="地方频道",广西综艺旅游
+http://198.204.228.26/live/gxzy.m3u8
+#EXTINF:-1 tvg-name="广西都市" group-title="地方频道",广西都市
+http://198.204.228.26/live/gxds.m3u8
+#EXTINF:-1 tvg-name="广西新闻" group-title="地方频道",广西新闻
+http://198.204.228.26/live/gxxw.m3u8
+#EXTINF:-1 tvg-name="广西国际" group-title="地方频道",广西国际
+http://198.204.228.26/live/gxgj.m3u8
+#EXTINF:-1 tvg-name="湖南娱乐" group-title="地方频道",湖南娱乐
+http://198.204.228.26/live/hnyl.m3u8
+#EXTINF:-1 tvg-name="湖南教育" group-title="地方频道",湖南教育
+http://198.204.228.26/live/hnjy.m3u8
+#EXTINF:-1 tvg-name="江西新闻频道" group-title="地方频道",江西新闻频道
+http://198.204.228.26/live/jxtv7.m3u8
+#EXTINF:-1 tvg-name="成龙电影" group-title="电影/电视剧",成龙电影
+http://198.204.228.26/live/lbcl.m3u8
+#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
+http://198.204.228.26/live/lbzxc.m3u8
+#EXTINF:-1 tvg-name="林正英影院" group-title="电影/电视剧",林正英影院
+http://198.204.228.26/live/lblzy.m3u8
+#EXTINF:-1 tvg-name="CCTV1" group-title="央视频道",CCTV1
 http://bztv.tvbus.cc:8081/cdnlive/cctv1.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV2
+#EXTINF:-1 tvg-name="CCTV2" group-title="央视频道",CCTV2
 http://bztv.tvbus.cc:8081/cdnlive/cctv2.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV3
+#EXTINF:-1 tvg-name="CCTV3" group-title="央视频道",CCTV3
 http://bztv.tvbus.cc:8081/cdnlive/cctv3.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV4
+#EXTINF:-1 tvg-name="CCTV4" group-title="央视频道",CCTV4
 http://bztv.tvbus.cc:8081/cdnlive/cctv4.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV6
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视频道",CCTV5
+http://bztv.tvbus.cc:8081/cdnlive/cctv5.m3u8
+#EXTINF:-1 tvg-name="CCTV6" group-title="央视频道",CCTV6
 http://bztv.tvbus.cc:8081/cdnlive/cctv6.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV7
+#EXTINF:-1 tvg-name="CCTV7" group-title="央视频道",CCTV7
 http://bztv.tvbus.cc:8081/cdnlive/cctv7.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV8
+#EXTINF:-1 tvg-name="CCTV8" group-title="央视频道",CCTV8
 http://bztv.tvbus.cc:8081/cdnlive/cctv8.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV9
+#EXTINF:-1 tvg-name="CCTV9" group-title="央视频道",CCTV9
 http://bztv.tvbus.cc:8081/cdnlive/cctv9.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV11
+#EXTINF:-1 tvg-name="CCTV11" group-title="央视频道",CCTV11
 http://bztv.tvbus.cc:8081/cdnlive/cctv11.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV12
+#EXTINF:-1 tvg-name="CCTV12" group-title="央视频道",CCTV12
 http://bztv.tvbus.cc:8081/cdnlive/cctv12.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV13
+#EXTINF:-1 tvg-name="CCTV13" group-title="央视频道",CCTV13
 http://bztv.tvbus.cc:8081/cdnlive/cctv13.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV14
+#EXTINF:-1 tvg-name="CCTV14" group-title="央视频道",CCTV14
 http://bztv.tvbus.cc:8081/cdnlive/cctv14.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV15
+#EXTINF:-1 tvg-name="CCTV15" group-title="央视频道",CCTV15
 http://bztv.tvbus.cc:8081/cdnlive/cctv15.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV1综合
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视频道",CCTV5
+http://bztv.tvbus.cc:8081/cdnlive/cctv5p.m3u8
+#EXTINF:-1 tvg-name="CCTV电视指南" group-title="央视频道",CCTV电视指南
+http://bztv.tvbus.cc:8081/cdnlive/dszn.m3u8
+#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="央视频道",CCTV第一剧场
+http://bztv.tvbus.cc:8081/cdnlive/dyjc.m3u8
+#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="央视频道",CCTV风云剧场
+http://bztv.tvbus.cc:8081/cdnlive/fyjc.m3u8
+#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="央视频道",CCTV风云音乐
+http://bztv.tvbus.cc:8081/cdnlive/fyyy.m3u8
+#EXTINF:-1 tvg-name="CCTV风云足球" group-title="央视频道",CCTV风云足球
+http://bztv.tvbus.cc:8081/cdnlive/fyzq.m3u8
+#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="央视频道",CCTV高尔夫网球
+http://bztv.tvbus.cc:8081/cdnlive/gefwq.m3u8
+#EXTINF:-1 tvg-name="CCTV兵器科技" group-title="央视频道",CCTV兵器科技
+http://bztv.tvbus.cc:8081/cdnlive/gfjs.m3u8
+#EXTINF:-1 tvg-name="CCTV世界地理" group-title="央视频道",CCTV世界地理
+http://bztv.tvbus.cc:8081/cdnlive/sjdl.m3u8
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视频道",CCTV怀旧剧场
+http://bztv.tvbus.cc:8081/cdnlive/hjjc.m3u8
+#EXTINF:-1 tvg-name="CCTV央视台球" group-title="央视频道",CCTV央视台球
+http://bztv.tvbus.cc:8081/cdnlive/ystq.m3u8
+#EXTINF:-1 tvg-name="CCTV央视文化精品" group-title="央视频道",CCTV央视文化精品
+http://bztv.tvbus.cc:8081/cdnlive/ysjp.m3u8
+#EXTINF:-1 tvg-name="安徽卫视" group-title="卫视频道",安徽卫视
+http://bztv.tvbus.cc:8081/cdnlive/ahws.m3u8
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
+http://bztv.tvbus.cc:8081/cdnlive/bjws.m3u8
+#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视频道",重庆卫视
+http://bztv.tvbus.cc:8081/cdnlive/cqws.m3u8
+#EXTINF:-1 tvg-name="东南卫视" group-title="卫视频道",东南卫视
+http://bztv.tvbus.cc:8081/cdnlive/dnws.m3u8
+#EXTINF:-1 tvg-name="广西卫视" group-title="卫视频道",广西卫视
+http://bztv.tvbus.cc:8081/cdnlive/gxws.m3u8
+#EXTINF:-1 tvg-name="贵州卫视" group-title="卫视频道",贵州卫视
+http://bztv.tvbus.cc:8081/cdnlive/gzws.m3u8
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视频道",湖北卫视
+http://bztv.tvbus.cc:8081/cdnlive/hbws.m3u8
+#EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视频道",黑龙江卫视
+http://bztv.tvbus.cc:8081/cdnlive/hljws.m3u8
+#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视频道",湖南卫视
+http://bztv.tvbus.cc:8081/cdnlive/hnws.m3u8
+#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视频道",江苏卫视
+http://bztv.tvbus.cc:8081/cdnlive/jsws.m3u8
+#EXTINF:-1 tvg-name="江西卫视" group-title="卫视频道",江西卫视
+http://bztv.tvbus.cc:8081/cdnlive/jxws.m3u8
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视频道",辽宁卫视
+http://bztv.tvbus.cc:8081/cdnlive/lnws.m3u8
+#EXTINF:-1 tvg-name="山东卫视" group-title="卫视频道",山东卫视
+http://bztv.tvbus.cc:8081/cdnlive/sdws.m3u8
+#EXTINF:-1 tvg-name="山西卫视" group-title="卫视频道",山西卫视
+http://bztv.tvbus.cc:8081/cdnlive/sxws.m3u8
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视频道",天津卫视
+http://bztv.tvbus.cc:8081/cdnlive/tjws.m3u8
+#EXTINF:-1 tvg-name="新疆卫视" group-title="卫视频道",新疆卫视
+http://bztv.tvbus.cc:8081/cdnlive/xjws.m3u8
+#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视频道",浙江卫视
+http://bztv.tvbus.cc:8081/cdnlive/zjws.m3u8
+#EXTINF:-1 tvg-name="CCTV1综合" group-title="央视频道",CCTV1综合
 http://173.208.212.130:8181/720p/cctv1.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV2财经
+#EXTINF:-1 tvg-name="CCTV2财经" group-title="央视频道",CCTV2财经
 http://173.208.212.130:8181/720p/cctv2.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV3综艺
+#EXTINF:-1 tvg-name="CCTV3综艺" group-title="央视频道",CCTV3综艺
 http://173.208.212.130:8181/720p/cctv3.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV4中文国际
+#EXTINF:-1 tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
 http://173.208.212.130:8181/720p/cctv4.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV5体育
+#EXTINF:-1 tvg-name="CCTV5体育" group-title="央视频道",CCTV5体育
 http://173.208.212.130:8181/720p/cctv5.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV6电影
+#EXTINF:-1 tvg-name="CCTV6电影" group-title="央视频道",CCTV6电影
 http://173.208.212.130:8181/720p/cctv6.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV8电视剧
+#EXTINF:-1 tvg-name="CCTV8电视剧" group-title="央视频道",CCTV8电视剧
 http://173.208.212.130:8181/720p/cctv8.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV9纪录
+#EXTINF:-1 tvg-name="CCTV9纪录" group-title="央视频道",CCTV9纪录
 http://173.208.212.130:8181/720p/cctv9.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV11戏曲
+#EXTINF:-1 tvg-name="CCTV11戏曲" group-title="央视频道",CCTV11戏曲
 http://173.208.212.130:8181/720p/cctv11.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV12社会与法
+#EXTINF:-1 tvg-name="CCTV12社会与法" group-title="央视频道",CCTV12社会与法
 http://173.208.212.130:8181/720p/cctv12.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV13新闻
+#EXTINF:-1 tvg-name="CCTV13新闻" group-title="央视频道",CCTV13新闻
 http://173.208.212.130:8181/720p/cctv13.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV14少儿
+#EXTINF:-1 tvg-name="CCTV14少儿" group-title="央视频道",CCTV14少儿
 http://173.208.212.130:8181/720p/cctv14.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV15音乐
+#EXTINF:-1 tvg-name="CCTV15音乐" group-title="央视频道",CCTV15音乐
 http://173.208.212.130:8181/720p/cctv15.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV16奥林匹克
+#EXTINF:-1 tvg-name="CCTV16奥林匹克" group-title="央视频道",CCTV16奥林匹克
 http://173.208.212.130:8181/720p/cctv16.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV7国防军事
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视频道",CCTV5
+http://173.208.212.130:8181/720p/cctv5p.m3u8
+#EXTINF:-1 tvg-name="CCTV第一剧场" group-title="央视频道",CCTV第一剧场
+http://173.208.212.130:8181/720p/dyjc.m3u8
+#EXTINF:-1 tvg-name="CCTV风云剧场" group-title="央视频道",CCTV风云剧场
+http://173.208.212.130:8181/720p/fyjc.m3u8
+#EXTINF:-1 tvg-name="CCTV怀旧剧场" group-title="央视频道",CCTV怀旧剧场
+http://173.208.212.130:8181/720p/hjjc.m3u8
+#EXTINF:-1 tvg-name="CCTV兵器科技" group-title="央视频道",CCTV兵器科技
+http://173.208.212.130:8181/720p/gfjs.m3u8
+#EXTINF:-1 tvg-name="CCTV世界地理" group-title="央视频道",CCTV世界地理
+http://173.208.212.130:8181/720p/sjdl.m3u8
+#EXTINF:-1 tvg-name="CCTV卫生健康" group-title="央视频道",CCTV卫生健康
+http://173.208.212.130:8181/720p/wsjk.m3u8
+#EXTINF:-1 tvg-name="CCTV央视文化精品" group-title="央视频道",CCTV央视文化精品
+http://173.208.212.130:8181/720p/ysjp.m3u8
+#EXTINF:-1 tvg-name="CCTV风云音乐" group-title="央视频道",CCTV风云音乐
+http://173.208.212.130:8181/720p/fyyy.m3u8
+#EXTINF:-1 tvg-name="CCTV央视台球" group-title="央视频道",CCTV央视台球
+http://173.208.212.130:8181/720p/ystq.m3u8
+#EXTINF:-1 tvg-name="CCTV风云足球" group-title="央视频道",CCTV风云足球
+http://173.208.212.130:8181/720p/fyzq.m3u8
+#EXTINF:-1 tvg-name="CCTV高尔夫网球" group-title="央视频道",CCTV高尔夫网球
+http://173.208.212.130:8181/720p/gefwq.m3u8
+#EXTINF:-1 tvg-name="CCTV1综合" group-title="央视频道",CCTV1综合
+http://173.208.212.130:8181/1080p/cctv1.m3u8
+#EXTINF:-1 tvg-name="CCTV2财经" group-title="央视频道",CCTV2财经
+http://173.208.212.130:8181/1080p/cctv2.m3u8
+#EXTINF:-1 tvg-name="CCTV3综艺" group-title="央视频道",CCTV3综艺
+http://173.208.212.130:8181/1080p/cctv3.m3u8
+#EXTINF:-1 tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
+http://173.208.212.130:8181/1080p/cctv4.m3u8
+#EXTINF:-1 tvg-name="CCTV5体育" group-title="央视频道",CCTV5体育
+http://173.208.212.130:8181/1080p/cctv5.m3u8
+#EXTINF:-1 tvg-name="CCTV6电影" group-title="央视频道",CCTV6电影
+http://173.208.212.130:8181/1080p/cctv6.m3u8
+#EXTINF:-1 tvg-name="CCTV7国防军事" group-title="央视频道",CCTV7国防军事
 http://173.208.212.130:8181/1080p/cctv7.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV10科教
+#EXTINF:-1 tvg-name="CCTV8电视剧" group-title="央视频道",CCTV8电视剧
+http://173.208.212.130:8181/1080p/cctv8.m3u8
+#EXTINF:-1 tvg-name="CCTV10科教" group-title="央视频道",CCTV10科教
 http://173.208.212.130:8181/1080p/cctv10.m3u8
-#EXTINF:-1 group-title="自定义频道",CCTV17农业农村
+#EXTINF:-1 tvg-name="CCTV11戏曲" group-title="央视频道",CCTV11戏曲
+http://173.208.212.130:8181/1080p/cctv11.m3u8
+#EXTINF:-1 tvg-name="CCTV12社会与法" group-title="央视频道",CCTV12社会与法
+http://173.208.212.130:8181/1080p/cctv12.m3u8
+#EXTINF:-1 tvg-name="CCTV13新闻" group-title="央视频道",CCTV13新闻
+http://173.208.212.130:8181/1080p/cctv13.m3u8
+#EXTINF:-1 tvg-name="CCTV14少儿" group-title="央视频道",CCTV14少儿
+http://173.208.212.130:8181/1080p/cctv14.m3u8
+#EXTINF:-1 tvg-name="CCTV15音乐" group-title="央视频道",CCTV15音乐
+http://173.208.212.130:8181/1080p/cctv15.m3u8
+#EXTINF:-1 tvg-name="CCTV16奥林匹克" group-title="央视频道",CCTV16奥林匹克
+http://173.208.212.130:8181/1080p/cctv16.m3u8
+#EXTINF:-1 tvg-name="CCTV17农业农村" group-title="央视频道",CCTV17农业农村
 http://173.208.212.130:8181/1080p/cctv17.m3u8
-#EXTINF:-1 group-title="自定义频道",甘肃卫视
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视频道",CCTV5
+http://173.208.212.130:8181/1080p/cctv5p.m3u8
+#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视频道",湖南卫视
+http://173.208.212.130:8181/720p/hnws.m3u8
+#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视频道",湖南卫视
+http://173.208.212.130:8181/1080p/hnws.m3u8
+#EXTINF:-1 tvg-name="河北卫视" group-title="卫视频道",河北卫视
+http://173.208.212.130:8181/720p/hews.m3u8
+#EXTINF:-1 tvg-name="山东卫视" group-title="卫视频道",山东卫视
+http://173.208.212.130:8181/720p/sdws.m3u8
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视频道",天津卫视
+http://173.208.212.130:8181/720p/tjws.m3u8
+#EXTINF:-1 tvg-name="深圳卫视" group-title="卫视频道",深圳卫视
+http://173.208.212.130:8181/720p/szws.m3u8
+#EXTINF:-1 tvg-name="安徽卫视" group-title="卫视频道",安徽卫视
+http://173.208.212.130:8181/720p/ahws.m3u8
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
+http://173.208.212.130:8181/720p/bjws.m3u8
+#EXTINF:-1 tvg-name="广东卫视" group-title="卫视频道",广东卫视
+http://173.208.212.130:8181/720p/gdws.m3u8
+#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视频道",江苏卫视
+http://173.208.212.130:8181/720p/jsws.m3u8
+#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视频道",江苏卫视
+http://173.208.212.130:8181/1080p/jsws.m3u8
+#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视频道",浙江卫视
+http://173.208.212.130:8181/720p/zjws.m3u8
+#EXTINF:-1 tvg-name="河南卫视" group-title="卫视频道",河南卫视
+http://112.30.73.119:9901/tsfile/live/1404_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="广西卫视" group-title="卫视频道",广西卫视
+http://112.30.73.119:9901/tsfile/live/1405_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视频道",辽宁卫视
+https://live.264788.xyz/channel/liaoningweishi?streamid=0c788b01c7fa1a38fee180bf3638a6ab&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="广西卫视" group-title="卫视频道",广西卫视
+https://live.264788.xyz/channel/guangxiweishi?streamid=b3bc55706bd074b608a3b955fbffea4b&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+https://live.264788.xyz/channel/shaanxiweishi?streamid=80bc4fd254b8b27efa395953b61d5026&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="甘肃卫视" group-title="卫视频道",甘肃卫视
 https://live.264788.xyz/channel/gansuweishi?streamid=466083ee6981dccb38d23b5556b27f6e&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",金鹰纪实
+#EXTINF:-1 tvg-name="金鹰纪实" group-title="其他频道",金鹰纪实
 https://live.264788.xyz/channel/jinyingjishi?streamid=4e14722244f78fc9c49bf260b10b3cad&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",CETV-4职业教育
+#EXTINF:-1 tvg-name="CETV-4职业教育" group-title="其他频道",CETV-4职业教育
 https://live.264788.xyz/channel/cetv4?streamid=37d60172a2bbb0d41f072d29213e6264&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",金鹰卡通
+#EXTINF:-1 tvg-name="金鹰卡通" group-title="少儿频道",金鹰卡通
 https://live.264788.xyz/channel/jinyingkatong?streamid=6bd8e7571b60048f177f05de68f25f68&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",凤凰卫视资讯台
+#EXTINF:-1 tvg-name="凤凰卫视资讯台" group-title="卫视频道",凤凰卫视资讯台
 https://live.264788.xyz/channel/fenghuangweishizixun?streamid=77bd953dbf073e11b80bba0a8aca92c5&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",凤凰卫视中文台
+#EXTINF:-1 tvg-name="凤凰卫视中文台" group-title="卫视频道",凤凰卫视中文台
 https://live.264788.xyz/channel/fenghuangweishizhongwen?streamid=3ed416f2709e7ecaf6dc1b9d9c66bb5e&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",CCTV16奥林匹克4k
+#EXTINF:-1 tvg-name="CCTV16奥林匹克4k" group-title="央视频道",CCTV16奥林匹克4k
 https://live.264788.xyz/channel/cctv164k?streamid=e2fed648244b0ba2817187fcba2ca6cb&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",福建综合
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
+https://live.264788.xyz/channel/beijingweishi4k?streamid=9859ef98cc152feae0c066e8c100ad2e&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
+https://live.264788.xyz/channel/beijingweishi4k?streamid=9f84199ceee704199264bb5ec58b8345&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视频道",浙江卫视
+https://live.264788.xyz/channel/zhejiangweishi4k?streamid=a5b6e60170ee8c69290def1c2fe00cc8&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视频道",湖南卫视
+https://live.264788.xyz/channel/hunanweishi4k?streamid=1d2cff60e497ead8198445a199d19583&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="广东卫视" group-title="卫视频道",广东卫视
+https://live.264788.xyz/channel/guangdongweishi4k?streamid=0508c0316aedc9152adcf323fa95c2c0&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="深圳卫视" group-title="卫视频道",深圳卫视
+https://live.264788.xyz/channel/shenzhenweishi4k?streamid=9828b90c3948bae63cb8de76cdccd646&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="福建综合" group-title="地方频道",福建综合
 https://live.264788.xyz/channel/fujianzonghe?streamid=f614d92b7259456dde72c14924c6323a&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",福建新闻
+#EXTINF:-1 tvg-name="福建综合" group-title="地方频道",福建综合
+https://live.264788.xyz/channel/fujianzonghe?streamid=6464f306ec4c0acd88d9a698fc2d699e&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="福建综合" group-title="地方频道",福建综合
+https://live.264788.xyz/channel/fujianzonghe?streamid=4e7312db2a9e0b2effa6c08feab90786&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
+#EXTINF:-1 tvg-name="福建新闻" group-title="地方频道",福建新闻
 https://live.264788.xyz/channel/fujianxinwen?streamid=1d7a4e8614e13d43791f381297047a1a&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",福建文体
+#EXTINF:-1 tvg-name="福建文体" group-title="地方频道",福建文体
 https://live.264788.xyz/channel/fujianwenti?streamid=5b085b708bf8a4e62daa5ed392f810ce&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",福建少儿
+#EXTINF:-1 tvg-name="福建少儿" group-title="地方频道",福建少儿
 https://live.264788.xyz/channel/fujianshaoer?streamid=e835a9456b847a72e1a0b8d64b585300&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",福建教育
+#EXTINF:-1 tvg-name="福建教育" group-title="地方频道",福建教育
 https://live.264788.xyz/channel/fujianjiaoyu?streamid=250b5a0e97980f68e40f3f91ab10ac74&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
-#EXTINF:-1 group-title="自定义频道",CCTV02
+#EXTINF:-1 tvg-name="CCTV02" group-title="央视频道",CCTV02
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv2
-#EXTINF:-1 group-title="自定义频道",CCTV03
+#EXTINF:-1 tvg-name="CCTV03" group-title="央视频道",CCTV03
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv3
-#EXTINF:-1 group-title="自定义频道",CCTV04
+#EXTINF:-1 tvg-name="CCTV04" group-title="央视频道",CCTV04
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv4
-#EXTINF:-1 group-title="自定义频道",CCTV05
+#EXTINF:-1 tvg-name="CCTV05" group-title="央视频道",CCTV05
 http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv5
-#EXTINF:-1 group-title="自定义频道",CCTV4欧洲
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视频道",CCTV5
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv5p
+#EXTINF:-1 tvg-name="CCTV1综合" group-title="央视频道",CCTV1综合
+http://mg.cttv.vip/608807420
+#EXTINF:-1 tvg-name="CCTV2财经" group-title="央视频道",CCTV2财经
+http://mg.cttv.vip/631780532
+#EXTINF:-1 tvg-name="CCTV3综艺" group-title="央视频道",CCTV3综艺
+http://mg.cttv.vip/624878271
+#EXTINF:-1 tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
+http://mg.cttv.vip/631780421
+#EXTINF:-1 tvg-name="CCTV5体育" group-title="央视频道",CCTV5体育
+http://mg.cttv.vip/641886683
+#EXTINF:-1 tvg-name="CCTV5" group-title="央视频道",CCTV5
+http://mg.cttv.vip/641886773
+#EXTINF:-1 tvg-name="CCTV6电影" group-title="央视频道",CCTV6电影
+http://mg.cttv.vip/624878396
+#EXTINF:-1 tvg-name="CCTV7国防军事" group-title="央视频道",CCTV7国防军事
+http://mg.cttv.vip/673168121
+#EXTINF:-1 tvg-name="CCTV8电视剧" group-title="央视频道",CCTV8电视剧
+http://mg.cttv.vip/624878356
+#EXTINF:-1 tvg-name="CCTV9纪录" group-title="央视频道",CCTV9纪录
+http://mg.cttv.vip/673168140
+#EXTINF:-1 tvg-name="CCTV10科教" group-title="央视频道",CCTV10科教
+http://mg.cttv.vip/624878405
+#EXTINF:-1 tvg-name="CCTV11戏曲" group-title="央视频道",CCTV11戏曲
+http://mg.cttv.vip/667987558
+#EXTINF:-1 tvg-name="CCTV12社会与法" group-title="央视频道",CCTV12社会与法
+http://mg.cttv.vip/673168185
+#EXTINF:-1 tvg-name="CCTV13新闻" group-title="央视频道",CCTV13新闻
+http://mg.cttv.vip/608807423
+#EXTINF:-1 tvg-name="CCTV14少儿" group-title="央视频道",CCTV14少儿
+http://mg.cttv.vip/624878440
+#EXTINF:-1 tvg-name="CCTV15音乐" group-title="央视频道",CCTV15音乐
+http://mg.cttv.vip/673168223
+#EXTINF:-1 tvg-name="CCTV17农业农村" group-title="央视频道",CCTV17农业农村
+http://mg.cttv.vip/673168256
+#EXTINF:-1 tvg-name="CCTV4欧洲" group-title="央视频道",CCTV4欧洲
 http://mg.cttv.vip/608807419
-#EXTINF:-1 group-title="自定义频道",CCTV4美洲
+#EXTINF:-1 tvg-name="CCTV4美洲" group-title="央视频道",CCTV4美洲
 http://mg.cttv.vip/608807416
-#EXTINF:-1 group-title="自定义频道",发现之旅
+#EXTINF:-1 tvg-name="发现之旅" group-title="其他频道",发现之旅
 http://mg.cttv.vip/624878970
-#EXTINF:-1 group-title="自定义频道",中学生
+#EXTINF:-1 tvg-name="中学生" group-title="其他频道",中学生
 http://mg.cttv.vip/708869532
-#EXTINF:-1 group-title="自定义频道",中国农林卫视
+#EXTINF:-1 tvg-name="东方卫视" group-title="卫视频道",东方卫视
+http://mg.cttv.vip/651632648
+#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视频道",江苏卫视
+http://mg.cttv.vip/623899368
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
+http://mg.cttv.vip/630287636
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视频道",辽宁卫视
+http://mg.cttv.vip/630291707
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视频道",湖北卫视
+http://mg.cttv.vip/947472496
+#EXTINF:-1 tvg-name="中国农林卫视" group-title="卫视频道",中国农林卫视
 http://mg.cttv.vip/956904896
-#EXTINF:-1 group-title="自定义频道",兵团卫视
+#EXTINF:-1 tvg-name="兵团卫视" group-title="卫视频道",兵团卫视
 http://mg.cttv.vip/956923145
-#EXTINF:-1 group-title="自定义频道",上海新闻综合
+#EXTINF:-1 tvg-name="上海新闻综合" group-title="地方频道",上海新闻综合
 http://mg.cttv.vip/651632657
-#EXTINF:-1 group-title="自定义频道",盐城新闻综合
+#EXTINF:-1 tvg-name="盐城新闻综合" group-title="其他频道",盐城新闻综合
 http://mg.cttv.vip/639731825
-#EXTINF:-1 group-title="自定义频道",江阴新闻综合
+#EXTINF:-1 tvg-name="江阴新闻综合" group-title="其他频道",江阴新闻综合
 http://mg.cttv.vip/955227979
-#EXTINF:-1 group-title="自定义频道",南通新闻综合
+#EXTINF:-1 tvg-name="南通新闻综合" group-title="其他频道",南通新闻综合
 http://mg.cttv.vip/955227985
-#EXTINF:-1 group-title="自定义频道",宜兴新闻综合
+#EXTINF:-1 tvg-name="宜兴新闻综合" group-title="其他频道",宜兴新闻综合
 http://mg.cttv.vip/955227996
-#EXTINF:-1 group-title="自定义频道",溧水新闻综合
+#EXTINF:-1 tvg-name="溧水新闻综合" group-title="其他频道",溧水新闻综合
 http://mg.cttv.vip/639737327
-#EXTINF:-1 group-title="自定义频道",陕西银龄频道
+#EXTINF:-1 tvg-name="陕西银龄频道" group-title="地方频道",陕西银龄频道
 http://mg.cttv.vip/956909362
-#EXTINF:-1 group-title="自定义频道",陕西都市青春频道
+#EXTINF:-1 tvg-name="陕西都市青春频道" group-title="地方频道",陕西都市青春频道
 http://mg.cttv.vip/956909358
-#EXTINF:-1 group-title="自定义频道",陕西秦腔频道
+#EXTINF:-1 tvg-name="陕西秦腔频道" group-title="地方频道",陕西秦腔频道
 http://mg.cttv.vip/956909303
-#EXTINF:-1 group-title="自定义频道",陕西新闻资讯频道
+#EXTINF:-1 tvg-name="陕西新闻资讯频道" group-title="地方频道",陕西新闻资讯频道
 http://mg.cttv.vip/956909289
-#EXTINF:-1 group-title="自定义频道",财富天下
+#EXTINF:-1 tvg-name="财富天下" group-title="其他频道",财富天下
 http://mg.cttv.vip/956923159
-#EXTINF:-1 group-title="自定义频道",海南广播电视总台新闻频道
+#EXTINF:-1 tvg-name="海南广播电视总台新闻频道" group-title="地方频道",海南广播电视总台新闻频道
 http://mg.cttv.vip/962067517
-#EXTINF:-1 group-title="自定义频道",海南广播电视总台自贸频道
+#EXTINF:-1 tvg-name="海南广播电视总台自贸频道" group-title="地方频道",海南广播电视总台自贸频道
 http://mg.cttv.vip/962045226
-#EXTINF:-1 group-title="自定义频道",海南广播电视总台社会与法频道
+#EXTINF:-1 tvg-name="海南广播电视总台社会与法频道" group-title="地方频道",海南广播电视总台社会与法频道
 http://mg.cttv.vip/962045223
-#EXTINF:-1 group-title="自定义频道",海南广播电视总台文旅频道
+#EXTINF:-1 tvg-name="海南广播电视总台文旅频道" group-title="地方频道",海南广播电视总台文旅频道
 http://mg.cttv.vip/962067526
-#EXTINF:-1 group-title="自定义频道",海南广播电视总台少儿频道
+#EXTINF:-1 tvg-name="海南广播电视总台少儿频道" group-title="地方频道",海南广播电视总台少儿频道
 http://mg.cttv.vip/962067523
-#EXTINF:-1 group-title="自定义频道",赛事最经典
+#EXTINF:-1 tvg-name="赛事最经典" group-title="体育频道",赛事最经典
 http://mg.cttv.vip/646596895
-#EXTINF:-1 group-title="自定义频道",体坛名栏汇
+#EXTINF:-1 tvg-name="体坛名栏汇" group-title="其他频道",体坛名栏汇
 http://mg.cttv.vip/629943305
-#EXTINF:-1 group-title="自定义频道",四海钓鱼
+#EXTINF:-1 tvg-name="四海钓鱼" group-title="其他频道",四海钓鱼
 http://mg.cttv.vip/637444975
-#EXTINF:-1 group-title="自定义频道",陕西体育休闲频道
+#EXTINF:-1 tvg-name="陕西体育休闲频道" group-title="地方频道",陕西体育休闲频道
 http://mg.cttv.vip/956909356
-#EXTINF:-1 group-title="自定义频道",24小时城市联赛轮播台
+#EXTINF:-1 tvg-name="24小时城市联赛轮播台" group-title="其他频道",24小时城市联赛轮播台
 http://mg.cttv.vip/915512915
-#EXTINF:-1 group-title="自定义频道",武术世界
+#EXTINF:-1 tvg-name="武术世界" group-title="其他频道",武术世界
 http://mg.cttv.vip/958475359
-#EXTINF:-1 group-title="自定义频道",快乐垂钓
+#EXTINF:-1 tvg-name="快乐垂钓" group-title="其他频道",快乐垂钓
 http://mg.cttv.vip/961930263
-#EXTINF:-1 group-title="自定义频道",经典香港电影
+#EXTINF:-1 tvg-name="经典香港电影" group-title="电影/电视剧",经典香港电影
 http://mg.cttv.vip/625703337
-#EXTINF:-1 group-title="自定义频道",抗战经典影片
+#EXTINF:-1 tvg-name="抗战经典影片" group-title="其他频道",抗战经典影片
 http://mg.cttv.vip/617432318
-#EXTINF:-1 group-title="自定义频道",新片放映厅
+#EXTINF:-1 tvg-name="新片放映厅" group-title="其他频道",新片放映厅
 http://mg.cttv.vip/619495952
-#EXTINF:-1 group-title="自定义频道",和美乡途轮播台
+#EXTINF:-1 tvg-name="CHC影迷电影" group-title="电影/电视剧",CHC影迷电影
+http://mg.cttv.vip/952383261
+#EXTINF:-1 tvg-name="和美乡途轮播台" group-title="其他频道",和美乡途轮播台
 http://mg.cttv.vip/713591450
-#EXTINF:-1 group-title="自定义频道",中国航天“逆袭”之路
+#EXTINF:-1 tvg-name="中国航天“逆袭”之路" group-title="其他频道",中国航天“逆袭”之路
 http://mg.cttv.vip/713600957
-#EXTINF:-1 group-title="自定义频道",中国天气
+#EXTINF:-1 tvg-name="中国天气" group-title="其他频道",中国天气
 http://mg.cttv.vip/959986621
-#EXTINF:-1 group-title="自定义频道",CETV1
+#EXTINF:-1 tvg-name="CETV1" group-title="其他频道",CETV1
 http://mg.cttv.vip/923287154
-#EXTINF:-1 group-title="自定义频道",CETV2
+#EXTINF:-1 tvg-name="CETV2" group-title="其他频道",CETV2
 http://mg.cttv.vip/923287211
-#EXTINF:-1 group-title="自定义频道",CETV4
+#EXTINF:-1 tvg-name="CETV4" group-title="其他频道",CETV4
 http://mg.cttv.vip/923287339
-#EXTINF:-1 group-title="自定义频道",山东教育
+#EXTINF:-1 tvg-name="山东教育" group-title="地方频道",山东教育
 http://mg.cttv.vip/609154353
-#EXTINF:-1 group-title="自定义频道",熊猫频道01高清
+#EXTINF:-1 tvg-name="熊猫频道01高清" group-title="其他频道",熊猫频道01高清
 http://mg.cttv.vip/609158151
-#EXTINF:-1 group-title="自定义频道",最强综艺趴
+#EXTINF:-1 tvg-name="最强综艺趴" group-title="其他频道",最强综艺趴
 http://mg.cttv.vip/629942228
-#EXTINF:-1 group-title="自定义频道",经典动画大集合
+#EXTINF:-1 tvg-name="经典动画大集合" group-title="少儿频道",经典动画大集合
 http://mg.cttv.vip/629942219
-#EXTINF:-1 group-title="自定义频道",新动漫
+#EXTINF:-1 tvg-name="新动漫" group-title="其他频道",新动漫
 http://mg.cttv.vip/961930269
-#EXTINF:-1 group-title="自定义频道",新动力量创一流
+#EXTINF:-1 tvg-name="新动力量创一流" group-title="其他频道",新动力量创一流
 http://mg.cttv.vip/713589837
-#EXTINF:-1 group-title="自定义频道",中华特产
+#EXTINF:-1 tvg-name="中华特产" group-title="其他频道",中华特产
 http://mg.cttv.vip/959986618
-#EXTINF:-1 group-title="自定义频道",环球旅游
+#EXTINF:-1 tvg-name="环球旅游" group-title="其他频道",环球旅游
 http://mg.cttv.vip/958475356
-#EXTINF:-1 group-title="自定义频道",梨园频道
+#EXTINF:-1 tvg-name="梨园频道" group-title="其他频道",梨园频道
 http://mg.cttv.vip/961930369
-#EXTINF:-1 group-title="自定义频道",建党105周年巡礼
+#EXTINF:-1 tvg-name="发现之旅" group-title="其他频道",发现之旅
+http://wfenf.x3322.net:7788/624878970
+#EXTINF:-1 tvg-name="中学生" group-title="其他频道",中学生
+http://wfenf.x3322.net:7788/708869532
+#EXTINF:-1 tvg-name="东方卫视" group-title="卫视频道",东方卫视
+http://wfenf.x3322.net:7788/651632648
+#EXTINF:-1 tvg-name="广东卫视" group-title="卫视频道",广东卫视
+http://wfenf.x3322.net:7788/608831231
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
+http://wfenf.x3322.net:7788/630287636
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视频道",辽宁卫视
+http://wfenf.x3322.net:7788/630291707
+#EXTINF:-1 tvg-name="河北卫视" group-title="卫视频道",河北卫视
+http://wfenf.x3322.net:7788/962042070
+#EXTINF:-1 tvg-name="江西卫视" group-title="卫视频道",江西卫视
+http://wfenf.x3322.net:7788/783847495
+#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视频道",陕西卫视
+http://wfenf.x3322.net:7788/738910838
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视频道",湖北卫视
+http://wfenf.x3322.net:7788/947472496
+#EXTINF:-1 tvg-name="中国农林卫视" group-title="卫视频道",中国农林卫视
+http://wfenf.x3322.net:7788/956904896
+#EXTINF:-1 tvg-name="兵团卫视" group-title="卫视频道",兵团卫视
+http://wfenf.x3322.net:7788/956923145
+#EXTINF:-1 tvg-name="上海新闻综合" group-title="地方频道",上海新闻综合
+http://wfenf.x3322.net:7788/651632657
+#EXTINF:-1 tvg-name="盐城新闻综合" group-title="其他频道",盐城新闻综合
+http://wfenf.x3322.net:7788/639731825
+#EXTINF:-1 tvg-name="江阴新闻综合" group-title="其他频道",江阴新闻综合
+http://wfenf.x3322.net:7788/955227979
+#EXTINF:-1 tvg-name="南通新闻综合" group-title="其他频道",南通新闻综合
+http://wfenf.x3322.net:7788/955227985
+#EXTINF:-1 tvg-name="宜兴新闻综合" group-title="其他频道",宜兴新闻综合
+http://wfenf.x3322.net:7788/955227996
+#EXTINF:-1 tvg-name="陕西银龄频道" group-title="地方频道",陕西银龄频道
+http://wfenf.x3322.net:7788/956909362
+#EXTINF:-1 tvg-name="陕西都市青春频道" group-title="地方频道",陕西都市青春频道
+http://wfenf.x3322.net:7788/956909358
+#EXTINF:-1 tvg-name="陕西秦腔频道" group-title="地方频道",陕西秦腔频道
+http://wfenf.x3322.net:7788/956909303
+#EXTINF:-1 tvg-name="陕西新闻资讯频道" group-title="地方频道",陕西新闻资讯频道
+http://wfenf.x3322.net:7788/956909289
+#EXTINF:-1 tvg-name="财富天下" group-title="其他频道",财富天下
+http://wfenf.x3322.net:7788/956923159
+#EXTINF:-1 tvg-name="海南广播电视总台新闻频道" group-title="地方频道",海南广播电视总台新闻频道
+http://wfenf.x3322.net:7788/962067517
+#EXTINF:-1 tvg-name="海南广播电视总台自贸频道" group-title="地方频道",海南广播电视总台自贸频道
+http://wfenf.x3322.net:7788/962045226
+#EXTINF:-1 tvg-name="海南广播电视总台文旅频道" group-title="地方频道",海南广播电视总台文旅频道
+http://wfenf.x3322.net:7788/962067526
+#EXTINF:-1 tvg-name="海南广播电视总台少儿频道" group-title="地方频道",海南广播电视总台少儿频道
+http://wfenf.x3322.net:7788/962067523
+#EXTINF:-1 tvg-name="四海钓鱼" group-title="其他频道",四海钓鱼
+http://wfenf.x3322.net:7788/637444975
+#EXTINF:-1 tvg-name="24小时城市联赛轮播台" group-title="其他频道",24小时城市联赛轮播台
+http://wfenf.x3322.net:7788/915512915
+#EXTINF:-1 tvg-name="快乐垂钓" group-title="其他频道",快乐垂钓
+http://wfenf.x3322.net:7788/961930263
+#EXTINF:-1 tvg-name="建党105周年巡礼" group-title="其他频道",建党105周年巡礼
 http://wfenf.x3322.net:7788/713600957
-#EXTINF:-1 group-title="本地节目",直播南充
+#EXTINF:-1 tvg-name="经典香港电影" group-title="电影/电视剧",经典香港电影
+http://wfenf.x3322.net:7788/625703337
+#EXTINF:-1 tvg-name="CHC影迷电影" group-title="电影/电视剧",CHC影迷电影
+http://wfenf.x3322.net:7788/952383261
+#EXTINF:-1 tvg-name="中国天气" group-title="其他频道",中国天气
+http://wfenf.x3322.net:7788/959986621
+#EXTINF:-1 tvg-name="CETV1" group-title="其他频道",CETV1
+http://wfenf.x3322.net:7788/923287154
+#EXTINF:-1 tvg-name="CETV2" group-title="其他频道",CETV2
+http://wfenf.x3322.net:7788/923287211
+#EXTINF:-1 tvg-name="CETV4" group-title="其他频道",CETV4
+http://wfenf.x3322.net:7788/923287339
+#EXTINF:-1 tvg-name="山东教育" group-title="地方频道",山东教育
+http://wfenf.x3322.net:7788/609154353
+#EXTINF:-1 tvg-name="熊猫频道01高清" group-title="其他频道",熊猫频道01高清
+http://wfenf.x3322.net:7788/609158151
+#EXTINF:-1 tvg-name="新动漫" group-title="其他频道",新动漫
+http://wfenf.x3322.net:7788/961930269
+#EXTINF:-1 tvg-name="中华特产" group-title="其他频道",中华特产
+http://wfenf.x3322.net:7788/959986618
+#EXTINF:-1 tvg-name="环球旅游" group-title="其他频道",环球旅游
+http://wfenf.x3322.net:7788/958475356
+#EXTINF:-1 tvg-name="梨园频道" group-title="其他频道",梨园频道
+http://wfenf.x3322.net:7788/961930369
+#EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
+https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
+#EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
 https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
-#EXTINF:-1 group-title="本地节目",走进四川西充
+#EXTINF:-1 tvg-name="走进四川西充" group-title="地方频道",走进四川西充
+https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
+#EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
+https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
+#EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
+https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
+#EXTINF:-1 tvg-name="走进四川西充" group-title="地方频道",走进四川西充
 https://newcntv.qcloudcdn.com/asp/hls/main/0303000a/3/default/bf79b86799854dcf94733e9ce298aaf8/main.m3u8?spm=C53074552346.PV9rQgZS23fL.0.0&maxbr=2048
