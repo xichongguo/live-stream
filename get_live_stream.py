@@ -25,56 +25,82 @@ class IPTVUpdater:
         # --- 输出配置 ---
         self.OUTPUT_DIR = "live"
         self.OUTPUT_FILE = os.path.join(self.OUTPUT_DIR, "current.m3u8")
-        # --- 新增：西充综合专用配置 ---
+        # --- 西充综合专用配置 ---
         self.XICHONG_API_URL = "https://lwydapi.xichongtv.cn/a/appLive/info/35137_b14710553f9b43349f46d33cc2b7fcfd"
         self.XICHONG_HEADERS = {
             'User-Agent': 'okhttp/3.12.12',
             'Accept': 'application/json, text/plain, */*'
         }
-        # --- 新增：电影/电视剧轮播源配置 ---
+        # --- 电影/电视剧轮播源配置 ---
         self.MOVIE_TXT_URL = "https://gh-proxy.com/https://raw.githubusercontent.com/xichongguo/live-stream/refs/heads/main/lbt.m3u"
-        # --- 新增：自定义视频源配置 ---
+        # --- 自定义视频源配置 ---
         self.CUSTOM_M3U_URL = "http://47.94.6.170/TV/tv.m3u"
-        # --- 新增：白名单配置 ---
+        # --- 白名单配置 ---
         self.REMOTE_WHITELIST_URL = "https://raw.githubusercontent.com/xichongguo/live-stream/main/whitelist.txt"
+
+        # --- 分类排序权重（数字越小越靠前） ---
+        self.CATEGORY_ORDER = {
+            "本地节目": 0,
+            "咪咕央视": 1,
+            "咪咕卫视": 2,
+            "咪咕其他": 3,
+            "央视频道": 4,
+            "卫视频道": 5,
+            "少儿频道": 6,
+            "体育频道": 7,
+            "地方频道": 8,
+            "电影/电视剧": 9,
+            "其他频道": 10,
+        }
 
     def classify_channel(self, channel_name, default_group="其他频道"):
         """
-        全局智能分类函数：根据频道名称自动归类
+        全局智能分类函数：根据频道名称自动归类（不含咪咕分类）
         """
         name_upper = channel_name.upper()
-        
+
         # 1. 央视频道
         if re.search(r'CCTV|中央', name_upper):
             return "央视频道"
-        
-        # 2. 卫视频道 (包含各省级卫视)
+
+        # 2. 卫视频道
         if "卫视" in channel_name:
             return "卫视频道"
-            
-        # 3. 省级/地方频道 (根据常见省份关键字)
-        provinces = ["北京", "天津", "河北", "山西", "内蒙古", "辽宁", "吉林", "黑龙江", 
-                     "上海", "江苏", "浙江", "安徽", "福建", "江西", "山东", "河南", 
-                     "湖北", "湖南", "广东", "广西", "海南", "重庆", "四川", "贵州", 
+
+        # 3. 少儿/动画
+        if any(keyword in channel_name for keyword in ["少儿", "卡通", "动画", "童"]):
+            return "少儿频道"
+
+        # 4. 体育频道
+        if any(keyword in channel_name for keyword in ["体育", "赛事", "ESPN"]):
+            return "体育频道"
+
+        # 5. 省级/地方频道
+        provinces = ["北京", "天津", "河北", "山西", "内蒙古", "辽宁", "吉林", "黑龙江",
+                     "上海", "江苏", "浙江", "安徽", "福建", "江西", "山东", "河南",
+                     "湖北", "湖南", "广东", "广西", "海南", "重庆", "四川", "贵州",
                      "云南", "西藏", "陕西", "甘肃", "青海", "宁夏", "新疆"]
         for prov in provinces:
             if prov in channel_name:
                 return "地方频道"
-                
-        # 4. 电影/电视剧
+
+        # 6. 电影/电视剧
         if any(keyword in channel_name for keyword in ["电影", "影院", "剧场", "影视"]):
             return "电影/电视剧"
-            
-        # 5. 体育频道
-        if any(keyword in channel_name for keyword in ["体育", "赛事", "CCTV5", "CCTV5+", "ESPN"]):
-            return "体育频道"
-            
-        # 6. 少儿/动画
-        if any(keyword in channel_name for keyword in ["少儿", "卡通", "动画", "童"]):
-            return "少儿频道"
 
         # 如果都不匹配，返回默认分类
         return default_group
+
+    def classify_migu_channel(self, channel_name):
+        """
+        咪咕源专用分类：咪咕央视、咪咕卫视、咪咕其他
+        """
+        name_upper = channel_name.upper()
+        if re.search(r'CCTV|中央', name_upper):
+            return "咪咕央视"
+        if "卫视" in channel_name:
+            return "咪咕卫视"
+        return "咪咕其他"
 
     def fetch_movie_channels(self):
         """ 获取电影电视剧轮播源 """
@@ -85,7 +111,7 @@ class IPTVUpdater:
             if response.status_code != 200:
                 print(f"❌ 获取电影源失败，状态码: {response.status_code}")
                 return channels
-            
+
             content = response.text
             lines = content.splitlines()
             i = 0
@@ -94,23 +120,20 @@ class IPTVUpdater:
                 if line.startswith("#EXTINF"):
                     try:
                         channel_name = ""
-                        # 提取名称
                         name_match = re.search(r'tvg-name="([^"]+)"', line)
                         if name_match:
                             channel_name = name_match.group(1).strip()
                         else:
                             comma_split = line.split(',', 1)
                             if len(comma_split) == 2:
-                                channel_name = comma_split[1].strip() # 修复：从列表中提取字符串
-                        
+                                channel_name = comma_split[1].strip()
+
                         if not channel_name:
                             i += 1
                             continue
 
-                        # 使用智能分类
                         category = self.classify_channel(channel_name, "电影/电视剧")
 
-                        # 获取 URL (下一行)
                         if i + 1 < len(lines):
                             url = lines[i + 1].strip()
                             if url.startswith('http'):
@@ -123,12 +146,12 @@ class IPTVUpdater:
                 i += 1
         except Exception as e:
             print(f"❌ 获取/解析电影源异常: {e}")
-        
+
         print(f"✅ 成功获取 {len(channels)} 个电影/电视剧频道")
         return channels
 
     def fetch_custom_channels(self):
-        """ 获取自定义视频源 (已修复分类逻辑) """
+        """ 获取自定义视频源 """
         print(f"🔗 正在获取【自定义视频源】...")
         channels = []
         try:
@@ -145,21 +168,18 @@ class IPTVUpdater:
                 if line.startswith("#EXTINF"):
                     try:
                         channel_name = ""
-                        # 提取名称
                         name_match = re.search(r'tvg-name="([^"]+)"', line)
                         if name_match:
                             channel_name = name_match.group(1).strip()
                         else:
                             comma_split = line.split(',', 1)
                             if len(comma_split) == 2:
-                                channel_name = comma_split[1].strip() # 修复：从列表中提取字符串
-                        
+                                channel_name = comma_split[1].strip()
+
                         if not channel_name:
                             i += 1
                             continue
 
-                        # 【核心修改】：不再盲目使用源文件的 group-title，而是调用智能分类函数
-                        # 如果智能分类没匹配到，再尝试读取源文件的 group-title，最后兜底为“其他频道”
                         smart_category = self.classify_channel(channel_name, None)
                         if smart_category:
                             category = smart_category
@@ -167,7 +187,6 @@ class IPTVUpdater:
                             group_match = re.search(r'group-title="([^"]+)"', line)
                             category = group_match.group(1) if group_match else "其他频道"
 
-                        # 获取 URL (下一行)
                         if i + 1 < len(lines):
                             url = lines[i + 1].strip()
                             if url.startswith('http'):
@@ -180,7 +199,7 @@ class IPTVUpdater:
                 i += 1
         except Exception as e:
             print(f"❌ 获取/解析自定义源异常: {e}")
-        
+
         print(f"✅ 成功获取 {len(channels)} 个自定义频道")
         return channels
 
@@ -250,7 +269,7 @@ class IPTVUpdater:
                                 title = "南充综合"
                             elif "科教生活" in title:
                                 title = "南充科教生活"
-                            
+
                             stream_id = item.get("liveStreamId")
                             if not stream_id:
                                 stream_url = item.get("liveStream", "")
@@ -260,7 +279,7 @@ class IPTVUpdater:
                                         stream_id = path_parts[-2]
                             if not stream_id:
                                 continue
-                            
+
                             path = f"/live/{stream_id}/playlist.m3u8"
                             ws_secret = self.generate_signature(path, expire_time)
                             final_url = f"{self.BASE_DOMAIN}{path}?wsSecret={ws_secret}&wsTime={expire_time}"
@@ -275,6 +294,7 @@ class IPTVUpdater:
         return channels
 
     def fetch_migu_channels(self):
+        """ 获取咪咕直播源，使用咪咕专用分类 """
         print(f"📡 正在获取【咪咕/外部】直播源...")
         channels = []
         try:
@@ -282,7 +302,7 @@ class IPTVUpdater:
             if response.status_code != 200:
                 print(f"❌ 获取远程列表失败，状态码: {response.status_code}")
                 return channels
-            
+
             content = response.text
             lines = content.splitlines()
             i = 0
@@ -297,14 +317,14 @@ class IPTVUpdater:
                         else:
                             comma_split = line.split(',', 1)
                             if len(comma_split) == 2:
-                                channel_name = comma_split[1].strip() # 修复：从列表中提取字符串
-                        
+                                channel_name = comma_split[1].strip()
+
                         if not channel_name:
                             i += 1
                             continue
-                        
-                        # 咪咕源也统一使用智能分类
-                        category = self.classify_channel(channel_name, "其他频道")
+
+                        # 咪咕源使用专用分类函数
+                        category = self.classify_migu_channel(channel_name)
 
                         if i + 1 < len(lines):
                             url_line = lines[i + 1].strip()
@@ -318,15 +338,15 @@ class IPTVUpdater:
                 i += 1
         except Exception as e:
             print(f"❌ 获取/解析咪咕源异常: {e}")
-        
-        print(f"✅ 成功获取 {len(channels)} 个咪咕/外部频道")
+
+        print(f"✅ 成功获取 {len(channels)} 个咪咕频道")
         return channels
 
     def load_whitelist(self):
-        """ 加载本地及远程白名单 """
+        """ 加载本地及远程白名单，统一归类为【本地节目】 """
         print(f"📝 正在加载白名单 (本地 & 远程)...")
         channels = []
-        
+
         # 1. 加载本地 whitelist.txt
         local_file = "whitelist.txt"
         if os.path.exists(local_file):
@@ -343,7 +363,7 @@ class IPTVUpdater:
                         if line.startswith("#EXTINF"):
                             parts = line.split(',', 1)
                             if len(parts) == 2:
-                                name = parts[1].strip() # 修复：从列表中提取字符串
+                                name = parts[1].strip()
                             if i + 1 < len(lines):
                                 next_line = lines[i + 1].strip()
                                 if next_line.startswith('http'):
@@ -353,17 +373,16 @@ class IPTVUpdater:
                         else:
                             if ',' in line:
                                 parts = line.split(',', 1)
-                                name = parts[0].strip() # 修复：从列表中提取字符串
-                                url = parts[1].strip() # 修复：从列表中提取字符串
+                                name = parts[0].strip()
+                                url = parts[1].strip()
                         i += 1
                         if name and url and urlparse(url).scheme in ['http', 'https']:
-                            # 白名单也使用智能分类
-                            category = self.classify_channel(name, '本地节目')
-                            channels.append((name, url, category))
+                            # 白名单统一归类为本地节目
+                            channels.append((name, url, '本地节目'))
             except Exception as e:
                 print(f"❌ 读取本地白名单文件异常: {e}")
         else:
-            print("⚠️ 未找到本地 whitelist.txt 文件，跳过。") # 修复：删除了非法标签
+            print("⚠️ 未找到本地 whitelist.txt 文件，跳过。")
 
         # 2. 加载远程白名单
         try:
@@ -375,28 +394,45 @@ class IPTVUpdater:
                 if not line or line.startswith('#') or ',' not in line:
                     continue
                 parts = line.split(',', 1)
-                name = parts[0].strip() # 修复：从列表中提取字符串
-                url = parts[1].strip() # 修复：从列表中提取字符串
+                name = parts[0].strip()
+                url = parts[1].strip()
                 if name and url and urlparse(url).scheme in ['http', 'https']:
-                    category = self.classify_channel(name, '本地节目')
-                    channels.append((name, url, category))
+                    # 远程白名单也统一归类为本地节目
+                    channels.append((name, url, '本地节目'))
         except Exception as e:
             print(f"❌ 获取远程白名单异常: {e}")
-        
+
         print(f"✅ 成功加载 {len(channels)} 个白名单频道")
         return channels
 
+    def sort_channels(self, all_channels):
+        """ 按分类权重排序，同分类内保持原有顺序 """
+        return sorted(all_channels, key=lambda x: self.CATEGORY_ORDER.get(x[2], 99))
+
     def save_to_m3u8(self, all_channels):
-        """ 保存为 M3U8 文件 """
+        """ 保存为 M3U8 文件（按分类排序输出） """
         if not os.path.exists(self.OUTPUT_DIR):
             os.makedirs(self.OUTPUT_DIR)
+
+        # 先排序
+        sorted_channels = self.sort_channels(all_channels)
+
         with open(self.OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.write("#EXTM3U\n")
-            for name, url, category in all_channels:
+            for name, url, category in sorted_channels:
                 f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{category}",{name}\n')
                 f.write(f'{url}\n')
-        print(f"\n🎉 任务完成！共生成 {len(all_channels)} 个频道。")
+
+        # 打印分类统计
+        category_count = {}
+        for _, _, cat in sorted_channels:
+            category_count[cat] = category_count.get(cat, 0) + 1
+
+        print(f"\n🎉 任务完成！共生成 {len(sorted_channels)} 个频道。")
         print(f"📄 文件已保存至: {self.OUTPUT_FILE}")
+        print(f"📊 分类统计:")
+        for cat in sorted(category_count.keys(), key=lambda x: self.CATEGORY_ORDER.get(x, 99)):
+            print(f"   {cat}: {category_count[cat]} 个")
 
     def run(self):
         print("🔄 开始更新直播源...")
@@ -408,7 +444,7 @@ class IPTVUpdater:
         all_channels.extend(self.fetch_custom_channels())
         all_channels.extend(self.fetch_migu_channels())
         all_channels.extend(self.load_whitelist())
-        # 保存文件
+        # 保存文件（内部自动排序）
         self.save_to_m3u8(all_channels)
 
 if __name__ == "__main__":
