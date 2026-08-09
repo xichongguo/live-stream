@@ -396,29 +396,24 @@ class IPTVUpdater:
         return channels
 
     def fetch_filtered_channels(self):
-        """
-        新增方法：从指定源获取数据，并根据关键词和规则进行筛选
+        """ 新增方法：从指定源获取数据，并根据关键词和规则进行筛选
         融合用户提供的 fetch_and_filter_m3u 逻辑
         """
         print(f"🔍 正在从 {self.FILTER_SOURCE_URL} 获取并筛选频道...")
         channels = []
         try:
             response = requests.get(self.FILTER_SOURCE_URL, timeout=15)
-            response.encoding = 'utf-8'  # 防止中文乱码
+            response.encoding = 'utf-8' # 防止中文乱码
             lines = response.text.splitlines()
-
             current_group_name = ""
-
             for line in lines:
                 line = line.strip()
                 if not line or line.startswith("#"):
                     continue
-
                 # --- 核心逻辑：解析 txt 格式 (名称,地址) ---
                 parts = line.split(",", 1)
                 if len(parts) != 2:
                     continue
-
                 channel_name, channel_url = parts[0].strip(), parts[1].strip()
 
                 # A. 识别分组标题 (例如: "广东咪咕,#genre#")
@@ -441,10 +436,16 @@ class IPTVUpdater:
 
                 # 如果当前处于咪咕分组下，或者频道名包含关键词，则保留
                 if is_migu_group or is_keyword_match:
-                    # 使用智能分类函数确定频道分类
-                    category = self.classify_channel(channel_name, current_group_name)
+                    # --- 修改开始 ---
+                    # 核心修改：如果频道属于咪咕分组，则直接使用分组名作为分类，
+                    # 从而避免 classify_channel 函数将其中的CCTV频道重新分类。
+                    if is_migu_group:
+                        category = current_group_name
+                    else:
+                        # 对于非咪咕分组但匹配关键词的频道，仍使用智能分类
+                        category = self.classify_channel(channel_name, current_group_name)
+                    # --- 修改结束 ---
                     channels.append((channel_name, channel_url, category))
-
             print(f"✅ 成功筛选出 {len(channels)} 个频道")
         except Exception as e:
             print(f"❌ 获取或筛选频道时发生错误: {e}")
