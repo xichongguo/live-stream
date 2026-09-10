@@ -1,8 +1,8 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=2ffab4104ade4bdcc5bb30fb845d198a&wsTime=1789127603
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=099268f18a7c685316b3dab6603318be&wsTime=1789144971
 #EXTINF:-1 tvg-name="南充科教生活" group-title="本地节目",南充科教生活
-https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=d4127696db0cd8af0b1bb81e8358f4c9&wsTime=1789127603
+https://ncpull.cnncw.cn/live/2be77c90019c10009158ac9400000000/playlist.m3u8?wsSecret=5c94fdafac5bf362ab50fc401a736bf0&wsTime=1789144971
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://bl.xichongtv.cn/xcrm2026/ZHPD0724.m3u8?auth_key=1784864504-0-0-e2bb29f014c4f5b19cefb6b59648a2c1
 #EXTINF:-1 tvg-name="直播南充" group-title="本地节目",直播南充
