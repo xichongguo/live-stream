@@ -7,6 +7,8 @@
 
 #川超,https://mmslivef.scgczm.com/live/17271_6M264hdr1080.m3u8?auth_key=1783739405-0-0-7f0dc0ec6d14db0097db539096a1811f
 充超,https://yslive.ysxtv.cn/20261001/20261001.m3u8?auth_key=1790677924-0-0-b216ae49390c2f6bd4367c0fdadf36ad
+充超,https://rmt.cnncw.cn/file/N1300/2026/09/18/80ed212c-84c4-42fd-a591-2617f7c5503f.mp4
+
 直播南充,https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 直播南充,https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
 📺本地视频，#类型#
