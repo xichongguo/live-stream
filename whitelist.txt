@@ -8,7 +8,9 @@
 #川超,https://mmslivef.scgczm.com/live/17271_6M264hdr1080.m3u8?auth_key=1783739405-0-0-7f0dc0ec6d14db0097db539096a1811f
 充超,https://yslive.ysxtv.cn/20261001/20261001.m3u8?auth_key=1790677924-0-0-b216ae49390c2f6bd4367c0fdadf36ad
 充超,https://rmt.cnncw.cn/file/N1300/2026/09/18/80ed212c-84c4-42fd-a591-2617f7c5503f.mp4
-
+充超营山VS西充,https://rmt.cnncw.cn/file/N1300/2026/10/01/c1fbcb4a-4d64-4c39-8cff-6290b50db1a4.mp4
+充超仪陇VS南部,https://rmt.cnncw.cn/file/N1300/2026/10/01/f240adf0-660b-42cc-816d-aa957ad520a3.mp4
+充超高坪VS顺庆,https://rmt.cnncw.cn/file/N1300/2026/09/25/f489ad16-9a32-4f51-99f9-f6904b4eb771.mp4
 直播南充,https://zbs.cnncw.cn:443/live2/cjrysj20242.m3u8
 直播南充,https://zbs.cnncw.cn/live2/cjrysj20242.m3u8
 📺本地视频，#类型#
