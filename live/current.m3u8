@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=5a00a3b70d699b0c9e1d1e69d4fe7f1e&wsTime=1795695033
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=c2ab1953973a2129ad6aa2431723eba2&wsTime=1795714794
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://bl.xichongtv.cn/xcrm2026/ZHPD0724.m3u8?auth_key=1784864504-0-0-e2bb29f014c4f5b19cefb6b59648a2c1
 #EXTINF:-1 tvg-name="充超" group-title="本地节目",充超
@@ -3541,6 +3541,10 @@ http://mg.cttv.vip/673168256
 http://mg.cttv.vip/608807419
 #EXTINF:-1 tvg-name="CCTV4美洲" group-title="央视频道",CCTV4美洲
 http://mg.cttv.vip/608807416
+#EXTINF:-1 tvg-name="星空卫视频道" group-title="卫视频道",星空卫视频道
+http://122.224.58.42:85/tsfile/live/1024_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="星空卫视频道" group-title="卫视频道",星空卫视频道
+http://171.213.220.107:8800/udp/239.93.0.156:2193
 #EXTINF:-1 tvg-name="北京卫视" group-title="卫视频道",北京卫视
 http://103.72.172.253:8041/hls/345649569/index.m3u8
 #EXTINF:-1 tvg-name="大湾区卫视(国际版)" group-title="卫视频道",大湾区卫视(国际版)
@@ -3777,6 +3781,12 @@ http://198.204.228.26/live/gdty.m3u8
 http://mg.cttv.vip/646596895
 #EXTINF:-1 tvg-name="陕西体育休闲频道" group-title="体育频道",陕西体育休闲频道
 http://mg.cttv.vip/956909356
+#EXTINF:-1 tvg-name="云南虫谷频道" group-title="地方频道",云南虫谷频道
+http://cfss.cc/cdn/huya/11352898.flv
+#EXTINF:-1 tvg-name="西藏小子" group-title="地方频道",西藏小子
+https://vip.ffzy-play7.com/20221224/9675_24c6d3c7/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="上海正午2上海骑士" group-title="地方频道",上海正午2上海骑士
+https://vip.ffzy-play7.com/20230131/12903_9b7878c4/2000k/hls/mixed.m3u8
 #EXTINF:-1 tvg-name="广东新闻" group-title="地方频道",广东新闻
 http://107.150.60.122/live/gdxw.m3u8
 #EXTINF:-1 tvg-name="广东新闻" group-title="地方频道",广东新闻
@@ -3893,304 +3903,792 @@ http://wfenf.x3322.net:7788/962045226
 http://wfenf.x3322.net:7788/962067526
 #EXTINF:-1 tvg-name="山东教育" group-title="地方频道",山东教育
 http://wfenf.x3322.net:7788/609154353
-#EXTINF:-1 tvg-name="亮剑" group-title="电影/电视剧",亮剑
-http://8.155.43.98:35455/huya/30080238
-#EXTINF:-1 tvg-name="民兵葛二蛋" group-title="电影/电视剧",民兵葛二蛋
-http://8.155.43.98:35455/huya/11602072
-#EXTINF:-1 tvg-name="鹿鼎记" group-title="电影/电视剧",鹿鼎记
-http://8.155.43.98:35455/huya/23650774
-#EXTINF:-1 tvg-name="新鹿鼎记" group-title="电影/电视剧",新鹿鼎记
-http://8.155.43.98:35455/huya/11342388
-#EXTINF:-1 tvg-name="三国演义" group-title="电影/电视剧",三国演义
-http://8.155.43.98:35455/huya/11602081
-#EXTINF:-1 tvg-name="新三国演义" group-title="电影/电视剧",新三国演义
-http://8.155.43.98:35455/huya/11352944
-#EXTINF:-1 tvg-name="水浒传" group-title="电影/电视剧",水浒传
-http://8.155.43.98:35455/huya/26355860
-#EXTINF:-1 tvg-name="新水浒传" group-title="电影/电视剧",新水浒传
-http://8.155.43.98:35455/huya/11342384
-#EXTINF:-1 tvg-name="西游记" group-title="电影/电视剧",西游记
-http://8.155.43.98:35455/huya/20985836
+#EXTINF:-1 tvg-name="成龙" group-title="电影/电视剧",成龙
+http://cfss.cc/cdn/huya/11342386.flv
+#EXTINF:-1 tvg-name="黄渤" group-title="电影/电视剧",黄渤
+http://cfss.cc/cdn/huya/11352876.flv
+#EXTINF:-1 tvg-name="沈腾" group-title="电影/电视剧",沈腾
+http://cfss.cc/cdn/huya/11601968.flv
+#EXTINF:-1 tvg-name="王晶" group-title="电影/电视剧",王晶
+http://cfss.cc/cdn/huya/11602058.flv
+#EXTINF:-1 tvg-name="周星驰" group-title="电影/电视剧",周星驰
+http://cfss.cc/cdn/huya/11336587.flv
+#EXTINF:-1 tvg-name="李连杰" group-title="电影/电视剧",李连杰
+http://cfss.cc/cdn/huya/11342390.flv
+#EXTINF:-1 tvg-name="刘德华" group-title="电影/电视剧",刘德华
+http://cfss.cc/cdn/huya/11342424.flv
+#EXTINF:-1 tvg-name="周润发" group-title="电影/电视剧",周润发
+http://cfss.cc/cdn/huya/11342387.flv
+#EXTINF:-1 tvg-name="庆余年" group-title="电影/电视剧",庆余年
+http://cfss.cc/cdn/huya/11352960.flv
+#EXTINF:-1 tvg-name="陈情令" group-title="电影/电视剧",陈情令
+http://cfss.cc/cdn/huya/29465862.flv
+#EXTINF:-1 tvg-name="古天乐" group-title="电影/电视剧",古天乐
+http://cfss.cc/cdn/huya/29982675.flv
+#EXTINF:-1 tvg-name="甄子丹" group-title="电影/电视剧",甄子丹
+http://cfss.cc/cdn/huya/11352935.flv
 #EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
-http://8.155.43.98:35455/huya/20432237
-#EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
-http://8.155.43.98:35455/huya/30080146
-#EXTINF:-1 tvg-name="大宋提刑官" group-title="电影/电视剧",大宋提刑官
-http://8.155.43.98:35455/huya/26355856
-#EXTINF:-1 tvg-name="家有儿女" group-title="电影/电视剧",家有儿女
-http://8.155.43.98:35455/huya/11352872
-#EXTINF:-1 tvg-name="问心" group-title="电影/电视剧",问心
-http://8.155.43.98:35455/huya/11352890
-#EXTINF:-1 tvg-name="你是我的荣耀" group-title="电影/电视剧",你是我的荣耀
-http://8.155.43.98:35455/huya/11352920
-#EXTINF:-1 tvg-name="与凤行" group-title="电影/电视剧",与凤行
-http://8.155.43.98:35455/huya/26355866
-#EXTINF:-1 tvg-name="我和僵尸有个约会" group-title="电影/电视剧",我和僵尸有个约会
-http://8.155.43.98:35455/huya/21059571
-#EXTINF:-1 tvg-name="美人心计" group-title="电影/电视剧",美人心计
-http://8.155.43.98:35455/huya/26355837
-#EXTINF:-1 tvg-name="延禧攻略" group-title="电影/电视剧",延禧攻略
-http://8.155.43.98:35455/huya/26355864
-#EXTINF:-1 tvg-name="读心专家" group-title="电影/电视剧",读心专家
-http://8.155.43.98:35455/huya/30590779
-#EXTINF:-1 tvg-name="如懿传" group-title="电影/电视剧",如懿传
-http://8.155.43.98:35455/huya/29465868
-#EXTINF:-1 tvg-name="爱情公寓" group-title="电影/电视剧",爱情公寓
-http://8.155.43.98:35455/huya/11336726
-#EXTINF:-1 tvg-name="还珠格格" group-title="电影/电视剧",还珠格格
-http://8.155.43.98:35455/huya/30080241
-#EXTINF:-1 tvg-name="创世纪" group-title="电影/电视剧",创世纪
-http://8.155.43.98:35455/huya/29465852
-#EXTINF:-1 tvg-name="笑傲江湖" group-title="电影/电视剧",笑傲江湖
-http://8.155.43.98:35455/huya/26355790
-#EXTINF:-1 tvg-name="倚天屠龙记" group-title="电影/电视剧",倚天屠龙记
-http://8.155.43.98:35455/huya/11342403
-#EXTINF:-1 tvg-name="雪山飞狐" group-title="电影/电视剧",雪山飞狐
-http://8.155.43.98:35455/huya/23734176
-#EXTINF:-1 tvg-name="沈腾电影" group-title="电影/电视剧",沈腾电影
-http://8.155.43.98:35455/huya/11601968
-#EXTINF:-1 tvg-name="黄渤电影" group-title="电影/电视剧",黄渤电影
-http://8.155.43.98:35455/huya/11352876
-#EXTINF:-1 tvg-name="徐峥电影" group-title="电影/电视剧",徐峥电影
-http://8.155.43.98:35455/huya/11602043
-#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
-http://8.155.43.98:35455/huya/11342412
-#EXTINF:-1 tvg-name="亮剑" group-title="电影/电视剧",亮剑
-http://222.186.39.21:35466/huya/30080238
-#EXTINF:-1 tvg-name="民兵葛二蛋" group-title="电影/电视剧",民兵葛二蛋
-http://222.186.39.21:35466/huya/11602072
+http://cfss.cc/cdn/huya/23749096.flv
 #EXTINF:-1 tvg-name="鹿鼎记" group-title="电影/电视剧",鹿鼎记
-http://222.186.39.21:35466/huya/23650774
-#EXTINF:-1 tvg-name="新鹿鼎记" group-title="电影/电视剧",新鹿鼎记
-http://222.186.39.21:35466/huya/11342388
-#EXTINF:-1 tvg-name="三国演义" group-title="电影/电视剧",三国演义
-http://222.186.39.21:35466/huya/11602081
-#EXTINF:-1 tvg-name="新三国演义" group-title="电影/电视剧",新三国演义
-http://222.186.39.21:35466/huya/11352944
-#EXTINF:-1 tvg-name="水浒传" group-title="电影/电视剧",水浒传
-http://222.186.39.21:35466/huya/26355860
-#EXTINF:-1 tvg-name="新水浒传" group-title="电影/电视剧",新水浒传
-http://222.186.39.21:35466/huya/11342384
-#EXTINF:-1 tvg-name="西游记" group-title="电影/电视剧",西游记
-http://222.186.39.21:35466/huya/20985836
-#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
-http://222.186.39.21:35466/huya/20432237
+http://cfss.cc/cdn/huya/23865080.flv
 #EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
-http://222.186.39.21:35466/huya/30080146
-#EXTINF:-1 tvg-name="大宋提刑官" group-title="电影/电视剧",大宋提刑官
-http://222.186.39.21:35466/huya/26355856
-#EXTINF:-1 tvg-name="家有儿女" group-title="电影/电视剧",家有儿女
-http://222.186.39.21:35466/huya/11352872
-#EXTINF:-1 tvg-name="问心" group-title="电影/电视剧",问心
-http://222.186.39.21:35466/huya/11352890
-#EXTINF:-1 tvg-name="你是我的荣耀" group-title="电影/电视剧",你是我的荣耀
-http://222.186.39.21:35466/huya/11352920
-#EXTINF:-1 tvg-name="与凤行" group-title="电影/电视剧",与凤行
-http://222.186.39.21:35466/huya/26355866
-#EXTINF:-1 tvg-name="我和僵尸有个约会" group-title="电影/电视剧",我和僵尸有个约会
-http://222.186.39.21:35466/huya/21059571
-#EXTINF:-1 tvg-name="美人心计" group-title="电影/电视剧",美人心计
-http://222.186.39.21:35466/huya/26355837
-#EXTINF:-1 tvg-name="延禧攻略" group-title="电影/电视剧",延禧攻略
-http://222.186.39.21:35466/huya/26355864
-#EXTINF:-1 tvg-name="读心专家" group-title="电影/电视剧",读心专家
-http://222.186.39.21:35466/huya/30590779
-#EXTINF:-1 tvg-name="如懿传" group-title="电影/电视剧",如懿传
-http://222.186.39.21:35466/huya/29465868
-#EXTINF:-1 tvg-name="爱情公寓" group-title="电影/电视剧",爱情公寓
-http://222.186.39.21:35466/huya/11336726
-#EXTINF:-1 tvg-name="还珠格格" group-title="电影/电视剧",还珠格格
-http://222.186.39.21:35466/huya/30080241
+http://cfss.cc/cdn/huya/23864973.flv
+#EXTINF:-1 tvg-name="洗冤录" group-title="电影/电视剧",洗冤录
+http://cfss.cc/cdn/huya/23903130.flv
 #EXTINF:-1 tvg-name="创世纪" group-title="电影/电视剧",创世纪
-http://222.186.39.21:35466/huya/29465852
-#EXTINF:-1 tvg-name="笑傲江湖" group-title="电影/电视剧",笑傲江湖
-http://222.186.39.21:35466/huya/26355790
-#EXTINF:-1 tvg-name="倚天屠龙记" group-title="电影/电视剧",倚天屠龙记
-http://222.186.39.21:35466/huya/11342403
-#EXTINF:-1 tvg-name="雪山飞狐" group-title="电影/电视剧",雪山飞狐
-http://222.186.39.21:35466/huya/23734176
-#EXTINF:-1 tvg-name="沈腾电影" group-title="电影/电视剧",沈腾电影
-http://222.186.39.21:35466/huya/11601968
-#EXTINF:-1 tvg-name="黄渤电影" group-title="电影/电视剧",黄渤电影
-http://222.186.39.21:35466/huya/11352876
-#EXTINF:-1 tvg-name="徐峥电影" group-title="电影/电视剧",徐峥电影
-http://222.186.39.21:35466/huya/11602043
-#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
-http://222.186.39.21:35466/huya/11342412
+http://cfss.cc/cdn/huya/23749083.flv
+#EXTINF:-1 tvg-name="大时代" group-title="电影/电视剧",大时代
+http://cfss.cc/cdn/huya/23865161.flv
+#EXTINF:-1 tvg-name="柳舟计" group-title="电影/电视剧",柳舟计
+http://cfss.cc/cdn/huya/23860039.flv
+#EXTINF:-1 tvg-name="大秦赋" group-title="电影/电视剧",大秦赋
+http://cfss.cc/cdn/huya/23903130.flv
+#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
+http://cfss.cc/cdn/huya/29465849.flv
+#EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
+http://cfss.cc/cdn/huya/29465848.flv
+#EXTINF:-1 tvg-name="洗冤录" group-title="电影/电视剧",洗冤录
+http://cfss.cc/cdn/huya/29465851.flv
+#EXTINF:-1 tvg-name="创世纪" group-title="电影/电视剧",创世纪
+http://cfss.cc/cdn/huya/29465852.flv
+#EXTINF:-1 tvg-name="洪金宝" group-title="电影/电视剧",洪金宝
+http://cfss.cc/cdn/huya/11279251.flv
+#EXTINF:-1 tvg-name="埋堆堆" group-title="电影/电视剧",埋堆堆
+http://cfss.cc/cdn/huya/23903123.flv
+#EXTINF:-1 tvg-name="埋堆堆2" group-title="电影/电视剧",埋堆堆2
+http://cfss.cc/cdn/huya/23864973.flv
+#EXTINF:-1 tvg-name="王晶电影" group-title="电影/电视剧",王晶电影
+http://cfss.cc/cdn/huya/11602058.flv
+#EXTINF:-1 tvg-name="功夫电影" group-title="电影/电视剧",功夫电影
+http://cfss.cc/cdn/huya/11352941.flv
+#EXTINF:-1 tvg-name="猫和老鼠" group-title="电影/电视剧",猫和老鼠
+http://cfss.cc/cdn/huya/11352879.flv
+#EXTINF:-1 tvg-name="强森电影" group-title="电影/电视剧",强森电影
+http://cfss.cc/cdn/huya/21059581.flv
+#EXTINF:-1 tvg-name="金庸武侠" group-title="电影/电视剧",金庸武侠
+http://cfss.cc/cdn/huya/11342435.flv
+#EXTINF:-1 tvg-name="永夜星河" group-title="电影/电视剧",永夜星河
+http://cfss.cc/cdn/huya/23734169.flv
+#EXTINF:-1 tvg-name="电影_武侠" group-title="电影/电视剧",电影_武侠
+http://cfss.cc/cdn/huya/11342427.flv
+#EXTINF:-1 tvg-name="电影_玄幻" group-title="电影/电视剧",电影_玄幻
+http://cfss.cc/cdn/huya/11342414.flv
+#EXTINF:-1 tvg-name="电影_国产" group-title="电影/电视剧",电影_国产
+http://cfss.cc/cdn/huya/11352973.flv
+#EXTINF:-1 tvg-name="电影_洪金宝" group-title="电影/电视剧",电影_洪金宝
+http://cfss.cc/cdn/huya/11279251.flv
+#EXTINF:-1 tvg-name="电影_斯坦森" group-title="电影/电视剧",电影_斯坦森
+http://cfss.cc/cdn/huya/21059588.flv
+#EXTINF:-1 tvg-name="电影_功夫片" group-title="电影/电视剧",电影_功夫片
+http://cfss.cc/cdn/huya/11352941.flv
+#EXTINF:-1 tvg-name="剧集_老三国" group-title="电影/电视剧",剧集_老三国
+http://cfss.cc/cdn/huya/11602081.flv
+#EXTINF:-1 tvg-name="猫和老鼠动漫" group-title="电影/电视剧",猫和老鼠动漫
+http://cfss.cc/cdn/huya/11352879.flv
+#EXTINF:-1 tvg-name="电影_不挤影院" group-title="电影/电视剧",电影_不挤影院
+http://cfss.cc/cdn/huya/11352897.flv
+#EXTINF:-1 tvg-name="电影_许氏三杰" group-title="电影/电视剧",电影_许氏三杰
+http://cfss.cc/cdn/huya/11602033.flv
+#EXTINF:-1 tvg-name="电影_高分动作" group-title="电影/电视剧",电影_高分动作
+http://cfss.cc/cdn/huya/11352884.flv
+#EXTINF:-1 tvg-name="电影_欢笑影院" group-title="电影/电视剧",电影_欢笑影院
+http://cfss.cc/cdn/huya/11352894.flv
+#EXTINF:-1 tvg-name="电影_国产悬疑" group-title="电影/电视剧",电影_国产悬疑
+http://cfss.cc/cdn/huya/11342395.flv
+#EXTINF:-1 tvg-name="电影_黑帮斗争" group-title="电影/电视剧",电影_黑帮斗争
+http://cfss.cc/cdn/huya/11342419.flv
+#EXTINF:-1 tvg-name="电影_喜乐影院" group-title="电影/电视剧",电影_喜乐影院
+http://cfss.cc/cdn/huya/21059580.flv
 #EXTINF:-1 tvg-name="亮剑" group-title="电影/电视剧",亮剑
-http://39.153.130.167:35455/huya/30080238
-#EXTINF:-1 tvg-name="民兵葛二蛋" group-title="电影/电视剧",民兵葛二蛋
-http://39.153.130.167:35455/huya/11602072
-#EXTINF:-1 tvg-name="鹿鼎记" group-title="电影/电视剧",鹿鼎记
-http://39.153.130.167:35455/huya/23650774
-#EXTINF:-1 tvg-name="新鹿鼎记" group-title="电影/电视剧",新鹿鼎记
-http://39.153.130.167:35455/huya/11342388
-#EXTINF:-1 tvg-name="三国演义" group-title="电影/电视剧",三国演义
-http://39.153.130.167:35455/huya/11602081
-#EXTINF:-1 tvg-name="新三国演义" group-title="电影/电视剧",新三国演义
-http://39.153.130.167:35455/huya/11352944
-#EXTINF:-1 tvg-name="水浒传" group-title="电影/电视剧",水浒传
-http://39.153.130.167:35455/huya/26355860
-#EXTINF:-1 tvg-name="新水浒传" group-title="电影/电视剧",新水浒传
-http://39.153.130.167:35455/huya/11342384
-#EXTINF:-1 tvg-name="西游记" group-title="电影/电视剧",西游记
-http://39.153.130.167:35455/huya/20985836
-#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
-http://39.153.130.167:35455/huya/20432237
-#EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
-http://39.153.130.167:35455/huya/30080146
-#EXTINF:-1 tvg-name="大宋提刑官" group-title="电影/电视剧",大宋提刑官
-http://39.153.130.167:35455/huya/26355856
-#EXTINF:-1 tvg-name="家有儿女" group-title="电影/电视剧",家有儿女
-http://39.153.130.167:35455/huya/11352872
-#EXTINF:-1 tvg-name="问心" group-title="电影/电视剧",问心
-http://39.153.130.167:35455/huya/11352890
-#EXTINF:-1 tvg-name="你是我的荣耀" group-title="电影/电视剧",你是我的荣耀
-http://39.153.130.167:35455/huya/11352920
-#EXTINF:-1 tvg-name="与凤行" group-title="电影/电视剧",与凤行
-http://39.153.130.167:35455/huya/26355866
-#EXTINF:-1 tvg-name="我和僵尸有个约会" group-title="电影/电视剧",我和僵尸有个约会
-http://39.153.130.167:35455/huya/21059571
-#EXTINF:-1 tvg-name="美人心计" group-title="电影/电视剧",美人心计
-http://39.153.130.167:35455/huya/26355837
-#EXTINF:-1 tvg-name="延禧攻略" group-title="电影/电视剧",延禧攻略
-http://39.153.130.167:35455/huya/26355864
-#EXTINF:-1 tvg-name="读心专家" group-title="电影/电视剧",读心专家
-http://39.153.130.167:35455/huya/30590779
-#EXTINF:-1 tvg-name="如懿传" group-title="电影/电视剧",如懿传
-http://39.153.130.167:35455/huya/29465868
-#EXTINF:-1 tvg-name="爱情公寓" group-title="电影/电视剧",爱情公寓
-http://39.153.130.167:35455/huya/11336726
-#EXTINF:-1 tvg-name="还珠格格" group-title="电影/电视剧",还珠格格
-http://39.153.130.167:35455/huya/30080241
-#EXTINF:-1 tvg-name="创世纪" group-title="电影/电视剧",创世纪
-http://39.153.130.167:35455/huya/29465852
-#EXTINF:-1 tvg-name="笑傲江湖" group-title="电影/电视剧",笑傲江湖
-http://39.153.130.167:35455/huya/26355790
-#EXTINF:-1 tvg-name="倚天屠龙记" group-title="电影/电视剧",倚天屠龙记
-http://39.153.130.167:35455/huya/11342403
-#EXTINF:-1 tvg-name="雪山飞狐" group-title="电影/电视剧",雪山飞狐
-http://39.153.130.167:35455/huya/23734176
-#EXTINF:-1 tvg-name="沈腾电影" group-title="电影/电视剧",沈腾电影
-http://39.153.130.167:35455/huya/11601968
-#EXTINF:-1 tvg-name="黄渤电影" group-title="电影/电视剧",黄渤电影
-http://39.153.130.167:35455/huya/11352876
-#EXTINF:-1 tvg-name="徐峥电影" group-title="电影/电视剧",徐峥电影
-http://39.153.130.167:35455/huya/11602043
-#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
-http://39.153.130.167:35455/huya/11342412
-#EXTINF:-1 tvg-name="亮剑" group-title="电影/电视剧",亮剑
-http://live.ottiptv.cc/huya/30080238
-#EXTINF:-1 tvg-name="民兵葛二蛋" group-title="电影/电视剧",民兵葛二蛋
-http://live.ottiptv.cc/huya/11602072
-#EXTINF:-1 tvg-name="鹿鼎记" group-title="电影/电视剧",鹿鼎记
-http://live.ottiptv.cc/huya/23650774
-#EXTINF:-1 tvg-name="新鹿鼎记" group-title="电影/电视剧",新鹿鼎记
-http://live.ottiptv.cc/huya/11342388
-#EXTINF:-1 tvg-name="三国演义" group-title="电影/电视剧",三国演义
-http://live.ottiptv.cc/huya/11602081
-#EXTINF:-1 tvg-name="新三国演义" group-title="电影/电视剧",新三国演义
-http://live.ottiptv.cc/huya/11352944
-#EXTINF:-1 tvg-name="新水浒传" group-title="电影/电视剧",新水浒传
-http://live.ottiptv.cc/huya/11342384
-#EXTINF:-1 tvg-name="封神榜" group-title="电影/电视剧",封神榜
-http://live.ottiptv.cc/huya/20432237
-#EXTINF:-1 tvg-name="寻秦记" group-title="电影/电视剧",寻秦记
-http://live.ottiptv.cc/huya/30080146
-#EXTINF:-1 tvg-name="大宋提刑官" group-title="电影/电视剧",大宋提刑官
-http://live.ottiptv.cc/huya/26355856
-#EXTINF:-1 tvg-name="家有儿女" group-title="电影/电视剧",家有儿女
-http://live.ottiptv.cc/huya/11352872
-#EXTINF:-1 tvg-name="问心" group-title="电影/电视剧",问心
-http://live.ottiptv.cc/huya/11352890
-#EXTINF:-1 tvg-name="你是我的荣耀" group-title="电影/电视剧",你是我的荣耀
-http://live.ottiptv.cc/huya/11352920
-#EXTINF:-1 tvg-name="与凤行" group-title="电影/电视剧",与凤行
-http://live.ottiptv.cc/huya/26355866
-#EXTINF:-1 tvg-name="我和僵尸有个约会" group-title="电影/电视剧",我和僵尸有个约会
-http://live.ottiptv.cc/huya/21059571
-#EXTINF:-1 tvg-name="美人心计" group-title="电影/电视剧",美人心计
-http://live.ottiptv.cc/huya/26355837
-#EXTINF:-1 tvg-name="延禧攻略" group-title="电影/电视剧",延禧攻略
-http://live.ottiptv.cc/huya/26355864
-#EXTINF:-1 tvg-name="读心专家" group-title="电影/电视剧",读心专家
-http://live.ottiptv.cc/huya/30590779
-#EXTINF:-1 tvg-name="如懿传" group-title="电影/电视剧",如懿传
-http://live.ottiptv.cc/huya/29465868
-#EXTINF:-1 tvg-name="爱情公寓" group-title="电影/电视剧",爱情公寓
-http://live.ottiptv.cc/huya/11336726
-#EXTINF:-1 tvg-name="还珠格格" group-title="电影/电视剧",还珠格格
-http://live.ottiptv.cc/huya/30080241
-#EXTINF:-1 tvg-name="创世纪" group-title="电影/电视剧",创世纪
-http://live.ottiptv.cc/huya/29465852
-#EXTINF:-1 tvg-name="笑傲江湖" group-title="电影/电视剧",笑傲江湖
-http://live.ottiptv.cc/huya/26355790
-#EXTINF:-1 tvg-name="倚天屠龙记" group-title="电影/电视剧",倚天屠龙记
-http://live.ottiptv.cc/huya/11342403
-#EXTINF:-1 tvg-name="雪山飞狐" group-title="电影/电视剧",雪山飞狐
-http://live.ottiptv.cc/huya/23734176
-#EXTINF:-1 tvg-name="沈腾电影" group-title="电影/电视剧",沈腾电影
-http://live.ottiptv.cc/huya/11601968
-#EXTINF:-1 tvg-name="黄渤电影" group-title="电影/电视剧",黄渤电影
-http://live.ottiptv.cc/huya/11352876
-#EXTINF:-1 tvg-name="徐峥电影" group-title="电影/电视剧",徐峥电影
-http://live.ottiptv.cc/huya/11602043
-#EXTINF:-1 tvg-name="周星驰电影" group-title="电影/电视剧",周星驰电影
-http://live.ottiptv.cc/huya/11342412
-#EXTINF:-1 tvg-name="林正英电影" group-title="电影/电视剧",林正英电影
-http://8.155.43.98:35455/yy/1351505899
-#EXTINF:-1 tvg-name="狂飙" group-title="电影/电视剧",狂飙
-http://8.155.43.98:35455/yy/1354936131
-#EXTINF:-1 tvg-name="插翅难逃" group-title="电影/电视剧",插翅难逃
-http://8.155.43.98:35455/yy/23402146
-#EXTINF:-1 tvg-name="新白娘子传奇" group-title="电影/电视剧",新白娘子传奇
-http://8.155.43.98:35455/yy/1354490667
-#EXTINF:-1 tvg-name="康熙微服私访记" group-title="电影/电视剧",康熙微服私访记
-http://8.155.43.98:35455/yy/1352811698
-#EXTINF:-1 tvg-name="射雕英雄传83版" group-title="电影/电视剧",射雕英雄传83版
-http://8.155.43.98:35455/yy/1354210357
-#EXTINF:-1 tvg-name="神雕侠侣" group-title="电影/电视剧",神雕侠侣
-http://8.155.43.98:35455/yy/1351762426
-#EXTINF:-1 tvg-name="天龙八部" group-title="电影/电视剧",天龙八部
-http://8.155.43.98:35455/yy/1351814644
-#EXTINF:-1 tvg-name="隋唐英雄传" group-title="电影/电视剧",隋唐英雄传
-http://8.155.43.98:35455/yy/1352475619
-#EXTINF:-1 tvg-name="林正英电影" group-title="电影/电视剧",林正英电影
-http://222.186.39.21:35466/yy/1351505899
-#EXTINF:-1 tvg-name="狂飙" group-title="电影/电视剧",狂飙
-http://222.186.39.21:35466/yy/1354936131
-#EXTINF:-1 tvg-name="插翅难逃" group-title="电影/电视剧",插翅难逃
-http://222.186.39.21:35466/yy/23402146
-#EXTINF:-1 tvg-name="新白娘子传奇" group-title="电影/电视剧",新白娘子传奇
-http://222.186.39.21:35466/yy/1354490667
-#EXTINF:-1 tvg-name="康熙微服私访记" group-title="电影/电视剧",康熙微服私访记
-http://222.186.39.21:35466/yy/1352811698
-#EXTINF:-1 tvg-name="射雕英雄传83版" group-title="电影/电视剧",射雕英雄传83版
-http://222.186.39.21:35466/yy/1354210357
-#EXTINF:-1 tvg-name="神雕侠侣" group-title="电影/电视剧",神雕侠侣
-http://222.186.39.21:35466/yy/1351762426
-#EXTINF:-1 tvg-name="天龙八部" group-title="电影/电视剧",天龙八部
-http://222.186.39.21:35466/yy/1351814644
-#EXTINF:-1 tvg-name="隋唐英雄传" group-title="电影/电视剧",隋唐英雄传
-http://222.186.39.21:35466/yy/1352475619
-#EXTINF:-1 tvg-name="林正英电影" group-title="电影/电视剧",林正英电影
-http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1351505899
-#EXTINF:-1 tvg-name="狂飙" group-title="电影/电视剧",狂飙
-http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1354936131
-#EXTINF:-1 tvg-name="插翅难逃" group-title="电影/电视剧",插翅难逃
-http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/23402146
-#EXTINF:-1 tvg-name="新白娘子传奇" group-title="电影/电视剧",新白娘子传奇
-http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1354490667
-#EXTINF:-1 tvg-name="康熙微服私访记" group-title="电影/电视剧",康熙微服私访记
-http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1352811698
-#EXTINF:-1 tvg-name="射雕英雄传83版" group-title="电影/电视剧",射雕英雄传83版
-http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1354210357
-#EXTINF:-1 tvg-name="神雕侠侣" group-title="电影/电视剧",神雕侠侣
-http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1351762426
-#EXTINF:-1 tvg-name="天龙八部" group-title="电影/电视剧",天龙八部
-http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1351814644
-#EXTINF:-1 tvg-name="隋唐英雄传" group-title="电影/电视剧",隋唐英雄传
-http://shorturl.jxpan.vip:880/r/baoshi_aio/yy/1352475619
+http://cfss.cc/cdn/huya/30080238.flv
+#EXTINF:-1 tvg-name="雪豹" group-title="电影/电视剧",雪豹
+http://cfss.cc/cdn/huya/29580970.flv
+#EXTINF:-1 tvg-name="粤语星爷电影" group-title="电影/电视剧",粤语星爷电影
+http://cfss.cc/cdn/huya/11336587.flv
+#EXTINF:-1 tvg-name="渗透电视轮播" group-title="电影/电视剧",渗透电视轮播
+http://cfss.cc/cdn/huya/30080244.flv
+#EXTINF:-1 tvg-name="放映厅播频道" group-title="电影/电视剧",放映厅播频道
+http://cfss.cc/cdn/huya/11602077.flv
+#EXTINF:-1 tvg-name="刘德华播频道" group-title="电影/电视剧",刘德华播频道
+http://cfss.cc/cdn/huya/11342424.flv
+#EXTINF:-1 tvg-name="许冠英播频道" group-title="电影/电视剧",许冠英播频道
+http://cfss.cc/cdn/huya/11601972.flv
+#EXTINF:-1 tvg-name="李连杰播频道" group-title="电影/电视剧",李连杰播频道
+http://cfss.cc/cdn/huya/11342390.flv
+#EXTINF:-1 tvg-name="甄子丹播频道" group-title="电影/电视剧",甄子丹播频道
+http://cfss.cc/cdn/huya/11352935.flv
+#EXTINF:-1 tvg-name="周润发播频道" group-title="电影/电视剧",周润发播频道
+http://cfss.cc/cdn/huya/11342387.flv
+#EXTINF:-1 tvg-name="周星星播频道" group-title="电影/电视剧",周星星播频道
+http://cfss.cc/cdn/huya/11336587.flv
+#EXTINF:-1 tvg-name="洪金宝播频道" group-title="电影/电视剧",洪金宝播频道
+http://cfss.cc/cdn/huya/11279251.flv
+#EXTINF:-1 tvg-name="梁家辉播频道" group-title="电影/电视剧",梁家辉播频道
+http://cfss.cc/cdn/huya/11342429.flv
+#EXTINF:-1 tvg-name="五福星播频道" group-title="电影/电视剧",五福星播频道
+http://cfss.cc/cdn/huya/11282233.flv
+#EXTINF:-1 tvg-name="古天乐播频道" group-title="电影/电视剧",古天乐播频道
+http://cfss.cc/cdn/huya/11602041.flv
+#EXTINF:-1 tvg-name="邱淑贞播频道" group-title="电影/电视剧",邱淑贞播频道
+http://cfss.cc/cdn/huya/11352949.flv
+#EXTINF:-1 tvg-name="周海媚播频道" group-title="电影/电视剧",周海媚播频道
+http://cfss.cc/cdn/huya/11279247.flv
+#EXTINF:-1 tvg-name="星爷频道" group-title="电影/电视剧",星爷频道
+http://cfss.cc/cdn/huya/11342412.flv
+#EXTINF:-1 tvg-name="英叔频道" group-title="电影/电视剧",英叔频道
+http://cfss.cc/cdn/huya/11342421.flv
+#EXTINF:-1 tvg-name="成龙频道" group-title="电影/电视剧",成龙频道
+http://cfss.cc/cdn/huya/11342386.flv
+#EXTINF:-1 tvg-name="王晶频道" group-title="电影/电视剧",王晶频道
+http://cfss.cc/cdn/huya/11602058.flv
+#EXTINF:-1 tvg-name="沈腾频道" group-title="电影/电视剧",沈腾频道
+http://cfss.cc/cdn/huya/11601968.flv
+#EXTINF:-1 tvg-name="黄渤频道" group-title="电影/电视剧",黄渤频道
+http://cfss.cc/cdn/huya/11352876.flv
+#EXTINF:-1 tvg-name="吴京频道" group-title="电影/电视剧",吴京频道
+http://cfss.cc/cdn/huya/11602041.flv
+#EXTINF:-1 tvg-name="强森频道" group-title="电影/电视剧",强森频道
+http://cfss.cc/cdn/huya/21059581.flv
+#EXTINF:-1 tvg-name="玄幻频道" group-title="电影/电视剧",玄幻频道
+http://cfss.cc/cdn/huya/11342414.flv
+#EXTINF:-1 tvg-name="喜剧频道" group-title="电影/电视剧",喜剧频道
+http://cfss.cc/cdn/huya/11352877.flv
+#EXTINF:-1 tvg-name="港片频道" group-title="电影/电视剧",港片频道
+http://cfss.cc/cdn/huya/11602043.flv
+#EXTINF:-1 tvg-name="国产频道" group-title="电影/电视剧",国产频道
+http://cfss.cc/cdn/huya/11352973.flv
+#EXTINF:-1 tvg-name="漫威频道" group-title="电影/电视剧",漫威频道
+http://cfss.cc/cdn/huya/11602034.flv
+#EXTINF:-1 tvg-name="宇宙频道" group-title="电影/电视剧",宇宙频道
+http://cfss.cc/cdn/huya/11342428.flv
+#EXTINF:-1 tvg-name="怪兽频道" group-title="电影/电视剧",怪兽频道
+http://cfss.cc/cdn/huya/21059577.flv
+#EXTINF:-1 tvg-name="武侠频道" group-title="电影/电视剧",武侠频道
+http://cfss.cc/cdn/huya/11342427.flv
+#EXTINF:-1 tvg-name="警匪频道" group-title="电影/电视剧",警匪频道
+http://cfss.cc/cdn/huya/11352886.flv
+#EXTINF:-1 tvg-name="罪犯频道" group-title="电影/电视剧",罪犯频道
+http://cfss.cc/cdn/huya/11352962.flv
+#EXTINF:-1 tvg-name="枪战频道" group-title="电影/电视剧",枪战频道
+http://cfss.cc/cdn/huya/21059579.flv
+#EXTINF:-1 tvg-name="盗墓频道" group-title="电影/电视剧",盗墓频道
+http://cfss.cc/cdn/huya/21059552.flv
+#EXTINF:-1 tvg-name="海盗频道" group-title="电影/电视剧",海盗频道
+http://cfss.cc/cdn/huya/21059595.flv
+#EXTINF:-1 tvg-name="推荐频道" group-title="电影/电视剧",推荐频道
+http://cfss.cc/cdn/huya/11602041.flv
+#EXTINF:-1 tvg-name="救援频道" group-title="电影/电视剧",救援频道
+http://cfss.cc/cdn/huya/21059594.flv
+#EXTINF:-1 tvg-name="热血频道" group-title="电影/电视剧",热血频道
+http://cfss.cc/cdn/huya/11352934.flv
+#EXTINF:-1 tvg-name="谍战频道" group-title="电影/电视剧",谍战频道
+http://cfss.cc/cdn/huya/21059585.flv
+#EXTINF:-1 tvg-name="战争频道" group-title="电影/电视剧",战争频道
+http://cfss.cc/cdn/huya/21059592.flv
+#EXTINF:-1 tvg-name="小鬼头播频道" group-title="电影/电视剧",小鬼头播频道
+http://cfss.cc/cdn/huya/11352963.flv
+#EXTINF:-1 tvg-name="陈翔六点频道" group-title="电影/电视剧",陈翔六点频道
+http://cfss.cc/cdn/huya/11274154.flv
+#EXTINF:-1 tvg-name="喜剧专场频道" group-title="电影/电视剧",喜剧专场频道
+http://cfss.cc/cdn/huya/11602044.flv
+#EXTINF:-1 tvg-name="高分动作频道" group-title="电影/电视剧",高分动作频道
+http://cfss.cc/cdn/huya/11352884.flv
+#EXTINF:-1 tvg-name="不挤影院频道" group-title="电影/电视剧",不挤影院频道
+http://cfss.cc/cdn/huya/11352897.flv
+#EXTINF:-1 tvg-name="黑帮斗争频道" group-title="电影/电视剧",黑帮斗争频道
+http://cfss.cc/cdn/huya/11342419.flv
+#EXTINF:-1 tvg-name="嫣然影厅频道" group-title="电影/电视剧",嫣然影厅频道
+http://cfss.cc/cdn/huya/11601977.flv
+#EXTINF:-1 tvg-name="女神系列频道" group-title="电影/电视剧",女神系列频道
+http://cfss.cc/cdn/huya/11336571.flv
+#EXTINF:-1 tvg-name="经典女神频道" group-title="电影/电视剧",经典女神频道
+http://cfss.cc/cdn/huya/11352909.flv
+#EXTINF:-1 tvg-name="许氏三杰频道" group-title="电影/电视剧",许氏三杰频道
+http://cfss.cc/cdn/huya/11602033.flv
+#EXTINF:-1 tvg-name="经典港片频道" group-title="电影/电视剧",经典港片频道
+http://cfss.cc/cdn/huya/11352965.flv
+#EXTINF:-1 tvg-name="镖行天下频道" group-title="电影/电视剧",镖行天下频道
+http://cfss.cc/cdn/huya/11352969.flv
+#EXTINF:-1 tvg-name="蘑菇影厅频道" group-title="电影/电视剧",蘑菇影厅频道
+http://cfss.cc/cdn/huya/11601981.flv
+#EXTINF:-1 tvg-name="搞笑恐怖频道" group-title="电影/电视剧",搞笑恐怖频道
+http://cfss.cc/cdn/huya/11601960.flv
+#EXTINF:-1 tvg-name="死神来了频道" group-title="电影/电视剧",死神来了频道
+http://cfss.cc/cdn/huya/11352903.flv
+#EXTINF:-1 tvg-name="超异能族频道" group-title="电影/电视剧",超异能族频道
+http://cfss.cc/cdn/huya/21059586.flv
+#EXTINF:-1 tvg-name="古墓系列频道" group-title="电影/电视剧",古墓系列频道
+http://cfss.cc/cdn/huya/11352913.flv
+#EXTINF:-1 tvg-name="动作电影频道" group-title="电影/电视剧",动作电影频道
+http://cfss.cc/cdn/huya/11602077.flv
+#EXTINF:-1 tvg-name="搞笑喜剧频道" group-title="电影/电视剧",搞笑喜剧频道
+http://cfss.cc/cdn/huya/11342423.flv
+#EXTINF:-1 tvg-name="欢笑影院频道" group-title="电影/电视剧",欢笑影院频道
+http://cfss.cc/cdn/huya/11352894.flv
+#EXTINF:-1 tvg-name="国产悬疑频道" group-title="电影/电视剧",国产悬疑频道
+http://cfss.cc/cdn/huya/11342395.flv
+#EXTINF:-1 tvg-name="快意江湖频道" group-title="电影/电视剧",快意江湖频道
+http://cfss.cc/cdn/huya/11342435.flv
+#EXTINF:-1 tvg-name="喜乐影院频道" group-title="电影/电视剧",喜乐影院频道
+http://cfss.cc/cdn/huya/21059580.flv
+#EXTINF:-1 tvg-name="怪兽系列频道" group-title="电影/电视剧",怪兽系列频道
+http://cfss.cc/cdn/huya/21059554.flv
+#EXTINF:-1 tvg-name="杰森斯坦频道" group-title="电影/电视剧",杰森斯坦频道
+http://cfss.cc/cdn/huya/21059588.flv
+#EXTINF:-1 tvg-name="武林外传轮播1" group-title="电影/电视剧",武林外传轮播1
+https://lvbdcdncmn.inter.71edge.com/tslive/l1/c52_lb_553_300_t10/I67sb6wvoWaxfjPEdSuB8xyBShFln4Poub7LGIzPt5oGLcKaLXD21aR_t20nEIxJFmaf_i6EYQ77gA-gLJ3xOTtq6K7hpgCREwLfbuNMXruJdFta9-ai9bYk4cTMbhQgRh9SCkE3yt46X4E0qOVADDdga3TMRSLnFscFYr-_s4Sd2sgykmnFa4-hdgX9599FiW_RX5VYGH9B1jyj748_CAu4VgqqTDwxUx8w556tCWY7mlb1r84RWuip72e4H8-HkUuBUoFeD4aw9m1HOUfgwx7ixDqJUFOmq9F-LeKLTZ2Ap6fobRuaUiaSqHsCWvuy9XWe5KWBiZv6bUJ8oAuqkA/1a6758d872929c8d41a7629db52a831f7/c52_lb_553_300_t10.m3u8?key=0baa5db205ac0d29618a2e8d7964b7e4e&dis_t=1752408084&uuid=6f1d53dc-6873a014-459&qdpv=3&qd_bid=1&qd_sft=0&pv=0.1&cpt=0
+#EXTINF:-1 tvg-name="凤凰电影频道" group-title="电影/电视剧",凤凰电影频道
+http://122.224.58.42:85/tsfile/live/1022_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="动作电影频道" group-title="电影/电视剧",动作电影频道
+http://ds920.dsmynas.net:5555/rtp/226.0.2.94:8012%24%E5%B1%B1%E8%A5%BFuni2+
+#EXTINF:-1 tvg-name="家庭影院频道" group-title="电影/电视剧",家庭影院频道
+http://ds920.dsmynas.net:5555/rtp/226.0.2.240:9820%24%E5%B1%B1%E8%A5%BFuni2+
+#EXTINF:-1 tvg-name="影迷电影频道" group-title="电影/电视剧",影迷电影频道
+http://ds920.dsmynas.net:5555/rtp/226.0.2.93:8004%24%E5%B1%B1%E8%A5%BFuni2+
+#EXTINF:-1 tvg-name="重温经典频道" group-title="电影/电视剧",重温经典频道
+http://120.76.248.139/live/bfgd/4200000635.m3u8
+#EXTINF:-1 tvg-name="动作电影频道" group-title="电影/电视剧",动作电影频道
+http://118.249.22.148:8989/udp/239.76.252.243:9000
+#EXTINF:-1 tvg-name="家庭影院频道" group-title="电影/电视剧",家庭影院频道
+http://118.249.22.148:8989/udp/239.76.252.241:9000
+#EXTINF:-1 tvg-name="影迷电影频道" group-title="电影/电视剧",影迷电影频道
+http://118.249.22.148:8989/udp/239.76.252.242:9000
+#EXTINF:-1 tvg-name="重温经典频道" group-title="电影/电视剧",重温经典频道
+http://cdn3.132.us.kg/live/cwjd/stream.m3u8
+#EXTINF:-1 tvg-name="重温经典频道" group-title="电影/电视剧",重温经典频道
+http://php.jdshipin.com:8880/TVOD/iptv.php?id=cwjd
+#EXTINF:-1 tvg-name="梨园频道" group-title="电影/电视剧",梨园频道
+http://183.196.87.176:880/hls/57/index.m3u8
+#EXTINF:-1 tvg-name="醉拳" group-title="电影/电视剧",醉拳
+https://txmov2.a.kwimgs.com/upic/2021/09/30/18/BMjAyMTA5MzAxODM1NTFfMTI0MzE0NjMyOF81ODEwNDc3MzAzOF8yXzM=_b_B1b01bbe5b567f842b3de0b78109d1907.mp4
+#EXTINF:-1 tvg-name="双龙会" group-title="电影/电视剧",双龙会
+https://alimov2.a.kwimgs.com/upic/2021/10/01/19/BMjAyMTEwMDExOTA1MDVfMTI0MzE0NjMyOF81ODE5NzY0NzAyOF8yXzM=_b_B6eb284159f267349ab21b64feb3d48ce.mp4
+#EXTINF:-1 tvg-name="龙门飞甲" group-title="电影/电视剧",龙门飞甲
+http://jsmov2.a.yximgs.com/bs3/video-hls/5203346449046555193_hlsb.m3u8
+#EXTINF:-1 tvg-name="黄飞鸿之狮王争霸" group-title="电影/电视剧",黄飞鸿之狮王争霸
+https://alimov2.a.kwimgs.com/upic/2020/05/15/08/BMjAyMDA1MTUwODQ5NTdfMjEyNDgzMjg2XzI4NTc1ODg4MzEyXzJfMw==_b_Bd4d927d62d45dd2f3e065114d9aebb25.mp4
+#EXTINF:-1 tvg-name="黄飞鸿之铁鸡斗蜈蚣" group-title="电影/电视剧",黄飞鸿之铁鸡斗蜈蚣
+http://jsmov2.a.yximgs.com/bs3/video-hls/5250634242822045870_hlsb.m3u8
+#EXTINF:-1 tvg-name="黄飞鸿之男儿当自强" group-title="电影/电视剧",黄飞鸿之男儿当自强
+https://txmov2.a.kwimgs.com/upic/2020/05/16/01/BMjAyMDA1MTYwMTAyMjFfMjEyNDgzMjg2XzI4NjI3OTAwNTc5XzJfMw==_b_Bc1101c249e7355d840c4495b7bfd84a4.mp4
+#EXTINF:-1 tvg-name="黄飞鸿之壮志凌云" group-title="电影/电视剧",黄飞鸿之壮志凌云
+http://jsmov2.a.yximgs.com/bs3/video-hls/5189554175568165120_hlsb.m3u8
+#EXTINF:-1 tvg-name="义胆雄心" group-title="电影/电视剧",义胆雄心
+http://jsmov2.a.yximgs.com/bs3/video-hls/5237686462055775486_hlsb.m3u8
+#EXTINF:-1 tvg-name="东方三侠" group-title="电影/电视剧",东方三侠
+http://jsmov2.a.yximgs.com/bs3/video-hls/5222205346628851891_hlsb.m3u8
+#EXTINF:-1 tvg-name="人在囧途" group-title="电影/电视剧",人在囧途
+http://jsmov2.a.yximgs.com/bs3/video-hls/5239093847755471351_hlsb.m3u8
+#EXTINF:-1 tvg-name="倩女幽魂妖魔道" group-title="电影/电视剧",倩女幽魂妖魔道
+http://jsmov2.a.yximgs.com/bs3/video-hls/5232901391302199073_hlsb.m3u8
+#EXTINF:-1 tvg-name="倩女幽魂人间道" group-title="电影/电视剧",倩女幽魂人间道
+http://jsmov2.a.yximgs.com/bs3/video-hls/5250634317044855747_hlsb.m3u8
+#EXTINF:-1 tvg-name="倩女幽魂道道道" group-title="电影/电视剧",倩女幽魂道道道
+http://jsmov2.a.yximgs.com/bs3/video-hls/5216294367991385255_hlsb.m3u8
+#EXTINF:-1 tvg-name="A计划" group-title="电影/电视剧",A计划
+http://jsmov2.a.yximgs.com/bs3/video-hls/5240501212096709355_hlsb.m3u8
+#EXTINF:-1 tvg-name="九一神雕侠侣" group-title="电影/电视剧",九一神雕侠侣
+http://jsmov2.a.yximgs.com/bs3/video-hls/5227553349016599035_hlsb.m3u8
+#EXTINF:-1 tvg-name="九二神雕之痴心情长剑" group-title="电影/电视剧",九二神雕之痴心情长剑
+http://jsmov2.a.yximgs.com/bs3/video-hls/5188428323796620673_hlsb.m3u8
+#EXTINF:-1 tvg-name="刀剑笑" group-title="电影/电视剧",刀剑笑
+http://jsmov2.a.yximgs.com/bs3/video-hls/5215168447635500734_hlsb.m3u8
+#EXTINF:-1 tvg-name="天若有情" group-title="电影/电视剧",天若有情
+http://jsmov2.a.yximgs.com/bs3/video-hls/5246412168297899387_hlsb.m3u8
+#EXTINF:-1 tvg-name="龙兄虎弟" group-title="电影/电视剧",龙兄虎弟
+http://jsmov2.a.yximgs.com/bs3/video-hls/5250352837791566632_hlsb.m3u8
+#EXTINF:-1 tvg-name="东方秃鹰" group-title="电影/电视剧",东方秃鹰
+http://jsmov2.a.yximgs.com/bs3/video-hls/5218546164654879826_hlsb.m3u8
+#EXTINF:-1 tvg-name="警察故事" group-title="电影/电视剧",警察故事
+https://ukzy.ukubf3.com/20220402/N3nfxJ6i/index.m3u8
+#EXTINF:-1 tvg-name="周星星" group-title="电影/电视剧",周星星
+http://cfss.cc/cdn/huya/11342412.flv
+#EXTINF:-1 tvg-name="林正英" group-title="电影/电视剧",林正英
+http://cfss.cc/cdn/huya/11342421.flv
+#EXTINF:-1 tvg-name="李茶的姑妈" group-title="电影/电视剧",李茶的姑妈
+http://cfss.cc/cdn/huya/880261.flv
+#EXTINF:-1 tvg-name="贺岁档" group-title="电影/电视剧",贺岁档
+http://cfss.cc/cdn/huya/11601986.flv
+#EXTINF:-1 tvg-name="春节喜剧" group-title="电影/电视剧",春节喜剧
+http://cfss.cc/cdn/huya/11352897.flv
+#EXTINF:-1 tvg-name="速肌" group-title="电影/电视剧",速肌
+http://cfss.cc/cdn/huya/11279251.flv
+#EXTINF:-1 tvg-name="丧尸来啦" group-title="电影/电视剧",丧尸来啦
+http://cfss.cc/cdn/huya/11342422.flv
+#EXTINF:-1 tvg-name="si神来了" group-title="电影/电视剧",si神来了
+http://cfss.cc/cdn/huya/11352903.flv
+#EXTINF:-1 tvg-name="诺兰" group-title="电影/电视剧",诺兰
+http://cfss.cc/cdn/huya/30080257.flv
+#EXTINF:-1 tvg-name="情人节" group-title="电影/电视剧",情人节
+http://cfss.cc/cdn/huya/11352915.flv
+#EXTINF:-1 tvg-name="女神系列" group-title="电影/电视剧",女神系列
+http://cfss.cc/cdn/huya/11336571.flv
+#EXTINF:-1 tvg-name="喜剧专场" group-title="电影/电视剧",喜剧专场
+http://cfss.cc/cdn/huya/11602044.flv
+#EXTINF:-1 tvg-name="Han国动作片" group-title="电影/电视剧",Han国动作片
+http://cfss.cc/cdn/huya/11352884.flv
+#EXTINF:-1 tvg-name="香港贺岁片" group-title="电影/电视剧",香港贺岁片
+http://cfss.cc/cdn/huya/11601955.flv
+#EXTINF:-1 tvg-name="红楼梦" group-title="电影/电视剧",红楼梦
+http://cfss.cc/cdn/huya/30080221.flv
+#EXTINF:-1 tvg-name="许氏三杰" group-title="电影/电视剧",许氏三杰
+http://cfss.cc/cdn/huya/11602033.flv
+#EXTINF:-1 tvg-name="玄幻剧场" group-title="电影/电视剧",玄幻剧场
+http://cfss.cc/cdn/huya/11342414.flv
+#EXTINF:-1 tvg-name="曾江" group-title="电影/电视剧",曾江
+http://cfss.cc/cdn/huya/11601981.flv
+#EXTINF:-1 tvg-name="动作电影" group-title="电影/电视剧",动作电影
+http://cfss.cc/cdn/huya/11602077.flv
+#EXTINF:-1 tvg-name="国产悬疑" group-title="电影/电视剧",国产悬疑
+http://cfss.cc/cdn/huya/11342395.flv
+#EXTINF:-1 tvg-name="尹正" group-title="电影/电视剧",尹正
+http://cfss.cc/cdn/huya/30080231.flv
+#EXTINF:-1 tvg-name="首尔之春" group-title="电影/电视剧",首尔之春
+http://cfss.cc/cdn/huya/30080226.flv
+#EXTINF:-1 tvg-name="港片追女仔" group-title="电影/电视剧",港片追女仔
+http://cfss.cc/cdn/huya/11602043.flv
+#EXTINF:-1 tvg-name="孙红雷" group-title="电影/电视剧",孙红雷
+http://cfss.cc/cdn/huya/11352917.flv
+#EXTINF:-1 tvg-name="合家欢" group-title="电影/电视剧",合家欢
+http://cfss.cc/cdn/huya/11352877.flv
+#EXTINF:-1 tvg-name="学不会系列" group-title="电影/电视剧",学不会系列
+http://cfss.cc/cdn/huya/11352945.flv
+#EXTINF:-1 tvg-name="误杀3" group-title="电影/电视剧",误杀3
+http://cfss.cc/cdn/huya/880219.flv
+#EXTINF:-1 tvg-name="亮剑电视轮播" group-title="电影/电视剧",亮剑电视轮播
+http://cfss.cc/cdn/huya/30080238.flv
+#EXTINF:-1 tvg-name="雪豹电视轮播" group-title="电影/电视剧",雪豹电视轮播
+http://cfss.cc/cdn/huya/29580970.flv
+#EXTINF:-1 tvg-name="寻秦记播频道" group-title="电影/电视剧",寻秦记播频道
+http://cfss.cc/cdn/huya/29465848.flv
+#EXTINF:-1 tvg-name="寻秦记播频道" group-title="电影/电视剧",寻秦记播频道
+http://cfss.cc/cdn/huya/29633850.flv
+#EXTINF:-1 tvg-name="西游记播频道" group-title="电影/电视剧",西游记播频道
+http://cfss.cc/cdn/huya/29465859.flv
+#EXTINF:-1 tvg-name="楚汉骄雄频道" group-title="电影/电视剧",楚汉骄雄频道
+http://cfss.cc/cdn/huya/29465854.flv
+#EXTINF:-1 tvg-name="陀枪师姐频道" group-title="电影/电视剧",陀枪师姐频道
+http://cfss.cc/cdn/huya/29465857.flv
+#EXTINF:-1 tvg-name="法证先锋频道" group-title="电影/电视剧",法证先锋频道
+http://cfss.cc/cdn/huya/29465861.flv
+#EXTINF:-1 tvg-name="刑事侦缉频道" group-title="电影/电视剧",刑事侦缉频道
+http://cfss.cc/cdn/huya/29465856.flv
+#EXTINF:-1 tvg-name="笑看风云频道" group-title="电影/电视剧",笑看风云频道
+http://cfss.cc/cdn/huya/29465858.flv
+#EXTINF:-1 tvg-name="大唐双龙频道" group-title="电影/电视剧",大唐双龙频道
+http://cfss.cc/cdn/huya/29465850.flv
+#EXTINF:-1 tvg-name="洗冤录播频道" group-title="电影/电视剧",洗冤录播频道
+http://cfss.cc/cdn/huya/29465851.flv
+#EXTINF:-1 tvg-name="金枝欲孽频道" group-title="电影/电视剧",金枝欲孽频道
+http://cfss.cc/cdn/huya/29465847.flv
+#EXTINF:-1 tvg-name="野蛮奶奶频道" group-title="电影/电视剧",野蛮奶奶频道
+http://cfss.cc/cdn/huya/23863796.flv
+#EXTINF:-1 tvg-name="创世纪播频道" group-title="电影/电视剧",创世纪播频道
+http://cfss.cc/cdn/huya/29465852.flv
+#EXTINF:-1 tvg-name="封神榜播频道" group-title="电影/电视剧",封神榜播频道
+http://cfss.cc/cdn/huya/29465849.flv
+#EXTINF:-1 tvg-name="神雕侠侣频道" group-title="电影/电视剧",神雕侠侣频道
+http://cfss.cc/cdn/huya/30454429.flv
+#EXTINF:-1 tvg-name="妙手仁心频道" group-title="电影/电视剧",妙手仁心频道
+http://cfss.cc/cdn/huya/29465853.flv
+#EXTINF:-1 tvg-name="活佛济公频道" group-title="电影/电视剧",活佛济公频道
+http://cfss.cc/cdn/huya/23903123.flv
+#EXTINF:-1 tvg-name="倚天屠龙频道" group-title="电影/电视剧",倚天屠龙频道
+http://cfss.cc/cdn/huya/27834853.flv
+#EXTINF:-1 tvg-name="鹿鼎记98频道" group-title="电影/电视剧",鹿鼎记98频道
+http://cfss.cc/cdn/huya/26355806.flv
+#EXTINF:-1 tvg-name="小李飞刀频道" group-title="电影/电视剧",小李飞刀频道
+http://cfss.cc/cdn/huya/11342417.flv
+#EXTINF:-1 tvg-name="水月洞天频道" group-title="电影/电视剧",水月洞天频道
+http://cfss.cc/cdn/huya/21059567.flv
+#EXTINF:-1 tvg-name="绝代双娇频道" group-title="电影/电视剧",绝代双娇频道
+http://cfss.cc/cdn/huya/29465867.flv
+#EXTINF:-1 tvg-name="风云雄霸频道" group-title="电影/电视剧",风云雄霸频道
+http://cfss.cc/cdn/huya/21059612.flv
+#EXTINF:-1 tvg-name="如懿传播频道" group-title="电影/电视剧",如懿传播频道
+http://cfss.cc/cdn/huya/29465868.flv
+#EXTINF:-1 tvg-name="芈月传播频道" group-title="电影/电视剧",芈月传播频道
+http://cfss.cc/cdn/huya/11352975.flv
+#EXTINF:-1 tvg-name="延禧攻略频道" group-title="电影/电视剧",延禧攻略频道
+http://cfss.cc/cdn/huya/26355864.flv
+#EXTINF:-1 tvg-name="王子青蛙频道" group-title="电影/电视剧",王子青蛙频道
+http://cfss.cc/cdn/huya/11601964.flv
+#EXTINF:-1 tvg-name="永夜星河频道" group-title="电影/电视剧",永夜星河频道
+http://cfss.cc/cdn/huya/23734169.flv
+#EXTINF:-1 tvg-name="玫瑰故事频道" group-title="电影/电视剧",玫瑰故事频道
+http://cfss.cc/cdn/huya/23865142.flv
+#EXTINF:-1 tvg-name="漫长季节频道" group-title="电影/电视剧",漫长季节频道
+http://cfss.cc/cdn/huya/11342393.flv
+#EXTINF:-1 tvg-name="梦华录播频道" group-title="电影/电视剧",梦华录播频道
+http://cfss.cc/cdn/huya/11336590.flv
+#EXTINF:-1 tvg-name="乌龙院闯频道" group-title="电影/电视剧",乌龙院闯频道
+http://cfss.cc/cdn/huya/26355767.flv
+#EXTINF:-1 tvg-name="新楚留香频道" group-title="电影/电视剧",新楚留香频道
+http://cfss.cc/cdn/huya/26355848.flv
+#EXTINF:-1 tvg-name="新楚留香频道" group-title="电影/电视剧",新楚留香频道
+http://cfss.cc/cdn/huya/23863804.flv
+#EXTINF:-1 tvg-name="无心法师频道" group-title="电影/电视剧",无心法师频道
+http://cfss.cc/cdn/huya/30080233.flv
+#EXTINF:-1 tvg-name="征服频道" group-title="电影/电视剧",征服频道
+http://cfss.cc/cdn/huya/30311494.flv
+#EXTINF:-1 tvg-name="蜡笔小新频道" group-title="电影/电视剧",蜡笔小新频道
+http://cfss.cc/cdn/huya/30299353.flv
+#EXTINF:-1 tvg-name="海绵宝宝频道" group-title="电影/电视剧",海绵宝宝频道
+http://cfss.cc/cdn/huya/11352919.flv
+#EXTINF:-1 tvg-name="龙珠频道" group-title="电影/电视剧",龙珠频道
+http://cfss.cc/cdn/huya/10279885.flv
+#EXTINF:-1 tvg-name="叮当全集频道" group-title="电影/电视剧",叮当全集频道
+http://cfss.cc/cdn/huya/11601963.flv
+#EXTINF:-1 tvg-name="樱桃小丸频道" group-title="电影/电视剧",樱桃小丸频道
+http://cfss.cc/cdn/huya/11342394.flv
+#EXTINF:-1 tvg-name="猫和老鼠频道" group-title="电影/电视剧",猫和老鼠频道
+http://cfss.cc/cdn/huya/11352879.flv
+#EXTINF:-1 tvg-name="精绝古城频道" group-title="电影/电视剧",精绝古城频道
+http://cfss.cc/cdn/huya/11352871.flv
+#EXTINF:-1 tvg-name="怒晴湘西频道" group-title="电影/电视剧",怒晴湘西频道
+http://cfss.cc/cdn/huya/11602075.flv
+#EXTINF:-1 tvg-name="龙岭迷窟频道" group-title="电影/电视剧",龙岭迷窟频道
+http://cfss.cc/cdn/huya/29465863.flv
+#EXTINF:-1 tvg-name="JJ斗地主频道" group-title="电影/电视剧",JJ斗地主频道
+http://cfss.cc/cdn/huya/14079954.flv
+#EXTINF:-1 tvg-name="亮剑频道" group-title="电影/电视剧",亮剑频道
+http://cfss.cc/cdn/huya/30080238.flv
+#EXTINF:-1 tvg-name="民兵葛二频道" group-title="电影/电视剧",民兵葛二频道
+http://cfss.cc/cdn/huya/11602072.flv
+#EXTINF:-1 tvg-name="我的团长频道" group-title="电影/电视剧",我的团长频道
+http://cfss.cc/cdn/huya/11352910.flv
+#EXTINF:-1 tvg-name="铁道游击频道" group-title="电影/电视剧",铁道游击频道
+http://cfss.cc/cdn/huya/11352936.flv
+#EXTINF:-1 tvg-name="铁梨花播频道" group-title="电影/电视剧",铁梨花播频道
+http://cfss.cc/cdn/huya/11352912.flv
+#EXTINF:-1 tvg-name="康熙微服频道" group-title="电影/电视剧",康熙微服频道
+http://cfss.cc/cdn/huya/11342418.flv
+#EXTINF:-1 tvg-name="御赐仵作频道" group-title="电影/电视剧",御赐仵作频道
+http://cfss.cc/cdn/huya/11352948.flv
+#EXTINF:-1 tvg-name="新水浒传频道" group-title="电影/电视剧",新水浒传频道
+http://cfss.cc/cdn/huya/11342384.flv
+#EXTINF:-1 tvg-name="开端频道" group-title="电影/电视剧",开端频道
+http://cfss.cc/cdn/huya/11342397.flv
+#EXTINF:-1 tvg-name="神探狄仁频道" group-title="电影/电视剧",神探狄仁频道
+http://cfss.cc/cdn/huya/11352958.flv
+#EXTINF:-1 tvg-name="三国演义频道" group-title="电影/电视剧",三国演义频道
+http://cfss.cc/cdn/huya/11602081.flv
+#EXTINF:-1 tvg-name="新三国演频道" group-title="电影/电视剧",新三国演频道
+http://cfss.cc/cdn/huya/11352944.flv
+#EXTINF:-1 tvg-name="问心频道" group-title="电影/电视剧",问心频道
+http://cfss.cc/cdn/huya/11352890.flv
+#EXTINF:-1 tvg-name="家有儿女频道" group-title="电影/电视剧",家有儿女频道
+http://cfss.cc/cdn/huya/29774370.flv
+#EXTINF:-1 tvg-name="全职高手频道" group-title="电影/电视剧",全职高手频道
+http://cfss.cc/cdn/huya/11352901.flv
+#EXTINF:-1 tvg-name="炊事班的频道" group-title="电影/电视剧",炊事班的频道
+http://cfss.cc/cdn/huya/19524135.flv
+#EXTINF:-1 tvg-name="医馆笑传频道" group-title="电影/电视剧",医馆笑传频道
+http://cfss.cc/cdn/huya/11352891.flv
+#EXTINF:-1 tvg-name="杨光生活频道" group-title="电影/电视剧",杨光生活频道
+http://cfss.cc/cdn/huya/11602085.flv
+#EXTINF:-1 tvg-name="陈情令播频道" group-title="电影/电视剧",陈情令播频道
+http://cfss.cc/cdn/huya/29465862.flv
+#EXTINF:-1 tvg-name="神医喜来频道" group-title="电影/电视剧",神医喜来频道
+http://cfss.cc/cdn/huya/11601978.flv
+#EXTINF:-1 tvg-name="大宋提刑频道" group-title="电影/电视剧",大宋提刑频道
+http://cfss.cc/cdn/huya/26355856.flv
+#EXTINF:-1 tvg-name="鹊刀门传频道" group-title="电影/电视剧",鹊刀门传频道
+http://cfss.cc/cdn/huya/29805872.flv
+#EXTINF:-1 tvg-name="白鹿原播频道" group-title="电影/电视剧",白鹿原播频道
+http://cfss.cc/cdn/huya/11342416.flv
+#EXTINF:-1 tvg-name="长相思播频道" group-title="电影/电视剧",长相思播频道
+http://cfss.cc/cdn/huya/11336593.flv
+#EXTINF:-1 tvg-name="你是我的频道" group-title="电影/电视剧",你是我的频道
+http://cfss.cc/cdn/huya/11352920.flv
+#EXTINF:-1 tvg-name="一代枭雄频道" group-title="电影/电视剧",一代枭雄频道
+http://cfss.cc/cdn/huya/11342398.flv
+#EXTINF:-1 tvg-name="庆余年播频道" group-title="电影/电视剧",庆余年播频道
+http://cfss.cc/cdn/huya/11352960.flv
+#EXTINF:-1 tvg-name="铁齿铜牙频道" group-title="电影/电视剧",铁齿铜牙频道
+http://cfss.cc/cdn/huya/11342396.flv
+#EXTINF:-1 tvg-name="雪中悍刀频道" group-title="电影/电视剧",雪中悍刀频道
+http://cfss.cc/cdn/huya/11336592.flv
+#EXTINF:-1 tvg-name="星汉灿烂频道" group-title="电影/电视剧",星汉灿烂频道
+http://cfss.cc/cdn/huya/11336591.flv
+#EXTINF:-1 tvg-name="将夜频道" group-title="电影/电视剧",将夜频道
+http://cfss.cc/cdn/huya/11352885.flv
+#EXTINF:-1 tvg-name="父母爱情频道" group-title="电影/电视剧",父母爱情频道
+http://cfss.cc/cdn/huya/11602071.flv
+#EXTINF:-1 tvg-name="大染坊播频道" group-title="电影/电视剧",大染坊播频道
+http://cfss.cc/cdn/huya/11602086.flv
+#EXTINF:-1 tvg-name="地下交通频道" group-title="电影/电视剧",地下交通频道
+http://cfss.cc/cdn/huya/11342433.flv
+#EXTINF:-1 tvg-name="邻里一家频道" group-title="电影/电视剧",邻里一家频道
+http://cfss.cc/cdn/huya/11342426.flv
+#EXTINF:-1 tvg-name="雍正王朝频道" group-title="电影/电视剧",雍正王朝频道
+http://cfss.cc/cdn/huya/11342439.flv
+#EXTINF:-1 tvg-name="士兵突击频道" group-title="电影/电视剧",士兵突击频道
+http://cfss.cc/cdn/huya/11342430.flv
+#EXTINF:-1 tvg-name="爱情公寓频道" group-title="电影/电视剧",爱情公寓频道
+http://cfss.cc/cdn/huya/11336726.flv
+#EXTINF:-1 tvg-name="电视剧一频道" group-title="电影/电视剧",电视剧一频道
+http://cfss.cc/cdn/huya/29465862.flv
+#EXTINF:-1 tvg-name="电视剧二频道" group-title="电影/电视剧",电视剧二频道
+http://cfss.cc/cdn/huya/11336591.flv
+#EXTINF:-1 tvg-name="电视剧三频道" group-title="电影/电视剧",电视剧三频道
+http://cfss.cc/cdn/huya/21059563.flv
+#EXTINF:-1 tvg-name="电视剧四频道" group-title="电影/电视剧",电视剧四频道
+http://cfss.cc/cdn/huya/26355783.flv
+#EXTINF:-1 tvg-name="电视剧五频道" group-title="电影/电视剧",电视剧五频道
+http://cfss.cc/cdn/huya/11352912.flv
+#EXTINF:-1 tvg-name="电视剧六频道" group-title="电影/电视剧",电视剧六频道
+http://cfss.cc/cdn/huya/11352936.flv
+#EXTINF:-1 tvg-name="电视剧七频道" group-title="电影/电视剧",电视剧七频道
+http://cfss.cc/cdn/huya/21059630.flv
+#EXTINF:-1 tvg-name="电视剧八频道" group-title="电影/电视剧",电视剧八频道
+http://cfss.cc/cdn/huya/26355775.flv
+#EXTINF:-1 tvg-name="电视剧九频道" group-title="电影/电视剧",电视剧九频道
+http://cfss.cc/cdn/huya/21059594.flv
+#EXTINF:-1 tvg-name="电视剧十频道" group-title="电影/电视剧",电视剧十频道
+http://cfss.cc/cdn/huya/11336592.flv
+#EXTINF:-1 tvg-name="电视剧十一道" group-title="电影/电视剧",电视剧十一道
+http://cfss.cc/cdn/huya/11602088.flv
+#EXTINF:-1 tvg-name="雪中悍刀行剧" group-title="电影/电视剧",雪中悍刀行剧
+http://cfss.cc/cdn/huya/11336592.flv
+#EXTINF:-1 tvg-name="庆余年一轮播" group-title="电影/电视剧",庆余年一轮播
+http://cfss.cc/cdn/huya/11352960.flv
+#EXTINF:-1 tvg-name="庆余年二轮播" group-title="电影/电视剧",庆余年二轮播
+http://cfss.cc/cdn/huya/23740156.flv
+#EXTINF:-1 tvg-name="传闻中的芊芊" group-title="电影/电视剧",传闻中的芊芊
+http://cfss.cc/cdn/huya/21059608.flv
+#EXTINF:-1 tvg-name="如懿传电视剧" group-title="电影/电视剧",如懿传电视剧
+http://cfss.cc/cdn/huya/29465868.flv
+#EXTINF:-1 tvg-name="芈月传电视剧" group-title="电影/电视剧",芈月传电视剧
+http://cfss.cc/cdn/huya/11352975.flv
+#EXTINF:-1 tvg-name="延禧攻略轮播" group-title="电影/电视剧",延禧攻略轮播
+http://cfss.cc/cdn/huya/26355864.flv
+#EXTINF:-1 tvg-name="与凤行电视剧" group-title="电影/电视剧",与凤行电视剧
+http://cfss.cc/cdn/huya/26355866.flv
+#EXTINF:-1 tvg-name="柳舟记电视剧" group-title="电影/电视剧",柳舟记电视剧
+http://cfss.cc/cdn/huya/23860039.flv
+#EXTINF:-1 tvg-name="开端电视轮播" group-title="电影/电视剧",开端电视轮播
+http://cfss.cc/cdn/huya/11342397.flv
+#EXTINF:-1 tvg-name="我爱男保姆播" group-title="电影/电视剧",我爱男保姆播
+http://cfss.cc/cdn/huya/29581262.flv
+#EXTINF:-1 tvg-name="科幻梦工场播" group-title="电影/电视剧",科幻梦工场播
+http://cfss.cc/cdn/huya/15152155.flv
+#EXTINF:-1 tvg-name="脱口秀大会肆" group-title="电影/电视剧",脱口秀大会肆
+http://cfss.cc/cdn/huya/30080243.flv
+#EXTINF:-1 tvg-name="脱口秀大会伍" group-title="电影/电视剧",脱口秀大会伍
+http://cfss.cc/cdn/huya/11352875.flv
+#EXTINF:-1 tvg-name="古装妖魔频道" group-title="电影/电视剧",古装妖魔频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c58_fast_947_1080P_t10/c58_fast_947_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="军旅剧场频道" group-title="电影/电视剧",军旅剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c54_fast_700_1080P_t10/c54_fast_700_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="抗战剧场频道" group-title="电影/电视剧",抗战剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c54_fast_884_1080P_t10/c54_fast_884_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="谍战剧场频道" group-title="电影/电视剧",谍战剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c57_fast_882_1080P_t10/c57_fast_882_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="红色剧场频道" group-title="电影/电视剧",红色剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c60_fast_1049_1080P_t10/c60_fast_1049_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="家庭剧场频道" group-title="电影/电视剧",家庭剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c59_fast_999_1080P_t10/c59_fast_999_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="泰语剧场频道" group-title="电影/电视剧",泰语剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c58_fast_949_1080P_t10/c58_fast_949_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="搞笑剧场频道" group-title="电影/电视剧",搞笑剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c58_fast_953_1080P_t10/c58_fast_953_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="传奇剧场频道" group-title="电影/电视剧",传奇剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c54_fast_1052_1080P_t10/c54_fast_1052_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="青春剧场频道" group-title="电影/电视剧",青春剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c58_fast_986_1080P_t10/c58_fast_986_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="欢乐剧场频道" group-title="电影/电视剧",欢乐剧场频道
+http://lvbdcdncmn.inter.ptqy.gitv.tv/tslive/c56_fast_951_1080P_t10/c56_fast_951_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="甜宠剧场频道" group-title="电影/电视剧",甜宠剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c54_fast_877_1080P_t10/c54_fast_877_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="大家剧场频道" group-title="电影/电视剧",大家剧场频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c58_fast_975_1080P_t10/c58_fast_975_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="警匪悬疑频道" group-title="电影/电视剧",警匪悬疑频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c58_fast_880_1080P_t10/c58_fast_880_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="古装大剧频道" group-title="电影/电视剧",古装大剧频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c55_fast_879_1080P_t10/c55_fast_879_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="爱情生活频道" group-title="电影/电视剧",爱情生活频道
+http://lvbaiducdnct.inter.ptqy.gitv.tv/tslive/c59_fast_967_1080P_t10/c59_fast_967_1080P_t10.m3u8?d
+#EXTINF:-1 tvg-name="我不是药神" group-title="电影/电视剧",我不是药神
+https://vip.ffzy-play1.com/20221018/478_c3afed66/index.m3u8
+#EXTINF:-1 tvg-name="让子弹飞" group-title="电影/电视剧",让子弹飞
+https://vip.ffzy-play7.com/20230116/11563_b9f44814/index.m3u8
+#EXTINF:-1 tvg-name="寒战1" group-title="电影/电视剧",寒战1
+https://vip.ffzy-play6.com/20221019/157_bf0740ee/index.m3u8
+#EXTINF:-1 tvg-name="人在囧途" group-title="电影/电视剧",人在囧途
+https://vip.ffzy-play.com/20221018/1953_2d6ba500/index.m3u8
+#EXTINF:-1 tvg-name="人在囧途之泰囧" group-title="电影/电视剧",人在囧途之泰囧
+https://vip.ffzy-play.com/20221018/1951_47e1adc8/index.m3u8
+#EXTINF:-1 tvg-name="人在囧途之港囧" group-title="电影/电视剧",人在囧途之港囧
+https://vip.ffzy-play7.com/20230112/11082_fde1a94d/index.m3u8
+#EXTINF:-1 tvg-name="人在囧途之囧妈" group-title="电影/电视剧",人在囧途之囧妈
+https://vip.ffzy-online.com/20230122/54089_b5925cb9/index.m3u8
+#EXTINF:-1 tvg-name="无间道1" group-title="电影/电视剧",无间道1
+https://vip.ffzy-play6.com/20221017/13_ddfc1740/index.m3u8
+#EXTINF:-1 tvg-name="拆弹专家1" group-title="电影/电视剧",拆弹专家1
+https://vip.ffzy-online.com/20221015/719_80ff87c2/index.m3u8
+#EXTINF:-1 tvg-name="拆弹专家2" group-title="电影/电视剧",拆弹专家2
+https://vip.ffzy-online.com/20221015/722_e32c42bc/index.m3u8
+#EXTINF:-1 tvg-name="卧虎藏龙" group-title="电影/电视剧",卧虎藏龙
+https://vip.ffzy-play6.com/20221019/118_1367b8f6/index.m3u8
+#EXTINF:-1 tvg-name="满城尽带黄金甲" group-title="电影/电视剧",满城尽带黄金甲
+https://vip.ffzy-play2.com/20221022/289_cc1b109c/index.m3u8
+#EXTINF:-1 tvg-name="绝地战警生死与共" group-title="电影/电视剧",绝地战警生死与共
+https://v3.tlkqc.com/wjv3/202406/12/gFunRiZvHb75/video/index.m3u8
+#EXTINF:-1 tvg-name="魔戒首部曲魔戒现身" group-title="电影/电视剧",魔戒首部曲魔戒现身
+https://vip.ffzy-play7.com/20230411/22167_a385d245/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="魔戒二部曲双城奇谋" group-title="电影/电视剧",魔戒二部曲双城奇谋
+https://vip.ffzy-play7.com/20221127/7286_672b6ffa/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="重温经典频道" group-title="电影/电视剧",重温经典频道
+http://ali.hlspull.yximgs.com/live/awei_cwjd.flv
+#EXTINF:-1 tvg-name="醉拳" group-title="电影/电视剧",醉拳
+https://vip.ffzy-play7.com/20230202/13070_b42acba9/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="警察故事III超级警察" group-title="电影/电视剧",警察故事III超级警察
+https://vip.ffzy-play7.com/20221206/8266_97359a93/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="总是有爱在隔离" group-title="电影/电视剧",总是有爱在隔离
+https://vip.ffzy-play7.com/20230509/24402_8dc9f535/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="攀登者" group-title="电影/电视剧",攀登者
+https://vip.ffzy-play7.com/20221111/3124_7cca31fc/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="龙腾虎跃" group-title="电影/电视剧",龙腾虎跃
+https://vip.ffzy-play7.com/20221117/5171_c2d4c959/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="城市猎人" group-title="电影/电视剧",城市猎人
+https://vip.ffzy-play7.com/20230112/11075_f5a96711/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="寻找成龙" group-title="电影/电视剧",寻找成龙
+https://vip.ffzy-play7.com/20221127/7273_4ce701a1/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="新宿事件" group-title="电影/电视剧",新宿事件
+https://vip.ffzy-play7.com/20230314/18148_991eeb8a/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="玻璃樽" group-title="电影/电视剧",玻璃樽
+https://vip.ffzy-play7.com/20221112/3750_97a1bebc/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="快餐车" group-title="电影/电视剧",快餐车
+https://vip.ffzy-play7.com/20221115/4694_6f7f88ac/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="龙少爷" group-title="电影/电视剧",龙少爷
+https://vip.ffzy-play2.com/20240324/60020_c93c2845/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="大兵小将" group-title="电影/电视剧",大兵小将
+https://vip.ffzy-play7.com/20230101/10714_0de1384d/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="铁道飞虎" group-title="电影/电视剧",铁道飞虎
+https://vip.ffzy-play7.com/20221124/6781_bb0a18b1/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="秦香莲" group-title="电影/电视剧",秦香莲
+https://vip.ffzy-play7.com/20230406/21188_34e1c588/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="超级计划" group-title="电影/电视剧",超级计划
+https://vip.ffzy-play7.com/20221112/3764_fd2b007a/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="警察故事（续集）" group-title="电影/电视剧",警察故事（续集）
+https://vip.ffzy-play7.com/20221115/4687_1e3f6f8c/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="环游地球八十天" group-title="电影/电视剧",环游地球八十天
+https://vip.ffzy-play7.com/20221206/8255_9aa98c99/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="一个好人" group-title="电影/电视剧",一个好人
+https://vip.ffzy-play7.com/20221129/7713_3a3bd3ff/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="忠烈图" group-title="电影/电视剧",忠烈图
+https://vip.ffzy-play7.com/20221228/10158_15a3aab7/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="剑花烟雨江南" group-title="电影/电视剧",剑花烟雨江南
+https://vip.ffzy-play7.com/20221128/7570_1dca45cc/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="人吓人" group-title="电影/电视剧",人吓人
+https://vip.ffzy-play7.com/20230131/12897_66998969/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="东方秃鹰" group-title="电影/电视剧",东方秃鹰
+https://vip.ffzy-play7.com/20221209/9044_d3e0dbd4/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="龙争虎斗" group-title="电影/电视剧",龙争虎斗
+https://vip.ffzy-play7.com/20221228/10118_7f88f7bd/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="大侠胡金铨" group-title="电影/电视剧",大侠胡金铨
+https://vip.ffzy-play7.com/20230503/23773_a16c59d6/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="败家仔" group-title="电影/电视剧",败家仔
+https://vip.ffzy-play7.com/20221207/8332_71c25e63/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="鬼打鬼" group-title="电影/电视剧",鬼打鬼
+https://vip.ffzy-play7.com/20221115/4476_05997c13/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="叶问2：宗师传奇" group-title="电影/电视剧",叶问2：宗师传奇
+https://vip.ffzy-play2.com/20221127/1618_b175df0e/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="杀破狼" group-title="电影/电视剧",杀破狼
+https://vip.ffzy-play.com/20221018/1977_3ef7fe7e/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="锦衣卫" group-title="电影/电视剧",锦衣卫
+https://vip.ffzy-online2.com/20230531/38608_ad0ee149/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="花飞满城春" group-title="电影/电视剧",花飞满城春
+https://vip.ffzy-play7.com/20221128/7557_3a9a605d/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="A计划" group-title="电影/电视剧",A计划
+https://vip.ffzy-play7.com/20221115/4631_7c6bb09a/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="战神传说" group-title="电影/电视剧",战神传说
+https://vip.ffzy-play7.com/20221129/7734_53205031/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="夏日福星" group-title="电影/电视剧",夏日福星
+https://vip.ffzy-play7.com/20230118/11937_84244e52/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="运财五福星" group-title="电影/电视剧",运财五福星
+https://vip.ffzy-play7.com/20221208/8988_21580eb4/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="豪门夜宴" group-title="电影/电视剧",豪门夜宴
+https://vip.ffzy-play.com/20221204/29458_3909f6d0/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="密宗威龙" group-title="电影/电视剧",密宗威龙
+https://vip.ffzy-play7.com/20221112/3607_e49d9e93/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="龙的心" group-title="电影/电视剧",龙的心
+https://vip.ffzy-play7.com/20221115/4539_8b9150f6/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="忠义群英" group-title="电影/电视剧",忠义群英
+https://vip.ffzy-play7.com/20221116/4836_e3063898/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="鬼咬鬼" group-title="电影/电视剧",鬼咬鬼
+https://vip.ffzy-play7.com/20221208/8822_26a70529/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="鬼马双星" group-title="电影/电视剧",鬼马双星
+https://vip.ffzy-play7.com/20221206/8062_9ab4de18/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="金衣大侠" group-title="电影/电视剧",金衣大侠
+https://vip.ffzy-play7.com/20221128/7587_339701b6/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="浪漫风暴" group-title="电影/电视剧",浪漫风暴
+https://vip.ffzy-play7.com/20221129/7668_624e7734/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="死亡塔" group-title="电影/电视剧",死亡塔
+https://vip.ffzy-play7.com/20221117/5079_56e2cb5b/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="飞燕金刀" group-title="电影/电视剧",飞燕金刀
+https://vip.ffzy-play7.com/20221208/8580_cc26d2cb/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="黄飞鸿少林拳" group-title="电影/电视剧",黄飞鸿少林拳
+https://vip.ffzy-play7.com/20221128/7561_64e57fa4/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="黄飞鸿之英雄有梦" group-title="电影/电视剧",黄飞鸿之英雄有梦
+https://vip.ffzy-online.com/20221017/1065_6fccd535/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="时来运转" group-title="电影/电视剧",时来运转
+https://vip.ffzy-play7.com/20221209/9156_396eac04/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="老虎煞星" group-title="电影/电视剧",老虎煞星
+https://vip.ffzy-play7.com/20221128/7611_ae4536d6/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="老豆唔怕多" group-title="电影/电视剧",老豆唔怕多
+https://vip.ffzy-play7.com/20221207/8412_115a031f/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="奇谋妙计五福星" group-title="电影/电视剧",奇谋妙计五福星
+https://vip.ffzy-play7.com/20221115/4730_a7515224/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="最佳福星" group-title="电影/电视剧",最佳福星
+https://vip.ffzy-play7.com/20221208/9011_404faaa6/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="灵幻先生" group-title="电影/电视剧",灵幻先生
+https://vip.ffzy-play7.com/20221115/4538_ddf6020e/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="肥龙过江" group-title="电影/电视剧",肥龙过江
+https://vip.ffzy-online.com/20221017/910_1576b6c4/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="富贵兵团" group-title="电影/电视剧",富贵兵团
+https://vip.ffzy-play7.com/20221209/9048_80e2a1cb/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="瘦虎肥龙" group-title="电影/电视剧",瘦虎肥龙
+https://vip.ffzy-play7.com/20230119/11999_b647b4d4/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="恶战" group-title="电影/电视剧",恶战
+https://vip.ffzy-play7.com/20221028/461_a812e9e0/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="无面俾" group-title="电影/电视剧",无面俾
+https://vip.ffzy-play7.com/20230422/22713_000cbfc7/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="林世荣" group-title="电影/电视剧",林世荣
+https://vip.ffzy-play7.com/20221209/9096_70ae66c7/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="富贵列车" group-title="电影/电视剧",富贵列车
+https://vip.ffzy-play7.com/20221206/8232_7462fce8/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="大千世界" group-title="电影/电视剧",大千世界
+https://vip.ffzy-play7.com/20221208/8558_afd6760b/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="李小龙的生与死" group-title="电影/电视剧",李小龙的生与死
+https://vip.ffzy-play7.com/20221128/7616_58d018a9/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="我的特工爷爷" group-title="电影/电视剧",我的特工爷爷
+https://vip.ffzy-play7.com/20221106/1991_83a8af20/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="阿金" group-title="电影/电视剧",阿金
+https://vip.ffzy-play7.com/20230510/24405_1c0593ea/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="猛龙" group-title="电影/电视剧",猛龙
+https://vip.ffzy-play7.com/20221224/9706_ae656965/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="过埠新娘" group-title="电影/电视剧",过埠新娘
+https://vip.ffzy-play7.com/20221207/8367_8b01519b/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="如珠如宝的人生" group-title="电影/电视剧",如珠如宝的人生
+https://vip.ffzy-play7.com/20230103/10938_2f52e231/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="猫头鹰与小飞象" group-title="电影/电视剧",猫头鹰与小飞象
+https://vip.ffzy-play7.com/20221209/9106_020c2718/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="标错参" group-title="电影/电视剧",标错参
+https://vip.ffzy-play7.com/20221115/4423_ec99f147/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="鬼流星" group-title="电影/电视剧",鬼流星
+https://vip.ffzy-play7.com/20221128/7528_c67067f3/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="搏命单刀夺命枪" group-title="电影/电视剧",搏命单刀夺命枪
+https://vip.ffzy-play7.com/20221208/8546_fa0622b4/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="甩牙老虎" group-title="电影/电视剧",甩牙老虎
+https://vip.ffzy-play7.com/20221231/10559_1f62509a/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="鳄潭群英会" group-title="电影/电视剧",鳄潭群英会
+https://vip.ffzy-play7.com/20221228/10089_77f8bcef/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="没有小鸟的天空" group-title="电影/电视剧",没有小鸟的天空
+https://vip.ffzy-play7.com/20221113/4138_27357f3c/2000k/hls/mixed.m3u8
+#EXTINF:-1 tvg-name="金装武术电影大全" group-title="电影/电视剧",金装武术电影大全
+https://vip.ffzy-play7.com/20230512/24614_d66a3f5d/2000k/hls/mixed.m3u8
 #EXTINF:-1 tvg-name="BTV影视" group-title="电影/电视剧",BTV影视
 http://103.72.172.253:8041/hls/357945484/index.m3u8
 #EXTINF:-1 tvg-name="CHC影迷电影" group-title="电影/电视剧",CHC影迷电影
