@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="南充综合" group-title="本地节目",南充综合
-https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=40a1cc00421c308e999599613920f961&wsTime=1795871603
+https://ncpull.cnncw.cn/live/2be69226019c10009bf1323e00000000/playlist.m3u8?wsSecret=a57f72a357177b818ca09e2f04122717&wsTime=1795923333
 #EXTINF:-1 tvg-name="西充综合" group-title="本地节目",西充综合
 https://bl.xichongtv.cn/xcrm206/ZHPD1126.m3u8?auth_key=1795685737-0-0-1f1dee54952b7e27ceba8f62619ee661
 #EXTINF:-1 tvg-name="充超" group-title="本地节目",充超
